@@ -1,7 +1,7 @@
 from PySide6.QtCore import QCoreApplication, QRect, Qt
 from PySide6.QtGui import QAction, QGuiApplication
-from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout, QLabel, QSpacerItem, QSizePolicy, \
-    QToolButton, QPushButton
+from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QSpacerItem, \
+    QSizePolicy, QToolButton, QPushButton, QProgressBar
 import resource
 
 VERSION = u"Code Vein II Character Builder v0.0.1"
@@ -58,21 +58,185 @@ class Ui_MainWindow(object):
         self.label_h1_1.setText(QCoreApplication.translate("MainWindow", u"Attack", None)) # move to re-translate
         self.main_horizontal_layout_1.addWidget(self.label_h1_1)
 
-        # self.horizontalSpacer_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-        # self.main_horizontal_layout_1.addItem(self.horizontalSpacer_1)
+        # self.horizontal_spacer_h1_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        # self.main_horizontal_layout_1.addItem(self.horizontal_spacer_h1_1)
 
         self.label_h1_2 = QLabel(self.main_vertical_layout_widget)
         self.label_h1_2.setObjectName(u"label_h1_2")
         self.label_h1_2.setText(QCoreApplication.translate("MainWindow", u"Max Ichor", None)) # move to re-translate
         self.main_horizontal_layout_1.addWidget(self.label_h1_2)
 
-        # self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-        # self.main_horizontal_layout_1.addItem(self.horizontalSpacer_2)
+        # self.horizontal_spacer_h1_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        # self.main_horizontal_layout_1.addItem(self.horizontal_spacer_h1_2)
 
         self.label_h1_3 = QLabel(self.main_vertical_layout_widget)
         self.label_h1_3.setObjectName(u"label_h1_3")
         self.label_h1_3.setText(QCoreApplication.translate("MainWindow", u"Partner", None)) # move to re-translate
         self.main_horizontal_layout_1.addWidget(self.label_h1_3)
+
+        # 3rd horizontal layout
+        self.main_horizontal_layout_3 = QHBoxLayout()
+        self.main_horizontal_layout_3.setObjectName(u"main_horizontal_layout_3")
+        self.main_horizontal_layout_3.setContentsMargins(0, 0, 0, 0)
+        self.main_vertical_layout.addLayout(self.main_horizontal_layout_3)
+
+        # 3rd horizontal layout content - grid layout 1
+        self.grid_layout_h3_1 = QGridLayout()
+        self.grid_layout_h3_1.setObjectName(u"grid_layout_h3_1")
+        self.main_horizontal_layout_3.addLayout(self.grid_layout_h3_1)
+
+        # 3rd horizontal layout content - grid layout 1 content
+        self.tool_button_h3_1 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_1.setObjectName(u"tool_button_h3_1")
+        self.tool_button_h3_1.setText(QCoreApplication.translate("MainWindow", u"Dodge Effectiveness", None)) # move to re-translate
+        self.tool_button_h3_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        self.grid_layout_h3_1.addWidget(self.tool_button_h3_1, 0, 0, 1, 1)
+
+        self.tool_button_h3_2 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_2.setObjectName(u"tool_button_h3_2")
+        self.tool_button_h3_2.setText(QCoreApplication.translate("MainWindow", u"Quick", None)) # move to re-translate
+        self.tool_button_h3_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        self.grid_layout_h3_1.addWidget(self.tool_button_h3_2, 1, 0, 1, 1, Qt.AlignmentFlag.AlignHCenter)
+
+        self.tool_button_h3_3 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_3.setObjectName(u"tool_button_h3_3")
+        self.tool_button_h3_3.setText(QCoreApplication.translate("MainWindow", u"Defensive Formae", None)) # move to re-translate
+        self.tool_button_h3_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        self.grid_layout_h3_1.addWidget(self.tool_button_h3_3, 2, 0, 1, 1)
+
+        self.tool_button_h3_4 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_4.setObjectName(u"tool_button_h3_4")
+        self.tool_button_h3_4.setText(QCoreApplication.translate("MainWindow", u"30", None)) # move to re-translate
+        self.tool_button_h3_4.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        self.grid_layout_h3_1.addWidget(self.tool_button_h3_4, 3, 0, 1, 1, Qt.AlignmentFlag.AlignHCenter)
+
+        # 3rd horizontal layout content - vertical layout 1
+        self.vertical_layout_h3_1 = QVBoxLayout()
+        self.vertical_layout_h3_1.setObjectName(u"vertical_layout_h3_1")
+        self.vertical_layout_h3_1.setContentsMargins(0, 0, 0, 0)
+        self.main_horizontal_layout_3.addLayout(self.vertical_layout_h3_1)
+
+        # 3rd horizontal layout content - vertical layout 1 content
+        self.label_h3_1 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_1.setObjectName(u"label_h3_1")
+        self.label_h3_1.setText(QCoreApplication.translate("MainWindow", u"Attributes & Burden", None)) # move to re-translate
+        self.label_h3_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.vertical_layout_h3_1.addWidget(self.label_h3_1)
+
+        # 3rd horizontal layout content - vertical layout 1 content - grid layout 2
+        self.grid_layout_h3_2 = QGridLayout()
+        self.grid_layout_h3_2.setObjectName(u"grid_layout_h3_2")
+        self.vertical_layout_h3_1.addLayout(self.grid_layout_h3_2)
+
+        # 3rd horizontal layout content - vertical layout 1 content - spacer
+        # self.horizontal_spacer_h3_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        # self.vertical_layout_h3_1.addItem(self.horizontal_spacer_h3_1)
+
+        # 3rd horizontal layout content - vertical layout 1 content - grid layout 2 content
+        self.tool_button_h3_1 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_1.setObjectName(u"tool_button_h3_1")
+        self.tool_button_h3_1.setText(QCoreApplication.translate("MainWindow", u"Strength", None)) # move to re-translate
+
+        self.tool_button_h3_2 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_2.setObjectName(u"tool_button_h3_2")
+        self.tool_button_h3_2.setText(QCoreApplication.translate("MainWindow", u"Dexterity", None)) # move to re-translate
+
+        self.tool_button_h3_3 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_3.setObjectName(u"tool_button_h3_3")
+        self.tool_button_h3_3.setText(QCoreApplication.translate("MainWindow", u"Mind", None)) # move to re-translate
+
+        self.tool_button_h3_4 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_4.setObjectName(u"tool_button_h3_4")
+        self.tool_button_h3_4.setText(QCoreApplication.translate("MainWindow", u"Willpower", None)) # move to re-translate
+
+        self.tool_button_h3_5 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_5.setObjectName(u"tool_button_h3_5")
+        self.tool_button_h3_5.setText(QCoreApplication.translate("MainWindow", u"Vitality", None)) # move to re-translate
+
+        self.tool_button_h3_6 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_6.setObjectName(u"tool_button_h3_6")
+        self.tool_button_h3_6.setText(QCoreApplication.translate("MainWindow", u"Fortitude", None)) # move to re-translate
+
+        self.label_h3_1 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_1.setObjectName(u"label_h3_1")
+        self.label_h3_1.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.label_h3_2 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_2.setObjectName(u"label_h3_2")
+        self.label_h3_2.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.label_h3_3 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_3.setObjectName(u"label_h3_3")
+        self.label_h3_3.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.label_h3_4 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_4.setObjectName(u"label_h3_4")
+        self.label_h3_4.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.label_h3_5 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_5.setObjectName(u"label_h3_5")
+        self.label_h3_5.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.label_h3_6 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_6.setObjectName(u"label_h3_6")
+        self.label_h3_6.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.progress_bar_h3_1 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_1.setObjectName(u"progress_bar_h3_1")
+        self.progress_bar_h3_1.setValue(24)
+        self.progress_bar_h3_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.progress_bar_h3_2 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_2.setObjectName(u"progress_bar_h3_2")
+        self.progress_bar_h3_2.setValue(24)
+        self.progress_bar_h3_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.progress_bar_h3_3 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_3.setObjectName(u"progress_bar_h3_3")
+        self.progress_bar_h3_3.setValue(24)
+        self.progress_bar_h3_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.progress_bar_h3_4 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_4.setObjectName(u"progress_bar_h3_4")
+        self.progress_bar_h3_4.setValue(24)
+        self.progress_bar_h3_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.progress_bar_h3_5 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_5.setObjectName(u"progress_bar_h3_5")
+        self.progress_bar_h3_5.setValue(24)
+        self.progress_bar_h3_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.progress_bar_h3_6 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_6.setObjectName(u"progress_bar_h3_6")
+        self.progress_bar_h3_6.setValue(24)
+        self.progress_bar_h3_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.grid_layout_h3_2.addWidget(self.tool_button_h3_1, 0, 0, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.tool_button_h3_2, 0, 1, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.tool_button_h3_3, 0, 2, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.tool_button_h3_4, 0, 3, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.tool_button_h3_5, 0, 4, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.tool_button_h3_6, 0, 5, 1, 1)
+
+        self.grid_layout_h3_2.addWidget(self.label_h3_1, 1, 0, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.label_h3_2, 1, 1, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.label_h3_3, 1, 2, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.label_h3_4, 1, 3, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.label_h3_5, 1, 4, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.label_h3_6, 1, 5, 1, 1)
+
+        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_1, 2, 0, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_2, 2, 1, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_3, 2, 2, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_4, 2, 3, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_5, 2, 4, 1, 1)
+        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_6, 2, 5, 1, 1)
 
         # 4th horizontal layout
         self.label_pre_h4 = QLabel(self.main_vertical_layout_widget)
