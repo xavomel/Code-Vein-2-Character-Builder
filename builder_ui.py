@@ -41,7 +41,7 @@ class Ui_MainWindow(object):
         # main vertical layout
         self.main_vertical_layout_widget = QWidget(self.centralwidget)
         self.main_vertical_layout_widget.setObjectName(u"main_vertical_layout_widget")
-        self.main_vertical_layout_widget.setGeometry(QRect(0, 0, 960, 810))
+        self.main_vertical_layout_widget.setGeometry(QRect(0, 0, 940, 810))
         self.main_vertical_layout = QVBoxLayout(self.main_vertical_layout_widget)
         self.main_vertical_layout.setObjectName(u"main_vertical_layout")
         self.main_vertical_layout.setContentsMargins(0, 0, 0, 0)
