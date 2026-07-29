@@ -102,6 +102,8 @@ class Ui_MainWindow(object):
                     color: white;
                 }
 
+
+
                 QToolButton {
                     color: white;
                     border: none;
@@ -207,103 +209,103 @@ class Ui_MainWindow(object):
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_4, 0, Qt.AlignmentFlag.AlignLeft)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content
-        self.tool_button_h2_v1_1 = QToolButton(self.main_vertical_layout_widget)
-        self.tool_button_h2_v1_1.setObjectName(u"tool_button_h2_v1_1")
-        self.tool_button_h2_v1_1.setText(QCoreApplication.translate("MainWindow", u"Weapon 1", None)) # move to re-translate
-        self.tool_button_h2_v1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
-        self.tool_button_h2_v1_1.setIcon(icon_slot_item)
-        self.tool_button_h2_v1_1.setIconSize(icon_slot_item_size)
-        self.horizontal_layout_h2_v1_1.addWidget(self.tool_button_h2_v1_1)
+        self.tool_button_h2_v1_h1_1 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h2_v1_h1_1.setObjectName(u"tool_button_h2_v1_h1_1")
+        self.tool_button_h2_v1_h1_1.setText(QCoreApplication.translate("MainWindow", u"Weapon 1", None)) # move to re-translate
+        self.tool_button_h2_v1_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        self.tool_button_h2_v1_h1_1.setIcon(icon_slot_item)
+        self.tool_button_h2_v1_h1_1.setIconSize(icon_slot_item_size)
+        self.horizontal_layout_h2_v1_1.addWidget(self.tool_button_h2_v1_h1_1)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content - grid layout
-        self.grid_layout_h2_v1_1 = QGridLayout()
-        self.grid_layout_h2_v1_1.setObjectName(u"grid_layout_h2_v1_1")
-        self.horizontal_layout_h2_v1_1.addLayout(self.grid_layout_h2_v1_1)
+        self.grid_layout_h2_v1_h1_1 = QGridLayout()
+        self.grid_layout_h2_v1_h1_1.setObjectName(u"grid_layout_h2_v1_h1_1")
+        self.horizontal_layout_h2_v1_1.addLayout(self.grid_layout_h2_v1_h1_1)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content - grid layout content
-        self.label_h2_v1_1 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_1.setObjectName(u"label_h2_v1_1")
-        self.label_h2_v1_1.setText(QCoreApplication.translate("MainWindow", u"Reliability ", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_1 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_1.setObjectName(u"label_h2_v1_h1_g1_1")
+        self.label_h2_v1_h1_g1_1.setText(QCoreApplication.translate("MainWindow", u"Reliability ", None))  # move to re-translate
 
-        self.label_h2_v1_2 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_2.setObjectName(u"label_h2_v1_2")
-        self.label_h2_v1_2.setText(QCoreApplication.translate("MainWindow", u"Handling ", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_2 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_2.setObjectName(u"label_h2_v1_h1_g1_2")
+        self.label_h2_v1_h1_g1_2.setText(QCoreApplication.translate("MainWindow", u"Handling ", None))  # move to re-translate
 
-        self.label_h2_v1_3 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_3.setObjectName(u"label_h2_v1_3")
-        self.label_h2_v1_3.setText(QCoreApplication.translate("MainWindow", u"Conversion ", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_3 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_3.setObjectName(u"label_h2_v1_h1_g1_3")
+        self.label_h2_v1_h1_g1_3.setText(QCoreApplication.translate("MainWindow", u"Conversion ", None))  # move to re-translate
 
-        self.label_h2_v1_4 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_4.setObjectName(u"label_h2_v1_4")
-        self.label_h2_v1_4.setText(QCoreApplication.translate("MainWindow", u"Conductivity ", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_4 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_4.setObjectName(u"label_h2_v1_h1_g1_4")
+        self.label_h2_v1_h1_g1_4.setText(QCoreApplication.translate("MainWindow", u"Conductivity ", None))  # move to re-translate
 
-        self.label_h2_v1_5 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_5.setObjectName(u"label_h2_v1_5")
-        self.label_h2_v1_5.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_5 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_5.setObjectName(u"label_h2_v1_h1_g1_5")
+        self.label_h2_v1_h1_g1_5.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_6 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_6.setObjectName(u"label_h2_v1_6")
-        self.label_h2_v1_6.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_6 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_6.setObjectName(u"label_h2_v1_h1_g1_6")
+        self.label_h2_v1_h1_g1_6.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_7 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_7.setObjectName(u"label_h2_v1_7")
-        self.label_h2_v1_7.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_7 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_7.setObjectName(u"label_h2_v1_h1_g1_7")
+        self.label_h2_v1_h1_g1_7.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_8 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_8.setObjectName(u"label_h2_v1_8")
-        self.label_h2_v1_8.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_8 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_8.setObjectName(u"label_h2_v1_h1_g1_8")
+        self.label_h2_v1_h1_g1_8.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_9 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_9.setObjectName(u"label_h2_v1_9")
-        self.label_h2_v1_9.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_9 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_9.setObjectName(u"label_h2_v1_h1_g1_9")
+        self.label_h2_v1_h1_g1_9.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
 
-        self.label_h2_v1_10 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_10.setObjectName(u"label_h2_v1_10")
-        self.label_h2_v1_10.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_10 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_10.setObjectName(u"label_h2_v1_h1_g1_10")
+        self.label_h2_v1_h1_g1_10.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
 
-        self.label_h2_v1_11 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_11.setObjectName(u"label_h2_v1_11")
-        self.label_h2_v1_11.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_11 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_11.setObjectName(u"label_h2_v1_h1_g1_11")
+        self.label_h2_v1_h1_g1_11.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
 
-        self.label_h2_v1_12 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_12.setObjectName(u"label_h2_v1_12")
-        self.label_h2_v1_12.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_12 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_12.setObjectName(u"label_h2_v1_h1_g1_12")
+        self.label_h2_v1_h1_g1_12.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
 
-        self.label_h2_v1_13 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_13.setObjectName(u"label_h2_v1_13")
-        self.label_h2_v1_13.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_13 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_13.setObjectName(u"label_h2_v1_h1_g1_13")
+        self.label_h2_v1_h1_g1_13.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_14 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_14.setObjectName(u"label_h2_v1_14")
-        self.label_h2_v1_14.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_14 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_14.setObjectName(u"label_h2_v1_h1_g1_14")
+        self.label_h2_v1_h1_g1_14.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_15 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_15.setObjectName(u"label_h2_v1_15")
-        self.label_h2_v1_15.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_15 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_15.setObjectName(u"label_h2_v1_h1_g1_15")
+        self.label_h2_v1_h1_g1_15.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_16 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_16.setObjectName(u"label_h2_v1_16")
-        self.label_h2_v1_16.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v1_h1_g1_16 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v1_h1_g1_16.setObjectName(u"label_h2_v1_h1_g1_16")
+        self.label_h2_v1_h1_g1_16.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_1, 0, 0, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_2, 1, 0, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_3, 2, 0, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_4, 3, 0, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_1, 0, 0, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_2, 1, 0, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_3, 2, 0, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_4, 3, 0, 1, 1)
 
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_5, 0, 1, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_6, 1, 1, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_7, 2, 1, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_8, 3, 1, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_5, 0, 1, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_6, 1, 1, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_7, 2, 1, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_8, 3, 1, 1, 1)
 
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_9, 0, 2, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_10, 1, 2, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_11, 2, 2, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_12, 3, 2, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_9,  0, 2, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_10, 1, 2, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_11, 2, 2, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_12, 3, 2, 1, 1)
 
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_13, 0, 3, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_14, 1, 3, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_15, 2, 3, 1, 1)
-        self.grid_layout_h2_v1_1.addWidget(self.label_h2_v1_16, 3, 3, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_13, 0, 3, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_14, 1, 3, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_15, 2, 3, 1, 1)
+        self.grid_layout_h2_v1_h1_1.addWidget(self.label_h2_v1_h1_g1_16, 3, 3, 1, 1)
 
         # 2nd horizontal layout content - vertical layout 2
         self.vertical_layout_h2_2 = QVBoxLayout()
@@ -347,103 +349,103 @@ class Ui_MainWindow(object):
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_4, 0, Qt.AlignmentFlag.AlignLeft)
 
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content
-        self.tool_button_h2_v2_1 = QToolButton(self.main_vertical_layout_widget)
-        self.tool_button_h2_v2_1.setObjectName(u"tool_button_h2_v2_1")
-        self.tool_button_h2_v2_1.setText(QCoreApplication.translate("MainWindow", u"Weapon 2", None))  # move to re-translate
-        self.tool_button_h2_v2_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
-        self.tool_button_h2_v2_1.setIcon(icon_slot_item)
-        self.tool_button_h2_v2_1.setIconSize(icon_slot_item_size)
-        self.horizontal_layout_h2_v2_1.addWidget(self.tool_button_h2_v2_1)
+        self.tool_button_h2_v2_h1_1 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h2_v2_h1_1.setObjectName(u"tool_button_h2_v2_h1_1")
+        self.tool_button_h2_v2_h1_1.setText(QCoreApplication.translate("MainWindow", u"Weapon 2", None))  # move to re-translate
+        self.tool_button_h2_v2_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        self.tool_button_h2_v2_h1_1.setIcon(icon_slot_item)
+        self.tool_button_h2_v2_h1_1.setIconSize(icon_slot_item_size)
+        self.horizontal_layout_h2_v2_1.addWidget(self.tool_button_h2_v2_h1_1)
 
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content - grid layout
-        self.grid_layout_h2_v2_1 = QGridLayout()
-        self.grid_layout_h2_v2_1.setObjectName(u"grid_layout_h2_v2_1")
-        self.horizontal_layout_h2_v2_1.addLayout(self.grid_layout_h2_v2_1)
+        self.grid_layout_h2_v2_h1_1 = QGridLayout()
+        self.grid_layout_h2_v2_h1_1.setObjectName(u"grid_layout_h2_v2_h1_1")
+        self.horizontal_layout_h2_v2_1.addLayout(self.grid_layout_h2_v2_h1_1)
 
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content - grid layout content
-        self.label_h2_v2_1 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v2_1.setObjectName(u"label_h2_v2_1")
-        self.label_h2_v2_1.setText(QCoreApplication.translate("MainWindow", u"Reliability ", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_1 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_1.setObjectName(u"label_h2_v2_h1_g1_1")
+        self.label_h2_v2_h1_g1_1.setText(QCoreApplication.translate("MainWindow", u"Reliability ", None))  # move to re-translate
 
-        self.label_h2_v1_2 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_2.setObjectName(u"label_h2_v1_2")
-        self.label_h2_v1_2.setText(QCoreApplication.translate("MainWindow", u"Handling ", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_2 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_2.setObjectName(u"label_h2_v2_h1_g1_2")
+        self.label_h2_v2_h1_g1_2.setText(QCoreApplication.translate("MainWindow", u"Handling ", None))  # move to re-translate
 
-        self.label_h2_v1_3 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_3.setObjectName(u"label_h2_v1_3")
-        self.label_h2_v1_3.setText(QCoreApplication.translate("MainWindow", u"Conversion ", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_3 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_3.setObjectName(u"label_h2_v2_h1_g1_3")
+        self.label_h2_v2_h1_g1_3.setText(QCoreApplication.translate("MainWindow", u"Conversion ", None))  # move to re-translate
 
-        self.label_h2_v1_4 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_4.setObjectName(u"label_h2_v1_4")
-        self.label_h2_v1_4.setText(QCoreApplication.translate("MainWindow", u"Conductivity ", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_4 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_4.setObjectName(u"label_h2_v2_h1_g1_4")
+        self.label_h2_v2_h1_g1_4.setText(QCoreApplication.translate("MainWindow", u"Conductivity ", None))  # move to re-translate
 
-        self.label_h2_v1_5 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_5.setObjectName(u"label_h2_v1_5")
-        self.label_h2_v1_5.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_5 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_5.setObjectName(u"label_h2_v2_h1_g1_5")
+        self.label_h2_v2_h1_g1_5.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_6 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_6.setObjectName(u"label_h2_v1_6")
-        self.label_h2_v1_6.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_6 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_6.setObjectName(u"label_h2_v2_h1_g1_6")
+        self.label_h2_v2_h1_g1_6.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_7 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_7.setObjectName(u"label_h2_v1_7")
-        self.label_h2_v1_7.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_7 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_7.setObjectName(u"label_h2_v2_h1_g1_7")
+        self.label_h2_v2_h1_g1_7.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_8 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_8.setObjectName(u"label_h2_v1_8")
-        self.label_h2_v1_8.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_8 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_8.setObjectName(u"label_h2_v2_h1_g1_8")
+        self.label_h2_v2_h1_g1_8.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v1_9 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v1_9.setObjectName(u"label_h2_v1_9")
-        self.label_h2_v1_9.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_9 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_9.setObjectName(u"label_h2_v2_h1_g1_9")
+        self.label_h2_v2_h1_g1_9.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
 
-        self.label_h2_v2_10 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v2_10.setObjectName(u"label_h2_v2_10")
-        self.label_h2_v2_10.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_10 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_10.setObjectName(u"label_h2_v2_h1_g1_10")
+        self.label_h2_v2_h1_g1_10.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
 
-        self.label_h2_v2_11 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v2_11.setObjectName(u"label_h2_v2_11")
-        self.label_h2_v2_11.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_11 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_11.setObjectName(u"label_h2_v2_h1_g1_11")
+        self.label_h2_v2_h1_g1_11.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
 
-        self.label_h2_v2_12 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v2_12.setObjectName(u"label_h2_v2_12")
-        self.label_h2_v2_12.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_12 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_12.setObjectName(u"label_h2_v2_h1_g1_12")
+        self.label_h2_v2_h1_g1_12.setText(QCoreApplication.translate("MainWindow", u"/", None))  # move to re-translate
 
-        self.label_h2_v2_13 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v2_13.setObjectName(u"label_h2_v2_13")
-        self.label_h2_v2_13.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_13 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_13.setObjectName(u"label_h2_v2_h1_g1_13")
+        self.label_h2_v2_h1_g1_13.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v2_14 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v2_14.setObjectName(u"label_h2_v2_14")
-        self.label_h2_v2_14.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_14 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_14.setObjectName(u"label_h2_v2_h1_g1_14")
+        self.label_h2_v2_h1_g1_14.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v2_15 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v2_15.setObjectName(u"label_h2_v2_15")
-        self.label_h2_v2_15.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_15 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_15.setObjectName(u"label_h2_v2_h1_g1_15")
+        self.label_h2_v2_h1_g1_15.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.label_h2_v2_16 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v2_16.setObjectName(u"label_h2_v2_16")
-        self.label_h2_v2_16.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
+        self.label_h2_v2_h1_g1_16 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v2_h1_g1_16.setObjectName(u"label_h2_v2_h1_g1_16")
+        self.label_h2_v2_h1_g1_16.setText(QCoreApplication.translate("MainWindow", u"10(+10)", None))  # move to re-translate
 
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v2_1, 0, 0, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v1_2, 1, 0, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v1_3, 2, 0, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v1_4, 3, 0, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_1, 0, 0, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_2, 1, 0, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_3, 2, 0, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_4, 3, 0, 1, 1)
 
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v1_5, 0, 1, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v1_6, 1, 1, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v1_7, 2, 1, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v1_8, 3, 1, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_5, 0, 1, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_6, 1, 1, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_7, 2, 1, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_8, 3, 1, 1, 1)
 
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v1_9, 0, 2, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v2_10, 1, 2, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v2_11, 2, 2, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v2_12, 3, 2, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_9,  0, 2, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_10, 1, 2, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_11, 2, 2, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_12, 3, 2, 1, 1)
 
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v2_13, 0, 3, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v2_14, 1, 3, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v2_15, 2, 3, 1, 1)
-        self.grid_layout_h2_v2_1.addWidget(self.label_h2_v2_16, 3, 3, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_13, 0, 3, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_14, 1, 3, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_15, 2, 3, 1, 1)
+        self.grid_layout_h2_v2_h1_1.addWidget(self.label_h2_v2_h1_g1_16, 3, 3, 1, 1)
 
         # 2nd horizontal layout content - vertical layout 3
         self.vertical_layout_h2_3 = QVBoxLayout()
@@ -488,51 +490,51 @@ class Ui_MainWindow(object):
         self.horizontal_layout_h2_v3_1.addLayout(self.grid_layout_h2_v3_h1_1)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1 content - grid layout content
-        self.label_h2_v3_h1_1 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v3_h1_1.setObjectName(u"label_h2_v3_h1_1")
-        self.label_h2_v3_h1_1.setText(QCoreApplication.translate("MainWindow", u"Bleed W1", None))  # move to re-translate
+        self.label_h2_v3_h1_g1_1 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v3_h1_g1_1.setObjectName(u"label_h2_v3_h1_g1_1")
+        self.label_h2_v3_h1_g1_1.setText(QCoreApplication.translate("MainWindow", u"Bleed W1", None))  # move to re-translate
 
-        self.label_h2_v3_h1_2 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v3_h1_2.setObjectName(u"label_h2_v3_h1_2")
-        self.label_h2_v3_h1_2.setText(QCoreApplication.translate("MainWindow", u"Bleed W2", None))  # move to re-translate
+        self.label_h2_v3_h1_g1_2 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v3_h1_g1_2.setObjectName(u"label_h2_v3_h1_g1_2")
+        self.label_h2_v3_h1_g1_2.setText(QCoreApplication.translate("MainWindow", u"Bleed W2", None))  # move to re-translate
 
-        self.label_h2_v3_h1_3 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v3_h1_3.setObjectName(u"label_h2_v3_h1_3")
-        self.label_h2_v3_h1_3.setText(QCoreApplication.translate("MainWindow", u"Bleed Jail", None))  # move to re-translate
+        self.label_h2_v3_h1_g1_3 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v3_h1_g1_3.setObjectName(u"label_h2_v3_h1_g1_3")
+        self.label_h2_v3_h1_g1_3.setText(QCoreApplication.translate("MainWindow", u"Bleed Jail", None))  # move to re-translate
 
-        self.label_h2_v3_h1_4 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v3_h1_4.setObjectName(u"label_h2_v3_h1_4")
-        self.label_h2_v3_h1_4.setText(QCoreApplication.translate("MainWindow", u"Balance", None))  # move to re-translate
+        self.label_h2_v3_h1_g1_4 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v3_h1_g1_4.setObjectName(u"label_h2_v3_h1_g1_4")
+        self.label_h2_v3_h1_g1_4.setText(QCoreApplication.translate("MainWindow", u"Balance", None))  # move to re-translate
 
-        self.label_h2_v3_h1_5 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v3_h1_5.setObjectName(u"label_h2_v3_h1_5")
-        self.label_h2_v3_h1_5.setFont(font_numbers_bleed)
-        self.label_h2_v3_h1_5.setText(QCoreApplication.translate("MainWindow", u"134", None))  # move to re-translate
+        self.label_h2_v3_h1_g1_5 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v3_h1_g1_5.setObjectName(u"label_h2_v3_h1_g1_5")
+        self.label_h2_v3_h1_g1_5.setFont(font_numbers_bleed)
+        self.label_h2_v3_h1_g1_5.setText(QCoreApplication.translate("MainWindow", u"134", None))  # move to re-translate
 
-        self.label_h2_v3_h1_6 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v3_h1_6.setObjectName(u"label_h2_v3_h1_6")
-        self.label_h2_v3_h1_6.setFont(font_numbers_bleed)
-        self.label_h2_v3_h1_6.setText(QCoreApplication.translate("MainWindow", u"126", None))  # move to re-translate
+        self.label_h2_v3_h1_g1_6 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v3_h1_g1_6.setObjectName(u"label_h2_v3_h1_g1_6")
+        self.label_h2_v3_h1_g1_6.setFont(font_numbers_bleed)
+        self.label_h2_v3_h1_g1_6.setText(QCoreApplication.translate("MainWindow", u"126", None))  # move to re-translate
 
-        self.label_h2_v3_h1_7 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v3_h1_7.setObjectName(u"label_h2_v3_h1_7")
-        self.label_h2_v3_h1_7.setFont(font_numbers_bleed)
-        self.label_h2_v3_h1_7.setText(QCoreApplication.translate("MainWindow", u"101", None))  # move to re-translate
+        self.label_h2_v3_h1_g1_7 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v3_h1_g1_7.setObjectName(u"label_h2_v3_h1_g1_7")
+        self.label_h2_v3_h1_g1_7.setFont(font_numbers_bleed)
+        self.label_h2_v3_h1_g1_7.setText(QCoreApplication.translate("MainWindow", u"101", None))  # move to re-translate
 
-        self.label_h2_v3_h1_8 = QLabel(self.main_vertical_layout_widget)
-        self.label_h2_v3_h1_8.setObjectName(u"label_h2_v3_h1_8")
-        self.label_h2_v3_h1_8.setFont(font_numbers_bleed)
-        self.label_h2_v3_h1_8.setText(QCoreApplication.translate("MainWindow", u"96", None))  # move to re-translate
+        self.label_h2_v3_h1_g1_8 = QLabel(self.main_vertical_layout_widget)
+        self.label_h2_v3_h1_g1_8.setObjectName(u"label_h2_v3_h1_g1_8")
+        self.label_h2_v3_h1_g1_8.setFont(font_numbers_bleed)
+        self.label_h2_v3_h1_g1_8.setText(QCoreApplication.translate("MainWindow", u"96", None))  # move to re-translate
 
-        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_1, 0, 0, 1, 1)
-        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_2, 1, 0, 1, 1)
-        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_3, 2, 0, 1, 1)
-        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_4, 3, 0, 1, 1)
+        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_g1_1, 0, 0, 1, 1)
+        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_g1_2, 1, 0, 1, 1)
+        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_g1_3, 2, 0, 1, 1)
+        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_g1_4, 3, 0, 1, 1)
 
-        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_5, 0, 1, 1, 1)
-        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_6, 1, 1, 1, 1)
-        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_7, 2, 1, 1, 1)
-        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_8, 3, 1, 1, 1)
+        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_g1_5, 0, 1, 1, 1)
+        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_g1_6, 1, 1, 1, 1)
+        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_g1_7, 2, 1, 1, 1)
+        self.grid_layout_h2_v3_h1_1.addWidget(self.label_h2_v3_h1_g1_8, 3, 1, 1, 1)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 2
         self.horizontal_layout_h2_v3_2 = QHBoxLayout()
@@ -541,62 +543,62 @@ class Ui_MainWindow(object):
         self.vertical_layout_h2_3.addLayout(self.horizontal_layout_h2_v3_2)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 2 content
-        self.tool_button_h2_v3_h1_1 = QToolButton(self.main_vertical_layout_widget)
-        self.tool_button_h2_v3_h1_1.setObjectName(u"tool_button_h2_v3_h1_1")
-        self.tool_button_h2_v3_h1_1.setText(QCoreApplication.translate("MainWindow", u"Blood Code", None)) # move to re-translate
-        self.tool_button_h2_v3_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
-        self.tool_button_h2_v3_h1_1.setIcon(icon_slot_blood_code)
-        self.tool_button_h2_v3_h1_1.setIconSize(icon_slot_blood_code_size)
-        self.horizontal_layout_h2_v3_2.addWidget(self.tool_button_h2_v3_h1_1)
+        self.tool_button_h2_v3_h2_1 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h2_v3_h2_1.setObjectName(u"tool_button_h2_v3_h2_1")
+        self.tool_button_h2_v3_h2_1.setText(QCoreApplication.translate("MainWindow", u"Blood Code", None)) # move to re-translate
+        self.tool_button_h2_v3_h2_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        self.tool_button_h2_v3_h2_1.setIcon(icon_slot_blood_code)
+        self.tool_button_h2_v3_h2_1.setIconSize(icon_slot_blood_code_size)
+        self.horizontal_layout_h2_v3_2.addWidget(self.tool_button_h2_v3_h2_1)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 2 content - vertical layout
-        self.vertical_layout_h2_v3_h1_1 = QVBoxLayout()
-        self.vertical_layout_h2_v3_h1_1.setObjectName(u"vertical_layout_h2_v3_h1_1")
-        self.vertical_layout_h2_v3_h1_1.setContentsMargins(0, 0, 0, 0)
-        self.horizontal_layout_h2_v3_2.addLayout(self.vertical_layout_h2_v3_h1_1)
+        self.vertical_layout_h2_v3_h2_1 = QVBoxLayout()
+        self.vertical_layout_h2_v3_h2_1.setObjectName(u"vertical_layout_h2_v3_h2_1")
+        self.vertical_layout_h2_v3_h2_1.setContentsMargins(0, 0, 0, 0)
+        self.horizontal_layout_h2_v3_2.addLayout(self.vertical_layout_h2_v3_h2_1)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 2 content - vertical layout content
-        self.push_button_h2_v3_h1_1 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v3_h1_1.setObjectName(u"push_button_h2_v3_h1_1")
-        self.push_button_h2_v3_h1_1.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
-        self.push_button_h2_v3_h1_1.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h1_1.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_1)
+        self.push_button_h2_v3_h2_v1_1 = QPushButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_1.setObjectName(u"push_button_h2_v3_h2_v1_1")
+        self.push_button_h2_v3_h2_v1_1.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_1.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h2_v1_1.setIconSize(icon_slot_forma_size)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_1)
 
-        self.push_button_h2_v3_h1_2 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v3_h1_2.setObjectName(u"push_button_h2_v3_h1_2")
-        self.push_button_h2_v3_h1_2.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
-        self.push_button_h2_v3_h1_2.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h1_2.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_2)
+        self.push_button_h2_v3_h2_v1_2 = QPushButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_2.setObjectName(u"push_button_h2_v3_h2_v1_2")
+        self.push_button_h2_v3_h2_v1_2.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_2.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h2_v1_2.setIconSize(icon_slot_forma_size)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_2)
 
-        self.push_button_h2_v3_h1_3 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v3_h1_3.setObjectName(u"push_button_h2_v3_h1_3")
-        self.push_button_h2_v3_h1_3.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
-        self.push_button_h2_v3_h1_3.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h1_3.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_3)
+        self.push_button_h2_v3_h2_v1_3 = QPushButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_3.setObjectName(u"push_button_h2_v3_h2_v1_3")
+        self.push_button_h2_v3_h2_v1_3.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_3.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h2_v1_3.setIconSize(icon_slot_forma_size)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_3)
 
-        self.push_button_h2_v3_h1_4 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v3_h1_4.setObjectName(u"push_button_h2_v3_h1_4")
-        self.push_button_h2_v3_h1_4.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
-        self.push_button_h2_v3_h1_4.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h1_4.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_4)
+        self.push_button_h2_v3_h2_v1_4 = QPushButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_4.setObjectName(u"push_button_h2_v3_h2_v1_4")
+        self.push_button_h2_v3_h2_v1_4.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_4.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h2_v1_4.setIconSize(icon_slot_forma_size)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_4)
 
-        self.push_button_h2_v3_h1_5 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v3_h1_5.setObjectName(u"push_button_h2_v3_h1_5")
-        self.push_button_h2_v3_h1_5.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
-        self.push_button_h2_v3_h1_5.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h1_5.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_5)
+        self.push_button_h2_v3_h2_v1_5 = QPushButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_5.setObjectName(u"push_button_h2_v3_h2_v1_5")
+        self.push_button_h2_v3_h2_v1_5.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_5.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h2_v1_5.setIconSize(icon_slot_forma_size)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_5)
 
-        self.push_button_h2_v3_h1_6 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v3_h1_6.setObjectName(u"push_button_h2_v3_h1_6")
-        self.push_button_h2_v3_h1_6.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
-        self.push_button_h2_v3_h1_6.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h1_6.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_6)
+        self.push_button_h2_v3_h2_v1_6 = QPushButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_6.setObjectName(u"push_button_h2_v3_h2_v1_6")
+        self.push_button_h2_v3_h2_v1_6.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_6.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h2_v1_6.setIconSize(icon_slot_forma_size)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_6)
 
         # 3rd horizontal layout
         self.main_horizontal_layout_3 = QHBoxLayout()
@@ -610,32 +612,33 @@ class Ui_MainWindow(object):
         self.main_horizontal_layout_3.addLayout(self.grid_layout_h3_1)
 
         # 3rd horizontal layout content - grid layout 1 content
-        self.tool_button_h3_1 = QToolButton(self.main_vertical_layout_widget)
-        self.tool_button_h3_1.setObjectName(u"tool_button_h3_1")
-        self.tool_button_h3_1.setText(QCoreApplication.translate("MainWindow", u"Dodge Effectiveness", None)) # move to re-translate
-        self.tool_button_h3_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
-        self.tool_button_h3_1.setIcon(icon_text_arrow)
-        self.grid_layout_h3_1.addWidget(self.tool_button_h3_1, 0, 0, 1, 1)
+        self.tool_button_h3_g1_1 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_g1_1.setObjectName(u"tool_button_h3_g1_1")
+        self.tool_button_h3_g1_1.setText(QCoreApplication.translate("MainWindow", u"Dodge Effectiveness", None)) # move to re-translate
+        self.tool_button_h3_g1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+        self.tool_button_h3_g1_1.setIcon(icon_text_arrow)
 
-        self.tool_button_h3_2 = QToolButton(self.main_vertical_layout_widget)
-        self.tool_button_h3_2.setObjectName(u"tool_button_h3_2")
-        self.tool_button_h3_2.setText(QCoreApplication.translate("MainWindow", u"Quick", None)) # move to re-translate
-        self.tool_button_h3_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
-        self.grid_layout_h3_1.addWidget(self.tool_button_h3_2, 1, 0, 1, 1, Qt.AlignmentFlag.AlignHCenter)
+        self.tool_button_h3_g1_2 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_g1_2.setObjectName(u"tool_button_h3_g1_2")
+        self.tool_button_h3_g1_2.setText(QCoreApplication.translate("MainWindow", u"Quick", None)) # move to re-translate
+        self.tool_button_h3_g1_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
 
-        self.tool_button_h3_3 = QToolButton(self.main_vertical_layout_widget)
-        self.tool_button_h3_3.setObjectName(u"tool_button_h3_3")
-        self.tool_button_h3_3.setText(QCoreApplication.translate("MainWindow", u"Defensive Formae", None)) # move to re-translate
-        self.tool_button_h3_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
-        self.tool_button_h3_3.setIcon(icon_text_arrow)
-        self.grid_layout_h3_1.addWidget(self.tool_button_h3_3, 2, 0, 1, 1)
+        self.tool_button_h3_g1_3 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_g1_3.setObjectName(u"tool_button_h3_g1_3")
+        self.tool_button_h3_g1_3.setText(QCoreApplication.translate("MainWindow", u"Defensive Formae", None)) # move to re-translate
+        self.tool_button_h3_g1_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+        self.tool_button_h3_g1_3.setIcon(icon_text_arrow)
 
-        self.tool_button_h3_4 = QToolButton(self.main_vertical_layout_widget)
-        self.tool_button_h3_4.setObjectName(u"tool_button_h3_4")
-        self.tool_button_h3_4.setFont(font_defensive_formae)
-        self.tool_button_h3_4.setText(QCoreApplication.translate("MainWindow", u"30", None)) # move to re-translate
-        self.tool_button_h3_4.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
-        self.grid_layout_h3_1.addWidget(self.tool_button_h3_4, 3, 0, 1, 1, Qt.AlignmentFlag.AlignHCenter)
+        self.tool_button_h3_g1_4 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_g1_4.setObjectName(u"tool_button_h3_g1_4")
+        self.tool_button_h3_g1_4.setFont(font_defensive_formae)
+        self.tool_button_h3_g1_4.setText(QCoreApplication.translate("MainWindow", u"30", None)) # move to re-translate
+        self.tool_button_h3_g1_4.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+
+        self.grid_layout_h3_1.addWidget(self.tool_button_h3_g1_1, 0, 0, 1, 1)
+        self.grid_layout_h3_1.addWidget(self.tool_button_h3_g1_2, 1, 0, 1, 1, Qt.AlignmentFlag.AlignHCenter)
+        self.grid_layout_h3_1.addWidget(self.tool_button_h3_g1_3, 2, 0, 1, 1)
+        self.grid_layout_h3_1.addWidget(self.tool_button_h3_g1_4, 3, 0, 1, 1, Qt.AlignmentFlag.AlignHCenter)
 
         # 3rd horizontal layout content - vertical layout 1
         self.vertical_layout_h3_1 = QVBoxLayout()
@@ -644,156 +647,152 @@ class Ui_MainWindow(object):
         self.main_horizontal_layout_3.addLayout(self.vertical_layout_h3_1)
 
         # 3rd horizontal layout content - vertical layout 1 content
-        self.label_h3_1 = QLabel(self.main_vertical_layout_widget)
-        self.label_h3_1.setObjectName(u"label_h3_1")
-        self.label_h3_1.setText(QCoreApplication.translate("MainWindow", u"Attributes & Burden", None)) # move to re-translate
-        self.label_h3_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.vertical_layout_h3_1.addWidget(self.label_h3_1)
+        self.label_h3_v1_1 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_v1_1.setObjectName(u"label_h3_v1_1")
+        self.label_h3_v1_1.setText(QCoreApplication.translate("MainWindow", u"Attributes & Burden", None)) # move to re-translate
+        self.label_h3_v1_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.vertical_layout_h3_1.addWidget(self.label_h3_v1_1)
 
-        # 3rd horizontal layout content - vertical layout 1 content - grid layout 2
-        self.grid_layout_h3_2 = QGridLayout()
-        self.grid_layout_h3_2.setObjectName(u"grid_layout_h3_2")
-        self.vertical_layout_h3_1.addLayout(self.grid_layout_h3_2)
+        # 3rd horizontal layout content - vertical layout 1 content - grid layout 1
+        self.grid_layout_h3_v1_2 = QGridLayout()
+        self.grid_layout_h3_v1_2.setObjectName(u"grid_layout_h3_v1_2")
+        self.vertical_layout_h3_1.addLayout(self.grid_layout_h3_v1_2)
 
-        # 3rd horizontal layout content - vertical layout 1 content - spacer
-        # self.horizontal_spacer_h3_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-        # self.vertical_layout_h3_1.addItem(self.horizontal_spacer_h3_1)
+        # 3rd horizontal layout content - vertical layout 1 content - grid layout 1 content
+        self.tool_button_h3_v1_g1_1 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_v1_g1_1.setObjectName(u"tool_button_h3_v1_g1_1")
+        self.tool_button_h3_v1_g1_1.setText(QCoreApplication.translate("MainWindow", u"Strength", None)) # move to re-translate
+        self.tool_button_h3_v1_g1_1.setIcon(icon_attribute_strength)
+        self.tool_button_h3_v1_g1_1.setIconSize(icon_attribute_size)
 
-        # 3rd horizontal layout content - vertical layout 1 content - grid layout 2 content
-        self.tool_button_h3_1 = QPushButton(self.main_vertical_layout_widget)
-        self.tool_button_h3_1.setObjectName(u"tool_button_h3_1")
-        self.tool_button_h3_1.setText(QCoreApplication.translate("MainWindow", u"Strength", None)) # move to re-translate
-        self.tool_button_h3_1.setIcon(icon_attribute_strength)
-        self.tool_button_h3_1.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_2 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_v1_g1_2.setObjectName(u"tool_button_h3_v1_g1_2")
+        self.tool_button_h3_v1_g1_2.setText(QCoreApplication.translate("MainWindow", u"Dexterity", None)) # move to re-translate
+        self.tool_button_h3_v1_g1_2.setIcon(icon_attribute_dexterity)
+        self.tool_button_h3_v1_g1_2.setIconSize(icon_attribute_size)
 
-        self.tool_button_h3_2 = QPushButton(self.main_vertical_layout_widget)
-        self.tool_button_h3_2.setObjectName(u"tool_button_h3_2")
-        self.tool_button_h3_2.setText(QCoreApplication.translate("MainWindow", u"Dexterity", None)) # move to re-translate
-        self.tool_button_h3_2.setIcon(icon_attribute_dexterity)
-        self.tool_button_h3_2.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_3 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_v1_g1_3.setObjectName(u"tool_button_h3_v1_g1_3")
+        self.tool_button_h3_v1_g1_3.setText(QCoreApplication.translate("MainWindow", u"Mind", None)) # move to re-translate
+        self.tool_button_h3_v1_g1_3.setIcon(icon_attribute_mind)
+        self.tool_button_h3_v1_g1_3.setIconSize(icon_attribute_size)
 
-        self.tool_button_h3_3 = QPushButton(self.main_vertical_layout_widget)
-        self.tool_button_h3_3.setObjectName(u"tool_button_h3_3")
-        self.tool_button_h3_3.setText(QCoreApplication.translate("MainWindow", u"Mind", None)) # move to re-translate
-        self.tool_button_h3_3.setIcon(icon_attribute_mind)
-        self.tool_button_h3_3.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_4 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_v1_g1_4.setObjectName(u"tool_button_h3_v1_g1_4")
+        self.tool_button_h3_v1_g1_4.setText(QCoreApplication.translate("MainWindow", u"Willpower", None)) # move to re-translate
+        self.tool_button_h3_v1_g1_4.setIcon(icon_attribute_willpower)
+        self.tool_button_h3_v1_g1_4.setIconSize(icon_attribute_size)
 
-        self.tool_button_h3_4 = QPushButton(self.main_vertical_layout_widget)
-        self.tool_button_h3_4.setObjectName(u"tool_button_h3_4")
-        self.tool_button_h3_4.setText(QCoreApplication.translate("MainWindow", u"Willpower", None)) # move to re-translate
-        self.tool_button_h3_4.setIcon(icon_attribute_willpower)
-        self.tool_button_h3_4.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_5 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_v1_g1_5.setObjectName(u"tool_button_h3_v1_g1_5")
+        self.tool_button_h3_v1_g1_5.setText(QCoreApplication.translate("MainWindow", u"Vitality", None)) # move to re-translate
+        self.tool_button_h3_v1_g1_5.setIcon(icon_attribute_vitality)
+        self.tool_button_h3_v1_g1_5.setIconSize(icon_attribute_size)
 
-        self.tool_button_h3_5 = QPushButton(self.main_vertical_layout_widget)
-        self.tool_button_h3_5.setObjectName(u"tool_button_h3_5")
-        self.tool_button_h3_5.setText(QCoreApplication.translate("MainWindow", u"Vitality", None)) # move to re-translate
-        self.tool_button_h3_5.setIcon(icon_attribute_vitality)
-        self.tool_button_h3_5.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_6 = QPushButton(self.main_vertical_layout_widget)
+        self.tool_button_h3_v1_g1_6.setObjectName(u"tool_button_h3_v1_g1_6")
+        self.tool_button_h3_v1_g1_6.setText(QCoreApplication.translate("MainWindow", u"Fortitude", None)) # move to re-translate
+        self.tool_button_h3_v1_g1_6.setIcon(icon_attribute_fortitude)
+        self.tool_button_h3_v1_g1_6.setIconSize(icon_attribute_size)
 
-        self.tool_button_h3_6 = QPushButton(self.main_vertical_layout_widget)
-        self.tool_button_h3_6.setObjectName(u"tool_button_h3_6")
-        self.tool_button_h3_6.setText(QCoreApplication.translate("MainWindow", u"Fortitude", None)) # move to re-translate
-        self.tool_button_h3_6.setIcon(icon_attribute_fortitude)
-        self.tool_button_h3_6.setIconSize(icon_attribute_size)
+        self.label_h3_v1_g1_1 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_v1_g1_1.setObjectName(u"label_h3_v1_g1_1")
+        self.label_h3_v1_g1_1.setFont(font_numbers_attribute)
+        self.label_h3_v1_g1_1.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_v1_g1_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.label_h3_1 = QLabel(self.main_vertical_layout_widget)
-        self.label_h3_1.setObjectName(u"label_h3_1")
-        self.label_h3_1.setFont(font_numbers_attribute)
-        self.label_h3_1.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
-        self.label_h3_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_h3_v1_g1_2 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_v1_g1_2.setObjectName(u"label_h3_v1_g1_2")
+        self.label_h3_v1_g1_2.setFont(font_numbers_attribute)
+        self.label_h3_v1_g1_2.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_v1_g1_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.label_h3_2 = QLabel(self.main_vertical_layout_widget)
-        self.label_h3_2.setObjectName(u"label_h3_2")
-        self.label_h3_2.setFont(font_numbers_attribute)
-        self.label_h3_2.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
-        self.label_h3_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_h3_v1_g1_3 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_v1_g1_3.setObjectName(u"label_h3_v1_g1_3")
+        self.label_h3_v1_g1_3.setFont(font_numbers_attribute)
+        self.label_h3_v1_g1_3.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_v1_g1_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.label_h3_3 = QLabel(self.main_vertical_layout_widget)
-        self.label_h3_3.setObjectName(u"label_h3_3")
-        self.label_h3_3.setFont(font_numbers_attribute)
-        self.label_h3_3.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
-        self.label_h3_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_h3_v1_g1_4 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_v1_g1_4.setObjectName(u"label_h3_v1_g1_4")
+        self.label_h3_v1_g1_4.setFont(font_numbers_attribute)
+        self.label_h3_v1_g1_4.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_v1_g1_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.label_h3_4 = QLabel(self.main_vertical_layout_widget)
-        self.label_h3_4.setObjectName(u"label_h3_4")
-        self.label_h3_4.setFont(font_numbers_attribute)
-        self.label_h3_4.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
-        self.label_h3_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_h3_v1_g1_5 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_v1_g1_5.setObjectName(u"label_h3_v1_g1_5")
+        self.label_h3_v1_g1_5.setFont(font_numbers_attribute)
+        self.label_h3_v1_g1_5.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_v1_g1_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.label_h3_5 = QLabel(self.main_vertical_layout_widget)
-        self.label_h3_5.setObjectName(u"label_h3_5")
-        self.label_h3_5.setFont(font_numbers_attribute)
-        self.label_h3_5.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
-        self.label_h3_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.label_h3_v1_g1_6 = QLabel(self.main_vertical_layout_widget)
+        self.label_h3_v1_g1_6.setObjectName(u"label_h3_v1_g1_6")
+        self.label_h3_v1_g1_6.setFont(font_numbers_attribute)
+        self.label_h3_v1_g1_6.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
+        self.label_h3_v1_g1_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.label_h3_6 = QLabel(self.main_vertical_layout_widget)
-        self.label_h3_6.setObjectName(u"label_h3_6")
-        self.label_h3_6.setFont(font_numbers_attribute)
-        self.label_h3_6.setText(QCoreApplication.translate("MainWindow", u"12", None))  # move to re-translate
-        self.label_h3_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.progress_bar_h3_v1_g1_1 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_v1_g1_1.setObjectName(u"progress_bar_h3_v1_g1_1")
+        self.progress_bar_h3_v1_g1_1.setFont(font_numbers_progress_bar)
+        self.progress_bar_h3_v1_g1_1.setFormat("%v")
+        self.progress_bar_h3_v1_g1_1.setValue(24)
+        self.progress_bar_h3_v1_g1_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.progress_bar_h3_1 = QProgressBar(self.main_vertical_layout_widget)
-        self.progress_bar_h3_1.setObjectName(u"progress_bar_h3_1")
-        self.progress_bar_h3_1.setFont(font_numbers_progress_bar)
-        self.progress_bar_h3_1.setFormat("%v")
-        self.progress_bar_h3_1.setValue(24)
-        self.progress_bar_h3_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.progress_bar_h3_v1_g1_2 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_v1_g1_2.setObjectName(u"progress_bar_h3_v1_g1_2")
+        self.progress_bar_h3_v1_g1_2.setFont(font_numbers_progress_bar)
+        self.progress_bar_h3_v1_g1_2.setFormat("%v")
+        self.progress_bar_h3_v1_g1_2.setValue(24)
+        self.progress_bar_h3_v1_g1_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.progress_bar_h3_2 = QProgressBar(self.main_vertical_layout_widget)
-        self.progress_bar_h3_2.setObjectName(u"progress_bar_h3_2")
-        self.progress_bar_h3_2.setFont(font_numbers_progress_bar)
-        self.progress_bar_h3_2.setFormat("%v")
-        self.progress_bar_h3_2.setValue(24)
-        self.progress_bar_h3_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.progress_bar_h3_v1_g1_3 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_v1_g1_3.setObjectName(u"progress_bar_h3_v1_g1_3")
+        self.progress_bar_h3_v1_g1_3.setFont(font_numbers_progress_bar)
+        self.progress_bar_h3_v1_g1_3.setFormat("%v")
+        self.progress_bar_h3_v1_g1_3.setValue(24)
+        self.progress_bar_h3_v1_g1_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.progress_bar_h3_3 = QProgressBar(self.main_vertical_layout_widget)
-        self.progress_bar_h3_3.setObjectName(u"progress_bar_h3_3")
-        self.progress_bar_h3_3.setFont(font_numbers_progress_bar)
-        self.progress_bar_h3_3.setFormat("%v")
-        self.progress_bar_h3_3.setValue(24)
-        self.progress_bar_h3_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.progress_bar_h3_v1_g1_4 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_v1_g1_4.setObjectName(u"progress_bar_h3_v1_g1_4")
+        self.progress_bar_h3_v1_g1_4.setFont(font_numbers_progress_bar)
+        self.progress_bar_h3_v1_g1_4.setFormat("%v")
+        self.progress_bar_h3_v1_g1_4.setValue(24)
+        self.progress_bar_h3_v1_g1_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.progress_bar_h3_4 = QProgressBar(self.main_vertical_layout_widget)
-        self.progress_bar_h3_4.setObjectName(u"progress_bar_h3_4")
-        self.progress_bar_h3_4.setFont(font_numbers_progress_bar)
-        self.progress_bar_h3_4.setFormat("%v")
-        self.progress_bar_h3_4.setValue(24)
-        self.progress_bar_h3_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.progress_bar_h3_v1_g1_5 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_v1_g1_5.setObjectName(u"progress_bar_h3_v1_g1_5")
+        self.progress_bar_h3_v1_g1_5.setFont(font_numbers_progress_bar)
+        self.progress_bar_h3_v1_g1_5.setFormat("%v")
+        self.progress_bar_h3_v1_g1_5.setValue(24)
+        self.progress_bar_h3_v1_g1_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.progress_bar_h3_5 = QProgressBar(self.main_vertical_layout_widget)
-        self.progress_bar_h3_5.setObjectName(u"progress_bar_h3_5")
-        self.progress_bar_h3_5.setFont(font_numbers_progress_bar)
-        self.progress_bar_h3_5.setFormat("%v")
-        self.progress_bar_h3_5.setValue(24)
-        self.progress_bar_h3_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.progress_bar_h3_v1_g1_6 = QProgressBar(self.main_vertical_layout_widget)
+        self.progress_bar_h3_v1_g1_6.setObjectName(u"progress_bar_h3_v1_g1_6")
+        self.progress_bar_h3_v1_g1_6.setFont(font_numbers_progress_bar)
+        self.progress_bar_h3_v1_g1_6.setFormat("%v")
+        self.progress_bar_h3_v1_g1_6.setValue(24)
+        self.progress_bar_h3_v1_g1_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.progress_bar_h3_6 = QProgressBar(self.main_vertical_layout_widget)
-        self.progress_bar_h3_6.setObjectName(u"progress_bar_h3_6")
-        self.progress_bar_h3_6.setFont(font_numbers_progress_bar)
-        self.progress_bar_h3_6.setFormat("%v")
-        self.progress_bar_h3_6.setValue(24)
-        self.progress_bar_h3_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.grid_layout_h3_v1_2.addWidget(self.tool_button_h3_v1_g1_1, 0, 0, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.tool_button_h3_v1_g1_2, 0, 1, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.tool_button_h3_v1_g1_3, 0, 2, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.tool_button_h3_v1_g1_4, 0, 3, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.tool_button_h3_v1_g1_5, 0, 4, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.tool_button_h3_v1_g1_6, 0, 5, 1, 1)
 
-        self.grid_layout_h3_2.addWidget(self.tool_button_h3_1, 0, 0, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.tool_button_h3_2, 0, 1, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.tool_button_h3_3, 0, 2, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.tool_button_h3_4, 0, 3, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.tool_button_h3_5, 0, 4, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.tool_button_h3_6, 0, 5, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.label_h3_v1_g1_1, 1, 0, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.label_h3_v1_g1_2, 1, 1, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.label_h3_v1_g1_3, 1, 2, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.label_h3_v1_g1_4, 1, 3, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.label_h3_v1_g1_5, 1, 4, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.label_h3_v1_g1_6, 1, 5, 1, 1)
 
-        self.grid_layout_h3_2.addWidget(self.label_h3_1, 1, 0, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.label_h3_2, 1, 1, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.label_h3_3, 1, 2, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.label_h3_4, 1, 3, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.label_h3_5, 1, 4, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.label_h3_6, 1, 5, 1, 1)
-
-        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_1, 2, 0, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_2, 2, 1, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_3, 2, 2, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_4, 2, 3, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_5, 2, 4, 1, 1)
-        self.grid_layout_h3_2.addWidget(self.progress_bar_h3_6, 2, 5, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_1, 2, 0, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_2, 2, 1, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_3, 2, 2, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_4, 2, 3, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_5, 2, 4, 1, 1)
+        self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_6, 2, 5, 1, 1)
 
         # 4th horizontal layout
         self.tool_button_pre_h4 = QToolButton(self.main_vertical_layout_widget)
