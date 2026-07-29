@@ -99,21 +99,63 @@ class Ui_MainWindow(object):
                 }
 
                 QLabel {
-                    color: white;
+                    color: #c2c2c2; /*light grey*/
                 }
 
-
-
                 QToolButton {
-                    color: white;
+                    color: #c2c2c2; /*light grey*/
                     border: none;
                     background: transparent;
                 }
 
                 QPushButton {
-                    color: white;
+                    color: #c2c2c2; /*light grey*/
                     border: none;
                     background: transparent;
+                }
+
+                #tool_button_h3_v1_g1_1, #tool_button_h3_v1_g1_2, #tool_button_h3_v1_g1_3, #tool_button_h3_v1_g1_4,
+                #tool_button_h3_v1_g1_5, #tool_button_h3_v1_g1_6,
+                #label_h3_v1_1,
+                #tool_button_h3_g1_1, #tool_button_h3_g1_2, #tool_button_h3_g1_3, #tool_button_h3_g1_4,
+                #label_h2_v3_h1_g1_1, #label_h2_v3_h1_g1_2, #label_h2_v3_h1_g1_3, #label_h2_v3_h1_g1_4,
+                #label_h2_v3_h1_g1_5, #label_h2_v3_h1_g1_6, #label_h2_v3_h1_g1_7, #label_h2_v3_h1_g1_8,
+                #label_h2_v1_h1_g1_1, #label_h2_v1_h1_g1_2, #label_h2_v1_h1_g1_3, #label_h2_v1_h1_g1_4,
+                #label_h2_v1_h1_g1_5, #label_h2_v1_h1_g1_6, #label_h2_v1_h1_g1_7, #label_h2_v1_h1_g1_8,
+                #label_h2_v1_h1_g1_9, #label_h2_v1_h1_g1_10, #label_h2_v1_h1_g1_11, #label_h2_v1_h1_g1_12,
+                #label_h2_v1_h1_g1_13, #label_h2_v1_h1_g1_14, #label_h2_v1_h1_g1_15, #label_h2_v1_h1_g1_16,
+                #label_h2_v2_h1_g1_1, #label_h2_v2_h1_g1_2, #label_h2_v2_h1_g1_3, #label_h2_v2_h1_g1_4,
+                #label_h2_v2_h1_g1_5, #label_h2_v2_h1_g1_6, #label_h2_v2_h1_g1_7, #label_h2_v2_h1_g1_8,
+                #label_h2_v2_h1_g1_9, #label_h2_v2_h1_g1_10, #label_h2_v2_h1_g1_11, #label_h2_v2_h1_g1_12,
+                #label_h2_v2_h1_g1_13, #label_h2_v2_h1_g1_14, #label_h2_v2_h1_g1_15, #label_h2_v2_h1_g1_16 {
+                    color: #b6a98d; /*light brown*/
+                }
+
+                #tool_button_pre_h6, #tool_button_h6_1, #tool_button_h6_2, #tool_button_h6_3, #tool_button_h6_4 {
+                    color: #9d9deb; /*purple*/
+                }
+
+                #tool_button_h2_v1_h1_1, #tool_button_h2_v2_h1_1,
+                #tool_button_h2_v3_h1_1, #tool_button_h2_v3_h1_2, #tool_button_h2_v3_h1_3 {
+                    color: #abddea; /*cyan*/
+                }
+
+                #label_h1_2, #tool_button_h1_2 {
+                    color: #afcbde; /*pale cyan*/
+                }
+
+                #label_h1_3, #tool_button_h1_3{
+                    color: #00adf1; /*blue*/
+                }
+
+                #tool_button_h2_v3_h2_1,
+                #label_h3_v1_g1_1, #label_h3_v1_g1_2, #label_h3_v1_g1_3, #label_h3_v1_g1_4, #label_h3_v1_g1_6,
+                #label_h3_v1_g1_5,
+                #tool_button_h4_1, #tool_button_h4_2, #tool_button_h4_3, #tool_button_h4_4, #tool_button_h4_5,
+                #tool_button_h4_6, #tool_button_h4_7,
+                #tool_button_h5_1, #tool_button_h5_2, #tool_button_h5_3, #tool_button_h5_4, #tool_button_h5_5,
+                #tool_button_h5_6, #tool_button_h5_7 {
+                    color: white
                 }
             """)
 
