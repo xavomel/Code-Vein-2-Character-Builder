@@ -14,6 +14,12 @@ class Ui_MainWindow(object):
         MainWindow.setFixedSize(1440, 810 + 21) # menu size
 
         # icons
+        icon_slot_blood_code_size = QSize(150, 150)
+        icon_slot_item_size = QSize(75, 75)
+        icon_slot_forma_size = QSize(30, 30)
+        icon_attribute_size = QSize(24, 24)
+        icon_defense_size = QSize(24, 24)
+
         icon_slot_blood_code = QIcon()
         icon_slot_blood_code.addFile(u":/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_slot_item = QIcon()
@@ -114,10 +120,22 @@ class Ui_MainWindow(object):
         self.label_h1_2.setText(QCoreApplication.translate("MainWindow", u"Max Ichor", None)) # move to re-translate
         self.main_horizontal_layout_1.addWidget(self.label_h1_2)
 
+        self.tool_button_h1_2 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h1_2.setObjectName(u"tool_button_h1_2")
+        self.tool_button_h1_2.setText(QCoreApplication.translate("MainWindow", u"29", None)) # move to re-translate
+        self.tool_button_h1_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+        self.main_horizontal_layout_1.addWidget(self.tool_button_h1_2)
+
         self.label_h1_3 = QLabel(self.main_vertical_layout_widget)
         self.label_h1_3.setObjectName(u"label_h1_3")
         self.label_h1_3.setText(QCoreApplication.translate("MainWindow", u"Partner", None)) # move to re-translate
         self.main_horizontal_layout_1.addWidget(self.label_h1_3)
+
+        self.tool_button_h1_3 = QToolButton(self.main_vertical_layout_widget)
+        self.tool_button_h1_3.setObjectName(u"tool_button_h1_3")
+        self.tool_button_h1_3.setText(QCoreApplication.translate("MainWindow", u"Holly", None)) # move to re-translate
+        self.tool_button_h1_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+        self.main_horizontal_layout_1.addWidget(self.tool_button_h1_3)
 
         # 2nd horizontal layout
         self.main_horizontal_layout_2 = QHBoxLayout()
@@ -142,24 +160,28 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_1.setObjectName(u"push_button_h2_v1_1")
         self.push_button_h2_v1_1.setText(QCoreApplication.translate("MainWindow", u"Forma 1", None)) # move to re-translate
         self.push_button_h2_v1_1.setIcon(icon_slot_forma)
+        self.push_button_h2_v1_1.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_1, 0, Qt.AlignmentFlag.AlignLeft)
 
         self.push_button_h2_v1_2 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v1_2.setObjectName(u"push_button_h2_v1_2")
         self.push_button_h2_v1_2.setText(QCoreApplication.translate("MainWindow", u"Forma 2", None)) # move to re-translate
         self.push_button_h2_v1_2.setIcon(icon_slot_forma)
+        self.push_button_h2_v1_2.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_2, 0, Qt.AlignmentFlag.AlignLeft)
 
         self.push_button_h2_v1_3 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v1_3.setObjectName(u"push_button_h2_v1_3")
         self.push_button_h2_v1_3.setText(QCoreApplication.translate("MainWindow", u"Forma 3", None)) # move to re-translate
         self.push_button_h2_v1_3.setIcon(icon_slot_forma)
+        self.push_button_h2_v1_3.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_3, 0, Qt.AlignmentFlag.AlignLeft)
 
         self.push_button_h2_v1_4 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v1_4.setObjectName(u"push_button_h2_v1_4")
         self.push_button_h2_v1_4.setText(QCoreApplication.translate("MainWindow", u"Forma 4", None)) # move to re-translate
         self.push_button_h2_v1_4.setIcon(icon_slot_forma)
+        self.push_button_h2_v1_4.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_4, 0, Qt.AlignmentFlag.AlignLeft)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content
@@ -168,6 +190,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v1_1.setText(QCoreApplication.translate("MainWindow", u"Weapon 1", None)) # move to re-translate
         self.tool_button_h2_v1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v1_1.setIcon(icon_slot_item)
+        self.tool_button_h2_v1_1.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v1_1.addWidget(self.tool_button_h2_v1_1)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content - grid layout
@@ -277,24 +300,28 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_1.setObjectName(u"push_button_h2_v2_1")
         self.push_button_h2_v2_1.setText(QCoreApplication.translate("MainWindow", u"Forma 1", None))  # move to re-translate
         self.push_button_h2_v2_1.setIcon(icon_slot_forma)
+        self.push_button_h2_v2_1.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_1, 0, Qt.AlignmentFlag.AlignLeft)
 
         self.push_button_h2_v2_2 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v2_2.setObjectName(u"push_button_h2_v2_2")
         self.push_button_h2_v2_2.setText(QCoreApplication.translate("MainWindow", u"Forma 2", None))  # move to re-translate
         self.push_button_h2_v2_2.setIcon(icon_slot_forma)
+        self.push_button_h2_v2_2.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_2, 0, Qt.AlignmentFlag.AlignLeft)
 
         self.push_button_h2_v2_3 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v2_3.setObjectName(u"push_button_h2_v2_3")
         self.push_button_h2_v2_3.setText(QCoreApplication.translate("MainWindow", u"Forma 3", None))  # move to re-translate
         self.push_button_h2_v2_3.setIcon(icon_slot_forma)
+        self.push_button_h2_v2_3.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_3, 0, Qt.AlignmentFlag.AlignLeft)
 
         self.push_button_h2_v2_4 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v2_4.setObjectName(u"push_button_h2_v2_4")
         self.push_button_h2_v2_4.setText(QCoreApplication.translate("MainWindow", u"Forma 4", None))  # move to re-translate
         self.push_button_h2_v2_4.setIcon(icon_slot_forma)
+        self.push_button_h2_v2_4.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_4, 0, Qt.AlignmentFlag.AlignLeft)
 
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content
@@ -303,6 +330,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v2_1.setText(QCoreApplication.translate("MainWindow", u"Weapon 2", None))  # move to re-translate
         self.tool_button_h2_v2_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v2_1.setIcon(icon_slot_item)
+        self.tool_button_h2_v2_1.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v2_1.addWidget(self.tool_button_h2_v2_1)
 
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content - grid layout
@@ -413,6 +441,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_1.setText(QCoreApplication.translate("MainWindow", u"Offensive", None)) # move to re-translate
         self.tool_button_h2_v3_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h1_1.setIcon(icon_slot_item)
+        self.tool_button_h2_v3_h1_1.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v3_1.addWidget(self.tool_button_h2_v3_h1_1)
 
         self.tool_button_h2_v3_h1_2 = QToolButton(self.main_vertical_layout_widget)
@@ -420,6 +449,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_2.setText(QCoreApplication.translate("MainWindow", u"Defensive", None)) # move to re-translate
         self.tool_button_h2_v3_h1_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h1_2.setIcon(icon_slot_item)
+        self.tool_button_h2_v3_h1_2.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v3_1.addWidget(self.tool_button_h2_v3_h1_2)
 
         self.tool_button_h2_v3_h1_3 = QToolButton(self.main_vertical_layout_widget)
@@ -427,6 +457,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_3.setText(QCoreApplication.translate("MainWindow", u"Jail", None)) # move to re-translate
         self.tool_button_h2_v3_h1_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h1_3.setIcon(icon_slot_item)
+        self.tool_button_h2_v3_h1_3.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v3_1.addWidget(self.tool_button_h2_v3_h1_3)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1 content - grid layout
@@ -489,6 +520,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_1.setText(QCoreApplication.translate("MainWindow", u"Blood Code", None)) # move to re-translate
         self.tool_button_h2_v3_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h1_1.setIcon(icon_slot_blood_code)
+        self.tool_button_h2_v3_h1_1.setIconSize(icon_slot_blood_code_size)
         self.horizontal_layout_h2_v3_2.addWidget(self.tool_button_h2_v3_h1_1)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 2 content - vertical layout
@@ -502,36 +534,42 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h1_1.setObjectName(u"push_button_h2_v3_h1_1")
         self.push_button_h2_v3_h1_1.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h1_1.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h1_1.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_1)
 
         self.push_button_h2_v3_h1_2 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v3_h1_2.setObjectName(u"push_button_h2_v3_h1_2")
         self.push_button_h2_v3_h1_2.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h1_2.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h1_2.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_2)
 
         self.push_button_h2_v3_h1_3 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v3_h1_3.setObjectName(u"push_button_h2_v3_h1_3")
         self.push_button_h2_v3_h1_3.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h1_3.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h1_3.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_3)
 
         self.push_button_h2_v3_h1_4 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v3_h1_4.setObjectName(u"push_button_h2_v3_h1_4")
         self.push_button_h2_v3_h1_4.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h1_4.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h1_4.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_4)
 
         self.push_button_h2_v3_h1_5 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v3_h1_5.setObjectName(u"push_button_h2_v3_h1_5")
         self.push_button_h2_v3_h1_5.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h1_5.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h1_5.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_5)
 
         self.push_button_h2_v3_h1_6 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v3_h1_6.setObjectName(u"push_button_h2_v3_h1_6")
         self.push_button_h2_v3_h1_6.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h1_6.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h1_6.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h1_1.addWidget(self.push_button_h2_v3_h1_6)
 
         # 3rd horizontal layout
@@ -599,31 +637,37 @@ class Ui_MainWindow(object):
         self.tool_button_h3_1.setObjectName(u"tool_button_h3_1")
         self.tool_button_h3_1.setText(QCoreApplication.translate("MainWindow", u"Strength", None)) # move to re-translate
         self.tool_button_h3_1.setIcon(icon_attribute_strength)
+        self.tool_button_h3_1.setIconSize(icon_attribute_size)
 
         self.tool_button_h3_2 = QPushButton(self.main_vertical_layout_widget)
         self.tool_button_h3_2.setObjectName(u"tool_button_h3_2")
         self.tool_button_h3_2.setText(QCoreApplication.translate("MainWindow", u"Dexterity", None)) # move to re-translate
         self.tool_button_h3_2.setIcon(icon_attribute_dexterity)
+        self.tool_button_h3_2.setIconSize(icon_attribute_size)
 
         self.tool_button_h3_3 = QPushButton(self.main_vertical_layout_widget)
         self.tool_button_h3_3.setObjectName(u"tool_button_h3_3")
         self.tool_button_h3_3.setText(QCoreApplication.translate("MainWindow", u"Mind", None)) # move to re-translate
         self.tool_button_h3_3.setIcon(icon_attribute_mind)
+        self.tool_button_h3_3.setIconSize(icon_attribute_size)
 
         self.tool_button_h3_4 = QPushButton(self.main_vertical_layout_widget)
         self.tool_button_h3_4.setObjectName(u"tool_button_h3_4")
         self.tool_button_h3_4.setText(QCoreApplication.translate("MainWindow", u"Willpower", None)) # move to re-translate
         self.tool_button_h3_4.setIcon(icon_attribute_willpower)
+        self.tool_button_h3_4.setIconSize(icon_attribute_size)
 
         self.tool_button_h3_5 = QPushButton(self.main_vertical_layout_widget)
         self.tool_button_h3_5.setObjectName(u"tool_button_h3_5")
         self.tool_button_h3_5.setText(QCoreApplication.translate("MainWindow", u"Vitality", None)) # move to re-translate
         self.tool_button_h3_5.setIcon(icon_attribute_vitality)
+        self.tool_button_h3_5.setIconSize(icon_attribute_size)
 
         self.tool_button_h3_6 = QPushButton(self.main_vertical_layout_widget)
         self.tool_button_h3_6.setObjectName(u"tool_button_h3_6")
         self.tool_button_h3_6.setText(QCoreApplication.translate("MainWindow", u"Fortitude", None)) # move to re-translate
         self.tool_button_h3_6.setIcon(icon_attribute_fortitude)
+        self.tool_button_h3_6.setIconSize(icon_attribute_size)
 
         self.label_h3_1 = QLabel(self.main_vertical_layout_widget)
         self.label_h3_1.setObjectName(u"label_h3_1")
@@ -725,6 +769,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_1.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h4_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_1.setIcon(icon_defense_slash)
+        self.tool_button_h4_1.setIconSize(icon_defense_size)
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_1)
 
         self.tool_button_h4_2 = QToolButton(self.main_vertical_layout_widget)
@@ -732,6 +777,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_2.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h4_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_2.setIcon(icon_defense_crush)
+        self.tool_button_h4_2.setIconSize(icon_defense_size)
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_2)
 
         self.tool_button_h4_3 = QToolButton(self.main_vertical_layout_widget)
@@ -739,6 +785,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_3.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h4_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_3.setIcon(icon_defense_pierce)
+        self.tool_button_h4_3.setIconSize(icon_defense_size)
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_3)
 
         self.tool_button_h4_4 = QToolButton(self.main_vertical_layout_widget)
@@ -746,6 +793,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_4.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h4_4.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_4.setIcon(icon_defense_blood)
+        self.tool_button_h4_4.setIconSize(icon_defense_size)
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_4)
 
         self.tool_button_h4_5 = QToolButton(self.main_vertical_layout_widget)
@@ -753,6 +801,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_5.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h4_5.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_5.setIcon(icon_defense_fire)
+        self.tool_button_h4_5.setIconSize(icon_defense_size)
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_5)
 
         self.tool_button_h4_6 = QToolButton(self.main_vertical_layout_widget)
@@ -760,6 +809,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_6.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h4_6.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_6.setIcon(icon_defense_ice)
+        self.tool_button_h4_6.setIconSize(icon_defense_size)
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_6)
 
         self.tool_button_h4_7 = QToolButton(self.main_vertical_layout_widget)
@@ -767,6 +817,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_7.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h4_7.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_7.setIcon(icon_defense_thunder)
+        self.tool_button_h4_7.setIconSize(icon_defense_size)
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_7)
 
         # 5th horizontal layout
@@ -788,6 +839,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_1.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h5_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_1.setIcon(icon_defense_slash)
+        self.tool_button_h5_1.setIconSize(icon_defense_size)
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_1)
 
         self.tool_button_h5_2 = QToolButton(self.main_vertical_layout_widget)
@@ -795,6 +847,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_2.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h5_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_2.setIcon(icon_defense_crush)
+        self.tool_button_h5_2.setIconSize(icon_defense_size)
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_2)
 
         self.tool_button_h5_3 = QToolButton(self.main_vertical_layout_widget)
@@ -802,6 +855,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_3.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h5_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_3.setIcon(icon_defense_pierce)
+        self.tool_button_h5_3.setIconSize(icon_defense_size)
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_3)
 
         self.tool_button_h5_4 = QToolButton(self.main_vertical_layout_widget)
@@ -809,6 +863,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_4.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h5_4.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_4.setIcon(icon_defense_blood)
+        self.tool_button_h5_4.setIconSize(icon_defense_size)
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_4)
 
         self.tool_button_h5_5 = QToolButton(self.main_vertical_layout_widget)
@@ -816,6 +871,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_5.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h5_5.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_5.setIcon(icon_defense_fire)
+        self.tool_button_h5_5.setIconSize(icon_defense_size)
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_5)
 
         self.tool_button_h5_6 = QToolButton(self.main_vertical_layout_widget)
@@ -823,6 +879,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_6.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h5_6.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_6.setIcon(icon_defense_ice)
+        self.tool_button_h5_6.setIconSize(icon_defense_size)
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_6)
 
         self.tool_button_h5_7 = QToolButton(self.main_vertical_layout_widget)
@@ -830,6 +887,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_7.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h5_7.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_7.setIcon(icon_defense_thunder)
+        self.tool_button_h5_7.setIconSize(icon_defense_size)
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_7)
 
         # 6th horizontal layout
@@ -851,6 +909,7 @@ class Ui_MainWindow(object):
         self.tool_button_h6_1.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h6_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h6_1.setIcon(icon_resistance_disease)
+        self.tool_button_h6_1.setIconSize(icon_defense_size)
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_1)
 
         self.tool_button_h6_2 = QToolButton(self.main_vertical_layout_widget)
@@ -858,6 +917,7 @@ class Ui_MainWindow(object):
         self.tool_button_h6_2.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h6_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h6_2.setIcon(icon_resistance_wound)
+        self.tool_button_h6_2.setIconSize(icon_defense_size)
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_2)
 
         self.tool_button_h6_3 = QToolButton(self.main_vertical_layout_widget)
@@ -865,6 +925,7 @@ class Ui_MainWindow(object):
         self.tool_button_h6_3.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h6_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h6_3.setIcon(icon_resistance_bleed)
+        self.tool_button_h6_3.setIconSize(icon_defense_size)
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_3)
 
         self.tool_button_h6_4 = QToolButton(self.main_vertical_layout_widget)
@@ -872,6 +933,7 @@ class Ui_MainWindow(object):
         self.tool_button_h6_4.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h6_4.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h6_4.setIcon(icon_resistance_curse)
+        self.tool_button_h6_4.setIconSize(icon_defense_size)
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_4)
 
         # dummy button
@@ -879,6 +941,10 @@ class Ui_MainWindow(object):
         self.tool_button_h6_5.setObjectName(u"tool_button_h6_5")
         self.tool_button_h6_5.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h6_5.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        self.tool_button_h6_5.setVisible(False)
+        sp = self.tool_button_h6_5.sizePolicy()
+        sp.setRetainSizeWhenHidden(True)
+        self.tool_button_h6_5.setSizePolicy(sp)
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_5)
 
         # dummy button
@@ -886,14 +952,11 @@ class Ui_MainWindow(object):
         self.tool_button_h6_6.setObjectName(u"tool_button_h6_6")
         self.tool_button_h6_6.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
         self.tool_button_h6_6.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        self.tool_button_h6_6.setVisible(False)
+        sp = self.tool_button_h6_6.sizePolicy()
+        sp.setRetainSizeWhenHidden(True)
+        self.tool_button_h6_6.setSizePolicy(sp)
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_6)
-
-        # dummy button
-        self.tool_button_h6_7 = QToolButton(self.main_vertical_layout_widget)
-        self.tool_button_h6_7.setObjectName(u"tool_button_h6_7")
-        self.tool_button_h6_7.setText(QCoreApplication.translate("MainWindow", u"123", None)) # move to re-translate
-        self.tool_button_h6_7.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
-        self.main_horizontal_layout_6.addWidget(self.tool_button_h6_7)
 
         # end of setupUi
         MainWindow.setCentralWidget(self.centralwidget)
