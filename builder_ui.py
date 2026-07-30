@@ -119,7 +119,7 @@ class Ui_MainWindow(object):
                 #push_button_h2_v2_3:hover, #push_button_h2_v2_4:hover,
                 #push_button_h2_v3_h2_v1_1:hover, #push_button_h2_v3_h2_v1_2:hover, #push_button_h2_v3_h2_v1_3:hover,
                 #push_button_h2_v3_h2_v1_4:hover, #push_button_h2_v3_h2_v1_5:hover, #push_button_h2_v3_h2_v1_6:hover {
-                    border : 1px solid white;
+                    border : 1px solid #c2c2c2; /*light grey*/
                 }
 
                 #tool_button_h3_v1_g1_1, #tool_button_h3_v1_g1_2, #tool_button_h3_v1_g1_3, #tool_button_h3_v1_g1_4,
@@ -179,7 +179,8 @@ class Ui_MainWindow(object):
         self.main_vertical_layout_widget.setGeometry(QRect(0, 0, 940, 810))
         self.main_vertical_layout = QVBoxLayout(self.main_vertical_layout_widget)
         self.main_vertical_layout.setObjectName(u"main_vertical_layout")
-        self.main_vertical_layout.setContentsMargins(0, 0, 0, 0)
+        self.margin_size = 24
+        self.main_vertical_layout.setContentsMargins(self.margin_size, self.margin_size, self.margin_size, self.margin_size)
 
         # 1st horizontal layout
         self.main_horizontal_layout_1 = QHBoxLayout()
