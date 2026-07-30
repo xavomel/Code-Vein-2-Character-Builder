@@ -181,6 +181,9 @@ class Ui_MainWindow(object):
         self.tool_button_h1_1.setIcon(icon_text_arrow)
         self.main_horizontal_layout_1.addWidget(self.tool_button_h1_1)
 
+        self.horizontal_spacer_h1_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.main_horizontal_layout_1.addItem(self.horizontal_spacer_h1_1)
+
         self.label_h1_2 = QLabel(self.main_vertical_layout_widget)
         self.label_h1_2.setObjectName(u"label_h1_2")
         self.label_h1_2.setText(QCoreApplication.translate("MainWindow", u"Max Ichor", None)) # move to re-translate
@@ -192,6 +195,9 @@ class Ui_MainWindow(object):
         self.tool_button_h1_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.main_horizontal_layout_1.addWidget(self.tool_button_h1_2)
 
+        self.horizontal_spacer_h1_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.main_horizontal_layout_1.addItem(self.horizontal_spacer_h1_2)
+
         self.label_h1_3 = QLabel(self.main_vertical_layout_widget)
         self.label_h1_3.setObjectName(u"label_h1_3")
         self.label_h1_3.setText(QCoreApplication.translate("MainWindow", u"Partner", None)) # move to re-translate
@@ -202,6 +208,9 @@ class Ui_MainWindow(object):
         self.tool_button_h1_3.setText(QCoreApplication.translate("MainWindow", u"Holly", None)) # move to re-translate
         self.tool_button_h1_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.main_horizontal_layout_1.addWidget(self.tool_button_h1_3)
+
+        self.horizontal_spacer_h1_3 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.main_horizontal_layout_1.addItem(self.horizontal_spacer_h1_3)
 
         # 2nd horizontal layout
         self.main_horizontal_layout_2 = QHBoxLayout()
@@ -642,6 +651,10 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_6.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_6)
 
+        # 2nd horizontal layout content - spacer at the end (right)
+        self.horizontal_spacer_h2_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.main_horizontal_layout_2.addItem(self.horizontal_spacer_h2_1)
+
         # 3rd horizontal layout
         self.main_horizontal_layout_3 = QHBoxLayout()
         self.main_horizontal_layout_3.setObjectName(u"main_horizontal_layout_3")
@@ -686,7 +699,12 @@ class Ui_MainWindow(object):
         self.vertical_layout_h3_1 = QVBoxLayout()
         self.vertical_layout_h3_1.setObjectName(u"vertical_layout_h3_1")
         self.vertical_layout_h3_1.setContentsMargins(0, 0, 0, 0)
+        self.vertical_layout_h3_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
         self.main_horizontal_layout_3.addLayout(self.vertical_layout_h3_1)
+
+        # worse than setAlignment
+        # self.vertical_spacer_h3_v1_1 = QSpacerItem(20, 50, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        # self.vertical_layout_h3_1.addItem(self.vertical_spacer_h3_v1_1)
 
         # 3rd horizontal layout content - vertical layout 1 content
         self.label_h3_v1_1 = QLabel(self.main_vertical_layout_widget)
@@ -835,6 +853,11 @@ class Ui_MainWindow(object):
         self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_4, 2, 3, 1, 1)
         self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_5, 2, 4, 1, 1)
         self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_6, 2, 5, 1, 1)
+
+        # 3rd horizontal layout content - vertical layout 1 content - spacer at the bottom
+        # worse than setAlignment
+        # self.vertical_spacer_h3_v1_2 = QSpacerItem(20, 50, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        # self.vertical_layout_h3_1.addItem(self.vertical_spacer_h3_v1_2)
 
         # 4th horizontal layout
         self.tool_button_pre_h4 = QToolButton(self.main_vertical_layout_widget)
