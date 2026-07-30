@@ -222,6 +222,7 @@ class Ui_MainWindow(object):
         self.vertical_layout_h2_1 = QVBoxLayout()
         self.vertical_layout_h2_1.setObjectName(u"vertical_layout_h2_1")
         self.vertical_layout_h2_1.setContentsMargins(0, 0, 0, 0)
+        self.vertical_layout_h2_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
         self.main_horizontal_layout_2.addLayout(self.vertical_layout_h2_1)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout
@@ -271,6 +272,7 @@ class Ui_MainWindow(object):
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content - grid layout
         self.grid_layout_h2_v1_h1_1 = QGridLayout()
         self.grid_layout_h2_v1_h1_1.setObjectName(u"grid_layout_h2_v1_h1_1")
+        self.grid_layout_h2_v1_h1_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
         self.horizontal_layout_h2_v1_1.addLayout(self.grid_layout_h2_v1_h1_1)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content - grid layout content
@@ -362,6 +364,7 @@ class Ui_MainWindow(object):
         self.vertical_layout_h2_2 = QVBoxLayout()
         self.vertical_layout_h2_2.setObjectName(u"vertical_layout_h2_2")
         self.vertical_layout_h2_2.setContentsMargins(0, 0, 0, 0)
+        self.vertical_layout_h2_2.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
         self.main_horizontal_layout_2.addLayout(self.vertical_layout_h2_2)
 
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout
@@ -411,6 +414,7 @@ class Ui_MainWindow(object):
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content - grid layout
         self.grid_layout_h2_v2_h1_1 = QGridLayout()
         self.grid_layout_h2_v2_h1_1.setObjectName(u"grid_layout_h2_v2_h1_1")
+        self.grid_layout_h2_v2_h1_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
         self.horizontal_layout_h2_v2_1.addLayout(self.grid_layout_h2_v2_h1_1)
 
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content - grid layout content
@@ -538,6 +542,7 @@ class Ui_MainWindow(object):
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1 content - grid layout
         self.grid_layout_h2_v3_h1_1 = QGridLayout()
         self.grid_layout_h2_v3_h1_1.setObjectName(u"grid_layout_h2_v3_h1_1")
+        self.grid_layout_h2_v3_h1_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
         self.horizontal_layout_h2_v3_1.addLayout(self.grid_layout_h2_v3_h1_1)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1 content - grid layout content
@@ -591,6 +596,7 @@ class Ui_MainWindow(object):
         self.horizontal_layout_h2_v3_2 = QHBoxLayout()
         self.horizontal_layout_h2_v3_2.setObjectName(u"horizontal_layout_h2_v3_2")
         self.horizontal_layout_h2_v3_2.setContentsMargins(0, 0, 0, 0)
+        # self.horizontal_layout_h2_v3_2.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
         self.vertical_layout_h2_3.addLayout(self.horizontal_layout_h2_v3_2)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 2 content
@@ -606,6 +612,7 @@ class Ui_MainWindow(object):
         self.vertical_layout_h2_v3_h2_1 = QVBoxLayout()
         self.vertical_layout_h2_v3_h2_1.setObjectName(u"vertical_layout_h2_v3_h2_1")
         self.vertical_layout_h2_v3_h2_1.setContentsMargins(0, 0, 0, 0)
+        self.vertical_layout_h2_v3_h2_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
         self.horizontal_layout_h2_v3_2.addLayout(self.vertical_layout_h2_v3_h2_1)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 2 content - vertical layout content
@@ -701,10 +708,6 @@ class Ui_MainWindow(object):
         self.vertical_layout_h3_1.setContentsMargins(0, 0, 0, 0)
         self.vertical_layout_h3_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
         self.main_horizontal_layout_3.addLayout(self.vertical_layout_h3_1)
-
-        # worse than setAlignment
-        # self.vertical_spacer_h3_v1_1 = QSpacerItem(20, 50, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-        # self.vertical_layout_h3_1.addItem(self.vertical_spacer_h3_v1_1)
 
         # 3rd horizontal layout content - vertical layout 1 content
         self.label_h3_v1_1 = QLabel(self.main_vertical_layout_widget)
@@ -853,11 +856,6 @@ class Ui_MainWindow(object):
         self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_4, 2, 3, 1, 1)
         self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_5, 2, 4, 1, 1)
         self.grid_layout_h3_v1_2.addWidget(self.progress_bar_h3_v1_g1_6, 2, 5, 1, 1)
-
-        # 3rd horizontal layout content - vertical layout 1 content - spacer at the bottom
-        # worse than setAlignment
-        # self.vertical_spacer_h3_v1_2 = QSpacerItem(20, 50, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
-        # self.vertical_layout_h3_1.addItem(self.vertical_spacer_h3_v1_2)
 
         # 4th horizontal layout
         self.tool_button_pre_h4 = QToolButton(self.main_vertical_layout_widget)
