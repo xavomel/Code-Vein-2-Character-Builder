@@ -236,7 +236,7 @@ class Ui_MainWindow(object):
         self.vertical_layout_h2_1 = QVBoxLayout()
         self.vertical_layout_h2_1.setObjectName(u"vertical_layout_h2_1")
         self.vertical_layout_h2_1.setContentsMargins(0, 0, 0, 0)
-        self.vertical_layout_h2_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
+        self.vertical_layout_h2_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
         self.main_horizontal_layout_2.addLayout(self.vertical_layout_h2_1)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout
@@ -378,7 +378,7 @@ class Ui_MainWindow(object):
         self.vertical_layout_h2_2 = QVBoxLayout()
         self.vertical_layout_h2_2.setObjectName(u"vertical_layout_h2_2")
         self.vertical_layout_h2_2.setContentsMargins(0, 0, 0, 0)
-        self.vertical_layout_h2_2.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
+        self.vertical_layout_h2_2.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
         self.main_horizontal_layout_2.addLayout(self.vertical_layout_h2_2)
 
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout
@@ -520,6 +520,7 @@ class Ui_MainWindow(object):
         self.vertical_layout_h2_3 = QVBoxLayout()
         self.vertical_layout_h2_3.setObjectName(u"vertical_layout_h2_1")
         self.vertical_layout_h2_3.setContentsMargins(0, 0, 0, 0)
+        self.vertical_layout_h2_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
         self.main_horizontal_layout_2.addLayout(self.vertical_layout_h2_3)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1
