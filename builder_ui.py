@@ -114,6 +114,14 @@ class Ui_MainWindow(object):
                     background: transparent;
                 }
 
+                #push_button_h2_v1_1:hover, #push_button_h2_v1_2:hover, #push_button_h2_v1_3:hover,
+                #push_button_h2_v1_4:hover, #push_button_h2_v2_1:hover, #push_button_h2_v2_2:hover,
+                #push_button_h2_v2_3:hover, #push_button_h2_v2_4:hover,
+                #push_button_h2_v3_h2_v1_1:hover, #push_button_h2_v3_h2_v1_2:hover, #push_button_h2_v3_h2_v1_3:hover,
+                #push_button_h2_v3_h2_v1_4:hover, #push_button_h2_v3_h2_v1_5:hover, #push_button_h2_v3_h2_v1_6:hover {
+                    border : 1px solid white;
+                }
+
                 #tool_button_h3_v1_g1_1, #tool_button_h3_v1_g1_2, #tool_button_h3_v1_g1_3, #tool_button_h3_v1_g1_4,
                 #tool_button_h3_v1_g1_5, #tool_button_h3_v1_g1_6,
                 #label_h3_v1_1,
@@ -138,6 +146,12 @@ class Ui_MainWindow(object):
                 #tool_button_h2_v1_h1_1, #tool_button_h2_v2_h1_1,
                 #tool_button_h2_v3_h1_1, #tool_button_h2_v3_h1_2, #tool_button_h2_v3_h1_3 {
                     color: #abddea; /*cyan*/
+                }
+
+                #tool_button_h2_v3_h2_1:hover,
+                #tool_button_h2_v1_h1_1:hover, #tool_button_h2_v2_h1_1:hover,
+                #tool_button_h2_v3_h1_1:hover, #tool_button_h2_v3_h1_2:hover, #tool_button_h2_v3_h1_3:hover {
+                    border : 1px solid #b6a98d; /*light brown*/
                 }
 
                 #label_h1_2, #tool_button_h1_2 {
