@@ -1,5 +1,5 @@
-from PySide6.QtCore import QCoreApplication, QRect, Qt, QSize, QDir, QPoint
-from PySide6.QtGui import QAction, QGuiApplication, QIcon, QFont, QFontDatabase, QPainter, QPen, QColor, QPolygon
+from PySide6.QtCore import QCoreApplication, QRect, Qt, QSize, QDir, QPointF
+from PySide6.QtGui import QAction, QGuiApplication, QIcon, QFont, QFontDatabase, QPainter, QPen, QColor, QPolygonF
 from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QSpacerItem, \
     QSizePolicy, QToolButton, QPushButton, QProgressBar, QApplication
 import resource
@@ -814,42 +814,42 @@ class Ui_MainWindow(object):
         self.progress_bar_h3_v1_g1_1.setObjectName(u"progress_bar_h3_v1_g1_1")
         self.progress_bar_h3_v1_g1_1.setFont(font_numbers_progress_bar)
         self.progress_bar_h3_v1_g1_1.setFormat("%v")
-        self.progress_bar_h3_v1_g1_1.setValue(24)
+        self.progress_bar_h3_v1_g1_1.setValue(0)
         self.progress_bar_h3_v1_g1_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.progress_bar_h3_v1_g1_2 = AttributeProgressBar(self.main_vertical_layout_widget)
         self.progress_bar_h3_v1_g1_2.setObjectName(u"progress_bar_h3_v1_g1_2")
         self.progress_bar_h3_v1_g1_2.setFont(font_numbers_progress_bar)
         self.progress_bar_h3_v1_g1_2.setFormat("%v")
-        self.progress_bar_h3_v1_g1_2.setValue(24)
+        self.progress_bar_h3_v1_g1_2.setValue(1)
         self.progress_bar_h3_v1_g1_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.progress_bar_h3_v1_g1_3 = AttributeProgressBar(self.main_vertical_layout_widget)
         self.progress_bar_h3_v1_g1_3.setObjectName(u"progress_bar_h3_v1_g1_3")
         self.progress_bar_h3_v1_g1_3.setFont(font_numbers_progress_bar)
         self.progress_bar_h3_v1_g1_3.setFormat("%v")
-        self.progress_bar_h3_v1_g1_3.setValue(24)
+        self.progress_bar_h3_v1_g1_3.setValue(25)
         self.progress_bar_h3_v1_g1_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.progress_bar_h3_v1_g1_4 = AttributeProgressBar(self.main_vertical_layout_widget)
         self.progress_bar_h3_v1_g1_4.setObjectName(u"progress_bar_h3_v1_g1_4")
         self.progress_bar_h3_v1_g1_4.setFont(font_numbers_progress_bar)
         self.progress_bar_h3_v1_g1_4.setFormat("%v")
-        self.progress_bar_h3_v1_g1_4.setValue(24)
+        self.progress_bar_h3_v1_g1_4.setValue(50)
         self.progress_bar_h3_v1_g1_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.progress_bar_h3_v1_g1_5 = AttributeProgressBar(self.main_vertical_layout_widget)
         self.progress_bar_h3_v1_g1_5.setObjectName(u"progress_bar_h3_v1_g1_5")
         self.progress_bar_h3_v1_g1_5.setFont(font_numbers_progress_bar)
         self.progress_bar_h3_v1_g1_5.setFormat("%v")
-        self.progress_bar_h3_v1_g1_5.setValue(24)
+        self.progress_bar_h3_v1_g1_5.setValue(75)
         self.progress_bar_h3_v1_g1_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.progress_bar_h3_v1_g1_6 = AttributeProgressBar(self.main_vertical_layout_widget)
         self.progress_bar_h3_v1_g1_6.setObjectName(u"progress_bar_h3_v1_g1_6")
         self.progress_bar_h3_v1_g1_6.setFont(font_numbers_progress_bar)
         self.progress_bar_h3_v1_g1_6.setFormat("%v")
-        self.progress_bar_h3_v1_g1_6.setValue(24)
+        self.progress_bar_h3_v1_g1_6.setValue(100)
         self.progress_bar_h3_v1_g1_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.grid_layout_h3_v1_2.addWidget(self.tool_button_h3_v1_g1_1, 0, 0, 1, 1)
@@ -1216,26 +1216,31 @@ class AttributeProgressBar(QProgressBar):
         r = self.rect().adjusted(2, 2, -2, -2)
         skew = 10
 
-        # Progress
-        progress = (self.value() - self.minimum()) / (self.maximum() - self.minimum())
-        fill_width = int(r.width() * progress)
-        fill = QPolygon([
-            QPoint(r.left() + skew, r.top()),
-            QPoint(r.left() + fill_width, r.top()),
-            QPoint(r.left() + fill_width - skew, r.bottom()),
-            QPoint(r.left(), r.bottom())
+        # Base shape
+        border = QPolygonF([
+            QPointF(r.left() + skew, r.top()),
+            QPointF(r.right(), r.top()),
+            QPointF(r.right() - skew, r.bottom()),
+            QPointF(r.left(), r.bottom())
+        ])
+
+        # Progress shape
+        progress = self.value() / self.maximum()
+        skewed_width = border[2].x() - border[3].x()
+        fill_width = skewed_width * progress + skew
+        fill = QPolygonF([
+            QPointF(r.left() + skew, r.top()),
+            QPointF(r.left() + fill_width, r.top()),
+            QPointF(r.left() + fill_width - skew, r.bottom()),
+            QPointF(r.left(), r.bottom())
         ])
         painter.setPen(QColor("#95abbc"))
         painter.setBrush(QColor("#95abbc"))
+        # painter.setPen(Qt.GlobalColor.red)  # debug
+        # painter.setBrush(Qt.GlobalColor.red)  # debug
         painter.drawPolygon(fill)
 
         # Color border and background colored border (color on top of background)
-        border = QPolygon([
-            QPoint(r.left() + skew, r.top()),
-            QPoint(r.right(), r.top()),
-            QPoint(r.right() - skew, r.bottom()),
-            QPoint(r.left(), r.bottom())
-        ])
         painter.setBrush(Qt.BrushStyle.NoBrush)
         painter.setPen(QPen(QColor("#171717"), 8))
         painter.drawPolygon(border)
