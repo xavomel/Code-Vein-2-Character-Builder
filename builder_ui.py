@@ -203,30 +203,29 @@ class Ui_MainWindow(object):
                 }
             """)
 
-        # side verical layout
+        # side vertical layout 1
         self.side_vertical_layout_widget = QWidget(self.centralwidget)
-        self.side_vertical_layout_widget.setObjectName(u"main_vertical_layout_widget")
+        self.side_vertical_layout_widget.setObjectName(u"side_vertical_layout_widget")
         self.side_vertical_layout_widget.setGeometry(QRect(1080, 0, 360, 810))
         self.side_vertical_layout = QVBoxLayout(self.side_vertical_layout_widget)
-        self.side_vertical_layout.setObjectName(u"main_vertical_layout")
+        self.side_vertical_layout.setObjectName(u"side_vertical_layout")
         self.margin_size = 24
         self.side_vertical_layout.setContentsMargins(self.margin_size, self.margin_size, self.margin_size, self.margin_size)
         self.side_vertical_layout.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
+        # self.side_vertical_layout_widget.raise_()
 
-        # side list widget 1
+        # side vertical layout 1 content - list widget 1 - menu buttons
         self.side_menu_buttons = QListWidget(self.centralwidget)
         self.side_menu_buttons.setObjectName(u"side_menu_buttons")
         self.side_menu_buttons.setFlow(QListView.LeftToRight)
         self.side_menu_buttons.setWrapping(True)
-        # self.side_menu_buttons.setMinimumSize(0, 0)
+        self.side_menu_buttons.setMinimumWidth(360 - 2 * self.margin_size)
         self.side_menu_buttons.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
-        self.side_menu_buttons.setSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Minimum)
+        self.side_menu_buttons.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.side_menu_buttons.setIconSize(icon_side_menu_button_size)
         self.side_vertical_layout.addWidget(self.side_menu_buttons)
+        # self.side_menu_buttons.raise_()
 
-        # side list widget 1 - content - buttons
-        # buttons - icons
-        # TODO add enough dummy elements so that first row  of List is empty space?
         for button in QDir("Menu").entryInfoList(["*.png"]):
             self.side_menu_buttons.addItem(QListWidgetItem(QIcon(button.filePath()), ""))
 
@@ -238,19 +237,38 @@ class Ui_MainWindow(object):
         #     item.setFont(font_numbers_bleed)
         #     self.side_menu_buttons.addItem(item)
 
-        # side list widget 2
+        y = 0
+        lowest_item = None
+        for idx in range(self.side_menu_buttons.count()):
+            item = self.side_menu_buttons.item(idx)
+            r = self.side_menu_buttons.visualItemRect(item)
+            if r.y() > y:
+                y = r.y()
+                lowest_item = r
+
+        y = y + lowest_item.height() + 2
+
+        # side vertical layout 2
+        self.side_vertical_layout_widget_2 = QWidget(self.centralwidget)
+        self.side_vertical_layout_widget_2.setObjectName(u"side_vertical_layout_widget_2")
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, y, 360, 810 - y))
+        self.side_vertical_layout_2 = QVBoxLayout(self.side_vertical_layout_widget_2)
+        self.side_vertical_layout_2.setObjectName(u"side_vertical_layout_2")
+        self.margin_size = 24
+        self.side_vertical_layout_2.setContentsMargins(self.margin_size, self.margin_size, self.margin_size, self.margin_size)
+        self.side_vertical_layout_2.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
+
+        # side vertical layout 2 content - list widget 2 - menu content
         self.side_menu_content = QListWidget(self.centralwidget)
         self.side_menu_content.setObjectName(u"side_menu_content")
         self.side_menu_content.setFlow(QListView.LeftToRight)
         self.side_menu_content.setWrapping(True)
-        # self.side_menu_content.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)  # no effect ?
+        self.side_menu_content.setMinimumWidth(360 - 2 * self.margin_size)
         self.side_menu_content.setIconSize(icon_side_menu_content_size)
         self.side_menu_content.setGridSize(icon_side_menu_content_size)
         self.side_menu_content.setUniformItemSizes(True)
-        self.side_vertical_layout.addWidget(self.side_menu_content)
+        self.side_vertical_layout_2.addWidget(self.side_menu_content)
 
-        # side list widget 2 - content - buttons
-        # blood codes
         for blood_code in QDir("BloodCode").entryInfoList(["*.png"]):
             self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
 
