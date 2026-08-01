@@ -203,28 +203,28 @@ class Ui_MainWindow(object):
                 }
             """)
 
+        # side menu common
+        self.margin_size = 24
+        self.margin_size_overlapping = 0
+
         # side vertical layout 1
         self.side_vertical_layout_widget = QWidget(self.centralwidget)
         self.side_vertical_layout_widget.setObjectName(u"side_vertical_layout_widget")
         self.side_vertical_layout_widget.setGeometry(QRect(1080, 0, 360, 810))
         self.side_vertical_layout = QVBoxLayout(self.side_vertical_layout_widget)
         self.side_vertical_layout.setObjectName(u"side_vertical_layout")
-        self.margin_size = 24
-        self.side_vertical_layout.setContentsMargins(self.margin_size, self.margin_size, self.margin_size, self.margin_size)
+        self.side_vertical_layout.setContentsMargins(self.margin_size, self.margin_size, 0, self.margin_size_overlapping)
         self.side_vertical_layout.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
-        # self.side_vertical_layout_widget.raise_()
 
         # side vertical layout 1 content - list widget 1 - menu buttons
         self.side_menu_buttons = QListWidget(self.centralwidget)
         self.side_menu_buttons.setObjectName(u"side_menu_buttons")
         self.side_menu_buttons.setFlow(QListView.LeftToRight)
         self.side_menu_buttons.setWrapping(True)
-        self.side_menu_buttons.setMinimumWidth(360 - 2 * self.margin_size)
-        self.side_menu_buttons.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
+        self.side_menu_buttons.setMinimumWidth(360)
         self.side_menu_buttons.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.side_menu_buttons.setIconSize(icon_side_menu_button_size)
         self.side_vertical_layout.addWidget(self.side_menu_buttons)
-        # self.side_menu_buttons.raise_()
 
         for button in QDir("Menu").entryInfoList(["*.png"]):
             self.side_menu_buttons.addItem(QListWidgetItem(QIcon(button.filePath()), ""))
@@ -246,7 +246,7 @@ class Ui_MainWindow(object):
                 y = r.y()
                 lowest_item = r
 
-        y = y + lowest_item.height() + 2
+        y = y + lowest_item.height() + self.margin_size
 
         # side vertical layout 2
         self.side_vertical_layout_widget_2 = QWidget(self.centralwidget)
@@ -254,8 +254,7 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, y, 360, 810 - y))
         self.side_vertical_layout_2 = QVBoxLayout(self.side_vertical_layout_widget_2)
         self.side_vertical_layout_2.setObjectName(u"side_vertical_layout_2")
-        self.margin_size = 24
-        self.side_vertical_layout_2.setContentsMargins(self.margin_size, self.margin_size, self.margin_size, self.margin_size)
+        self.side_vertical_layout_2.setContentsMargins(self.margin_size, self.margin_size_overlapping, self.margin_size, self.margin_size)
         self.side_vertical_layout_2.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
 
         # side vertical layout 2 content - list widget 2 - menu content
@@ -278,7 +277,6 @@ class Ui_MainWindow(object):
         self.main_vertical_layout_widget.setGeometry(QRect(0, 0, 940, 810))
         self.main_vertical_layout = QVBoxLayout(self.main_vertical_layout_widget)
         self.main_vertical_layout.setObjectName(u"main_vertical_layout")
-        self.margin_size = 24
         self.main_vertical_layout.setContentsMargins(self.margin_size, self.margin_size, self.margin_size, self.margin_size)
 
         # 1st horizontal layout
