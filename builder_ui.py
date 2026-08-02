@@ -208,13 +208,13 @@ class Ui_MainWindow(object):
         self.margin_size_overlapping = 0
 
         # side vertical layout 1
-        self.side_vertical_layout_widget = QWidget(self.centralwidget)
-        self.side_vertical_layout_widget.setObjectName(u"side_vertical_layout_widget")
-        self.side_vertical_layout_widget.setGeometry(QRect(1080, 0, 360, 810))
-        self.side_vertical_layout = QVBoxLayout(self.side_vertical_layout_widget)
-        self.side_vertical_layout.setObjectName(u"side_vertical_layout")
-        self.side_vertical_layout.setContentsMargins(self.margin_size, self.margin_size, 0, self.margin_size_overlapping)
-        self.side_vertical_layout.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
+        self.side_vertical_layout_widget_1 = QWidget(self.centralwidget)
+        self.side_vertical_layout_widget_1.setObjectName(u"side_vertical_layout_widget_1")
+        self.side_vertical_layout_widget_1.setGeometry(QRect(1080, 0, 360, 810))
+        self.side_vertical_layout_1 = QVBoxLayout(self.side_vertical_layout_widget_1)
+        self.side_vertical_layout_1.setObjectName(u"side_vertical_layout_1")
+        self.side_vertical_layout_1.setContentsMargins(self.margin_size, self.margin_size, 0, self.margin_size_overlapping)
+        self.side_vertical_layout_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
 
         # side vertical layout 1 content - list widget 1 - menu buttons
         self.side_menu_buttons = QListWidget(self.centralwidget)
@@ -224,51 +224,12 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.setMinimumWidth(360)
         self.side_menu_buttons.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.side_menu_buttons.setIconSize(icon_side_menu_button_size)
-        self.side_vertical_layout.addWidget(self.side_menu_buttons)
-
-        for button in QDir("Menu").entryInfoList(["*.png"]):
-            self.side_menu_buttons.addItem(QListWidgetItem(QIcon(button.filePath()), ""))
-
-        # buttons - text
-        # bloodlines = ["Superbia", "Gula", "Luxuria", "Ira", "Acedia", "Avarita", "Invidia",
-        #               "Humilitas", "Temperantia", "Castitas", "Patientia", "Diligentia", "Caritas", "Humanitas"]
-        # for bloodline in bloodlines:
-        #     item = QListWidgetItem(QIcon(), bloodline)
-        #     item.setFont(font_numbers_bleed)
-        #     self.side_menu_buttons.addItem(item)
-        #
-        # # test - add taller item as last in row
-        # for button in QDir("Menu").entryInfoList(["*.png"]):
-        #     self.side_menu_buttons.addItem(QListWidgetItem(QIcon(button.filePath()), ""))
-        #     break
-
-        # find y position of item placed in last row of buttons
-        # find height of tallest item placed in last row of buttons
-        last_row_y = 0
-        last_row_height = 0
-        for idx in range(self.side_menu_buttons.count()):
-            item = self.side_menu_buttons.item(idx)
-            item_rect = self.side_menu_buttons.visualItemRect(item)
-
-            if item_rect.y() > last_row_y:
-                last_row_y = item_rect.y()
-                last_row_height = item_rect.height()
-
-            elif item_rect.y() == last_row_y:
-                last_row_y = item_rect.y()
-                if last_row_height < item_rect.height():
-                    last_row_height = item_rect.height()
-
-        # calculate y position of end of visible content for side menu buttons
-        #
-        # last_row_y is position of top left corner of rectangle, change it to bottom left corner by adding height
-        # also need to account for margins, only the top one because bottom one is 0
-        buttons_end_y = last_row_y + last_row_height + self.margin_size
+        self.side_vertical_layout_1.addWidget(self.side_menu_buttons)
 
         # side vertical layout 2
         self.side_vertical_layout_widget_2 = QWidget(self.centralwidget)
         self.side_vertical_layout_widget_2.setObjectName(u"side_vertical_layout_widget_2")
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, self.margin_size, 360, 810 - self.margin_size))
         self.side_vertical_layout_2 = QVBoxLayout(self.side_vertical_layout_widget_2)
         self.side_vertical_layout_2.setObjectName(u"side_vertical_layout_2")
         self.side_vertical_layout_2.setContentsMargins(self.margin_size, self.margin_size_overlapping, self.margin_size, self.margin_size)
@@ -286,8 +247,8 @@ class Ui_MainWindow(object):
         self.side_menu_content.setUniformItemSizes(True)
         self.side_vertical_layout_2.addWidget(self.side_menu_content)
 
-        for blood_code in QDir("BloodCode").entryInfoList(["*.png"]):
-            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+        # test only
+        self.fill_side_menu()
 
         # main vertical layout
         self.main_vertical_layout_widget = QWidget(self.centralwidget)
@@ -1218,6 +1179,57 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.add_menu_bar(MainWindow)
         self.retranslateUi(MainWindow)
+
+    def fill_side_menu(self):
+        # buttons
+        for button in QDir("Menu").entryInfoList(["*.png"]):
+            self.side_menu_buttons.addItem(QListWidgetItem(QIcon(button.filePath()), ""))
+
+        # buttons - text
+        # font_numbers_bleed =  QFontDatabase().font("Pirata One", "Regular", 9)
+        # bloodlines = ["Superbia", "Gula", "Luxuria", "Ira", "Acedia", "Avarita", "Invidia",
+        #               "Humilitas", "Temperantia", "Castitas", "Patientia", "Diligentia", "Caritas", "Humanitas"]
+        # for bloodline in bloodlines:
+        #     item = QListWidgetItem(QIcon(), bloodline)
+        #     item.setFont(font_numbers_bleed)
+        #     self.side_menu_buttons.addItem(item)
+        #
+        # # test - add taller item as last in row
+        # for button in QDir("Menu").entryInfoList(["*.png"]):
+        #     self.side_menu_buttons.addItem(QListWidgetItem(QIcon(button.filePath()), ""))
+        #     break
+
+        # content - reposition and resize layout so that content is placed right after visible buttons end
+        buttons_end_y = self.calculate_buttons_end()
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+
+        # content
+        for blood_code in QDir("BloodCode").entryInfoList(["*.png"]):
+            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+
+    def calculate_buttons_end(self):
+        # calculate y position of end of visible content for side menu buttons
+
+        # find y position of item placed in last row of buttons
+        # find height of tallest item placed in last row of buttons
+        last_row_y = 0
+        last_row_height = 0
+        for idx in range(self.side_menu_buttons.count()):
+            item = self.side_menu_buttons.item(idx)
+            item_rect = self.side_menu_buttons.visualItemRect(item)
+
+            if item_rect.y() > last_row_y:
+                last_row_y = item_rect.y()
+                last_row_height = item_rect.height()
+
+            elif item_rect.y() == last_row_y:
+                last_row_y = item_rect.y()
+                if last_row_height < item_rect.height():
+                    last_row_height = item_rect.height()
+
+        # last_row_y is position of top left corner of rectangle, change it to bottom left corner by adding height
+        # also need to account for margins, only the top one because bottom one is 0
+        return last_row_y + last_row_height + self.margin_size
 
     def add_menu_bar(self, MainWindow):
         self.menubar = QMenuBar(MainWindow)
