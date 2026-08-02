@@ -210,7 +210,8 @@ class Ui_MainWindow(object):
         # side vertical layout 1
         self.side_vertical_layout_widget_1 = QWidget(self.centralwidget)
         self.side_vertical_layout_widget_1.setObjectName(u"side_vertical_layout_widget_1")
-        self.side_vertical_layout_widget_1.setGeometry(QRect(1080, 0, 360, 810))
+        side_vertical_layout_widget_1_width = 340
+        self.side_vertical_layout_widget_1.setGeometry(QRect(1080, 0, side_vertical_layout_widget_1_width, 810))
         self.side_vertical_layout_1 = QVBoxLayout(self.side_vertical_layout_widget_1)
         self.side_vertical_layout_1.setObjectName(u"side_vertical_layout_1")
         self.side_vertical_layout_1.setContentsMargins(self.margin_size, self.margin_size, 0, self.margin_size_overlapping)
@@ -221,9 +222,11 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.setObjectName(u"side_menu_buttons")
         self.side_menu_buttons.setFlow(QListView.LeftToRight)
         self.side_menu_buttons.setWrapping(True)
-        self.side_menu_buttons.setMinimumWidth(360)
+        self.side_menu_buttons.setMinimumWidth(side_vertical_layout_widget_1_width)
+        self.side_menu_buttons.setMaximumWidth(side_vertical_layout_widget_1_width)
         self.side_menu_buttons.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.side_menu_buttons.setIconSize(icon_side_menu_button_size)
+        self.side_menu_buttons.itemClicked.connect(self.filter_side_menu)
         self.side_vertical_layout_1.addWidget(self.side_menu_buttons)
 
         # side vertical layout 2
@@ -1182,18 +1185,21 @@ class Ui_MainWindow(object):
 
     def fill_side_menu(self):
         # buttons
-        for button in QDir("Menu").entryInfoList(["*.png"]):
-            self.side_menu_buttons.addItem(QListWidgetItem(QIcon(button.filePath()), ""))
+        # for button in QDir("Menu").entryInfoList(["*.png"]):
+        #     item = QListWidgetItem(QIcon(button.filePath()), "")
+        #     item.setStatusTip(button.fileName())
+        #     self.side_menu_buttons.addItem(item)
 
         # buttons - text
-        # font_numbers_bleed =  QFontDatabase().font("Pirata One", "Regular", 9)
-        # bloodlines = ["Superbia", "Gula", "Luxuria", "Ira", "Acedia", "Avarita", "Invidia",
+        font_numbers_bleed =  QFontDatabase().font("Pirata One", "Regular", 11)
+        # bloodlines = ["All", "Favorite", "Superbia", "Gula", "Luxuria", "Ira", "Acedia", "Avarita", "Invidia",
         #               "Humilitas", "Temperantia", "Castitas", "Patientia", "Diligentia", "Caritas", "Humanitas"]
-        # for bloodline in bloodlines:
-        #     item = QListWidgetItem(QIcon(), bloodline)
-        #     item.setFont(font_numbers_bleed)
-        #     self.side_menu_buttons.addItem(item)
-        #
+        bloodlines = ["All", "Favorite", "Superbia", "Gula", "Luxuria", "Acedia", "Patientia", "Caritas"]
+        for bloodline in bloodlines:
+            item = QListWidgetItem(QIcon(), bloodline)
+            item.setFont(font_numbers_bleed)
+            self.side_menu_buttons.addItem(item)
+
         # # test - add taller item as last in row
         # for button in QDir("Menu").entryInfoList(["*.png"]):
         #     self.side_menu_buttons.addItem(QListWidgetItem(QIcon(button.filePath()), ""))
@@ -1205,6 +1211,19 @@ class Ui_MainWindow(object):
 
         # content
         for blood_code in QDir("BloodCode").entryInfoList(["*.png"]):
+            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+
+    def filter_side_menu(self, item):
+        chosen = item.text()
+        self.side_menu_content.clear()
+
+        filter = ["*.png"]
+        if "Luxuria" in chosen:
+            filter = ["*Holly*.png"]
+        if "Superbia" in chosen:
+            filter = ["*Lou*.png"]
+
+        for blood_code in QDir("BloodCode").entryInfoList(filter):
             self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
 
     def calculate_buttons_end(self):
