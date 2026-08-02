@@ -10,6 +10,29 @@ VERSION = u"Code Vein II Character Builder v0.0.1"
 
 
 class Ui_MainWindow(object):
+    def placeDynamicUIElements(self):
+        # widgets in layout have position only after window is shown
+        # if we want to place a widget outside layout, but matching position of widget in layout
+        # then we can only do so after window is shown
+
+        # weapon 1 transform
+        r1 = self.tool_button_h2_v1_h1_1.geometry()
+        self.tool_button_h2_v1_h1_1a.setGeometry(QRect(r1.x(), r1.y(), 25, 25))
+        self.tool_button_h2_v1_h1_1a.raise_()
+        self.tool_button_h2_v1_h1_1a.show()
+
+        # weapon 2 transform
+        r2 = self.tool_button_h2_v2_h1_1.geometry()
+        self.tool_button_h2_v2_h1_1a.setGeometry(QRect(r2.x(), r2.y(), 25, 25))
+        self.tool_button_h2_v2_h1_1a.raise_()
+        self.tool_button_h2_v2_h1_1a.show()
+
+        # defensive transform
+        r3 = self.tool_button_h2_v3_h1_2.geometry()
+        self.tool_button_h2_v3_h1_2a.setGeometry(QRect(r3.x(), r3.y(), 25, 25))
+        self.tool_button_h2_v3_h1_2a.raise_()
+        self.tool_button_h2_v3_h1_2a.show()
+
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
@@ -39,6 +62,7 @@ class Ui_MainWindow(object):
         # icons
         icon_slot_blood_code_size = QSize(150, 150)
         icon_slot_item_size = QSize(75, 75)
+        icon_slot_item_addon_size = QSize(24, 24)
         icon_slot_forma_size = QSize(30, 30)
         icon_attribute_size = QSize(24, 24)
         icon_defense_size = QSize(24, 24)
@@ -49,6 +73,8 @@ class Ui_MainWindow(object):
         icon_slot_blood_code.addFile(u":/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_slot_item = QIcon()
         icon_slot_item.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_slot_item_addon = QIcon()
+        icon_slot_item_addon.addFile(u":/Transform/T_UI_Enhancement_Off.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_slot_forma = QIcon()
         icon_slot_forma.addFile(u":/UI/Slot_Forma", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
@@ -157,7 +183,8 @@ class Ui_MainWindow(object):
 
                 #Blood_Code_Button:hover,
                 #Weapon_1_Button:hover, #Weapon_2_Button:hover,
-                #Offensive_Button:hover, #Defensive_Button:hover, #Jail_Button:hover {
+                #Offensive_Button:hover, #Defensive_Button:hover, #Jail_Button:hover,
+                #Transform_Weapon_1_Button:hover, #Transform_Weapon_2_Button:hover, #Transform_Defensive_Button:hover {
                     border : 1px solid #b6a98d; /*light brown*/
                 }
 
@@ -227,8 +254,9 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.setIconSize(icon_side_menu_button_size)
         self.side_vertical_layout_1.addWidget(self.side_menu_buttons)
         self.side_menu_buttons.setMouseTracking(True)
-        self.side_menu_buttons.itemClicked.connect(self.filter_side_content_menu)
-        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        # those are dummy connections to avoid warnings, will be replaced when side menu is opened
+        self.side_menu_buttons.itemClicked.connect(self.handle_dummy)
+        self.side_menu_buttons.itemEntered.connect(self.handle_dummy)
 
         # side vertical layout 2
         self.side_vertical_layout_widget_2 = QWidget(self.centralwidget)
@@ -251,8 +279,9 @@ class Ui_MainWindow(object):
         self.side_menu_content.setUniformItemSizes(True)
         self.side_vertical_layout_2.addWidget(self.side_menu_content)
         self.side_menu_content.setMouseTracking(True)
-        # self.side_menu_content.itemClicked.connect()
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
+        # those are dummy connections to avoid warnings, will be replaced when side menu is opened
+        self.side_menu_content.itemClicked.connect(self.handle_dummy)
+        self.side_menu_content.itemEntered.connect(self.handle_dummy)
 
         # test only
         # self.fill_side_menu()
@@ -371,6 +400,12 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v1_h1_1.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v1_1.addWidget(self.tool_button_h2_v1_h1_1)
         self.tool_button_h2_v1_h1_1.clicked.connect(self.fill_side_menu_weapon)
+
+        self.tool_button_h2_v1_h1_1a = QToolButton(self.centralwidget)
+        self.tool_button_h2_v1_h1_1a.setObjectName(u"Transform_Weapon_1_Button")
+        self.tool_button_h2_v1_h1_1a.setIcon(icon_slot_item_addon)
+        self.tool_button_h2_v1_h1_1a.setIconSize(icon_slot_item_addon_size)
+        self.tool_button_h2_v1_h1_1a.clicked.connect(self.fill_side_menu_transform)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content - grid layout
         self.grid_layout_h2_v1_h1_1 = QGridLayout()
@@ -519,6 +554,12 @@ class Ui_MainWindow(object):
         self.horizontal_layout_h2_v2_1.addWidget(self.tool_button_h2_v2_h1_1)
         self.tool_button_h2_v2_h1_1.clicked.connect(self.fill_side_menu_weapon)
 
+        self.tool_button_h2_v2_h1_1a = QToolButton(self.centralwidget)
+        self.tool_button_h2_v2_h1_1a.setObjectName(u"Transform_Weapon_2_Button")
+        self.tool_button_h2_v2_h1_1a.setIcon(icon_slot_item_addon)
+        self.tool_button_h2_v2_h1_1a.setIconSize(icon_slot_item_addon_size)
+        self.tool_button_h2_v2_h1_1a.clicked.connect(self.fill_side_menu_transform)
+
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content - grid layout
         self.grid_layout_h2_v2_h1_1 = QGridLayout()
         self.grid_layout_h2_v2_h1_1.setObjectName(u"grid_layout_h2_v2_h1_1")
@@ -641,6 +682,12 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_2.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v3_1.addWidget(self.tool_button_h2_v3_h1_2)
         self.tool_button_h2_v3_h1_2.clicked.connect(self.fill_side_menu_defensive)
+
+        self.tool_button_h2_v3_h1_2a = QToolButton(self.centralwidget)
+        self.tool_button_h2_v3_h1_2a.setObjectName(u"Transform_Defensive_Button")
+        self.tool_button_h2_v3_h1_2a.setIcon(icon_slot_item_addon)
+        self.tool_button_h2_v3_h1_2a.setIconSize(icon_slot_item_addon_size)
+        self.tool_button_h2_v3_h1_2a.clicked.connect(self.fill_side_menu_transform)
 
         self.tool_button_h2_v3_h1_3 = QToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v3_h1_3.setObjectName(u"Jail_Button")
@@ -1217,6 +1264,16 @@ class Ui_MainWindow(object):
     def fill_side_menu_forma(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
+        self.side_menu_buttons.itemClicked.disconnect()
+        self.side_menu_buttons.itemEntered.disconnect()
+        self.side_menu_content.itemClicked.disconnect()
+        self.side_menu_content.itemEntered.disconnect()
+
+        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
+
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
 
@@ -1239,6 +1296,15 @@ class Ui_MainWindow(object):
     def fill_side_menu_booster(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
+        self.side_menu_buttons.itemClicked.disconnect()
+        self.side_menu_buttons.itemEntered.disconnect()
+        self.side_menu_content.itemClicked.disconnect()
+        self.side_menu_content.itemEntered.disconnect()
+
+        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
 
@@ -1263,6 +1329,15 @@ class Ui_MainWindow(object):
     def fill_side_menu_weapon(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
+        self.side_menu_buttons.itemClicked.disconnect()
+        self.side_menu_buttons.itemEntered.disconnect()
+        self.side_menu_content.itemClicked.disconnect()
+        self.side_menu_content.itemEntered.disconnect()
+
+        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
 
@@ -1284,9 +1359,52 @@ class Ui_MainWindow(object):
         for blood_code in QDir("Weapon/Bayonet").entryInfoList(["*.png"]):
             self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
 
+    def fill_side_menu_transform(self):
+        self.side_menu_buttons.clear()
+        self.side_menu_content.clear()
+        self.side_menu_buttons.itemClicked.disconnect()
+        self.side_menu_buttons.itemEntered.disconnect()
+        self.side_menu_content.itemClicked.disconnect()
+        self.side_menu_content.itemEntered.disconnect()
+
+        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+
+        if "Weapon_1" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_transform_weapon_1_clicked)
+        elif "Weapon_2" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_transform_weapon_2_clicked)
+        elif "Defensive" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_transform_defensive_clicked)
+
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
+        self.side_menu_buttons.setVisible(True)
+        self.side_menu_content.setVisible(True)
+
+        # buttons - empty
+
+        # content - reposition and resize layout so that content is placed right after visible buttons end
+        buttons_end_y = self.calculate_buttons_end()
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+
+        # content
+        for blood_code in QDir("Transform").entryInfoList(["*.png"]):
+            item = QListWidgetItem(QIcon(blood_code.filePath()), "")
+            item.setStatusTip(blood_code.fileName())
+            self.side_menu_content.addItem(item)
+
     def fill_side_menu_blood_code(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
+        self.side_menu_buttons.itemClicked.disconnect()
+        self.side_menu_buttons.itemEntered.disconnect()
+        self.side_menu_content.itemClicked.disconnect()
+        self.side_menu_content.itemEntered.disconnect()
+
+        self.side_menu_buttons.itemClicked.connect(self.filter_side_content_menu)
+        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
 
@@ -1311,10 +1429,19 @@ class Ui_MainWindow(object):
     def fill_side_menu_offensive(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
+        self.side_menu_buttons.itemClicked.disconnect()
+        self.side_menu_buttons.itemEntered.disconnect()
+        self.side_menu_content.itemClicked.disconnect()
+        self.side_menu_content.itemEntered.disconnect()
+
+        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
 
-        # buttons - offensive
+        # buttons - empty
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
@@ -1327,6 +1454,15 @@ class Ui_MainWindow(object):
     def fill_side_menu_defensive(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
+        self.side_menu_buttons.itemClicked.disconnect()
+        self.side_menu_buttons.itemEntered.disconnect()
+        self.side_menu_content.itemClicked.disconnect()
+        self.side_menu_content.itemEntered.disconnect()
+
+        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
 
@@ -1349,6 +1485,15 @@ class Ui_MainWindow(object):
     def fill_side_menu_jail(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
+        self.side_menu_buttons.itemClicked.disconnect()
+        self.side_menu_buttons.itemEntered.disconnect()
+        self.side_menu_content.itemClicked.disconnect()
+        self.side_menu_content.itemEntered.disconnect()
+
+        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
 
@@ -1374,6 +1519,29 @@ class Ui_MainWindow(object):
 
         for blood_code in QDir("BloodCode").entryInfoList(filter):
             self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+
+    def handle_unimplemented_clicked(self, item):
+        print("clicked", item)
+
+    def handle_dummy(self):
+        pass
+
+    def handle_transform_weapon_1_clicked(self, item):
+        widget = self.tool_button_h2_v1_h1_1a
+        self.handle_transform_clicked(widget, item)
+
+    def handle_transform_weapon_2_clicked(self, item):
+        widget = self.tool_button_h2_v2_h1_1a
+        self.handle_transform_clicked(widget, item)
+
+    def handle_transform_defensive_clicked(self, item):
+        widget = self.tool_button_h2_v3_h1_2a
+        self.handle_transform_clicked(widget, item)
+
+    def handle_transform_clicked(self, widget, item):
+        new_icon = QIcon()
+        new_icon.addFile(u":/Transform/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        widget.setIcon(new_icon)
 
     def calculate_buttons_end(self):
         # calculate y position of end of visible content for side menu buttons

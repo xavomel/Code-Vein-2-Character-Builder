@@ -110,6 +110,8 @@ def main():
     app = QApplication([])
     form = MainWindow()
     form.show()
+    form.placeDynamicUIElements()
+
     app.exec()
     
 
