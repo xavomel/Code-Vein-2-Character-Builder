@@ -218,7 +218,7 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
 
         # side vertical layout 1 content - list widget 1 - menu buttons
-        self.side_menu_buttons = QListWidget(self.centralwidget)
+        self.side_menu_buttons = MyQListWidget(self.centralwidget)
         self.side_menu_buttons.setObjectName(u"side_menu_buttons")
         self.side_menu_buttons.setFlow(QListView.LeftToRight)
         self.side_menu_buttons.setWrapping(True)
@@ -226,7 +226,9 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.setMaximumWidth(side_vertical_layout_widget_1_width)
         self.side_menu_buttons.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         self.side_menu_buttons.setIconSize(icon_side_menu_button_size)
-        self.side_menu_buttons.itemClicked.connect(self.filter_side_menu)
+        self.side_menu_buttons.setMouseTracking(True)
+        self.side_menu_buttons.itemClicked.connect(self.filter_side_content_menu)
+        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_vertical_layout_1.addWidget(self.side_menu_buttons)
 
         # side vertical layout 2
@@ -239,7 +241,7 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_2.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
 
         # side vertical layout 2 content - list widget 2 - menu content
-        self.side_menu_content = QListWidget(self.centralwidget)
+        self.side_menu_content = MyQListWidget(self.centralwidget)
         self.side_menu_content.setObjectName(u"side_menu_content")
         self.side_menu_content.setFlow(QListView.LeftToRight)
         self.side_menu_content.setWrapping(True)
@@ -248,6 +250,9 @@ class Ui_MainWindow(object):
         self.side_menu_content.setIconSize(icon_side_menu_content_size)
         self.side_menu_content.setGridSize(icon_side_menu_content_size)
         self.side_menu_content.setUniformItemSizes(True)
+        self.side_menu_content.setMouseTracking(True)
+        # self.side_menu_content.itemClicked.connect()
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_vertical_layout_2.addWidget(self.side_menu_content)
 
         # test only
@@ -1213,7 +1218,7 @@ class Ui_MainWindow(object):
         for blood_code in QDir("BloodCode").entryInfoList(["*.png"]):
             self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
 
-    def filter_side_menu(self, item):
+    def filter_side_content_menu(self, item):
         chosen = item.text()
         self.side_menu_content.clear()
 
@@ -1396,3 +1401,19 @@ class AttributeProgressBar(QProgressBar):
         # Progress text
         painter.setPen(Qt.GlobalColor.white)
         painter.drawText(r, Qt.AlignmentFlag.AlignCenter, f"{self.value()}")
+
+
+class MyQListWidget(QListWidget):
+    hovered_item = None
+
+    def foo(self, item):
+        # first need to handle cleaning up previous item if any?
+        # because exit doesn't fire when moving from 1 item to another
+        # then we potentially don't need exit
+        self.hovered_item = item
+        # self.setCurrentItem(item) can be used for highlight, but maybe just do CSS ?
+        print("entered", self.hovered_item)
+
+    def leaveEvent(self, QEvent):
+        print("exited", self.hovered_item)
+        self.hovered_item = None
