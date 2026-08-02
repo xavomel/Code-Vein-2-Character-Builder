@@ -236,22 +236,39 @@ class Ui_MainWindow(object):
         #     item = QListWidgetItem(QIcon(), bloodline)
         #     item.setFont(font_numbers_bleed)
         #     self.side_menu_buttons.addItem(item)
+        #
+        # # test - add taller item as last in row
+        # for button in QDir("Menu").entryInfoList(["*.png"]):
+        #     self.side_menu_buttons.addItem(QListWidgetItem(QIcon(button.filePath()), ""))
+        #     break
 
-        y = 0
-        lowest_item = None
+        # find y position of item placed in last row of buttons
+        # find height of tallest item placed in last row of buttons
+        last_row_y = 0
+        last_row_height = 0
         for idx in range(self.side_menu_buttons.count()):
             item = self.side_menu_buttons.item(idx)
-            r = self.side_menu_buttons.visualItemRect(item)
-            if r.y() > y:
-                y = r.y()
-                lowest_item = r
+            item_rect = self.side_menu_buttons.visualItemRect(item)
 
-        y = y + lowest_item.height() + self.margin_size
+            if item_rect.y() > last_row_y:
+                last_row_y = item_rect.y()
+                last_row_height = item_rect.height()
+
+            elif item_rect.y() == last_row_y:
+                last_row_y = item_rect.y()
+                if last_row_height < item_rect.height():
+                    last_row_height = item_rect.height()
+
+        # calculate y position of end of visible content for side menu buttons
+        #
+        # last_row_y is position of top left corner of rectangle, change it to bottom left corner by adding height
+        # also need to account for margins, only the top one because bottom one is 0
+        buttons_end_y = last_row_y + last_row_height + self.margin_size
 
         # side vertical layout 2
         self.side_vertical_layout_widget_2 = QWidget(self.centralwidget)
         self.side_vertical_layout_widget_2.setObjectName(u"side_vertical_layout_widget_2")
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, y, 360, 810 - y))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
         self.side_vertical_layout_2 = QVBoxLayout(self.side_vertical_layout_widget_2)
         self.side_vertical_layout_2.setObjectName(u"side_vertical_layout_2")
         self.side_vertical_layout_2.setContentsMargins(self.margin_size, self.margin_size_overlapping, self.margin_size, self.margin_size)
@@ -263,6 +280,7 @@ class Ui_MainWindow(object):
         self.side_menu_content.setFlow(QListView.LeftToRight)
         self.side_menu_content.setWrapping(True)
         self.side_menu_content.setMinimumWidth(360 - 2 * self.margin_size)
+        self.side_menu_content.setMaximumWidth(360 - 2 * self.margin_size)
         self.side_menu_content.setIconSize(icon_side_menu_content_size)
         self.side_menu_content.setGridSize(icon_side_menu_content_size)
         self.side_menu_content.setUniformItemSizes(True)
