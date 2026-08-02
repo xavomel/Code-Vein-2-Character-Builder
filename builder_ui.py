@@ -336,7 +336,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_1.setIcon(icon_slot_forma)
         self.push_button_h2_v1_1.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_1, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v1_1.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v1_1.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v1_2 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v1_2.setObjectName(u"Forma_2_Weapon_1")
@@ -344,7 +344,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_2.setIcon(icon_slot_forma)
         self.push_button_h2_v1_2.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_2, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v1_2.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v1_2.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v1_3 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v1_3.setObjectName(u"Forma_3_Weapon_1")
@@ -352,7 +352,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_3.setIcon(icon_slot_forma)
         self.push_button_h2_v1_3.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_3, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v1_3.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v1_3.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v1_4 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v1_4.setObjectName(u"Forma_4_Weapon_1")
@@ -360,7 +360,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_4.setIcon(icon_slot_forma)
         self.push_button_h2_v1_4.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_4, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v1_4.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v1_4.clicked.connect(self.fill_side_menu_forma)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content
         self.tool_button_h2_v1_h1_1 = QToolButton(self.main_vertical_layout_widget)
@@ -370,7 +370,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v1_h1_1.setIcon(icon_slot_item)
         self.tool_button_h2_v1_h1_1.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v1_1.addWidget(self.tool_button_h2_v1_h1_1)
-        self.tool_button_h2_v1_h1_1.clicked.connect(self.open_side_menu)
+        self.tool_button_h2_v1_h1_1.clicked.connect(self.fill_side_menu_weapon)
 
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content - grid layout
         self.grid_layout_h2_v1_h1_1 = QGridLayout()
@@ -483,7 +483,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_1.setIcon(icon_slot_forma)
         self.push_button_h2_v2_1.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_1, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v2_1.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v2_1.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v2_2 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v2_2.setObjectName(u"Forma_2_Weapon_2")
@@ -491,7 +491,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_2.setIcon(icon_slot_forma)
         self.push_button_h2_v2_2.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_2, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v2_2.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v2_2.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v2_3 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v2_3.setObjectName(u"Forma_3_Weapon_2")
@@ -499,7 +499,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_3.setIcon(icon_slot_forma)
         self.push_button_h2_v2_3.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_3, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v2_3.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v2_3.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v2_4 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v2_4.setObjectName(u"Forma_4_Weapon_2")
@@ -507,7 +507,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_4.setIcon(icon_slot_forma)
         self.push_button_h2_v2_4.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_4, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v2_4.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v2_4.clicked.connect(self.fill_side_menu_forma)
 
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content
         self.tool_button_h2_v2_h1_1 = QToolButton(self.main_vertical_layout_widget)
@@ -517,7 +517,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v2_h1_1.setIcon(icon_slot_item)
         self.tool_button_h2_v2_h1_1.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v2_1.addWidget(self.tool_button_h2_v2_h1_1)
-        self.tool_button_h2_v2_h1_1.clicked.connect(self.open_side_menu)
+        self.tool_button_h2_v2_h1_1.clicked.connect(self.fill_side_menu_weapon)
 
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content - grid layout
         self.grid_layout_h2_v2_h1_1 = QGridLayout()
@@ -631,7 +631,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_1.setIcon(icon_slot_item)
         self.tool_button_h2_v3_h1_1.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v3_1.addWidget(self.tool_button_h2_v3_h1_1)
-        self.tool_button_h2_v3_h1_1.clicked.connect(self.open_side_menu)
+        self.tool_button_h2_v3_h1_1.clicked.connect(self.fill_side_menu_offensive)
 
         self.tool_button_h2_v3_h1_2 = QToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v3_h1_2.setObjectName(u"Defensive_Button")
@@ -640,7 +640,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_2.setIcon(icon_slot_item)
         self.tool_button_h2_v3_h1_2.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v3_1.addWidget(self.tool_button_h2_v3_h1_2)
-        self.tool_button_h2_v3_h1_2.clicked.connect(self.open_side_menu)
+        self.tool_button_h2_v3_h1_2.clicked.connect(self.fill_side_menu_defensive)
 
         self.tool_button_h2_v3_h1_3 = QToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v3_h1_3.setObjectName(u"Jail_Button")
@@ -649,7 +649,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_3.setIcon(icon_slot_item)
         self.tool_button_h2_v3_h1_3.setIconSize(icon_slot_item_size)
         self.horizontal_layout_h2_v3_1.addWidget(self.tool_button_h2_v3_h1_3)
-        self.tool_button_h2_v3_h1_3.clicked.connect(self.open_side_menu)
+        self.tool_button_h2_v3_h1_3.clicked.connect(self.fill_side_menu_jail)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1 content - grid layout
         self.grid_layout_h2_v3_h1_1 = QGridLayout()
@@ -719,7 +719,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h2_1.setIcon(icon_slot_blood_code)
         self.tool_button_h2_v3_h2_1.setIconSize(icon_slot_blood_code_size)
         self.horizontal_layout_h2_v3_2.addWidget(self.tool_button_h2_v3_h2_1)
-        self.tool_button_h2_v3_h2_1.clicked.connect(self.open_side_menu)
+        self.tool_button_h2_v3_h2_1.clicked.connect(self.fill_side_menu_blood_code)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 2 content - vertical layout
         self.vertical_layout_h2_v3_h2_1 = QVBoxLayout()
@@ -735,7 +735,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_1.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_1.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_1)
-        self.push_button_h2_v3_h2_v1_1.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v3_h2_v1_1.clicked.connect(self.fill_side_menu_booster)
 
         self.push_button_h2_v3_h2_v1_2 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v3_h2_v1_2.setObjectName(u"Booster_2_Button")
@@ -743,7 +743,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_2.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_2.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_2)
-        self.push_button_h2_v3_h2_v1_2.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v3_h2_v1_2.clicked.connect(self.fill_side_menu_booster)
 
         self.push_button_h2_v3_h2_v1_3 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v3_h2_v1_3.setObjectName(u"Booster_3_Button")
@@ -751,7 +751,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_3.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_3.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_3)
-        self.push_button_h2_v3_h2_v1_3.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v3_h2_v1_3.clicked.connect(self.fill_side_menu_booster)
 
         self.push_button_h2_v3_h2_v1_4 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v3_h2_v1_4.setObjectName(u"Booster_4_Button")
@@ -759,7 +759,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_4.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_4.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_4)
-        self.push_button_h2_v3_h2_v1_4.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v3_h2_v1_4.clicked.connect(self.fill_side_menu_booster)
 
         self.push_button_h2_v3_h2_v1_5 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v3_h2_v1_5.setObjectName(u"Booster_5_Button")
@@ -767,7 +767,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_5.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_5.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_5)
-        self.push_button_h2_v3_h2_v1_5.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v3_h2_v1_5.clicked.connect(self.fill_side_menu_booster)
 
         self.push_button_h2_v3_h2_v1_6 = QPushButton(self.main_vertical_layout_widget)
         self.push_button_h2_v3_h2_v1_6.setObjectName(u"Booster_6_Button")
@@ -775,7 +775,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_6.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_6.setIconSize(icon_slot_forma_size)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_6)
-        self.push_button_h2_v3_h2_v1_6.clicked.connect(self.open_side_menu)
+        self.push_button_h2_v3_h2_v1_6.clicked.connect(self.fill_side_menu_booster)
 
         # 2nd horizontal layout content - spacer at the end (right)
         self.horizontal_spacer_h2_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
@@ -1207,14 +1207,6 @@ class Ui_MainWindow(object):
         self.add_menu_bar(MainWindow)
         self.retranslateUi(MainWindow)
 
-    def open_side_menu(self):
-        print(self.sender().objectName())
-
-        self.side_menu_buttons.setVisible(True)
-        self.side_menu_content.setVisible(True)
-        self.fill_side_menu()
-        # set All button as selected
-
     def close_side_menu(self):
         # exit triggers when moving between content and buttons, so bad idea to hide it this way
         # but ok for testing
@@ -1222,18 +1214,84 @@ class Ui_MainWindow(object):
         self.side_menu_content.setVisible(False)
         pass
 
-    def fill_side_menu(self):
+    def fill_side_menu_forma(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
+        self.side_menu_buttons.setVisible(True)
+        self.side_menu_content.setVisible(True)
 
         # buttons
-        # for button in QDir("Menu").entryInfoList(["*.png"]):
-        #     item = QListWidgetItem(QIcon(button.filePath()), "")
-        #     item.setStatusTip(button.fileName())
-        #     self.side_menu_buttons.addItem(item)
+        for button in QDir("Menu").entryInfoList(["*.png"]):
+            if "booster" in button.filePath().lower():
+                continue
+            item = QListWidgetItem(QIcon(button.filePath()), "")
+            item.setStatusTip(button.fileName())
+            self.side_menu_buttons.addItem(item)
+
+        # content - reposition and resize layout so that content is placed right after visible buttons end
+        buttons_end_y = self.calculate_buttons_end()
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+
+        # content
+        for blood_code in QDir("Forma").entryInfoList(["*.png"]):
+            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+
+    def fill_side_menu_booster(self):
+        self.side_menu_buttons.clear()
+        self.side_menu_content.clear()
+        self.side_menu_buttons.setVisible(True)
+        self.side_menu_content.setVisible(True)
+
+        # buttons
+        for button in QDir("Menu").entryInfoList(["*.png"]):
+            if "weapon" in button.filePath().lower():
+                continue
+            if "formae" in button.filePath().lower():
+                continue
+            item = QListWidgetItem(QIcon(button.filePath()), "")
+            item.setStatusTip(button.fileName())
+            self.side_menu_buttons.addItem(item)
+
+        # content - reposition and resize layout so that content is placed right after visible buttons end
+        buttons_end_y = self.calculate_buttons_end()
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+
+        # content
+        for blood_code in QDir("Booster/Attack").entryInfoList(["*.png"]):
+            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+
+    def fill_side_menu_weapon(self):
+        self.side_menu_buttons.clear()
+        self.side_menu_content.clear()
+        self.side_menu_buttons.setVisible(True)
+        self.side_menu_content.setVisible(True)
+
+        # buttons
+        for button in QDir("Menu").entryInfoList(["*.png"]):
+            if "booster" in button.filePath().lower():
+                continue
+            if "formae" in button.filePath().lower():
+                continue
+            item = QListWidgetItem(QIcon(button.filePath()), "")
+            item.setStatusTip(button.fileName())
+            self.side_menu_buttons.addItem(item)
+
+        # content - reposition and resize layout so that content is placed right after visible buttons end
+        buttons_end_y = self.calculate_buttons_end()
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+
+        # content
+        for blood_code in QDir("Weapon/Bayonet").entryInfoList(["*.png"]):
+            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+
+    def fill_side_menu_blood_code(self):
+        self.side_menu_buttons.clear()
+        self.side_menu_content.clear()
+        self.side_menu_buttons.setVisible(True)
+        self.side_menu_content.setVisible(True)
 
         # buttons - text
-        font_numbers_bleed =  QFontDatabase().font("Pirata One", "Regular", 11)
+        font_numbers_bleed = QFontDatabase().font("Pirata One", "Regular", 11)
         # bloodlines = ["All", "Favorite", "Superbia", "Gula", "Luxuria", "Ira", "Acedia", "Avarita", "Invidia",
         #               "Humilitas", "Temperantia", "Castitas", "Patientia", "Diligentia", "Caritas", "Humanitas"]
         bloodlines = ["All", "Favorite", "Superbia", "Gula", "Luxuria", "Acedia", "Patientia", "Caritas"]
@@ -1242,17 +1300,66 @@ class Ui_MainWindow(object):
             item.setFont(font_numbers_bleed)
             self.side_menu_buttons.addItem(item)
 
-        # # test - add taller item as last in row
-        # for button in QDir("Menu").entryInfoList(["*.png"]):
-        #     self.side_menu_buttons.addItem(QListWidgetItem(QIcon(button.filePath()), ""))
-        #     break
-
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
         for blood_code in QDir("BloodCode").entryInfoList(["*.png"]):
+            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+
+    def fill_side_menu_offensive(self):
+        self.side_menu_buttons.clear()
+        self.side_menu_content.clear()
+        self.side_menu_buttons.setVisible(True)
+        self.side_menu_content.setVisible(True)
+
+        # buttons - offensive
+
+        # content - reposition and resize layout so that content is placed right after visible buttons end
+        buttons_end_y = self.calculate_buttons_end()
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+
+        # content
+        for blood_code in QDir("Offensive").entryInfoList(["*.png"]):
+            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+
+    def fill_side_menu_defensive(self):
+        self.side_menu_buttons.clear()
+        self.side_menu_content.clear()
+        self.side_menu_buttons.setVisible(True)
+        self.side_menu_content.setVisible(True)
+
+        # buttons
+        font_numbers_bleed = QFontDatabase().font("Pirata One", "Regular", 11)
+        types = ["All", "Favorite", "Guard", "Parry", "Dodge"]
+        for type in types:
+            item = QListWidgetItem(QIcon(), type)
+            item.setFont(font_numbers_bleed)
+            self.side_menu_buttons.addItem(item)
+
+        # content - reposition and resize layout so that content is placed right after visible buttons end
+        buttons_end_y = self.calculate_buttons_end()
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+
+        # content
+        for blood_code in QDir("Defensive").entryInfoList(["*.png"]):
+            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+
+    def fill_side_menu_jail(self):
+        self.side_menu_buttons.clear()
+        self.side_menu_content.clear()
+        self.side_menu_buttons.setVisible(True)
+        self.side_menu_content.setVisible(True)
+
+        # buttons - empty
+
+        # content - reposition and resize layout so that content is placed right after visible buttons end
+        buttons_end_y = self.calculate_buttons_end()
+        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+
+        # content
+        for blood_code in QDir("Jail").entryInfoList(["*.png"]):
             self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
 
     def filter_side_content_menu(self, item):
