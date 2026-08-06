@@ -1103,7 +1103,7 @@ class Ui_MainWindow(object):
         # 5th horizontal layout
         self.tool_button_pre_h5 = QToolButton(self.main_vertical_layout_widget)
         self.tool_button_pre_h5.setObjectName(u"tool_button_pre_h5")
-        self.tool_button_pre_h5.setText(QCoreApplication.translate("MainWindow", u"Guardian Defense", None)) # move to re-translate
+        self.tool_button_pre_h5.setText(QCoreApplication.translate("MainWindow", u"Guarding Defense", None)) # move to re-translate
         self.tool_button_pre_h5.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.tool_button_pre_h5.setIcon(icon_text_arrow)
         self.main_vertical_layout.addWidget(self.tool_button_pre_h5)

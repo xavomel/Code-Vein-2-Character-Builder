@@ -28,6 +28,7 @@ class Forma:
     # One-Handed Swords, Two-Handed Swords, Twin Blades, Bayonets, Halberds, Hammers, Rune Blades
     # Magic Range Long, Magic Range Short, Assistance Attack, Assistance Defense, Assistance Other
     type = 0
+    ichor_cost = 0
 
     capacity = {
         "Reliability": 		0,
