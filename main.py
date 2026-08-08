@@ -7,6 +7,9 @@ class Character:
     name = ""
     bloodline = ""
     blood_code = BloodCode()
+    # need a separate variable for capacity weapon 1 and 2 ?
+    # so that we can have max capacity 0 even without weapon
+    # unless we use Weapon with default values for that
     weapon_1 = Weapon(1)
     weapon_2 = Weapon(2)
     offensive_forma = OffensiveForma()
@@ -21,8 +24,9 @@ class Character:
 
     overburden = False
     balance = 0
-    guard = 0
     ichor = 0
+    stamina_guard_cost = 0
+    bleed = 0
 
     attributes = {
         "Strength":     0,
@@ -52,23 +56,23 @@ class Character:
     }
 
     defense = {
-        "Slash": 		0,
-        "Crush": 		0,
-        "Pierce": 		0,
-        "Fire": 		0,
-        "Ice":			0,
-        "Lightning":	0,
-        "Blood":	 	0,
+        "Slash": 		0.0,
+        "Crush": 		0.0,
+        "Pierce": 		0.0,
+        "Blood": 		0.0,
+        "Fire": 		0.0,
+        "Ice":			0.0,
+        "Lightning":	0.0,
     }
 
     guarding_defense = {
         "Slash": 		0,
         "Crush": 		0,
         "Pierce": 		0,
+        "Blood": 		0,
         "Fire": 		0,
         "Ice":			0,
         "Lightning":	0,
-        "Blood":	 	0,
     }
 
     resistances = {

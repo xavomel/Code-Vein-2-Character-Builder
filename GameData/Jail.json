@@ -1,0 +1,142 @@
+[
+    {
+        "Name": "Ogre",
+        "Description": "A gigantic claw reminiscent of an ogre's arm.\n\nDash forward a short distance and drive the claw into the target. Equipping this increases defense.\n\nOgre was the first draining tech ever developed, and Jails using this tech date far back. Early Jails were unwieldy and dangerous, drawing revenant blood directly into the body. Only those with natural resistance survived their use. The fierce appearance of this tech represents ferocious determination in the face of certain death.",
+        "Type": "Ogre",
+        "Balance": 62,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 10,
+            "Fortitude": 4
+        },
+        "Defense": {
+            "Slash": 5.6,
+            "Crush": 5.3,
+            "Pierce": 5.4,
+            "Blood": 4.2,
+            "Fire": 4.5,
+            "Ice": 4.2,
+            "Thunder": 4.1
+        }
+    },
+    {
+        "Name": "Hound",
+        "Description": "Crush foes with a twin-headed wolf.\n\nUnleashes a two-hit combo with left and right jaws. While attacking, the user has increased disruption resistance to enemy strikes. Equipping this item greatly increases defense.\n\nHound is the next generation of draining tech following in the footsteps of Ogre. As ancient symbols of victory and courage, hunters have long favored wolves and their imagery in their fights against the supernatural. Significant numbers even took to raising actual wolves to aid on their hunts.\n\nSurprisingly, the design for this vicious, twin-headed wolf is said to be based on a calm, friendly wolf raised by the creator. Perhaps due in part to that wolf's loyalty to its master, this Jail offers not only drain functions, but a certain stalwartness as well.",
+        "Type": "Hounds",
+        "Balance": 124,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 12,
+            "Fortitude": 6
+        },
+        "Defense": {
+            "Slash": 7.4,
+            "Crush": 7.6,
+            "Pierce": 7.2,
+            "Blood": 6.7,
+            "Fire": 6.3,
+            "Ice": 6.1,
+            "Thunder": 6.5
+        }
+    },
+    {
+        "Name": "Stinger",
+        "Description": "A massive scorpion tail that skewers prey.\n\nThrust forward in a straight line over a long distance with the tail. Hold <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to send enemies flying.\n\nEquipping this Jail increases defense.\n\nLike Hound, Stinger is part of the second generation of draining tech.\n\nUnlike Ogre and Hound, however, it was built to trap prey from a distance and suit the needs of hunter assassins and covert operatives.\n\nThough originally designed to both poison and drain, the complex circulation system occasionally caused a backflow of the lethal substance, leading to its eventual removal.",
+        "Type": "Stinger",
+        "Balance": 81,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 4,
+            "Willpower": 0,
+            "Vitality": 6,
+            "Fortitude": 4
+        },
+        "Defense": {
+            "Slash": 5.1,
+            "Crush": 5.0,
+            "Pierce": 4.9,
+            "Blood": 5.3,
+            "Fire": 5.4,
+            "Ice": 5.9,
+            "Thunder": 5.1
+        }
+    },
+    {
+        "Name": "Ivy",
+        "Description": "Thorns that generate blades of steel.\n\nErupts countless blades from the ground, piercing a wide area.\n\nHold <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to place a marker on the ground. Release <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to drain at the marker's location. The marker can be repositioned as desired.\n\nEquipping this item minimally increases defense.\n\nIvy is part of the third generation of draining tech, building on the foundations of stingers before them.\n\nDesigned specifically for long-range surprise attacks, these jails were favored by the most infamous assassins.\n\nUnexpected attacks from below prove remarkably effective, but to wield them with true mastery demands both seasoned skill and unwavering focus.\n\nThe legendary assassin who went by Nyx was said to wear this type of jail at all hours, wielding its thorns as deftly as she did her own arms and legs.",
+        "Type": "Ivy",
+        "Balance": 16,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 4,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 2,
+            "Will": 2
+        },
+        "Defense": {
+            "Slash": 1.5,
+            "Crush": 1.0,
+            "Pierce": 1.3,
+            "Blood": 4.5,
+            "Fire": 4.6,
+            "Ice": 4.8,
+            "Thunder": 4.6
+        }
+    },
+    {
+        "Name": "Bat",
+        "Description": "Launches a fang-tipped arrow with bat wings.\n\nA swarm of bats descends and continuously drains blood from the enemy struck by the arrow. The bats disappear after a set amount of blood is drained. If the distance between the target and the user is great, the bats' drain rate decreases. If it becomes too great, the bats will vanish immediately. Equipping this Jail slightly increases defense.\n\nBat is the latest generation of long-range draining tech based on Stinger.\n\nCreated amidst the societal upheaval caused by the Resurgence, this Jail was designed with greater public awareness than in the past. During those times of historical change, revenants and hunters stepped into the light, abandoning all prior secrecy. By easing the concentration demands limiting Ivy and allowing for long-range assaults, it has proved effective in combat against increasing enemy numbers post-Resurgence.",
+        "Type": "Bat",
+        "Balance": 38,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 2,
+            "Will": 4
+        },
+        "Defense": {
+            "Slash": 3.8,
+            "Crush": 3.9,
+            "Pierce": 3.9,
+            "Blood": 4.8,
+            "Fire": 4.3,
+            "Ice": 4.3,
+            "Thunder": 4.3
+        }
+    },
+    {
+        "Name": "Reaper",
+        "Description": "A puppet reaper bearing a massive scythe.\n\nUnleash a spinning slash with the scythe. The initial spin can deflect enemy attacks. If an attack cannot be deflected, it is blocked instead. Equipping this Jail slightly increases defense. \n\nReaper is the latest generation of close-range draining tech following Ogre and Hound. Ogre and Hound long covered all close-range draining needs, but that began to change following the Resurgence. Reaper was developed to address modern-day challenges. Against the monstrous horrors born from the Resurgence, a single blow can mean life or death. \n\nBy counteracting the opening left at the start of the attack with a parry, this Jail lives up to its name\u2014Reaper, bringer of death and keeper of souls.",
+        "Type": "Reaper",
+        "Balance": 98,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 8
+        },
+        "Defense": {
+            "Slash": 3.5,
+            "Crush": 3.3,
+            "Pierce": 3.1,
+            "Blood": 3.3,
+            "Fire": 3.4,
+            "Ice": 3.1,
+            "Thunder": 3.7
+        }
+    }
+]

@@ -1,0 +1,1340 @@
+[
+    {
+        "Name": "Strength Booster",
+        "Description": "Provides a boost to Strength.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Dexterity Booster",
+        "Description": "Provides a boost to Dexterity.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Mind Booster",
+        "Description": "Provides a boost to Mind.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Willpower Booster",
+        "Description": "Provides a boost to Willpower.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Vitality Booster",
+        "Description": "Provides a boost to Vitality.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Fortitude Booster",
+        "Description": "Provides a boost to Fortitude.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Strength Booster - Overload",
+        "Description": "Provides a large boost to Strength, but increases the burden of all other stats.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 2
+        }
+    },
+    {
+        "Name": "Dexterity Booster - Overload",
+        "Description": "Provides a large boost to Dexterity, but increases the burden of all other stats.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 2
+        }
+    },
+    {
+        "Name": "Mind Booster - Overload",
+        "Description": "Provides a large boost to Mind, but increases the burden of all other stats.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 2
+        }
+    },
+    {
+        "Name": "Willpower Booster - Overload",
+        "Description": "Provides a large boost to Willpower, but increases the burden of all other stats.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Vitality Booster - Overload",
+        "Description": "Provides a large boost to Vitality, but increases the burden of all other stats.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 2
+        }
+    },
+    {
+        "Name": "Fortitude Booster - Overload",
+        "Description": "Provides a large boost to Fortitude, but increases the burden of all other stats.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Shrugged Burden",
+        "Description": "Compensates for going over a given stat burden limit by passing excess burden to another stat.\n\nOnly works for the following stat pairs:\n-Strength and Dexterity\n-Mind and Willpower\n-Vitality and Fortitude\n\nAlso, only applies when the compensating stat can accommodate the excess burden.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 2,
+            "Will": 2
+        }
+    },
+    {
+        "Name": "Max LP Boost",
+        "Description": "Boosts the maximum LP of the user based on their stats.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Victory LP",
+        "Description": "Restores LP when an enemy is defeated.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "LP Drain Recovery",
+        "Description": "Restores LP upon a successful drain attack.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Gain Ichor on Overheal",
+        "Description": "Gain Ichor On Exceeding Max LP Via Regeneration",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Steadfast Stance",
+        "Description": "Receiving fatal damage when HP is over a certain amount will leave 1 HP.",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Shield of Devotion",
+        "Description": "Reduces HP loss when damage reduces LP below zero.",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 6,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Stamina Maximizer - Unum",
+        "Description": "Increases maximum stamina by a fixed amount.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Stamina Maximizer - Duo",
+        "Description": "Increases maximum stamina based on the user's stats.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Second Wind",
+        "Description": "Increases stamina recovery speed.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Seasoned Runner",
+        "Description": "Reduces the amount of stamina consumed when sprinting.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Steady Guard",
+        "Description": "Reduces the amount of stamina consumed when using defensive formae and successfully guarding against parryable formae attacks.",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Crazed Runner",
+        "Description": "Enables the use of HP or LP to perform actions when stamina runs out.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 4,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Ichor Maximizer - Tria",
+        "Description": "Increases maximum ichor.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Ichor Maximizer - Unum",
+        "Description": "Increases maximum ichor but reduces maximum LP.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Ichor Maximizer - Duo",
+        "Description": "Increases maximum ichor but reduces stamina recovery speed.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 6
+        }
+    },
+    {
+        "Name": "Ichor Absorber",
+        "Description": "Increases the amount of ichor gained from drain attacks.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Gorging Fang",
+        "Description": "Absorbs ichor when hitting enemies with weapon attacks, but causes damage to HP or LP when absorbing while ichor is full.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 6,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Usurper",
+        "Description": "Increases forma ichor cost, but drains ichor from enemies hit with forma attacks.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 2
+        }
+    },
+    {
+        "Name": "Dodge Drainer",
+        "Description": "Drains ichor from enemies after a successful dodge.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 8
+        }
+    },
+    {
+        "Name": "Sadistic Fang",
+        "Description": "Absorbs ichor when you hit an enemy with a status ailment.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 6
+        }
+    },
+    {
+        "Name": "Bloody Dagger",
+        "Description": "Absorbs ichor when an expendable dagger item is used to hit an enemy.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 6,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Last Hope",
+        "Description": "Reduces forma ichor cost by 1 when LP is 0.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Way of the Executioner",
+        "Description": "Reduces ichor cost for the bequeathed forma Absolute Executioner.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 8,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Life Ignition",
+        "Description": "Consumes HP to use formae when ichor runs out.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 6
+        }
+    },
+    {
+        "Name": "Augmented Regeneration",
+        "Description": "Increases user's maximum regeneration count.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Revamped Regeneration",
+        "Description": "Increases the amount that regeneration restores.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Regeneration Shift",
+        "Description": "Reduces the number of regeneration uses, but increases the amount healed each time.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Extended Recovery",
+        "Description": "Restores regeneration count when collecting lost haze after death.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "One-Handed Sword Mastery",
+        "Description": "Increases damage dealt by equipped one-handed swords.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Two-Handed Sword Mastery",
+        "Description": "Increases damage dealt by equipped two-handed swords.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Halberd Mastery",
+        "Description": "Increases damage dealt by equipped halberds.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Hammer Mastery",
+        "Description": "Increases damage dealt by equipped hammers.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 4,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Bayonet Mastery",
+        "Description": "Increases damage dealt by equipped bayonets.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 4,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Twin Blade Mastery",
+        "Description": "Increases damage dealt by equipped twin blades.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 4,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Rune Blade Mastery",
+        "Description": "Increases damage dealt by equipped rune blades.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 4
+        }
+    },
+    {
+        "Name": "Ceaseless Assault",
+        "Description": "Increases the power of all attacks, but LP decreases with each attack.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 8,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Overheat",
+        "Description": "Increases the power of all attacks, but decreases the speed of formae used.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 8
+        }
+    },
+    {
+        "Name": "Melee Fever",
+        "Description": "Briefly reduces the target's defense after hitting a foe with a melee attack.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 4,
+            "Dexterity": 4,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Blood Boost",
+        "Description": "Briefly boosts attack power after a successful drain attack.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 6,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Ailment Chaser",
+        "Description": "Increases attack power against enemies afflicted by status ailments.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Solitary Battle",
+        "Description": "Increases attack power while LP is depleted.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Survival Instinct",
+        "Description": "Boosts forma, weapon, and drain attack power when HP is below a certain amount.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Persistence - Animus",
+        "Description": "Boosts attack power each time an enemy is hit.\n\nResets whenever an attack misses or when taking a hit.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 6,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Persistence - Enmity",
+        "Description": "Boosts attack power each time when hit by an enemy.\n\nResets once attacking.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Persistence - Shroud",
+        "Description": "Boosts attack power each time when dodging an enemy attack.\n\nResets when attack misses or when taking a hit.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 6,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Heavy Drain",
+        "Description": "Increases power of charged drain attacks.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Special Drain Increase",
+        "Description": "Increases power of special drain attacks.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Recoil Control",
+        "Description": "Increases attack power for the bequeathed forma MK Rosenritter.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 8
+        }
+    },
+    {
+        "Name": "Boosted Technique",
+        "Description": "Increases attack power of combat formae, but also increases their ichor cost.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 8,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Magic Forma Attack Power Up",
+        "Description": "Increases damage dealt with magic formae.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 6
+        }
+    },
+    {
+        "Name": "Devotion",
+        "Description": "Increases attack power for the bequeathed forma Bloodreaver Blade.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 4,
+            "Dexterity": 4,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Back Attacker",
+        "Description": "Increases stagger damage dealt to enemies by back attacks.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Powerful Parry",
+        "Description": "Increases stagger damage dealt to enemies by parrying.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Hemorrhaging Weapon Boost",
+        "Description": "Increases bleed buildup on enemies from weapon attacks.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Bleed Tracker",
+        "Description": "Provides a visualization of bleed buildup on enemies.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Status Ailment Stacker",
+        "Description": "Increases status ailment buildup on enemies.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Progenitor's Fang",
+        "Description": "Charged drain attacks inflict a buildup of the Slow status ailment.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Resistance Booster - Curse",
+        "Description": "Boosts resistance to the following:\nslow, Luna Rapacis, sunblight",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Resistance Booster - Wound",
+        "Description": "Boosts resistance to the following:\nacid, stone, bind, stall",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Resistance Booster - Disease",
+        "Description": "Boosts resistance to the following:\nvenom, toxic venom, stun, Resurgence",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Resistance Booster - Blood",
+        "Description": "Boosts resistance to the following:\nleak, fatal leak, inhibit, dissonance, eclipse",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Resistance Booster",
+        "Description": "Boosts resistance to status ailments.",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Graceful Fall",
+        "Description": "Reduces damage taken when falling from heights.",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Balance Booster",
+        "Description": "Increases balance, giving more disruption resistance to enemy attacks.",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Charged Balance",
+        "Description": "Increases disruption resistance while holding down an input for a charge attack.",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Unfaltering",
+        "Description": "Provides a boost to balance when combined HP and LP are low.",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 6,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "High Spirits",
+        "Description": "Allows balance to be active at all times, even outside of combat.",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Flesh Bullet",
+        "Description": "Consumes HP to reload bayonets when out of ammo.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 8,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Max Ammo Up",
+        "Description": "Increases the maximum ammo capacity in the magazine of an equipped bayonet.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 6,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Bloodline Agnostic",
+        "Description": "Negates bloodline restrictions for equipping blood codes.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Weapon Rack",
+        "Description": "Nullifies the lowest of each of the six stat burdens present when two weapons are equipped.\n\nFor instance, if Weapon A has a Strength burden of 3 and Weapon B has a Strength burden of 2, then Weapon B's Strength burden will be treated as 0.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Titan's Arm",
+        "Description": "Allows two-handed swords to be wielded as one-handed swords.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 12,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Forma Extender",
+        "Description": "Lengthens the duration of a forma's effect.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 8,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "High Summoner",
+        "Description": "Boosts the attack power of summoned partners.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Item Efficiency",
+        "Description": "Provides a chance that any consumable item used will not diminish your stock.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Glutton",
+        "Description": "Allows the consumption of multiple food items before resting at a mistle.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Light-Footed",
+        "Description": "Reduces sound made from running and sprinting, making it harder for enemies to detect you.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Environmental Camouflage",
+        "Description": "Makes it more difficult for enemies to detect based on sight.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Revenant's Hunger",
+        "Description": "Increases haze gained when enemies are defeated.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Revenant's Greed",
+        "Description": "Increases item drop rate when enemies are defeated.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Blood Code Mastery Efficiency",
+        "Description": "Increases rate of blood code mastery from defeating enemies.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Blood-Fueled Strike",
+        "Description": "Increases attack power for the next attack following a successful drain attack.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "Phalanx J",
+        "Description": "Greatly increases balance. Temporarily increases attack power after being hit by an enemy, but gradually reduces LP as a result.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 15,
+            "Fortitude": 10
+        }
+    },
+    {
+        "Name": "Phalanx I",
+        "Description": "Modified to eliminate the reduction in LP and allow for balance to be active at all times, even outside of combat, but reduces total balance as a result.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "The Tie That Binds: Jos\u00e9e",
+        "Description": "Significantly boosts Strength.\n\nAlso greatly extends the duration of forma effects.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "The Tie That Binds: Lyle",
+        "Description": "Significantly boosts Dexterity.\n\nAlso recovers stamina on successful attacks, parries, baited dodges and guards.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "The Tie That Binds: Holly",
+        "Description": "Significantly boosts Willpower.\n\nAlso restores ichor along with LP when using regeneration.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "The Tie That Binds: Zenon",
+        "Description": "Significantly boosts Mind.\n\nAlso greatly increases maximum ichor.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    },
+    {
+        "Name": "The Tie That Binds: Noah",
+        "Description": "Significantly boosts Fortitude.\n\nAlso ignores stat, burden, margin, and overburden requirements for other traits.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        }
+    }
+]

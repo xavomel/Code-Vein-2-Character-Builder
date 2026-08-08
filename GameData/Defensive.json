@@ -1,0 +1,5680 @@
+[
+    {
+        "Name": "Clotted Shield (Light)",
+        "Description": "A shield that guards against enemy attacks and reduces damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it slightly increases base defense.",
+        "Type": "Defence",
+        "IchorCost": 0,
+        "StaminaGuardCost": 25,
+        "Balance": 8,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 1,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Defense": {
+            "Slash": 0.2,
+            "Crush": 0.3,
+            "Pierce": 0.2,
+            "Blood": 0.4,
+            "Fire": 0.4,
+            "Ice": 0.4,
+            "Lightning": 0.4
+        },
+        "GuardingDefense": {
+            "Slash": 80,
+            "Crush": 70,
+            "Pierce": 85,
+            "Blood": 60,
+            "Fire": 60,
+            "Ice": 60,
+            "Lightning": 60
+        },
+        "Resistance": {
+            "Disease": 41,
+            "Wound": 41,
+            "Bleed": 41,
+            "Curse": 41
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 25,
+            "Balance": 8,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 1,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.285,
+                "Pierce": 0.19,
+                "Blood": 0.3,
+                "Fire": 10.6,
+                "Ice": 0.3,
+                "Lightning": 0.3
+            },
+            "GuardingDefense": {
+                "Slash": 75,
+                "Crush": 65,
+                "Pierce": 80,
+                "Blood": 50,
+                "Fire": 90,
+                "Ice": 50,
+                "Lightning": 50
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 41,
+                "Bleed": 41,
+                "Curse": 41
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 25,
+            "Balance": 8,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 1,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.285,
+                "Pierce": 0.19,
+                "Blood": 0.3,
+                "Fire": 0.3,
+                "Ice": 10.6,
+                "Lightning": 0.3
+            },
+            "GuardingDefense": {
+                "Slash": 75,
+                "Crush": 65,
+                "Pierce": 80,
+                "Blood": 50,
+                "Fire": 50,
+                "Ice": 90,
+                "Lightning": 50
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 41,
+                "Bleed": 41,
+                "Curse": 41
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 25,
+            "Balance": 8,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 1,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.285,
+                "Pierce": 0.19,
+                "Blood": 0.3,
+                "Fire": 0.3,
+                "Ice": 0.3,
+                "Lightning": 10.6
+            },
+            "GuardingDefense": {
+                "Slash": 75,
+                "Crush": 65,
+                "Pierce": 80,
+                "Blood": 50,
+                "Fire": 50,
+                "Ice": 50,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 41,
+                "Bleed": 41,
+                "Curse": 41
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 25,
+            "Balance": 8,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 1,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.285,
+                "Pierce": 0.19,
+                "Blood": 10.6,
+                "Fire": 0.3,
+                "Ice": 0.3,
+                "Lightning": 0.3
+            },
+            "GuardingDefense": {
+                "Slash": 75,
+                "Crush": 65,
+                "Pierce": 80,
+                "Blood": 90,
+                "Fire": 50,
+                "Ice": 50,
+                "Lightning": 50
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 41,
+                "Bleed": 41,
+                "Curse": 41
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 25,
+            "Balance": 8,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 2,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.3,
+                "Pierce": 0.2,
+                "Blood": 0.4,
+                "Fire": 0.4,
+                "Ice": 0.4,
+                "Lightning": 0.4
+            },
+            "GuardingDefense": {
+                "Slash": 80,
+                "Crush": 70,
+                "Pierce": 85,
+                "Blood": 60,
+                "Fire": 60,
+                "Ice": 60,
+                "Lightning": 60
+            },
+            "Resistance": {
+                "Disease": 71,
+                "Wound": 41,
+                "Bleed": 41,
+                "Curse": 41
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 25,
+            "Balance": 8,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 2,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.3,
+                "Pierce": 0.2,
+                "Blood": 0.4,
+                "Fire": 0.4,
+                "Ice": 0.4,
+                "Lightning": 0.4
+            },
+            "GuardingDefense": {
+                "Slash": 80,
+                "Crush": 70,
+                "Pierce": 85,
+                "Blood": 60,
+                "Fire": 60,
+                "Ice": 60,
+                "Lightning": 60
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 71,
+                "Bleed": 41,
+                "Curse": 41
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 25,
+            "Balance": 8,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 2,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.3,
+                "Pierce": 0.2,
+                "Blood": 0.4,
+                "Fire": 0.4,
+                "Ice": 0.4,
+                "Lightning": 0.4
+            },
+            "GuardingDefense": {
+                "Slash": 80,
+                "Crush": 70,
+                "Pierce": 85,
+                "Blood": 60,
+                "Fire": 60,
+                "Ice": 60,
+                "Lightning": 60
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 41,
+                "Bleed": 71,
+                "Curse": 41
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 25,
+            "Balance": 8,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 2,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.3,
+                "Pierce": 0.2,
+                "Blood": 0.4,
+                "Fire": 0.4,
+                "Ice": 0.4,
+                "Lightning": 0.4
+            },
+            "GuardingDefense": {
+                "Slash": 80,
+                "Crush": 70,
+                "Pierce": 85,
+                "Blood": 60,
+                "Fire": 60,
+                "Ice": 60,
+                "Lightning": 60
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 41,
+                "Bleed": 41,
+                "Curse": 71
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 27,
+            "Balance": 12,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 6,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.3,
+                "Pierce": 0.2,
+                "Blood": 0.4,
+                "Fire": 0.4,
+                "Ice": 0.4,
+                "Lightning": 0.4
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 75,
+                "Pierce": 90,
+                "Blood": 65,
+                "Fire": 65,
+                "Ice": 65,
+                "Lightning": 65
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 41,
+                "Bleed": 41,
+                "Curse": 41
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 25,
+            "Balance": 8,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.1,
+                "Crush": 0.20000002,
+                "Pierce": 0.1,
+                "Blood": 0.3,
+                "Fire": 0.3,
+                "Ice": 0.3,
+                "Lightning": 0.3
+            },
+            "GuardingDefense": {
+                "Slash": 75,
+                "Crush": 65,
+                "Pierce": 80,
+                "Blood": 55,
+                "Fire": 55,
+                "Ice": 55,
+                "Lightning": 55
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 41,
+                "Bleed": 41,
+                "Curse": 41
+            }
+        }
+    },
+    {
+        "Name": "Clotted Shield",
+        "Description": "A shield that guards against enemy attacks and reduces damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption. Equipping it increases base defense.",
+        "Type": "Defence",
+        "IchorCost": 0,
+        "StaminaGuardCost": 27,
+        "Balance": 16,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 4,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Defense": {
+            "Slash": 1.6,
+            "Crush": 2.4,
+            "Pierce": 1.6,
+            "Blood": 1.2,
+            "Fire": 1.2,
+            "Ice": 1.2,
+            "Lightning": 1.2
+        },
+        "GuardingDefense": {
+            "Slash": 80,
+            "Crush": 70,
+            "Pierce": 85,
+            "Blood": 60,
+            "Fire": 60,
+            "Ice": 60,
+            "Lightning": 60
+        },
+        "Resistance": {
+            "Disease": 45,
+            "Wound": 45,
+            "Bleed": 45,
+            "Curse": 45
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 27,
+            "Balance": 16,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 2.28,
+                "Pierce": 1.52,
+                "Blood": 0.96000004,
+                "Fire": 11.8,
+                "Ice": 0.96000004,
+                "Lightning": 0.96000004
+            },
+            "GuardingDefense": {
+                "Slash": 75,
+                "Crush": 65,
+                "Pierce": 80,
+                "Blood": 50,
+                "Fire": 90,
+                "Ice": 50,
+                "Lightning": 50
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 45,
+                "Bleed": 45,
+                "Curse": 45
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 27,
+            "Balance": 16,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 2.28,
+                "Pierce": 1.52,
+                "Blood": 0.96000004,
+                "Fire": 0.96000004,
+                "Ice": 11.8,
+                "Lightning": 0.96000004
+            },
+            "GuardingDefense": {
+                "Slash": 75,
+                "Crush": 65,
+                "Pierce": 80,
+                "Blood": 50,
+                "Fire": 50,
+                "Ice": 90,
+                "Lightning": 50
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 45,
+                "Bleed": 45,
+                "Curse": 45
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 27,
+            "Balance": 16,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 2.28,
+                "Pierce": 1.52,
+                "Blood": 0.96000004,
+                "Fire": 0.96000004,
+                "Ice": 0.96000004,
+                "Lightning": 11.8
+            },
+            "GuardingDefense": {
+                "Slash": 75,
+                "Crush": 65,
+                "Pierce": 80,
+                "Blood": 50,
+                "Fire": 50,
+                "Ice": 50,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 45,
+                "Bleed": 45,
+                "Curse": 45
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 27,
+            "Balance": 16,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 2.28,
+                "Pierce": 1.52,
+                "Blood": 11.8,
+                "Fire": 0.96000004,
+                "Ice": 0.96000004,
+                "Lightning": 0.96000004
+            },
+            "GuardingDefense": {
+                "Slash": 75,
+                "Crush": 65,
+                "Pierce": 80,
+                "Blood": 90,
+                "Fire": 50,
+                "Ice": 50,
+                "Lightning": 50
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 45,
+                "Bleed": 45,
+                "Curse": 45
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 27,
+            "Balance": 16,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.4,
+                "Pierce": 1.6,
+                "Blood": 1.2,
+                "Fire": 1.2,
+                "Ice": 1.2,
+                "Lightning": 1.2
+            },
+            "GuardingDefense": {
+                "Slash": 80,
+                "Crush": 70,
+                "Pierce": 85,
+                "Blood": 60,
+                "Fire": 60,
+                "Ice": 60,
+                "Lightning": 60
+            },
+            "Resistance": {
+                "Disease": 75,
+                "Wound": 45,
+                "Bleed": 45,
+                "Curse": 45
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 27,
+            "Balance": 16,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.4,
+                "Pierce": 1.6,
+                "Blood": 1.2,
+                "Fire": 1.2,
+                "Ice": 1.2,
+                "Lightning": 1.2
+            },
+            "GuardingDefense": {
+                "Slash": 80,
+                "Crush": 70,
+                "Pierce": 85,
+                "Blood": 60,
+                "Fire": 60,
+                "Ice": 60,
+                "Lightning": 60
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 75,
+                "Bleed": 45,
+                "Curse": 45
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 27,
+            "Balance": 16,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.4,
+                "Pierce": 1.6,
+                "Blood": 1.2,
+                "Fire": 1.2,
+                "Ice": 1.2,
+                "Lightning": 1.2
+            },
+            "GuardingDefense": {
+                "Slash": 80,
+                "Crush": 70,
+                "Pierce": 85,
+                "Blood": 60,
+                "Fire": 60,
+                "Ice": 60,
+                "Lightning": 60
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 45,
+                "Bleed": 75,
+                "Curse": 45
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 27,
+            "Balance": 16,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.4,
+                "Pierce": 1.6,
+                "Blood": 1.2,
+                "Fire": 1.2,
+                "Ice": 1.2,
+                "Lightning": 1.2
+            },
+            "GuardingDefense": {
+                "Slash": 80,
+                "Crush": 70,
+                "Pierce": 85,
+                "Blood": 60,
+                "Fire": 60,
+                "Ice": 60,
+                "Lightning": 60
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 45,
+                "Bleed": 45,
+                "Curse": 75
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 29,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 10,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.4,
+                "Pierce": 1.6,
+                "Blood": 1.2,
+                "Fire": 1.2,
+                "Ice": 1.2,
+                "Lightning": 1.2
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 75,
+                "Pierce": 90,
+                "Blood": 65,
+                "Fire": 65,
+                "Ice": 65,
+                "Lightning": 65
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 45,
+                "Bleed": 45,
+                "Curse": 45
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 27,
+            "Balance": 16,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 1.4,
+                "Crush": 2.1000001,
+                "Pierce": 1.4,
+                "Blood": 1.0500001,
+                "Fire": 1.0500001,
+                "Ice": 1.0500001,
+                "Lightning": 1.0500001
+            },
+            "GuardingDefense": {
+                "Slash": 75,
+                "Crush": 65,
+                "Pierce": 80,
+                "Blood": 55,
+                "Fire": 55,
+                "Ice": 55,
+                "Lightning": 55
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 45,
+                "Bleed": 45,
+                "Curse": 45
+            }
+        }
+    },
+    {
+        "Name": "Bleeding Shield (Light)",
+        "Description": "A shield that guards against enemy attacks and nullifies physical damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it slightly increases base defense.",
+        "Type": "Defence",
+        "IchorCost": 0,
+        "StaminaGuardCost": 32,
+        "Balance": 27,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 4,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 0
+        },
+        "Defense": {
+            "Slash": 0.4,
+            "Crush": 0.2,
+            "Pierce": 0.3,
+            "Blood": 0.2,
+            "Fire": 0.3,
+            "Ice": 0.2,
+            "Lightning": 0.2
+        },
+        "GuardingDefense": {
+            "Slash": 100,
+            "Crush": 100,
+            "Pierce": 100,
+            "Blood": 85,
+            "Fire": 85,
+            "Ice": 85,
+            "Lightning": 85
+        },
+        "Resistance": {
+            "Disease": 45,
+            "Wound": 66,
+            "Bleed": 47,
+            "Curse": 38
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 32,
+            "Balance": 27,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 2,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.38,
+                "Crush": 0.19,
+                "Pierce": 0.285,
+                "Blood": 0.1,
+                "Fire": 10.45,
+                "Ice": 0.1,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 75,
+                "Fire": 100,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 66,
+                "Bleed": 47,
+                "Curse": 38
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 32,
+            "Balance": 27,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 2,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.38,
+                "Crush": 0.19,
+                "Pierce": 0.285,
+                "Blood": 0.1,
+                "Fire": 0.20000002,
+                "Ice": 10.3,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 100,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 66,
+                "Bleed": 47,
+                "Curse": 38
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 32,
+            "Balance": 27,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 2,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.38,
+                "Crush": 0.19,
+                "Pierce": 0.285,
+                "Blood": 0.1,
+                "Fire": 0.20000002,
+                "Ice": 0.1,
+                "Lightning": 10.3
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 100
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 66,
+                "Bleed": 47,
+                "Curse": 38
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 32,
+            "Balance": 27,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 2,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.38,
+                "Crush": 0.19,
+                "Pierce": 0.285,
+                "Blood": 10.3,
+                "Fire": 0.20000002,
+                "Ice": 0.1,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 100,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 66,
+                "Bleed": 47,
+                "Curse": 38
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 32,
+            "Balance": 27,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.4,
+                "Crush": 0.2,
+                "Pierce": 0.3,
+                "Blood": 0.2,
+                "Fire": 0.3,
+                "Ice": 0.2,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 75,
+                "Wound": 66,
+                "Bleed": 47,
+                "Curse": 38
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 32,
+            "Balance": 27,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.4,
+                "Crush": 0.2,
+                "Pierce": 0.3,
+                "Blood": 0.2,
+                "Fire": 0.3,
+                "Ice": 0.2,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 96,
+                "Bleed": 47,
+                "Curse": 38
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 32,
+            "Balance": 27,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.4,
+                "Crush": 0.2,
+                "Pierce": 0.3,
+                "Blood": 0.2,
+                "Fire": 0.3,
+                "Ice": 0.2,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 66,
+                "Bleed": 77,
+                "Curse": 38
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 32,
+            "Balance": 27,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.4,
+                "Crush": 0.2,
+                "Pierce": 0.3,
+                "Blood": 0.2,
+                "Fire": 0.3,
+                "Ice": 0.2,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 66,
+                "Bleed": 47,
+                "Curse": 68
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 34,
+            "Balance": 40,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 10,
+                "Willpower": 0,
+                "Vitality": 7,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.4,
+                "Crush": 0.2,
+                "Pierce": 0.3,
+                "Blood": 0.2,
+                "Fire": 0.3,
+                "Ice": 0.2,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 66,
+                "Bleed": 47,
+                "Curse": 38
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 32,
+            "Balance": 27,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 1,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 0.3,
+                "Crush": 0.1,
+                "Pierce": 0.20000002,
+                "Blood": 0.1,
+                "Fire": 0.20000002,
+                "Ice": 0.1,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 80,
+                "Fire": 80,
+                "Ice": 80,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 45,
+                "Wound": 66,
+                "Bleed": 47,
+                "Curse": 38
+            }
+        }
+    },
+    {
+        "Name": "Bleeding Shield",
+        "Description": "A shield that guards against enemy attacks and nullifies physical damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it increases base defense.",
+        "Type": "Defence",
+        "IchorCost": 0,
+        "StaminaGuardCost": 34,
+        "Balance": 35,
+        "Burden": {
+            "Strength": 4,
+            "Dexterity": 0,
+            "Mind": 8,
+            "Willpower": 0,
+            "Vitality": 4,
+            "Fortitude": 0
+        },
+        "Defense": {
+            "Slash": 3.0,
+            "Crush": 1.5,
+            "Pierce": 2.2,
+            "Blood": 1.8,
+            "Fire": 2.0,
+            "Ice": 1.8,
+            "Lightning": 1.8
+        },
+        "GuardingDefense": {
+            "Slash": 100,
+            "Crush": 100,
+            "Pierce": 100,
+            "Blood": 85,
+            "Fire": 85,
+            "Ice": 85,
+            "Lightning": 85
+        },
+        "Resistance": {
+            "Disease": 48,
+            "Wound": 69,
+            "Bleed": 50,
+            "Curse": 41
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 34,
+            "Balance": 35,
+            "Burden": {
+                "Strength": 4,
+                "Dexterity": 0,
+                "Mind": 8,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 2.85,
+                "Crush": 1.425,
+                "Pierce": 2.09,
+                "Blood": 1.4399999,
+                "Fire": 13.0,
+                "Ice": 1.4399999,
+                "Lightning": 1.4399999
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 75,
+                "Fire": 100,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 48,
+                "Wound": 69,
+                "Bleed": 50,
+                "Curse": 41
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 34,
+            "Balance": 35,
+            "Burden": {
+                "Strength": 4,
+                "Dexterity": 0,
+                "Mind": 8,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 2.85,
+                "Crush": 1.425,
+                "Pierce": 2.09,
+                "Blood": 1.4399999,
+                "Fire": 1.6,
+                "Ice": 12.7,
+                "Lightning": 1.4399999
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 100,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 48,
+                "Wound": 69,
+                "Bleed": 50,
+                "Curse": 41
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 34,
+            "Balance": 35,
+            "Burden": {
+                "Strength": 4,
+                "Dexterity": 0,
+                "Mind": 8,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 2.85,
+                "Crush": 1.425,
+                "Pierce": 2.09,
+                "Blood": 1.4399999,
+                "Fire": 1.6,
+                "Ice": 1.4399999,
+                "Lightning": 12.7
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 100
+            },
+            "Resistance": {
+                "Disease": 48,
+                "Wound": 69,
+                "Bleed": 50,
+                "Curse": 41
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 34,
+            "Balance": 35,
+            "Burden": {
+                "Strength": 4,
+                "Dexterity": 0,
+                "Mind": 8,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 2.85,
+                "Crush": 1.425,
+                "Pierce": 2.09,
+                "Blood": 12.7,
+                "Fire": 1.6,
+                "Ice": 1.4399999,
+                "Lightning": 1.4399999
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 100,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 48,
+                "Wound": 69,
+                "Bleed": 50,
+                "Curse": 41
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 34,
+            "Balance": 35,
+            "Burden": {
+                "Strength": 5,
+                "Dexterity": 0,
+                "Mind": 10,
+                "Willpower": 0,
+                "Vitality": 5,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 3.0,
+                "Crush": 1.5,
+                "Pierce": 2.2,
+                "Blood": 1.8,
+                "Fire": 2.0,
+                "Ice": 1.8,
+                "Lightning": 1.8
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 78,
+                "Wound": 69,
+                "Bleed": 50,
+                "Curse": 41
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 34,
+            "Balance": 35,
+            "Burden": {
+                "Strength": 5,
+                "Dexterity": 0,
+                "Mind": 10,
+                "Willpower": 0,
+                "Vitality": 5,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 3.0,
+                "Crush": 1.5,
+                "Pierce": 2.2,
+                "Blood": 1.8,
+                "Fire": 2.0,
+                "Ice": 1.8,
+                "Lightning": 1.8
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 48,
+                "Wound": 99,
+                "Bleed": 50,
+                "Curse": 41
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 34,
+            "Balance": 35,
+            "Burden": {
+                "Strength": 5,
+                "Dexterity": 0,
+                "Mind": 10,
+                "Willpower": 0,
+                "Vitality": 5,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 3.0,
+                "Crush": 1.5,
+                "Pierce": 2.2,
+                "Blood": 1.8,
+                "Fire": 2.0,
+                "Ice": 1.8,
+                "Lightning": 1.8
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 48,
+                "Wound": 69,
+                "Bleed": 80,
+                "Curse": 41
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 34,
+            "Balance": 35,
+            "Burden": {
+                "Strength": 5,
+                "Dexterity": 0,
+                "Mind": 10,
+                "Willpower": 0,
+                "Vitality": 5,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 3.0,
+                "Crush": 1.5,
+                "Pierce": 2.2,
+                "Blood": 1.8,
+                "Fire": 2.0,
+                "Ice": 1.8,
+                "Lightning": 1.8
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 48,
+                "Wound": 69,
+                "Bleed": 50,
+                "Curse": 71
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 36,
+            "Balance": 52,
+            "Burden": {
+                "Strength": 10,
+                "Dexterity": 0,
+                "Mind": 15,
+                "Willpower": 0,
+                "Vitality": 10,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 3.0,
+                "Crush": 1.5,
+                "Pierce": 2.2,
+                "Blood": 1.8,
+                "Fire": 2.0,
+                "Ice": 1.8,
+                "Lightning": 1.8
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 48,
+                "Wound": 69,
+                "Bleed": 50,
+                "Curse": 41
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 34,
+            "Balance": 35,
+            "Burden": {
+                "Strength": 3,
+                "Dexterity": 0,
+                "Mind": 7,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 2.625,
+                "Crush": 1.3125,
+                "Pierce": 1.9250001,
+                "Blood": 1.5749999,
+                "Fire": 1.75,
+                "Ice": 1.5749999,
+                "Lightning": 1.5749999
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 80,
+                "Fire": 80,
+                "Ice": 80,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 48,
+                "Wound": 69,
+                "Bleed": 50,
+                "Curse": 41
+            }
+        }
+    },
+    {
+        "Name": "Bleeding Shield (Heavy)",
+        "Description": "A shield that guards against enemy attacks and nullifies physical damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it greatly increases base defense.",
+        "Type": "Defence",
+        "IchorCost": 0,
+        "StaminaGuardCost": 36,
+        "Balance": 42,
+        "Burden": {
+            "Strength": 8,
+            "Dexterity": 0,
+            "Mind": 12,
+            "Willpower": 0,
+            "Vitality": 6,
+            "Fortitude": 0
+        },
+        "Defense": {
+            "Slash": 5.4,
+            "Crush": 3.7,
+            "Pierce": 4.5,
+            "Blood": 3.8,
+            "Fire": 4.4,
+            "Ice": 3.8,
+            "Lightning": 3.8
+        },
+        "GuardingDefense": {
+            "Slash": 100,
+            "Crush": 100,
+            "Pierce": 100,
+            "Blood": 85,
+            "Fire": 85,
+            "Ice": 85,
+            "Lightning": 85
+        },
+        "Resistance": {
+            "Disease": 51,
+            "Wound": 72,
+            "Bleed": 53,
+            "Curse": 44
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 36,
+            "Balance": 42,
+            "Burden": {
+                "Strength": 8,
+                "Dexterity": 0,
+                "Mind": 12,
+                "Willpower": 0,
+                "Vitality": 6,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 5.13,
+                "Crush": 3.515,
+                "Pierce": 4.275,
+                "Blood": 3.04,
+                "Fire": 16.6,
+                "Ice": 3.04,
+                "Lightning": 3.04
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 75,
+                "Fire": 100,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 51,
+                "Wound": 72,
+                "Bleed": 53,
+                "Curse": 44
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 36,
+            "Balance": 42,
+            "Burden": {
+                "Strength": 8,
+                "Dexterity": 0,
+                "Mind": 12,
+                "Willpower": 0,
+                "Vitality": 6,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 5.13,
+                "Crush": 3.515,
+                "Pierce": 4.275,
+                "Blood": 3.04,
+                "Fire": 3.5200002,
+                "Ice": 15.7,
+                "Lightning": 3.04
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 100,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 51,
+                "Wound": 72,
+                "Bleed": 53,
+                "Curse": 44
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 36,
+            "Balance": 42,
+            "Burden": {
+                "Strength": 8,
+                "Dexterity": 0,
+                "Mind": 12,
+                "Willpower": 0,
+                "Vitality": 6,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 5.13,
+                "Crush": 3.515,
+                "Pierce": 4.275,
+                "Blood": 3.04,
+                "Fire": 3.5200002,
+                "Ice": 3.04,
+                "Lightning": 15.7
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 100
+            },
+            "Resistance": {
+                "Disease": 51,
+                "Wound": 72,
+                "Bleed": 53,
+                "Curse": 44
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 36,
+            "Balance": 42,
+            "Burden": {
+                "Strength": 8,
+                "Dexterity": 0,
+                "Mind": 12,
+                "Willpower": 0,
+                "Vitality": 6,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 5.13,
+                "Crush": 3.515,
+                "Pierce": 4.275,
+                "Blood": 15.7,
+                "Fire": 3.5200002,
+                "Ice": 3.04,
+                "Lightning": 3.04
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 100,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 51,
+                "Wound": 72,
+                "Bleed": 53,
+                "Curse": 44
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 36,
+            "Balance": 42,
+            "Burden": {
+                "Strength": 10,
+                "Dexterity": 0,
+                "Mind": 15,
+                "Willpower": 0,
+                "Vitality": 8,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 5.4,
+                "Crush": 3.7,
+                "Pierce": 4.5,
+                "Blood": 3.8,
+                "Fire": 4.4,
+                "Ice": 3.8,
+                "Lightning": 3.8
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 81,
+                "Wound": 72,
+                "Bleed": 53,
+                "Curse": 44
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 36,
+            "Balance": 42,
+            "Burden": {
+                "Strength": 10,
+                "Dexterity": 0,
+                "Mind": 15,
+                "Willpower": 0,
+                "Vitality": 8,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 5.4,
+                "Crush": 3.7,
+                "Pierce": 4.5,
+                "Blood": 3.8,
+                "Fire": 4.4,
+                "Ice": 3.8,
+                "Lightning": 3.8
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 51,
+                "Wound": 102,
+                "Bleed": 53,
+                "Curse": 44
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 36,
+            "Balance": 42,
+            "Burden": {
+                "Strength": 10,
+                "Dexterity": 0,
+                "Mind": 15,
+                "Willpower": 0,
+                "Vitality": 8,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 5.4,
+                "Crush": 3.7,
+                "Pierce": 4.5,
+                "Blood": 3.8,
+                "Fire": 4.4,
+                "Ice": 3.8,
+                "Lightning": 3.8
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 51,
+                "Wound": 72,
+                "Bleed": 83,
+                "Curse": 44
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 36,
+            "Balance": 42,
+            "Burden": {
+                "Strength": 10,
+                "Dexterity": 0,
+                "Mind": 15,
+                "Willpower": 0,
+                "Vitality": 8,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 5.4,
+                "Crush": 3.7,
+                "Pierce": 4.5,
+                "Blood": 3.8,
+                "Fire": 4.4,
+                "Ice": 3.8,
+                "Lightning": 3.8
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 51,
+                "Wound": 72,
+                "Bleed": 53,
+                "Curse": 74
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 38,
+            "Balance": 63,
+            "Burden": {
+                "Strength": 15,
+                "Dexterity": 0,
+                "Mind": 20,
+                "Willpower": 0,
+                "Vitality": 12,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 5.4,
+                "Crush": 3.7,
+                "Pierce": 4.5,
+                "Blood": 3.8,
+                "Fire": 4.4,
+                "Ice": 3.8,
+                "Lightning": 3.8
+            },
+            "GuardingDefense": {
+                "Slash": 100,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 51,
+                "Wound": 72,
+                "Bleed": 53,
+                "Curse": 44
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 36,
+            "Balance": 42,
+            "Burden": {
+                "Strength": 7,
+                "Dexterity": 0,
+                "Mind": 10,
+                "Willpower": 0,
+                "Vitality": 5,
+                "Fortitude": 0
+            },
+            "Defense": {
+                "Slash": 4.725,
+                "Crush": 3.2375,
+                "Pierce": 3.9375,
+                "Blood": 3.325,
+                "Fire": 3.8500001,
+                "Ice": 3.325,
+                "Lightning": 3.325
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 80,
+                "Fire": 80,
+                "Ice": 80,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 51,
+                "Wound": 72,
+                "Bleed": 53,
+                "Curse": 44
+            }
+        }
+    },
+    {
+        "Name": "Bloodsoaked Shields",
+        "Description": "Floating shields that guard against enemy attacks and reduce damage.\n\nCan block attacks from all directions, but doing so consumes stamina. Perfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping them increases base defense.",
+        "Type": "Defence",
+        "IchorCost": 0,
+        "StaminaGuardCost": 31,
+        "Balance": 26,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 3,
+            "Willpower": 0,
+            "Vitality": 3,
+            "Fortitude": 0,
+            "Will": 3
+        },
+        "Defense": {
+            "Slash": 1.8,
+            "Crush": 3.2,
+            "Pierce": 2.3,
+            "Blood": 1.0,
+            "Fire": 1.0,
+            "Ice": 1.0,
+            "Lightning": 1.0
+        },
+        "GuardingDefense": {
+            "Slash": 90,
+            "Crush": 95,
+            "Pierce": 95,
+            "Blood": 90,
+            "Fire": 90,
+            "Ice": 90,
+            "Lightning": 90
+        },
+        "Resistance": {
+            "Disease": 32,
+            "Wound": 32,
+            "Bleed": 32,
+            "Curse": 32
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 31,
+            "Balance": 26,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 0,
+                "Will": 3
+            },
+            "Defense": {
+                "Slash": 1.7099999,
+                "Crush": 3.04,
+                "Pierce": 2.185,
+                "Blood": 0.8,
+                "Fire": 11.5,
+                "Ice": 0.8,
+                "Lightning": 0.8
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 80,
+                "Fire": 100,
+                "Ice": 80,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 32,
+                "Wound": 32,
+                "Bleed": 32,
+                "Curse": 32
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 31,
+            "Balance": 26,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 0,
+                "Will": 3
+            },
+            "Defense": {
+                "Slash": 1.7099999,
+                "Crush": 3.04,
+                "Pierce": 2.185,
+                "Blood": 0.8,
+                "Fire": 0.8,
+                "Ice": 11.5,
+                "Lightning": 0.8
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 80,
+                "Fire": 80,
+                "Ice": 100,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 32,
+                "Wound": 32,
+                "Bleed": 32,
+                "Curse": 32
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 31,
+            "Balance": 26,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 0,
+                "Will": 3
+            },
+            "Defense": {
+                "Slash": 1.7099999,
+                "Crush": 3.04,
+                "Pierce": 2.185,
+                "Blood": 0.8,
+                "Fire": 0.8,
+                "Ice": 0.8,
+                "Lightning": 11.5
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 80,
+                "Fire": 80,
+                "Ice": 80,
+                "Lightning": 100
+            },
+            "Resistance": {
+                "Disease": 32,
+                "Wound": 32,
+                "Bleed": 32,
+                "Curse": 32
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 31,
+            "Balance": 26,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 0,
+                "Will": 3
+            },
+            "Defense": {
+                "Slash": 1.7099999,
+                "Crush": 3.04,
+                "Pierce": 2.185,
+                "Blood": 11.5,
+                "Fire": 0.8,
+                "Ice": 0.8,
+                "Lightning": 0.8
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 100,
+                "Fire": 80,
+                "Ice": 80,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 32,
+                "Wound": 32,
+                "Bleed": 32,
+                "Curse": 32
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 31,
+            "Balance": 26,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 0,
+                "Will": 4
+            },
+            "Defense": {
+                "Slash": 1.8,
+                "Crush": 3.2,
+                "Pierce": 2.3,
+                "Blood": 1.0,
+                "Fire": 1.0,
+                "Ice": 1.0,
+                "Lightning": 1.0
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 62,
+                "Wound": 32,
+                "Bleed": 32,
+                "Curse": 32
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 31,
+            "Balance": 26,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 0,
+                "Will": 4
+            },
+            "Defense": {
+                "Slash": 1.8,
+                "Crush": 3.2,
+                "Pierce": 2.3,
+                "Blood": 1.0,
+                "Fire": 1.0,
+                "Ice": 1.0,
+                "Lightning": 1.0
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 32,
+                "Wound": 62,
+                "Bleed": 32,
+                "Curse": 32
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 31,
+            "Balance": 26,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 0,
+                "Will": 4
+            },
+            "Defense": {
+                "Slash": 1.8,
+                "Crush": 3.2,
+                "Pierce": 2.3,
+                "Blood": 1.0,
+                "Fire": 1.0,
+                "Ice": 1.0,
+                "Lightning": 1.0
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 32,
+                "Wound": 32,
+                "Bleed": 62,
+                "Curse": 32
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 31,
+            "Balance": 26,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 0,
+                "Will": 4
+            },
+            "Defense": {
+                "Slash": 1.8,
+                "Crush": 3.2,
+                "Pierce": 2.3,
+                "Blood": 1.0,
+                "Fire": 1.0,
+                "Ice": 1.0,
+                "Lightning": 1.0
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 32,
+                "Wound": 32,
+                "Bleed": 32,
+                "Curse": 62
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 33,
+            "Balance": 39,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 8,
+                "Willpower": 0,
+                "Vitality": 8,
+                "Fortitude": 0,
+                "Will": 8
+            },
+            "Defense": {
+                "Slash": 1.8,
+                "Crush": 3.2,
+                "Pierce": 2.3,
+                "Blood": 1.0,
+                "Fire": 1.0,
+                "Ice": 1.0,
+                "Lightning": 1.0
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 95,
+                "Fire": 95,
+                "Ice": 95,
+                "Lightning": 95
+            },
+            "Resistance": {
+                "Disease": 32,
+                "Wound": 32,
+                "Bleed": 32,
+                "Curse": 32
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 31,
+            "Balance": 26,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 2,
+                "Willpower": 0,
+                "Vitality": 2,
+                "Fortitude": 0,
+                "Will": 2
+            },
+            "Defense": {
+                "Slash": 1.5749999,
+                "Crush": 2.8,
+                "Pierce": 2.0125,
+                "Blood": 0.875,
+                "Fire": 0.875,
+                "Ice": 0.875,
+                "Lightning": 0.875
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 32,
+                "Wound": 32,
+                "Bleed": 32,
+                "Curse": 32
+            }
+        }
+    },
+    {
+        "Name": "Bloodsoaked Shields (Heavy)",
+        "Description": "Floating shields that guard against enemy attacks and reduce damage.\n\nCan block attacks from all directions, but doing so consumes stamina. Perfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping them greatly increases base defense.",
+        "Type": "Defence",
+        "IchorCost": 0,
+        "StaminaGuardCost": 32,
+        "Balance": 33,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 6,
+            "Willpower": 0,
+            "Vitality": 6,
+            "Fortitude": 0,
+            "Will": 6
+        },
+        "Defense": {
+            "Slash": 3.2,
+            "Crush": 4.0,
+            "Pierce": 3.2,
+            "Blood": 2.0,
+            "Fire": 2.0,
+            "Ice": 2.0,
+            "Lightning": 2.0
+        },
+        "GuardingDefense": {
+            "Slash": 90,
+            "Crush": 95,
+            "Pierce": 95,
+            "Blood": 90,
+            "Fire": 90,
+            "Ice": 90,
+            "Lightning": 90
+        },
+        "Resistance": {
+            "Disease": 36,
+            "Wound": 36,
+            "Bleed": 36,
+            "Curse": 36
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 32,
+            "Balance": 33,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 6,
+                "Willpower": 0,
+                "Vitality": 6,
+                "Fortitude": 0,
+                "Will": 6
+            },
+            "Defense": {
+                "Slash": 3.04,
+                "Crush": 3.8,
+                "Pierce": 3.04,
+                "Blood": 1.6,
+                "Fire": 13.0,
+                "Ice": 1.6,
+                "Lightning": 1.6
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 80,
+                "Fire": 100,
+                "Ice": 80,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 36,
+                "Wound": 36,
+                "Bleed": 36,
+                "Curse": 36
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 32,
+            "Balance": 33,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 6,
+                "Willpower": 0,
+                "Vitality": 6,
+                "Fortitude": 0,
+                "Will": 6
+            },
+            "Defense": {
+                "Slash": 3.04,
+                "Crush": 3.8,
+                "Pierce": 3.04,
+                "Blood": 1.6,
+                "Fire": 1.6,
+                "Ice": 13.0,
+                "Lightning": 1.6
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 80,
+                "Fire": 80,
+                "Ice": 100,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 36,
+                "Wound": 36,
+                "Bleed": 36,
+                "Curse": 36
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 32,
+            "Balance": 33,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 6,
+                "Willpower": 0,
+                "Vitality": 6,
+                "Fortitude": 0,
+                "Will": 6
+            },
+            "Defense": {
+                "Slash": 3.04,
+                "Crush": 3.8,
+                "Pierce": 3.04,
+                "Blood": 1.6,
+                "Fire": 1.6,
+                "Ice": 1.6,
+                "Lightning": 13.0
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 80,
+                "Fire": 80,
+                "Ice": 80,
+                "Lightning": 100
+            },
+            "Resistance": {
+                "Disease": 36,
+                "Wound": 36,
+                "Bleed": 36,
+                "Curse": 36
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 32,
+            "Balance": 33,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 6,
+                "Willpower": 0,
+                "Vitality": 6,
+                "Fortitude": 0,
+                "Will": 6
+            },
+            "Defense": {
+                "Slash": 3.04,
+                "Crush": 3.8,
+                "Pierce": 3.04,
+                "Blood": 13.0,
+                "Fire": 1.6,
+                "Ice": 1.6,
+                "Lightning": 1.6
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 100,
+                "Fire": 80,
+                "Ice": 80,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 36,
+                "Wound": 36,
+                "Bleed": 36,
+                "Curse": 36
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 32,
+            "Balance": 33,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 8,
+                "Willpower": 0,
+                "Vitality": 8,
+                "Fortitude": 0,
+                "Will": 8
+            },
+            "Defense": {
+                "Slash": 3.2,
+                "Crush": 4.0,
+                "Pierce": 3.2,
+                "Blood": 2.0,
+                "Fire": 2.0,
+                "Ice": 2.0,
+                "Lightning": 2.0
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 66,
+                "Wound": 36,
+                "Bleed": 36,
+                "Curse": 36
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 32,
+            "Balance": 33,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 8,
+                "Willpower": 0,
+                "Vitality": 8,
+                "Fortitude": 0,
+                "Will": 8
+            },
+            "Defense": {
+                "Slash": 3.2,
+                "Crush": 4.0,
+                "Pierce": 3.2,
+                "Blood": 2.0,
+                "Fire": 2.0,
+                "Ice": 2.0,
+                "Lightning": 2.0
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 36,
+                "Wound": 66,
+                "Bleed": 36,
+                "Curse": 36
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 32,
+            "Balance": 33,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 8,
+                "Willpower": 0,
+                "Vitality": 8,
+                "Fortitude": 0,
+                "Will": 8
+            },
+            "Defense": {
+                "Slash": 3.2,
+                "Crush": 4.0,
+                "Pierce": 3.2,
+                "Blood": 2.0,
+                "Fire": 2.0,
+                "Ice": 2.0,
+                "Lightning": 2.0
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 36,
+                "Wound": 36,
+                "Bleed": 66,
+                "Curse": 36
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 32,
+            "Balance": 33,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 8,
+                "Willpower": 0,
+                "Vitality": 8,
+                "Fortitude": 0,
+                "Will": 8
+            },
+            "Defense": {
+                "Slash": 3.2,
+                "Crush": 4.0,
+                "Pierce": 3.2,
+                "Blood": 2.0,
+                "Fire": 2.0,
+                "Ice": 2.0,
+                "Lightning": 2.0
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 90,
+                "Fire": 90,
+                "Ice": 90,
+                "Lightning": 90
+            },
+            "Resistance": {
+                "Disease": 36,
+                "Wound": 36,
+                "Bleed": 36,
+                "Curse": 66
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 34,
+            "Balance": 49,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 12,
+                "Willpower": 0,
+                "Vitality": 12,
+                "Fortitude": 0,
+                "Will": 12
+            },
+            "Defense": {
+                "Slash": 3.2,
+                "Crush": 4.0,
+                "Pierce": 3.2,
+                "Blood": 2.0,
+                "Fire": 2.0,
+                "Ice": 2.0,
+                "Lightning": 2.0
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 100,
+                "Pierce": 100,
+                "Blood": 95,
+                "Fire": 95,
+                "Ice": 95,
+                "Lightning": 95
+            },
+            "Resistance": {
+                "Disease": 36,
+                "Wound": 36,
+                "Bleed": 36,
+                "Curse": 36
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 32,
+            "Balance": 33,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 5,
+                "Fortitude": 0,
+                "Will": 5
+            },
+            "Defense": {
+                "Slash": 2.8,
+                "Crush": 3.5,
+                "Pierce": 2.8,
+                "Blood": 1.75,
+                "Fire": 1.75,
+                "Ice": 1.75,
+                "Lightning": 1.75
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 85,
+                "Fire": 85,
+                "Ice": 85,
+                "Lightning": 85
+            },
+            "Resistance": {
+                "Disease": 36,
+                "Wound": 36,
+                "Bleed": 36,
+                "Curse": 36
+            }
+        }
+    },
+    {
+        "Name": "Shield of Stupor",
+        "Description": "A shield that guards against enemy attacks and reduces damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption, as well as produces a field that applies the stone status effect.\n\nEquipping it slightly increases base defense.",
+        "Type": "Defence",
+        "IchorCost": 0,
+        "StaminaGuardCost": 24,
+        "Balance": 4,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+            "Will": 12
+        },
+        "Defense": {
+            "Slash": 0.7,
+            "Crush": 0.7,
+            "Pierce": 0.9,
+            "Blood": 1.2,
+            "Fire": 0.6,
+            "Ice": 0.6,
+            "Lightning": 0.6
+        },
+        "GuardingDefense": {
+            "Slash": 90,
+            "Crush": 90,
+            "Pierce": 100,
+            "Blood": 100,
+            "Fire": 90,
+            "Ice": 90,
+            "Lightning": 90
+        },
+        "Resistance": {
+            "Disease": 38,
+            "Wound": 79,
+            "Bleed": 38,
+            "Curse": 45
+        },
+        "Transformable": false
+    },
+    {
+        "Name": "Mutinous Bracer",
+        "Description": "A bracer that can parry enemy attacks.\n\nRespond to an incoming attack with a well-timed parry to deflect it and break the enemy's stance.\n\nSuccessful parries consume ichor. They break the enemy's stance even if you have insufficient ichor but deal damage to the player.\n\nSome attacks cannot be parried; these will instead be blocked.\n\nEquipping it increases basic defense.",
+        "Type": "Parry",
+        "IchorCost": 2,
+        "StaminaGuardCost": 30,
+        "Balance": 18,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 6
+        },
+        "Defense": {
+            "Slash": 1.6,
+            "Crush": 2.2,
+            "Pierce": 1.2,
+            "Blood": 0.1,
+            "Fire": 0.2,
+            "Ice": 0.1,
+            "Lightning": 0.2
+        },
+        "GuardingDefense": {
+            "Slash": 90,
+            "Crush": 90,
+            "Pierce": 90,
+            "Blood": 75,
+            "Fire": 75,
+            "Ice": 75,
+            "Lightning": 75
+        },
+        "Resistance": {
+            "Disease": 38,
+            "Wound": 47,
+            "Bleed": 61,
+            "Curse": 57
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 30,
+            "Balance": 18,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 2,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 6
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 2.09,
+                "Pierce": 1.14,
+                "Blood": 0.0,
+                "Fire": 10.3,
+                "Ice": 0.0,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 85,
+                "Pierce": 85,
+                "Blood": 65,
+                "Fire": 100,
+                "Ice": 65,
+                "Lightning": 65
+            },
+            "Resistance": {
+                "Disease": 38,
+                "Wound": 47,
+                "Bleed": 61,
+                "Curse": 57
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 30,
+            "Balance": 18,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 2,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 6
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 2.09,
+                "Pierce": 1.14,
+                "Blood": 0.0,
+                "Fire": 0.1,
+                "Ice": 10.15,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 85,
+                "Pierce": 85,
+                "Blood": 65,
+                "Fire": 65,
+                "Ice": 100,
+                "Lightning": 65
+            },
+            "Resistance": {
+                "Disease": 38,
+                "Wound": 47,
+                "Bleed": 61,
+                "Curse": 57
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 30,
+            "Balance": 18,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 2,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 6
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 2.09,
+                "Pierce": 1.14,
+                "Blood": 0.0,
+                "Fire": 0.1,
+                "Ice": 0.0,
+                "Lightning": 10.3
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 85,
+                "Pierce": 85,
+                "Blood": 65,
+                "Fire": 65,
+                "Ice": 65,
+                "Lightning": 100
+            },
+            "Resistance": {
+                "Disease": 38,
+                "Wound": 47,
+                "Bleed": 61,
+                "Curse": 57
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 30,
+            "Balance": 18,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 2,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 6
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 2.09,
+                "Pierce": 1.14,
+                "Blood": 10.15,
+                "Fire": 0.1,
+                "Ice": 0.0,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 85,
+                "Pierce": 85,
+                "Blood": 100,
+                "Fire": 65,
+                "Ice": 65,
+                "Lightning": 65
+            },
+            "Resistance": {
+                "Disease": 38,
+                "Wound": 47,
+                "Bleed": 61,
+                "Curse": 57
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 30,
+            "Balance": 18,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 3,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 8
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.2,
+                "Pierce": 1.2,
+                "Blood": 0.1,
+                "Fire": 0.2,
+                "Ice": 0.1,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 68,
+                "Wound": 47,
+                "Bleed": 61,
+                "Curse": 57
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 30,
+            "Balance": 18,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 3,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 8
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.2,
+                "Pierce": 1.2,
+                "Blood": 0.1,
+                "Fire": 0.2,
+                "Ice": 0.1,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 38,
+                "Wound": 77,
+                "Bleed": 61,
+                "Curse": 57
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 30,
+            "Balance": 18,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 3,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 8
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.2,
+                "Pierce": 1.2,
+                "Blood": 0.1,
+                "Fire": 0.2,
+                "Ice": 0.1,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 38,
+                "Wound": 47,
+                "Bleed": 91,
+                "Curse": 57
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 30,
+            "Balance": 18,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 3,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 8
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.2,
+                "Pierce": 1.2,
+                "Blood": 0.1,
+                "Fire": 0.2,
+                "Ice": 0.1,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 38,
+                "Wound": 47,
+                "Bleed": 61,
+                "Curse": 87
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 32,
+            "Balance": 27,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 7,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 12
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.2,
+                "Pierce": 1.2,
+                "Blood": 0.1,
+                "Fire": 0.2,
+                "Ice": 0.1,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 80,
+                "Fire": 80,
+                "Ice": 80,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 38,
+                "Wound": 47,
+                "Bleed": 61,
+                "Curse": 57
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 30,
+            "Balance": 18,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 1,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 5
+            },
+            "Defense": {
+                "Slash": 1.4,
+                "Crush": 1.9250001,
+                "Pierce": 1.0500001,
+                "Blood": 0.0,
+                "Fire": 0.1,
+                "Ice": 0.0,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 85,
+                "Pierce": 85,
+                "Blood": 70,
+                "Fire": 70,
+                "Ice": 70,
+                "Lightning": 70
+            },
+            "Resistance": {
+                "Disease": 38,
+                "Wound": 47,
+                "Bleed": 61,
+                "Curse": 57
+            }
+        }
+    },
+    {
+        "Name": "Mutinous Bracer (Heavy)",
+        "Description": "A bracer that can parry enemy attacks.\n\nParry in time with an incoming attack to deflect it and break the enemy's stance.\n\nSuccessful parries consume ichor. They break the enemy's stance even if you have insufficient ichor but deal damage to the player.\n\nSome attacks cannot be parried; these will instead be blocked.\n\nEquipping it greatly increases basic defense.",
+        "Type": "Parry",
+        "IchorCost": 2,
+        "StaminaGuardCost": 30,
+        "Balance": 24,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 4,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 10
+        },
+        "Defense": {
+            "Slash": 3.0,
+            "Crush": 4.4,
+            "Pierce": 2.8,
+            "Blood": 0.5,
+            "Fire": 0.6,
+            "Ice": 0.5,
+            "Lightning": 0.6
+        },
+        "GuardingDefense": {
+            "Slash": 90,
+            "Crush": 90,
+            "Pierce": 90,
+            "Blood": 75,
+            "Fire": 75,
+            "Ice": 75,
+            "Lightning": 75
+        },
+        "Resistance": {
+            "Disease": 42,
+            "Wound": 51,
+            "Bleed": 65,
+            "Curse": 61
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 30,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 4,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 10
+            },
+            "Defense": {
+                "Slash": 2.85,
+                "Crush": 4.18,
+                "Pierce": 2.6599998,
+                "Blood": 0.4,
+                "Fire": 10.9,
+                "Ice": 0.4,
+                "Lightning": 0.48000002
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 85,
+                "Pierce": 85,
+                "Blood": 65,
+                "Fire": 100,
+                "Ice": 65,
+                "Lightning": 65
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 51,
+                "Bleed": 65,
+                "Curse": 61
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 30,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 4,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 10
+            },
+            "Defense": {
+                "Slash": 2.85,
+                "Crush": 4.18,
+                "Pierce": 2.6599998,
+                "Blood": 0.4,
+                "Fire": 0.48000002,
+                "Ice": 10.75,
+                "Lightning": 0.48000002
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 85,
+                "Pierce": 85,
+                "Blood": 65,
+                "Fire": 65,
+                "Ice": 100,
+                "Lightning": 65
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 51,
+                "Bleed": 65,
+                "Curse": 61
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 30,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 4,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 10
+            },
+            "Defense": {
+                "Slash": 2.85,
+                "Crush": 4.18,
+                "Pierce": 2.6599998,
+                "Blood": 0.4,
+                "Fire": 0.48000002,
+                "Ice": 0.4,
+                "Lightning": 10.9
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 85,
+                "Pierce": 85,
+                "Blood": 65,
+                "Fire": 65,
+                "Ice": 65,
+                "Lightning": 100
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 51,
+                "Bleed": 65,
+                "Curse": 61
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 30,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 4,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 10
+            },
+            "Defense": {
+                "Slash": 2.85,
+                "Crush": 4.18,
+                "Pierce": 2.6599998,
+                "Blood": 10.75,
+                "Fire": 0.48000002,
+                "Ice": 0.4,
+                "Lightning": 0.48000002
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 85,
+                "Pierce": 85,
+                "Blood": 100,
+                "Fire": 65,
+                "Ice": 65,
+                "Lightning": 65
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 51,
+                "Bleed": 65,
+                "Curse": 61
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 30,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 5,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 12
+            },
+            "Defense": {
+                "Slash": 3.0,
+                "Crush": 4.4,
+                "Pierce": 2.8,
+                "Blood": 0.5,
+                "Fire": 0.6,
+                "Ice": 0.5,
+                "Lightning": 0.6
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 72,
+                "Wound": 51,
+                "Bleed": 65,
+                "Curse": 61
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 30,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 5,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 12
+            },
+            "Defense": {
+                "Slash": 3.0,
+                "Crush": 4.4,
+                "Pierce": 2.8,
+                "Blood": 0.5,
+                "Fire": 0.6,
+                "Ice": 0.5,
+                "Lightning": 0.6
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 81,
+                "Bleed": 65,
+                "Curse": 61
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 30,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 5,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 12
+            },
+            "Defense": {
+                "Slash": 3.0,
+                "Crush": 4.4,
+                "Pierce": 2.8,
+                "Blood": 0.5,
+                "Fire": 0.6,
+                "Ice": 0.5,
+                "Lightning": 0.6
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 51,
+                "Bleed": 95,
+                "Curse": 61
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 30,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 5,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 12
+            },
+            "Defense": {
+                "Slash": 3.0,
+                "Crush": 4.4,
+                "Pierce": 2.8,
+                "Blood": 0.5,
+                "Fire": 0.6,
+                "Ice": 0.5,
+                "Lightning": 0.6
+            },
+            "GuardingDefense": {
+                "Slash": 90,
+                "Crush": 90,
+                "Pierce": 90,
+                "Blood": 75,
+                "Fire": 75,
+                "Ice": 75,
+                "Lightning": 75
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 51,
+                "Bleed": 65,
+                "Curse": 91
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 32,
+            "Balance": 36,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 10,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 17
+            },
+            "Defense": {
+                "Slash": 3.0,
+                "Crush": 4.4,
+                "Pierce": 2.8,
+                "Blood": 0.5,
+                "Fire": 0.6,
+                "Ice": 0.5,
+                "Lightning": 0.6
+            },
+            "GuardingDefense": {
+                "Slash": 95,
+                "Crush": 95,
+                "Pierce": 95,
+                "Blood": 80,
+                "Fire": 80,
+                "Ice": 80,
+                "Lightning": 80
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 51,
+                "Bleed": 65,
+                "Curse": 61
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 30,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 3,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 8
+            },
+            "Defense": {
+                "Slash": 2.625,
+                "Crush": 3.8500001,
+                "Pierce": 2.45,
+                "Blood": 0.4,
+                "Fire": 0.5,
+                "Ice": 0.4,
+                "Lightning": 0.5
+            },
+            "GuardingDefense": {
+                "Slash": 85,
+                "Crush": 85,
+                "Pierce": 85,
+                "Blood": 70,
+                "Fire": 70,
+                "Ice": 70,
+                "Lightning": 70
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 51,
+                "Bleed": 65,
+                "Curse": 61
+            }
+        }
+    },
+    {
+        "Name": "Vanishing Hollow (Light)",
+        "Description": "A forma which allows the user to leap up vertically on the spot.\n\nNullifies enemy attacks during the ascent. After ascending, various midair actions can be performed. Equipping it slightly increases base defense.",
+        "Type": "Dodge",
+        "IchorCost": 1,
+        "StaminaGuardCost": 0,
+        "Balance": 12,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 2
+        },
+        "Defense": {
+            "Slash": 0.2,
+            "Crush": 0.1,
+            "Pierce": 0.4,
+            "Blood": 0.5,
+            "Fire": 0.6,
+            "Ice": 0.6,
+            "Lightning": 0.6
+        },
+        "GuardingDefense": {
+            "Slash": 0,
+            "Crush": 0,
+            "Pierce": 0,
+            "Blood": 0,
+            "Fire": 0,
+            "Ice": 0,
+            "Lightning": 0
+        },
+        "Resistance": {
+            "Disease": 42,
+            "Wound": 42,
+            "Bleed": 36,
+            "Curse": 42
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 0,
+            "Balance": 12,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 2,
+                "Fortitude": 2
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.095,
+                "Pierce": 0.38,
+                "Blood": 0.4,
+                "Fire": 10.9,
+                "Ice": 0.48000002,
+                "Lightning": 0.48000002
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 42,
+                "Bleed": 36,
+                "Curse": 42
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 0,
+            "Balance": 12,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 2,
+                "Fortitude": 2
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.095,
+                "Pierce": 0.38,
+                "Blood": 0.4,
+                "Fire": 0.48000002,
+                "Ice": 10.9,
+                "Lightning": 0.48000002
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 42,
+                "Bleed": 36,
+                "Curse": 42
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 0,
+            "Balance": 12,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 2,
+                "Fortitude": 2
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.095,
+                "Pierce": 0.38,
+                "Blood": 0.4,
+                "Fire": 0.48000002,
+                "Ice": 0.48000002,
+                "Lightning": 10.9
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 42,
+                "Bleed": 36,
+                "Curse": 42
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 0,
+            "Balance": 12,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 2,
+                "Fortitude": 2
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.095,
+                "Pierce": 0.38,
+                "Blood": 10.75,
+                "Fire": 0.48000002,
+                "Ice": 0.48000002,
+                "Lightning": 0.48000002
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 42,
+                "Bleed": 36,
+                "Curse": 42
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 0,
+            "Balance": 12,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 3
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.1,
+                "Pierce": 0.4,
+                "Blood": 0.5,
+                "Fire": 0.6,
+                "Ice": 0.6,
+                "Lightning": 0.6
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 72,
+                "Wound": 42,
+                "Bleed": 36,
+                "Curse": 42
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 0,
+            "Balance": 12,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 3
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.1,
+                "Pierce": 0.4,
+                "Blood": 0.5,
+                "Fire": 0.6,
+                "Ice": 0.6,
+                "Lightning": 0.6
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 72,
+                "Bleed": 36,
+                "Curse": 42
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 0,
+            "Balance": 12,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 3
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.1,
+                "Pierce": 0.4,
+                "Blood": 0.5,
+                "Fire": 0.6,
+                "Ice": 0.6,
+                "Lightning": 0.6
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 42,
+                "Bleed": 66,
+                "Curse": 42
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 0,
+            "Balance": 12,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 3
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.1,
+                "Pierce": 0.4,
+                "Blood": 0.5,
+                "Fire": 0.6,
+                "Ice": 0.6,
+                "Lightning": 0.6
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 42,
+                "Bleed": 36,
+                "Curse": 72
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 0,
+            "Balance": 24,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 7,
+                "Fortitude": 7
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.1,
+                "Pierce": 0.4,
+                "Blood": 0.5,
+                "Fire": 0.6,
+                "Ice": 0.6,
+                "Lightning": 0.6
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 42,
+                "Bleed": 36,
+                "Curse": 42
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 0,
+            "Balance": 12,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 1,
+                "Fortitude": 1
+            },
+            "Defense": {
+                "Slash": 0.1,
+                "Crush": 0.0,
+                "Pierce": 0.3,
+                "Blood": 0.4,
+                "Fire": 0.5,
+                "Ice": 0.5,
+                "Lightning": 0.5
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 42,
+                "Wound": 42,
+                "Bleed": 36,
+                "Curse": 42
+            }
+        }
+    },
+    {
+        "Name": "Vanishing Hollow",
+        "Description": "A forma which allows the user to leap up vertically on the spot.\n\nNullifies enemy attacks during the ascent. After ascending, various midair actions can be performed. Equipping it increases base defense.",
+        "Type": "Dodge",
+        "IchorCost": 1,
+        "StaminaGuardCost": 0,
+        "Balance": 21,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 4,
+            "Fortitude": 4
+        },
+        "Defense": {
+            "Slash": 1.4,
+            "Crush": 0.8,
+            "Pierce": 2.8,
+            "Blood": 1.4,
+            "Fire": 1.8,
+            "Ice": 1.8,
+            "Lightning": 1.8
+        },
+        "GuardingDefense": {
+            "Slash": 0,
+            "Crush": 0,
+            "Pierce": 0,
+            "Blood": 0,
+            "Fire": 0,
+            "Ice": 0,
+            "Lightning": 0
+        },
+        "Resistance": {
+            "Disease": 46,
+            "Wound": 46,
+            "Bleed": 39,
+            "Curse": 45
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 0,
+            "Balance": 21,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 4
+            },
+            "Defense": {
+                "Slash": 1.3299999,
+                "Crush": 0.76,
+                "Pierce": 2.6599998,
+                "Blood": 1.12,
+                "Fire": 12.7,
+                "Ice": 1.4399999,
+                "Lightning": 1.4399999
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 46,
+                "Bleed": 39,
+                "Curse": 45
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 0,
+            "Balance": 21,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 4
+            },
+            "Defense": {
+                "Slash": 1.3299999,
+                "Crush": 0.76,
+                "Pierce": 2.6599998,
+                "Blood": 1.12,
+                "Fire": 1.4399999,
+                "Ice": 12.7,
+                "Lightning": 1.4399999
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 46,
+                "Bleed": 39,
+                "Curse": 45
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 0,
+            "Balance": 21,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 4
+            },
+            "Defense": {
+                "Slash": 1.3299999,
+                "Crush": 0.76,
+                "Pierce": 2.6599998,
+                "Blood": 1.12,
+                "Fire": 1.4399999,
+                "Ice": 1.4399999,
+                "Lightning": 12.7
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 46,
+                "Bleed": 39,
+                "Curse": 45
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 0,
+            "Balance": 21,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 4,
+                "Fortitude": 4
+            },
+            "Defense": {
+                "Slash": 1.3299999,
+                "Crush": 0.76,
+                "Pierce": 2.6599998,
+                "Blood": 12.1,
+                "Fire": 1.4399999,
+                "Ice": 1.4399999,
+                "Lightning": 1.4399999
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 46,
+                "Bleed": 39,
+                "Curse": 45
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 0,
+            "Balance": 21,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 5,
+                "Fortitude": 5
+            },
+            "Defense": {
+                "Slash": 1.4,
+                "Crush": 0.8,
+                "Pierce": 2.8,
+                "Blood": 1.4,
+                "Fire": 1.8,
+                "Ice": 1.8,
+                "Lightning": 1.8
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 76,
+                "Wound": 46,
+                "Bleed": 39,
+                "Curse": 45
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 0,
+            "Balance": 21,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 5,
+                "Fortitude": 5
+            },
+            "Defense": {
+                "Slash": 1.4,
+                "Crush": 0.8,
+                "Pierce": 2.8,
+                "Blood": 1.4,
+                "Fire": 1.8,
+                "Ice": 1.8,
+                "Lightning": 1.8
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 76,
+                "Bleed": 39,
+                "Curse": 45
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 0,
+            "Balance": 21,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 5,
+                "Fortitude": 5
+            },
+            "Defense": {
+                "Slash": 1.4,
+                "Crush": 0.8,
+                "Pierce": 2.8,
+                "Blood": 1.4,
+                "Fire": 1.8,
+                "Ice": 1.8,
+                "Lightning": 1.8
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 46,
+                "Bleed": 69,
+                "Curse": 45
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 0,
+            "Balance": 21,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 5,
+                "Fortitude": 5
+            },
+            "Defense": {
+                "Slash": 1.4,
+                "Crush": 0.8,
+                "Pierce": 2.8,
+                "Blood": 1.4,
+                "Fire": 1.8,
+                "Ice": 1.8,
+                "Lightning": 1.8
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 46,
+                "Bleed": 39,
+                "Curse": 75
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 0,
+            "Balance": 42,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 10,
+                "Fortitude": 10
+            },
+            "Defense": {
+                "Slash": 1.4,
+                "Crush": 0.8,
+                "Pierce": 2.8,
+                "Blood": 1.4,
+                "Fire": 1.8,
+                "Ice": 1.8,
+                "Lightning": 1.8
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 46,
+                "Bleed": 39,
+                "Curse": 45
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 0,
+            "Balance": 21,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 3,
+                "Fortitude": 3
+            },
+            "Defense": {
+                "Slash": 1.225,
+                "Crush": 0.7,
+                "Pierce": 2.45,
+                "Blood": 1.225,
+                "Fire": 1.5749999,
+                "Ice": 1.5749999,
+                "Lightning": 1.5749999
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 46,
+                "Bleed": 39,
+                "Curse": 45
+            }
+        }
+    },
+    {
+        "Name": "Umbral Shift",
+        "Description": "An evasive forma that enables quick stepping.\n\nActivate it while holding in any direction to step. Equipping it slightly increases base defense.",
+        "Type": "Dodge",
+        "IchorCost": 1,
+        "StaminaGuardCost": 0,
+        "Balance": 15,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 2
+        },
+        "Defense": {
+            "Slash": 0.2,
+            "Crush": 0.2,
+            "Pierce": 0.2,
+            "Blood": 0.3,
+            "Fire": 0.1,
+            "Ice": 0.2,
+            "Lightning": 0.2
+        },
+        "GuardingDefense": {
+            "Slash": 0,
+            "Crush": 0,
+            "Pierce": 0,
+            "Blood": 0,
+            "Fire": 0,
+            "Ice": 0,
+            "Lightning": 0
+        },
+        "Resistance": {
+            "Disease": 41,
+            "Wound": 47,
+            "Bleed": 38,
+            "Curse": 38
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 0,
+            "Balance": 15,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 2,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 2
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.19,
+                "Pierce": 0.19,
+                "Blood": 0.20000002,
+                "Fire": 10.15,
+                "Ice": 0.1,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 47,
+                "Bleed": 38,
+                "Curse": 38
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 0,
+            "Balance": 15,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 2,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 2
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.19,
+                "Pierce": 0.19,
+                "Blood": 0.20000002,
+                "Fire": 0.0,
+                "Ice": 10.3,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 47,
+                "Bleed": 38,
+                "Curse": 38
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 0,
+            "Balance": 15,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 2,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 2
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.19,
+                "Pierce": 0.19,
+                "Blood": 0.20000002,
+                "Fire": 0.0,
+                "Ice": 0.1,
+                "Lightning": 10.3
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 47,
+                "Bleed": 38,
+                "Curse": 38
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 0,
+            "Balance": 15,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 2,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 2
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.19,
+                "Pierce": 0.19,
+                "Blood": 10.45,
+                "Fire": 0.0,
+                "Ice": 0.1,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 47,
+                "Bleed": 38,
+                "Curse": 38
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 0,
+            "Balance": 15,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 3,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 3
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.2,
+                "Pierce": 0.2,
+                "Blood": 0.3,
+                "Fire": 0.1,
+                "Ice": 0.2,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 71,
+                "Wound": 47,
+                "Bleed": 38,
+                "Curse": 38
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 0,
+            "Balance": 15,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 3,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 3
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.2,
+                "Pierce": 0.2,
+                "Blood": 0.3,
+                "Fire": 0.1,
+                "Ice": 0.2,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 77,
+                "Bleed": 38,
+                "Curse": 38
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 0,
+            "Balance": 15,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 3,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 3
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.2,
+                "Pierce": 0.2,
+                "Blood": 0.3,
+                "Fire": 0.1,
+                "Ice": 0.2,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 47,
+                "Bleed": 68,
+                "Curse": 38
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 0,
+            "Balance": 15,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 3,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 3
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.2,
+                "Pierce": 0.2,
+                "Blood": 0.3,
+                "Fire": 0.1,
+                "Ice": 0.2,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 47,
+                "Bleed": 38,
+                "Curse": 68
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 0,
+            "Balance": 30,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 7,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 7
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.2,
+                "Pierce": 0.2,
+                "Blood": 0.3,
+                "Fire": 0.1,
+                "Ice": 0.2,
+                "Lightning": 0.2
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 47,
+                "Bleed": 38,
+                "Curse": 38
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 0,
+            "Balance": 15,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 1,
+                "Mind": 0,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 1
+            },
+            "Defense": {
+                "Slash": 0.1,
+                "Crush": 0.1,
+                "Pierce": 0.1,
+                "Blood": 0.20000002,
+                "Fire": 0.0,
+                "Ice": 0.1,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 41,
+                "Wound": 47,
+                "Bleed": 38,
+                "Curse": 38
+            }
+        }
+    },
+    {
+        "Name": "Dodge Spin (Light)",
+        "Description": "An evasive forma that enables quick short-range movement to avoid attacks.\n\nActivate it while holding any direction to perform a short step. Equipping it slightly increases base defense.",
+        "Type": "Dodge",
+        "IchorCost": 1,
+        "StaminaGuardCost": 0,
+        "Balance": 14,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 4
+        },
+        "Defense": {
+            "Slash": 0.2,
+            "Crush": 0.3,
+            "Pierce": 0.1,
+            "Blood": 0.2,
+            "Fire": 0.2,
+            "Ice": 0.3,
+            "Lightning": 0.1
+        },
+        "GuardingDefense": {
+            "Slash": 0,
+            "Crush": 0,
+            "Pierce": 0,
+            "Blood": 0,
+            "Fire": 0,
+            "Ice": 0,
+            "Lightning": 0
+        },
+        "Resistance": {
+            "Disease": 43,
+            "Wound": 36,
+            "Bleed": 40,
+            "Curse": 42
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 0,
+            "Balance": 14,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 2,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 4
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.285,
+                "Pierce": 0.095,
+                "Blood": 0.1,
+                "Fire": 10.3,
+                "Ice": 0.20000002,
+                "Lightning": "0.0"
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 43,
+                "Wound": 36,
+                "Bleed": 40,
+                "Curse": 42
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 0,
+            "Balance": 14,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 2,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 4
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.285,
+                "Pierce": 0.095,
+                "Blood": 0.1,
+                "Fire": 0.1,
+                "Ice": 10.45,
+                "Lightning": "0.0"
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 43,
+                "Wound": 36,
+                "Bleed": 40,
+                "Curse": 42
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 0,
+            "Balance": 14,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 2,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 4
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.285,
+                "Pierce": 0.095,
+                "Blood": 0.1,
+                "Fire": 0.1,
+                "Ice": 0.20000002,
+                "Lightning": 10.15
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 43,
+                "Wound": 36,
+                "Bleed": 40,
+                "Curse": 42
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 0,
+            "Balance": 14,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 2,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 4
+            },
+            "Defense": {
+                "Slash": 0.19,
+                "Crush": 0.285,
+                "Pierce": 0.095,
+                "Blood": 10.3,
+                "Fire": 0.1,
+                "Ice": 0.20000002,
+                "Lightning": "0.0"
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 43,
+                "Wound": 36,
+                "Bleed": 40,
+                "Curse": 42
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 0,
+            "Balance": 14,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 5
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.3,
+                "Pierce": 0.1,
+                "Blood": 0.2,
+                "Fire": 0.2,
+                "Ice": 0.3,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 73,
+                "Wound": 36,
+                "Bleed": 40,
+                "Curse": 42
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 0,
+            "Balance": 14,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 5
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.3,
+                "Pierce": 0.1,
+                "Blood": 0.2,
+                "Fire": 0.2,
+                "Ice": 0.3,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 43,
+                "Wound": 66,
+                "Bleed": 40,
+                "Curse": 42
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 0,
+            "Balance": 14,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 5
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.3,
+                "Pierce": 0.1,
+                "Blood": 0.2,
+                "Fire": 0.2,
+                "Ice": 0.3,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 43,
+                "Wound": 36,
+                "Bleed": 70,
+                "Curse": 42
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 0,
+            "Balance": 14,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 5
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.3,
+                "Pierce": 0.1,
+                "Blood": 0.2,
+                "Fire": 0.2,
+                "Ice": 0.3,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 43,
+                "Wound": 36,
+                "Bleed": 40,
+                "Curse": 72
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 0,
+            "Balance": 28,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 7,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 10
+            },
+            "Defense": {
+                "Slash": 0.2,
+                "Crush": 0.3,
+                "Pierce": 0.1,
+                "Blood": 0.2,
+                "Fire": 0.2,
+                "Ice": 0.3,
+                "Lightning": 0.1
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 43,
+                "Wound": 36,
+                "Bleed": 40,
+                "Curse": 42
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 0,
+            "Balance": 14,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 1,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 3
+            },
+            "Defense": {
+                "Slash": 0.1,
+                "Crush": 0.20000002,
+                "Pierce": 0.0,
+                "Blood": 0.1,
+                "Fire": 0.1,
+                "Ice": 0.20000002,
+                "Lightning": "0.0"
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 43,
+                "Wound": 36,
+                "Bleed": 40,
+                "Curse": 42
+            }
+        }
+    },
+    {
+        "Name": "Dodge Spin",
+        "Description": "An evasive forma that enables quick short-range movement to avoid attacks.\n\nActivate it while holding any direction to perform a short step. Equipping it increases base defense.",
+        "Type": "Dodge",
+        "IchorCost": 1,
+        "StaminaGuardCost": 0,
+        "Balance": 22,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 4,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 8
+        },
+        "Defense": {
+            "Slash": 1.6,
+            "Crush": 2.1,
+            "Pierce": 1.2,
+            "Blood": 1.6,
+            "Fire": 1.6,
+            "Ice": 2.1,
+            "Lightning": 1.2
+        },
+        "GuardingDefense": {
+            "Slash": 0,
+            "Crush": 0,
+            "Pierce": 0,
+            "Blood": 0,
+            "Fire": 0,
+            "Ice": 0,
+            "Lightning": 0
+        },
+        "Resistance": {
+            "Disease": 46,
+            "Wound": 39,
+            "Bleed": 43,
+            "Curse": 45
+        },
+        "Transformable": true,
+        "Transform_Fire": {
+            "StaminaGuardCost": 0,
+            "Balance": 22,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 8
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 1.9949999,
+                "Pierce": 1.14,
+                "Blood": 1.2800001,
+                "Fire": 12.4,
+                "Ice": 1.68,
+                "Lightning": 0.96000004
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 39,
+                "Bleed": 43,
+                "Curse": 45
+            }
+        },
+        "Transform_Ice": {
+            "StaminaGuardCost": 0,
+            "Balance": 22,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 8
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 1.9949999,
+                "Pierce": 1.14,
+                "Blood": 1.2800001,
+                "Fire": 1.2800001,
+                "Ice": 13.15,
+                "Lightning": 0.96000004
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 39,
+                "Bleed": 43,
+                "Curse": 45
+            }
+        },
+        "Transform_Lightning": {
+            "StaminaGuardCost": 0,
+            "Balance": 22,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 8
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 1.9949999,
+                "Pierce": 1.14,
+                "Blood": 1.2800001,
+                "Fire": 1.2800001,
+                "Ice": 1.68,
+                "Lightning": 11.8
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 39,
+                "Bleed": 43,
+                "Curse": 45
+            }
+        },
+        "Transform_Blood": {
+            "StaminaGuardCost": 0,
+            "Balance": 22,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 4,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 8
+            },
+            "Defense": {
+                "Slash": 1.52,
+                "Crush": 1.9949999,
+                "Pierce": 1.14,
+                "Blood": 12.4,
+                "Fire": 1.2800001,
+                "Ice": 1.68,
+                "Lightning": 0.96000004
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 39,
+                "Bleed": 43,
+                "Curse": 45
+            }
+        },
+        "Transform_Disease": {
+            "StaminaGuardCost": 0,
+            "Balance": 22,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 10
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.1,
+                "Pierce": 1.2,
+                "Blood": 1.6,
+                "Fire": 1.6,
+                "Ice": 2.1,
+                "Lightning": 1.2
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 76,
+                "Wound": 39,
+                "Bleed": 43,
+                "Curse": 45
+            }
+        },
+        "Transform_Wound": {
+            "StaminaGuardCost": 0,
+            "Balance": 22,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 10
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.1,
+                "Pierce": 1.2,
+                "Blood": 1.6,
+                "Fire": 1.6,
+                "Ice": 2.1,
+                "Lightning": 1.2
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 69,
+                "Bleed": 43,
+                "Curse": 45
+            }
+        },
+        "Transform_Bleed": {
+            "StaminaGuardCost": 0,
+            "Balance": 22,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 10
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.1,
+                "Pierce": 1.2,
+                "Blood": 1.6,
+                "Fire": 1.6,
+                "Ice": 2.1,
+                "Lightning": 1.2
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 39,
+                "Bleed": 73,
+                "Curse": 45
+            }
+        },
+        "Transform_Curse": {
+            "StaminaGuardCost": 0,
+            "Balance": 22,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 5,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 10
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.1,
+                "Pierce": 1.2,
+                "Blood": 1.6,
+                "Fire": 1.6,
+                "Ice": 2.1,
+                "Lightning": 1.2
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 39,
+                "Bleed": 43,
+                "Curse": 75
+            }
+        },
+        "Transform_Balance": {
+            "StaminaGuardCost": 0,
+            "Balance": 44,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 10,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 15
+            },
+            "Defense": {
+                "Slash": 1.6,
+                "Crush": 2.1,
+                "Pierce": 1.2,
+                "Blood": 1.6,
+                "Fire": 1.6,
+                "Ice": 2.1,
+                "Lightning": 1.2
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 39,
+                "Bleed": 43,
+                "Curse": 45
+            }
+        },
+        "Transform_LoadDown": {
+            "StaminaGuardCost": 0,
+            "Balance": 22,
+            "Burden": {
+                "Strength": 0,
+                "Dexterity": 0,
+                "Mind": 3,
+                "Willpower": 0,
+                "Vitality": 0,
+                "Fortitude": 7
+            },
+            "Defense": {
+                "Slash": 1.4,
+                "Crush": 1.8374999,
+                "Pierce": 1.0500001,
+                "Blood": 1.4,
+                "Fire": 1.4,
+                "Ice": 1.8374999,
+                "Lightning": 1.0500001
+            },
+            "GuardingDefense": {
+                "Slash": 0,
+                "Crush": 0,
+                "Pierce": 0,
+                "Blood": 0,
+                "Fire": 0,
+                "Ice": 0,
+                "Lightning": 0
+            },
+            "Resistance": {
+                "Disease": 46,
+                "Wound": 39,
+                "Bleed": 43,
+                "Curse": 45
+            }
+        }
+    }
+]

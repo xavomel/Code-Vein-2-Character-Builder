@@ -1,0 +1,1826 @@
+[
+    {
+        "Name": "Superbia Bloodline: Lou 1",
+        "Description": "Lou's blood code. Its balanced stats make it suitable for a wide variety of fighting styles.\n\nHas high Mind.\n\nFeatures traits geared toward both offense and defense, such as enhancing attack power on a successful drain attack, potentially inflicting the slow status ailment, and enhancing guard.\n\nThe Superbia Bloodline originated with the great hero Idris and consists of prominent revenants with considerable influence over the frontier.\n\nIt has produced a great many revenants with balanced abilities who are blessed with strong bodies and powerful forma abilities.\n\nWhile Lou is somewhat frail, she possesses the power to interfere with time, a rarity even within the Superbia Bloodline. This blood code embodies the unique traits of her power.",
+        "Bloodline": "Superbia",
+        "Bleed": 59,
+        "Ichor": 18,
+        "Balance": 62,
+        "Attributes": {
+            "Strength": 10,
+            "Dexterity": 10,
+            "Mind": 14,
+            "Willpower": 0,
+            "Vitality": 12,
+            "Fortitude": 10,
+            "Will": 10
+        },
+        "Defense": {
+            "Slash": 17.3,
+            "Crush": 14.7,
+            "Pierce": 15.6,
+            "Blood": 18.6,
+            "Fire": 16.8,
+            "Ice": 16.8,
+            "Thunder": 15.8
+        },
+        "Resistance": {
+            "Disease": 44,
+            "Wound": 65,
+            "Bleed": 77,
+            "Curse": 90
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Lou 2",
+        "Description": "Lou's blood code. Its balanced stats make it suitable for a wide variety of fighting styles.\n\nHas high Mind.\n\nFeatures traits geared toward both offense and defense, such as enhancing attack power on a successful drain attack, potentially inflicting the slow status ailment, and enhancing guard.\n\nThe Superbia Bloodline originated with the great hero Idris and consists of prominent revenants with considerable influence over the frontier.\n\nIt has produced a great many revenants with balanced abilities who are blessed with strong bodies and powerful forma abilities.\n\nWhile Lou is somewhat frail, she possesses the power to interfere with time, a rarity even within the Superbia Bloodline. This blood code embodies the unique traits of her power.",
+        "Bloodline": "Superbia",
+        "Bleed": 59,
+        "Ichor": 18,
+        "Balance": 62,
+        "Attributes": {
+            "Strength": 12,
+            "Dexterity": 11,
+            "Mind": 17,
+            "Willpower": 0,
+            "Vitality": 14,
+            "Fortitude": 10,
+            "Will": 12
+        },
+        "Defense": {
+            "Slash": 17.3,
+            "Crush": 14.7,
+            "Pierce": 15.6,
+            "Blood": 18.6,
+            "Fire": 16.8,
+            "Ice": 16.8,
+            "Thunder": 15.8
+        },
+        "Resistance": {
+            "Disease": 44,
+            "Wound": 65,
+            "Bleed": 77,
+            "Curse": 90
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Lou 3",
+        "Description": "Lou's blood code. Its balanced stats make it suitable for a wide variety of fighting styles.\n\nHas high Mind.\n\nFeatures traits geared toward both offense and defense, such as enhancing attack power on a successful drain attack, potentially inflicting the slow status ailment, and enhancing guard.\n\nThe Superbia Bloodline originated with the great hero Idris and consists of prominent revenants with considerable influence over the frontier.\n\nIt has produced a great many revenants with balanced abilities who are blessed with strong bodies and powerful forma abilities.\n\nWhile Lou is somewhat frail, she possesses the power to interfere with time, a rarity even within the Superbia Bloodline. This blood code embodies the unique traits of her power.",
+        "Bloodline": "Superbia",
+        "Bleed": 59,
+        "Ichor": 18,
+        "Balance": 62,
+        "Attributes": {
+            "Strength": 14,
+            "Dexterity": 12,
+            "Mind": 20,
+            "Willpower": 0,
+            "Vitality": 16,
+            "Fortitude": 11,
+            "Will": 14
+        },
+        "Defense": {
+            "Slash": 17.3,
+            "Crush": 14.7,
+            "Pierce": 15.6,
+            "Blood": 18.6,
+            "Fire": 16.8,
+            "Ice": 16.8,
+            "Thunder": 15.8
+        },
+        "Resistance": {
+            "Disease": 44,
+            "Wound": 65,
+            "Bleed": 77,
+            "Curse": 90
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Lou 4",
+        "Description": "Lou's blood code. Its balanced stats make it suitable for a wide variety of fighting styles.\n\nHas high Mind.\n\nFeatures traits geared toward both offense and defense, such as enhancing attack power on a successful drain attack, potentially inflicting the slow status ailment, and enhancing guard.\n\nThe Superbia Bloodline originated with the great hero Idris and consists of prominent revenants with considerable influence over the frontier.\n\nIt has produced a great many revenants with balanced abilities who are blessed with strong bodies and powerful forma abilities.\n\nWhile Lou is somewhat frail, she possesses the power to interfere with time, a rarity even within the Superbia Bloodline. This blood code embodies the unique traits of her power.",
+        "Bloodline": "Superbia",
+        "Bleed": 59,
+        "Ichor": 18,
+        "Balance": 62,
+        "Attributes": {
+            "Strength": 18,
+            "Dexterity": 14,
+            "Mind": 26,
+            "Willpower": 0,
+            "Vitality": 20,
+            "Fortitude": 13,
+            "Will": 18
+        },
+        "Defense": {
+            "Slash": 17.3,
+            "Crush": 14.7,
+            "Pierce": 15.6,
+            "Blood": 18.6,
+            "Fire": 16.8,
+            "Ice": 16.8,
+            "Thunder": 15.8
+        },
+        "Resistance": {
+            "Disease": 44,
+            "Wound": 65,
+            "Bleed": 77,
+            "Curse": 90
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Lou 5",
+        "Description": "Lou's blood code. Its balanced stats make it suitable for a wide variety of fighting styles.\n\nHas high Mind.\n\nFeatures traits geared toward both offense and defense, such as enhancing attack power on a successful drain attack, potentially inflicting the slow status ailment, and enhancing guard.\n\nThe Superbia Bloodline originated with the great hero Idris and consists of prominent revenants with considerable influence over the frontier.\n\nIt has produced a great many revenants with balanced abilities who are blessed with strong bodies and powerful forma abilities.\n\nWhile Lou is somewhat frail, she possesses the power to interfere with time, a rarity even within the Superbia Bloodline. This blood code embodies the unique traits of her power.",
+        "Bloodline": "Superbia",
+        "Bleed": 59,
+        "Ichor": 18,
+        "Balance": 62,
+        "Attributes": {
+            "Strength": 22,
+            "Dexterity": 16,
+            "Mind": 32,
+            "Willpower": 0,
+            "Vitality": 24,
+            "Fortitude": 15,
+            "Will": 22
+        },
+        "Defense": {
+            "Slash": 17.3,
+            "Crush": 14.7,
+            "Pierce": 15.6,
+            "Blood": 18.6,
+            "Fire": 16.8,
+            "Ice": 16.8,
+            "Thunder": 15.8
+        },
+        "Resistance": {
+            "Disease": 44,
+            "Wound": 65,
+            "Bleed": 77,
+            "Curse": 90
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Noah 1",
+        "Description": "Noah's blood code. Works well with a technical fighting style.\n\nHas high Dexterity and Fortitude.\n\nIt requires finesse, but if mastered, it is capable of taking out streams of foes in short order.\n\nNoah became a revenant at the behest of Voda House. He offered his life for the sake of his human family, an act made all the more selfless due to the fact that his turning was no guaranteed success.\n\nThis blood code demonstrates Noah's extraordinary physical ability and exceptional talent for battle.",
+        "Bloodline": "Superbia",
+        "Bleed": 46,
+        "Ichor": 14,
+        "Balance": 44,
+        "Attributes": {
+            "Strength": 10,
+            "Dexterity": 13,
+            "Mind": 7,
+            "Willpower": 0,
+            "Vitality": 10,
+            "Fortitude": 12,
+            "Will": 8
+        },
+        "Defense": {
+            "Slash": 12.9,
+            "Crush": 12.1,
+            "Pierce": 13.2,
+            "Blood": 15.3,
+            "Fire": 13.7,
+            "Ice": 14.0,
+            "Thunder": 12.3
+        },
+        "Resistance": {
+            "Disease": 32,
+            "Wound": 69,
+            "Bleed": 63,
+            "Curse": 78
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Noah 2",
+        "Description": "Noah's blood code. Works well with a technical fighting style.\n\nHas high Dexterity and Fortitude.\n\nIt requires finesse, but if mastered, it is capable of taking out streams of foes in short order.\n\nNoah became a revenant at the behest of Voda House. He offered his life for the sake of his human family, an act made all the more selfless due to the fact that his turning was no guaranteed success.\n\nThis blood code demonstrates Noah's extraordinary physical ability and exceptional talent for battle.",
+        "Bloodline": "Superbia",
+        "Bleed": 46,
+        "Ichor": 14,
+        "Balance": 44,
+        "Attributes": {
+            "Strength": 12,
+            "Dexterity": 16,
+            "Mind": 7,
+            "Willpower": 0,
+            "Vitality": 12,
+            "Fortitude": 14,
+            "Will": 9
+        },
+        "Defense": {
+            "Slash": 12.9,
+            "Crush": 12.1,
+            "Pierce": 13.2,
+            "Blood": 15.3,
+            "Fire": 13.7,
+            "Ice": 14.0,
+            "Thunder": 12.3
+        },
+        "Resistance": {
+            "Disease": 32,
+            "Wound": 69,
+            "Bleed": 63,
+            "Curse": 78
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Noah 3",
+        "Description": "Noah's blood code. Works well with a technical fighting style.\n\nHas high Dexterity and Fortitude.\n\nIt requires finesse, but if mastered, it is capable of taking out streams of foes in short order.\n\nNoah became a revenant at the behest of Voda House. He offered his life for the sake of his human family, an act made all the more selfless due to the fact that his turning was no guaranteed success.\n\nThis blood code demonstrates Noah's extraordinary physical ability and exceptional talent for battle.",
+        "Bloodline": "Superbia",
+        "Bleed": 46,
+        "Ichor": 14,
+        "Balance": 44,
+        "Attributes": {
+            "Strength": 14,
+            "Dexterity": 19,
+            "Mind": 7,
+            "Willpower": 0,
+            "Vitality": 14,
+            "Fortitude": 16,
+            "Will": 10
+        },
+        "Defense": {
+            "Slash": 12.9,
+            "Crush": 12.1,
+            "Pierce": 13.2,
+            "Blood": 15.3,
+            "Fire": 13.7,
+            "Ice": 14.0,
+            "Thunder": 12.3
+        },
+        "Resistance": {
+            "Disease": 32,
+            "Wound": 69,
+            "Bleed": 63,
+            "Curse": 78
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Noah 4",
+        "Description": "Noah's blood code. Works well with a technical fighting style.\n\nHas high Dexterity and Fortitude.\n\nIt requires finesse, but if mastered, it is capable of taking out streams of foes in short order.\n\nNoah became a revenant at the behest of Voda House. He offered his life for the sake of his human family, an act made all the more selfless due to the fact that his turning was no guaranteed success.\n\nThis blood code demonstrates Noah's extraordinary physical ability and exceptional talent for battle.",
+        "Bloodline": "Superbia",
+        "Bleed": 46,
+        "Ichor": 14,
+        "Balance": 44,
+        "Attributes": {
+            "Strength": 22,
+            "Dexterity": 31,
+            "Mind": 7,
+            "Willpower": 0,
+            "Vitality": 22,
+            "Fortitude": 24,
+            "Will": 14
+        },
+        "Defense": {
+            "Slash": 12.9,
+            "Crush": 12.1,
+            "Pierce": 13.2,
+            "Blood": 15.3,
+            "Fire": 13.7,
+            "Ice": 14.0,
+            "Thunder": 12.3
+        },
+        "Resistance": {
+            "Disease": 32,
+            "Wound": 69,
+            "Bleed": 63,
+            "Curse": 78
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Valentin 1",
+        "Description": "Valentin's blood code. Its high-level stats and max ichor allow for a variety of strategies.\n\nHas high Strength, Dexterity, and Willpower.\n\nCapable of further extending its already high attributes and overwhelming foes with successive forma attacks.\n\nEven among the Superbia Bloodline, houses which trace their lineage directly to Progenitor Idris tend to produce revenants of exceptional power.\n\nHierarchy in revenant society is complex, with relatives consisting of both those born directly to parents of the bloodline and those who were turned into revenants by someone of the same bloodline. As such, the heads of the families are typically selected on a system of meritocracy.\n\nNext in line to head Voda House, Valentin is a man both wise and bold, seemingly capable of anything he sets his mind to. The extensive range of his prowess is evident in his blood code.",
+        "Bloodline": "Superbia",
+        "Bleed": 62,
+        "Ichor": 18,
+        "Balance": 52,
+        "Attributes": {
+            "Strength": 14,
+            "Dexterity": 14,
+            "Mind": 8,
+            "Willpower": 0,
+            "Vitality": 7,
+            "Fortitude": 14,
+            "Will": 15
+        },
+        "Defense": {
+            "Slash": 7.1,
+            "Crush": 6.4,
+            "Pierce": 7.4,
+            "Blood": 12.6,
+            "Fire": 11.1,
+            "Ice": 11.3,
+            "Thunder": 10.7
+        },
+        "Resistance": {
+            "Disease": 33,
+            "Wound": 52,
+            "Bleed": 67,
+            "Curse": 81
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Valentin 2",
+        "Description": "Valentin's blood code. Its high-level stats and max ichor allow for a variety of strategies.\n\nHas high Strength, Dexterity, and Willpower.\n\nCapable of further extending its already high attributes and overwhelming foes with successive forma attacks.\n\nEven among the Superbia Bloodline, houses which trace their lineage directly to Progenitor Idris tend to produce revenants of exceptional power.\n\nHierarchy in revenant society is complex, with relatives consisting of both those born directly to parents of the bloodline and those who were turned into revenants by someone of the same bloodline. As such, the heads of the families are typically selected on a system of meritocracy.\n\nNext in line to head Voda House, Valentin is a man both wise and bold, seemingly capable of anything he sets his mind to. The extensive range of his prowess is evident in his blood code.",
+        "Bloodline": "Superbia",
+        "Bleed": 62,
+        "Ichor": 18,
+        "Balance": 52,
+        "Attributes": {
+            "Strength": 19,
+            "Dexterity": 19,
+            "Mind": 8,
+            "Willpower": 0,
+            "Vitality": 9,
+            "Fortitude": 16,
+            "Will": 23
+        },
+        "Defense": {
+            "Slash": 7.1,
+            "Crush": 6.4,
+            "Pierce": 7.4,
+            "Blood": 12.6,
+            "Fire": 11.1,
+            "Ice": 11.3,
+            "Thunder": 10.7
+        },
+        "Resistance": {
+            "Disease": 33,
+            "Wound": 52,
+            "Bleed": 67,
+            "Curse": 81
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Valentin 3",
+        "Description": "Valentin's blood code. Its high-level stats and max ichor allow for a variety of strategies.\n\nHas high Strength, Dexterity, and Willpower.\n\nCapable of further extending its already high attributes and overwhelming foes with successive forma attacks.\n\nEven among the Superbia Bloodline, houses which trace their lineage directly to Progenitor Idris tend to produce revenants of exceptional power.\n\nHierarchy in revenant society is complex, with relatives consisting of both those born directly to parents of the bloodline and those who were turned into revenants by someone of the same bloodline. As such, the heads of the families are typically selected on a system of meritocracy.\n\nNext in line to head Voda House, Valentin is a man both wise and bold, seemingly capable of anything he sets his mind to. The extensive range of his prowess is evident in his blood code.",
+        "Bloodline": "Superbia",
+        "Bleed": 62,
+        "Ichor": 18,
+        "Balance": 52,
+        "Attributes": {
+            "Strength": 21,
+            "Dexterity": 21,
+            "Mind": 8,
+            "Willpower": 0,
+            "Vitality": 11,
+            "Fortitude": 17,
+            "Will": 27
+        },
+        "Defense": {
+            "Slash": 7.1,
+            "Crush": 6.4,
+            "Pierce": 7.4,
+            "Blood": 12.6,
+            "Fire": 11.1,
+            "Ice": 11.3,
+            "Thunder": 10.7
+        },
+        "Resistance": {
+            "Disease": 33,
+            "Wound": 52,
+            "Bleed": 67,
+            "Curse": 81
+        }
+    },
+    {
+        "Name": "Gula Bloodline: Jos\u00e9e 1",
+        "Description": "Jos\u00e9e's blood code. Excellent performance in close combat and ichor recovery.\n\nHas high Strength, Mind, and Vitality.\n\nIts trait protects against ichor depletion, allowing aggressive forma use. However, caution is advised, as excessive ichor absorption can inflict bodily harm.\n\nRevenants of the Gula Bloodline possess massive levels of energy. As their bloodline name suggests, many are voracious eaters, but most have surprisingly small physiques as well. Many compensate for their small stature with honed swordsmanship or other combat abilities, developing their own unique techniques.\n\nJos\u00e9e herself trained in the sword styles of the Far East from a young age, combining her martial abilities with those of her bloodline. These abilities shine through the traits of her blood code.",
+        "Bloodline": "Gula",
+        "Bleed": 52,
+        "Ichor": 16,
+        "Balance": 72,
+        "Attributes": {
+            "Strength": 13,
+            "Dexterity": 10,
+            "Mind": 12,
+            "Willpower": 0,
+            "Vitality": 10,
+            "Fortitude": 12,
+            "Will": 8
+        },
+        "Defense": {
+            "Slash": 14.7,
+            "Crush": 14.8,
+            "Pierce": 15.2,
+            "Blood": 15.5,
+            "Fire": 11.8,
+            "Ice": 16.0,
+            "Thunder": 16.4
+        },
+        "Resistance": {
+            "Disease": 58,
+            "Wound": 62,
+            "Bleed": 53,
+            "Curse": 70
+        }
+    },
+    {
+        "Name": "Gula Bloodline: Jos\u00e9e 2",
+        "Description": "Jos\u00e9e's blood code. Excellent performance in close combat and ichor recovery.\n\nHas high Strength, Mind, and Vitality.\n\nIts trait protects against ichor depletion, allowing aggressive forma use. However, caution is advised, as excessive ichor absorption can inflict bodily harm.\n\nRevenants of the Gula Bloodline possess massive levels of energy. As their bloodline name suggests, many are voracious eaters, but most have surprisingly small physiques as well. Many compensate for their small stature with honed swordsmanship or other combat abilities, developing their own unique techniques.\n\nJos\u00e9e herself trained in the sword styles of the Far East from a young age, combining her martial abilities with those of her bloodline. These abilities shine through the traits of her blood code.",
+        "Bloodline": "Gula",
+        "Bleed": 52,
+        "Ichor": 16,
+        "Balance": 72,
+        "Attributes": {
+            "Strength": 19,
+            "Dexterity": 12,
+            "Mind": 16,
+            "Willpower": 0,
+            "Vitality": 15,
+            "Fortitude": 14,
+            "Will": 9
+        },
+        "Defense": {
+            "Slash": 14.7,
+            "Crush": 14.8,
+            "Pierce": 15.2,
+            "Blood": 15.5,
+            "Fire": 11.8,
+            "Ice": 16.0,
+            "Thunder": 16.4
+        },
+        "Resistance": {
+            "Disease": 58,
+            "Wound": 62,
+            "Bleed": 53,
+            "Curse": 70
+        }
+    },
+    {
+        "Name": "Gula Bloodline: Jos\u00e9e 3",
+        "Description": "Jos\u00e9e's blood code. Excellent performance in close combat and ichor recovery.\n\nHas high Strength, Mind, and Vitality.\n\nIts trait protects against ichor depletion, allowing aggressive forma use. However, caution is advised, as excessive ichor absorption can inflict bodily harm.\n\nRevenants of the Gula Bloodline possess massive levels of energy. As their bloodline name suggests, many are voracious eaters, but most have surprisingly small physiques as well. Many compensate for their small stature with honed swordsmanship or other combat abilities, developing their own unique techniques.\n\nJos\u00e9e herself trained in the sword styles of the Far East from a young age, combining her martial abilities with those of her bloodline. These abilities shine through the traits of her blood code.",
+        "Bloodline": "Gula",
+        "Bleed": 52,
+        "Ichor": 16,
+        "Balance": 72,
+        "Attributes": {
+            "Strength": 22,
+            "Dexterity": 13,
+            "Mind": 18,
+            "Willpower": 0,
+            "Vitality": 17,
+            "Fortitude": 15,
+            "Will": 9
+        },
+        "Defense": {
+            "Slash": 14.7,
+            "Crush": 14.8,
+            "Pierce": 15.2,
+            "Blood": 15.5,
+            "Fire": 11.8,
+            "Ice": 16.0,
+            "Thunder": 16.4
+        },
+        "Resistance": {
+            "Disease": 58,
+            "Wound": 62,
+            "Bleed": 53,
+            "Curse": 70
+        }
+    },
+    {
+        "Name": "Gula Bloodline: Jos\u00e9e 4",
+        "Description": "Jos\u00e9e's blood code. Excellent performance in close combat and ichor recovery.\n\nHas high Strength, Mind, and Vitality.\n\nIts trait protects against ichor depletion, allowing aggressive forma use. No longer hindered by damage due to over-absorption of ichor, this blood code allows for truly unhindered mobility in combat.\n\nRevenants of the Gula Bloodline possess massive levels of energy. As their bloodline name suggests, many are voracious eaters, but most have surprisingly small physiques as well. Many compensate for their small stature with honed swordsmanship or other combat abilities, developing their own unique techniques.\n\nJos\u00e9e herself trained in the sword styles of the Far East from a young age, combining her martial abilities with those of her bloodline. These abilities shine through the traits of her blood code.",
+        "Bloodline": "Gula",
+        "Bleed": 52,
+        "Ichor": 16,
+        "Balance": 72,
+        "Attributes": {
+            "Strength": 31,
+            "Dexterity": 16,
+            "Mind": 24,
+            "Willpower": 0,
+            "Vitality": 25,
+            "Fortitude": 18,
+            "Will": 11
+        },
+        "Defense": {
+            "Slash": 14.7,
+            "Crush": 14.8,
+            "Pierce": 15.2,
+            "Blood": 15.5,
+            "Fire": 11.8,
+            "Ice": 16.0,
+            "Thunder": 16.4
+        },
+        "Resistance": {
+            "Disease": 58,
+            "Wound": 62,
+            "Bleed": 53,
+            "Curse": 70
+        }
+    },
+    {
+        "Name": "Gula Bloodline: Jos\u00e9e (Blind)",
+        "Description": "Jos\u00e9e's blood code. Has high stats and a unique trait specialized for close combat.\n\nHas high Strength, Dexterity, Vitality, and Fortitude.\n\nAllows the user to absorb ichor when hitting foes with formae, enabling otherwise impossible strategies. However, it also increases the ichor cost of formae, so caution is advised.\n\nThe desperate impulsiveness which led Jos\u00e9e to gouge out her own eyes in her darkest moment has had a significant impact on this blood code's traits.",
+        "Bloodline": "Gula",
+        "Bleed": 38,
+        "Ichor": 14,
+        "Balance": 79,
+        "Attributes": {
+            "Strength": 30,
+            "Dexterity": 30,
+            "Mind": 10,
+            "Willpower": 0,
+            "Vitality": 25,
+            "Fortitude": 25,
+            "Will": 5
+        },
+        "Defense": {
+            "Slash": 14.8,
+            "Crush": 14.8,
+            "Pierce": 14.9,
+            "Blood": 16.0,
+            "Fire": 12.5,
+            "Ice": 15.7,
+            "Thunder": 16.2
+        },
+        "Resistance": {
+            "Disease": 55,
+            "Wound": 65,
+            "Bleed": 50,
+            "Curse": 75
+        }
+    },
+    {
+        "Name": "Gula Bloodline: Lise 1",
+        "Description": "Lise's blood code. Excellent at forma use and combat staying power.\n\nHas high Dexterity, Mind, and Vitality.\n\nRestores LP when foes are defeated, improving staying power on long expeditions and against large groups. However, there is a danger of taking damage when out of stamina, so caution is advised.\n\nLise is Jos\u00e9e's biological twin. Calm and rational by nature, her abilities are better suited for support roles than for being directly in the line of combat. However, she has honed her fighting skills, driven by the belief that she can only offer support if she can first hold her own on the battlefield.\n\nHer desire to be self-reliant is evident in the traits of her blood code.",
+        "Bloodline": "Gula",
+        "Bleed": 61,
+        "Ichor": 18,
+        "Balance": 39,
+        "Attributes": {
+            "Strength": 12,
+            "Dexterity": 18,
+            "Mind": 20,
+            "Willpower": 0,
+            "Vitality": 18,
+            "Fortitude": 8,
+            "Will": 14
+        },
+        "Defense": {
+            "Slash": 12.9,
+            "Crush": 13.0,
+            "Pierce": 12.8,
+            "Blood": 17.4,
+            "Fire": 15.1,
+            "Ice": 17.4,
+            "Thunder": 17.3
+        },
+        "Resistance": {
+            "Disease": 58,
+            "Wound": 65,
+            "Bleed": 53,
+            "Curse": 71
+        }
+    },
+    {
+        "Name": "Gula Bloodline: Lise 2",
+        "Description": "Lise's blood code. Excellent at forma use and combat staying power.\n\nHas high Dexterity, Mind, and Vitality.\n\nRestores LP when foes are defeated, improving staying power on long expeditions and against large groups. However, there is a danger of taking damage when out of stamina, so caution is advised.\n\nLise is Jos\u00e9e's biological twin. Calm and rational by nature, her abilities are better suited for support roles than for being directly in the line of combat. However, she has honed her fighting skills, driven by the belief that she can only offer support if she can first hold her own on the battlefield.\n\nHer desire to be self-reliant is evident in the traits of her blood code.",
+        "Bloodline": "Gula",
+        "Bleed": 61,
+        "Ichor": 18,
+        "Balance": 39,
+        "Attributes": {
+            "Strength": 13,
+            "Dexterity": 20,
+            "Mind": 23,
+            "Willpower": 0,
+            "Vitality": 19,
+            "Fortitude": 9,
+            "Will": 16
+        },
+        "Defense": {
+            "Slash": 12.9,
+            "Crush": 13.0,
+            "Pierce": 12.8,
+            "Blood": 17.4,
+            "Fire": 15.1,
+            "Ice": 17.4,
+            "Thunder": 17.3
+        },
+        "Resistance": {
+            "Disease": 58,
+            "Wound": 65,
+            "Bleed": 53,
+            "Curse": 71
+        }
+    },
+    {
+        "Name": "Patientia Bloodline: Lyle 1",
+        "Description": "Lyle's blood code. Enhances technical fighting styles.\n\nHas especially high Dexterity.\n\nGrants benefits for parrying and dodging, enabling a fighting style focused on skillfully dealing with enemy attacks and unleashing powerful counters.\n\nThe Dawn Chorus was organized by revenants of the Patientia Bloodline. Though the entire bloodline are natural warriors, the Chorus consists of the most martially skilled among them.\n\nThe greatest swordsman even among his talented companions, Lyle uses his slender physique to fight with precision and speed. Such traits are apparent in his blood code.",
+        "Bloodline": "Patientia",
+        "Bleed": 44,
+        "Ichor": 15,
+        "Balance": 41,
+        "Attributes": {
+            "Strength": 12,
+            "Dexterity": 18,
+            "Mind": 9,
+            "Willpower": 0,
+            "Vitality": 9,
+            "Fortitude": 15,
+            "Will": 7
+        },
+        "Defense": {
+            "Slash": 10.2,
+            "Crush": 10.3,
+            "Pierce": 10.2,
+            "Blood": 8.4,
+            "Fire": 10.3,
+            "Ice": 10.1,
+            "Thunder": 11.7
+        },
+        "Resistance": {
+            "Disease": 70,
+            "Wound": 84,
+            "Bleed": 56,
+            "Curse": 41
+        }
+    },
+    {
+        "Name": "Patientia Bloodline: Lyle 2",
+        "Description": "Lyle's blood code. Enhances technical fighting styles.\n\nHas especially high Dexterity.\n\nGrants benefits for parrying and dodging, enabling a fighting style focused on skillfully dealing with enemy attacks and unleashing powerful counters.\n\nThe Dawn Chorus was organized by revenants of the Patientia Bloodline. Though the entire bloodline are natural warriors, the Chorus consists of the most martially skilled among them.\n\nThe greatest swordsman even among his talented companions, Lyle uses his slender physique to fight with precision and speed. Such traits are apparent in his blood code.",
+        "Bloodline": "Patientia",
+        "Bleed": 44,
+        "Ichor": 15,
+        "Balance": 41,
+        "Attributes": {
+            "Strength": 14,
+            "Dexterity": 26,
+            "Mind": 11,
+            "Willpower": 0,
+            "Vitality": 11,
+            "Fortitude": 21,
+            "Will": 7
+        },
+        "Defense": {
+            "Slash": 10.2,
+            "Crush": 10.3,
+            "Pierce": 10.2,
+            "Blood": 8.4,
+            "Fire": 10.3,
+            "Ice": 10.1,
+            "Thunder": 11.7
+        },
+        "Resistance": {
+            "Disease": 70,
+            "Wound": 84,
+            "Bleed": 56,
+            "Curse": 41
+        }
+    },
+    {
+        "Name": "Patientia Bloodline: Lyle 3",
+        "Description": "Lyle's blood code. Enhances technical fighting styles.\n\nHas especially high Dexterity.\n\nGrants benefits for parrying and dodging, enabling a fighting style focused on skillfully dealing with enemy attacks and unleashing powerful counters.\n\nThe Dawn Chorus was organized by revenants of the Patientia Bloodline. Though the entire bloodline are natural warriors, the Chorus consists of the most martially skilled among them.\n\nThe greatest swordsman even among his talented companions, Lyle uses his slender physique to fight with precision and speed. Such traits are apparent in his blood code.",
+        "Bloodline": "Patientia",
+        "Bleed": 44,
+        "Ichor": 15,
+        "Balance": 41,
+        "Attributes": {
+            "Strength": 17,
+            "Dexterity": 38,
+            "Mind": 14,
+            "Willpower": 0,
+            "Vitality": 14,
+            "Fortitude": 30,
+            "Will": 7
+        },
+        "Defense": {
+            "Slash": 10.2,
+            "Crush": 10.3,
+            "Pierce": 10.2,
+            "Blood": 8.4,
+            "Fire": 10.3,
+            "Ice": 10.1,
+            "Thunder": 11.7
+        },
+        "Resistance": {
+            "Disease": 70,
+            "Wound": 84,
+            "Bleed": 56,
+            "Curse": 41
+        }
+    },
+    {
+        "Name": "Patientia Bloodline: Lyle (Artificial Arm)",
+        "Description": "Lyle's blood code. It features unique traits and a heavy emphasis on certain stats.\n\nHas especially high Strength.\n\nIn addition to its base trait of enhancing counterattacks against foes, this blood code also allows the user to bring on the pressure by quickly swinging two-handed swords.\n\nPent-up feelings of resentment and hostility from a naturally gifted swordsman who lost it all are apparent in this blood code.",
+        "Bloodline": "Patientia",
+        "Bleed": 32,
+        "Ichor": 16,
+        "Balance": 38,
+        "Attributes": {
+            "Strength": 40,
+            "Dexterity": 16,
+            "Mind": 8,
+            "Willpower": 0,
+            "Vitality": 12,
+            "Fortitude": 32,
+            "Will": 10
+        },
+        "Defense": {
+            "Slash": 7.6,
+            "Crush": 8.2,
+            "Pierce": 8.5,
+            "Blood": 5.7,
+            "Fire": 7.5,
+            "Ice": 8.0,
+            "Thunder": 10.1
+        },
+        "Resistance": {
+            "Disease": 60,
+            "Wound": 83,
+            "Bleed": 59,
+            "Curse": 41
+        }
+    },
+    {
+        "Name": "Patientia Bloodline: Craig 1",
+        "Description": "Craig's blood code. Geared toward withstanding enemy attacks on the front lines.\n\nHas high Strength, Vitality, and Fortitude.\n\nThis blood code rewards guarding, enhancing the user's attack power even when hit. This allows the user to use head-to-head strategies to force their enemies to surrender.\n\nCraig was born not only into the Patientia Bloodline, one of the minor bloodlines, but also into one of the minor houses within it. McLeish House are the descendants of executioner Gregory McLeish. After the Resurgence changed the world, the house gained influence on the frontier through Craig's mother Imogen's pioneering developments.\n\nMany of the revenants of McLeish House are blessed with incredible physiques, and Craig is no exception. Built strong and possessing the courage to stand up for his convictions, he excelled in hand-to-hand combat. His blood code likewise offers similar strengths.",
+        "Bloodline": "Patientia",
+        "Bleed": 24,
+        "Ichor": 14,
+        "Balance": 76,
+        "Attributes": {
+            "Strength": 22,
+            "Dexterity": 10,
+            "Mind": 9,
+            "Willpower": 0,
+            "Vitality": 18,
+            "Fortitude": 16,
+            "Will": 6
+        },
+        "Defense": {
+            "Slash": 20.3,
+            "Crush": 19.7,
+            "Pierce": 19.6,
+            "Blood": 15.7,
+            "Fire": 17.1,
+            "Ice": 17.0,
+            "Thunder": 18.9
+        },
+        "Resistance": {
+            "Disease": 61,
+            "Wound": 84,
+            "Bleed": 53,
+            "Curse": 40
+        }
+    },
+    {
+        "Name": "Patientia Bloodline: Craig 2",
+        "Description": "Craig's blood code. Geared toward withstanding enemy attacks on the front lines.\n\nHas high Strength, Vitality, and Fortitude.\n\nThis blood code rewards guarding, enhancing the user's attack power even when hit. This allows the user to use head-to-head strategies to force their enemies to surrender.\n\nCraig was born not only into the Patientia Bloodline, one of the minor bloodlines, but also into one of the minor houses within it. McLeish House are the descendants of executioner Gregory McLeish. After the Resurgence changed the world, the house gained influence on the frontier through Craig's mother Imogen's pioneering developments.\n\nMany of the revenants of McLeish House are blessed with incredible physiques, and Craig is no exception. Built strong and possessing the courage to stand up for his convictions, he excelled in hand-to-hand combat. His blood code likewise offers similar strengths.",
+        "Bloodline": "Patientia",
+        "Bleed": 24,
+        "Ichor": 14,
+        "Balance": 76,
+        "Attributes": {
+            "Strength": 34,
+            "Dexterity": 13,
+            "Mind": 9,
+            "Willpower": 0,
+            "Vitality": 27,
+            "Fortitude": 22,
+            "Will": 6
+        },
+        "Defense": {
+            "Slash": 20.3,
+            "Crush": 19.7,
+            "Pierce": 19.6,
+            "Blood": 15.7,
+            "Fire": 17.1,
+            "Ice": 17.0,
+            "Thunder": 18.9
+        },
+        "Resistance": {
+            "Disease": 61,
+            "Wound": 84,
+            "Bleed": 53,
+            "Curse": 40
+        }
+    },
+    {
+        "Name": "Luxuria Bloodline: Holly 1",
+        "Description": "Holly's blood code. Its increased Willpower and max ichor make it well-suited for using magic formae.\n\nHas especially high Willpower.\n\nAllows the user to consume their own HP to activate formae when out of ichor, balancing the risk with the opportunity for intense firepower. It also restores HP when foes are defeated, granting high staying power.\n\nThe Luxuria Bloodline possesses rare healing abilities. Their incredible power to heal the immortal comes at a cost, however. Inflicting a disease that behaves much like the Resurgence. As such, their numbers are few.\n\nThough her bloodline is naturally adept with formae, Holly herself had a difficult time achieving her potential when she was young. The fact she became one of the most distinguished forma researchers on the frontier speaks volumes about her incredible determination and dedication.\n\nThe abilities of her blood code show a first-hand glimpse of this unwavering willpower.",
+        "Bloodline": "Luxuria",
+        "Bleed": 55,
+        "Ichor": 24,
+        "Balance": 28,
+        "Attributes": {
+            "Strength": 9,
+            "Dexterity": 16,
+            "Mind": 12,
+            "Willpower": 0,
+            "Vitality": 8,
+            "Fortitude": 13,
+            "Will": 23
+        },
+        "Defense": {
+            "Slash": 6.7,
+            "Crush": 6.7,
+            "Pierce": 7.1,
+            "Blood": 12.4,
+            "Fire": 11.5,
+            "Ice": 12.2,
+            "Thunder": 9.4
+        },
+        "Resistance": {
+            "Disease": 82,
+            "Wound": 62,
+            "Bleed": 58,
+            "Curse": 43
+        }
+    },
+    {
+        "Name": "Luxuria Bloodline: Holly 2",
+        "Description": "Holly's blood code. Its increased Willpower and max ichor make it well-suited for using magic formae.\n\nHas especially high Willpower.\n\nAllows the user to consume their own HP to activate formae when out of ichor, balancing the risk with the opportunity for intense firepower. It also restores HP when foes are defeated, granting high staying power.\n\nThe Luxuria Bloodline possesses rare healing abilities. Their incredible power to heal the immortal comes at a cost, however. Inflicting a disease that behaves much like the Resurgence. As such, their numbers are few.\n\nThough her bloodline is naturally adept with formae, Holly herself had a difficult time achieving her potential when she was young. The fact she became one of the most distinguished forma researchers on the frontier speaks volumes about her incredible determination and dedication.\n\nThe abilities of her blood code show a first-hand glimpse of this unwavering willpower.",
+        "Bloodline": "Luxuria",
+        "Bleed": 55,
+        "Ichor": 24,
+        "Balance": 28,
+        "Attributes": {
+            "Strength": 10,
+            "Dexterity": 18,
+            "Mind": 13,
+            "Willpower": 0,
+            "Vitality": 9,
+            "Fortitude": 14,
+            "Will": 27
+        },
+        "Defense": {
+            "Slash": 6.7,
+            "Crush": 6.7,
+            "Pierce": 7.1,
+            "Blood": 12.4,
+            "Fire": 11.5,
+            "Ice": 12.2,
+            "Thunder": 9.4
+        },
+        "Resistance": {
+            "Disease": 82,
+            "Wound": 62,
+            "Bleed": 58,
+            "Curse": 43
+        }
+    },
+    {
+        "Name": "Luxuria Bloodline: Holly 3",
+        "Description": "Holly's blood code. Its increased Willpower and max ichor make it well-suited for using magic formae.\n\nHas especially high Willpower.\n\nAllows the user to consume their own HP to activate formae when out of ichor, balancing the risk with the opportunity for intense firepower. It also restores HP when foes are defeated, granting high staying power.\n\nThe Luxuria Bloodline possesses rare healing abilities. Their incredible power to heal the immortal comes at a cost, however. Inflicting a disease that behaves much like the Resurgence. As such, their numbers are few.\n\nThough her bloodline is naturally adept with formae, Holly herself had a difficult time achieving her potential when she was young. The fact she became one of the most distinguished forma researchers on the frontier speaks volumes about her incredible determination and dedication.\n\nThe abilities of her blood code show a first-hand glimpse of this unwavering willpower.",
+        "Bloodline": "Luxuria",
+        "Bleed": 55,
+        "Ichor": 24,
+        "Balance": 28,
+        "Attributes": {
+            "Strength": 13,
+            "Dexterity": 24,
+            "Mind": 16,
+            "Willpower": 0,
+            "Vitality": 12,
+            "Fortitude": 17,
+            "Will": 39
+        },
+        "Defense": {
+            "Slash": 6.7,
+            "Crush": 6.7,
+            "Pierce": 7.1,
+            "Blood": 12.4,
+            "Fire": 11.5,
+            "Ice": 12.2,
+            "Thunder": 9.4
+        },
+        "Resistance": {
+            "Disease": 82,
+            "Wound": 62,
+            "Bleed": 58,
+            "Curse": 43
+        }
+    },
+    {
+        "Name": "Luxuria Bloodline: Holly (Condemned)",
+        "Description": "Holly's blood code. Possesses increased Willpower and a special means of absorbing ichor.\n\nHas especially high Willpower.\n\nIchor-absorbing abilities allow for absorption on successful dodges, enabling strategies that rely on a quick rotation of formae.\n\nThis blood code is characterized by the deep, consuming regret Holly felt for her own misdoings, and the fixation on ichor absorption likely stems from her desire to bring back all those slain by her very own hands.",
+        "Bloodline": "Luxuria",
+        "Bleed": 66,
+        "Ichor": 20,
+        "Balance": 44,
+        "Attributes": {
+            "Strength": 12,
+            "Dexterity": 24,
+            "Mind": 14,
+            "Willpower": 0,
+            "Vitality": 18,
+            "Fortitude": 20,
+            "Will": 32
+        },
+        "Defense": {
+            "Slash": 8.8,
+            "Crush": 8.7,
+            "Pierce": 8.6,
+            "Blood": 14.1,
+            "Fire": 13.7,
+            "Ice": 13.9,
+            "Thunder": 10.9
+        },
+        "Resistance": {
+            "Disease": 78,
+            "Wound": 61,
+            "Bleed": 64,
+            "Curse": 44
+        }
+    },
+    {
+        "Name": "Luxuria Bloodline: Lycoris 1",
+        "Description": "Lycoris's blood code. Enhances summoned partners.\n \nHas high Dexterity and Willpower.\n \nThis trait increases your summoned partner's attack power to help you take down enemies more easily if you coordinate well.",
+        "Bloodline": "Luxuria",
+        "Bleed": 65,
+        "Ichor": 20,
+        "Balance": 34,
+        "Attributes": {
+            "Strength": 8,
+            "Dexterity": 17,
+            "Mind": 12,
+            "Willpower": 0,
+            "Vitality": 12,
+            "Fortitude": 14,
+            "Will": 17
+        },
+        "Defense": {
+            "Slash": 8.0,
+            "Crush": 7.8,
+            "Pierce": 8.3,
+            "Blood": 13.0,
+            "Fire": 13.2,
+            "Ice": 12.9,
+            "Thunder": 9.7
+        },
+        "Resistance": {
+            "Disease": 82,
+            "Wound": 65,
+            "Bleed": 64,
+            "Curse": 37
+        }
+    },
+    {
+        "Name": "Luxuria Bloodline: Lycoris 2",
+        "Description": "Lycoris's blood code. Enhances summoned partners.\n \nHas high Dexterity and Willpower.\n \nThis trait increases your summoned partner's attack power to help you take down enemies more easily if you coordinate well.",
+        "Bloodline": "Luxuria",
+        "Bleed": 65,
+        "Ichor": 20,
+        "Balance": 34,
+        "Attributes": {
+            "Strength": 9,
+            "Dexterity": 20,
+            "Mind": 13,
+            "Willpower": 0,
+            "Vitality": 13,
+            "Fortitude": 15,
+            "Will": 20
+        },
+        "Defense": {
+            "Slash": 8.0,
+            "Crush": 7.8,
+            "Pierce": 8.3,
+            "Blood": 13.0,
+            "Fire": 13.2,
+            "Ice": 12.9,
+            "Thunder": 9.7
+        },
+        "Resistance": {
+            "Disease": 82,
+            "Wound": 65,
+            "Bleed": 64,
+            "Curse": 37
+        }
+    },
+    {
+        "Name": "Luxuria Bloodline: Camilo",
+        "Description": "Camilo's blood code. Excels at offense and support, and possesses a unique means of ichor recovery.\n\nHas high Strength, Mind, and Vitality.\n\nPossesses a unique trait that enables the recovery of ichor without using drain attacks, allowing the use of formae which wouldn't normally be possible.",
+        "Bloodline": "Luxuria",
+        "Bleed": 41,
+        "Ichor": 16,
+        "Balance": 55,
+        "Attributes": {
+            "Strength": 21,
+            "Dexterity": 12,
+            "Mind": 18,
+            "Willpower": 0,
+            "Vitality": 19,
+            "Fortitude": 12,
+            "Will": 10
+        },
+        "Defense": {
+            "Slash": 15.6,
+            "Crush": 15.8,
+            "Pierce": 16.2,
+            "Blood": 15.3,
+            "Fire": 15.3,
+            "Ice": 15.3,
+            "Thunder": 11.0
+        },
+        "Resistance": {
+            "Disease": 84,
+            "Wound": 58,
+            "Bleed": 65,
+            "Curse": 42
+        }
+    },
+    {
+        "Name": "Acedia Bloodline: Zenon 1",
+        "Description": "Zenon's blood code. Features high-level stats and distinctive traits.\n\nHas high Strength, Dexterity, and Vitality.\n\nAllows the substitution of burden between stats, enabling a wide variety of weapon configuration builds. Also features unique effects that trigger during clear weather or while LP is depleted.\n\nMany of the Acedia Bloodline are both individualistic and tend towards intellectual endeavors. As such, the bonds between its members are fractured and superficial. Despite this, the seemingly unmatched potential of each individual has garnered the bloodline considerable influence.\n\nYet even among such company, Zenon is a revenant of unique and outstanding character.\n\nA man of such diverse talent, even his blood code captures only a fraction of his immeasurable traits.",
+        "Bloodline": "Acedia",
+        "Bleed": 58,
+        "Ichor": 16,
+        "Balance": 54,
+        "Attributes": {
+            "Strength": 20,
+            "Dexterity": 20,
+            "Mind": 12,
+            "Willpower": 0,
+            "Vitality": 22,
+            "Fortitude": 15,
+            "Will": 12
+        },
+        "Defense": {
+            "Slash": 18.1,
+            "Crush": 17.7,
+            "Pierce": 17.6,
+            "Blood": 17.5,
+            "Fire": 18.1,
+            "Ice": 17.8,
+            "Thunder": 18.3
+        },
+        "Resistance": {
+            "Disease": 55,
+            "Wound": 44,
+            "Bleed": 85,
+            "Curse": 61
+        }
+    },
+    {
+        "Name": "Acedia Bloodline: Zenon 2",
+        "Description": "Zenon's blood code. Features high-level stats and distinctive traits.\n\nHas high Strength, Dexterity, and Vitality.\n\nAllows the substitution of burden between stats, enabling a wide variety of weapon configuration builds. Also features unique effects that trigger during clear weather or while LP is depleted.\n\nMany of the Acedia Bloodline are both individualistic and tend towards intellectual endeavors. As such, the bonds between its members are fractured and superficial. Despite this, the seemingly unmatched potential of each individual has garnered the bloodline considerable influence.\n\nYet even among such company, Zenon is a revenant of unique and outstanding character.\n\nA man of such diverse talent, even his blood code captures only a fraction of his immeasurable traits.",
+        "Bloodline": "Acedia",
+        "Bleed": 58,
+        "Ichor": 16,
+        "Balance": 54,
+        "Attributes": {
+            "Strength": 25,
+            "Dexterity": 25,
+            "Mind": 13,
+            "Willpower": 0,
+            "Vitality": 26,
+            "Fortitude": 19,
+            "Will": 13
+        },
+        "Defense": {
+            "Slash": 18.1,
+            "Crush": 17.7,
+            "Pierce": 17.6,
+            "Blood": 17.5,
+            "Fire": 18.1,
+            "Ice": 17.8,
+            "Thunder": 18.3
+        },
+        "Resistance": {
+            "Disease": 55,
+            "Wound": 44,
+            "Bleed": 85,
+            "Curse": 61
+        }
+    },
+    {
+        "Name": "Patientia Bloodline: Iris 1",
+        "Description": "Iris's blood code. Its specialty is crushing foes with brute strength.\n\nHas high Strength and Vitality.\n\nUses its innately high Strength to increase balance and force foes to the ground.\n\nThe Patientia Bloodline is one which branched off from the Ira Bloodline. The prosperity of the Ira granted the Patientia Bloodline great numbers, many of whom excelled in combat and were in turn made combatants for the cardinal houses.\n\nIris was born beyond the frontier, in a region where the Ira Bloodline rules and the gap between the cardinal and minor houses sees many break away in search of new lands.\n\nPerhaps due to the severe conditions she was born into, Iris shares little regarding her origins.",
+        "Bloodline": "Patientia",
+        "Bleed": 28,
+        "Ichor": 12,
+        "Balance": 81,
+        "Attributes": {
+            "Strength": 16,
+            "Dexterity": 6,
+            "Mind": 6,
+            "Willpower": 0,
+            "Vitality": 15,
+            "Fortitude": 11,
+            "Will": 6
+        },
+        "Defense": {
+            "Slash": 21.3,
+            "Crush": 23.7,
+            "Pierce": 22.2,
+            "Blood": 14.4,
+            "Fire": 14.7,
+            "Ice": 14.9,
+            "Thunder": 18.8
+        },
+        "Resistance": {
+            "Disease": 62,
+            "Wound": 78,
+            "Bleed": 58,
+            "Curse": 41
+        }
+    },
+    {
+        "Name": "Patientia Bloodline: Iris 2",
+        "Description": "Iris's blood code. Its specialty is crushing foes with brute strength.\n\nHas high Strength and Vitality.\n\nUses its innately high Strength to increase balance and force foes to the ground.\n\nThe Patientia Bloodline is one which branched off from the Ira Bloodline. The prosperity of the Ira granted the Patientia Bloodline great numbers, many of whom excelled in combat and were in turn made combatants for the cardinal houses.\n\nIris was born beyond the frontier, in a region where the Ira Bloodline rules and the gap between the cardinal and minor houses sees many break away in search of new lands.\n\nPerhaps due to the severe conditions she was born into, Iris shares little regarding her origins.",
+        "Bloodline": "Patientia",
+        "Bleed": 28,
+        "Ichor": 12,
+        "Balance": 81,
+        "Attributes": {
+            "Strength": 20,
+            "Dexterity": 7,
+            "Mind": 7,
+            "Willpower": 0,
+            "Vitality": 18,
+            "Fortitude": 12,
+            "Will": 6
+        },
+        "Defense": {
+            "Slash": 21.3,
+            "Crush": 23.7,
+            "Pierce": 22.2,
+            "Blood": 14.4,
+            "Fire": 14.7,
+            "Ice": 14.9,
+            "Thunder": 18.8
+        },
+        "Resistance": {
+            "Disease": 62,
+            "Wound": 78,
+            "Bleed": 58,
+            "Curse": 41
+        }
+    },
+    {
+        "Name": "Patientia Bloodline: Iris 3",
+        "Description": "Iris's blood code. Its specialty is crushing foes with brute strength.\n\nHas high Strength and Vitality.\n\nUses its innately high Strength to increase balance and force foes to the ground.\n\nThe Patientia Bloodline is one which branched off from the Ira Bloodline. The prosperity of the Ira granted the Patientia Bloodline great numbers, many of whom excelled in combat and were in turn made combatants for the cardinal houses.\n\nIris was born beyond the frontier, in a region where the Ira Bloodline rules and the gap between the cardinal and minor houses sees many break away in search of new lands.\n\nPerhaps due to the severe conditions she was born into, Iris shares little regarding her origins.",
+        "Bloodline": "Patientia",
+        "Bleed": 28,
+        "Ichor": 12,
+        "Balance": 81,
+        "Attributes": {
+            "Strength": 32,
+            "Dexterity": 10,
+            "Mind": 12,
+            "Willpower": 0,
+            "Vitality": 27,
+            "Fortitude": 17,
+            "Will": 6
+        },
+        "Defense": {
+            "Slash": 21.3,
+            "Crush": 23.7,
+            "Pierce": 22.2,
+            "Blood": 14.4,
+            "Fire": 14.7,
+            "Ice": 14.9,
+            "Thunder": 18.8
+        },
+        "Resistance": {
+            "Disease": 62,
+            "Wound": 78,
+            "Bleed": 58,
+            "Curse": 41
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Lavinia 1",
+        "Description": "Lavinia's blood code. Geared toward magic formae and inflicting status ailments on foes.\n\nHas primarily high Willpower.\n\nIts trait makes it easier to inflict status ailments and overwhelm foes using formae.\n\nLavinia was born to a branch house of the Superbia Bloodline. She distinguished herself as a central figure in Voda House, and her outstanding ability to control formae was what attracted Progenitor Idris to her. Few are capable of controlling multiple complex formae the way Lavinia can, and she stands unchallenged when it comes to long-term stability and control.\n\nThough large in physique, she is soft-spoken and gentle mannered with an aversion to combat. All of which comes through in the traits of her blood code.",
+        "Bloodline": "Superbia",
+        "Bleed": 57,
+        "Ichor": 22,
+        "Balance": 32,
+        "Attributes": {
+            "Strength": 9,
+            "Dexterity": 9,
+            "Mind": 10,
+            "Willpower": 0,
+            "Vitality": 8,
+            "Fortitude": 10,
+            "Will": 14
+        },
+        "Defense": {
+            "Slash": 9.2,
+            "Crush": 8.5,
+            "Pierce": 9.3,
+            "Blood": 15.2,
+            "Fire": 12.8,
+            "Ice": 12.8,
+            "Thunder": 12.8
+        },
+        "Resistance": {
+            "Disease": 35,
+            "Wound": 60,
+            "Bleed": 65,
+            "Curse": 80
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Lavinia 2",
+        "Description": "Lavinia's blood code. Geared toward magic formae and inflicting status ailments on foes.\n\nHas primarily high Willpower.\n\nIts trait makes it easier to inflict status ailments and overwhelm foes using formae.\n\nLavinia was born to a branch house of the Superbia Bloodline. She distinguished herself as a central figure in Voda House, and her outstanding ability to control formae was what attracted Progenitor Idris to her. Few are capable of controlling multiple complex formae the way Lavinia can, and she stands unchallenged when it comes to long-term stability and control.\n\nThough large in physique, she is soft-spoken and gentle mannered with an aversion to combat. All of which comes through in the traits of her blood code.",
+        "Bloodline": "Superbia",
+        "Bleed": 57,
+        "Ichor": 22,
+        "Balance": 32,
+        "Attributes": {
+            "Strength": 9,
+            "Dexterity": 9,
+            "Mind": 12,
+            "Willpower": 0,
+            "Vitality": 9,
+            "Fortitude": 12,
+            "Will": 18
+        },
+        "Defense": {
+            "Slash": 9.2,
+            "Crush": 8.5,
+            "Pierce": 9.3,
+            "Blood": 15.2,
+            "Fire": 12.8,
+            "Ice": 12.8,
+            "Thunder": 12.8
+        },
+        "Resistance": {
+            "Disease": 35,
+            "Wound": 60,
+            "Bleed": 65,
+            "Curse": 80
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Lavinia 3",
+        "Description": "Lavinia's blood code. Geared toward magic formae and inflicting status ailments on foes.\n\nHas primarily high Willpower.\n\nIts trait makes it easier to inflict status ailments and overwhelm foes using formae.\n\nLavinia was born to a branch house of the Superbia Bloodline. She distinguished herself as a central figure in Voda House, and her outstanding ability to control formae was what attracted Progenitor Idris to her. Few are capable of controlling multiple complex formae the way Lavinia can, and she stands unchallenged when it comes to long-term stability and control.\n\nThough large in physique, she is soft-spoken and gentle mannered with an aversion to combat. All of which comes through in the traits of her blood code.",
+        "Bloodline": "Superbia",
+        "Bleed": 57,
+        "Ichor": 22,
+        "Balance": 32,
+        "Attributes": {
+            "Strength": 11,
+            "Dexterity": 11,
+            "Mind": 20,
+            "Willpower": 0,
+            "Vitality": 13,
+            "Fortitude": 20,
+            "Will": 34
+        },
+        "Defense": {
+            "Slash": 9.2,
+            "Crush": 8.5,
+            "Pierce": 9.3,
+            "Blood": 15.2,
+            "Fire": 12.8,
+            "Ice": 12.8,
+            "Thunder": 12.8
+        },
+        "Resistance": {
+            "Disease": 35,
+            "Wound": 60,
+            "Bleed": 65,
+            "Curse": 80
+        }
+    },
+    {
+        "Name": "Acedia Bloodline: Jadwiga 1",
+        "Description": "Jadwiga's blood code. Suited for magic formae and bayonets.\n\nHas high Dexterity and Willpower.\n\nSupports long-range suppression tactics with its ability to increase the power of magic formae, as well as allowing the use of HP to fire when out of ammo.\n\nThe Acedia Bloodline are masters of formae and other revenant techniques. World-renowned innovators and inventors, many have occupied key positions in the worlds of both politics and finance throughout history.\n\nAs the name of their bloodline suggests, most from it are given to indolent tendencies. But time spent idly can on occasion be a boon, fostering ingenuity.\n\nJadwiga's blood code itself is a prime example. Preferring not to bother with direct combat, she has ingeniously perfected it for devastating efficiency from a distance.",
+        "Bloodline": "Acedia",
+        "Bleed": 57,
+        "Ichor": 20,
+        "Balance": 52,
+        "Attributes": {
+            "Strength": 10,
+            "Dexterity": 13,
+            "Mind": 10,
+            "Willpower": 0,
+            "Vitality": 8,
+            "Fortitude": 10,
+            "Will": 13
+        },
+        "Defense": {
+            "Slash": 12.3,
+            "Crush": 11.4,
+            "Pierce": 11.7,
+            "Blood": 14.0,
+            "Fire": 13.7,
+            "Ice": 14.6,
+            "Thunder": 13.7
+        },
+        "Resistance": {
+            "Disease": 65,
+            "Wound": 54,
+            "Bleed": 57,
+            "Curse": 63
+        }
+    },
+    {
+        "Name": "Acedia Bloodline: Jadwiga 2",
+        "Description": "Jadwiga's blood code. Suited for magic formae and bayonets.\n\nHas high Dexterity and Willpower.\n\nSupports long-range suppression tactics with its ability to increase the power of magic formae, as well as allowing the use of HP to fire when out of ammo.\n\nThe Acedia Bloodline are masters of formae and other revenant techniques. World-renowned innovators and inventors, many have occupied key positions in the worlds of both politics and finance throughout history.\n\nAs the name of their bloodline suggests, most from it are given to indolent tendencies. But time spent idly can on occasion be a boon, fostering ingenuity.\n\nJadwiga's blood code itself is a prime example. Preferring not to bother with direct combat, she has ingeniously perfected it for devastating efficiency from a distance.",
+        "Bloodline": "Acedia",
+        "Bleed": 57,
+        "Ichor": 20,
+        "Balance": 52,
+        "Attributes": {
+            "Strength": 10,
+            "Dexterity": 17,
+            "Mind": 12,
+            "Willpower": 0,
+            "Vitality": 11,
+            "Fortitude": 13,
+            "Will": 21
+        },
+        "Defense": {
+            "Slash": 12.3,
+            "Crush": 11.4,
+            "Pierce": 11.7,
+            "Blood": 14.0,
+            "Fire": 13.7,
+            "Ice": 14.6,
+            "Thunder": 13.7
+        },
+        "Resistance": {
+            "Disease": 65,
+            "Wound": 54,
+            "Bleed": 57,
+            "Curse": 63
+        }
+    },
+    {
+        "Name": "Acedia Bloodline: Jadwiga 3",
+        "Description": "Jadwiga's blood code. Suited for magic formae and bayonets.\n\nHas high Dexterity and Willpower.\n\nSupports long-range suppression tactics with its ability to increase the power of magic formae, as well as allowing the use of HP to fire when out of ammo.\n\nThe Acedia Bloodline are masters of formae and other revenant techniques. World-renowned innovators and inventors, many have occupied key positions in the worlds of both politics and finance throughout history.\n\nAs the name of their bloodline suggests, most from it are given to indolent tendencies. But time spent idly can on occasion be a boon, fostering ingenuity.\n\nJadwiga's blood code itself is a prime example. Preferring not to bother with direct combat, she has ingeniously perfected it for devastating efficiency from a distance.",
+        "Bloodline": "Acedia",
+        "Bleed": 57,
+        "Ichor": 20,
+        "Balance": 52,
+        "Attributes": {
+            "Strength": 10,
+            "Dexterity": 23,
+            "Mind": 15,
+            "Willpower": 0,
+            "Vitality": 15,
+            "Fortitude": 18,
+            "Will": 33
+        },
+        "Defense": {
+            "Slash": 12.3,
+            "Crush": 11.4,
+            "Pierce": 11.7,
+            "Blood": 14.0,
+            "Fire": 13.7,
+            "Ice": 14.6,
+            "Thunder": 13.7
+        },
+        "Resistance": {
+            "Disease": 65,
+            "Wound": 54,
+            "Bleed": 57,
+            "Curse": 63
+        }
+    },
+    {
+        "Name": "Superbia Bloodline: Frantz",
+        "Description": "Frantz's blood code. Highly effective with bayonets.\n\nHas a high Dexterity value, but imposes a constant burden.\n\nIts ability to increase the loading capacity of bayonets makes it well-suited for shooting-centric strategies.",
+        "Bloodline": "Superbia",
+        "Bleed": 68,
+        "Ichor": 18,
+        "Balance": 59,
+        "Attributes": {
+            "Strength": 10,
+            "Dexterity": 15,
+            "Mind": 8,
+            "Willpower": 0,
+            "Vitality": 10,
+            "Fortitude": 12,
+            "Will": 12
+        },
+        "Defense": {
+            "Slash": 13.2,
+            "Crush": 15.3,
+            "Pierce": 15.9,
+            "Blood": 27.5,
+            "Fire": 11.4,
+            "Ice": 12.3,
+            "Thunder": 12.8
+        },
+        "Resistance": {
+            "Disease": 41,
+            "Wound": 41,
+            "Bleed": 79,
+            "Curse": 76
+        }
+    },
+    {
+        "Name": "Jos\u00e9e the Blind Hero",
+        "Description": "The blood code of Jos\u00e9e the Blind Hero. Highly suited to close-quarters combat.\n\nHas high Strength, Dexterity, Vitality, and Fortitude but imposes a constant burden.\n\nIn addition to increasing attack power after dodging, it also increases the attack power of the bequeathed forma, Bloodreaver Blade. It is well-suited to fighting styles focused on counterattacking.",
+        "Bloodline": "Gula",
+        "Bleed": 43,
+        "Ichor": 16,
+        "Balance": 68,
+        "Attributes": {
+            "Strength": 17,
+            "Dexterity": 17,
+            "Mind": 10,
+            "Willpower": 0,
+            "Vitality": 14,
+            "Fortitude": 14,
+            "Will": 5
+        },
+        "Defense": {
+            "Slash": 12.5,
+            "Crush": 12.7,
+            "Pierce": 12.8,
+            "Blood": 13.9,
+            "Fire": 10.1,
+            "Ice": 13.7,
+            "Thunder": 14.4
+        },
+        "Resistance": {
+            "Disease": 62,
+            "Wound": 60,
+            "Bleed": 54,
+            "Curse": 73
+        }
+    },
+    {
+        "Name": "Hero Jos\u00e9e",
+        "Description": "The blood code of the hero Jos\u00e9e. Supports a balanced fighting style that incorporates both offense and support.\n\nHas high Strength and Mind, but imposes a constant burden.\n\nIt increases the attack power of combat formae. However, it also increases their ichor cost, so judicious use is advised.",
+        "Bloodline": "Gula",
+        "Bleed": 64,
+        "Ichor": 18,
+        "Balance": 48,
+        "Attributes": {
+            "Strength": 20,
+            "Dexterity": 14,
+            "Mind": 20,
+            "Willpower": 0,
+            "Vitality": 15,
+            "Fortitude": 15,
+            "Will": 12
+        },
+        "Defense": {
+            "Slash": 13.7,
+            "Crush": 14.4,
+            "Pierce": 13.5,
+            "Blood": 14.7,
+            "Fire": 10.6,
+            "Ice": 14.7,
+            "Thunder": 14.6
+        },
+        "Resistance": {
+            "Disease": 62,
+            "Wound": 60,
+            "Bleed": 51,
+            "Curse": 70
+        }
+    },
+    {
+        "Name": "One-Armed Hero Lyle",
+        "Description": "The blood code of One-Armed Hero Lyle, focused on overwhelming foes with sheer strength.\n\nHas especially high Strength, but imposes a constant burden.\n\nIncreases the effectiveness of the bequeathed forma, Absolute Executioner, turning it into a nonstop threat perfect for high-firepower fighting styles.",
+        "Bloodline": "Patientia",
+        "Bleed": 35,
+        "Ichor": 15,
+        "Balance": 67,
+        "Attributes": {
+            "Strength": 26,
+            "Dexterity": 10,
+            "Mind": 6,
+            "Willpower": 0,
+            "Vitality": 19,
+            "Fortitude": 15,
+            "Will": 8
+        },
+        "Defense": {
+            "Slash": 18.3,
+            "Crush": 17.9,
+            "Pierce": 18.2,
+            "Blood": 18.5,
+            "Fire": 14.5,
+            "Ice": 15.2,
+            "Thunder": 11.5
+        },
+        "Resistance": {
+            "Disease": 65,
+            "Wound": 79,
+            "Bleed": 52,
+            "Curse": 42
+        }
+    },
+    {
+        "Name": "Hero Lyle",
+        "Description": "The blood code of the hero Lyle. It has a learning curve, but also holds much hidden potential.\n\nHas especially high Dexterity, but imposes a constant burden.\n\nIn exchange for increased attack power, attacks consume LP. A sound understanding of battle tactics is required to make the most of this blood code.",
+        "Bloodline": "Patientia",
+        "Bleed": 31,
+        "Ichor": 16,
+        "Balance": 22,
+        "Attributes": {
+            "Strength": 10,
+            "Dexterity": 30,
+            "Mind": 8,
+            "Willpower": 0,
+            "Vitality": 6,
+            "Fortitude": 18,
+            "Will": 12
+        },
+        "Defense": {
+            "Slash": 6.8,
+            "Crush": 6.5,
+            "Pierce": 7.2,
+            "Blood": 5.6,
+            "Fire": 6.7,
+            "Ice": 7.1,
+            "Thunder": 8.9
+        },
+        "Resistance": {
+            "Disease": 56,
+            "Wound": 76,
+            "Bleed": 51,
+            "Curse": 43
+        }
+    },
+    {
+        "Name": "Pioneer Queen Imogen",
+        "Description": "The blood code of Imogen, the Pioneer Queen. Effective for close-quarters combat and making use of status ailments.\n\nHas high Strength and Dexterity, but imposes a constant burden.\n\nThis blood code's ability to deal increased damage to foes that are under the effects of a status ailment is the core of its unique strategy.",
+        "Bloodline": "Patientia",
+        "Bleed": 60,
+        "Ichor": 16,
+        "Balance": 36,
+        "Attributes": {
+            "Strength": 19,
+            "Dexterity": 22,
+            "Mind": 6,
+            "Willpower": 0,
+            "Vitality": 14,
+            "Fortitude": 11,
+            "Will": 12
+        },
+        "Defense": {
+            "Slash": 12.3,
+            "Crush": 12.4,
+            "Pierce": 12.1,
+            "Blood": 12.4,
+            "Fire": 12.0,
+            "Ice": 13.7,
+            "Thunder": 16.0
+        },
+        "Resistance": {
+            "Disease": 58,
+            "Wound": 73,
+            "Bleed": 57,
+            "Curse": 44
+        }
+    },
+    {
+        "Name": "Hero Holly the Reaper",
+        "Description": "The blood code of Hero Holly the Reaper. Produces massive firepower by limiting formae.\n\nHas high Dexterity and Willpower, but imposes a constant burden.\n\nIt has the ability to increase overall attack power, but in exchange it decreases the speed of forma use, requiring caution when maneuvering.",
+        "Bloodline": "Luxuria",
+        "Bleed": 51,
+        "Ichor": 19,
+        "Balance": 40,
+        "Attributes": {
+            "Strength": 9,
+            "Dexterity": 20,
+            "Mind": 12,
+            "Willpower": 0,
+            "Vitality": 12,
+            "Fortitude": 14,
+            "Will": 20
+        },
+        "Defense": {
+            "Slash": 8.6,
+            "Crush": 8.8,
+            "Pierce": 9.1,
+            "Blood": 14.3,
+            "Fire": 13.9,
+            "Ice": 13.5,
+            "Thunder": 10.0
+        },
+        "Resistance": {
+            "Disease": 81,
+            "Wound": 62,
+            "Bleed": 61,
+            "Curse": 40
+        }
+    },
+    {
+        "Name": "Hero Holly",
+        "Description": "The blood code of the hero Holly. Specialized in long-ranged attacks, primarily those of magic formae.\n\nHas especially high Willpower, but it imposes a constant burden.\n\nIts ability to increase the attack power of the bequeathed forma MK Rosenritter makes it shine against groups of foes.",
+        "Bloodline": "Luxuria",
+        "Bleed": 63,
+        "Ichor": 23,
+        "Balance": 47,
+        "Attributes": {
+            "Strength": 10,
+            "Dexterity": 22,
+            "Mind": 11,
+            "Willpower": 0,
+            "Vitality": 10,
+            "Fortitude": 16,
+            "Will": 26
+        },
+        "Defense": {
+            "Slash": 6.7,
+            "Crush": 7.1,
+            "Pierce": 6.9,
+            "Blood": 12.0,
+            "Fire": 12.2,
+            "Ice": 12.4,
+            "Thunder": 7.9
+        },
+        "Resistance": {
+            "Disease": 85,
+            "Wound": 62,
+            "Bleed": 60,
+            "Curse": 38
+        }
+    },
+    {
+        "Name": "Lost Camilo",
+        "Description": "The blood code of Camilo after he lost himself. Its specialty is oppressive offense with high balance.\n\nHas high Strength and Vitality, but imposes a constant burden.\n\nIts special ability to increase the balance of charge attacks enables a bold fighting style to force one's way through with high-power attacks.",
+        "Bloodline": "Luxuria",
+        "Bleed": 47,
+        "Ichor": 11,
+        "Balance": 70,
+        "Attributes": {
+            "Strength": 24,
+            "Dexterity": 10,
+            "Mind": 12,
+            "Willpower": 0,
+            "Vitality": 26,
+            "Fortitude": 15,
+            "Will": 8
+        },
+        "Defense": {
+            "Slash": 17.5,
+            "Crush": 16.9,
+            "Pierce": 17.1,
+            "Blood": 12.7,
+            "Fire": 12.8,
+            "Ice": 13.2,
+            "Thunder": 13.1
+        },
+        "Resistance": {
+            "Disease": 81,
+            "Wound": 64,
+            "Bleed": 58,
+            "Curse": 35
+        }
+    },
+    {
+        "Name": "Hero Zenon",
+        "Description": "The blood code of the hero Zenon. It increases stats to a high level and extends the capabilities of support formae.\n\nHas high Strength, Dexterity, Mind, and Vitality, but imposes a constant burden.\n\nIts ability to extend the duration of support formae allows strategies that are dependent upon raising combat ability to a certain level.",
+        "Bloodline": "Acedia",
+        "Bleed": 56,
+        "Ichor": 17,
+        "Balance": 43,
+        "Attributes": {
+            "Strength": 18,
+            "Dexterity": 18,
+            "Mind": 22,
+            "Willpower": 0,
+            "Vitality": 20,
+            "Fortitude": 15,
+            "Will": 12
+        },
+        "Defense": {
+            "Slash": 15.8,
+            "Crush": 15.6,
+            "Pierce": 16.4,
+            "Blood": 16.5,
+            "Fire": 16.0,
+            "Ice": 16.4,
+            "Thunder": 15.7
+        },
+        "Resistance": {
+            "Disease": 63,
+            "Wound": 40,
+            "Bleed": 85,
+            "Curse": 57
+        }
+    },
+    {
+        "Name": "Hero Valentin",
+        "Description": "The blood code of the hero Valentin. Highly effective at close-range offense and making use of multiple weapons.\n\nHas especially high Strength and Dexterity, but imposes a constant burden.\n\nBurden is reduced when two weapons are equipped. The two weapons and associated formae can unleash a diversity of simultaneous actions. It also has a rare HP recovery trait.",
+        "Bloodline": "Superbia",
+        "Bleed": 50,
+        "Ichor": 16,
+        "Balance": 33,
+        "Attributes": {
+            "Strength": 33,
+            "Dexterity": 33,
+            "Mind": 10,
+            "Willpower": 0,
+            "Vitality": 12,
+            "Fortitude": 20,
+            "Will": 16
+        },
+        "Defense": {
+            "Slash": 9.0,
+            "Crush": 9.2,
+            "Pierce": 9.2,
+            "Blood": 14.7,
+            "Fire": 13.4,
+            "Ice": 13.2,
+            "Thunder": 12.4
+        },
+        "Resistance": {
+            "Disease": 42,
+            "Wound": 64,
+            "Bleed": 65,
+            "Curse": 82
+        }
+    },
+    {
+        "Name": "Soul Savior Valentin",
+        "Description": "The blood code of Valentin, Savior of Souls. It boasts all-around high-level stats.\n\nHas high Strength, Dexterity, and Willpower, but imposes a constant burden.\n\nThis blood code allows you to ignore bloodline-based equipment limitations, enabling highly expressive, free-form loadouts.",
+        "Bloodline": "Superbia",
+        "Bleed": 60,
+        "Ichor": 17,
+        "Balance": 49,
+        "Attributes": {
+            "Strength": 26,
+            "Dexterity": 26,
+            "Mind": 16,
+            "Willpower": 0,
+            "Vitality": 16,
+            "Fortitude": 18,
+            "Will": 30
+        },
+        "Defense": {
+            "Slash": 12.3,
+            "Crush": 11.9,
+            "Pierce": 11.8,
+            "Blood": 13.6,
+            "Fire": 11.8,
+            "Ice": 12.3,
+            "Thunder": 11.0
+        },
+        "Resistance": {
+            "Disease": 47,
+            "Wound": 60,
+            "Bleed": 67,
+            "Curse": 82
+        }
+    },
+    {
+        "Name": "Resurgence Core",
+        "Description": "This blood code overwhelms foes through the use of powerful strength and by inflicting unique ailments.\n\nHas especially high Strength, but imposes a constant burden.\n\nReduces foes' defense when attacks hit. Skilled use of this trait makes its already high damage output go even further.",
+        "Bloodline": "Superbia",
+        "Bleed": 40,
+        "Ichor": 16,
+        "Balance": 63,
+        "Attributes": {
+            "Strength": 38,
+            "Dexterity": 12,
+            "Mind": 16,
+            "Willpower": 0,
+            "Vitality": 24,
+            "Fortitude": 15,
+            "Will": 16
+        },
+        "Defense": {
+            "Slash": 17.1,
+            "Crush": 14.9,
+            "Pierce": 15.2,
+            "Blood": 18.2,
+            "Fire": 17.2,
+            "Ice": 17.1,
+            "Thunder": 15.4
+        },
+        "Resistance": {
+            "Disease": 49,
+            "Wound": 63,
+            "Bleed": 75,
+            "Curse": 78
+        }
+    },
+    {
+        "Name": "Guardian's Heart",
+        "Description": "An ancient revenant's blood code with high stats in close-quarter combat.\n\nHas high Strength, Dexterity, and Vitality.\n\nAs it has no special traits or unique benefits, it does not restrict the type of strategies that can be used, but it can also be seen as somewhat lacking in performance.\n\nHunters have long made use of Guardian Hearts\u2014jewels fabricated from the hearts of revenants.\n\nThough they allow for the use of powers unbound from a revenant, their effects are limited.\n\nPrior to the Resurgence, before society was transformed and hunters and revenants began working together, all hunters fought using blood codes such as this.",
+        "Bloodline": "Caritas",
+        "Bleed": 41,
+        "Ichor": 14,
+        "Balance": 66,
+        "Attributes": {
+            "Strength": 12,
+            "Dexterity": 12,
+            "Mind": 8,
+            "Willpower": 0,
+            "Vitality": 12,
+            "Fortitude": 10,
+            "Will": 8
+        },
+        "Defense": {
+            "Slash": 17.0,
+            "Crush": 16.8,
+            "Pierce": 18.8,
+            "Blood": 6.8,
+            "Fire": 9.5,
+            "Ice": 9.9,
+            "Thunder": 9.5
+        },
+        "Resistance": {
+            "Disease": 42,
+            "Wound": 58,
+            "Bleed": 42,
+            "Curse": 38
+        }
+    }
+]

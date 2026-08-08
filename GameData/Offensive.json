@@ -1,0 +1,74 @@
+[
+    {
+        "Name": "Absolute Executioner",
+        "Description": "An executioner's sword wreathed in spinning gears and sparking blades.\n\nUnleashes a multi-hit downward strike. Hold <img id=\"Input.Action.Player.StandAloneGadget\" height=\"desired\" align=\"center\"/> to increase the number of hits.",
+        "IchorCost": 6,
+        "Scaling": {
+            "Strength": "S+",
+        }
+    },
+    {
+        "Name": "Battle Axe: Idris's Conceit",
+        "Description": "A special axe that generates a temporal force field.\n\nStriking with the axe creates a wide-area shock wave. The axe's swing can easily break through shields, and its force field gradually builds up the slow status ailment.",
+        "IchorCost": 5,
+        "Scaling": {
+            "Strength": "A",
+            "Dexterity": "C+",
+            "Mind": "S",
+        }
+    },
+    {
+        "Name": "Bloodreaver Blade",
+        "Description": "A long blade that slashes foes with a flash-draw strike.\n\nHold <img id=\"Input.Action.Player.StandAloneGadget\" height=\"desired\" align=\"center\"/> to enter a ready stance. Release to perform a slash draw. The timing of the release affects both motion and power. A well-timed release delivers a significantly stronger blow.",
+        "IchorCost": 4,
+        "Scaling": {
+            "Strength": "S",
+            "Dexterity": "A",
+            "Mind": "B",
+        }
+    },
+    {
+        "Name": "Manus Rapacis",
+        "Description": "A grotesque hand that channels the Resurgence's power into a searing beam of light.\n\nFires a long-range laser directly ahead in a straight line. While firing, you can use <img id=\"Player_Camera\" height=\"desired\" align=\"center\"/> to adjust the beam's direction.",
+        "IchorCost": 6,
+        "Scaling": {
+            "Willpower": "S+",
+        }
+    },
+    {
+        "Name": "MK Rosenritter",
+        "Description": "Twin triple-barreled Gatling guns that turn a wide area into a bullet storm.\n\nReady the gun and move the camera to aim, then fire by pressing <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/>. You can also move while aiming. Sustains continuous fire as long as the button is held and ichor remains.",
+        "IchorCost": 1,
+        "Scaling": {
+            "Dexterity": "A",
+            "Willpower": "S",
+        }
+    },
+    {
+        "Name": "Statesman's Longbow",
+        "Description": "A bow that fires arrows of light at incredible speed.\n\nReady the bow and move the camera to aim, then press <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to fire. You can also move while aiming. Holding <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> increases its power.",
+        "IchorCost": 1,
+        "Scaling": {
+            "Dexterity": "S",
+            "Willpower": "A",
+        }
+    },
+    {
+        "Name": "Warhammer of the Fool",
+        "Description": "A fire-belching hammer with three forms.\n\nInitiates a chain of attacks starting from a heavy downward swing. \n\n<img id=\"Input.Action.Player.StandAloneGadget\" height=\"desired\" align=\"center\"/>: Cast forma.\nAfter use, hold <img id=\"Input.Action.Player.StandAloneGadget\" height=\"desired\" align=\"center\"/> and press <img id=\"Input.Action.Player.LightAttack\" height=\"desired\" align=\"center\"/>: Trigger a two-hit combo.\nAfter combo, hold <img id=\"Input.Action.Player.StandAloneGadget\" height=\"desired\" align=\"center\"/> and press <img id=\"Input.Action.Player.LightAttack\" height=\"desired\" align=\"center\"/>, <img id=\"Input.Action.Player.HeavyAttack\" height=\"desired\" align=\"center\"/>, or <img id=\"Input.Action.Player.Dodge\" height=\"desired\" align=\"center\"/>: Trigger a unique finisher move.\n\nThe finisher changes depending on which additional button is pressed.",
+        "IchorCost": 2,
+        "Scaling": {
+            "Strength": "S",
+            "Dexterity": "S",
+        }
+    },
+    {
+        "Name": "Wings of Eternity",
+        "Description": "The twisted wings of Valentin, transfigured into forma.\n\nRains countless spears of light from above, bombarding a wide area.",
+        "IchorCost": 10,
+        "Scaling": {
+            "Mind": "S",
+            "Willpower": "S",
+        }
+    }
+]
