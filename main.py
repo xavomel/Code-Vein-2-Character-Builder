@@ -112,6 +112,14 @@ def main():
     form.show()
     form.placeDynamicUIElements()
 
+    # sorting order (e.g. weapons order) is dependent on .json
+    # json [] guarantees order is preserved, make sure to add to dict in order
+
+    # build save / load will require a mapping table
+    # since there is no short unique identifier for items (e.g. weapons)
+
+    # sorting order cannot be an unique identifier, because order may change in DLC
+
     app.exec()
     
 
