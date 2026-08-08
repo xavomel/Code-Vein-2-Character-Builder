@@ -1,5 +1,6 @@
 from PySide6.QtCore import QCoreApplication, QRect, Qt, QSize, QDir, QPointF
-from PySide6.QtGui import QAction, QGuiApplication, QIcon, QFont, QFontDatabase, QPainter, QPen, QColor, QPolygonF
+from PySide6.QtGui import QAction, QGuiApplication, QIcon, QFont, QFontDatabase, \
+    QPainter, QPen, QColor, QPolygonF, QPixmap
 from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QSpacerItem, \
     QSizePolicy, QToolButton, QPushButton, QProgressBar, QApplication, QListView, QListWidget, QListWidgetItem, \
     QAbstractScrollArea
@@ -15,21 +16,22 @@ class Ui_MainWindow(object):
         # if we want to place a widget outside layout, but matching position of widget in layout
         # then we can only do so after window is shown
 
+        # get source widget dimensions and create dynamic element in same place
         # weapon 1 transform
-        r1 = self.tool_button_h2_v1_h1_1.geometry()
-        self.tool_button_h2_v1_h1_1a.setGeometry(QRect(r1.x(), r1.y(), 25, 25))
+        wp1_geo = self.tool_button_h2_v1_h1_1.geometry()
+        self.tool_button_h2_v1_h1_1a.setGeometry(QRect(wp1_geo.x(), wp1_geo.y(), 25, 25))
         self.tool_button_h2_v1_h1_1a.raise_()
         self.tool_button_h2_v1_h1_1a.show()
 
         # weapon 2 transform
-        r2 = self.tool_button_h2_v2_h1_1.geometry()
-        self.tool_button_h2_v2_h1_1a.setGeometry(QRect(r2.x(), r2.y(), 25, 25))
+        wp2_geo = self.tool_button_h2_v2_h1_1.geometry()
+        self.tool_button_h2_v2_h1_1a.setGeometry(QRect(wp2_geo.x(), wp2_geo.y(), 25, 25))
         self.tool_button_h2_v2_h1_1a.raise_()
         self.tool_button_h2_v2_h1_1a.show()
 
         # defensive transform
-        r3 = self.tool_button_h2_v3_h1_2.geometry()
-        self.tool_button_h2_v3_h1_2a.setGeometry(QRect(r3.x(), r3.y(), 25, 25))
+        def_geo = self.tool_button_h2_v3_h1_2.geometry()
+        self.tool_button_h2_v3_h1_2a.setGeometry(QRect(def_geo.x(), def_geo.y(), 25, 25))
         self.tool_button_h2_v3_h1_2a.raise_()
         self.tool_button_h2_v3_h1_2a.show()
 
@@ -1336,7 +1338,12 @@ class Ui_MainWindow(object):
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
-        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+
+        if "Weapon_1" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_weapon_1_clicked)
+        elif "Weapon_2" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_weapon_2_clicked)
+
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
@@ -1356,8 +1363,10 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for blood_code in QDir("Weapon/Bayonet").entryInfoList(["*.png"]):
-            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+        for weapon in QDir("Weapon/RuneBlade").entryInfoList(["*.png"]):
+            item = QListWidgetItem(QIcon(weapon.filePath()), "")
+            item.setStatusTip(weapon.fileName())
+            self.side_menu_content.addItem(item)
 
     def fill_side_menu_transform(self):
         self.side_menu_buttons.clear()
@@ -1543,6 +1552,41 @@ class Ui_MainWindow(object):
         new_icon.addFile(u":/Transform/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         widget.setIcon(new_icon)
 
+    def handle_weapon_1_clicked(self, item):
+        widget = self.tool_button_h2_v1_h1_1
+        self.handle_weapon_clicked(widget, item)
+
+    def handle_weapon_2_clicked(self, item):
+        widget = self.tool_button_h2_v2_h1_1
+        self.handle_weapon_clicked(widget, item)
+
+    def handle_weapon_clicked(self, widget, item):
+        icon_1 = QIcon()
+        icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_2 = QIcon()
+        icon_2.addFile(u"Weapon/RuneBlade/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
+        # (such that it looks good and button remains clickable)
+        # merge icons instead to accomplish this
+        new_icon = self.merge_icons(icon_1, icon_2, 150)
+        widget.setIcon(new_icon)
+
+    def merge_icons(self, icon_1, icon_2, size):
+        pixmap1 = icon_1.pixmap(size, QIcon.Mode.Normal, QIcon.State.Off)
+        pixmap2 = icon_2.pixmap(size, QIcon.Mode.Normal, QIcon.State.Off)
+        image1 = pixmap1.toImage()
+        image2 = pixmap2.toImage()
+
+        # draw image 2 on top of image 1
+        painter = QPainter(image1)
+        painter.drawImage(0, 0, image2)
+        painter.end()
+
+        pixmap_3 = QPixmap.fromImage(image1)
+        icon_3 = QIcon()
+        icon_3.addPixmap(pixmap_3, QIcon.Mode.Normal, QIcon.State.Off)
+        return icon_3
+
     def calculate_buttons_end(self):
         # calculate y position of end of visible content for side menu buttons
 
@@ -1724,9 +1768,9 @@ class MyQListWidget(QListWidget):
         # then we potentially don't need exit
         self.hovered_item = item
         # self.setCurrentItem(item) can be used for highlight, but maybe just do CSS ?
-        print("entered", self.hovered_item)
+        # print("entered", self.hovered_item)
 
     def leaveEvent(self, QEvent):
-        print("exited", self.hovered_item)
+        # print("exited", self.hovered_item)
         self.hovered_item = None
-        self.window().close_side_menu()
+        # self.window().close_side_menu()
