@@ -703,7 +703,7 @@ class Ui_MainWindow(object):
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1 content - grid layout
         self.grid_layout_h2_v3_h1_1 = QGridLayout()
         self.grid_layout_h2_v3_h1_1.setObjectName(u"grid_layout_h2_v3_h1_1")
-        self.grid_layout_h2_v3_h1_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
+        self.grid_layout_h2_v3_h1_1.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
         self.horizontal_layout_h2_v3_1.addLayout(self.grid_layout_h2_v3_h1_1)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1 content - grid layout content
@@ -1480,7 +1480,7 @@ class Ui_MainWindow(object):
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
-        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemClicked.connect(self.handle_offensive_clicked)
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
@@ -1492,8 +1492,10 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for blood_code in QDir("Offensive").entryInfoList(["*.png"]):
-            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+        for offensive in QDir("Offensive").entryInfoList(["*.png"]):
+            item = QListWidgetItem(QIcon(offensive.filePath()), "")
+            item.setStatusTip(offensive.fileName())
+            self.side_menu_content.addItem(item)
 
     def fill_side_menu_defensive(self):
         self.side_menu_buttons.clear()
@@ -1505,7 +1507,7 @@ class Ui_MainWindow(object):
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
-        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemClicked.connect(self.handle_defensive_clicked)
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
@@ -1523,8 +1525,10 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for blood_code in QDir("Defensive").entryInfoList(["*.png"]):
-            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+        for defensive in QDir("Defensive").entryInfoList(["*.png"]):
+            item = QListWidgetItem(QIcon(defensive.filePath()), "")
+            item.setStatusTip(defensive.fileName())
+            self.side_menu_content.addItem(item)
 
     def fill_side_menu_jail(self):
         self.side_menu_buttons.clear()
@@ -1536,7 +1540,7 @@ class Ui_MainWindow(object):
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
-        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemClicked.connect(self.handle_jail_clicked)
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
@@ -1548,8 +1552,10 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for blood_code in QDir("Jail").entryInfoList(["*.png"]):
-            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+        for jail in QDir("Jail").entryInfoList(["*.png"]):
+            item = QListWidgetItem(QIcon(jail.filePath()), "")
+            item.setStatusTip(jail.fileName())
+            self.side_menu_content.addItem(item)
 
     def filter_side_content_menu(self, item):
         chosen = item.text()
@@ -1600,9 +1606,7 @@ class Ui_MainWindow(object):
         icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
         icon_2.addFile(u"Weapon/RuneBlade/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
-        # (such that it looks good and button remains clickable)
-        # merge icons instead to accomplish this
+
         new_icon = self.merge_icons(icon_1, icon_2, 150)
         widget.setIcon(new_icon)
 
@@ -1612,6 +1616,33 @@ class Ui_MainWindow(object):
         new_icon.addFile(u"BloodCode/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.tool_button_h2_v3_h2_1.setIcon(new_icon)
         # self.tool_button_h2_v3_h2_1.setText(item.statusTip())
+
+    def handle_offensive_clicked(self, item):
+        icon_1 = QIcon()
+        icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_2 = QIcon()
+        icon_2.addFile(u"Offensive/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        new_icon = self.merge_icons(icon_1, icon_2, 150)
+        self.tool_button_h2_v3_h1_1.setIcon(new_icon)
+        self.tool_button_h2_v3_h1_1.setText("123")
+
+    def handle_defensive_clicked(self, item):
+        icon_1 = QIcon()
+        icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_2 = QIcon()
+        icon_2.addFile(u"Defensive/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        new_icon = self.merge_icons(icon_1, icon_2, 150)
+        self.tool_button_h2_v3_h1_2.setIcon(new_icon)
+        self.tool_button_h2_v3_h1_2.setText("123")
+
+    def handle_jail_clicked(self, item):
+        icon_1 = QIcon()
+        icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_2 = QIcon()
+        icon_2.addFile(u"Jail/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        new_icon = self.merge_icons(icon_1, icon_2, 150)
+        self.tool_button_h2_v3_h1_3.setIcon(new_icon)
+        self.tool_button_h2_v3_h1_3.setText("123")
 
     def handle_booster_1_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_1
@@ -1642,9 +1673,7 @@ class Ui_MainWindow(object):
         icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
         icon_2.addFile(u"Booster/Attack/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
-        # (such that it looks good and button remains clickable)
-        # merge icons instead to accomplish this
+
         new_icon = self.merge_icons(icon_1, icon_2, 30)
         widget.setIcon(new_icon)
         widget.setText("123")
@@ -1686,13 +1715,14 @@ class Ui_MainWindow(object):
         icon_1.addFile(u":/UI/Slot_Forma.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
         icon_2.addFile(u"Forma/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
-        # (such that it looks good and button remains clickable)
-        # merge icons instead to accomplish this
+
         new_icon = self.merge_icons(icon_1, icon_2, 30)
         widget.setIcon(new_icon)
         widget.setText(item.statusTip())
 
+    # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
+    # (such that it looks good and button remains clickable)
+    # merge icons instead to accomplish this
     def merge_icons(self, icon_1, icon_2, size):
         pixmap1 = icon_1.pixmap(size, QIcon.Mode.Normal, QIcon.State.Off)
         pixmap2 = icon_2.pixmap(size, QIcon.Mode.Normal, QIcon.State.Off)
