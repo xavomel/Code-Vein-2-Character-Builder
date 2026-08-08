@@ -1273,9 +1273,25 @@ class Ui_MainWindow(object):
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
-        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
 
+        if "Forma_1_Weapon_1" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_forma_1_weapon_1_clicked)
+        elif "Forma_2_Weapon_1" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_forma_2_weapon_1_clicked)
+        elif "Forma_3_Weapon_1" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_forma_3_weapon_1_clicked)
+        elif "Forma_4_Weapon_1" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_forma_4_weapon_1_clicked)
+        elif "Forma_1_Weapon_2" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_forma_1_weapon_2_clicked)
+        elif "Forma_2_Weapon_2" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_forma_2_weapon_2_clicked)
+        elif "Forma_3_Weapon_2" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_forma_3_weapon_2_clicked)
+        elif "Forma_4_Weapon_2" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_forma_4_weapon_2_clicked)
+
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
 
@@ -1292,8 +1308,10 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for blood_code in QDir("Forma").entryInfoList(["*.png"]):
-            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+        for forma in QDir("Forma").entryInfoList(["*.png"]):
+            item = QListWidgetItem(QIcon(forma.filePath()), "")
+            item.setStatusTip(forma.fileName())
+            self.side_menu_content.addItem(item)
 
     def fill_side_menu_booster(self):
         self.side_menu_buttons.clear()
@@ -1630,6 +1648,50 @@ class Ui_MainWindow(object):
         new_icon = self.merge_icons(icon_1, icon_2, 30)
         widget.setIcon(new_icon)
         widget.setText("123")
+
+    def handle_forma_1_weapon_1_clicked(self, item):
+        widget = self.push_button_h2_v1_1
+        self.handle_forma_clicked(widget, item)
+
+    def handle_forma_2_weapon_1_clicked(self, item):
+        widget = self.push_button_h2_v1_2
+        self.handle_forma_clicked(widget, item)
+
+    def handle_forma_3_weapon_1_clicked(self, item):
+        widget = self.push_button_h2_v1_3
+        self.handle_forma_clicked(widget, item)
+
+    def handle_forma_4_weapon_1_clicked(self, item):
+        widget = self.push_button_h2_v1_4
+        self.handle_forma_clicked(widget, item)
+
+    def handle_forma_1_weapon_2_clicked(self, item):
+        widget = self.push_button_h2_v2_1
+        self.handle_forma_clicked(widget, item)
+
+    def handle_forma_2_weapon_2_clicked(self, item):
+        widget = self.push_button_h2_v2_2
+        self.handle_forma_clicked(widget, item)
+
+    def handle_forma_3_weapon_2_clicked(self, item):
+        widget = self.push_button_h2_v2_3
+        self.handle_forma_clicked(widget, item)
+
+    def handle_forma_4_weapon_2_clicked(self, item):
+        widget = self.push_button_h2_v2_4
+        self.handle_forma_clicked(widget, item)
+
+    def handle_forma_clicked(self, widget, item):
+        icon_1 = QIcon()
+        icon_1.addFile(u":/UI/Slot_Forma.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_2 = QIcon()
+        icon_2.addFile(u"Forma/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
+        # (such that it looks good and button remains clickable)
+        # merge icons instead to accomplish this
+        new_icon = self.merge_icons(icon_1, icon_2, 30)
+        widget.setIcon(new_icon)
+        widget.setText(item.statusTip())
 
     def merge_icons(self, icon_1, icon_2, size):
         pixmap1 = icon_1.pixmap(size, QIcon.Mode.Normal, QIcon.State.Off)
