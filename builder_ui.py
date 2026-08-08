@@ -72,60 +72,60 @@ class Ui_MainWindow(object):
         icon_side_menu_content_size = QSize(70, 70)
 
         icon_slot_blood_code = QIcon()
-        icon_slot_blood_code.addFile(u":/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_slot_blood_code.addFile(u":/All/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_slot_item = QIcon()
-        icon_slot_item.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_slot_item.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_slot_item_addon = QIcon()
         icon_slot_item_addon.addFile(u":/Transform/T_UI_Enhancement_Off.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_slot_forma = QIcon()
-        icon_slot_forma.addFile(u":/UI/Slot_Forma", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_slot_forma.addFile(u":/All/UI/Slot_Forma", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
         icon_attribute_strength = QIcon()
-        icon_attribute_strength.addFile(u":/UI/Attribute_Strength.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_attribute_strength.addFile(u":/All/UI/Attribute_Strength.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_attribute_dexterity = QIcon()
-        icon_attribute_dexterity.addFile(u":/UI/Attribute_Dexterity.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_attribute_dexterity.addFile(u":/All/UI/Attribute_Dexterity.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_attribute_mind = QIcon()
-        icon_attribute_mind.addFile(u":/UI/Attribute_Mind", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_attribute_mind.addFile(u":/All/UI/Attribute_Mind", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_attribute_willpower = QIcon()
-        icon_attribute_willpower.addFile(u":/UI/Attribute_Willpower.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_attribute_willpower.addFile(u":/All/UI/Attribute_Willpower.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_attribute_vitality = QIcon()
-        icon_attribute_vitality.addFile(u":/UI/Attribute_Vitality.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_attribute_vitality.addFile(u":/All/UI/Attribute_Vitality.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_attribute_fortitude = QIcon()
-        icon_attribute_fortitude.addFile(u":/UI/Attribute_Fortitude.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_attribute_fortitude.addFile(u":/All/UI/Attribute_Fortitude.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
         icon_defense_slash = QIcon()
-        icon_defense_slash.addFile(u":/UI/Defense_Slash.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_defense_slash.addFile(u":/All/UI/Defense_Slash.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_defense_crush = QIcon()
-        icon_defense_crush.addFile(u":/UI/Defense_Crush.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_defense_crush.addFile(u":/All/UI/Defense_Crush.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_defense_pierce = QIcon()
-        icon_defense_pierce.addFile(u":/UI/Defense_Pierce", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_defense_pierce.addFile(u":/All/UI/Defense_Pierce", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_defense_blood = QIcon()
-        icon_defense_blood.addFile(u":/UI/Defense_Blood.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_defense_blood.addFile(u":/All/UI/Defense_Blood.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_defense_fire = QIcon()
-        icon_defense_fire.addFile(u":/UI/Defense_Fire.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_defense_fire.addFile(u":/All/UI/Defense_Fire.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_defense_ice = QIcon()
-        icon_defense_ice.addFile(u":/UI/Defense_Ice.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_defense_ice.addFile(u":/All/UI/Defense_Ice.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_defense_thunder = QIcon()
-        icon_defense_thunder.addFile(u":/UI/Defense_Thunder.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_defense_thunder.addFile(u":/All/UI/Defense_Thunder.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
         icon_resistance_disease = QIcon()
-        icon_resistance_disease.addFile(u":/UI/Resistance_Disease.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_resistance_disease.addFile(u":/All/UI/Resistance_Disease.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_resistance_wound = QIcon()
-        icon_resistance_wound.addFile(u":/UI/Resistance_Wound.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_resistance_wound.addFile(u":/All/UI/Resistance_Wound.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_resistance_bleed = QIcon()
-        icon_resistance_bleed.addFile(u":/UI/Resistance_Bleed", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_resistance_bleed.addFile(u":/All/UI/Resistance_Bleed", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_resistance_curse = QIcon()
-        icon_resistance_curse.addFile(u":/UI/Resistance_Curse.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_resistance_curse.addFile(u":/All/UI/Resistance_Curse.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
         icon_text_arrow = QIcon()
-        icon_text_arrow.addFile(u":/UI/Text_Arrow.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_text_arrow.addFile(u":/All/UI/Text_Arrow.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
         # central widget
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"""
                 #centralwidget {
-                    border-image: url(:/UI/Background1440.png) 0 0 0 0 stretch stretch;
+                    border-image: url(:/All/UI/Background1440.png) 0 0 0 0 stretch stretch;
                     background: black;
                 }
 
@@ -1603,7 +1603,7 @@ class Ui_MainWindow(object):
 
     def handle_weapon_clicked(self, widget, item):
         icon_1 = QIcon()
-        icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
         icon_2.addFile(u"Weapon/RuneBlade/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
@@ -1619,7 +1619,7 @@ class Ui_MainWindow(object):
 
     def handle_offensive_clicked(self, item):
         icon_1 = QIcon()
-        icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
         icon_2.addFile(u"Offensive/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
@@ -1628,7 +1628,7 @@ class Ui_MainWindow(object):
 
     def handle_defensive_clicked(self, item):
         icon_1 = QIcon()
-        icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
         icon_2.addFile(u"Defensive/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
@@ -1637,7 +1637,7 @@ class Ui_MainWindow(object):
 
     def handle_jail_clicked(self, item):
         icon_1 = QIcon()
-        icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
         icon_2.addFile(u"Jail/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
@@ -1670,7 +1670,7 @@ class Ui_MainWindow(object):
 
     def handle_booster_clicked(self, widget, item):
         icon_1 = QIcon()
-        icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
         icon_2.addFile(u"Booster/Attack/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
@@ -1712,7 +1712,7 @@ class Ui_MainWindow(object):
 
     def handle_forma_clicked(self, widget, item):
         icon_1 = QIcon()
-        icon_1.addFile(u":/UI/Slot_Forma.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_1.addFile(u":/All/UI/Slot_Forma.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
         icon_2.addFile(u"Forma/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
