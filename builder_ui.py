@@ -774,7 +774,7 @@ class Ui_MainWindow(object):
         self.vertical_layout_h2_v3_h2_1 = QVBoxLayout()
         self.vertical_layout_h2_v3_h2_1.setObjectName(u"vertical_layout_h2_v3_h2_1")
         self.vertical_layout_h2_v3_h2_1.setContentsMargins(0, 0, 0, 0)
-        self.vertical_layout_h2_v3_h2_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignVCenter)
+        self.vertical_layout_h2_v3_h2_1.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
         self.horizontal_layout_h2_v3_2.addLayout(self.vertical_layout_h2_v3_h2_1)
 
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 2 content - vertical layout content
@@ -783,7 +783,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_1.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_1.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_1.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_1)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_1, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_1.clicked.connect(self.fill_side_menu_booster)
 
         self.push_button_h2_v3_h2_v1_2 = QPushButton(self.main_vertical_layout_widget)
@@ -791,7 +791,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_2.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_2.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_2.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_2)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_2, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_2.clicked.connect(self.fill_side_menu_booster)
 
         self.push_button_h2_v3_h2_v1_3 = QPushButton(self.main_vertical_layout_widget)
@@ -799,7 +799,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_3.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_3.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_3.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_3)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_3, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_3.clicked.connect(self.fill_side_menu_booster)
 
         self.push_button_h2_v3_h2_v1_4 = QPushButton(self.main_vertical_layout_widget)
@@ -807,7 +807,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_4.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_4.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_4.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_4)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_4, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_4.clicked.connect(self.fill_side_menu_booster)
 
         self.push_button_h2_v3_h2_v1_5 = QPushButton(self.main_vertical_layout_widget)
@@ -815,7 +815,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_5.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_5.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_5.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_5)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_5, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_5.clicked.connect(self.fill_side_menu_booster)
 
         self.push_button_h2_v3_h2_v1_6 = QPushButton(self.main_vertical_layout_widget)
@@ -823,7 +823,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_6.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_6.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_6.setIconSize(icon_slot_forma_size)
-        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_6)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_6, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_6.clicked.connect(self.fill_side_menu_booster)
 
         # 2nd horizontal layout content - spacer at the end (right)
@@ -1305,7 +1305,20 @@ class Ui_MainWindow(object):
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
-        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+
+        if "Booster_1" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_booster_1_clicked)
+        elif "Booster_2" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_booster_2_clicked)
+        elif "Booster_3" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_booster_3_clicked)
+        elif "Booster_4" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_booster_4_clicked)
+        elif "Booster_5" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_booster_5_clicked)
+        elif "Booster_6" in self.sender().objectName():
+            self.side_menu_content.itemClicked.connect(self.handle_booster_6_clicked)
+
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
@@ -1325,8 +1338,10 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for blood_code in QDir("Booster/Attack").entryInfoList(["*.png"]):
-            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+        for booster in QDir("Booster/Attack").entryInfoList(["*.png"]):
+            item = QListWidgetItem(QIcon(booster.filePath()), "")
+            item.setStatusTip(booster.fileName())
+            self.side_menu_content.addItem(item)
 
     def fill_side_menu_weapon(self):
         self.side_menu_buttons.clear()
@@ -1412,7 +1427,7 @@ class Ui_MainWindow(object):
 
         self.side_menu_buttons.itemClicked.connect(self.filter_side_content_menu)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
-        self.side_menu_content.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_content.itemClicked.connect(self.handle_blood_code_clicked)
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
@@ -1433,7 +1448,9 @@ class Ui_MainWindow(object):
 
         # content
         for blood_code in QDir("BloodCode").entryInfoList(["*.png"]):
-            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+            item = QListWidgetItem(QIcon(blood_code.filePath()), "")
+            item.setStatusTip(blood_code.fileName())
+            self.side_menu_content.addItem(item)
 
     def fill_side_menu_offensive(self):
         self.side_menu_buttons.clear()
@@ -1570,6 +1587,49 @@ class Ui_MainWindow(object):
         # merge icons instead to accomplish this
         new_icon = self.merge_icons(icon_1, icon_2, 150)
         widget.setIcon(new_icon)
+
+    def handle_blood_code_clicked(self, item):
+        new_icon = QIcon()
+        print(item.statusTip())
+        new_icon.addFile(u"BloodCode/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.tool_button_h2_v3_h2_1.setIcon(new_icon)
+        # self.tool_button_h2_v3_h2_1.setText(item.statusTip())
+
+    def handle_booster_1_clicked(self, item):
+        widget = self.push_button_h2_v3_h2_v1_1
+        self.handle_booster_clicked(widget, item)
+
+    def handle_booster_2_clicked(self, item):
+        widget = self.push_button_h2_v3_h2_v1_2
+        self.handle_booster_clicked(widget, item)
+
+    def handle_booster_3_clicked(self, item):
+        widget = self.push_button_h2_v3_h2_v1_3
+        self.handle_booster_clicked(widget, item)
+
+    def handle_booster_4_clicked(self, item):
+        widget = self.push_button_h2_v3_h2_v1_4
+        self.handle_booster_clicked(widget, item)
+
+    def handle_booster_5_clicked(self, item):
+        widget = self.push_button_h2_v3_h2_v1_5
+        self.handle_booster_clicked(widget, item)
+
+    def handle_booster_6_clicked(self, item):
+        widget = self.push_button_h2_v3_h2_v1_6
+        self.handle_booster_clicked(widget, item)
+
+    def handle_booster_clicked(self, widget, item):
+        icon_1 = QIcon()
+        icon_1.addFile(u":/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_2 = QIcon()
+        icon_2.addFile(u"Booster/Attack/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
+        # (such that it looks good and button remains clickable)
+        # merge icons instead to accomplish this
+        new_icon = self.merge_icons(icon_1, icon_2, 30)
+        widget.setIcon(new_icon)
+        widget.setText("123")
 
     def merge_icons(self, icon_1, icon_2, size):
         pixmap1 = icon_1.pixmap(size, QIcon.Mode.Normal, QIcon.State.Off)
