@@ -5,6 +5,7 @@ from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout
     QSizePolicy, QToolButton, QPushButton, QProgressBar, QApplication, QListView, QListWidget, QListWidgetItem, \
     QAbstractScrollArea
 import resource
+from game_data_classes import *
 
 
 VERSION = u"Code Vein II Character Builder v0.0.1"
@@ -62,6 +63,8 @@ class Ui_MainWindow(object):
         font_defensive_formae = db.font("Pirata One", "Regular", 28)
 
         # icons
+        # self.icons = {}  # should we load all icons at start?
+
         icon_slot_blood_code_size = QSize(150, 150)
         icon_slot_item_size = QSize(75, 75)
         icon_slot_item_addon_size = QSize(24, 24)
@@ -1296,21 +1299,25 @@ class Ui_MainWindow(object):
         self.side_menu_content.setVisible(True)
 
         # buttons
-        for button in QDir("Menu").entryInfoList(["*.png"]):
-            if "booster" in button.filePath().lower():
-                continue
-            item = QListWidgetItem(QIcon(button.filePath()), "")
-            item.setStatusTip(button.fileName())
-            self.side_menu_buttons.addItem(item)
+        # for button in QDir("Menu").entryInfoList(["*.png"]):
+        #     if "booster" in button.filePath().lower():
+        #         continue
+        #     item = QListWidgetItem(QIcon(button.filePath()), "")
+        #     item.setStatusTip(button.fileName())
+        #     self.side_menu_buttons.addItem(item)
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for forma in QDir("Forma").entryInfoList(["*.png"]):
-            item = QListWidgetItem(QIcon(forma.filePath()), "")
-            item.setStatusTip(forma.fileName())
+        # for forma in QDir("Forma").entryInfoList(["*.png"]):
+        #     item = QListWidgetItem(QIcon(forma.filePath()), "")
+        #     item.setStatusTip(forma.fileName())
+        #     self.side_menu_content.addItem(item)
+        for k in self.builder.formae.keys():
+            item = QListWidgetItem(QIcon(u":/All/Forma/" + escape_filename(k) + ".png"), "")
+            item.setStatusTip(k)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_booster(self):
@@ -1356,9 +1363,13 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for booster in QDir("Booster/Attack").entryInfoList(["*.png"]):
-            item = QListWidgetItem(QIcon(booster.filePath()), "")
-            item.setStatusTip(booster.fileName())
+        # for booster in QDir("Booster/Attack").entryInfoList(["*.png"]):
+        #     item = QListWidgetItem(QIcon(booster.filePath()), "")
+        #     item.setStatusTip(booster.fileName())
+        #     self.side_menu_content.addItem(item)
+        for k in self.builder.boosters.keys():
+            item = QListWidgetItem(QIcon(u":/All/Booster/" + escape_filename(k) + ".png"), "")
+            item.setStatusTip(k)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_weapon(self):
@@ -1396,9 +1407,13 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for weapon in QDir("Weapon/RuneBlade").entryInfoList(["*.png"]):
-            item = QListWidgetItem(QIcon(weapon.filePath()), "")
-            item.setStatusTip(weapon.fileName())
+        # for weapon in QDir("Weapon/RuneBlade").entryInfoList(["*.png"]):
+        #     item = QListWidgetItem(QIcon(weapon.filePath()), "")
+        #     item.setStatusTip(weapon.fileName())
+        #     self.side_menu_content.addItem(item)
+        for k in self.builder.weapons.keys():
+            item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
+            item.setStatusTip(k)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_transform(self):
@@ -1430,10 +1445,19 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for blood_code in QDir("Transform").entryInfoList(["*.png"]):
-            item = QListWidgetItem(QIcon(blood_code.filePath()), "")
-            item.setStatusTip(blood_code.fileName())
+        # for blood_code in QDir("Transform").entryInfoList(["*.png"]):
+        #     item = QListWidgetItem(QIcon(blood_code.filePath()), "")
+        #     item.setStatusTip(blood_code.fileName())
+        #     self.side_menu_content.addItem(item)
+        transformed_weapon = next(x for x in self.builder.weapons.values() if x.transformable)
+        transforms = [x for x in transformed_weapon.transforms.keys() if "Transform_" in x]
+        for k in transforms:
+            item = QListWidgetItem(QIcon(u":/All/Transform/" + k + ".png"), "")
+            item.setStatusTip(escape_filename(k))
             self.side_menu_content.addItem(item)
+        item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+        item.setStatusTip("Transform Off")
+        self.side_menu_content.addItem(item)
 
     def fill_side_menu_blood_code(self):
         self.side_menu_buttons.clear()
@@ -1465,9 +1489,13 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for blood_code in QDir("BloodCode").entryInfoList(["*.png"]):
-            item = QListWidgetItem(QIcon(blood_code.filePath()), "")
-            item.setStatusTip(blood_code.fileName())
+        # for blood_code in QDir("BloodCode").entryInfoList(["*.png"]):
+        #     item = QListWidgetItem(QIcon(blood_code.filePath()), "")
+        #     item.setStatusTip(blood_code.fileName())
+        #     self.side_menu_content.addItem(item)
+        for k in self.builder.blood_codes.keys():
+            item = QListWidgetItem(QIcon(u":/All/BloodCode/" + escape_filename(k) + ".png"), "")
+            item.setStatusTip(k)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_offensive(self):
@@ -1492,9 +1520,13 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for offensive in QDir("Offensive").entryInfoList(["*.png"]):
-            item = QListWidgetItem(QIcon(offensive.filePath()), "")
-            item.setStatusTip(offensive.fileName())
+        # for offensive in QDir("Offensive").entryInfoList(["*.png"]):
+        #     item = QListWidgetItem(QIcon(offensive.filePath()), "")
+        #     item.setStatusTip(offensive.fileName())
+        #     self.side_menu_content.addItem(item)
+        for k in self.builder.offensive_formae.keys():
+            item = QListWidgetItem(QIcon(u":/All/Offensive/" + escape_filename(k) + ".png"), "")
+            item.setStatusTip(k)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_defensive(self):
@@ -1525,9 +1557,13 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for defensive in QDir("Defensive").entryInfoList(["*.png"]):
-            item = QListWidgetItem(QIcon(defensive.filePath()), "")
-            item.setStatusTip(defensive.fileName())
+        # for defensive in QDir("Defensive").entryInfoList(["*.png"]):
+        #     item = QListWidgetItem(QIcon(defensive.filePath()), "")
+        #     item.setStatusTip(defensive.fileName())
+        #     self.side_menu_content.addItem(item)
+        for k in self.builder.defensive_formae.keys():
+            item = QListWidgetItem(QIcon(u":/All/Defensive/" + escape_filename(k) + ".png"), "")
+            item.setStatusTip(k)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_jail(self):
@@ -1552,9 +1588,13 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        for jail in QDir("Jail").entryInfoList(["*.png"]):
-            item = QListWidgetItem(QIcon(jail.filePath()), "")
-            item.setStatusTip(jail.fileName())
+        # for jail in QDir("Jail").entryInfoList(["*.png"]):
+        #     item = QListWidgetItem(QIcon(jail.filePath()), "")
+        #     item.setStatusTip(jail.fileName())
+        #     self.side_menu_content.addItem(item)
+        for k in self.builder.jails.keys():
+            item = QListWidgetItem(QIcon(u":/All/Jail/" + escape_filename(k) + ".png"), "")
+            item.setStatusTip(k)
             self.side_menu_content.addItem(item)
 
     def filter_side_content_menu(self, item):
@@ -1590,7 +1630,7 @@ class Ui_MainWindow(object):
 
     def handle_transform_clicked(self, widget, item):
         new_icon = QIcon()
-        new_icon.addFile(u":/Transform/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        new_icon.addFile(u":/All/Transform/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         widget.setIcon(new_icon)
 
     def handle_weapon_1_clicked(self, item):
@@ -1605,15 +1645,13 @@ class Ui_MainWindow(object):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
-        icon_2.addFile(u"Weapon/RuneBlade/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-
+        icon_2.addFile(u":/All/Weapon/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
         widget.setIcon(new_icon)
 
     def handle_blood_code_clicked(self, item):
         new_icon = QIcon()
-        print(item.statusTip())
-        new_icon.addFile(u"BloodCode/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        new_icon.addFile(u":/All/BloodCode/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.tool_button_h2_v3_h2_1.setIcon(new_icon)
         # self.tool_button_h2_v3_h2_1.setText(item.statusTip())
 
@@ -1621,7 +1659,7 @@ class Ui_MainWindow(object):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
-        icon_2.addFile(u"Offensive/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_2.addFile(u":/All/Offensive/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
         self.tool_button_h2_v3_h1_1.setIcon(new_icon)
         self.tool_button_h2_v3_h1_1.setText("123")
@@ -1630,7 +1668,7 @@ class Ui_MainWindow(object):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
-        icon_2.addFile(u"Defensive/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_2.addFile(u":/All/Defensive/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
         self.tool_button_h2_v3_h1_2.setIcon(new_icon)
         self.tool_button_h2_v3_h1_2.setText("123")
@@ -1639,7 +1677,7 @@ class Ui_MainWindow(object):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
-        icon_2.addFile(u"Jail/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_2.addFile(u":/All/Jail/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
         self.tool_button_h2_v3_h1_3.setIcon(new_icon)
         self.tool_button_h2_v3_h1_3.setText("123")
@@ -1672,8 +1710,7 @@ class Ui_MainWindow(object):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
-        icon_2.addFile(u"Booster/Attack/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-
+        icon_2.addFile(u":/All/Booster/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 30)
         widget.setIcon(new_icon)
         widget.setText("123")
@@ -1714,8 +1751,7 @@ class Ui_MainWindow(object):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Forma.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
-        icon_2.addFile(u"Forma/" + item.statusTip(), QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-
+        icon_2.addFile(u":/All/Forma/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 30)
         widget.setIcon(new_icon)
         widget.setText(item.statusTip())
