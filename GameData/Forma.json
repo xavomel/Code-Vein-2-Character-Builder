@@ -3,6 +3,15 @@
         "Name": "Phantom Assault",
         "Description": "Lunge forward to deliver a two-hit combo.\n\nNullifies enemy attacks while lunging.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -15,6 +24,15 @@
         "Name": "Severing Abyss",
         "Description": "Jump high up and crash down in a powerful slam.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 4,
@@ -27,6 +45,15 @@
         "Name": "Secret Art - Scissor Wind",
         "Description": "Create a vacuum vortex which can draw enemies in and slice them up.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 0,
@@ -39,6 +66,15 @@
         "Name": "Secret Art - Forestall",
         "Description": "Swing your weapon to release a slash that can hit targets from midrange.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -51,6 +87,15 @@
         "Name": "Circulating Pulse",
         "Description": "Rush forward into a three-hit combo. Repeat the input during the attack to unleash a powerful finisher. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -63,6 +108,15 @@
         "Name": "Circulating Pulse - Blink",
         "Description": "Rush forward into a three-hit combo. Repeat the input during the attack to perform a followup, then step backwards. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -75,6 +129,15 @@
         "Name": "Energy Cleave",
         "Description": "Attach an energy blade to your weapon and perform a wide sweep in front of you.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 2,
@@ -87,6 +150,15 @@
         "Name": "Energy Cleave - Twister",
         "Description": "Attach an energy blade to your weapon and perform a wide sweep all around you.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 3,
@@ -99,6 +171,15 @@
         "Name": "Looming Slash",
         "Description": "Perform a slash while jumping into the air. Nullifies enemy attacks which land right before jumping.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 3,
@@ -111,6 +192,15 @@
         "Name": "Thunderclap",
         "Description": "Unleash a slash of lightning before charging forward for another high-speed slash.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 0,
@@ -123,6 +213,15 @@
         "Name": "Judgement Cutter",
         "Description": "Swing your weapon upward, releasing an energy slash.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 3,
@@ -135,6 +234,15 @@
         "Name": "Fortress Stance",
         "Description": "Take a stance to deflect enemy attacks. Acts as a normal guard against attacks which cannot be deflected. Repeat the input while in the stance to step forward and perform a slash attack. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -147,6 +255,15 @@
         "Name": "Coffin Breaker",
         "Description": "Perform a rapid, powerful slash at close range. Repeat the input to chain into a powerful smash. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 3,
@@ -159,6 +276,15 @@
         "Name": "Coffin Breaker - Sweeper",
         "Description": "Perform a rapid, powerful slash at close range. Repeat the input to chain into a swift side-slash. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 3,
@@ -171,6 +297,15 @@
         "Name": "Boosted Blade",
         "Description": "Channel strength into an energy blade and strike downward.\n\nHold the input to increase reach and power.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 4,
@@ -183,6 +318,15 @@
         "Name": "Boosted Blade - Horizon",
         "Description": "Channel strength into an energy blade and perform a horizontal slash. Hold the input to increase reach and power.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 3,
@@ -195,6 +339,15 @@
         "Name": "Wraith's Fury",
         "Description": "A combo attack that starts with a dashing slash.\n\nRepeat the input to perform up to four consecutive attacks. (Each attack consumes ichor.)\n\nUnleashes a powerful smash as the final combo attack.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 3,
@@ -207,6 +360,15 @@
         "Name": "Wraith's Fury - Swift",
         "Description": "A combo attack that starts with a dashing slash. Repeat the input to perform up to three consecutive attacks. (Each attack consumes ichor.)\n\nUnleashes another dashing slash as the final combo attack.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -219,6 +381,15 @@
         "Name": "Vanquisher",
         "Description": "Perform a midrange slide to knock an enemy upward before slamming them back down.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 1,
@@ -231,6 +402,15 @@
         "Name": "Unquenchable Flame",
         "Description": "Add fire damage to your weapon and assail nearby foes while calling up a pillar of fire.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 3,
@@ -243,6 +423,15 @@
         "Name": "Mad Turbulence",
         "Description": "Spin your weapon to slash in all directions, attacking a wide area with energy blades.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 2,
@@ -255,6 +444,15 @@
         "Name": "Flash Javelin",
         "Description": "Unleash a javelin of light with the thrust of your weapon.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -267,6 +465,15 @@
         "Name": "Flash Fleche",
         "Description": "Perform a long-range slide to pierce an enemy with your outheld weapon.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 2,
@@ -279,6 +486,15 @@
         "Name": "Drill Breaker",
         "Description": "Drill into an enemy with a vortex of wind wrapped around your weapon. Repeat the input during the attack to chain into additional attacks. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 4,
@@ -291,6 +507,15 @@
         "Name": "Chariot Reave",
         "Description": "Perform a forward swipe to initiate a combo attack. Repeat the input during the initial attack to perform a second attack, then press <img id=\"Input.Action.Player.WeaponGadget1\" height=\"desired\" align=\"center\"/> or <img id=\"Input.Action.Player.WeaponGadget2\" height=\"desired\" align=\"center\"/> to perform a third attack. The third attack will differ based on the button pressed. (Each attack consumes ichor.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 3,
@@ -303,6 +528,15 @@
         "Name": "Chariot Reave - Blast",
         "Description": "Perform a forward swipe to initiate a combo attack. Repeat the input during the attack to perform up to three consecutive hits, launching a slash to finish. (Each attack consumes ichor.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -315,6 +549,15 @@
         "Name": "Piercing Leap",
         "Description": "Jump up and thrust down from the air as you descend. Nullifies enemy attacks while jumping up.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 0,
@@ -327,6 +570,15 @@
         "Name": "Piercing Leap - Tremor",
         "Description": "Jump up and thrust down from the air as you descend. Nullifies enemy attacks while jumping up. Repeat the input during the thrust descent to create a shock wave. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 1,
@@ -339,6 +591,15 @@
         "Name": "Heliosphere",
         "Description": "Create a sun-like ball of energy. Repeat the input during the attack to pierce the ball with your weapon and cause it to explode. (Consumes ichor on use.)\n\nBoth the ball and explosion cause the status ailment sunblight to build up in enemies.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 2,
@@ -351,6 +612,15 @@
         "Name": "Gaia Impact",
         "Description": "Smash the ground, leap up, and slam down with an attack. \n\nThe downward impact creates a shock wave, disrupting enemies in a wide area.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 4,
@@ -363,6 +633,15 @@
         "Name": "Endless Onslaught",
         "Description": "Unleash powerful, continuous back-and-forth strikes.\n\nRepeat the input during the attack to continuously strike. Press <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to finish with a powerful strike. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -375,6 +654,15 @@
         "Name": "Dive Bomb",
         "Description": "Leap forward and slam your weapon down to create a shock wave.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 3,
@@ -387,6 +675,15 @@
         "Name": "Mighty Smash",
         "Description": "Raise your weapon over your head, then swing it with all your might. Hold the input to charge the attack and release to activate it. Higher charges deal greater damage.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 4,
@@ -399,6 +696,15 @@
         "Name": "Backdraft",
         "Description": "Slam your weapon down, sending energy through it to create a shock wave, using its momentum to launch yourself backwards.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 2,
@@ -411,6 +717,15 @@
         "Name": "Doomfall",
         "Description": "Descend from midair to land a mighty blow. Creates a shock wave upon impact.\n\nCan only be used while in midair.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 2,
@@ -423,6 +738,15 @@
         "Name": "Power Shot",
         "Description": "Fire a powerful energy projectile. Knocks away any directly hit enemy.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -435,6 +759,15 @@
         "Name": "Drawback Shot",
         "Description": "Jump back swiftly while firing a three-shot energy burst.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -447,6 +780,15 @@
         "Name": "Spinning Rampage",
         "Description": "Perform a spinning slash with an extended energy blade. Shoots bullets of light as you spin.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 2,
@@ -459,6 +801,15 @@
         "Name": "Fusillade Rondo",
         "Description": "Rapidly fire three energy rounds with homing abilities.\n\nRepeat the input during the attack to perform a finisher shot. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -471,6 +822,15 @@
         "Name": "Trigger Rush",
         "Description": "Quickly dash forward and thrust your bayonet. Repeat the input during the attack to stop the dash and fire energy shots. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -483,6 +843,15 @@
         "Name": "Heavenly Strike",
         "Description": "Launch energy into the sky to drop a pillar of light directly on top of your target.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 1,
@@ -495,6 +864,15 @@
         "Name": "Glacial Barrage",
         "Description": "Create icy crystals which unleash a volley of frigid cold lasers.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 0,
@@ -507,6 +885,15 @@
         "Name": "Shredding Spin",
         "Description": "Leap forward in a spinning slash which lands multiple hits.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -519,6 +906,15 @@
         "Name": "Scorpion",
         "Description": "Quickly jump back before rushing forward to stab with both blades. Nullifies enemy attacks while jumping back.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -531,6 +927,15 @@
         "Name": "Relentless Sword Dance",
         "Description": "Unleash rapid, continuous slashes.\n\nRepeat the input during the attack to continuously slash. Press <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to finish with a powerful strike. (Each attack consumes ichor.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -543,6 +948,15 @@
         "Name": "Swift Blades",
         "Description": "Instantly dash a short distance and slash with dual blades. Press <img id=\"Input.Action.Player.WeaponGadget1\" height=\"desired\" align=\"center\"/> or <img id=\"Input.Action.Player.WeaponGadget2\" height=\"desired\" align=\"center\"/> during the attack to combo into a cut to the left or right. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -555,6 +969,15 @@
         "Name": "Rising Twirl",
         "Description": "Perform a spinning slash that launches you into the air, allowing for follow-up aerial attacks.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 2,
@@ -567,6 +990,15 @@
         "Name": "Shadow Slayer",
         "Description": "Perform a diving slash from midair which nullifies all enemy attacks during descent.\n\nCan only be used in midair.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 3,
@@ -579,6 +1011,15 @@
         "Name": "Whirling Shredder",
         "Description": "Combine two blades together and send them spinning rapidly forward like a rotary saw. User is left unarmed while blades remain spinning.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -591,6 +1032,15 @@
         "Name": "Stalking Sabre",
         "Description": "Unleash a blade in front of you that pursues any enemy that it hits, continually applying damage. User is left unarmed while blade remains in pursuit.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": true
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 0,
@@ -603,6 +1053,15 @@
         "Name": "Orbital Blade",
         "Description": "Sends equipped blades spinning around the user, gradually increasing in range and mowing down anything in the area. User is left unarmed while blades remain spinning.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -615,6 +1074,15 @@
         "Name": "Guillotine Kick",
         "Description": "Leap up high and land with a mighty kick while slamming down your weapon.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": true
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 3,
@@ -627,6 +1095,15 @@
         "Name": "Unshakable",
         "Description": "Take a stance to deflect enemy attacks. Acts as a normal guard against attacks which cannot be deflected. Repeat the input while in the stance to perform a palm attack. (Consumes ichor on use.)",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 2,
@@ -639,6 +1116,15 @@
         "Name": "Slicing Vortex",
         "Description": "Perform a flurry of acrobatic spinning kicks, slicing through your surroundings with your blades at the same time.",
         "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 3,
@@ -651,6 +1137,15 @@
         "Name": "Sonic Arrow",
         "Description": "Shoot a mini whirlwind.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -663,6 +1158,15 @@
         "Name": "Blaze Shot",
         "Description": "Shoots a low-power fireball. Repeat the input during the attack to fire successive shots.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -675,6 +1179,15 @@
         "Name": "Blazing Roar",
         "Description": "Launch blazing fireballs. Hold the input to charge for increased damage.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -687,6 +1200,15 @@
         "Name": "Venomous Shot",
         "Description": "Unleash orbs that cause the status ailment venom to build up over time.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -699,6 +1221,15 @@
         "Name": "Stun Shot",
         "Description": "Unleash orbs that cause the status ailment stun to build up over time.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -711,6 +1242,15 @@
         "Name": "Draconic Stake",
         "Description": "Launch forward a massive stake made of blood.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 0,
@@ -723,6 +1263,15 @@
         "Name": "McLeish's Cog",
         "Description": "Unleash a cog symbolic of the Patientia Bloodline that causes intense bleeding. Cog can be stopped by repeating the input.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -735,6 +1284,15 @@
         "Name": "Twilight",
         "Description": "Sends a beam of lightning shooting forward. Hold the input to continue the blast until you run out of ichor.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -747,6 +1305,15 @@
         "Name": "Diamond Dust",
         "Description": "Shoot rapid-fire bursts of ice. Hold the input during the attack to continue barrage.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -759,6 +1326,15 @@
         "Name": "Guard of Honor",
         "Description": "Launch multiple successive ice javelins at a target.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 0,
@@ -771,6 +1347,15 @@
         "Name": "Baba Yaga's Gaze",
         "Description": "Unleash a massive, bone-chilling ice shard.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 0,
@@ -783,6 +1368,15 @@
         "Name": "Bolt Blast",
         "Description": "Rapid-fire balls of lightning.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -795,6 +1389,15 @@
         "Name": "Lightning Shower",
         "Description": "Generates pillars of lightning at multiple target locations.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -807,6 +1410,15 @@
         "Name": "Blood Barrage",
         "Description": "Launches multiple blood stakes simultaneously. Hold the input to increase the number of stakes.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -819,6 +1431,15 @@
         "Name": "Gatling Gun Organ",
         "Description": "Launches a barrage of spears of light in front of the user. Repeat the input during the attack to fire successive shots.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -831,6 +1452,15 @@
         "Name": "Dazzling Prismatic Laser",
         "Description": "Blasts a wide area with a blinding beam of sunlight that causes the status ailment sunblight to build up over time.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 0,
@@ -843,6 +1473,15 @@
         "Name": "Satellite Saucer",
         "Description": "Launch a slashing disc of light at enemies. While a partner is present, the disc will travel back and forth between the user and partner.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -855,6 +1494,15 @@
         "Name": "Lightning Chain",
         "Description": "Hits a target with a lightning strike that chains into and damages multiple enemies.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -867,6 +1515,15 @@
         "Name": "Eschaton Crossing",
         "Description": "Creates a star-like ball of energy that spins around the user before finally exploding.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 10,
         "Capacity": {
             "Reliability": 2,
@@ -879,6 +1536,15 @@
         "Name": "Frost Wave",
         "Description": "Calls forth a frigid cold that spreads across the ground.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -891,6 +1557,15 @@
         "Name": "Vorpal Flash",
         "Description": "Unleashes a flash of lightning from the user's hand to instantly scorch a target. Hold the input to charge for increased damage.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -903,6 +1578,15 @@
         "Name": "Scorched Earth",
         "Description": "Creates a whirlwind of flames around the user. Hold the input to extend its duration.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -915,6 +1599,15 @@
         "Name": "Ice Spikes",
         "Description": "Pierces a wide area with spikes of ice shooting up from the ground.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -927,6 +1620,15 @@
         "Name": "Dusk Edge",
         "Description": "Create a blade of blood that sweeps through foes before you.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -939,6 +1641,15 @@
         "Name": "Air Blast",
         "Description": "Releases a shock wave from the user's hand, which is highly efficient at breaking an enemy's guard.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -951,6 +1662,15 @@
         "Name": "Bloody Impact",
         "Description": "Blast away nearby foes with a bloody shock wave.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 2,
@@ -963,6 +1683,15 @@
         "Name": "Elder Contract",
         "Description": "Causes a pillar of blood to erupt beneath a target.",
         "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -975,6 +1704,15 @@
         "Name": "Firewall",
         "Description": "Creates a wall of flames in front of the user.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 1,
@@ -987,6 +1725,15 @@
         "Name": "Falling Sun",
         "Description": "Launch into the air before crashing down in explosive flames. Negates all enemy attacks while airborne.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 2,
@@ -999,6 +1746,15 @@
         "Name": "Graviton Core",
         "Description": "Creates a small black hole that draws in enemies. Press the action button again to cause the black hole to explode.\n(Consumes ichor on use.)",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1011,6 +1767,15 @@
         "Name": "Venomous Web",
         "Description": "Create a field at the target's feet that causes the status ailment venom to build up over time.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -1023,6 +1788,15 @@
         "Name": "Stun Web",
         "Description": "Create a field at the target's feet that causes the status ailment stun to build up over time.",
         "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -1035,6 +1809,15 @@
         "Name": "Adrenaline",
         "Description": "Temporarily boosts your attack power.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1047,6 +1830,15 @@
         "Name": "Bridge to Glory",
         "Description": "Temporarily boosts Attack for you and your allies based on your Mind stat.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1059,6 +1851,15 @@
         "Name": "Overdrive",
         "Description": "Temporarily boosts Attack for you and your allies. Effect ends when user takes damage.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1071,6 +1872,15 @@
         "Name": "Blow of Madness",
         "Description": "Increases the power of the next attack by a fixed amount.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -1083,6 +1893,15 @@
         "Name": "Flashing Fang",
         "Description": "Increases the power of the next attack by an amount based on the user's stats.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -1095,6 +1914,15 @@
         "Name": "Merciless Reaper",
         "Description": "Ignores some of the enemy's defense and guarding for your next attack.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1107,6 +1935,15 @@
         "Name": "Immortal Bane",
         "Description": "Temporarily makes attacks reduce more of an enemy's recoverable damage.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1119,6 +1956,15 @@
         "Name": "Blade Dance",
         "Description": "Temporarily increases attack power each time you damage an enemy with your weapon.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1131,6 +1977,15 @@
         "Name": "Warrior Spirit - Might",
         "Description": "Temporarily boosts your attack power. More effective the closer the enemy is.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -1143,6 +1998,15 @@
         "Name": "Ranged Impact",
         "Description": "Temporarily increases attack power for bayonets and certain bequeathed forma shots.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1155,6 +2019,15 @@
         "Name": "Super Charge",
         "Description": "Temporarily boosts strength of attacks initiated by holding the input.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -1167,6 +2040,15 @@
         "Name": "Time Crunch",
         "Description": "Speeds up the charge time for charged attacks.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1179,6 +2061,15 @@
         "Name": "Dark Shout",
         "Description": "Greatly increases the potency of the next magic forma you cast.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1191,6 +2082,15 @@
         "Name": "Forma Prowess",
         "Description": "Temporarily increases magic forma speed for you and your partner.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1203,6 +2103,15 @@
         "Name": "Risk Ignition",
         "Description": "Forma only usable when overburdened. Boosts attack power for a short time.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1215,6 +2124,15 @@
         "Name": "Thirsting Blade",
         "Description": "Temporarily lowers the bleed factor caused by weapons and increases attack power.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1227,6 +2145,15 @@
         "Name": "Out for Blood",
         "Description": "Temporarily deal more damage to enemies proportional to their bleed buildup. Enemy bleed gets reduced each time damage is dealt.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1239,6 +2166,15 @@
         "Name": "Double Down",
         "Description": "Spends LP to boost attack power.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -1251,6 +2187,15 @@
         "Name": "Highlander",
         "Description": "Consumes all LP to temporarily boost attack power. Boost amount depends on the amount of LP consumed.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 0,
@@ -1263,6 +2208,15 @@
         "Name": "Sacrificial Edge",
         "Description": "Greatly increases attack power, but gradually drains HP.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -1275,6 +2229,15 @@
         "Name": "Bloodsucking Blades",
         "Description": "Temporarily increases the bleed factor of weapon attacks for you and your partner.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1287,6 +2250,15 @@
         "Name": "Hunting Feast",
         "Description": "Temporarily increases the bleed factor of weapon attacks.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1299,6 +2271,15 @@
         "Name": "Heart Breaker",
         "Description": "Temporarily increases user's stagger attack power.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -1311,6 +2292,15 @@
         "Name": "Crushing Might",
         "Description": "Temporarily makes it easier to break an opponent's guard.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -1323,6 +2313,15 @@
         "Name": "Precision",
         "Description": "Temporarily makes it easier for you and your allies to disrupt enemies with weapons.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 2,
@@ -1335,6 +2334,15 @@
         "Name": "Flame Weapon",
         "Description": "Temporarily adds fire damage to your current weapon.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1347,6 +2355,15 @@
         "Name": "Frost Weapon",
         "Description": "Temporarily adds ice damage to your current weapon.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1359,6 +2376,15 @@
         "Name": "Lightning Weapon",
         "Description": "Temporarily adds lightning damage to your current weapon.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1371,6 +2397,15 @@
         "Name": "Blood Weapon",
         "Description": "Temporarily adds blood damage to your current weapon.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1383,6 +2418,15 @@
         "Name": "Venom Mark",
         "Description": "Temporarily applies the status ailment venom to your current weapon.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1395,6 +2439,15 @@
         "Name": "Warding Mark",
         "Description": "Temporarily applies the status ailment inhibit to your current weapon.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1407,6 +2460,15 @@
         "Name": "Binding Mark",
         "Description": "Temporarily applies the status ailment stall to your current weapon.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1419,6 +2481,15 @@
         "Name": "Numbing Mark",
         "Description": "Temporarily applies the status ailment stun to your current weapon.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1431,6 +2502,15 @@
         "Name": "Fire Barrel",
         "Description": "Temporarily adds fire damage to bayonets and certain bequeathed forma shots.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1443,6 +2523,15 @@
         "Name": "Ice Barrel",
         "Description": "Temporarily adds ice damage to bayonets and certain bequeathed forma shots.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1455,6 +2544,15 @@
         "Name": "Lightning Barrel",
         "Description": "Temporarily adds lightning damage to bayonets and certain bequeathed forma shots.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1467,6 +2565,15 @@
         "Name": "Blood Barrel",
         "Description": "Temporarily adds blood damage to bayonets and certain bequeathed forma shots.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1479,6 +2586,15 @@
         "Name": "Iron Will",
         "Description": "Temporarily reduces all incoming damage.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -1491,6 +2607,15 @@
         "Name": "Foulblood Barrier",
         "Description": "Creates a single-use barrier around you and your partner that greatly reduces damage.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 2,
@@ -1503,6 +2628,15 @@
         "Name": "Warrior Spirit - Rigor",
         "Description": "Temporarily reduces damage taken from enemy attacks. More effective the closer the enemy is.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -1515,6 +2649,15 @@
         "Name": "Ablative Blood",
         "Description": "Temporarily causes damage taken to be greatly reduced at the cost of ichor.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -1527,6 +2670,15 @@
         "Name": "Juggernaut",
         "Description": "Increases balance and resistance to enemy attacks, but lowers dodge effectiveness and elemental resistance.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -1539,6 +2691,15 @@
         "Name": "Defensive Order",
         "Description": "Temporarily lowers your attack power and increases defense for both you and your partner.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -1551,6 +2712,15 @@
         "Name": "Last Guard",
         "Description": "Receiving fatal damage when your LP is over a certain amount will leave you with 1 LP. Only applies once per activation.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 1,
@@ -1563,6 +2733,15 @@
         "Name": "Healing Casket",
         "Description": "Consumes regeneration power when using formae and automatically regenerates when LP reaches 0.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -1575,6 +2754,15 @@
         "Name": "Feral Tenacity",
         "Description": "Receiving fatal damage when your HP is over a certain amount will leave you with 1 HP. Only applies once per activation.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 2,
@@ -1587,6 +2775,15 @@
         "Name": "Circular Guard",
         "Description": "Temporarily guards against attacks from all directions when blocking with a shield.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 2,
@@ -1599,6 +2796,15 @@
         "Name": "Steady Bulwark",
         "Description": "Temporarily increases guard defense against physical attacks.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 2,
@@ -1611,6 +2817,15 @@
         "Name": "Prismatic Veil",
         "Description": "Temporarily increases guard defense against elemental attacks for you and your allies.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -1623,6 +2838,15 @@
         "Name": "Guard Stability",
         "Description": "Temporarily reduces the stamina cost of guarding.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 1,
@@ -1635,6 +2859,15 @@
         "Name": "Concentration",
         "Description": "Temporarily makes it easier to deflect enemy attacks.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -1647,6 +2880,15 @@
         "Name": "Deft Deflection",
         "Description": "Temporarily reduces damage taken when deflecting enemy attacks and increases disruption resistance.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 1,
@@ -1659,6 +2901,15 @@
         "Name": "Dogged Fighter",
         "Description": "Temporarily gain tolerance to incoming damage, increasing disruption resistance.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -1671,6 +2922,15 @@
         "Name": "Royal Heart",
         "Description": "Temporarily increases disruption resistance to enemy strikes while attacking.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -1683,6 +2943,15 @@
         "Name": "Perfect Balance",
         "Description": "Increases disruption resistance for you and your allies against a single enemy attack after forma use.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
@@ -1695,6 +2964,15 @@
         "Name": "Healing Counter",
         "Description": "Temporarily adds the following effect to dodges and defensive formae for shields:\n\nSlightly regenerates LP when an enemy attack is successfully dodged or guarded against.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1707,6 +2985,15 @@
         "Name": "Charge-up Counter",
         "Description": "Temporarily adds the following effect to defensive formae for shields:\n\nPerfectly blocking enemy attacks boosts attack and stagger attack power.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -1719,6 +3006,15 @@
         "Name": "Bloodletting Counter",
         "Description": "Temporarily adds the following effect to dodges and defensive formae for shields:\n\nFires bleed-inducing blades when an enemy attack is successfully dodged or guarded against.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1731,6 +3027,15 @@
         "Name": "Guard Reversal",
         "Description": "Temporarily enables you to deflect enemy attacks and stagger them after guarding.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 2,
@@ -1743,6 +3048,15 @@
         "Name": "Sly Vengeance",
         "Description": "For a limited time, taking damage generates fiery projectiles that attack the enemy.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1755,6 +3069,15 @@
         "Name": "Countermeasure",
         "Description": "For a limited time, dodging enemy attacks generates projectiles that attack the enemy.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1767,6 +3090,15 @@
         "Name": "Life Conversion",
         "Description": "Spends LP to restore HP.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1779,6 +3111,15 @@
         "Name": "Elemental Wall",
         "Description": "Temporarily increases defense against all elemental attacks.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 2,
@@ -1791,6 +3132,15 @@
         "Name": "Flame Protection",
         "Description": "Temporarily increases defense against fire.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -1803,6 +3153,15 @@
         "Name": "Ice Protection",
         "Description": "Temporarily increases defense against ice.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -1815,6 +3174,15 @@
         "Name": "Lightning Protection",
         "Description": "Temporarily increases defense against lightning.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -1827,6 +3195,15 @@
         "Name": "Blood Protection",
         "Description": "Temporarily increases defense against blood.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 1,
@@ -1839,6 +3216,15 @@
         "Name": "Antibody Generation",
         "Description": "Temporarily increases resistance to all status ailments.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -1851,6 +3237,15 @@
         "Name": "Panacea's Essence",
         "Description": "Cures you and your partner of all status ailments, or blocks them if used before being afflicted.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1863,6 +3258,15 @@
         "Name": "Venom Removal",
         "Description": "Cures you and your partner of the status ailment venom. Use to block the effect before being afflicted.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -1875,6 +3279,15 @@
         "Name": "Stun Removal",
         "Description": "Cures you and your partner of the status ailment stun. Can block the effect if used before being afflicted.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -1887,6 +3300,15 @@
         "Name": "Leak Removal",
         "Description": "Cures you and your partner of the status ailment leak. Can block the effect if used before being afflicted.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -1899,6 +3321,15 @@
         "Name": "Inhibit Removal",
         "Description": "Cures you and your partner of the status ailment inhibit. Can block the effect if used before being afflicted.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -1911,6 +3342,15 @@
         "Name": "Stall Removal",
         "Description": "Cures you and your partner of the status ailment stall. Can block the effect if used before being afflicted.",
         "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -1923,6 +3363,15 @@
         "Name": "Cleansing Light",
         "Description": "For a limited time, a portion of the damage you take after casting formae will slowly heal automatically.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 0,
@@ -1935,6 +3384,15 @@
         "Name": "Regenerator",
         "Description": "Increases the amount restored from regeneration for you and your companions.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1947,6 +3405,15 @@
         "Name": "Sturdy Body",
         "Description": "Temporarily lowers forma attack power and increases max LP.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 1,
@@ -1959,6 +3426,15 @@
         "Name": "Focused Counter",
         "Description": "Temporarily adds the following effects to dodges:\n\nReduces ichor consumption for all formae for a short time when an enemy attack is successfully dodged.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -1971,6 +3447,15 @@
         "Name": "Ichor Efficiency",
         "Description": "Temporarily reduces the ichor cost of weapon attacks.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1983,6 +3468,15 @@
         "Name": "Supernatural Blood",
         "Description": "Enables you to consume HP instead of ichor to cast formae when you have insufficient ichor.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -1995,6 +3489,15 @@
         "Name": "Blood Sacrifice",
         "Description": "Spends your own HP to gain ichor.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -2007,6 +3510,15 @@
         "Name": "Ichor Regeneration",
         "Description": "Gradually restores ichor in exchange for a decrease in weapon attack power and defense.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -2019,6 +3531,15 @@
         "Name": "Rush Hour",
         "Description": "Temporarily boosts sprint speed.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -2031,6 +3552,15 @@
         "Name": "Hasten",
         "Description": "Temporarily enhances your dodges.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
@@ -2043,6 +3573,15 @@
         "Name": "Conservation",
         "Description": "Temporarily reduces stamina consumption. The effect ends if you take damage.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2055,6 +3594,15 @@
         "Name": "Featherweight",
         "Description": "Temporarily reduces stamina costs for jumps and aerial attacks.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -2067,6 +3615,15 @@
         "Name": "Valiant Heart",
         "Description": "Reduces the stamina cost of dodging.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2079,6 +3636,15 @@
         "Name": "Serene Stance",
         "Description": "Immediately take up a stance that calms your mind and restores all stamina.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -2091,6 +3657,15 @@
         "Name": "Morale Boost",
         "Description": "Temporarily increases the maximum stamina of you and your partner and fully restores both your stamina.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2103,6 +3678,15 @@
         "Name": "Invigorating Rush",
         "Description": "Temporarily restores stamina when you successfully dodge enemy attacks.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2115,6 +3699,15 @@
         "Name": "Red Shoes",
         "Description": "Enables you to consume LP and HP to perform actions when you have run out of stamina.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2127,6 +3720,15 @@
         "Name": "Full Auto",
         "Description": "Temporarily gain the ability to shoot bayonets without reloading. Ammo costs still apply.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
@@ -2139,6 +3741,15 @@
         "Name": "Somatic Zeal",
         "Description": "Temporarily increases Strength and Dexterity.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2151,6 +3762,15 @@
         "Name": "Cognitive Zeal",
         "Description": "Temporarily increases Mind and Willpower.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2163,6 +3783,15 @@
         "Name": "Vigorous Zeal",
         "Description": "Temporarily increases Vitality and Fortitude.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2175,6 +3804,15 @@
         "Name": "Liberator",
         "Description": "Temporarily reduces stat burden.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2187,6 +3825,15 @@
         "Name": "Lone Wolf",
         "Description": "Temporarily disables partner summoning and assimilation to greatly reduce user's stat burden.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 0,
@@ -2199,6 +3846,15 @@
         "Name": "Forma Extension",
         "Description": "Temporarily lengthens the effects of formae used by you and your partner.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2211,6 +3867,15 @@
         "Name": "Focused Contamination",
         "Description": "Temporarily lengthens the duration of status ailments dealt to enemies by you and your partner.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2223,6 +3888,15 @@
         "Name": "Soul Stimulant",
         "Description": "Temporarily boosts attack power of current partner.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 5,
         "Capacity": {
             "Reliability": 0,
@@ -2235,6 +3909,15 @@
         "Name": "Overlink",
         "Description": "Temporarily activates assimilation effects while a partner is summoned. Cannot be used while partner is assimilated.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 6,
         "Capacity": {
             "Reliability": 0,
@@ -2247,6 +3930,15 @@
         "Name": "Offensive Order",
         "Description": "Temporarily lowers your defense and increases attack power for both you and your partner.",
         "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 2,
         "Capacity": {
             "Reliability": 0,
@@ -2259,6 +3951,15 @@
         "Name": "Nightstalker",
         "Description": "Reduces the amount of sound you create, making it more difficult for enemies to detect you.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -2271,6 +3972,15 @@
         "Name": "Gluttonous Urge",
         "Description": "Accelerates your metabolism to reset the effects of food.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,
@@ -2283,6 +3993,15 @@
         "Name": "Floating Light",
         "Description": "Creates a ball of light at your feet.",
         "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
         "IchorCost": 1,
         "Capacity": {
             "Reliability": 0,

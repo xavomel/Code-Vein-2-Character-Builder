@@ -54,6 +54,16 @@ class Forma:
         "Conductivity": 	0,
     }
 
+    matching_weapons = {
+        "SingleSword": True,
+        "GreatSword": True,
+        "DualSword": True,
+        "Bayonet": True,
+        "Halberd": True,
+        "Hammer": True,
+        "RuneBlade": True,
+    }
+
     def __init__(self, doc=None, dummy_number=None):
         if not doc:
             self.name = "Forma " + str(dummy_number)
@@ -64,6 +74,7 @@ class Forma:
         self.type = doc["Type"]
         self.ichor_cost = doc["IchorCost"]
         self.capacity = doc["Capacity"]
+        self.matching_weapons = doc["WeaponMatch"]
 
 
 class Booster:

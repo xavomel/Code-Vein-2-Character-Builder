@@ -1670,13 +1670,11 @@ class Ui_MainWindow(object):
 
     def filter_menu_forma(self, item):
         chosen = item.statusTip()
-        print(chosen)
         self.side_menu_content.clear()
 
         for k, v in self.builder.formae.items():
             # TODO favorite handling
-            # need forma to weapon type mapping
-            if chosen == "All" or v.type == chosen:
+            if chosen == "All" or v.type == chosen or v.matching_weapons.get(chosen):
                 item = QListWidgetItem(QIcon(u":/All/Forma/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
                 self.side_menu_content.addItem(item)
