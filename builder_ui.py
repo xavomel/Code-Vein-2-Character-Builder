@@ -265,9 +265,6 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.setIconSize(icon_side_menu_button_size)
         self.side_vertical_layout_1.addWidget(self.side_menu_buttons)
         self.side_menu_buttons.setMouseTracking(True)
-        # those are dummy connections to avoid warnings, will be replaced when side menu is opened
-        self.side_menu_buttons.itemClicked.connect(self.handle_dummy)
-        self.side_menu_buttons.itemEntered.connect(self.handle_dummy)
 
         # side vertical layout 2
         self.side_vertical_layout_widget_2 = QWidget(self.centralwidget)
@@ -290,12 +287,6 @@ class Ui_MainWindow(object):
         self.side_menu_content.setUniformItemSizes(True)
         self.side_vertical_layout_2.addWidget(self.side_menu_content)
         self.side_menu_content.setMouseTracking(True)
-        # those are dummy connections to avoid warnings, will be replaced when side menu is opened
-        self.side_menu_content.itemClicked.connect(self.handle_dummy)
-        self.side_menu_content.itemEntered.connect(self.handle_dummy)
-
-        # test only
-        # self.fill_side_menu()
 
         # main vertical layout
         self.main_vertical_layout_widget = QWidget(self.centralwidget)
@@ -1279,6 +1270,7 @@ class Ui_MainWindow(object):
         # but ok for testing
         self.side_menu_buttons.setVisible(False)
         self.side_menu_content.setVisible(False)
+        self.side_menu_content.menu_type = ""
         pass
 
     def close_side_menu_if_already_opened(self, sender):
@@ -1326,6 +1318,7 @@ class Ui_MainWindow(object):
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
+        self.side_menu_content.menu_type = "Forma"
 
         # buttons
         # for button in QDir("Menu").entryInfoList(["*.png"]):
@@ -1370,9 +1363,11 @@ class Ui_MainWindow(object):
         #     item = QListWidgetItem(QIcon(forma.filePath()), "")
         #     item.setStatusTip(forma.fileName())
         #     self.side_menu_content.addItem(item)
-        for k in self.builder.formae.keys():
+        for k, v in self.builder.formae.items():
             item = QListWidgetItem(QIcon(u":/All/Forma/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
+            if v.favorite:
+                self.add_favorite_to_icon(item)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_booster(self):
@@ -1402,6 +1397,7 @@ class Ui_MainWindow(object):
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
+        self.side_menu_content.menu_type = "Booster"
 
         # buttons
         # for button in QDir("Menu").entryInfoList(["*.png"]):
@@ -1434,9 +1430,11 @@ class Ui_MainWindow(object):
         #     item = QListWidgetItem(QIcon(booster.filePath()), "")
         #     item.setStatusTip(booster.fileName())
         #     self.side_menu_content.addItem(item)
-        for k in self.builder.boosters.keys():
+        for k, v in self.builder.boosters.items():
             item = QListWidgetItem(QIcon(u":/All/Booster/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
+            if v.favorite:
+                self.add_favorite_to_icon(item)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_weapon(self):
@@ -1458,6 +1456,7 @@ class Ui_MainWindow(object):
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
+        self.side_menu_content.menu_type = "Weapon"
 
         # buttons
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_All.png"), "")
@@ -1482,9 +1481,11 @@ class Ui_MainWindow(object):
         #     item = QListWidgetItem(QIcon(weapon.filePath()), "")
         #     item.setStatusTip(weapon.fileName())
         #     self.side_menu_content.addItem(item)
-        for k in self.builder.weapons.keys():
+        for k, v in self.builder.weapons.items():
             item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
+            if v.favorite:
+                self.add_favorite_to_icon(item)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_transform(self):
@@ -1508,6 +1509,7 @@ class Ui_MainWindow(object):
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
+        self.side_menu_content.menu_type = "Transform"
 
         # buttons - empty
 
@@ -1544,6 +1546,7 @@ class Ui_MainWindow(object):
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
+        self.side_menu_content.menu_type = "BloodCode"
 
         # buttons - text
         font_numbers_bleed = QFontDatabase().font("Pirata One", "Regular", 11)
@@ -1564,9 +1567,11 @@ class Ui_MainWindow(object):
         #     item = QListWidgetItem(QIcon(blood_code.filePath()), "")
         #     item.setStatusTip(blood_code.fileName())
         #     self.side_menu_content.addItem(item)
-        for k in self.builder.blood_codes.keys():
+        for k, v in self.builder.blood_codes.items():
             item = QListWidgetItem(QIcon(u":/All/BloodCode/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
+            if v.favorite:
+                self.add_favorite_to_icon(item)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_offensive(self):
@@ -1583,6 +1588,7 @@ class Ui_MainWindow(object):
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
+        self.side_menu_content.menu_type = "Offensive"
 
         # buttons - empty
 
@@ -1614,6 +1620,7 @@ class Ui_MainWindow(object):
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
+        self.side_menu_content.menu_type = "Defensive"
 
         # buttons
         font_numbers_bleed = QFontDatabase().font("Pirata One", "Regular", 11)
@@ -1632,9 +1639,11 @@ class Ui_MainWindow(object):
         #     item = QListWidgetItem(QIcon(defensive.filePath()), "")
         #     item.setStatusTip(defensive.fileName())
         #     self.side_menu_content.addItem(item)
-        for k in self.builder.defensive_formae.keys():
+        for k, v in self.builder.defensive_formae.items():
             item = QListWidgetItem(QIcon(u":/All/Defensive/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
+            if v.favorite:
+                self.add_favorite_to_icon(item)
             self.side_menu_content.addItem(item)
 
     def fill_side_menu_jail(self):
@@ -1651,6 +1660,7 @@ class Ui_MainWindow(object):
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
+        self.side_menu_content.menu_type = "Jail"
 
         # buttons - empty
 
@@ -1673,10 +1683,11 @@ class Ui_MainWindow(object):
         self.side_menu_content.clear()
 
         for k, v in self.builder.formae.items():
-            # TODO favorite handling
-            if chosen == "All" or v.type == chosen or v.matching_weapons.get(chosen):
+            if chosen == "All" or chosen == v.type or v.matching_weapons.get(chosen) or (chosen == "Favorite" and v.favorite):
                 item = QListWidgetItem(QIcon(u":/All/Forma/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
+                if v.favorite:
+                    self.add_favorite_to_icon(item)
                 self.side_menu_content.addItem(item)
 
     def filter_menu_booster(self, item):
@@ -1684,10 +1695,11 @@ class Ui_MainWindow(object):
         self.side_menu_content.clear()
 
         for k, v in self.builder.boosters.items():
-            # TODO favorite handling
-            if chosen == "All" or v.type == chosen:
+            if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite):
                 item = QListWidgetItem(QIcon(u":/All/Booster/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
+                if v.favorite:
+                    self.add_favorite_to_icon(item)
                 self.side_menu_content.addItem(item)
 
     def filter_menu_weapon(self, item):
@@ -1695,10 +1707,11 @@ class Ui_MainWindow(object):
         self.side_menu_content.clear()
 
         for k, v in self.builder.weapons.items():
-            # TODO favorite handling
-            if chosen == "All" or v.type == chosen:
+            if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite):
                 item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
+                if v.favorite:
+                    self.add_favorite_to_icon(item)
                 self.side_menu_content.addItem(item)
 
     def filter_menu_blood_code(self, item):
@@ -1706,10 +1719,11 @@ class Ui_MainWindow(object):
         self.side_menu_content.clear()
 
         for k, v in self.builder.blood_codes.items():
-            # TODO favorite handling
-            if chosen == "All" or v.bloodline == chosen:
+            if chosen == "All" or chosen == v.bloodline or (chosen == "Favorite" and v.favorite):
                 item = QListWidgetItem(QIcon(u":/All/BloodCode/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
+                if v.favorite:
+                    self.add_favorite_to_icon(item)
                 self.side_menu_content.addItem(item)
 
     def filter_menu_defensive(self, item):
@@ -1717,10 +1731,11 @@ class Ui_MainWindow(object):
         self.side_menu_content.clear()
 
         for k, v in self.builder.defensive_formae.items():
-            # TODO favorite handling
-            if chosen == "All" or v.type == chosen:
+            if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite):
                 item = QListWidgetItem(QIcon(u":/All/Defensive/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
+                if v.favorite:
+                    self.add_favorite_to_icon(item)
                 self.side_menu_content.addItem(item)
 
     def handle_unimplemented_clicked(self, item):
@@ -1872,21 +1887,46 @@ class Ui_MainWindow(object):
     # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
     # (such that it looks good and button remains clickable)
     # merge icons instead to accomplish this
-    def merge_icons(self, icon_1, icon_2, size):
-        pixmap1 = icon_1.pixmap(size, QIcon.Mode.Normal, QIcon.State.Off)
-        pixmap2 = icon_2.pixmap(size, QIcon.Mode.Normal, QIcon.State.Off)
-        image1 = pixmap1.toImage()
-        image2 = pixmap2.toImage()
+    def merge_icons(self, icon_1, icon_2, size_1, size_2=None):
+        if not size_2:
+            size_2 = size_1
+
+        pixmap_1 = icon_1.pixmap(size_1, QIcon.Mode.Normal, QIcon.State.Off)
+        pixmap_2 = icon_2.pixmap(size_2, QIcon.Mode.Normal, QIcon.State.Off)
+        image_1 = pixmap_1.toImage()
+        image_2 = pixmap_2.toImage()
 
         # draw image 2 on top of image 1
-        painter = QPainter(image1)
-        painter.drawImage(0, 0, image2)
+        painter = QPainter(image_1)
+        painter.drawImage(0, 0, image_2)
         painter.end()
 
-        pixmap_3 = QPixmap.fromImage(image1)
+        pixmap_3 = QPixmap.fromImage(image_1)
         icon_3 = QIcon()
         icon_3.addPixmap(pixmap_3, QIcon.Mode.Normal, QIcon.State.Off)
         return icon_3
+
+    # merge original icon with favorite icon
+    # save original icon pixmap as another pixmap (for mode, state which aren't used for anything)
+    def add_favorite_to_icon(self, item):
+        icon_1 = item.icon()
+        size_1 = self.side_menu_content.iconSize()
+        icon_2 = QIcon(u":/All/UI/Menu_Favorite.png")
+        size_2 = size_1 / 3
+        new_icon = self.merge_icons(icon_1, icon_2, size_1, size_2)
+
+        pixmap_1 = icon_1.pixmap(size_1, QIcon.Mode.Normal, QIcon.State.Off)
+        new_icon.addPixmap(pixmap_1, QIcon.Mode.Disabled, QIcon.State.On)
+        item.setIcon(new_icon)
+
+    # restore original icon pixmap (from mode, state which aren't used for anything)
+    def remove_favorite_from_icon(self, item):
+        icon_1 = item.icon()
+        size_1 = self.side_menu_content.iconSize()
+
+        pixmap_1 = icon_1.pixmap(size_1, QIcon.Mode.Disabled, QIcon.State.On)
+        new_icon = QIcon(pixmap_1)
+        item.setIcon(new_icon)
 
     def calculate_buttons_end(self):
         # calculate y position of end of visible content for side menu buttons
@@ -2061,6 +2101,7 @@ class AttributeProgressBar(QProgressBar):
 
 
 class MyQListWidget(QListWidget):
+    menu_type = ""
     hovered_item = None
 
     def foo(self, item):
@@ -2075,3 +2116,34 @@ class MyQListWidget(QListWidget):
         # print("exited", self.hovered_item)
         self.hovered_item = None
         # self.window().close_side_menu()
+
+    def mousePressEvent(self, QMouseEvent):
+        if QMouseEvent.button() == Qt.LeftButton:
+            # use default handling for left mouse button
+            super().mousePressEvent(QMouseEvent)
+
+        elif QMouseEvent.button() == Qt.RightButton:
+            # use custom handling for right mouse button
+            index = self.indexAt(QMouseEvent.position().toPoint())
+            if index.isValid():
+                item = self.itemFromIndex(index)
+
+                if self.menu_type == "Forma":
+                    matching_data = self.window().builder.formae[item.statusTip()]
+                elif self.menu_type == "Booster":
+                    matching_data = self.window().builder.boosters[item.statusTip()]
+                elif self.menu_type == "Weapon":
+                    matching_data = self.window().builder.weapons[item.statusTip()]
+                elif self.menu_type == "BloodCode":
+                    matching_data = self.window().builder.blood_codes[item.statusTip()]
+                elif self.menu_type == "Defensive":
+                    matching_data = self.window().builder.defensive_formae[item.statusTip()]
+                else:
+                    return
+
+                if matching_data.favorite:
+                    matching_data.favorite = False
+                    self.window().remove_favorite_from_icon(item)
+                else:
+                    matching_data.favorite = True
+                    self.window().add_favorite_to_icon(item)

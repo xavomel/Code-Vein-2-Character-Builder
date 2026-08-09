@@ -6,6 +6,7 @@ class Weapon:
     scaling = "TODO"
     transformable = False
     transforms = {}
+    favorite = False
 
     capacity = {
         "Reliability": 		0,
@@ -46,6 +47,7 @@ class Forma:
     # Magic Range Long, Magic Range Short, Assistance Attack, Assistance Defense, Assistance Other
     type = ""
     ichor_cost = 0
+    favorite = False
 
     capacity = {
         "Reliability": 		0,
@@ -82,6 +84,7 @@ class Booster:
     description = ""
     type = ""  # 0, 1, 2, 3
     conditions = []
+    favorite = False
 
     # for positive effects
     attributes = {
@@ -123,6 +126,7 @@ class BloodCode:
     ichor = 0
     balance = 0
     traits = []
+    favorite = False
 
     attributes = {
         "Strength":     0,
@@ -183,6 +187,7 @@ class Jail:
     description = ""
     type = ""
     balance = 0
+    # favorite = False  # NOT USED
 
     burden = {
         "Strength": 	0,
@@ -225,6 +230,7 @@ class DefensiveForma:
     balance = 0
     transformable = False
     transforms = {}
+    favorite = False
 
     burden = {
         "Strength": 	0,
@@ -286,6 +292,7 @@ class OffensiveForma:
     description = ""
     ichor_cost = 0
     scaling = {}
+    # favorite = False  # NOT USED
 
     def __init__(self, doc=None):
         if not doc:
