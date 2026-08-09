@@ -2,7 +2,7 @@
     {
         "Name": "Clotted Shield (Light)",
         "Description": "A shield that guards against enemy attacks and reduces damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it slightly increases base defense.",
-        "Type": "Defence",
+        "Type": "Guard",
         "IchorCost": 0,
         "StaminaGuardCost": 25,
         "Balance": 8,
@@ -403,7 +403,7 @@
     {
         "Name": "Clotted Shield",
         "Description": "A shield that guards against enemy attacks and reduces damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption. Equipping it increases base defense.",
-        "Type": "Defence",
+        "Type": "Guard",
         "IchorCost": 0,
         "StaminaGuardCost": 27,
         "Balance": 16,
@@ -804,7 +804,7 @@
     {
         "Name": "Bleeding Shield (Light)",
         "Description": "A shield that guards against enemy attacks and nullifies physical damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it slightly increases base defense.",
-        "Type": "Defence",
+        "Type": "Guard",
         "IchorCost": 0,
         "StaminaGuardCost": 32,
         "Balance": 27,
@@ -1205,7 +1205,7 @@
     {
         "Name": "Bleeding Shield",
         "Description": "A shield that guards against enemy attacks and nullifies physical damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it increases base defense.",
-        "Type": "Defence",
+        "Type": "Guard",
         "IchorCost": 0,
         "StaminaGuardCost": 34,
         "Balance": 35,
@@ -1606,7 +1606,7 @@
     {
         "Name": "Bleeding Shield (Heavy)",
         "Description": "A shield that guards against enemy attacks and nullifies physical damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it greatly increases base defense.",
-        "Type": "Defence",
+        "Type": "Guard",
         "IchorCost": 0,
         "StaminaGuardCost": 36,
         "Balance": 42,
@@ -2007,7 +2007,7 @@
     {
         "Name": "Bloodsoaked Shields",
         "Description": "Floating shields that guard against enemy attacks and reduce damage.\n\nCan block attacks from all directions, but doing so consumes stamina. Perfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping them increases base defense.",
-        "Type": "Defence",
+        "Type": "Guard",
         "IchorCost": 0,
         "StaminaGuardCost": 31,
         "Balance": 26,
@@ -2419,7 +2419,7 @@
     {
         "Name": "Bloodsoaked Shields (Heavy)",
         "Description": "Floating shields that guard against enemy attacks and reduce damage.\n\nCan block attacks from all directions, but doing so consumes stamina. Perfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping them greatly increases base defense.",
-        "Type": "Defence",
+        "Type": "Guard",
         "IchorCost": 0,
         "StaminaGuardCost": 32,
         "Balance": 33,
@@ -2831,7 +2831,7 @@
     {
         "Name": "Shield of Stupor",
         "Description": "A shield that guards against enemy attacks and reduces damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption, as well as produces a field that applies the stone status effect.\n\nEquipping it slightly increases base defense.",
-        "Type": "Defence",
+        "Type": "Guard",
         "IchorCost": 0,
         "StaminaGuardCost": 24,
         "Balance": 4,

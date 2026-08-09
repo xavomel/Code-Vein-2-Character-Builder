@@ -1303,7 +1303,7 @@ class Ui_MainWindow(object):
         if self.close_side_menu_if_already_opened(self.sender().objectName()):
             return
 
-        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemClicked.connect(self.filter_menu_forma)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
 
         if "Forma_1_Weapon_1" in self.sender().objectName():
@@ -1334,6 +1334,32 @@ class Ui_MainWindow(object):
         #     item = QListWidgetItem(QIcon(button.filePath()), "")
         #     item.setStatusTip(button.fileName())
         #     self.side_menu_buttons.addItem(item)
+        item = QListWidgetItem(QIcon(u":/All/UI/Menu_All.png"), "")
+        item.setStatusTip("All")
+        self.side_menu_buttons.addItem(item)
+        item = QListWidgetItem(QIcon(u":/All/UI/Menu_Favorite.png"), "")
+        item.setStatusTip("Favorite")
+        self.side_menu_buttons.addItem(item)
+
+        button_names = ["SingleSword", "GreatSword", "DualSword", "Bayonet", "Halberd", "Hammer", "RuneBlade"]
+        for name in button_names:
+            item = QListWidgetItem(QIcon(u":/All/UI/Menu_Weapon_" + name + ".png"), "")
+            item.setStatusTip(name)
+            self.side_menu_buttons.addItem(item)
+
+        # temporary, fix file names?
+        mapping = {
+            "Menu_Formae_Action.png": "WeaponAction",
+            "Menu_Formae_Magic_Range_Long": "MagicLongRange",
+            "Menu_Formae_Magic_Range_Close.png": "MagicMiddleRange",
+            "Menu_Formae_Assistance_Attack.png": "SupportAttack",
+            "Menu_Formae_Assistance_Defense.png": "SupportDefense",
+            "Menu_Formae_Assistance_Other.png": "SupportOther",
+        }
+        for k, v in mapping.items():
+            item = QListWidgetItem(QIcon(u":/All/UI/" + k), "")
+            item.setStatusTip(v)
+            self.side_menu_buttons.addItem(item)
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
@@ -1357,7 +1383,7 @@ class Ui_MainWindow(object):
         if self.close_side_menu_if_already_opened(self.sender().objectName()):
             return
 
-        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemClicked.connect(self.filter_menu_booster)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
 
         if "Booster_1" in self.sender().objectName():
@@ -1378,13 +1404,25 @@ class Ui_MainWindow(object):
         self.side_menu_content.setVisible(True)
 
         # buttons
-        for button in QDir("Menu").entryInfoList(["*.png"]):
-            if "weapon" in button.filePath().lower():
-                continue
-            if "formae" in button.filePath().lower():
-                continue
-            item = QListWidgetItem(QIcon(button.filePath()), "")
-            item.setStatusTip(button.fileName())
+        # for button in QDir("Menu").entryInfoList(["*.png"]):
+        #     if "weapon" in button.filePath().lower():
+        #         continue
+        #     if "formae" in button.filePath().lower():
+        #         continue
+        #     item = QListWidgetItem(QIcon(button.filePath()), "")
+        #     item.setStatusTip(button.fileName())
+        #     self.side_menu_buttons.addItem(item)
+        item = QListWidgetItem(QIcon(u":/All/UI/Menu_All.png"), "")
+        item.setStatusTip("All")
+        self.side_menu_buttons.addItem(item)
+        item = QListWidgetItem(QIcon(u":/All/UI/Menu_Favorite.png"), "")
+        item.setStatusTip("Favorite")
+        self.side_menu_buttons.addItem(item)
+
+        button_names = ["Basic", "Attack", "Defence", "Other"]
+        for name in button_names:
+            item = QListWidgetItem(QIcon(u":/All/UI/Menu_Booster_" + name + ".png"), "")
+            item.setStatusTip(name)
             self.side_menu_buttons.addItem(item)
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
@@ -1409,7 +1447,7 @@ class Ui_MainWindow(object):
         if self.close_side_menu_if_already_opened(self.sender().objectName()):
             return
 
-        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemClicked.connect(self.filter_menu_weapon)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
 
         if "Weapon_1" in self.sender().objectName():
@@ -1422,13 +1460,17 @@ class Ui_MainWindow(object):
         self.side_menu_content.setVisible(True)
 
         # buttons
-        for button in QDir("Menu").entryInfoList(["*.png"]):
-            if "booster" in button.filePath().lower():
-                continue
-            if "formae" in button.filePath().lower():
-                continue
-            item = QListWidgetItem(QIcon(button.filePath()), "")
-            item.setStatusTip(button.fileName())
+        item = QListWidgetItem(QIcon(u":/All/UI/Menu_All.png"), "")
+        item.setStatusTip("All")
+        self.side_menu_buttons.addItem(item)
+        item = QListWidgetItem(QIcon(u":/All/UI/Menu_Favorite.png"), "")
+        item.setStatusTip("Favorite")
+        self.side_menu_buttons.addItem(item)
+
+        button_names = ["SingleSword", "GreatSword", "DualSword", "Bayonet", "Halberd", "Hammer", "RuneBlade"]
+        for name in button_names:
+            item = QListWidgetItem(QIcon(u":/All/UI/Menu_Weapon_" + name + ".png"), "")
+            item.setStatusTip(name)
             self.side_menu_buttons.addItem(item)
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
@@ -1496,7 +1538,7 @@ class Ui_MainWindow(object):
         if self.close_side_menu_if_already_opened(self.sender().objectName()):
             return
 
-        self.side_menu_buttons.itemClicked.connect(self.filter_side_content_menu)
+        self.side_menu_buttons.itemClicked.connect(self.filter_menu_blood_code)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_menu_content.itemClicked.connect(self.handle_blood_code_clicked)
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
@@ -1566,7 +1608,7 @@ class Ui_MainWindow(object):
         if self.close_side_menu_if_already_opened(self.sender().objectName()):
             return
 
-        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        self.side_menu_buttons.itemClicked.connect(self.filter_menu_defensive)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_menu_content.itemClicked.connect(self.handle_defensive_clicked)
         self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
@@ -1626,18 +1668,62 @@ class Ui_MainWindow(object):
             item.setStatusTip(k)
             self.side_menu_content.addItem(item)
 
-    def filter_side_content_menu(self, item):
+    def filter_menu_forma(self, item):
+        chosen = item.statusTip()
+        print(chosen)
+        self.side_menu_content.clear()
+
+        for k, v in self.builder.formae.items():
+            # TODO favorite handling
+            # need forma to weapon type mapping
+            if chosen == "All" or v.type == chosen:
+                item = QListWidgetItem(QIcon(u":/All/Forma/" + escape_filename(k) + ".png"), "")
+                item.setStatusTip(k)
+                self.side_menu_content.addItem(item)
+
+    def filter_menu_booster(self, item):
+        chosen = item.statusTip()
+        self.side_menu_content.clear()
+
+        for k, v in self.builder.boosters.items():
+            # TODO favorite handling
+            if chosen == "All" or v.type == chosen:
+                item = QListWidgetItem(QIcon(u":/All/Booster/" + escape_filename(k) + ".png"), "")
+                item.setStatusTip(k)
+                self.side_menu_content.addItem(item)
+
+    def filter_menu_weapon(self, item):
+        chosen = item.statusTip()
+        self.side_menu_content.clear()
+
+        for k, v in self.builder.weapons.items():
+            # TODO favorite handling
+            if chosen == "All" or v.type == chosen:
+                item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
+                item.setStatusTip(k)
+                self.side_menu_content.addItem(item)
+
+    def filter_menu_blood_code(self, item):
         chosen = item.text()
         self.side_menu_content.clear()
 
-        filter = ["*.png"]
-        if "Luxuria" in chosen:
-            filter = ["*Holly*.png"]
-        if "Superbia" in chosen:
-            filter = ["*Lou*.png"]
+        for k, v in self.builder.blood_codes.items():
+            # TODO favorite handling
+            if chosen == "All" or v.bloodline == chosen:
+                item = QListWidgetItem(QIcon(u":/All/BloodCode/" + escape_filename(k) + ".png"), "")
+                item.setStatusTip(k)
+                self.side_menu_content.addItem(item)
 
-        for blood_code in QDir("BloodCode").entryInfoList(filter):
-            self.side_menu_content.addItem(QListWidgetItem(QIcon(blood_code.filePath()), ""))
+    def filter_menu_defensive(self, item):
+        chosen = item.text()
+        self.side_menu_content.clear()
+
+        for k, v in self.builder.defensive_formae.items():
+            # TODO favorite handling
+            if chosen == "All" or v.type == chosen:
+                item = QListWidgetItem(QIcon(u":/All/Defensive/" + escape_filename(k) + ".png"), "")
+                item.setStatusTip(k)
+                self.side_menu_content.addItem(item)
 
     def handle_unimplemented_clicked(self, item):
         print("clicked", item)
