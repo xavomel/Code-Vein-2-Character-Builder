@@ -4,7 +4,8 @@ from PySide6.QtGui import QAction, QGuiApplication, QIcon, QFont, QFontDatabase,
 from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QSpacerItem, \
     QSizePolicy, QToolButton, QPushButton, QProgressBar, QApplication, QListView, QListWidget, QListWidgetItem, \
     QAbstractScrollArea
-import resource
+import warnings
+import cv2_resources
 from game_data_classes import *
 
 
@@ -249,6 +250,11 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
 
         # side vertical layout 1 content - list widget 1 - menu buttons
+        self.selected_side_menu = {
+            "Menu": "",
+            "Count": 0
+        }
+
         self.side_menu_buttons = MyQListWidget(self.centralwidget)
         self.side_menu_buttons.setObjectName(u"side_menu_buttons")
         self.side_menu_buttons.setFlow(QListView.LeftToRight)
@@ -1259,6 +1265,15 @@ class Ui_MainWindow(object):
         self.add_menu_bar(MainWindow)
         self.retranslateUi(MainWindow)
 
+    def disconnect_side_menu_signals(self):
+        # warning will be thrown if signals are already disconnected, ignore it
+        warnings.filterwarnings("ignore", category=RuntimeWarning, message=r".*Failed to disconnect.*")
+        self.side_menu_buttons.itemClicked.disconnect()
+        self.side_menu_buttons.itemEntered.disconnect()
+        self.side_menu_content.itemClicked.disconnect()
+        self.side_menu_content.itemEntered.disconnect()
+        warnings.resetwarnings()
+
     def close_side_menu(self):
         # exit triggers when moving between content and buttons, so bad idea to hide it this way
         # but ok for testing
@@ -1266,13 +1281,27 @@ class Ui_MainWindow(object):
         self.side_menu_content.setVisible(False)
         pass
 
+    def close_side_menu_if_already_opened(self, sender):
+        if self.selected_side_menu["Menu"] == sender:
+            if self.selected_side_menu["Count"] == 0:
+                self.selected_side_menu["Count"] = 1
+            else:
+                self.selected_side_menu["Count"] = 0
+                self.close_side_menu()
+                return True
+        else:
+            self.selected_side_menu["Menu"] = sender
+            self.selected_side_menu["Count"] = 1
+
+        return False
+
     def fill_side_menu_forma(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
-        self.side_menu_buttons.itemClicked.disconnect()
-        self.side_menu_buttons.itemEntered.disconnect()
-        self.side_menu_content.itemClicked.disconnect()
-        self.side_menu_content.itemEntered.disconnect()
+        self.disconnect_side_menu_signals()
+
+        if self.close_side_menu_if_already_opened(self.sender().objectName()):
+            return
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
@@ -1323,10 +1352,10 @@ class Ui_MainWindow(object):
     def fill_side_menu_booster(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
-        self.side_menu_buttons.itemClicked.disconnect()
-        self.side_menu_buttons.itemEntered.disconnect()
-        self.side_menu_content.itemClicked.disconnect()
-        self.side_menu_content.itemEntered.disconnect()
+        self.disconnect_side_menu_signals()
+
+        if self.close_side_menu_if_already_opened(self.sender().objectName()):
+            return
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
@@ -1375,10 +1404,10 @@ class Ui_MainWindow(object):
     def fill_side_menu_weapon(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
-        self.side_menu_buttons.itemClicked.disconnect()
-        self.side_menu_buttons.itemEntered.disconnect()
-        self.side_menu_content.itemClicked.disconnect()
-        self.side_menu_content.itemEntered.disconnect()
+        self.disconnect_side_menu_signals()
+
+        if self.close_side_menu_if_already_opened(self.sender().objectName()):
+            return
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
@@ -1419,10 +1448,10 @@ class Ui_MainWindow(object):
     def fill_side_menu_transform(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
-        self.side_menu_buttons.itemClicked.disconnect()
-        self.side_menu_buttons.itemEntered.disconnect()
-        self.side_menu_content.itemClicked.disconnect()
-        self.side_menu_content.itemEntered.disconnect()
+        self.disconnect_side_menu_signals()
+
+        if self.close_side_menu_if_already_opened(self.sender().objectName()):
+            return
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
@@ -1462,10 +1491,10 @@ class Ui_MainWindow(object):
     def fill_side_menu_blood_code(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
-        self.side_menu_buttons.itemClicked.disconnect()
-        self.side_menu_buttons.itemEntered.disconnect()
-        self.side_menu_content.itemClicked.disconnect()
-        self.side_menu_content.itemEntered.disconnect()
+        self.disconnect_side_menu_signals()
+
+        if self.close_side_menu_if_already_opened(self.sender().objectName()):
+            return
 
         self.side_menu_buttons.itemClicked.connect(self.filter_side_content_menu)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
@@ -1501,10 +1530,10 @@ class Ui_MainWindow(object):
     def fill_side_menu_offensive(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
-        self.side_menu_buttons.itemClicked.disconnect()
-        self.side_menu_buttons.itemEntered.disconnect()
-        self.side_menu_content.itemClicked.disconnect()
-        self.side_menu_content.itemEntered.disconnect()
+        self.disconnect_side_menu_signals()
+
+        if self.close_side_menu_if_already_opened(self.sender().objectName()):
+            return
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
@@ -1532,10 +1561,10 @@ class Ui_MainWindow(object):
     def fill_side_menu_defensive(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
-        self.side_menu_buttons.itemClicked.disconnect()
-        self.side_menu_buttons.itemEntered.disconnect()
-        self.side_menu_content.itemClicked.disconnect()
-        self.side_menu_content.itemEntered.disconnect()
+        self.disconnect_side_menu_signals()
+
+        if self.close_side_menu_if_already_opened(self.sender().objectName()):
+            return
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
@@ -1569,10 +1598,10 @@ class Ui_MainWindow(object):
     def fill_side_menu_jail(self):
         self.side_menu_buttons.clear()
         self.side_menu_content.clear()
-        self.side_menu_buttons.itemClicked.disconnect()
-        self.side_menu_buttons.itemEntered.disconnect()
-        self.side_menu_content.itemClicked.disconnect()
-        self.side_menu_content.itemEntered.disconnect()
+        self.disconnect_side_menu_signals()
+
+        if self.close_side_menu_if_already_opened(self.sender().objectName()):
+            return
 
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
