@@ -3,7 +3,7 @@ from PySide6.QtGui import QAction, QGuiApplication, QIcon, QFont, QFontDatabase,
     QPainter, QPen, QColor, QPolygonF, QPixmap
 from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QSpacerItem, \
     QSizePolicy, QToolButton, QPushButton, QProgressBar, QApplication, QListView, QListWidget, QListWidgetItem, \
-    QAbstractScrollArea
+    QAbstractScrollArea, QTextEdit
 import warnings
 import cv2_resources
 from game_data_classes import *
@@ -142,7 +142,7 @@ class Ui_MainWindow(object):
                     color: #c2c2c2; /*light grey*/
                 }
 
-                QToolButton {
+                QToolButton, QTextEdit {
                     color: #c2c2c2; /*light grey*/
                     border: none;
                     background: transparent;
@@ -287,6 +287,15 @@ class Ui_MainWindow(object):
         self.side_menu_content.setUniformItemSizes(True)
         self.side_vertical_layout_2.addWidget(self.side_menu_content)
         self.side_menu_content.setMouseTracking(True)
+
+        self.side_menu_text = QTextEdit(self.centralwidget)
+        self.side_menu_text.setObjectName(u"side_menu_text")
+        self.side_menu_text.setReadOnly(True)
+        self.side_menu_text.setMinimumWidth(360 - 2 * self.margin_size)
+        self.side_menu_text.setMaximumWidth(360 - 2 * self.margin_size)
+        self.side_menu_text.setMinimumHeight(360)
+        self.side_menu_text.setMaximumHeight(360)
+        self.side_vertical_layout_2.addWidget(self.side_menu_text)
 
         # main vertical layout
         self.main_vertical_layout_widget = QWidget(self.centralwidget)
@@ -1265,13 +1274,17 @@ class Ui_MainWindow(object):
         self.side_menu_content.itemEntered.disconnect()
         warnings.resetwarnings()
 
+    def show_side_menu(self, menu):
+        self.side_menu_buttons.setVisible(True)
+        self.side_menu_content.setVisible(True)
+        self.side_menu_text.setVisible(True)
+        self.side_menu_content.menu_type = menu
+
     def close_side_menu(self):
-        # exit triggers when moving between content and buttons, so bad idea to hide it this way
-        # but ok for testing
         self.side_menu_buttons.setVisible(False)
         self.side_menu_content.setVisible(False)
+        self.side_menu_text.setVisible(False)
         self.side_menu_content.menu_type = ""
-        pass
 
     def close_side_menu_if_already_opened(self, sender):
         if self.selected_side_menu["Menu"] == sender:
@@ -1315,10 +1328,8 @@ class Ui_MainWindow(object):
         elif "Forma_4_Weapon_2" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_forma_4_weapon_2_clicked)
 
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
-        self.side_menu_buttons.setVisible(True)
-        self.side_menu_content.setVisible(True)
-        self.side_menu_content.menu_type = "Forma"
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_forma_hover)
+        self.show_side_menu("Forma")
 
         # buttons
         # for button in QDir("Menu").entryInfoList(["*.png"]):
@@ -1394,10 +1405,8 @@ class Ui_MainWindow(object):
         elif "Booster_6" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_booster_6_clicked)
 
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
-        self.side_menu_buttons.setVisible(True)
-        self.side_menu_content.setVisible(True)
-        self.side_menu_content.menu_type = "Booster"
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_booster_hover)
+        self.show_side_menu("Booster")
 
         # buttons
         # for button in QDir("Menu").entryInfoList(["*.png"]):
@@ -1453,10 +1462,8 @@ class Ui_MainWindow(object):
         elif "Weapon_2" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_weapon_2_clicked)
 
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
-        self.side_menu_buttons.setVisible(True)
-        self.side_menu_content.setVisible(True)
-        self.side_menu_content.menu_type = "Weapon"
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_weapon_hover)
+        self.show_side_menu("Weapon")
 
         # buttons
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_All.png"), "")
@@ -1506,10 +1513,8 @@ class Ui_MainWindow(object):
         elif "Defensive" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_transform_defensive_clicked)
 
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
-        self.side_menu_buttons.setVisible(True)
-        self.side_menu_content.setVisible(True)
-        self.side_menu_content.menu_type = "Transform"
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_transform_hover)
+        self.show_side_menu("Transform")
 
         # buttons - empty
 
@@ -1543,10 +1548,8 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.itemClicked.connect(self.filter_menu_blood_code)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_menu_content.itemClicked.connect(self.handle_blood_code_clicked)
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
-        self.side_menu_buttons.setVisible(True)
-        self.side_menu_content.setVisible(True)
-        self.side_menu_content.menu_type = "BloodCode"
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_blood_code_hover)
+        self.show_side_menu("BloodCode")
 
         # buttons - text
         font_numbers_bleed = QFontDatabase().font("Pirata One", "Regular", 11)
@@ -1585,10 +1588,8 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_menu_content.itemClicked.connect(self.handle_offensive_clicked)
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
-        self.side_menu_buttons.setVisible(True)
-        self.side_menu_content.setVisible(True)
-        self.side_menu_content.menu_type = "Offensive"
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_offensive_hover)
+        self.show_side_menu("Offensive")
 
         # buttons - empty
 
@@ -1617,10 +1618,8 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.itemClicked.connect(self.filter_menu_defensive)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_menu_content.itemClicked.connect(self.handle_defensive_clicked)
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
-        self.side_menu_buttons.setVisible(True)
-        self.side_menu_content.setVisible(True)
-        self.side_menu_content.menu_type = "Defensive"
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_defensive_hover)
+        self.show_side_menu("Defensive")
 
         # buttons
         font_numbers_bleed = QFontDatabase().font("Pirata One", "Regular", 11)
@@ -1657,10 +1656,8 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_menu_content.itemClicked.connect(self.handle_jail_clicked)
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.foo)
-        self.side_menu_buttons.setVisible(True)
-        self.side_menu_content.setVisible(True)
-        self.side_menu_content.menu_type = "Jail"
+        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_jail_hover)
+        self.show_side_menu("Jail")
 
         # buttons - empty
 
@@ -1681,6 +1678,7 @@ class Ui_MainWindow(object):
     def filter_menu_forma(self, item):
         chosen = item.statusTip()
         self.side_menu_content.clear()
+        self.side_menu_text.clear()
 
         for k, v in self.builder.formae.items():
             if chosen == "All" or chosen == v.type or v.matching_weapons.get(chosen) or (chosen == "Favorite" and v.favorite):
@@ -1693,6 +1691,7 @@ class Ui_MainWindow(object):
     def filter_menu_booster(self, item):
         chosen = item.statusTip()
         self.side_menu_content.clear()
+        self.side_menu_text.clear()
 
         for k, v in self.builder.boosters.items():
             if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite):
@@ -1705,6 +1704,7 @@ class Ui_MainWindow(object):
     def filter_menu_weapon(self, item):
         chosen = item.statusTip()
         self.side_menu_content.clear()
+        self.side_menu_text.clear()
 
         for k, v in self.builder.weapons.items():
             if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite):
@@ -1717,6 +1717,7 @@ class Ui_MainWindow(object):
     def filter_menu_blood_code(self, item):
         chosen = item.text()
         self.side_menu_content.clear()
+        self.side_menu_text.clear()
 
         for k, v in self.builder.blood_codes.items():
             if chosen == "All" or chosen == v.bloodline or (chosen == "Favorite" and v.favorite):
@@ -1729,6 +1730,7 @@ class Ui_MainWindow(object):
     def filter_menu_defensive(self, item):
         chosen = item.text()
         self.side_menu_content.clear()
+        self.side_menu_text.clear()
 
         for k, v in self.builder.defensive_formae.items():
             if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite):
@@ -1776,12 +1778,18 @@ class Ui_MainWindow(object):
         icon_2.addFile(u":/All/Weapon/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
         widget.setIcon(new_icon)
+        widget.setText(item.statusTip())
+
+        weapon = self.builder.weapons[item.statusTip()]
+        self.side_menu_text.clear()
+        self.side_menu_text.insertHtml(f'<body><h2><p align="center">{weapon.name}</p></h2><body>')
+        self.side_menu_text.insertPlainText(weapon.description)
 
     def handle_blood_code_clicked(self, item):
         new_icon = QIcon()
         new_icon.addFile(u":/All/BloodCode/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.tool_button_h2_v3_h2_1.setIcon(new_icon)
-        # self.tool_button_h2_v3_h2_1.setText(item.statusTip())
+        self.tool_button_h2_v3_h2_1.setText(item.statusTip())
 
     def handle_offensive_clicked(self, item):
         icon_1 = QIcon()
@@ -1790,7 +1798,7 @@ class Ui_MainWindow(object):
         icon_2.addFile(u":/All/Offensive/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
         self.tool_button_h2_v3_h1_1.setIcon(new_icon)
-        self.tool_button_h2_v3_h1_1.setText("123")
+        self.tool_button_h2_v3_h1_1.setText(item.statusTip())
 
     def handle_defensive_clicked(self, item):
         icon_1 = QIcon()
@@ -1799,7 +1807,7 @@ class Ui_MainWindow(object):
         icon_2.addFile(u":/All/Defensive/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
         self.tool_button_h2_v3_h1_2.setIcon(new_icon)
-        self.tool_button_h2_v3_h1_2.setText("123")
+        self.tool_button_h2_v3_h1_2.setText(item.statusTip())
 
     def handle_jail_clicked(self, item):
         icon_1 = QIcon()
@@ -1808,7 +1816,7 @@ class Ui_MainWindow(object):
         icon_2.addFile(u":/All/Jail/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
         self.tool_button_h2_v3_h1_3.setIcon(new_icon)
-        self.tool_button_h2_v3_h1_3.setText("123")
+        self.tool_button_h2_v3_h1_3.setText(item.statusTip())
 
     def handle_booster_1_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_1
@@ -1841,7 +1849,7 @@ class Ui_MainWindow(object):
         icon_2.addFile(u":/All/Booster/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 30)
         widget.setIcon(new_icon)
-        widget.setText("123")
+        widget.setText(item.statusTip())
 
     def handle_forma_1_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_1
@@ -2103,14 +2111,47 @@ class AttributeProgressBar(QProgressBar):
 class MyQListWidget(QListWidget):
     menu_type = ""
     hovered_item = None
+    # self.setCurrentItem(item) can be used for highlight, but maybe just do CSS ?
 
     def foo(self, item):
-        # first need to handle cleaning up previous item if any?
-        # because exit doesn't fire when moving from 1 item to another
-        # then we potentially don't need exit
+        pass
+
+    def handle_forma_hover(self, item):
+        item_data = self.window().builder.formae[item.statusTip()]
+        self.handle_hover(item, item_data)
+
+    def handle_booster_hover(self, item):
+        item_data = self.window().builder.boosters[item.statusTip()]
+        self.handle_hover(item, item_data)
+
+    def handle_weapon_hover(self, item):
+        item_data = self.window().builder.weapons[item.statusTip()]
+        self.handle_hover(item, item_data)
+
+    def handle_transform_hover(self, item):
+        print("not implemented")
+
+    def handle_blood_code_hover(self, item):
+        item_data = self.window().builder.blood_codes[item.statusTip()]
+        self.handle_hover(item, item_data)
+
+    def handle_offensive_hover(self, item):
+        item_data = self.window().builder.offensive_formae[item.statusTip()]
+        self.handle_hover(item, item_data)
+
+    def handle_defensive_hover(self, item):
+        item_data = self.window().builder.defensive_formae[item.statusTip()]
+        self.handle_hover(item, item_data)
+
+    def handle_jail_hover(self, item):
+        item_data = self.window().builder.jails[item.statusTip()]
+        self.handle_hover(item, item_data)
+
+    def handle_hover(self, item, item_data):
         self.hovered_item = item
-        # self.setCurrentItem(item) can be used for highlight, but maybe just do CSS ?
-        # print("entered", self.hovered_item)
+        self.window().side_menu_text.clear()
+        self.window().side_menu_text.insertHtml(f'<body><h2><p align="center">{item_data.name}</p></h2><body>')
+        self.window().side_menu_text.insertPlainText(item_data.description)
 
     def leaveEvent(self, QEvent):
         # print("exited", self.hovered_item)
