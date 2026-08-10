@@ -165,8 +165,8 @@ class Builder:
 class MainWindow(QMainWindow, builder_ui.Ui_MainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
-        self.setupUi(self)
         self.builder = Builder()
+        self.setupUi(self)
 
 
 def main():

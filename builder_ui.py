@@ -1278,13 +1278,13 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.setVisible(True)
         self.side_menu_content.setVisible(True)
         self.side_menu_text.setVisible(True)
-        self.side_menu_content.menu_type = menu
+        self.side_menu_content.set_menu_type(menu)
 
     def close_side_menu(self):
         self.side_menu_buttons.setVisible(False)
         self.side_menu_content.setVisible(False)
         self.side_menu_text.setVisible(False)
-        self.side_menu_content.menu_type = ""
+        self.side_menu_content.set_menu_type("")
 
     def close_side_menu_if_already_opened(self, sender):
         if self.selected_side_menu["Menu"] == sender:
@@ -2110,81 +2110,99 @@ class AttributeProgressBar(QProgressBar):
 
 class MyQListWidget(QListWidget):
     menu_type = ""
+    menu_data = None
+    menu_data_mapping = None
     hovered_item = None
-    # self.setCurrentItem(item) can be used for highlight, but maybe just do CSS ?
 
-    def foo(self, item):
-        pass
+    def __init__(self, parent):
+        super(MyQListWidget, self).__init__()
+        self.menu_data_mapping = {
+            "Forma": parent.window().builder.formae,
+            "Booster": parent.window().builder.boosters,
+            "Weapon": parent.window().builder.weapons,
+            "BloodCode": parent.window().builder.blood_codes,
+            "Defensive": parent.window().builder.defensive_formae,
+            "Offensive": parent.window().builder.offensive_formae,
+            "Jail": parent.window().builder.jails,
+        }
+
+    def set_menu_type(self, menu):
+        self.menu_type = menu
+
+        menu_data = self.menu_data_mapping.get(menu)
+        if menu_data:
+            self.menu_data = menu_data
+        else:
+            self.menu_data = None
 
     def handle_forma_hover(self, item):
-        item_data = self.window().builder.formae[item.statusTip()]
-        self.handle_hover(item, item_data)
+        self.handle_hover(item)
 
     def handle_booster_hover(self, item):
-        item_data = self.window().builder.boosters[item.statusTip()]
-        self.handle_hover(item, item_data)
+        self.handle_hover(item)
 
     def handle_weapon_hover(self, item):
-        item_data = self.window().builder.weapons[item.statusTip()]
-        self.handle_hover(item, item_data)
+        self.handle_hover(item)
 
     def handle_transform_hover(self, item):
         print("not implemented")
 
     def handle_blood_code_hover(self, item):
-        item_data = self.window().builder.blood_codes[item.statusTip()]
-        self.handle_hover(item, item_data)
+        self.handle_hover(item)
 
     def handle_offensive_hover(self, item):
-        item_data = self.window().builder.offensive_formae[item.statusTip()]
-        self.handle_hover(item, item_data)
+        self.handle_hover(item)
 
     def handle_defensive_hover(self, item):
-        item_data = self.window().builder.defensive_formae[item.statusTip()]
-        self.handle_hover(item, item_data)
+        self.handle_hover(item)
 
     def handle_jail_hover(self, item):
-        item_data = self.window().builder.jails[item.statusTip()]
-        self.handle_hover(item, item_data)
+        self.handle_hover(item)
 
-    def handle_hover(self, item, item_data):
+    def handle_hover(self, item):
+        item_data = self.menu_data.get(item.statusTip())
+        if not item_data:
+            return
+
+        # self.setCurrentItem(item) can be used for highlight, but maybe just do CSS ?
         self.hovered_item = item
         self.window().side_menu_text.clear()
         self.window().side_menu_text.insertHtml(f'<body><h2><p align="center">{item_data.name}</p></h2><body>')
         self.window().side_menu_text.insertPlainText(item_data.description)
 
     def leaveEvent(self, QEvent):
-        # print("exited", self.hovered_item)
+        if not self.menu_type:
+            return
+
+        # ensure the text for selected item is displayed after cursor leaves the menu
+        items = self.selectedItems()
+        if items and items[0]:
+            self.handle_hover(items[0])
+
         self.hovered_item = None
-        # self.window().close_side_menu()
 
     def mousePressEvent(self, QMouseEvent):
         if QMouseEvent.button() == Qt.LeftButton:
-            # use default handling for left mouse button
             super().mousePressEvent(QMouseEvent)
 
         elif QMouseEvent.button() == Qt.RightButton:
-            # use custom handling for right mouse button
+            if self.menu_type in ["Transform", "Offensive", "Jail"]:
+                # no favorites
+                return
+
             index = self.indexAt(QMouseEvent.position().toPoint())
             if index.isValid():
                 item = self.itemFromIndex(index)
-
-                if self.menu_type == "Forma":
-                    matching_data = self.window().builder.formae[item.statusTip()]
-                elif self.menu_type == "Booster":
-                    matching_data = self.window().builder.boosters[item.statusTip()]
-                elif self.menu_type == "Weapon":
-                    matching_data = self.window().builder.weapons[item.statusTip()]
-                elif self.menu_type == "BloodCode":
-                    matching_data = self.window().builder.blood_codes[item.statusTip()]
-                elif self.menu_type == "Defensive":
-                    matching_data = self.window().builder.defensive_formae[item.statusTip()]
-                else:
+                item_data = self.menu_data.get(item.statusTip())
+                if not item_data:
                     return
 
-                if matching_data.favorite:
-                    matching_data.favorite = False
+                if item_data.favorite:
+                    item_data.favorite = False
                     self.window().remove_favorite_from_icon(item)
                 else:
-                    matching_data.favorite = True
+                    item_data.favorite = True
                     self.window().add_favorite_to_icon(item)
+
+    def foo(self, item):
+        pass
