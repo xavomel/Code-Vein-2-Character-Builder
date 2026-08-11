@@ -40,6 +40,23 @@ class Weapon:
         self.burden = doc["Burden"]
 
 
+class Transform:
+    name = ""
+    description = ""
+    type = ""
+    weapon_key = ""
+
+    def __init__(self, doc=None):
+        if not doc:
+            self.name = "Transform"
+            return
+
+        self.name = doc["Name"]
+        self.description = doc.get("Description", "")
+        self.type = doc["Type"]
+        self.weapon_key = doc["WeaponKey"]
+
+
 class Forma:
     name = ""
     description = ""

@@ -1332,12 +1332,6 @@ class Ui_MainWindow(object):
         self.show_side_menu("Forma")
 
         # buttons
-        # for button in QDir("Menu").entryInfoList(["*.png"]):
-        #     if "booster" in button.filePath().lower():
-        #         continue
-        #     item = QListWidgetItem(QIcon(button.filePath()), "")
-        #     item.setStatusTip(button.fileName())
-        #     self.side_menu_buttons.addItem(item)
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_All.png"), "")
         item.setStatusTip("All")
         self.side_menu_buttons.addItem(item)
@@ -1370,10 +1364,6 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        # for forma in QDir("Forma").entryInfoList(["*.png"]):
-        #     item = QListWidgetItem(QIcon(forma.filePath()), "")
-        #     item.setStatusTip(forma.fileName())
-        #     self.side_menu_content.addItem(item)
         for k, v in self.builder.formae.items():
             item = QListWidgetItem(QIcon(u":/All/Forma/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
@@ -1409,14 +1399,6 @@ class Ui_MainWindow(object):
         self.show_side_menu("Booster")
 
         # buttons
-        # for button in QDir("Menu").entryInfoList(["*.png"]):
-        #     if "weapon" in button.filePath().lower():
-        #         continue
-        #     if "formae" in button.filePath().lower():
-        #         continue
-        #     item = QListWidgetItem(QIcon(button.filePath()), "")
-        #     item.setStatusTip(button.fileName())
-        #     self.side_menu_buttons.addItem(item)
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_All.png"), "")
         item.setStatusTip("All")
         self.side_menu_buttons.addItem(item)
@@ -1435,10 +1417,6 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        # for booster in QDir("Booster/Attack").entryInfoList(["*.png"]):
-        #     item = QListWidgetItem(QIcon(booster.filePath()), "")
-        #     item.setStatusTip(booster.fileName())
-        #     self.side_menu_content.addItem(item)
         for k, v in self.builder.boosters.items():
             item = QListWidgetItem(QIcon(u":/All/Booster/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
@@ -1484,10 +1462,6 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        # for weapon in QDir("Weapon/RuneBlade").entryInfoList(["*.png"]):
-        #     item = QListWidgetItem(QIcon(weapon.filePath()), "")
-        #     item.setStatusTip(weapon.fileName())
-        #     self.side_menu_content.addItem(item)
         for k, v in self.builder.weapons.items():
             item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
@@ -1506,12 +1480,14 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
 
+        mode = "Weapon"
         if "Weapon_1" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_transform_weapon_1_clicked)
         elif "Weapon_2" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_transform_weapon_2_clicked)
         elif "Defensive" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_transform_defensive_clicked)
+            mode = "Defensive"
 
         self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_transform_hover)
         self.show_side_menu("Transform")
@@ -1523,19 +1499,23 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        # for blood_code in QDir("Transform").entryInfoList(["*.png"]):
-        #     item = QListWidgetItem(QIcon(blood_code.filePath()), "")
-        #     item.setStatusTip(blood_code.fileName())
-        #     self.side_menu_content.addItem(item)
-        transformed_weapon = next(x for x in self.builder.weapons.values() if x.transformable)
-        transforms = [x for x in transformed_weapon.transforms.keys() if "Transform_" in x]
-        for k in transforms:
-            item = QListWidgetItem(QIcon(u":/All/Transform/" + k + ".png"), "")
-            item.setStatusTip(escape_filename(k))
+        # place Off button at the start for Weapon - looks better
+        if mode == "Weapon":
+            item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+            item.setStatusTip("Off")
             self.side_menu_content.addItem(item)
-        item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
-        item.setStatusTip("Transform Off")
-        self.side_menu_content.addItem(item)
+
+        for k, v in self.builder.transforms.items():
+            if v.type == mode:
+                item = QListWidgetItem(QIcon(u":/All/Transform/Transform_" + v.weapon_key + ".png"), "")
+                item.setStatusTip(v.name)
+                self.side_menu_content.addItem(item)
+
+        # place Off button at the start for Defensive like in game - also looks better
+        if mode == "Defensive":
+            item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+            item.setStatusTip("Off")
+            self.side_menu_content.addItem(item)
 
     def fill_side_menu_blood_code(self):
         self.side_menu_buttons.clear()
@@ -1566,10 +1546,6 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        # for blood_code in QDir("BloodCode").entryInfoList(["*.png"]):
-        #     item = QListWidgetItem(QIcon(blood_code.filePath()), "")
-        #     item.setStatusTip(blood_code.fileName())
-        #     self.side_menu_content.addItem(item)
         for k, v in self.builder.blood_codes.items():
             item = QListWidgetItem(QIcon(u":/All/BloodCode/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
@@ -1598,10 +1574,6 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        # for offensive in QDir("Offensive").entryInfoList(["*.png"]):
-        #     item = QListWidgetItem(QIcon(offensive.filePath()), "")
-        #     item.setStatusTip(offensive.fileName())
-        #     self.side_menu_content.addItem(item)
         for k in self.builder.offensive_formae.keys():
             item = QListWidgetItem(QIcon(u":/All/Offensive/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
@@ -1634,10 +1606,6 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        # for defensive in QDir("Defensive").entryInfoList(["*.png"]):
-        #     item = QListWidgetItem(QIcon(defensive.filePath()), "")
-        #     item.setStatusTip(defensive.fileName())
-        #     self.side_menu_content.addItem(item)
         for k, v in self.builder.defensive_formae.items():
             item = QListWidgetItem(QIcon(u":/All/Defensive/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
@@ -1666,10 +1634,6 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        # for jail in QDir("Jail").entryInfoList(["*.png"]):
-        #     item = QListWidgetItem(QIcon(jail.filePath()), "")
-        #     item.setStatusTip(jail.fileName())
-        #     self.side_menu_content.addItem(item)
         for k in self.builder.jails.keys():
             item = QListWidgetItem(QIcon(u":/All/Jail/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
@@ -1759,9 +1723,7 @@ class Ui_MainWindow(object):
         self.handle_transform_clicked(widget, item)
 
     def handle_transform_clicked(self, widget, item):
-        new_icon = QIcon()
-        new_icon.addFile(u":/All/Transform/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        widget.setIcon(new_icon)
+        widget.setIcon(item.icon())
 
     def handle_weapon_1_clicked(self, item):
         widget = self.tool_button_h2_v1_h1_1
@@ -2124,6 +2086,7 @@ class MyQListWidget(QListWidget):
             "Defensive": parent.window().builder.defensive_formae,
             "Offensive": parent.window().builder.offensive_formae,
             "Jail": parent.window().builder.jails,
+            "Transform": parent.window().builder.transforms,
         }
 
     def set_menu_type(self, menu):
@@ -2145,7 +2108,30 @@ class MyQListWidget(QListWidget):
         self.handle_hover(item)
 
     def handle_transform_hover(self, item):
-        print("not implemented")
+        # works, but code is complex...
+        # weapon_1_text = self.window().tool_button_h2_v1_h1_1.text()
+        # if weapon_1_text != "Weapon 1":
+        #     weapon_1 = self.window().builder.weapons.get(weapon_1_text)
+        #     if weapon_1 and weapon_1.transformable:
+        #         # no transform
+        #         if item.statusTip() == "Off":
+        #             print(weapon_1)
+        #
+        #         # transform
+        #         transform = self.window().builder.transforms.get(item.statusTip())
+        #         if transform:
+        #             weapon_key = "Transform_" + transform.weapon_key
+        #             weapon_transformed = weapon_1.transforms.get(weapon_key)
+        #             if weapon_transformed:
+        #                 print(weapon_transformed)
+        #     else:
+        #         # not allowed to transform weapon with transformable = False
+        #         # mark illegal with red color ?
+        #         # or just not allow opening transform menu in first place?
+        #         # but then transform can be set without weapon, for quality of life...
+        #         pass
+
+        self.handle_hover(item)
 
     def handle_blood_code_hover(self, item):
         self.handle_hover(item)
