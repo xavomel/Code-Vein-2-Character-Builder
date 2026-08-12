@@ -34,27 +34,15 @@ class Weapon:
         self.type = doc["Type"]
         self.bleed = doc["Bleed"]
         # self.scaling = "TODO"
-        self.transformable = doc["Transformable"]
-        self.transforms = {k: v for k, v in doc.items() if k.startswith("Transform_")}
         self.capacity = doc["Capacity"]
         self.burden = doc["Burden"]
 
-
-class Transform:
-    name = ""
-    description = ""
-    type = ""
-    weapon_key = ""
-
-    def __init__(self, doc=None):
-        if not doc:
-            self.name = "Transform"
-            return
-
-        self.name = doc["Name"]
-        self.description = doc.get("Description", "")
-        self.type = doc["Type"]
-        self.weapon_key = doc["WeaponKey"]
+        self.transformable = doc["Transformable"]
+        self.transforms = dict()
+        for transform in doc["Transforms"]:
+            key = transform["Name"]
+            self.transforms[key] = transform
+            self.transforms[key].pop("Name")
 
 
 class Forma:
@@ -296,12 +284,16 @@ class DefensiveForma:
         self.ichor_cost = doc["IchorCost"]
         self.stamina_guard_cost = doc["StaminaGuardCost"]
         self.balance = doc["Balance"]
-        self.transformable = False
-        self.transforms = {k: v for k, v in doc.items() if k.startswith("Transform_")}
         self.burden = doc["Burden"]
         self.defense = doc["Defense"]
         self.guarding_defense = doc["GuardingDefense"]
         self.resistance = doc["Resistance"]
+        self.transformable = doc["Transformable"]
+        self.transforms = dict()
+        for transform in doc["Transforms"]:
+            key = transform["Name"]
+            self.transforms[key] = transform
+            self.transforms[key].pop("Name")
 
 
 class OffensiveForma:

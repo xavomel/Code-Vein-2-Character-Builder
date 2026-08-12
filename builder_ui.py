@@ -1499,20 +1499,29 @@ class Ui_MainWindow(object):
         self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
 
         # content
-        # place Off button at the start for Weapon - looks better
         if mode == "Weapon":
+            # place Off button at the start for Weapon - looks better
             item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
             item.setStatusTip("Off")
             self.side_menu_content.addItem(item)
 
-        for k, v in self.builder.transforms.items():
-            if v.type == mode:
-                item = QListWidgetItem(QIcon(u":/All/Transform/Transform_" + v.weapon_key + ".png"), "")
-                item.setStatusTip(v.name)
+            # some weapons do not have all transforms ! like ones with venom don't have sun or venom
+            weapon_w_all_transform = self.builder.weapons["Stealth Blades"].transforms
+            for k, v in weapon_w_all_transform.items():
+                icon_name = k.replace("Weapon_", "Transform_")
+                item = QListWidgetItem(QIcon(u":/All/Transform/" + icon_name + ".png"), "")
+                item.setStatusTip(k)
                 self.side_menu_content.addItem(item)
 
-        # place Off button at the start for Defensive like in game - also looks better
         if mode == "Defensive":
+            defensive_w_all_transform = self.builder.defensive_formae["Clotted Shield"].transforms
+            for k, v in defensive_w_all_transform.items():
+                icon_name = k.replace("Defensive_", "Transform_")
+                item = QListWidgetItem(QIcon(u":/All/Transform/" + icon_name + ".png"), "")
+                item.setStatusTip(k)
+                self.side_menu_content.addItem(item)
+
+            # place Off button at the end for Defensive like in game - also looks better
             item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
             item.setStatusTip("Off")
             self.side_menu_content.addItem(item)
@@ -2086,7 +2095,6 @@ class MyQListWidget(QListWidget):
             "Defensive": parent.window().builder.defensive_formae,
             "Offensive": parent.window().builder.offensive_formae,
             "Jail": parent.window().builder.jails,
-            "Transform": parent.window().builder.transforms,
         }
 
     def set_menu_type(self, menu):
@@ -2108,7 +2116,7 @@ class MyQListWidget(QListWidget):
         self.handle_hover(item)
 
     def handle_transform_hover(self, item):
-        # works, but code is complex...
+        # old version, pre refactor
         # weapon_1_text = self.window().tool_button_h2_v1_h1_1.text()
         # if weapon_1_text != "Weapon 1":
         #     weapon_1 = self.window().builder.weapons.get(weapon_1_text)
@@ -2131,7 +2139,13 @@ class MyQListWidget(QListWidget):
         #         # but then transform can be set without weapon, for quality of life...
         #         pass
 
-        self.handle_hover(item)
+        self.hovered_item = item
+        name = self.window().builder.translation[item.statusTip() + "_Name"]
+        description = self.window().builder.translation[item.statusTip() + "_Description"]
+
+        self.window().side_menu_text.clear()
+        self.window().side_menu_text.insertHtml(f'<body><h2><p align="center">{name}</p></h2><body>')
+        self.window().side_menu_text.insertPlainText(description)
 
     def handle_blood_code_hover(self, item):
         self.handle_hover(item)
@@ -2163,7 +2177,10 @@ class MyQListWidget(QListWidget):
         # ensure the text for selected item is displayed after cursor leaves the menu
         items = self.selectedItems()
         if items and items[0]:
-            self.handle_hover(items[0])
+            if self.menu_type == "Transform":
+                self.handle_transform_hover(items[0])
+            else:
+                self.handle_hover(items[0])
 
         self.hovered_item = None
 

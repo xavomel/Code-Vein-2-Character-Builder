@@ -112,9 +112,7 @@ class Builder:
     offensive_formae = dict()
     defensive_formae = dict()
     jails = dict()
-    # the effects of transforms are held in weapons dictionary
-    # transforms dictionary holds mapping to transform key in weapon, text description and type (weapon, defensive)
-    transforms = dict()
+    translation = dict()
 
     def __init__(self):
         blood_codes = self.open_json(u"GameData/BloodCode.json")
@@ -124,7 +122,7 @@ class Builder:
         offensive_formae = self.open_json(u"GameData/Offensive.json")
         defensive_formae = self.open_json(u"GameData/Defensive.json")
         jails = self.open_json(u"GameData/Jail.json")
-        transforms = self.open_json(u"GameData/Transform.json")
+        self.translation = self.open_json("GameData/Translation/en.json")
 
         for doc in blood_codes:
             name = doc["Name"]
@@ -154,10 +152,6 @@ class Builder:
         for doc in jails:
             name = doc["Name"]
             self.jails[name] = Jail(doc)
-
-        for doc in transforms:
-            name = doc["Name"]
-            self.transforms[name] = Transform(doc)
 
     def open_json(self, filepath):
         with open(filepath, encoding='utf-8') as _data:
