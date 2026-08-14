@@ -288,6 +288,7 @@ class DefensiveForma:
         self.defense = doc["Defense"]
         self.guarding_defense = doc["GuardingDefense"]
         self.resistance = doc["Resistance"]
+
         self.transformable = doc["Transformable"]
         self.transforms = dict()
         for transform in doc["Transforms"]:

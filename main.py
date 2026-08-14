@@ -128,30 +128,37 @@ class Builder:
             name = doc["Name"]
             self.blood_codes[name] = BloodCode(doc)
             # print(vars(self.blood_codes[name]))
+        self.blood_codes["Empty"] = BloodCode()
 
         for doc in weapons:
             name = doc["Name"]
             self.weapons[name] = Weapon(doc)
+        self.weapons["Empty"] = Weapon()
 
         for doc in boosters:
             name = doc["Name"]
             self.boosters[name] = Booster(doc)
+        self.boosters["Empty"] = Booster()
 
         for doc in formae:
             name = doc["Name"]
             self.formae[name] = Forma(doc)
+        self.formae["Empty"] = Forma()
 
         for doc in offensive_formae:
             name = doc["Name"]
             self.offensive_formae[name] = OffensiveForma(doc)
+        self.offensive_formae["Empty"] = OffensiveForma()
 
         for doc in defensive_formae:
             name = doc["Name"]
             self.defensive_formae[name] = DefensiveForma(doc)
+        self.defensive_formae["Empty"] = DefensiveForma()
 
         for doc in jails:
             name = doc["Name"]
             self.jails[name] = Jail(doc)
+        self.jails["Empty"] = Jail()
 
     def open_json(self, filepath):
         with open(filepath, encoding='utf-8') as _data:

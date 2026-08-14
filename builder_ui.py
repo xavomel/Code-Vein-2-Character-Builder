@@ -80,7 +80,7 @@ class Ui_MainWindow(object):
         icon_slot_item = QIcon()
         icon_slot_item.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_slot_item_addon = QIcon()
-        icon_slot_item_addon.addFile(u":/Transform/T_UI_Enhancement_Off.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon_slot_item_addon.addFile(u":/All/Transform/Transform_Off.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_slot_forma = QIcon()
         icon_slot_forma.addFile(u":/All/UI/Slot_Forma", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
@@ -1365,7 +1365,10 @@ class Ui_MainWindow(object):
 
         # content
         for k, v in self.builder.formae.items():
-            item = QListWidgetItem(QIcon(u":/All/Forma/" + escape_filename(k) + ".png"), "")
+            if k == "Empty":
+                item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+            else:
+                item = QListWidgetItem(QIcon(u":/All/Forma/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
             if v.favorite:
                 self.add_favorite_to_icon(item)
@@ -1418,7 +1421,10 @@ class Ui_MainWindow(object):
 
         # content
         for k, v in self.builder.boosters.items():
-            item = QListWidgetItem(QIcon(u":/All/Booster/" + escape_filename(k) + ".png"), "")
+            if k == "Empty":
+                item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+            else:
+                item = QListWidgetItem(QIcon(u":/All/Booster/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
             if v.favorite:
                 self.add_favorite_to_icon(item)
@@ -1463,7 +1469,10 @@ class Ui_MainWindow(object):
 
         # content
         for k, v in self.builder.weapons.items():
-            item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
+            if k == "Empty":
+                item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+            else:
+                item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
             if v.favorite:
                 self.add_favorite_to_icon(item)
@@ -1556,7 +1565,10 @@ class Ui_MainWindow(object):
 
         # content
         for k, v in self.builder.blood_codes.items():
-            item = QListWidgetItem(QIcon(u":/All/BloodCode/" + escape_filename(k) + ".png"), "")
+            if k == "Empty":
+                item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+            else:
+                item = QListWidgetItem(QIcon(u":/All/BloodCode/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
             if v.favorite:
                 self.add_favorite_to_icon(item)
@@ -1584,7 +1596,10 @@ class Ui_MainWindow(object):
 
         # content
         for k in self.builder.offensive_formae.keys():
-            item = QListWidgetItem(QIcon(u":/All/Offensive/" + escape_filename(k) + ".png"), "")
+            if k == "Empty":
+                item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+            else:
+                item = QListWidgetItem(QIcon(u":/All/Offensive/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
             self.side_menu_content.addItem(item)
 
@@ -1616,7 +1631,10 @@ class Ui_MainWindow(object):
 
         # content
         for k, v in self.builder.defensive_formae.items():
-            item = QListWidgetItem(QIcon(u":/All/Defensive/" + escape_filename(k) + ".png"), "")
+            if k == "Empty":
+                item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+            else:
+                item = QListWidgetItem(QIcon(u":/All/Defensive/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
             if v.favorite:
                 self.add_favorite_to_icon(item)
@@ -1644,7 +1662,10 @@ class Ui_MainWindow(object):
 
         # content
         for k in self.builder.jails.keys():
-            item = QListWidgetItem(QIcon(u":/All/Jail/" + escape_filename(k) + ".png"), "")
+            if k == "Empty":
+                item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+            else:
+                item = QListWidgetItem(QIcon(u":/All/Jail/" + escape_filename(k) + ".png"), "")
             item.setStatusTip(k)
             self.side_menu_content.addItem(item)
 
@@ -1652,10 +1673,15 @@ class Ui_MainWindow(object):
         chosen = item.statusTip()
         self.side_menu_content.clear()
         self.side_menu_text.clear()
+        self.display_favorite_tips_if_needed(chosen)
 
         for k, v in self.builder.formae.items():
-            if chosen == "All" or chosen == v.type or v.matching_weapons.get(chosen) or (chosen == "Favorite" and v.favorite):
-                item = QListWidgetItem(QIcon(u":/All/Forma/" + escape_filename(k) + ".png"), "")
+            if chosen == "All" or chosen == v.type or v.matching_weapons.get(chosen) \
+                    or (chosen == "Favorite" and v.favorite) or k == "Empty":
+                if k == "Empty":
+                    item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+                else:
+                    item = QListWidgetItem(QIcon(u":/All/Forma/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
                 if v.favorite:
                     self.add_favorite_to_icon(item)
@@ -1665,10 +1691,14 @@ class Ui_MainWindow(object):
         chosen = item.statusTip()
         self.side_menu_content.clear()
         self.side_menu_text.clear()
+        self.display_favorite_tips_if_needed(chosen)
 
         for k, v in self.builder.boosters.items():
-            if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite):
-                item = QListWidgetItem(QIcon(u":/All/Booster/" + escape_filename(k) + ".png"), "")
+            if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite) or k == "Empty":
+                if k == "Empty":
+                    item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+                else:
+                    item = QListWidgetItem(QIcon(u":/All/Booster/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
                 if v.favorite:
                     self.add_favorite_to_icon(item)
@@ -1678,10 +1708,14 @@ class Ui_MainWindow(object):
         chosen = item.statusTip()
         self.side_menu_content.clear()
         self.side_menu_text.clear()
+        self.display_favorite_tips_if_needed(chosen)
 
         for k, v in self.builder.weapons.items():
-            if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite):
-                item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
+            if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite) or k == "Empty":
+                if k == "Empty":
+                    item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+                else:
+                    item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
                 if v.favorite:
                     self.add_favorite_to_icon(item)
@@ -1691,10 +1725,14 @@ class Ui_MainWindow(object):
         chosen = item.text()
         self.side_menu_content.clear()
         self.side_menu_text.clear()
+        self.display_favorite_tips_if_needed(chosen)
 
         for k, v in self.builder.blood_codes.items():
-            if chosen == "All" or chosen == v.bloodline or (chosen == "Favorite" and v.favorite):
-                item = QListWidgetItem(QIcon(u":/All/BloodCode/" + escape_filename(k) + ".png"), "")
+            if chosen == "All" or chosen == v.bloodline or (chosen == "Favorite" and v.favorite) or k == "Empty":
+                if k == "Empty":
+                    item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+                else:
+                    item = QListWidgetItem(QIcon(u":/All/BloodCode/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
                 if v.favorite:
                     self.add_favorite_to_icon(item)
@@ -1704,14 +1742,23 @@ class Ui_MainWindow(object):
         chosen = item.text()
         self.side_menu_content.clear()
         self.side_menu_text.clear()
+        self.display_favorite_tips_if_needed(chosen)
 
         for k, v in self.builder.defensive_formae.items():
-            if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite):
-                item = QListWidgetItem(QIcon(u":/All/Defensive/" + escape_filename(k) + ".png"), "")
+            if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite) or k == "Empty":
+                if k == "Empty":
+                    item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
+                else:
+                    item = QListWidgetItem(QIcon(u":/All/Defensive/" + escape_filename(k) + ".png"), "")
                 item.setStatusTip(k)
                 if v.favorite:
                     self.add_favorite_to_icon(item)
                 self.side_menu_content.addItem(item)
+
+    def display_favorite_tips_if_needed(self, selected):
+        if selected == "Favorite":
+            self.side_menu_text.insertHtml(f'<body><h2><p align="center">Favorites</p></h2><body>')
+            self.side_menu_text.insertPlainText("Right click icon to add to favorites.\nRight click again to unfavorite.")
 
     def handle_unimplemented_clicked(self, item):
         print("clicked", item)
@@ -1736,15 +1783,21 @@ class Ui_MainWindow(object):
 
     def handle_weapon_1_clicked(self, item):
         widget = self.tool_button_h2_v1_h1_1
-        self.handle_weapon_clicked(widget, item)
+        self.handle_weapon_clicked(widget, item, "Weapon 1")
 
     def handle_weapon_2_clicked(self, item):
         widget = self.tool_button_h2_v2_h1_1
-        self.handle_weapon_clicked(widget, item)
+        self.handle_weapon_clicked(widget, item, "Weapon 2")
 
-    def handle_weapon_clicked(self, widget, item):
+    def handle_weapon_clicked(self, widget, item, default_text):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+
+        if item.statusTip() == "Empty":
+            widget.setIcon(icon_1)
+            widget.setText(default_text)
+            return
+
         icon_2 = QIcon()
         icon_2.addFile(u":/All/Weapon/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
@@ -1757,6 +1810,13 @@ class Ui_MainWindow(object):
         self.side_menu_text.insertPlainText(weapon.description)
 
     def handle_blood_code_clicked(self, item):
+        if item.statusTip() == "Empty":
+            new_icon = QIcon()
+            new_icon.addFile(u":/All/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+            self.tool_button_h2_v3_h2_1.setIcon(new_icon)
+            self.tool_button_h2_v3_h2_1.setText("Blood Code")
+            return
+
         new_icon = QIcon()
         new_icon.addFile(u":/All/BloodCode/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.tool_button_h2_v3_h2_1.setIcon(new_icon)
@@ -1765,6 +1825,12 @@ class Ui_MainWindow(object):
     def handle_offensive_clicked(self, item):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+
+        if item.statusTip() == "Empty":
+            self.tool_button_h2_v3_h1_1.setIcon(icon_1)
+            self.tool_button_h2_v3_h1_1.setText("Offensive")
+            return
+
         icon_2 = QIcon()
         icon_2.addFile(u":/All/Offensive/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
@@ -1774,6 +1840,12 @@ class Ui_MainWindow(object):
     def handle_defensive_clicked(self, item):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+
+        if item.statusTip() == "Empty":
+            self.tool_button_h2_v3_h1_2.setIcon(icon_1)
+            self.tool_button_h2_v3_h1_2.setText("Defensive")
+            return
+
         icon_2 = QIcon()
         icon_2.addFile(u":/All/Defensive/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
@@ -1783,6 +1855,12 @@ class Ui_MainWindow(object):
     def handle_jail_clicked(self, item):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+
+        if item.statusTip() == "Empty":
+            self.tool_button_h2_v3_h1_3.setIcon(icon_1)
+            self.tool_button_h2_v3_h1_3.setText("Jail")
+            return
+
         icon_2 = QIcon()
         icon_2.addFile(u":/All/Jail/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 150)
@@ -1791,29 +1869,37 @@ class Ui_MainWindow(object):
 
     def handle_booster_1_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_1
-        self.handle_booster_clicked(widget, item)
+        self.handle_booster_clicked(widget, item, "Booster 1")
 
     def handle_booster_2_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_2
-        self.handle_booster_clicked(widget, item)
+        self.handle_booster_clicked(widget, item, "Booster 2")
 
     def handle_booster_3_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_3
-        self.handle_booster_clicked(widget, item)
+        self.handle_booster_clicked(widget, item, "Booster 3")
 
     def handle_booster_4_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_4
-        self.handle_booster_clicked(widget, item)
+        self.handle_booster_clicked(widget, item, "Booster 4")
 
     def handle_booster_5_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_5
-        self.handle_booster_clicked(widget, item)
+        self.handle_booster_clicked(widget, item, "Booster 5")
 
     def handle_booster_6_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_6
-        self.handle_booster_clicked(widget, item)
+        self.handle_booster_clicked(widget, item, "Booster 6")
 
-    def handle_booster_clicked(self, widget, item):
+    def handle_booster_clicked(self, widget, item, default_text):
+        icon_1 = QIcon()
+        icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+
+        if item.statusTip() == "Empty":
+            widget.setIcon(icon_1)
+            widget.setText(default_text)
+            return
+
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_2 = QIcon()
@@ -1824,39 +1910,45 @@ class Ui_MainWindow(object):
 
     def handle_forma_1_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_1
-        self.handle_forma_clicked(widget, item)
+        self.handle_forma_clicked(widget, item, "Forma 1")
 
     def handle_forma_2_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_2
-        self.handle_forma_clicked(widget, item)
+        self.handle_forma_clicked(widget, item, "Forma 2")
 
     def handle_forma_3_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_3
-        self.handle_forma_clicked(widget, item)
+        self.handle_forma_clicked(widget, item, "Forma 3")
 
     def handle_forma_4_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_4
-        self.handle_forma_clicked(widget, item)
+        self.handle_forma_clicked(widget, item, "Forma 4")
 
     def handle_forma_1_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_1
-        self.handle_forma_clicked(widget, item)
+        self.handle_forma_clicked(widget, item, "Forma 1")
 
     def handle_forma_2_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_2
-        self.handle_forma_clicked(widget, item)
+        self.handle_forma_clicked(widget, item, "Forma 2")
 
     def handle_forma_3_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_3
-        self.handle_forma_clicked(widget, item)
+        self.handle_forma_clicked(widget, item, "Forma 3")
 
     def handle_forma_4_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_4
-        self.handle_forma_clicked(widget, item)
+        self.handle_forma_clicked(widget, item, "Forma 4")
 
-    def handle_forma_clicked(self, widget, item):
+    def handle_forma_clicked(self, widget, item, default_text):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Forma.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+
+        if item.statusTip() == "Empty":
+            widget.setIcon(icon_1)
+            widget.setText(default_text)
+            return
+
         icon_2 = QIcon()
         icon_2.addFile(u":/All/Forma/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         new_icon = self.merge_icons(icon_1, icon_2, 30)
