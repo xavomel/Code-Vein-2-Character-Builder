@@ -10,7 +10,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Dexterity Booster",
@@ -23,7 +24,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Mind Booster",
@@ -36,7 +38,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Willpower Booster",
@@ -49,7 +52,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Vitality Booster",
@@ -62,7 +66,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Fortitude Booster",
@@ -75,7 +80,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Strength Booster - Overload",
@@ -89,7 +95,8 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 2
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Dexterity Booster - Overload",
@@ -103,7 +110,8 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 2
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Mind Booster - Overload",
@@ -116,7 +124,8 @@
             "Willpower": 0,
             "Vitality": 2,
             "Fortitude": 2
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Willpower Booster - Overload",
@@ -129,7 +138,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Vitality Booster - Overload",
@@ -142,7 +152,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 2
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Fortitude Booster - Overload",
@@ -155,7 +166,8 @@
             "Willpower": 0,
             "Vitality": 2,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Shrugged Burden",
@@ -169,7 +181,12 @@
             "Vitality": 2,
             "Fortitude": 2,
             "Will": 2
-        }
+        },
+        "Conditions": [
+            {
+                "Bloodline": "Acedia"
+            }
+        ]
     },
     {
         "Name": "Max LP Boost",
@@ -182,7 +199,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Victory LP",
@@ -195,7 +217,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "LP Drain Recovery",
@@ -208,7 +235,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Will": 20
+                }
+            }
+        ]
     },
     {
         "Name": "Gain Ichor on Overheal",
@@ -221,7 +255,17 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Mind": 16
+                }
+            },
+            {
+                "Bloodline": "Luxuria"
+            }
+        ]
     },
     {
         "Name": "Steadfast Stance",
@@ -234,7 +278,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Shield of Devotion",
@@ -247,7 +296,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Stamina Maximizer - Unum",
@@ -260,7 +314,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Stamina Maximizer - Duo",
@@ -273,7 +328,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Second Wind",
@@ -286,7 +346,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Seasoned Runner",
@@ -299,7 +360,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Steady Guard",
@@ -312,7 +374,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Vitality": 18
+                }
+            }
+        ]
     },
     {
         "Name": "Crazed Runner",
@@ -325,7 +394,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Ichor Maximizer - Tria",
@@ -338,7 +412,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Mind": 16
+                }
+            }
+        ]
     },
     {
         "Name": "Ichor Maximizer - Unum",
@@ -351,7 +432,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Ichor Maximizer - Duo",
@@ -365,7 +447,12 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 6
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Ichor Absorber",
@@ -378,7 +465,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Gorging Fang",
@@ -391,7 +483,15 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Gula"
+            }
+        ]
     },
     {
         "Name": "Usurper",
@@ -405,7 +505,12 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 2
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Dodge Drainer",
@@ -419,7 +524,15 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 8
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Luxuria"
+            }
+        ]
     },
     {
         "Name": "Sadistic Fang",
@@ -433,7 +546,15 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 6
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Superbia"
+            }
+        ]
     },
     {
         "Name": "Bloody Dagger",
@@ -446,7 +567,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Last Hope",
@@ -459,7 +585,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Way of the Executioner",
@@ -472,7 +603,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Life Ignition",
@@ -486,7 +622,15 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 6
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Luxuria"
+            }
+        ]
     },
     {
         "Name": "Augmented Regeneration",
@@ -499,7 +643,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Revamped Regeneration",
@@ -512,7 +661,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Will": 16
+                }
+            }
+        ]
     },
     {
         "Name": "Regeneration Shift",
@@ -525,7 +681,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Extended Recovery",
@@ -538,7 +699,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "One-Handed Sword Mastery",
@@ -551,7 +717,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Two-Handed Sword Mastery",
@@ -564,7 +735,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Halberd Mastery",
@@ -577,7 +753,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Hammer Mastery",
@@ -590,7 +771,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Bayonet Mastery",
@@ -603,7 +789,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Twin Blade Mastery",
@@ -616,7 +807,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Rune Blade Mastery",
@@ -630,7 +826,12 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 4
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Ceaseless Assault",
@@ -643,7 +844,15 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Patientia"
+            }
+        ]
     },
     {
         "Name": "Overheat",
@@ -657,7 +866,15 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 8
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Luxuria"
+            }
+        ]
     },
     {
         "Name": "Melee Fever",
@@ -670,7 +887,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Mind": 20
+                }
+            }
+        ]
     },
     {
         "Name": "Blood Boost",
@@ -683,7 +907,15 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Superbia"
+            }
+        ]
     },
     {
         "Name": "Ailment Chaser",
@@ -696,7 +928,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Solitary Battle",
@@ -709,7 +946,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Survival Instinct",
@@ -722,7 +964,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Persistence - Animus",
@@ -735,7 +982,15 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Superbia"
+            }
+        ]
     },
     {
         "Name": "Persistence - Enmity",
@@ -748,7 +1003,17 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Vitality": 24
+                }
+            },
+            {
+                "Bloodline": "Patientia"
+            }
+        ]
     },
     {
         "Name": "Persistence - Shroud",
@@ -761,7 +1026,15 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Patientia"
+            }
+        ]
     },
     {
         "Name": "Heavy Drain",
@@ -774,7 +1047,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Special Drain Increase",
@@ -787,7 +1061,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Recoil Control",
@@ -801,7 +1076,12 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 8
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Boosted Technique",
@@ -814,7 +1094,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Magic Forma Attack Power Up",
@@ -828,7 +1113,12 @@
             "Vitality": 0,
             "Fortitude": 0,
             "Will": 6
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Devotion",
@@ -841,7 +1131,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Back Attacker",
@@ -854,7 +1149,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Dexterity": 18
+                }
+            }
+        ]
     },
     {
         "Name": "Powerful Parry",
@@ -867,7 +1169,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Dexterity": 18
+                }
+            }
+        ]
     },
     {
         "Name": "Hemorrhaging Weapon Boost",
@@ -880,7 +1189,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Bleed Tracker",
@@ -893,7 +1203,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Status Ailment Stacker",
@@ -906,7 +1217,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Progenitor's Fang",
@@ -919,7 +1235,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Mind": 18
+                }
+            }
+        ]
     },
     {
         "Name": "Resistance Booster - Curse",
@@ -932,7 +1255,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Resistance Booster - Wound",
@@ -945,7 +1269,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Resistance Booster - Disease",
@@ -958,7 +1283,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Resistance Booster - Blood",
@@ -971,7 +1297,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Resistance Booster",
@@ -984,7 +1311,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Graceful Fall",
@@ -997,7 +1329,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Balance Booster",
@@ -1010,7 +1343,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Charged Balance",
@@ -1023,7 +1361,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Unfaltering",
@@ -1036,7 +1379,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "High Spirits",
@@ -1049,7 +1397,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Vitality": 28
+                }
+            }
+        ]
     },
     {
         "Name": "Flesh Bullet",
@@ -1062,7 +1417,15 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Acedia"
+            }
+        ]
     },
     {
         "Name": "Max Ammo Up",
@@ -1075,7 +1438,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Bloodline Agnostic",
@@ -1088,7 +1456,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Weapon Rack",
@@ -1101,7 +1474,15 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Strength": 18,
+                    "Dexterity": 18
+                }
+            }
+        ]
     },
     {
         "Name": "Titan's Arm",
@@ -1114,7 +1495,15 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            },
+            {
+                "Bloodline": "Patientia"
+            }
+        ]
     },
     {
         "Name": "Forma Extender",
@@ -1127,7 +1516,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "High Summoner",
@@ -1140,7 +1534,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Mind": 16
+                }
+            }
+        ]
     },
     {
         "Name": "Item Efficiency",
@@ -1153,7 +1554,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Glutton",
@@ -1166,7 +1572,14 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Mind": 15
+                }
+            }
+        ]
     },
     {
         "Name": "Light-Footed",
@@ -1179,7 +1592,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Environmental Camouflage",
@@ -1192,7 +1610,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Revenant's Hunger",
@@ -1205,7 +1628,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Revenant's Greed",
@@ -1218,7 +1646,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Blood Code Mastery Efficiency",
@@ -1231,7 +1664,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Blood-Fueled Strike",
@@ -1244,7 +1682,12 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Overburden": false
+            }
+        ]
     },
     {
         "Name": "Phalanx J",
@@ -1257,7 +1700,8 @@
             "Willpower": 0,
             "Vitality": 15,
             "Fortitude": 10
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "Phalanx I",
@@ -1270,7 +1714,15 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": [
+            {
+                "Burden": {
+                    "Vitality": 15,
+                    "Fortitude": 10
+                }
+            }
+        ]
     },
     {
         "Name": "The Tie That Binds: Jos\u00e9e",
@@ -1283,7 +1735,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "The Tie That Binds: Lyle",
@@ -1296,7 +1749,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "The Tie That Binds: Holly",
@@ -1309,7 +1763,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "The Tie That Binds: Zenon",
@@ -1322,7 +1777,8 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     },
     {
         "Name": "The Tie That Binds: Noah",
@@ -1335,6 +1791,7 @@
             "Willpower": 0,
             "Vitality": 0,
             "Fortitude": 0
-        }
+        },
+        "Conditions": []
     }
 ]

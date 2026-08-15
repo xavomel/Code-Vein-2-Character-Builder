@@ -792,6 +792,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_1.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_1.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_1.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v3_h2_v1_1.setMinimumHeight(icon_slot_forma_size.height())
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_1, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_1.clicked.connect(self.fill_side_menu_booster)
 
@@ -800,6 +801,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_2.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_2.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_2.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v3_h2_v1_2.setMinimumHeight(icon_slot_forma_size.height())
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_2, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_2.clicked.connect(self.fill_side_menu_booster)
 
@@ -808,6 +810,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_3.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_3.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_3.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v3_h2_v1_3.setMinimumHeight(icon_slot_forma_size.height())
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_3, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_3.clicked.connect(self.fill_side_menu_booster)
 
@@ -816,6 +819,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_4.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_4.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_4.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v3_h2_v1_4.setMinimumHeight(icon_slot_forma_size.height())
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_4, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_4.clicked.connect(self.fill_side_menu_booster)
 
@@ -824,6 +828,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_5.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_5.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_5.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v3_h2_v1_5.setMinimumHeight(icon_slot_forma_size.height())
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_5, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_5.clicked.connect(self.fill_side_menu_booster)
 
@@ -832,8 +837,33 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_6.setText(QCoreApplication.translate("MainWindow", u"Willpower Booster - Overload", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_6.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_6.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v3_h2_v1_6.setMinimumHeight(icon_slot_forma_size.height())
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_6, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_6.clicked.connect(self.fill_side_menu_booster)
+
+        self.push_button_h2_v3_h2_v1_7 = QPushButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_7.setObjectName(u"Trait_1_Button")
+        self.push_button_h2_v3_h2_v1_7.setText(QCoreApplication.translate("MainWindow", u"Trait 1", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_7.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h2_v1_7.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v3_h2_v1_7.setMinimumHeight(icon_slot_forma_size.height())
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_7, 0, Qt.AlignmentFlag.AlignLeft)
+
+        self.push_button_h2_v3_h2_v1_8 = QPushButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_8.setObjectName(u"Trait_2_Button")
+        self.push_button_h2_v3_h2_v1_8.setText(QCoreApplication.translate("MainWindow", u"Trait 2", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_8.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h2_v1_8.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v3_h2_v1_8.setMinimumHeight(icon_slot_forma_size.height())
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_8, 0, Qt.AlignmentFlag.AlignLeft)
+
+        self.push_button_h2_v3_h2_v1_9 = QPushButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_9.setObjectName(u"Trait_3_Button")
+        self.push_button_h2_v3_h2_v1_9.setText(QCoreApplication.translate("MainWindow", u"Trait 3", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_9.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h2_v1_9.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v3_h2_v1_9.setMinimumHeight(icon_slot_forma_size.height())
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_9, 0, Qt.AlignmentFlag.AlignLeft)
 
         # 2nd horizontal layout content - spacer at the end (right)
         self.horizontal_spacer_h2_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)

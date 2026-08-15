@@ -29,7 +29,37 @@
             "Wound": 65,
             "Bleed": 77,
             "Curse": 90
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Charged Drain Attacks Inflict Slow Buildup",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Guard Stamina Cost Down",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Attack Power Briefly Up After Drain Attack",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 14
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Lou 2",
@@ -61,7 +91,37 @@
             "Wound": 65,
             "Bleed": 77,
             "Curse": 90
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Charged Drain Attacks Inflict Slow Buildup",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Guard Stamina Cost Down",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Attack Power Briefly Up After Drain Attack",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 14
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Lou 3",
@@ -93,7 +153,37 @@
             "Wound": 65,
             "Bleed": 77,
             "Curse": 90
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Charged Drain Attacks Inflict Slow Buildup",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Guard Stamina Cost Down",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Attack Power Briefly Up After Drain Attack",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 14
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Lou 4",
@@ -125,7 +215,37 @@
             "Wound": 65,
             "Bleed": 77,
             "Curse": 90
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Charged Drain Attacks Inflict Slow Buildup",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Guard Stamina Cost Down",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Attack Power Briefly Up After Drain Attack",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 14
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Lou 5",
@@ -157,7 +277,37 @@
             "Wound": 65,
             "Bleed": 77,
             "Curse": 90
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Charged Drain Attacks Inflict Slow Buildup",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Guard Stamina Cost Down",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Attack Power Briefly Up After Drain Attack",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 14
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Noah 1",
@@ -189,7 +339,32 @@
             "Wound": 69,
             "Bleed": 63,
             "Curse": 78
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Back Attack Stagger Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Survive Fatal Hit with 1 LP While Assimilated if LP Above Threshold",
+                "Conditions": []
+            },
+            {
+                "Description": "Attack Power Increases with Consecutive Hits (Resets Upon Being Hit or Missing)",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 5,
+                            "Dexterity": 5
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Noah 2",
@@ -221,7 +396,32 @@
             "Wound": 69,
             "Bleed": 63,
             "Curse": 78
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Back Attack Stagger Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Survive Fatal Hit with 1 LP While Assimilated if LP Above Threshold",
+                "Conditions": []
+            },
+            {
+                "Description": "Attack Power Increases with Consecutive Hits (Resets Upon Being Hit or Missing)",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 5,
+                            "Dexterity": 5
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Noah 3",
@@ -253,7 +453,32 @@
             "Wound": 69,
             "Bleed": 63,
             "Curse": 78
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Back Attack Stagger Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Survive Fatal Hit with 1 LP While Assimilated if LP Above Threshold",
+                "Conditions": []
+            },
+            {
+                "Description": "Attack Power Increases with Consecutive Hits (Resets Upon Being Hit or Missing)",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 5,
+                            "Dexterity": 5
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Noah 4",
@@ -285,7 +510,32 @@
             "Wound": 69,
             "Bleed": 63,
             "Curse": 78
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Back Attack Stagger Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Survive Fatal Hit with 1 LP While Assimilated if LP Above Threshold",
+                "Conditions": []
+            },
+            {
+                "Description": "Attack Power Increases with Consecutive Hits (Resets Upon Being Hit or Missing)",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 5,
+                            "Dexterity": 5
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Valentin 1",
@@ -317,7 +567,39 @@
             "Wound": 52,
             "Bleed": 67,
             "Curse": 81
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Max Stamina Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Bleed Factor Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Stamina Recovery Speed Down But Max Ichor Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Will": 8
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Valentin 2",
@@ -349,7 +631,39 @@
             "Wound": 52,
             "Bleed": 67,
             "Curse": 81
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Max Stamina Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Bleed Factor Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Stamina Recovery Speed Down But Max Ichor Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Will": 8
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Valentin 3",
@@ -381,7 +695,39 @@
             "Wound": 52,
             "Bleed": 67,
             "Curse": 81
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Max Stamina Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Bleed Factor Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Stamina Recovery Speed Down But Max Ichor Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Will": 8
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Gula Bloodline: Jos\u00e9e 1",
@@ -413,7 +759,38 @@
             "Wound": 62,
             "Bleed": 53,
             "Curse": 70
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Ichor Gained from Weapon Attacks But Ichor Overflow Deals Recoil Damage",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 8,
+                            "Mind": 8
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Stamina Recovery Speed Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Charged Drain Attack Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Gula Bloodline: Jos\u00e9e 2",
@@ -445,7 +822,38 @@
             "Wound": 62,
             "Bleed": 53,
             "Curse": 70
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Ichor Gained from Weapon Attacks But Ichor Overflow Deals Recoil Damage",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 8,
+                            "Mind": 8
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Stamina Recovery Speed Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Charged Drain Attack Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Gula Bloodline: Jos\u00e9e 3",
@@ -477,7 +885,38 @@
             "Wound": 62,
             "Bleed": 53,
             "Curse": 70
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Ichor Gained from Weapon Attacks But Ichor Overflow Deals Recoil Damage",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 8,
+                            "Mind": 8
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Stamina Recovery Speed Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Charged Drain Attack Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Gula Bloodline: Jos\u00e9e 4",
@@ -509,7 +948,28 @@
             "Wound": 62,
             "Bleed": 53,
             "Curse": 70
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Ichor Gained from Weapon Attacks",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 12,
+                            "Mind": 12
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Gula Bloodline: Jos\u00e9e (Blind)",
@@ -541,7 +1001,40 @@
             "Wound": 65,
             "Bleed": 50,
             "Curse": 75
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Attack Power Briefly Up After Perfect Dodge",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 20
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Bleed Factor Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 20
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Gained from Forma Attacks But Higher Ichor Cost",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 15,
+                            "Dexterity": 15
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Gula Bloodline: Lise 1",
@@ -573,7 +1066,37 @@
             "Wound": 65,
             "Bleed": 53,
             "Curse": 71
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Chance to Not Consume Items on Use",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "LP Restored Upon Defeating Enemies",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 8
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Spend HP and LP to Act Even with No Stamina",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 12
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Gula Bloodline: Lise 2",
@@ -605,7 +1128,37 @@
             "Wound": 65,
             "Bleed": 53,
             "Curse": 71
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Chance to Not Consume Items on Use",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "LP Restored Upon Defeating Enemies",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 8
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Spend HP and LP to Act Even with No Stamina",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 12
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Patientia Bloodline: Lyle 1",
@@ -637,7 +1190,37 @@
             "Wound": 84,
             "Bleed": 56,
             "Curse": 41
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Parry Stagger Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Damage to Bloodthirsty Enemies Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Increased Attack Power on Perfect Dodge (Lost Upon Being Hit or Missing)",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 15
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Patientia Bloodline: Lyle 2",
@@ -669,7 +1252,37 @@
             "Wound": 84,
             "Bleed": 56,
             "Curse": 41
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Parry Stagger Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Damage to Bloodthirsty Enemies Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Increased Attack Power on Perfect Dodge (Lost Upon Being Hit or Missing)",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 15
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Patientia Bloodline: Lyle 3",
@@ -701,7 +1314,37 @@
             "Wound": 84,
             "Bleed": 56,
             "Curse": 41
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Parry Stagger Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Damage to Bloodthirsty Enemies Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Increased Attack Power on Perfect Dodge (Lost Upon Being Hit or Missing)",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 15
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Patientia Bloodline: Lyle (Artificial Arm)",
@@ -733,7 +1376,37 @@
             "Wound": 83,
             "Bleed": 59,
             "Curse": 41
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Speed Up Charged Actions",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Temporary Attack Power Up After Parry",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Fortitude": 24
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Two-Handed Sword Equippable as One-Handed Sword",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 24
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Patientia Bloodline: Craig 1",
@@ -765,7 +1438,37 @@
             "Wound": 84,
             "Bleed": 53,
             "Curse": 40
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Increased Attack Power When Hit or Guarding (Resets on Attack)",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 18
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Successful Guard Applies Bleed to Enemy",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 16
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "HP Damage Reduced When Damage Taken Exceeds LP",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Patientia Bloodline: Craig 2",
@@ -797,7 +1500,37 @@
             "Wound": 84,
             "Bleed": 53,
             "Curse": 40
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Increased Attack Power When Hit or Guarding (Resets on Attack)",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 18
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Successful Guard Applies Bleed to Enemy",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 16
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "HP Damage Reduced When Damage Taken Exceeds LP",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Luxuria Bloodline: Holly 1",
@@ -829,7 +1562,37 @@
             "Wound": 62,
             "Bleed": 58,
             "Curse": 43
-        }
+        },
+        "Traits": [
+            {
+                "Description": "HP Restored Upon Defeating Enemy",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Increased Disruption Resistance During Forma Charge",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 12
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Spend HP to Use Forma When Ichor Insufficient",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 8
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Luxuria Bloodline: Holly 2",
@@ -861,7 +1624,37 @@
             "Wound": 62,
             "Bleed": 58,
             "Curse": 43
-        }
+        },
+        "Traits": [
+            {
+                "Description": "HP Restored Upon Defeating Enemy",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Increased Disruption Resistance During Forma Charge",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 12
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Spend HP to Use Forma When Ichor Insufficient",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 8
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Luxuria Bloodline: Holly 3",
@@ -893,7 +1686,37 @@
             "Wound": 62,
             "Bleed": 58,
             "Curse": 43
-        }
+        },
+        "Traits": [
+            {
+                "Description": "HP Restored Upon Defeating Enemy",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Increased Disruption Resistance During Forma Charge",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 12
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Spend HP to Use Forma When Ichor Insufficient",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 8
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Luxuria Bloodline: Holly (Condemned)",
@@ -925,7 +1748,37 @@
             "Wound": 61,
             "Bleed": 64,
             "Curse": 44
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Bleed Factor Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Gain Up from Drain Attacks",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 16
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Recovered on Successful Perfect Dodges",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Will": 24
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Luxuria Bloodline: Lycoris 1",
@@ -957,7 +1810,27 @@
             "Wound": 65,
             "Bleed": 64,
             "Curse": 37
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Picking Up Dropped Haze Grants Regeneration Uses",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Partner's Attack Power Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 12
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Luxuria Bloodline: Lycoris 2",
@@ -989,7 +1862,27 @@
             "Wound": 65,
             "Bleed": 64,
             "Curse": 37
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Picking Up Dropped Haze Grants Regeneration Uses",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Partner's Attack Power Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 12
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Luxuria Bloodline: Camilo",
@@ -1021,7 +1914,27 @@
             "Wound": 58,
             "Bleed": 65,
             "Curse": 42
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Increased Disruption Resistance During Charge Attacks",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "HP Restored When Using Regeneration",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 15
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Acedia Bloodline: Zenon 1",
@@ -1053,7 +1966,32 @@
             "Wound": 44,
             "Bleed": 85,
             "Curse": 61
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Attack and Defense Up in Sunny Weather",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Cost Reduced When LP Is Depleted",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 8,
+                            "Dexterity": 8
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Distributes Burden Among Strength/Dexterity, Mind/Willpower, and Vitality/Fortitude",
+                "Conditions": []
+            }
+        ]
     },
     {
         "Name": "Acedia Bloodline: Zenon 2",
@@ -1085,7 +2023,32 @@
             "Wound": 44,
             "Bleed": 85,
             "Curse": 61
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Attack and Defense Up in Sunny Weather",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Cost Reduced When LP Is Depleted",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 8,
+                            "Dexterity": 8
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Distributes Burden Among Strength/Dexterity, Mind/Willpower, and Vitality/Fortitude",
+                "Conditions": []
+            }
+        ]
     },
     {
         "Name": "Patientia Bloodline: Iris 1",
@@ -1117,7 +2080,34 @@
             "Wound": 78,
             "Bleed": 58,
             "Curse": 41
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Balance Up While Buffed with Defense Up from Forma",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 15
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Strength Burden -10",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": -10
+                }
+            },
+            {
+                "Description": "Balance Up When Combined HP and LP are Low",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Patientia Bloodline: Iris 2",
@@ -1149,7 +2139,34 @@
             "Wound": 78,
             "Bleed": 58,
             "Curse": 41
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Balance Up While Buffed with Defense Up from Forma",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 15
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Strength Burden -10",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": -10
+                }
+            },
+            {
+                "Description": "Balance Up When Combined HP and LP are Low",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Patientia Bloodline: Iris 3",
@@ -1181,7 +2198,34 @@
             "Wound": 78,
             "Bleed": 58,
             "Curse": 41
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Balance Up While Buffed with Defense Up from Forma",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 15
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Strength Burden -10",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": -10
+                }
+            },
+            {
+                "Description": "Balance Up When Combined HP and LP are Low",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Lavinia 1",
@@ -1213,7 +2257,35 @@
             "Wound": 60,
             "Bleed": 65,
             "Curse": 80
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Status Ailment Buildup Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Accumulation of Status Ailments Also Affects Enemies Near Target",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Recovered by Inflicting Status Ailments",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Will": 16
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Lavinia 2",
@@ -1245,7 +2317,35 @@
             "Wound": 60,
             "Bleed": 65,
             "Curse": 80
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Status Ailment Buildup Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Accumulation of Status Ailments Also Affects Enemies Near Target",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Recovered by Inflicting Status Ailments",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Will": 16
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Lavinia 3",
@@ -1277,7 +2377,35 @@
             "Wound": 60,
             "Bleed": 65,
             "Curse": 80
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Status Ailment Buildup Up",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            },
+            {
+                "Description": "Accumulation of Status Ailments Also Affects Enemies Near Target",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Recovered by Inflicting Status Ailments",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Will": 16
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Acedia Bloodline: Jadwiga 1",
@@ -1309,7 +2437,37 @@
             "Wound": 54,
             "Bleed": 57,
             "Curse": 63
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Magic Forma Attack Power Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Will": 9
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Can Use HP to Reload When Out of Ammo",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 9
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Gained on Dagger Hits",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Acedia Bloodline: Jadwiga 2",
@@ -1341,7 +2499,37 @@
             "Wound": 54,
             "Bleed": 57,
             "Curse": 63
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Magic Forma Attack Power Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Will": 9
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Can Use HP to Reload When Out of Ammo",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 9
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Gained on Dagger Hits",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Acedia Bloodline: Jadwiga 3",
@@ -1373,7 +2561,37 @@
             "Wound": 54,
             "Bleed": 57,
             "Curse": 63
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Magic Forma Attack Power Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Will": 9
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Can Use HP to Reload When Out of Ammo",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 9
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Gained on Dagger Hits",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Superbia Bloodline: Frantz",
@@ -1405,7 +2623,35 @@
             "Wound": 41,
             "Bleed": 79,
             "Curse": 76
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Strength/Dexterity Burden +2",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": 2,
+                    "Dexterity": 2
+                }
+            },
+            {
+                "Description": "Ranged Disruption Power Up at Low LP",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            },
+            {
+                "Description": "Max Ammo Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 5
+                        }
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Jos\u00e9e the Blind Hero",
@@ -1437,7 +2683,29 @@
             "Wound": 60,
             "Bleed": 54,
             "Curse": 73
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Strength/Dexterity Burden +4",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": 4,
+                    "Dexterity": 4
+                }
+            },
+            {
+                "Description": "Attack Power Briefly Up After Perfect Dodge",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            },
+            {
+                "Description": "Bloodreaver Blade Attack Power Up",
+                "Conditions": []
+            }
+        ]
     },
     {
         "Name": "Hero Jos\u00e9e",
@@ -1469,7 +2737,29 @@
             "Wound": 60,
             "Bleed": 51,
             "Curse": 70
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Strength/Mind Burden +6",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": 6,
+                    "Mind": 6
+                }
+            },
+            {
+                "Description": "Charged Drain Attack Power Up",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            },
+            {
+                "Description": "Combat Forma Attack Up at the Cost of Higher Ichor Use",
+                "Conditions": []
+            }
+        ]
     },
     {
         "Name": "One-Armed Hero Lyle",
@@ -1501,7 +2791,28 @@
             "Wound": 79,
             "Bleed": 52,
             "Curse": 42
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Strength Burden +8",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": 8
+                }
+            },
+            {
+                "Description": "Speed Up Charged Actions",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            },
+            {
+                "Description": "Ichor Cost Reduced for Absolute Executioner",
+                "Conditions": []
+            }
+        ]
     },
     {
         "Name": "Hero Lyle",
@@ -1533,7 +2844,34 @@
             "Wound": 76,
             "Bleed": 51,
             "Curse": 43
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Dexterity Burden +10",
+                "Conditions": [],
+                "Burden": {
+                    "Dexterity": 10
+                }
+            },
+            {
+                "Description": "Temporary Attack Power Up After Parry",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Fortitude": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Consumes LP on Attack But Attack Up While LP Remains",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Pioneer Queen Imogen",
@@ -1565,7 +2903,29 @@
             "Wound": 73,
             "Bleed": 57,
             "Curse": 44
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Strength/Dexterity Burden +5",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": 5,
+                    "Dexterity": 5
+                }
+            },
+            {
+                "Description": "Damage to Enemies with Status Ailments Up",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            },
+            {
+                "Description": "All Status Ailment Resistance Up",
+                "Conditions": []
+            }
+        ]
     },
     {
         "Name": "Hero Holly the Reaper",
@@ -1597,7 +2957,35 @@
             "Wound": 62,
             "Bleed": 61,
             "Curse": 40
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Dexterity/Willpower Burden +5",
+                "Conditions": [],
+                "Burden": {
+                    "Dexterity": 5,
+                    "Will": 5
+                }
+            },
+            {
+                "Description": "Increased Disruption Resistance During Forma Charge",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Dexterity": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Attack Power Up But Forma Use Speed Down",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Hero Holly",
@@ -1629,7 +3017,29 @@
             "Wound": 62,
             "Bleed": 60,
             "Curse": 38
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Dexterity/Willpower Burden +6",
+                "Conditions": [],
+                "Burden": {
+                    "Dexterity": 6,
+                    "Will": 6
+                }
+            },
+            {
+                "Description": "Ichor Cost Reduced When LP Is Depleted",
+                "Conditions": [
+                    {
+                        "Overburden": true
+                    }
+                ]
+            },
+            {
+                "Description": "MK Rosenritter Attack Power Up",
+                "Conditions": []
+            }
+        ]
     },
     {
         "Name": "Lost Camilo",
@@ -1661,7 +3071,35 @@
             "Wound": 64,
             "Bleed": 58,
             "Curse": 35
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Strength/Vitality Burden +6",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": 6,
+                    "Vitality": 6
+                }
+            },
+            {
+                "Description": "Increased Disruption Resistance During Charge Attacks",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 15
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Balance Remains Active Even When Not Performing Actions",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Hero Zenon",
@@ -1693,7 +3131,37 @@
             "Wound": 40,
             "Bleed": 85,
             "Curse": 57
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Strength/Dexterity/Mind Burden +4",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": 4,
+                    "Dexterity": 4,
+                    "Mind": 4
+                }
+            },
+            {
+                "Description": "Ichor Cost Reduced When LP Is Depleted",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 4,
+                            "Dexterity": 4
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Forma Effect Duration Extended",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Hero Valentin",
@@ -1725,7 +3193,31 @@
             "Wound": 64,
             "Bleed": 65,
             "Curse": 82
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Strength/Dexterity Burden +8",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": 8,
+                    "Dexterity": 8
+                }
+            },
+            {
+                "Description": "HP Restored on Successful Drain Attack",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Vitality": 8
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Weapon Burden Reduced When Dual-Wielding",
+                "Conditions": []
+            }
+        ]
     },
     {
         "Name": "Soul Savior Valentin",
@@ -1757,7 +3249,37 @@
             "Wound": 60,
             "Bleed": 67,
             "Curse": 82
-        }
+        },
+        "Traits": [
+            {
+                "Description": "All Attribute Burdens +6",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": 6,
+                    "Dexterity": 6,
+                    "Mind": 6,
+                    "Will": 6,
+                    "Vitality": 6,
+                    "Fortitude": 6
+                }
+            },
+            {
+                "Description": "Bleed Factor Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 8,
+                            "Dexterity": 8,
+                            "Will": 8
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Ignore Bloodline Trait Requirements",
+                "Conditions": []
+            }
+        ]
     },
     {
         "Name": "Resurgence Core",
@@ -1789,7 +3311,35 @@
             "Wound": 63,
             "Bleed": 75,
             "Curse": 78
-        }
+        },
+        "Traits": [
+            {
+                "Description": "Strength/Vitality Burden +12",
+                "Conditions": [],
+                "Burden": {
+                    "Strength": 12,
+                    "Vitality": 12
+                }
+            },
+            {
+                "Description": "Attack Power Up While Assimilated",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Strength": 16
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Enemy Defense Briefly Down on Successful Melee Attack",
+                "Conditions": [
+                    {
+                        "Overburden": false
+                    }
+                ]
+            }
+        ]
     },
     {
         "Name": "Guardian's Heart",
@@ -1821,6 +3371,12 @@
             "Wound": 58,
             "Bleed": 42,
             "Curse": 38
-        }
+        },
+        "Traits": [
+            {
+                "Description": "None",
+                "Conditions": []
+            }
+        ]
     }
 ]
