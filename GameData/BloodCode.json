@@ -10,10 +10,9 @@
             "Strength": 10,
             "Dexterity": 10,
             "Mind": 14,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 12,
-            "Fortitude": 10,
-            "Will": 10
+            "Fortitude": 10
         },
         "Defense": {
             "Slash": 17.3,
@@ -72,10 +71,9 @@
             "Strength": 12,
             "Dexterity": 11,
             "Mind": 17,
-            "Willpower": 0,
+            "Willpower": 12,
             "Vitality": 14,
-            "Fortitude": 10,
-            "Will": 12
+            "Fortitude": 10
         },
         "Defense": {
             "Slash": 17.3,
@@ -134,10 +132,9 @@
             "Strength": 14,
             "Dexterity": 12,
             "Mind": 20,
-            "Willpower": 0,
+            "Willpower": 14,
             "Vitality": 16,
-            "Fortitude": 11,
-            "Will": 14
+            "Fortitude": 11
         },
         "Defense": {
             "Slash": 17.3,
@@ -196,10 +193,9 @@
             "Strength": 18,
             "Dexterity": 14,
             "Mind": 26,
-            "Willpower": 0,
+            "Willpower": 18,
             "Vitality": 20,
-            "Fortitude": 13,
-            "Will": 18
+            "Fortitude": 13
         },
         "Defense": {
             "Slash": 17.3,
@@ -258,10 +254,9 @@
             "Strength": 22,
             "Dexterity": 16,
             "Mind": 32,
-            "Willpower": 0,
+            "Willpower": 22,
             "Vitality": 24,
-            "Fortitude": 15,
-            "Will": 22
+            "Fortitude": 15
         },
         "Defense": {
             "Slash": 17.3,
@@ -320,10 +315,9 @@
             "Strength": 10,
             "Dexterity": 13,
             "Mind": 7,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 10,
-            "Fortitude": 12,
-            "Will": 8
+            "Fortitude": 12
         },
         "Defense": {
             "Slash": 12.9,
@@ -377,10 +371,9 @@
             "Strength": 12,
             "Dexterity": 16,
             "Mind": 7,
-            "Willpower": 0,
+            "Willpower": 9,
             "Vitality": 12,
-            "Fortitude": 14,
-            "Will": 9
+            "Fortitude": 14
         },
         "Defense": {
             "Slash": 12.9,
@@ -434,10 +427,9 @@
             "Strength": 14,
             "Dexterity": 19,
             "Mind": 7,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 14,
-            "Fortitude": 16,
-            "Will": 10
+            "Fortitude": 16
         },
         "Defense": {
             "Slash": 12.9,
@@ -491,10 +483,9 @@
             "Strength": 22,
             "Dexterity": 31,
             "Mind": 7,
-            "Willpower": 0,
+            "Willpower": 14,
             "Vitality": 22,
-            "Fortitude": 24,
-            "Will": 14
+            "Fortitude": 24
         },
         "Defense": {
             "Slash": 12.9,
@@ -548,10 +539,9 @@
             "Strength": 14,
             "Dexterity": 14,
             "Mind": 8,
-            "Willpower": 0,
+            "Willpower": 15,
             "Vitality": 7,
-            "Fortitude": 14,
-            "Will": 15
+            "Fortitude": 14
         },
         "Defense": {
             "Slash": 7.1,
@@ -594,7 +584,7 @@
                 "Conditions": [
                     {
                         "Margin": {
-                            "Will": 8
+                            "Willpower": 8
                         }
                     }
                 ]
@@ -612,10 +602,9 @@
             "Strength": 19,
             "Dexterity": 19,
             "Mind": 8,
-            "Willpower": 0,
+            "Willpower": 23,
             "Vitality": 9,
-            "Fortitude": 16,
-            "Will": 23
+            "Fortitude": 16
         },
         "Defense": {
             "Slash": 7.1,
@@ -658,7 +647,7 @@
                 "Conditions": [
                     {
                         "Margin": {
-                            "Will": 8
+                            "Willpower": 8
                         }
                     }
                 ]
@@ -676,10 +665,9 @@
             "Strength": 21,
             "Dexterity": 21,
             "Mind": 8,
-            "Willpower": 0,
+            "Willpower": 27,
             "Vitality": 11,
-            "Fortitude": 17,
-            "Will": 27
+            "Fortitude": 17
         },
         "Defense": {
             "Slash": 7.1,
@@ -722,7 +710,7 @@
                 "Conditions": [
                     {
                         "Margin": {
-                            "Will": 8
+                            "Willpower": 8
                         }
                     }
                 ]
@@ -740,10 +728,9 @@
             "Strength": 13,
             "Dexterity": 10,
             "Mind": 12,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 10,
-            "Fortitude": 12,
-            "Will": 8
+            "Fortitude": 12
         },
         "Defense": {
             "Slash": 14.7,
@@ -803,10 +790,9 @@
             "Strength": 19,
             "Dexterity": 12,
             "Mind": 16,
-            "Willpower": 0,
+            "Willpower": 9,
             "Vitality": 15,
-            "Fortitude": 14,
-            "Will": 9
+            "Fortitude": 14
         },
         "Defense": {
             "Slash": 14.7,
@@ -866,10 +852,9 @@
             "Strength": 22,
             "Dexterity": 13,
             "Mind": 18,
-            "Willpower": 0,
+            "Willpower": 9,
             "Vitality": 17,
-            "Fortitude": 15,
-            "Will": 9
+            "Fortitude": 15
         },
         "Defense": {
             "Slash": 14.7,
@@ -929,10 +914,9 @@
             "Strength": 31,
             "Dexterity": 16,
             "Mind": 24,
-            "Willpower": 0,
+            "Willpower": 11,
             "Vitality": 25,
-            "Fortitude": 18,
-            "Will": 11
+            "Fortitude": 18
         },
         "Defense": {
             "Slash": 14.7,
@@ -982,10 +966,9 @@
             "Strength": 30,
             "Dexterity": 30,
             "Mind": 10,
-            "Willpower": 0,
+            "Willpower": 5,
             "Vitality": 25,
-            "Fortitude": 25,
-            "Will": 5
+            "Fortitude": 25
         },
         "Defense": {
             "Slash": 14.8,
@@ -1047,10 +1030,9 @@
             "Strength": 12,
             "Dexterity": 18,
             "Mind": 20,
-            "Willpower": 0,
+            "Willpower": 14,
             "Vitality": 18,
-            "Fortitude": 8,
-            "Will": 14
+            "Fortitude": 8
         },
         "Defense": {
             "Slash": 12.9,
@@ -1109,10 +1091,9 @@
             "Strength": 13,
             "Dexterity": 20,
             "Mind": 23,
-            "Willpower": 0,
+            "Willpower": 16,
             "Vitality": 19,
-            "Fortitude": 9,
-            "Will": 16
+            "Fortitude": 9
         },
         "Defense": {
             "Slash": 12.9,
@@ -1171,10 +1152,9 @@
             "Strength": 12,
             "Dexterity": 18,
             "Mind": 9,
-            "Willpower": 0,
+            "Willpower": 7,
             "Vitality": 9,
-            "Fortitude": 15,
-            "Will": 7
+            "Fortitude": 15
         },
         "Defense": {
             "Slash": 10.2,
@@ -1233,10 +1213,9 @@
             "Strength": 14,
             "Dexterity": 26,
             "Mind": 11,
-            "Willpower": 0,
+            "Willpower": 7,
             "Vitality": 11,
-            "Fortitude": 21,
-            "Will": 7
+            "Fortitude": 21
         },
         "Defense": {
             "Slash": 10.2,
@@ -1295,10 +1274,9 @@
             "Strength": 17,
             "Dexterity": 38,
             "Mind": 14,
-            "Willpower": 0,
+            "Willpower": 7,
             "Vitality": 14,
-            "Fortitude": 30,
-            "Will": 7
+            "Fortitude": 30
         },
         "Defense": {
             "Slash": 10.2,
@@ -1357,10 +1335,9 @@
             "Strength": 40,
             "Dexterity": 16,
             "Mind": 8,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 12,
-            "Fortitude": 32,
-            "Will": 10
+            "Fortitude": 32
         },
         "Defense": {
             "Slash": 7.6,
@@ -1419,10 +1396,9 @@
             "Strength": 22,
             "Dexterity": 10,
             "Mind": 9,
-            "Willpower": 0,
+            "Willpower": 6,
             "Vitality": 18,
-            "Fortitude": 16,
-            "Will": 6
+            "Fortitude": 16
         },
         "Defense": {
             "Slash": 20.3,
@@ -1481,10 +1457,9 @@
             "Strength": 34,
             "Dexterity": 13,
             "Mind": 9,
-            "Willpower": 0,
+            "Willpower": 6,
             "Vitality": 27,
-            "Fortitude": 22,
-            "Will": 6
+            "Fortitude": 22
         },
         "Defense": {
             "Slash": 20.3,
@@ -1543,10 +1518,9 @@
             "Strength": 9,
             "Dexterity": 16,
             "Mind": 12,
-            "Willpower": 0,
+            "Willpower": 23,
             "Vitality": 8,
-            "Fortitude": 13,
-            "Will": 23
+            "Fortitude": 13
         },
         "Defense": {
             "Slash": 6.7,
@@ -1605,10 +1579,9 @@
             "Strength": 10,
             "Dexterity": 18,
             "Mind": 13,
-            "Willpower": 0,
+            "Willpower": 27,
             "Vitality": 9,
-            "Fortitude": 14,
-            "Will": 27
+            "Fortitude": 14
         },
         "Defense": {
             "Slash": 6.7,
@@ -1667,10 +1640,9 @@
             "Strength": 13,
             "Dexterity": 24,
             "Mind": 16,
-            "Willpower": 0,
+            "Willpower": 39,
             "Vitality": 12,
-            "Fortitude": 17,
-            "Will": 39
+            "Fortitude": 17
         },
         "Defense": {
             "Slash": 6.7,
@@ -1729,10 +1701,9 @@
             "Strength": 12,
             "Dexterity": 24,
             "Mind": 14,
-            "Willpower": 0,
+            "Willpower": 32,
             "Vitality": 18,
-            "Fortitude": 20,
-            "Will": 32
+            "Fortitude": 20
         },
         "Defense": {
             "Slash": 8.8,
@@ -1773,7 +1744,7 @@
                 "Conditions": [
                     {
                         "Margin": {
-                            "Will": 24
+                            "Willpower": 24
                         }
                     }
                 ]
@@ -1791,10 +1762,9 @@
             "Strength": 8,
             "Dexterity": 17,
             "Mind": 12,
-            "Willpower": 0,
+            "Willpower": 17,
             "Vitality": 12,
-            "Fortitude": 14,
-            "Will": 17
+            "Fortitude": 14
         },
         "Defense": {
             "Slash": 8.0,
@@ -1843,10 +1813,9 @@
             "Strength": 9,
             "Dexterity": 20,
             "Mind": 13,
-            "Willpower": 0,
+            "Willpower": 20,
             "Vitality": 13,
-            "Fortitude": 15,
-            "Will": 20
+            "Fortitude": 15
         },
         "Defense": {
             "Slash": 8.0,
@@ -1895,10 +1864,9 @@
             "Strength": 21,
             "Dexterity": 12,
             "Mind": 18,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 19,
-            "Fortitude": 12,
-            "Will": 10
+            "Fortitude": 12
         },
         "Defense": {
             "Slash": 15.6,
@@ -1947,10 +1915,9 @@
             "Strength": 20,
             "Dexterity": 20,
             "Mind": 12,
-            "Willpower": 0,
+            "Willpower": 12,
             "Vitality": 22,
-            "Fortitude": 15,
-            "Will": 12
+            "Fortitude": 15
         },
         "Defense": {
             "Slash": 18.1,
@@ -2004,10 +1971,9 @@
             "Strength": 25,
             "Dexterity": 25,
             "Mind": 13,
-            "Willpower": 0,
+            "Willpower": 13,
             "Vitality": 26,
-            "Fortitude": 19,
-            "Will": 13
+            "Fortitude": 19
         },
         "Defense": {
             "Slash": 18.1,
@@ -2061,10 +2027,9 @@
             "Strength": 16,
             "Dexterity": 6,
             "Mind": 6,
-            "Willpower": 0,
+            "Willpower": 6,
             "Vitality": 15,
-            "Fortitude": 11,
-            "Will": 6
+            "Fortitude": 11
         },
         "Defense": {
             "Slash": 21.3,
@@ -2120,10 +2085,9 @@
             "Strength": 20,
             "Dexterity": 7,
             "Mind": 7,
-            "Willpower": 0,
+            "Willpower": 6,
             "Vitality": 18,
-            "Fortitude": 12,
-            "Will": 6
+            "Fortitude": 12
         },
         "Defense": {
             "Slash": 21.3,
@@ -2179,10 +2143,9 @@
             "Strength": 32,
             "Dexterity": 10,
             "Mind": 12,
-            "Willpower": 0,
+            "Willpower": 6,
             "Vitality": 27,
-            "Fortitude": 17,
-            "Will": 6
+            "Fortitude": 17
         },
         "Defense": {
             "Slash": 21.3,
@@ -2238,10 +2201,9 @@
             "Strength": 9,
             "Dexterity": 9,
             "Mind": 10,
-            "Willpower": 0,
+            "Willpower": 14,
             "Vitality": 8,
-            "Fortitude": 10,
-            "Will": 14
+            "Fortitude": 10
         },
         "Defense": {
             "Slash": 9.2,
@@ -2280,7 +2242,7 @@
                 "Conditions": [
                     {
                         "Margin": {
-                            "Will": 16
+                            "Willpower": 16
                         }
                     }
                 ]
@@ -2298,10 +2260,9 @@
             "Strength": 9,
             "Dexterity": 9,
             "Mind": 12,
-            "Willpower": 0,
+            "Willpower": 18,
             "Vitality": 9,
-            "Fortitude": 12,
-            "Will": 18
+            "Fortitude": 12
         },
         "Defense": {
             "Slash": 9.2,
@@ -2340,7 +2301,7 @@
                 "Conditions": [
                     {
                         "Margin": {
-                            "Will": 16
+                            "Willpower": 16
                         }
                     }
                 ]
@@ -2358,10 +2319,9 @@
             "Strength": 11,
             "Dexterity": 11,
             "Mind": 20,
-            "Willpower": 0,
+            "Willpower": 34,
             "Vitality": 13,
-            "Fortitude": 20,
-            "Will": 34
+            "Fortitude": 20
         },
         "Defense": {
             "Slash": 9.2,
@@ -2400,7 +2360,7 @@
                 "Conditions": [
                     {
                         "Margin": {
-                            "Will": 16
+                            "Willpower": 16
                         }
                     }
                 ]
@@ -2418,10 +2378,9 @@
             "Strength": 10,
             "Dexterity": 13,
             "Mind": 10,
-            "Willpower": 0,
+            "Willpower": 13,
             "Vitality": 8,
-            "Fortitude": 10,
-            "Will": 13
+            "Fortitude": 10
         },
         "Defense": {
             "Slash": 12.3,
@@ -2444,7 +2403,7 @@
                 "Conditions": [
                     {
                         "Margin": {
-                            "Will": 9
+                            "Willpower": 9
                         }
                     }
                 ]
@@ -2480,10 +2439,9 @@
             "Strength": 10,
             "Dexterity": 17,
             "Mind": 12,
-            "Willpower": 0,
+            "Willpower": 21,
             "Vitality": 11,
-            "Fortitude": 13,
-            "Will": 21
+            "Fortitude": 13
         },
         "Defense": {
             "Slash": 12.3,
@@ -2506,7 +2464,7 @@
                 "Conditions": [
                     {
                         "Margin": {
-                            "Will": 9
+                            "Willpower": 9
                         }
                     }
                 ]
@@ -2542,10 +2500,9 @@
             "Strength": 10,
             "Dexterity": 23,
             "Mind": 15,
-            "Willpower": 0,
+            "Willpower": 33,
             "Vitality": 15,
-            "Fortitude": 18,
-            "Will": 33
+            "Fortitude": 18
         },
         "Defense": {
             "Slash": 12.3,
@@ -2568,7 +2525,7 @@
                 "Conditions": [
                     {
                         "Margin": {
-                            "Will": 9
+                            "Willpower": 9
                         }
                     }
                 ]
@@ -2604,10 +2561,9 @@
             "Strength": 10,
             "Dexterity": 15,
             "Mind": 8,
-            "Willpower": 0,
+            "Willpower": 12,
             "Vitality": 10,
-            "Fortitude": 12,
-            "Will": 12
+            "Fortitude": 12
         },
         "Defense": {
             "Slash": 13.2,
@@ -2664,10 +2620,9 @@
             "Strength": 17,
             "Dexterity": 17,
             "Mind": 10,
-            "Willpower": 0,
+            "Willpower": 5,
             "Vitality": 14,
-            "Fortitude": 14,
-            "Will": 5
+            "Fortitude": 14
         },
         "Defense": {
             "Slash": 12.5,
@@ -2718,10 +2673,9 @@
             "Strength": 20,
             "Dexterity": 14,
             "Mind": 20,
-            "Willpower": 0,
+            "Willpower": 12,
             "Vitality": 15,
-            "Fortitude": 15,
-            "Will": 12
+            "Fortitude": 15
         },
         "Defense": {
             "Slash": 13.7,
@@ -2772,10 +2726,9 @@
             "Strength": 26,
             "Dexterity": 10,
             "Mind": 6,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 19,
-            "Fortitude": 15,
-            "Will": 8
+            "Fortitude": 15
         },
         "Defense": {
             "Slash": 18.3,
@@ -2825,10 +2778,9 @@
             "Strength": 10,
             "Dexterity": 30,
             "Mind": 8,
-            "Willpower": 0,
+            "Willpower": 12,
             "Vitality": 6,
-            "Fortitude": 18,
-            "Will": 12
+            "Fortitude": 18
         },
         "Defense": {
             "Slash": 6.8,
@@ -2884,10 +2836,9 @@
             "Strength": 19,
             "Dexterity": 22,
             "Mind": 6,
-            "Willpower": 0,
+            "Willpower": 12,
             "Vitality": 14,
-            "Fortitude": 11,
-            "Will": 12
+            "Fortitude": 11
         },
         "Defense": {
             "Slash": 12.3,
@@ -2938,10 +2889,9 @@
             "Strength": 9,
             "Dexterity": 20,
             "Mind": 12,
-            "Willpower": 0,
+            "Willpower": 20,
             "Vitality": 12,
-            "Fortitude": 14,
-            "Will": 20
+            "Fortitude": 14
         },
         "Defense": {
             "Slash": 8.6,
@@ -2964,7 +2914,7 @@
                 "Conditions": [],
                 "Burden": {
                     "Dexterity": 5,
-                    "Will": 5
+                    "Willpower": 5
                 }
             },
             {
@@ -2998,10 +2948,9 @@
             "Strength": 10,
             "Dexterity": 22,
             "Mind": 11,
-            "Willpower": 0,
+            "Willpower": 26,
             "Vitality": 10,
-            "Fortitude": 16,
-            "Will": 26
+            "Fortitude": 16
         },
         "Defense": {
             "Slash": 6.7,
@@ -3024,7 +2973,7 @@
                 "Conditions": [],
                 "Burden": {
                     "Dexterity": 6,
-                    "Will": 6
+                    "Willpower": 6
                 }
             },
             {
@@ -3052,10 +3001,9 @@
             "Strength": 24,
             "Dexterity": 10,
             "Mind": 12,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 26,
-            "Fortitude": 15,
-            "Will": 8
+            "Fortitude": 15
         },
         "Defense": {
             "Slash": 17.5,
@@ -3112,10 +3060,9 @@
             "Strength": 18,
             "Dexterity": 18,
             "Mind": 22,
-            "Willpower": 0,
+            "Willpower": 12,
             "Vitality": 20,
-            "Fortitude": 15,
-            "Will": 12
+            "Fortitude": 15
         },
         "Defense": {
             "Slash": 15.8,
@@ -3174,10 +3121,9 @@
             "Strength": 33,
             "Dexterity": 33,
             "Mind": 10,
-            "Willpower": 0,
+            "Willpower": 16,
             "Vitality": 12,
-            "Fortitude": 20,
-            "Will": 16
+            "Fortitude": 20
         },
         "Defense": {
             "Slash": 9.0,
@@ -3230,10 +3176,9 @@
             "Strength": 26,
             "Dexterity": 26,
             "Mind": 16,
-            "Willpower": 0,
+            "Willpower": 30,
             "Vitality": 16,
-            "Fortitude": 18,
-            "Will": 30
+            "Fortitude": 18
         },
         "Defense": {
             "Slash": 12.3,
@@ -3258,7 +3203,7 @@
                     "Strength": 6,
                     "Dexterity": 6,
                     "Mind": 6,
-                    "Will": 6,
+                    "Willpower": 6,
                     "Vitality": 6,
                     "Fortitude": 6
                 }
@@ -3270,7 +3215,7 @@
                         "Margin": {
                             "Strength": 8,
                             "Dexterity": 8,
-                            "Will": 8
+                            "Willpower": 8
                         }
                     }
                 ]
@@ -3292,10 +3237,9 @@
             "Strength": 38,
             "Dexterity": 12,
             "Mind": 16,
-            "Willpower": 0,
+            "Willpower": 16,
             "Vitality": 24,
-            "Fortitude": 15,
-            "Will": 16
+            "Fortitude": 15
         },
         "Defense": {
             "Slash": 17.1,
@@ -3352,10 +3296,9 @@
             "Strength": 12,
             "Dexterity": 12,
             "Mind": 8,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 12,
-            "Fortitude": 10,
-            "Will": 8
+            "Fortitude": 10
         },
         "Defense": {
             "Slash": 17.0,

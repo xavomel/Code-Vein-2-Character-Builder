@@ -1840,6 +1840,15 @@ class Ui_MainWindow(object):
         self.side_menu_text.insertPlainText(weapon.description)
 
     def handle_blood_code_clicked(self, item):
+        # test
+        blood_code = self.builder.blood_codes[item.statusTip()]
+        self.label_h3_v1_g1_1.setText(str(blood_code.attributes["Strength"]))
+        self.label_h3_v1_g1_2.setText(str(blood_code.attributes["Dexterity"]))
+        self.label_h3_v1_g1_3.setText(str(blood_code.attributes["Mind"]))
+        self.label_h3_v1_g1_4.setText(str(blood_code.attributes["Willpower"]))
+        self.label_h3_v1_g1_5.setText(str(blood_code.attributes["Vitality"]))
+        self.label_h3_v1_g1_6.setText(str(blood_code.attributes["Fortitude"]))
+
         if item.statusTip() == "Empty":
             new_icon = QIcon()
             new_icon.addFile(u":/All/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -1851,6 +1860,13 @@ class Ui_MainWindow(object):
         new_icon.addFile(u":/All/BloodCode/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.tool_button_h2_v3_h2_1.setIcon(new_icon)
         self.tool_button_h2_v3_h2_1.setText(item.statusTip())
+
+        # self.progress_bar_h3_v1_g1_1
+        # self.progress_bar_h3_v1_g1_2
+        # self.progress_bar_h3_v1_g1_3
+        # self.progress_bar_h3_v1_g1_4
+        # self.progress_bar_h3_v1_g1_5
+        # self.progress_bar_h3_v1_g1_6
 
     def handle_offensive_clicked(self, item):
         icon_1 = QIcon()

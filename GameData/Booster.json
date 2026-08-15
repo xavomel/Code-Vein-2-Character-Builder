@@ -91,10 +91,9 @@
             "Strength": 0,
             "Dexterity": 2,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 2,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 2
+            "Fortitude": 0
         },
         "Conditions": []
     },
@@ -106,10 +105,9 @@
             "Strength": 2,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 2,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 2
+            "Fortitude": 0
         },
         "Conditions": []
     },
@@ -177,10 +175,9 @@
             "Strength": 2,
             "Dexterity": 2,
             "Mind": 2,
-            "Willpower": 0,
+            "Willpower": 2,
             "Vitality": 2,
-            "Fortitude": 2,
-            "Will": 2
+            "Fortitude": 2
         },
         "Conditions": [
             {
@@ -443,10 +440,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 6,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 6
+            "Fortitude": 0
         },
         "Conditions": [
             {
@@ -501,10 +497,9 @@
             "Strength": 2,
             "Dexterity": 2,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 2,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 2
+            "Fortitude": 0
         },
         "Conditions": [
             {
@@ -520,10 +515,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 8
+            "Fortitude": 0
         },
         "Conditions": [
             {
@@ -542,10 +536,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 6,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 6
+            "Fortitude": 0
         },
         "Conditions": [
             {
@@ -618,10 +611,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 6,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 6
+            "Fortitude": 0
         },
         "Conditions": [
             {
@@ -822,10 +814,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 4,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 4
+            "Fortitude": 0
         },
         "Conditions": [
             {
@@ -862,10 +853,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 8
+            "Fortitude": 0
         },
         "Conditions": [
             {
@@ -1072,10 +1062,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 8
+            "Fortitude": 0
         },
         "Conditions": [
             {
@@ -1109,10 +1098,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 6,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 6
+            "Fortitude": 0
         },
         "Conditions": [
             {

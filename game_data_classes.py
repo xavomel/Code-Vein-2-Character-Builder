@@ -1,30 +1,30 @@
 class Weapon:
-    name = ""
-    description = ""
-    type = "" # One-Handed Swords, Two-Handed Swords, Twin Blades, Bayonets, Halberds, Hammers, Rune Blades
-    bleed = 0
-    scaling = "TODO"
-    transformable = False
-    transforms = {}
-    favorite = False
-
-    capacity = {
-        "Reliability": 		0,
-        "Handling": 		0,
-        "Conversion": 		0,
-        "Conductivity": 	0,
-    }
-
-    burden = {
-        "Strength": 	0,
-        "Dexterity": 	0,
-        "Mind": 		0,
-        "Willpower": 	0,
-        "Vitality": 	0,
-        "Fortitude": 	0,
-    }
-
     def __init__(self, doc=None, dummy_number=None):
+        self.name = ""
+        self.description = ""
+        self.type = ""  # One-Handed Swords, Two-Handed Swords, Twin Blades, Bayonets, Halberds, Hammers, Rune Blades
+        self.bleed = 0
+        # self.scaling = "TODO"
+        self.transformable = False
+        self.transforms = {}
+        self.favorite = False
+
+        self.capacity = {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 0,
+            "Conductivity": 0,
+        }
+
+        self.burden = {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+        }
+
         if not doc:
             self.name += "Weapon " + str(dummy_number)
             return
@@ -46,32 +46,32 @@ class Weapon:
 
 
 class Forma:
-    name = ""
-    description = ""
-    # One-Handed Swords, Two-Handed Swords, Twin Blades, Bayonets, Halberds, Hammers, Rune Blades
-    # Magic Range Long, Magic Range Short, Assistance Attack, Assistance Defense, Assistance Other
-    type = ""
-    ichor_cost = 0
-    favorite = False
-
-    capacity = {
-        "Reliability": 		0,
-        "Handling": 		0,
-        "Conversion": 		0,
-        "Conductivity": 	0,
-    }
-
-    matching_weapons = {
-        "SingleSword": True,
-        "GreatSword": True,
-        "DualSword": True,
-        "Bayonet": True,
-        "Halberd": True,
-        "Hammer": True,
-        "RuneBlade": True,
-    }
-
     def __init__(self, doc=None, dummy_number=None):
+        self.name = ""
+        self.description = ""
+        # One-Handed Swords, Two-Handed Swords, Twin Blades, Bayonets, Halberds, Hammers, Rune Blades
+        # Magic Range Long, Magic Range Short, Assistance Attack, Assistance Defense, Assistance Other
+        self.type = ""
+        self.ichor_cost = 0
+        self.favorite = False
+
+        self.capacity = {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 0,
+            "Conductivity": 0,
+        }
+
+        self.matching_weapons = {
+            "SingleSword": True,
+            "GreatSword": True,
+            "DualSword": True,
+            "Bayonet": True,
+            "Halberd": True,
+            "Hammer": True,
+            "RuneBlade": True,
+        }
+
         if not doc:
             self.name = "Forma " + str(dummy_number)
             return
@@ -85,32 +85,32 @@ class Forma:
 
 
 class Booster:
-    name = ""
-    description = ""
-    type = ""  # 0, 1, 2, 3
-    conditions = []
-    favorite = False
-
-    # for positive effects
-    attributes = {
-        "Strength": 	0,
-        "Dexterity": 	0,
-        "Mind": 		0,
-        "Willpower": 	0,
-        "Vitality": 	0,
-        "Fortitude": 	0,
-    }
-
-    burden = {
-        "Strength": 	0,
-        "Dexterity": 	0,
-        "Mind": 		0,
-        "Willpower": 	0,
-        "Vitality": 	0,
-        "Fortitude": 	0,
-    }
-
     def __init__(self, doc=None, dummy_number=None):
+        self.name = ""
+        self.description = ""
+        self.type = ""  # 0, 1, 2, 3
+        self.conditions = []
+        self.favorite = False
+
+        # for positive effects
+        self.attributes = {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+        }
+
+        self.burden = {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+        }
+
         if not doc:
             self.name = "Booster " + str(dummy_number)
             return
@@ -121,55 +121,56 @@ class Booster:
         # self.conditions = doc[""]
         # self.attributes = doc["Attributes"]
         self.burden = doc["Burden"]
+        self.conditions = doc["Conditions"]
 
 
 class BloodCode:
-    name = ""
-    description = ""
-    bloodline = ""
-    bleed = 0
-    ichor = 0
-    balance = 0
-    traits = []
-    favorite = False
-
-    attributes = {
-        "Strength":     0,
-        "Dexterity":    0,
-        "Mind":         0,
-        "Willpower":    0,
-        "Vitality":     0,
-        "Fortitude":    0,
-    }
-
-    # for negative effects
-    burden = {
-        "Strength":     0,
-        "Dexterity":    0,
-        "Mind":         0,
-        "Willpower":    0,
-        "Vitality":     0,
-        "Fortitude":    0,
-    }
-
-    defense = {
-        "Slash": 		0.0,
-        "Crush": 		0.0,
-        "Pierce": 		0.0,
-        "Blood":		0.0,
-        "Fire": 		0.0,
-        "Ice": 			0.0,
-        "Lightning": 	0.0,
-    }
-
-    resistance = {
-        "Disease":  0,
-        "Wound":    0,
-        "Bleed":    0,
-        "Curse":    0,
-    }
-
     def __init__(self, doc=None):
+        self.name = ""
+        self.description = ""
+        self.bloodline = ""
+        self.bleed = 0
+        self.ichor = 0
+        self.balance = 0
+        self.traits = []
+        self.favorite = False
+
+        self.attributes = {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+        }
+
+        # for negative effects
+        self.burden = {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+        }
+
+        self.defense = {
+            "Slash": 0.0,
+            "Crush": 0.0,
+            "Pierce": 0.0,
+            "Blood": 0.0,
+            "Fire": 0.0,
+            "Ice": 0.0,
+            "Lightning": 0.0,
+        }
+
+        self.resistance = {
+            "Disease": 0,
+            "Wound": 0,
+            "Bleed": 0,
+            "Curse": 0,
+        }
+
         if not doc:
             self.name = "Blood Code"
             return
@@ -185,35 +186,46 @@ class BloodCode:
         # self.burden = doc["Burden"]
         self.defense = doc["Defense"]
         self.resistance = doc["Resistance"]
+        self.traits = doc["Traits"]
+
+        for trait in self.traits:
+            burden = trait.get("Burden")
+            if burden and not trait["Conditions"]:
+                for attribute, value in burden.items():
+                    self.burden[attribute] += value
+
+        # print("\n\n", self.name)
+        # for k, v in self.burden.items():
+        #     print(k, v)
 
 
 class Jail:
-    name = ""
-    description = ""
-    type = ""
-    balance = 0
-    # favorite = False  # NOT USED
-
-    burden = {
-        "Strength": 	0,
-        "Dexterity": 	0,
-        "Mind": 		0,
-        "Willpower": 	0,
-        "Vitality": 	0,
-        "Fortitude": 	0,
-    }
-
-    defense = {
-        "Slash": 		0.0,
-        "Crush": 		0.0,
-        "Pierce": 		0.0,
-        "Blood":		0.0,
-        "Fire": 		0.0,
-        "Ice": 			0.0,
-        "Lightning": 	0.0,
-    }
-
     def __init__(self, doc=None):
+        self.name = ""
+        self.description = ""
+        self.type = ""
+        self.balance = 0
+        # self.favorite = False  # NOT USED
+
+        self.burden = {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+        }
+
+        self.defense = {
+            "Slash": 0.0,
+            "Crush": 0.0,
+            "Pierce": 0.0,
+            "Blood": 0.0,
+            "Fire": 0.0,
+            "Ice": 0.0,
+            "Lightning": 0.0,
+        }
+
         if not doc:
             self.name = "Jail"
             return
@@ -227,53 +239,53 @@ class Jail:
 
 
 class DefensiveForma:
-    name = ""
-    description = ""
-    type = ""
-    ichor_cost = 0
-    stamina_guard_cost = 0
-    balance = 0
-    transformable = False
-    transforms = {}
-    favorite = False
-
-    burden = {
-        "Strength": 	0,
-        "Dexterity": 	0,
-        "Mind": 		0,
-        "Willpower": 	0,
-        "Vitality": 	0,
-        "Fortitude": 	0,
-    }
-
-    defense = {
-        "Slash": 		0.0,
-        "Crush": 		0.0,
-        "Pierce": 		0.0,
-        "Blood":		0.0,
-        "Fire": 		0.0,
-        "Ice": 			0.0,
-        "Lightning": 	0.0,
-    }
-
-    guarding_defense = {
-        "Slash": 		0,
-        "Crush": 		0,
-        "Pierce": 		0,
-        "Blood":		0,
-        "Fire": 		0,
-        "Ice": 			0,
-        "Lightning": 	0,
-    }
-
-    resistance = {
-        "Disease":  0,
-        "Wound":    0,
-        "Bleed":    0,
-        "Curse":    0,
-    }
-
     def __init__(self, doc=None):
+        self.name = ""
+        self.description = ""
+        self.type = ""
+        self.ichor_cost = 0
+        self.stamina_guard_cost = 0
+        self.balance = 0
+        self.transformable = False
+        self.transforms = {}
+        self.favorite = False
+
+        self.burden = {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0,
+        }
+
+        self.defense = {
+            "Slash": 0.0,
+            "Crush": 0.0,
+            "Pierce": 0.0,
+            "Blood": 0.0,
+            "Fire": 0.0,
+            "Ice": 0.0,
+            "Lightning": 0.0,
+        }
+
+        self.guarding_defense = {
+            "Slash": 0,
+            "Crush": 0,
+            "Pierce": 0,
+            "Blood": 0,
+            "Fire": 0,
+            "Ice": 0,
+            "Lightning": 0,
+        }
+
+        self.resistance = {
+            "Disease": 0,
+            "Wound": 0,
+            "Bleed": 0,
+            "Curse": 0,
+        }
+
         if not doc:
             self.name = "Defensive"
             return
@@ -298,13 +310,13 @@ class DefensiveForma:
 
 
 class OffensiveForma:
-    name = ""
-    description = ""
-    ichor_cost = 0
-    scaling = {}
-    # favorite = False  # NOT USED
-
     def __init__(self, doc=None):
+        self.name = ""
+        self.description = ""
+        self.ichor_cost = 0
+        self.scaling = {}
+        # self.favorite = False  # NOT USED
+
         if not doc:
             self.name = "Offensive"
             return
