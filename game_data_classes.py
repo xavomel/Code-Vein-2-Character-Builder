@@ -325,15 +325,3 @@ class OffensiveForma:
         self.description = doc["Description"]
         self.ichor_cost = doc["IchorCost"]
         self.scaling = doc["Scaling"]
-
-
-def escape_filename(filename):
-    # replace : with 2 underscores
-    # replace " " with 1 underscore
-    return filename.replace(":", "__").replace(" ", "_")
-
-
-def unescape_filename(filename):
-    # replace 2 underscores with :
-    # replace underscore with " "
-    return filename.replace("__", ":").replace("_", " ")

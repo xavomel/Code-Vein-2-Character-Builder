@@ -21,7 +21,7 @@
             "Blood": 18.6,
             "Fire": 16.8,
             "Ice": 16.8,
-            "Thunder": 15.8
+            "Lightning": 15.8
         },
         "Resistance": {
             "Disease": 44,
@@ -82,7 +82,7 @@
             "Blood": 18.6,
             "Fire": 16.8,
             "Ice": 16.8,
-            "Thunder": 15.8
+            "Lightning": 15.8
         },
         "Resistance": {
             "Disease": 44,
@@ -143,7 +143,7 @@
             "Blood": 18.6,
             "Fire": 16.8,
             "Ice": 16.8,
-            "Thunder": 15.8
+            "Lightning": 15.8
         },
         "Resistance": {
             "Disease": 44,
@@ -204,7 +204,7 @@
             "Blood": 18.6,
             "Fire": 16.8,
             "Ice": 16.8,
-            "Thunder": 15.8
+            "Lightning": 15.8
         },
         "Resistance": {
             "Disease": 44,
@@ -265,7 +265,7 @@
             "Blood": 18.6,
             "Fire": 16.8,
             "Ice": 16.8,
-            "Thunder": 15.8
+            "Lightning": 15.8
         },
         "Resistance": {
             "Disease": 44,
@@ -326,7 +326,7 @@
             "Blood": 15.3,
             "Fire": 13.7,
             "Ice": 14.0,
-            "Thunder": 12.3
+            "Lightning": 12.3
         },
         "Resistance": {
             "Disease": 32,
@@ -382,7 +382,7 @@
             "Blood": 15.3,
             "Fire": 13.7,
             "Ice": 14.0,
-            "Thunder": 12.3
+            "Lightning": 12.3
         },
         "Resistance": {
             "Disease": 32,
@@ -438,7 +438,7 @@
             "Blood": 15.3,
             "Fire": 13.7,
             "Ice": 14.0,
-            "Thunder": 12.3
+            "Lightning": 12.3
         },
         "Resistance": {
             "Disease": 32,
@@ -494,7 +494,7 @@
             "Blood": 15.3,
             "Fire": 13.7,
             "Ice": 14.0,
-            "Thunder": 12.3
+            "Lightning": 12.3
         },
         "Resistance": {
             "Disease": 32,
@@ -550,7 +550,7 @@
             "Blood": 12.6,
             "Fire": 11.1,
             "Ice": 11.3,
-            "Thunder": 10.7
+            "Lightning": 10.7
         },
         "Resistance": {
             "Disease": 33,
@@ -613,7 +613,7 @@
             "Blood": 12.6,
             "Fire": 11.1,
             "Ice": 11.3,
-            "Thunder": 10.7
+            "Lightning": 10.7
         },
         "Resistance": {
             "Disease": 33,
@@ -676,7 +676,7 @@
             "Blood": 12.6,
             "Fire": 11.1,
             "Ice": 11.3,
-            "Thunder": 10.7
+            "Lightning": 10.7
         },
         "Resistance": {
             "Disease": 33,
@@ -739,7 +739,7 @@
             "Blood": 15.5,
             "Fire": 11.8,
             "Ice": 16.0,
-            "Thunder": 16.4
+            "Lightning": 16.4
         },
         "Resistance": {
             "Disease": 58,
@@ -801,7 +801,7 @@
             "Blood": 15.5,
             "Fire": 11.8,
             "Ice": 16.0,
-            "Thunder": 16.4
+            "Lightning": 16.4
         },
         "Resistance": {
             "Disease": 58,
@@ -863,7 +863,7 @@
             "Blood": 15.5,
             "Fire": 11.8,
             "Ice": 16.0,
-            "Thunder": 16.4
+            "Lightning": 16.4
         },
         "Resistance": {
             "Disease": 58,
@@ -925,7 +925,7 @@
             "Blood": 15.5,
             "Fire": 11.8,
             "Ice": 16.0,
-            "Thunder": 16.4
+            "Lightning": 16.4
         },
         "Resistance": {
             "Disease": 58,
@@ -977,7 +977,7 @@
             "Blood": 16.0,
             "Fire": 12.5,
             "Ice": 15.7,
-            "Thunder": 16.2
+            "Lightning": 16.2
         },
         "Resistance": {
             "Disease": 55,
@@ -1041,7 +1041,7 @@
             "Blood": 17.4,
             "Fire": 15.1,
             "Ice": 17.4,
-            "Thunder": 17.3
+            "Lightning": 17.3
         },
         "Resistance": {
             "Disease": 58,
@@ -1102,7 +1102,7 @@
             "Blood": 17.4,
             "Fire": 15.1,
             "Ice": 17.4,
-            "Thunder": 17.3
+            "Lightning": 17.3
         },
         "Resistance": {
             "Disease": 58,
@@ -1163,7 +1163,7 @@
             "Blood": 8.4,
             "Fire": 10.3,
             "Ice": 10.1,
-            "Thunder": 11.7
+            "Lightning": 11.7
         },
         "Resistance": {
             "Disease": 70,
@@ -1224,7 +1224,7 @@
             "Blood": 8.4,
             "Fire": 10.3,
             "Ice": 10.1,
-            "Thunder": 11.7
+            "Lightning": 11.7
         },
         "Resistance": {
             "Disease": 70,
@@ -1285,7 +1285,7 @@
             "Blood": 8.4,
             "Fire": 10.3,
             "Ice": 10.1,
-            "Thunder": 11.7
+            "Lightning": 11.7
         },
         "Resistance": {
             "Disease": 70,
@@ -1346,7 +1346,7 @@
             "Blood": 5.7,
             "Fire": 7.5,
             "Ice": 8.0,
-            "Thunder": 10.1
+            "Lightning": 10.1
         },
         "Resistance": {
             "Disease": 60,
@@ -1407,7 +1407,7 @@
             "Blood": 15.7,
             "Fire": 17.1,
             "Ice": 17.0,
-            "Thunder": 18.9
+            "Lightning": 18.9
         },
         "Resistance": {
             "Disease": 61,
@@ -1468,7 +1468,7 @@
             "Blood": 15.7,
             "Fire": 17.1,
             "Ice": 17.0,
-            "Thunder": 18.9
+            "Lightning": 18.9
         },
         "Resistance": {
             "Disease": 61,
@@ -1529,7 +1529,7 @@
             "Blood": 12.4,
             "Fire": 11.5,
             "Ice": 12.2,
-            "Thunder": 9.4
+            "Lightning": 9.4
         },
         "Resistance": {
             "Disease": 82,
@@ -1590,7 +1590,7 @@
             "Blood": 12.4,
             "Fire": 11.5,
             "Ice": 12.2,
-            "Thunder": 9.4
+            "Lightning": 9.4
         },
         "Resistance": {
             "Disease": 82,
@@ -1651,7 +1651,7 @@
             "Blood": 12.4,
             "Fire": 11.5,
             "Ice": 12.2,
-            "Thunder": 9.4
+            "Lightning": 9.4
         },
         "Resistance": {
             "Disease": 82,
@@ -1712,7 +1712,7 @@
             "Blood": 14.1,
             "Fire": 13.7,
             "Ice": 13.9,
-            "Thunder": 10.9
+            "Lightning": 10.9
         },
         "Resistance": {
             "Disease": 78,
@@ -1773,7 +1773,7 @@
             "Blood": 13.0,
             "Fire": 13.2,
             "Ice": 12.9,
-            "Thunder": 9.7
+            "Lightning": 9.7
         },
         "Resistance": {
             "Disease": 82,
@@ -1824,7 +1824,7 @@
             "Blood": 13.0,
             "Fire": 13.2,
             "Ice": 12.9,
-            "Thunder": 9.7
+            "Lightning": 9.7
         },
         "Resistance": {
             "Disease": 82,
@@ -1875,7 +1875,7 @@
             "Blood": 15.3,
             "Fire": 15.3,
             "Ice": 15.3,
-            "Thunder": 11.0
+            "Lightning": 11.0
         },
         "Resistance": {
             "Disease": 84,
@@ -1926,7 +1926,7 @@
             "Blood": 17.5,
             "Fire": 18.1,
             "Ice": 17.8,
-            "Thunder": 18.3
+            "Lightning": 18.3
         },
         "Resistance": {
             "Disease": 55,
@@ -1982,7 +1982,7 @@
             "Blood": 17.5,
             "Fire": 18.1,
             "Ice": 17.8,
-            "Thunder": 18.3
+            "Lightning": 18.3
         },
         "Resistance": {
             "Disease": 55,
@@ -2038,7 +2038,7 @@
             "Blood": 14.4,
             "Fire": 14.7,
             "Ice": 14.9,
-            "Thunder": 18.8
+            "Lightning": 18.8
         },
         "Resistance": {
             "Disease": 62,
@@ -2096,7 +2096,7 @@
             "Blood": 14.4,
             "Fire": 14.7,
             "Ice": 14.9,
-            "Thunder": 18.8
+            "Lightning": 18.8
         },
         "Resistance": {
             "Disease": 62,
@@ -2154,7 +2154,7 @@
             "Blood": 14.4,
             "Fire": 14.7,
             "Ice": 14.9,
-            "Thunder": 18.8
+            "Lightning": 18.8
         },
         "Resistance": {
             "Disease": 62,
@@ -2212,7 +2212,7 @@
             "Blood": 15.2,
             "Fire": 12.8,
             "Ice": 12.8,
-            "Thunder": 12.8
+            "Lightning": 12.8
         },
         "Resistance": {
             "Disease": 35,
@@ -2271,7 +2271,7 @@
             "Blood": 15.2,
             "Fire": 12.8,
             "Ice": 12.8,
-            "Thunder": 12.8
+            "Lightning": 12.8
         },
         "Resistance": {
             "Disease": 35,
@@ -2330,7 +2330,7 @@
             "Blood": 15.2,
             "Fire": 12.8,
             "Ice": 12.8,
-            "Thunder": 12.8
+            "Lightning": 12.8
         },
         "Resistance": {
             "Disease": 35,
@@ -2389,7 +2389,7 @@
             "Blood": 14.0,
             "Fire": 13.7,
             "Ice": 14.6,
-            "Thunder": 13.7
+            "Lightning": 13.7
         },
         "Resistance": {
             "Disease": 65,
@@ -2450,7 +2450,7 @@
             "Blood": 14.0,
             "Fire": 13.7,
             "Ice": 14.6,
-            "Thunder": 13.7
+            "Lightning": 13.7
         },
         "Resistance": {
             "Disease": 65,
@@ -2511,7 +2511,7 @@
             "Blood": 14.0,
             "Fire": 13.7,
             "Ice": 14.6,
-            "Thunder": 13.7
+            "Lightning": 13.7
         },
         "Resistance": {
             "Disease": 65,
@@ -2572,7 +2572,7 @@
             "Blood": 27.5,
             "Fire": 11.4,
             "Ice": 12.3,
-            "Thunder": 12.8
+            "Lightning": 12.8
         },
         "Resistance": {
             "Disease": 41,
@@ -2631,7 +2631,7 @@
             "Blood": 13.9,
             "Fire": 10.1,
             "Ice": 13.7,
-            "Thunder": 14.4
+            "Lightning": 14.4
         },
         "Resistance": {
             "Disease": 62,
@@ -2684,7 +2684,7 @@
             "Blood": 14.7,
             "Fire": 10.6,
             "Ice": 14.7,
-            "Thunder": 14.6
+            "Lightning": 14.6
         },
         "Resistance": {
             "Disease": 62,
@@ -2737,7 +2737,7 @@
             "Blood": 18.5,
             "Fire": 14.5,
             "Ice": 15.2,
-            "Thunder": 11.5
+            "Lightning": 11.5
         },
         "Resistance": {
             "Disease": 65,
@@ -2789,7 +2789,7 @@
             "Blood": 5.6,
             "Fire": 6.7,
             "Ice": 7.1,
-            "Thunder": 8.9
+            "Lightning": 8.9
         },
         "Resistance": {
             "Disease": 56,
@@ -2847,7 +2847,7 @@
             "Blood": 12.4,
             "Fire": 12.0,
             "Ice": 13.7,
-            "Thunder": 16.0
+            "Lightning": 16.0
         },
         "Resistance": {
             "Disease": 58,
@@ -2900,7 +2900,7 @@
             "Blood": 14.3,
             "Fire": 13.9,
             "Ice": 13.5,
-            "Thunder": 10.0
+            "Lightning": 10.0
         },
         "Resistance": {
             "Disease": 81,
@@ -2959,7 +2959,7 @@
             "Blood": 12.0,
             "Fire": 12.2,
             "Ice": 12.4,
-            "Thunder": 7.9
+            "Lightning": 7.9
         },
         "Resistance": {
             "Disease": 85,
@@ -3012,7 +3012,7 @@
             "Blood": 12.7,
             "Fire": 12.8,
             "Ice": 13.2,
-            "Thunder": 13.1
+            "Lightning": 13.1
         },
         "Resistance": {
             "Disease": 81,
@@ -3071,7 +3071,7 @@
             "Blood": 16.5,
             "Fire": 16.0,
             "Ice": 16.4,
-            "Thunder": 15.7
+            "Lightning": 15.7
         },
         "Resistance": {
             "Disease": 63,
@@ -3132,7 +3132,7 @@
             "Blood": 14.7,
             "Fire": 13.4,
             "Ice": 13.2,
-            "Thunder": 12.4
+            "Lightning": 12.4
         },
         "Resistance": {
             "Disease": 42,
@@ -3187,7 +3187,7 @@
             "Blood": 13.6,
             "Fire": 11.8,
             "Ice": 12.3,
-            "Thunder": 11.0
+            "Lightning": 11.0
         },
         "Resistance": {
             "Disease": 47,
@@ -3248,7 +3248,7 @@
             "Blood": 18.2,
             "Fire": 17.2,
             "Ice": 17.1,
-            "Thunder": 15.4
+            "Lightning": 15.4
         },
         "Resistance": {
             "Disease": 49,
@@ -3307,7 +3307,7 @@
             "Blood": 6.8,
             "Fire": 9.5,
             "Ice": 9.9,
-            "Thunder": 9.5
+            "Lightning": 9.5
         },
         "Resistance": {
             "Disease": 42,

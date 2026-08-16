@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QApplication, QMainWindow
-import json
 import builder_ui
 from game_data_classes import *
+from utility import open_json
 
 
 class Character:
@@ -77,7 +77,7 @@ class Character:
             "Lightning": 0,
         }
 
-        self.resistances = {
+        self.resistance = {
             "Disease": 0,
             "Wound": 0,
             "Bleed": 0,
@@ -112,15 +112,27 @@ class Builder:
         self.defensive_formae = dict()
         self.jails = dict()
         self.translation = dict()
+        self.char_to_widget_mapping = dict()
+        self.widget_to_char_mapping = dict()
+        self.last_transaction = []
+        self.class_to_handler = {
+            "Weapon": self.build_weapon_transaction,
+            "Forma": self.build_forma_transaction,
+            "Booster": self.build_booster_transaction,
+            "BloodCode": self.build_blood_code_transaction,
+            "Jail": self.build_jail_transaction,
+            "DefensiveForma": self.build_defensive_transaction,
+            "OffensiveForma": self.build_offensive_transaction,
+        }
 
-        blood_codes = self.open_json(u"GameData/BloodCode.json")
-        weapons = self.open_json(u"GameData/Weapon.json")
-        boosters = self.open_json(u"GameData/Booster.json")
-        formae = self.open_json(u"GameData/Forma.json")
-        offensive_formae = self.open_json(u"GameData/Offensive.json")
-        defensive_formae = self.open_json(u"GameData/Defensive.json")
-        jails = self.open_json(u"GameData/Jail.json")
-        self.translation = self.open_json("GameData/Translation/en.json")
+        blood_codes = open_json(u"GameData/BloodCode.json")
+        weapons = open_json(u"GameData/Weapon.json")
+        boosters = open_json(u"GameData/Booster.json")
+        formae = open_json(u"GameData/Forma.json")
+        offensive_formae = open_json(u"GameData/Offensive.json")
+        defensive_formae = open_json(u"GameData/Defensive.json")
+        jails = open_json(u"GameData/Jail.json")
+        self.translation = open_json("GameData/Translation/en.json")
 
         for doc in blood_codes:
             name = doc["Name"]
@@ -158,9 +170,174 @@ class Builder:
             self.jails[name] = Jail(doc)
         self.jails["Empty"] = Jail()
 
-    def open_json(self, filepath):
-        with open(filepath, encoding='utf-8') as _data:
-            return json.load(_data)
+    def is_transaction_ongoing(self):
+        return True if self.last_transaction else False
+
+    def start_transaction(self, data):
+        """
+        Replaces UI values with transaction values (does NOT change anything in Character)
+        :return:
+        """
+        transaction = self.build_transaction(data)
+        for type, widget, name, value in transaction:
+            widget.setText(str(value))
+
+        self.last_transaction = transaction
+
+    def rollback_transaction(self):
+        """
+        Replaces UI values with Character values
+
+        Need to do this if there is not-committed transaction
+        because e.g a previous booster may affect more things than new booster
+        so just overwriting with new values is not enough
+        :return:
+        """
+        if not self.last_transaction:
+            return
+
+        for type, widget, name, value in self.last_transaction:
+            # TODO
+            # if type == "Bleed":
+            #     widget.setText(str(self.character.bleed))
+            if type == "Balance":
+                widget.setText(str(self.character.balance))
+            elif type == "Ichor":
+                widget.setText(str(self.character.ichor))
+            elif type == "Attributes":
+                widget.setText(str(self.character.attributes[name]))
+            elif type == "Defense":
+                widget.setText(str(self.character.defense[name]))
+            elif type == "Resistance":
+                widget.setText(str(self.character.resistance[name]))
+
+        self.last_transaction = []
+
+    def commit_transaction(self):
+        """
+        Replaces Character values with transaction values
+        :return:
+        """
+        if not self.last_transaction:
+            return
+
+        # TODO shouldn't we just overwrite self.character.blood_code
+        # and then recalculate values for whole character?
+        for type, widget, name, value in self.last_transaction:
+            # TODO
+            # if type == "Bleed":
+            #     widget.setText(str(self.character.bleed))
+            if type == "Balance":
+                self.character.balance = value
+            elif type == "Ichor":
+                self.character.ichor = value
+            elif type == "Attributes":
+                self.character.attributes[name] = value
+            elif type == "Defense":
+                self.character.defense[name] = value
+            elif type == "Resistance":
+                self.character.resistance[name] = value
+
+        print(self.character.balance)
+        print(self.character.ichor)
+
+        self.last_transaction = []
+
+    def build_transaction(self, data):
+        """
+        :return:
+        """
+        transaction_handler = self.class_to_handler[type(data).__name__]
+        transaction = transaction_handler(data)
+
+        # if "Attributes" in data:
+        #     for attr, val in data["Attributes"].items():
+        #         widget = self.char_to_widget_mapping["Attribute_" + attr]
+        #         transaction.append(["Attributes", widget, attr, val])
+        # if "Attribute" in data:
+        #     for attr, val in data["Attribute"].items():
+        #         widget = self.char_to_widget_mapping["Attribute_" + attr]
+        #         transaction.append(["Attribute", widget, attr, val])
+        # if "Burden" in data:
+        #     for attr, val in data["Burden"].items():
+        #         widget = self.char_to_widget_mapping["Burden_" + attr]
+        #         transaction.append(["Burden", widget, attr, val])
+
+        for x in transaction:
+            print(x)
+
+        return transaction
+
+    def build_weapon_transaction(self, data):
+        print("weapon")
+
+        transaction = []
+
+        return transaction
+
+    def build_forma_transaction(self, data):
+        print("forma")
+
+        transaction = []
+
+        return transaction
+
+    def build_booster_transaction(self, data):
+        print("booster")
+
+        transaction = []
+
+        return transaction
+
+    def build_blood_code_transaction(self, data):
+        print("blood_code")
+
+        transaction = []
+
+        # first handle the base blood code
+        # then handle the cascading consequences
+
+        transaction.append(["Bleed", self.char_to_widget_mapping["Weapon_1_Bleed"], "Weapon_1", data.bleed])
+        transaction.append(["Bleed", self.char_to_widget_mapping["Weapon_2_Bleed"], "Weapon_2", data.bleed])
+        transaction.append(["Bleed", self.char_to_widget_mapping["Jail_Bleed"], "Jail", data.bleed])
+        transaction.append(["Balance", self.char_to_widget_mapping["Balance"], "Balance", data.balance])
+        transaction.append(["Ichor", self.char_to_widget_mapping["Ichor"], "Ichor", data.ichor])
+
+        for attr, val in data.attributes.items():
+            widget = self.char_to_widget_mapping["Attribute_" + attr]
+            transaction.append(["Attributes", widget, attr, val])
+        # for attr, val in data.burden.items():
+        #     widget = self.char_to_widget_mapping["Burden_" + attr]
+        #     transaction.append(["Defense", widget, attr, val])
+        for attr, val in data.defense.items():
+            widget = self.char_to_widget_mapping["Defense_" + attr]
+            transaction.append(["Defense", widget, attr, val])
+        for attr, val in data.resistance.items():
+            widget = self.char_to_widget_mapping["Resistance_" + attr]
+            transaction.append(["Resistance", widget, attr, val])
+
+        return transaction
+
+    def build_jail_transaction(self, data):
+        print("jail")
+
+        transaction = []
+
+        return transaction
+
+    def build_defensive_transaction(self, data):
+        print("defensive")
+
+        transaction = []
+
+        return transaction
+
+    def build_offensive_transaction(self, data):
+        print("offensive")
+
+        transaction = []
+
+        return transaction
 
 
 class MainWindow(QMainWindow, builder_ui.Ui_MainWindow):

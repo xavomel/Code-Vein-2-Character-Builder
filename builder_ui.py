@@ -7,6 +7,7 @@ from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout
 import warnings
 import cv2_resources
 from game_data_classes import *
+from utility import escape_filename
 
 
 VERSION = u"Code Vein II Character Builder v0.0.1"
@@ -1292,6 +1293,7 @@ class Ui_MainWindow(object):
 
         # end of setupUi
         MainWindow.setCentralWidget(self.centralwidget)
+        self.set_character_to_widget_mapping()
         self.add_menu_bar(MainWindow)
         self.retranslateUi(MainWindow)
 
@@ -1840,14 +1842,9 @@ class Ui_MainWindow(object):
         self.side_menu_text.insertPlainText(weapon.description)
 
     def handle_blood_code_clicked(self, item):
-        # test
-        blood_code = self.builder.blood_codes[item.statusTip()]
-        self.label_h3_v1_g1_1.setText(str(blood_code.attributes["Strength"]))
-        self.label_h3_v1_g1_2.setText(str(blood_code.attributes["Dexterity"]))
-        self.label_h3_v1_g1_3.setText(str(blood_code.attributes["Mind"]))
-        self.label_h3_v1_g1_4.setText(str(blood_code.attributes["Willpower"]))
-        self.label_h3_v1_g1_5.setText(str(blood_code.attributes["Vitality"]))
-        self.label_h3_v1_g1_6.setText(str(blood_code.attributes["Fortitude"]))
+        builder = self.builder
+        # blood_code = builder.blood_codes[item.statusTip()]
+        builder.commit_transaction()
 
         if item.statusTip() == "Empty":
             new_icon = QIcon()
@@ -2069,6 +2066,111 @@ class Ui_MainWindow(object):
         # also need to account for margins, only the top one because bottom one is 0
         return last_row_y + last_row_height + self.margin_size
 
+    def set_character_to_widget_mapping(self):
+        self.builder.widget_to_char_mapping = {
+            # Blood Code
+            self.tool_button_h2_v3_h2_1: "Blood_Code",
+            self.push_button_h2_v3_h2_v1_7: "Trait_1",
+            self.push_button_h2_v3_h2_v1_8: "Trait_2",
+            self.push_button_h2_v3_h2_v1_9: "Trait_3",
+            self.label_h3_v1_g1_1: "Attribute_Strength",
+            self.label_h3_v1_g1_2: "Attribute_Dexterity",
+            self.label_h3_v1_g1_3: "Attribute_Mind",
+            self.label_h3_v1_g1_4: "Attribute_Willpower",
+            self.label_h3_v1_g1_5: "Attribute_Fortitude",
+            self.label_h3_v1_g1_6: "Attribute_Vitality",
+            self.progress_bar_h3_v1_g1_1: "Burden_Strength",
+            self.progress_bar_h3_v1_g1_2: "Burden_Dexterity",
+            self.progress_bar_h3_v1_g1_3: "Burden_Mind",
+            self.progress_bar_h3_v1_g1_4: "Burden_Willpower",
+            self.progress_bar_h3_v1_g1_5: "Burden_Fortitude",
+            self.progress_bar_h3_v1_g1_6: "Burden_Vitality",
+
+            # Weapon 1
+            self.tool_button_h2_v1_h1_1: "Weapon_1",
+            self.tool_button_h2_v1_h1_1a: "Weapon_1_Transform",
+            self.label_h2_v3_h1_g1_5: "Weapon_1_Bleed",
+            self.label_h2_v1_h1_g1_5: "Weapon_1_Reliability",
+            self.label_h2_v1_h1_g1_6: "Weapon_1_Handling",
+            self.label_h2_v1_h1_g1_7: "Weapon_1_Conversion",
+            self.label_h2_v1_h1_g1_8: "Weapon_1_Conductivity",
+            self.label_h2_v1_h1_g1_13: "Weapon_1_Reliability_Max",
+            self.label_h2_v1_h1_g1_14: "Weapon_1_Handling_Max",
+            self.label_h2_v1_h1_g1_15: "Weapon_1_Conversion_Max",
+            self.label_h2_v1_h1_g1_16: "Weapon_1_Conductivity_Max",
+            self.push_button_h2_v1_1: "Weapon_1_Forma_1",
+            self.push_button_h2_v1_2: "Weapon_1_Forma_2",
+            self.push_button_h2_v1_3: "Weapon_1_Forma_3",
+            self.push_button_h2_v1_4: "Weapon_1_Forma_4",
+
+            # Weapon 2
+            self.tool_button_h2_v2_h1_1: "Weapon_2",
+            self.tool_button_h2_v2_h1_1a: "Weapon_2_Transform",
+            self.label_h2_v3_h1_g1_6: "Weapon_2_Bleed",
+            self.label_h2_v2_h1_g1_5: "Weapon_2_Reliability",
+            self.label_h2_v2_h1_g1_6: "Weapon_2_Handling",
+            self.label_h2_v2_h1_g1_7: "Weapon_2_Conversion",
+            self.label_h2_v2_h1_g1_8: "Weapon_2_Conductivity",
+            self.label_h2_v2_h1_g1_13: "Weapon_2_Reliability_Max",
+            self.label_h2_v2_h1_g1_14: "Weapon_2_Handling_Max",
+            self.label_h2_v2_h1_g1_15: "Weapon_2_Conversion_Max",
+            self.label_h2_v2_h1_g1_16: "Weapon_2_Conductivity_Max",
+            self.push_button_h2_v2_1: "Weapon_2_Forma_1",
+            self.push_button_h2_v2_2: "Weapon_2_Forma_2",
+            self.push_button_h2_v2_3: "Weapon_2_Forma_3",
+            self.push_button_h2_v2_4: "Weapon_2_Forma_4",
+
+            # Offensive
+            self.tool_button_h2_v3_h1_1: "Offensive",
+
+            # Defensive
+            self.tool_button_h2_v3_h1_2: "Defensive",
+            self.tool_button_h2_v3_h1_2a: "Defensive_Transform",
+
+            # Jail
+            self.tool_button_h2_v3_h1_3: "Jail",
+            self.label_h2_v3_h1_g1_7: "Jail_Bleed",
+
+            # Booster
+            self.push_button_h2_v3_h2_v1_1: "Booster_1",
+            self.push_button_h2_v3_h2_v1_2: "Booster_2",
+            self.push_button_h2_v3_h2_v1_3: "Booster_3",
+            self.push_button_h2_v3_h2_v1_4: "Booster_4",
+            self.push_button_h2_v3_h2_v1_5: "Booster_5",
+            self.push_button_h2_v3_h2_v1_6: "Booster_6",
+
+            # Defense
+            self.tool_button_h4_1: "Defense_Slash",
+            self.tool_button_h4_2: "Defense_Crush",
+            self.tool_button_h4_3: "Defense_Pierce",
+            self.tool_button_h4_4: "Defense_Blood",
+            self.tool_button_h4_5: "Defense_Fire",
+            self.tool_button_h4_6: "Defense_Ice",
+            self.tool_button_h4_7: "Defense_Lightning",
+
+            # Guarding Defense
+            self.tool_button_h5_1: "Guarding_Defense_Slash",
+            self.tool_button_h5_2: "Guarding_Defense_Crush",
+            self.tool_button_h5_3: "Guarding_Defense_Pierce",
+            self.tool_button_h5_4: "Guarding_Defense_Blood",
+            self.tool_button_h5_5: "Guarding_Defense_Fire",
+            self.tool_button_h5_6: "Guarding_Defense_Ice",
+            self.tool_button_h5_7: "Guarding_Defense_Lightning",
+
+            # Resistances
+            self.tool_button_h6_1: "Resistance_Disease",
+            self.tool_button_h6_2: "Resistance_Wound",
+            self.tool_button_h6_3: "Resistance_Bleed",
+            self.tool_button_h6_4: "Resistance_Curse",
+
+            # Misc
+            self.label_h2_v3_h1_g1_8: "Balance",
+            self.tool_button_h3_g1_2: "Dodge_Effectiveness",
+            self.tool_button_h3_g1_4: "Stamina_Guard_Cost",
+            self.tool_button_h1_2: "Ichor",
+        }
+        self.builder.char_to_widget_mapping = dict((v, k) for k, v in self.builder.widget_to_char_mapping.items())
+
     def add_menu_bar(self, MainWindow):
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setGeometry(QRect(0, 0, 1440, 21))
@@ -2288,6 +2390,11 @@ class MyQListWidget(QListWidget):
     def handle_blood_code_hover(self, item):
         self.handle_hover(item)
 
+        builder = self.window().builder
+        blood_code = builder.blood_codes[item.statusTip()]
+        builder.rollback_transaction()
+        builder.start_transaction(blood_code)
+
     def handle_offensive_hover(self, item):
         self.handle_hover(item)
 
@@ -2321,6 +2428,8 @@ class MyQListWidget(QListWidget):
                 self.handle_hover(items[0])
 
         self.hovered_item = None
+
+        self.window().builder.rollback_transaction()
 
     def mousePressEvent(self, QMouseEvent):
         if QMouseEvent.button() == Qt.LeftButton:
