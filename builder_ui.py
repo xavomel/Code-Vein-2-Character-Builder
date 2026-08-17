@@ -2292,7 +2292,10 @@ class AttributeProgressBar(QProgressBar):
         ])
 
         # Progress shape
-        progress = self.value() / self.maximum()
+        if self.maximum() == 0:
+            progress = 1
+        else:
+            progress = self.value() / self.maximum()
         skewed_width = border[2].x() - border[3].x()
         fill_width = skewed_width * progress + skew
         fill = QPolygonF([
