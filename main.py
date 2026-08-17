@@ -94,12 +94,6 @@ class Character:
             burden[attribute] -= value
             margin[attribute] += value  # can be negative
 
-    # def update_weapon(self, Weapon, slot):
-    #     if slot == 1:
-    #         weapon_prev = self.weapon_1
-    #     else:
-    #         weapon_prev = self.weapon_2
-
 
 class Builder:
     def __init__(self):
@@ -179,8 +173,12 @@ class Builder:
         :return:
         """
         transaction = self.build_transaction(data)
-        for type, widget, name, value in transaction:
-            widget.setText(str(value))
+        for type, var, key, value, old_value, widget in transaction:
+            # if subtype == "Burden":
+            #     # not implemented
+            #     continue
+            if widget:
+                widget.setText(str(value))
 
         self.last_transaction = transaction
 
@@ -196,24 +194,16 @@ class Builder:
         if not self.last_transaction:
             return
 
-        for type, widget, name, value in self.last_transaction:
-            # TODO
-            # if type == "Bleed":
-            #     widget.setText(str(self.character.bleed))
-            if type == "Balance":
-                widget.setText(str(self.character.balance))
-            elif type == "Ichor":
-                widget.setText(str(self.character.ichor))
-            elif type == "Attributes":
-                widget.setText(str(self.character.attributes[name]))
-            elif type == "Defense":
-                widget.setText(str(self.character.defense[name]))
-            elif type == "Resistance":
-                widget.setText(str(self.character.resistance[name]))
+        for type, var, key, value, old_value, widget in self.last_transaction:
+            # if subtype == "Burden":
+            #     # not implemented
+            #     continue
+            if widget:
+                widget.setText(str(old_value))
 
         self.last_transaction = []
 
-    def commit_transaction(self):
+    def commit_transaction(self, data):
         """
         Replaces Character values with transaction values
         :return:
@@ -221,25 +211,17 @@ class Builder:
         if not self.last_transaction:
             return
 
-        # TODO shouldn't we just overwrite self.character.blood_code
-        # and then recalculate values for whole character?
-        for type, widget, name, value in self.last_transaction:
-            # TODO
-            # if type == "Bleed":
-            #     widget.setText(str(self.character.bleed))
-            if type == "Balance":
-                self.character.balance = value
-            elif type == "Ichor":
-                self.character.ichor = value
-            elif type == "Attributes":
-                self.character.attributes[name] = value
-            elif type == "Defense":
-                self.character.defense[name] = value
-            elif type == "Resistance":
-                self.character.resistance[name] = value
+        # overwrite old blood code with new
+        self.character.blood_code = data
 
-        print(self.character.balance)
-        print(self.character.ichor)
+        # then handle consequences of changing blood code
+        for type, var, key, value, old_value, widget in self.last_transaction:
+            if var == "Bloodline":
+                self.character.bloodline = value
+            elif var == "Attributes":
+                self.character.attributes[key] += value - old_value
+            elif var == "Burden":
+                self.character.burden[key] += value - old_value
 
         self.last_transaction = []
 
@@ -250,21 +232,48 @@ class Builder:
         transaction_handler = self.class_to_handler[type(data).__name__]
         transaction = transaction_handler(data)
 
-        # if "Attributes" in data:
-        #     for attr, val in data["Attributes"].items():
-        #         widget = self.char_to_widget_mapping["Attribute_" + attr]
-        #         transaction.append(["Attributes", widget, attr, val])
-        # if "Attribute" in data:
-        #     for attr, val in data["Attribute"].items():
-        #         widget = self.char_to_widget_mapping["Attribute_" + attr]
-        #         transaction.append(["Attribute", widget, attr, val])
-        # if "Burden" in data:
-        #     for attr, val in data["Burden"].items():
-        #         widget = self.char_to_widget_mapping["Burden_" + attr]
-        #         transaction.append(["Burden", widget, attr, val])
-
         for x in transaction:
             print(x)
+
+        return transaction
+
+    def build_blood_code_transaction(self, data):
+        print("blood_code")
+
+        transaction = []
+
+        # first handle the base blood code
+        _type = type(data).__name__
+
+        # class - IS IT NECESSARY?
+        # class variable - to set on
+        # key - to set on (can be None)
+        # value - to set
+        # old value - to restore on rollback
+        # widget - to set on (can be None)
+
+        # bloodline
+        transaction.append([_type, "Bloodline", None, data.bloodline, self.character.bloodline, None])
+
+        # attributes
+        for attr, val in data.attributes.items():
+            widget = self.char_to_widget_mapping["Attribute_" + attr]
+            # fetch old attributes from character rather than blood code
+            # as it contains potential values from boosters, partner, food
+            old_value = self.character.attributes[attr]
+            transaction.append([_type, "Attributes", attr, val, old_value, widget])
+
+        # burden
+        # for attr, val in data.burden.items():
+        #     widget = self.char_to_widget_mapping["Burden_" + attr]
+        #     # fetch old attributes from character rather than blood code
+        #     # as it contains potential values from traits, boosters, defensive, jail, weapon(s)
+        #     old_value = self.character.burden[attr]
+        #     # TODO add handling for Shrugged Burden (booster and trait)
+        #     # remember the state of Shrugged Burden in variable for easy checking, it has big impact
+        #     # TODO add handling for Weapon Rack
+        #     # remember the state of Weapon Rack in variable for easy checking, it has big impact
+        #     transaction.append([_type, "Burden", attr, val, old_value, widget])
 
         return transaction
 
@@ -286,35 +295,6 @@ class Builder:
         print("booster")
 
         transaction = []
-
-        return transaction
-
-    def build_blood_code_transaction(self, data):
-        print("blood_code")
-
-        transaction = []
-
-        # first handle the base blood code
-        # then handle the cascading consequences
-
-        transaction.append(["Bleed", self.char_to_widget_mapping["Weapon_1_Bleed"], "Weapon_1", data.bleed])
-        transaction.append(["Bleed", self.char_to_widget_mapping["Weapon_2_Bleed"], "Weapon_2", data.bleed])
-        transaction.append(["Bleed", self.char_to_widget_mapping["Jail_Bleed"], "Jail", data.bleed])
-        transaction.append(["Balance", self.char_to_widget_mapping["Balance"], "Balance", data.balance])
-        transaction.append(["Ichor", self.char_to_widget_mapping["Ichor"], "Ichor", data.ichor])
-
-        for attr, val in data.attributes.items():
-            widget = self.char_to_widget_mapping["Attribute_" + attr]
-            transaction.append(["Attributes", widget, attr, val])
-        # for attr, val in data.burden.items():
-        #     widget = self.char_to_widget_mapping["Burden_" + attr]
-        #     transaction.append(["Defense", widget, attr, val])
-        for attr, val in data.defense.items():
-            widget = self.char_to_widget_mapping["Defense_" + attr]
-            transaction.append(["Defense", widget, attr, val])
-        for attr, val in data.resistance.items():
-            widget = self.char_to_widget_mapping["Resistance_" + attr]
-            transaction.append(["Resistance", widget, attr, val])
 
         return transaction
 

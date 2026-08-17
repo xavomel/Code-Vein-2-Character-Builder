@@ -1843,8 +1843,8 @@ class Ui_MainWindow(object):
 
     def handle_blood_code_clicked(self, item):
         builder = self.builder
-        # blood_code = builder.blood_codes[item.statusTip()]
-        builder.commit_transaction()
+        blood_code = builder.blood_codes[item.statusTip()]
+        builder.commit_transaction(blood_code)
 
         if item.statusTip() == "Empty":
             new_icon = QIcon()

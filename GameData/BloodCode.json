@@ -2059,7 +2059,15 @@
             },
             {
                 "Description": "Strength Burden -10",
-                "Conditions": [],
+                "Conditions": [
+                    {},
+                    {
+                        "Burden": {
+                            "Dexterity": 0,
+                            "Mind": 0
+                        }
+                    }
+                ],
                 "Burden": {
                     "Strength": -10
                 }
@@ -2117,7 +2125,15 @@
             },
             {
                 "Description": "Strength Burden -10",
-                "Conditions": [],
+                "Conditions": [
+                    {},
+                    {
+                        "Burden": {
+                            "Dexterity": 0,
+                            "Mind": 0
+                        }
+                    }
+                ],
                 "Burden": {
                     "Strength": -10
                 }
@@ -2175,7 +2191,15 @@
             },
             {
                 "Description": "Strength Burden -10",
-                "Conditions": [],
+                "Conditions": [
+                    {},
+                    {
+                        "Burden": {
+                            "Dexterity": 0,
+                            "Mind": 0
+                        }
+                    }
+                ],
                 "Burden": {
                     "Strength": -10
                 }
