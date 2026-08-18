@@ -1202,10 +1202,9 @@
             "Strength": 0,
             "Dexterity": 7,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -2189,10 +2188,9 @@
             "Strength": 3,
             "Dexterity": 3,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -2210,10 +2208,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -2230,10 +2227,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -2250,10 +2246,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -2270,10 +2265,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -2290,10 +2284,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -2310,10 +2303,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -2330,10 +2322,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -2350,10 +2341,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -2370,10 +2360,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -2390,10 +2379,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -2410,10 +2398,9 @@
                     "Strength": 2,
                     "Dexterity": 2,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -2434,10 +2421,9 @@
             "Strength": 5,
             "Dexterity": 5,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -3436,10 +3422,9 @@
             "Strength": 8,
             "Dexterity": 8,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 5,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 5
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -3457,10 +3442,9 @@
                     "Strength": 8,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -3477,10 +3461,9 @@
                     "Strength": 8,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -3497,10 +3480,9 @@
                     "Strength": 8,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -3517,10 +3499,9 @@
                     "Strength": 8,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -3537,10 +3518,9 @@
                     "Strength": 8,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -3557,10 +3537,9 @@
                     "Strength": 8,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -3577,10 +3556,9 @@
                     "Strength": 8,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -3597,10 +3575,9 @@
                     "Strength": 8,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -3617,10 +3594,9 @@
                     "Strength": 8,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -3637,10 +3613,9 @@
                     "Strength": 8,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -3657,10 +3632,9 @@
                     "Strength": 7,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -3681,10 +3655,9 @@
             "Strength": 1,
             "Dexterity": 10,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 8
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -5126,10 +5099,9 @@
             "Strength": 8,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -5147,10 +5119,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -5167,10 +5138,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -5187,10 +5157,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -5207,10 +5176,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -5227,10 +5195,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -5247,10 +5214,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -5267,10 +5233,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -5287,10 +5252,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -5307,10 +5271,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -5327,10 +5290,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -5347,10 +5309,9 @@
                     "Strength": 7,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -7010,10 +6971,9 @@
             "Strength": 5,
             "Dexterity": 3,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -7031,10 +6991,9 @@
                     "Strength": 5,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7051,10 +7010,9 @@
                     "Strength": 5,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7071,10 +7029,9 @@
                     "Strength": 5,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7091,10 +7048,9 @@
                     "Strength": 5,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7111,10 +7067,9 @@
                     "Strength": 5,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7131,10 +7086,9 @@
                     "Strength": 5,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7151,10 +7105,9 @@
                     "Strength": 5,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7171,10 +7124,9 @@
                     "Strength": 5,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7191,10 +7143,9 @@
                     "Strength": 5,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7211,10 +7162,9 @@
                     "Strength": 5,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7231,10 +7181,9 @@
                     "Strength": 4,
                     "Dexterity": 2,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -7813,10 +7762,9 @@
             "Strength": 10,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 5,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 5
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -7834,10 +7782,9 @@
                     "Strength": 10,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7854,10 +7801,9 @@
                     "Strength": 10,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7874,10 +7820,9 @@
                     "Strength": 10,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7894,10 +7839,9 @@
                     "Strength": 10,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7914,10 +7858,9 @@
                     "Strength": 10,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7934,10 +7877,9 @@
                     "Strength": 10,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7954,10 +7896,9 @@
                     "Strength": 10,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7974,10 +7915,9 @@
                     "Strength": 10,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -7994,10 +7934,9 @@
                     "Strength": 10,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -8014,10 +7953,9 @@
                     "Strength": 10,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -8034,10 +7972,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -9246,10 +9183,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 7,
-            "Willpower": 0,
+            "Willpower": 7,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 7
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -9267,10 +9203,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 7,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9287,10 +9222,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 7,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9307,10 +9241,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 7,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9327,10 +9260,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 7,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9347,10 +9279,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 7,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9367,10 +9298,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 7,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9387,10 +9317,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 7,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9407,10 +9336,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 7,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9427,10 +9355,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 7,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9447,10 +9374,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 7,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9467,10 +9393,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 6,
-                    "Willpower": 0,
+                    "Willpower": 6,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 6
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -9724,10 +9649,9 @@
             "Strength": 0,
             "Dexterity": 10,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -9745,10 +9669,9 @@
                     "Strength": 0,
                     "Dexterity": 10,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9765,10 +9688,9 @@
                     "Strength": 0,
                     "Dexterity": 10,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9785,10 +9707,9 @@
                     "Strength": 0,
                     "Dexterity": 10,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9805,10 +9726,9 @@
                     "Strength": 0,
                     "Dexterity": 10,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9825,10 +9745,9 @@
                     "Strength": 0,
                     "Dexterity": 10,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9845,10 +9764,9 @@
                     "Strength": 0,
                     "Dexterity": 10,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9865,10 +9783,9 @@
                     "Strength": 0,
                     "Dexterity": 10,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9885,10 +9802,9 @@
                     "Strength": 0,
                     "Dexterity": 10,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9905,10 +9821,9 @@
                     "Strength": 0,
                     "Dexterity": 10,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9925,10 +9840,9 @@
                     "Strength": 0,
                     "Dexterity": 10,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -9945,10 +9859,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -10271,10 +10184,9 @@
             "Strength": 0,
             "Dexterity": 10,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 13,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 13
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -10551,10 +10463,9 @@
             "Strength": 0,
             "Dexterity": 4,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 4,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 4
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -10572,10 +10483,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -10592,10 +10502,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -10612,10 +10521,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -10632,10 +10540,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -10652,10 +10559,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -10672,10 +10578,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -10692,10 +10597,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -10712,10 +10616,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -10732,10 +10635,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -10752,10 +10654,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -10772,10 +10673,9 @@
                     "Strength": 0,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 3,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 3
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -11262,10 +11162,9 @@
             "Strength": 0,
             "Dexterity": 7,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 11,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 11
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -11283,10 +11182,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11303,10 +11201,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11323,10 +11220,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11343,10 +11239,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11363,10 +11258,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11383,10 +11277,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11403,10 +11296,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11423,10 +11315,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11443,10 +11334,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11463,10 +11353,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11483,10 +11372,9 @@
                     "Strength": 0,
                     "Dexterity": 6,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 9,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 9
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -11507,10 +11395,9 @@
             "Strength": 0,
             "Dexterity": 10,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 8
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -11531,10 +11418,9 @@
             "Strength": 0,
             "Dexterity": 8,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 16,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 16
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -11555,10 +11441,9 @@
             "Strength": 0,
             "Dexterity": 8,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 8
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -11576,10 +11461,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11596,10 +11480,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11616,10 +11499,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11636,10 +11518,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11656,10 +11537,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11676,10 +11556,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11696,10 +11575,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11716,10 +11594,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11736,10 +11613,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11756,10 +11632,9 @@
                     "Strength": 0,
                     "Dexterity": 8,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11776,10 +11651,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -11800,10 +11674,9 @@
             "Strength": 0,
             "Dexterity": 7,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -11821,10 +11694,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11841,10 +11713,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11861,10 +11732,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11881,10 +11751,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11901,10 +11770,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11921,10 +11789,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11941,10 +11808,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11961,10 +11827,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -11981,10 +11846,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -12001,10 +11865,9 @@
                     "Strength": 0,
                     "Dexterity": 7,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -12021,10 +11884,9 @@
                     "Strength": 0,
                     "Dexterity": 6,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -13046,10 +12908,9 @@
             "Strength": 0,
             "Dexterity": 11,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 11,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 11
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -13067,10 +12928,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -13087,10 +12947,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -13107,10 +12966,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -13127,10 +12985,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -13147,10 +13004,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -13167,10 +13023,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -13187,10 +13042,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -13207,10 +13061,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -13227,10 +13080,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -13247,10 +13099,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -13267,10 +13118,9 @@
                     "Strength": 0,
                     "Dexterity": 9,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 9,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 9
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -14651,10 +14501,9 @@
             "Strength": 4,
             "Dexterity": 4,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 11,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 11
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -14672,10 +14521,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -14692,10 +14540,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -14712,10 +14559,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -14732,10 +14578,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -14752,10 +14597,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -14772,10 +14616,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -14792,10 +14635,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -14812,10 +14654,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -14832,10 +14673,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -14852,10 +14692,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -14872,10 +14711,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 9,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 9
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -16084,10 +15922,9 @@
             "Strength": 4,
             "Dexterity": 4,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -16105,10 +15942,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -16125,10 +15961,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -16145,10 +15980,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -16165,10 +15999,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -16185,10 +16018,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -16205,10 +16037,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -16225,10 +16056,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -16245,10 +16075,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -16265,10 +16094,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -16285,10 +16113,9 @@
                     "Strength": 4,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -16305,10 +16132,9 @@
                     "Strength": 3,
                     "Dexterity": 3,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -16329,10 +16155,9 @@
             "Strength": 10,
             "Dexterity": 10,
             "Mind": 10,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -16609,10 +16434,9 @@
             "Strength": 7,
             "Dexterity": 11,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 8
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -17588,10 +17412,9 @@
             "Strength": 0,
             "Dexterity": 11,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 6,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 6
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -20393,10 +20216,9 @@
             "Strength": 8,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -20414,10 +20236,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -20434,10 +20255,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -20454,10 +20274,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -20474,10 +20293,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -20494,10 +20312,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -20514,10 +20331,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -20534,10 +20350,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -20554,10 +20369,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -20574,10 +20388,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -20594,10 +20407,9 @@
                     "Strength": 8,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -20614,10 +20426,9 @@
                     "Strength": 7,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -22338,10 +22149,9 @@
             "Strength": 0,
             "Dexterity": 5,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 11,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 11
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -22359,10 +22169,9 @@
                     "Strength": 0,
                     "Dexterity": 5,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22379,10 +22188,9 @@
                     "Strength": 0,
                     "Dexterity": 5,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22399,10 +22207,9 @@
                     "Strength": 0,
                     "Dexterity": 5,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22419,10 +22226,9 @@
                     "Strength": 0,
                     "Dexterity": 5,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22439,10 +22245,9 @@
                     "Strength": 0,
                     "Dexterity": 5,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22459,10 +22264,9 @@
                     "Strength": 0,
                     "Dexterity": 5,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22479,10 +22283,9 @@
                     "Strength": 0,
                     "Dexterity": 5,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22499,10 +22302,9 @@
                     "Strength": 0,
                     "Dexterity": 5,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22519,10 +22321,9 @@
                     "Strength": 0,
                     "Dexterity": 5,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22539,10 +22340,9 @@
                     "Strength": 0,
                     "Dexterity": 5,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22559,10 +22359,9 @@
                     "Strength": 0,
                     "Dexterity": 4,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 9,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 9
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -22583,10 +22382,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 8,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 8
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -22604,10 +22402,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22624,10 +22421,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22644,10 +22440,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22664,10 +22459,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22684,10 +22478,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22704,10 +22497,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22724,10 +22516,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22744,10 +22535,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22764,10 +22554,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22784,10 +22573,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22804,10 +22592,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 7,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 7
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -22828,10 +22615,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 11,
-            "Willpower": 0,
+            "Willpower": 11,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 11
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -22849,10 +22635,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 11,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22869,10 +22654,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 11,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22889,10 +22673,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 11,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22909,10 +22692,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 11,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22929,10 +22711,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 11,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22949,10 +22730,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 11,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22969,10 +22749,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 11,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -22989,10 +22768,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 11,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23009,10 +22787,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 11,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23029,10 +22806,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 11,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23049,10 +22825,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 9,
-                    "Willpower": 0,
+                    "Willpower": 9,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 9
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -23119,10 +22894,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 17,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 17
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -23140,10 +22914,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 17,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 17
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23160,10 +22933,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 17,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 17
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23180,10 +22952,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 17,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 17
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23200,10 +22971,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 17,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 17
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23220,10 +22990,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 17,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 17
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23240,10 +23009,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 17,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 17
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23260,10 +23028,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 17,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 17
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23280,10 +23047,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 17,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 17
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23300,10 +23066,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 17,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 17
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23320,10 +23085,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 17,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 17
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23340,10 +23104,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 14,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 14
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -23364,10 +23127,9 @@
             "Strength": 11,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 10,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 10
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -23385,10 +23147,9 @@
                     "Strength": 11,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23405,10 +23166,9 @@
                     "Strength": 11,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23425,10 +23185,9 @@
                     "Strength": 11,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23445,10 +23204,9 @@
                     "Strength": 11,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23465,10 +23223,9 @@
                     "Strength": 11,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23485,10 +23242,9 @@
                     "Strength": 11,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23505,10 +23261,9 @@
                     "Strength": 11,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23525,10 +23280,9 @@
                     "Strength": 11,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23545,10 +23299,9 @@
                     "Strength": 11,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23565,10 +23318,9 @@
                     "Strength": 11,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 10,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 10
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23585,10 +23337,9 @@
                     "Strength": 9,
                     "Dexterity": 0,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }
@@ -23609,10 +23360,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 14,
             "Vitality": 3,
-            "Fortitude": 7,
-            "Will": 14
+            "Fortitude": 7
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -23633,10 +23383,9 @@
             "Strength": 10,
             "Dexterity": 10,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 18,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 18
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": false,
@@ -23657,10 +23406,9 @@
             "Strength": 0,
             "Dexterity": 11,
             "Mind": 0,
-            "Willpower": 0,
+            "Willpower": 11,
             "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 11
+            "Fortitude": 0
         },
         "Scaling": "TODO",
         "Transformable": true,
@@ -23678,10 +23426,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23698,10 +23445,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23718,10 +23464,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23738,10 +23483,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23758,10 +23502,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23778,10 +23521,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23798,10 +23540,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23818,10 +23559,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23838,10 +23578,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23858,10 +23597,9 @@
                     "Strength": 0,
                     "Dexterity": 11,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 11,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 11
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             },
@@ -23878,10 +23616,9 @@
                     "Strength": 0,
                     "Dexterity": 9,
                     "Mind": 0,
-                    "Willpower": 0,
+                    "Willpower": 9,
                     "Vitality": 0,
-                    "Fortitude": 0,
-                    "Will": 9
+                    "Fortitude": 0
                 },
                 "Scaling": "TODO"
             }

@@ -1475,10 +1475,11 @@ class Ui_MainWindow(object):
 
         if "Weapon_1" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_weapon_1_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_weapon_1_hover)
         elif "Weapon_2" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_weapon_2_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_weapon_2_hover)
 
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_weapon_hover)
         self.show_side_menu("Weapon")
 
         # buttons
@@ -1815,19 +1816,23 @@ class Ui_MainWindow(object):
 
     def handle_weapon_1_clicked(self, item):
         widget = self.tool_button_h2_v1_h1_1
-        self.handle_weapon_clicked(widget, item, "Weapon 1")
+        self.handle_weapon_clicked(widget, item, "Weapon_1")
 
     def handle_weapon_2_clicked(self, item):
         widget = self.tool_button_h2_v2_h1_1
-        self.handle_weapon_clicked(widget, item, "Weapon 2")
+        self.handle_weapon_clicked(widget, item, "Weapon_2")
 
-    def handle_weapon_clicked(self, widget, item, default_text):
+    def handle_weapon_clicked(self, widget, item, slot):
+        builder = self.builder
+        weapon = builder.weapons[item.statusTip()]
+        builder.commit_transaction(weapon, slot)
+
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
         if item.statusTip() == "Empty":
             widget.setIcon(icon_1)
-            widget.setText(default_text)
+            widget.setText(slot.replace("_", " "))
             return
 
         icon_2 = QIcon()
@@ -1866,6 +1871,8 @@ class Ui_MainWindow(object):
         # self.progress_bar_h3_v1_g1_6
 
     def handle_offensive_clicked(self, item):
+        # don't need transaction handling, nothing to update
+
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
@@ -1896,6 +1903,10 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_2.setText(item.statusTip())
 
     def handle_jail_clicked(self, item):
+        builder = self.builder
+        jail = builder.jails[item.statusTip()]
+        builder.commit_transaction(jail)
+
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
@@ -1912,35 +1923,35 @@ class Ui_MainWindow(object):
 
     def handle_booster_1_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_1
-        self.handle_booster_clicked(widget, item, "Booster 1")
+        self.handle_booster_clicked(widget, item, "Booster_1")
 
     def handle_booster_2_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_2
-        self.handle_booster_clicked(widget, item, "Booster 2")
+        self.handle_booster_clicked(widget, item, "Booster_2")
 
     def handle_booster_3_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_3
-        self.handle_booster_clicked(widget, item, "Booster 3")
+        self.handle_booster_clicked(widget, item, "Booster_3")
 
     def handle_booster_4_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_4
-        self.handle_booster_clicked(widget, item, "Booster 4")
+        self.handle_booster_clicked(widget, item, "Booster_4")
 
     def handle_booster_5_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_5
-        self.handle_booster_clicked(widget, item, "Booster 5")
+        self.handle_booster_clicked(widget, item, "Booster_5")
 
     def handle_booster_6_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_6
-        self.handle_booster_clicked(widget, item, "Booster 6")
+        self.handle_booster_clicked(widget, item, "Booster_6")
 
-    def handle_booster_clicked(self, widget, item, default_text):
+    def handle_booster_clicked(self, widget, item, slot):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
         if item.statusTip() == "Empty":
             widget.setIcon(icon_1)
-            widget.setText(default_text)
+            widget.setText(slot.replace("_", " "))
             return
 
         icon_1 = QIcon()
@@ -1953,42 +1964,44 @@ class Ui_MainWindow(object):
 
     def handle_forma_1_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_1
-        self.handle_forma_clicked(widget, item, "Forma 1")
+        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_1")
 
     def handle_forma_2_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_2
-        self.handle_forma_clicked(widget, item, "Forma 2")
+        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_2")
 
     def handle_forma_3_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_3
-        self.handle_forma_clicked(widget, item, "Forma 3")
+        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_3")
 
     def handle_forma_4_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_4
-        self.handle_forma_clicked(widget, item, "Forma 4")
+        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_4")
 
     def handle_forma_1_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_1
-        self.handle_forma_clicked(widget, item, "Forma 1")
+        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_1")
 
     def handle_forma_2_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_2
-        self.handle_forma_clicked(widget, item, "Forma 2")
+        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_2")
 
     def handle_forma_3_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_3
-        self.handle_forma_clicked(widget, item, "Forma 3")
+        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_3")
 
     def handle_forma_4_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_4
-        self.handle_forma_clicked(widget, item, "Forma 4")
+        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_4")
 
-    def handle_forma_clicked(self, widget, item, default_text):
+    def handle_forma_clicked(self, widget, item, slot):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Forma.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
         if item.statusTip() == "Empty":
             widget.setIcon(icon_1)
+            idx = slot.find("Forma")
+            default_text = slot[idx:].replace("_", " ")
             widget.setText(default_text)
             return
 
@@ -2355,8 +2368,19 @@ class MyQListWidget(QListWidget):
     def handle_booster_hover(self, item):
         self.handle_hover(item)
 
-    def handle_weapon_hover(self, item):
+    def handle_weapon_1_hover(self, item):
+        self.handle_weapon_hover(item, "Weapon_1")
+
+    def handle_weapon_2_hover(self, item):
+        self.handle_weapon_hover(item, "Weapon_2")
+
+    def handle_weapon_hover(self, item, slot):
         self.handle_hover(item)
+
+        builder = self.window().builder
+        weapon = builder.weapons[item.statusTip()]
+        builder.rollback_transaction()
+        builder.start_transaction(weapon, slot)
 
     def handle_transform_hover(self, item):
         # old version, pre refactor
@@ -2400,12 +2424,18 @@ class MyQListWidget(QListWidget):
 
     def handle_offensive_hover(self, item):
         self.handle_hover(item)
+        # don't need transaction handling, nothing to update
 
     def handle_defensive_hover(self, item):
         self.handle_hover(item)
 
     def handle_jail_hover(self, item):
         self.handle_hover(item)
+
+        builder = self.window().builder
+        jail = builder.jails[item.statusTip()]
+        builder.rollback_transaction()
+        builder.start_transaction(jail)
 
     def handle_hover(self, item):
         item_data = self.menu_data.get(item.statusTip())

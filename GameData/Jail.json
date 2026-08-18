@@ -19,7 +19,7 @@
             "Blood": 4.2,
             "Fire": 4.5,
             "Ice": 4.2,
-            "Thunder": 4.1
+            "Lightning": 4.1
         }
     },
     {
@@ -42,7 +42,7 @@
             "Blood": 6.7,
             "Fire": 6.3,
             "Ice": 6.1,
-            "Thunder": 6.5
+            "Lightning": 6.5
         }
     },
     {
@@ -65,7 +65,7 @@
             "Blood": 5.3,
             "Fire": 5.4,
             "Ice": 5.9,
-            "Thunder": 5.1
+            "Lightning": 5.1
         }
     },
     {
@@ -77,10 +77,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 4,
-            "Willpower": 0,
+            "Willpower": 2,
             "Vitality": 2,
-            "Fortitude": 2,
-            "Will": 2
+            "Fortitude": 2
         },
         "Defense": {
             "Slash": 1.5,
@@ -89,7 +88,7 @@
             "Blood": 4.5,
             "Fire": 4.6,
             "Ice": 4.8,
-            "Thunder": 4.6
+            "Lightning": 4.6
         }
     },
     {
@@ -101,10 +100,9 @@
             "Strength": 0,
             "Dexterity": 0,
             "Mind": 2,
-            "Willpower": 0,
+            "Willpower": 4,
             "Vitality": 2,
-            "Fortitude": 2,
-            "Will": 4
+            "Fortitude": 2
         },
         "Defense": {
             "Slash": 3.8,
@@ -113,7 +111,7 @@
             "Blood": 4.8,
             "Fire": 4.3,
             "Ice": 4.3,
-            "Thunder": 4.3
+            "Lightning": 4.3
         }
     },
     {
@@ -136,7 +134,7 @@
             "Blood": 3.3,
             "Fire": 3.4,
             "Ice": 3.1,
-            "Thunder": 3.7
+            "Lightning": 3.7
         }
     }
 ]
