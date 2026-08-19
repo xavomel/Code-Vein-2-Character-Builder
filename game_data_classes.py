@@ -3,27 +3,27 @@ class Weapon:
         self.name = ""
         self.description = ""
         self.type = ""  # One-Handed Swords, Two-Handed Swords, Twin Blades, Bayonets, Halberds, Hammers, Rune Blades
-        self.bleed = 0
-        # self.scaling = "TODO"
-        self.transformable = False
-        self.transforms = {}
+        self.transforms = {
+            "Weapon_Off": {
+                "Bleed": 0,
+                "Capacity": {
+                    "Reliability": 0,
+                    "Handling": 0,
+                    "Conversion": 0,
+                    "Conductivity": 0,
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0,
+                },
+                "Scaling": "TODO"
+            }
+        }
         self.favorite = False
-
-        self.capacity = {
-            "Reliability": 0,
-            "Handling": 0,
-            "Conversion": 0,
-            "Conductivity": 0,
-        }
-
-        self.burden = {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 0,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 0,
-        }
 
         if not doc:
             self.name += "Weapon " + str(dummy_number)
@@ -32,12 +32,6 @@ class Weapon:
         self.name = doc["Name"]
         self.description = doc["Description"]
         self.type = doc["Type"]
-        self.bleed = doc["Bleed"]
-        # self.scaling = "TODO"
-        self.capacity = doc["Capacity"]
-        self.burden = doc["Burden"]
-
-        self.transformable = doc["Transformable"]
         self.transforms = dict()
         for transform in doc["Transforms"]:
             key = transform["Name"]
@@ -244,47 +238,45 @@ class DefensiveForma:
         self.description = ""
         self.type = ""
         self.ichor_cost = 0
-        self.stamina_guard_cost = 0
-        self.balance = 0
-        self.transformable = False
-        self.transforms = {}
+        self.transforms = {
+            "Defensive_Off": {
+                "StaminaGuardCost": 0,
+                "Balance": 0,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0,
+                },
+                "Defense": {
+                    "Slash": 0.0,
+                    "Crush": 0.0,
+                    "Pierce": 0.0,
+                    "Blood": 0.0,
+                    "Fire": 0.0,
+                    "Ice": 0.0,
+                    "Lightning": 0.0,
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0,
+                },
+                "Resistance": {
+                    "Disease": 0,
+                    "Wound": 0,
+                    "Bleed": 0,
+                    "Curse": 0,
+                }
+            }
+        }
         self.favorite = False
-
-        self.burden = {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 0,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 0,
-        }
-
-        self.defense = {
-            "Slash": 0.0,
-            "Crush": 0.0,
-            "Pierce": 0.0,
-            "Blood": 0.0,
-            "Fire": 0.0,
-            "Ice": 0.0,
-            "Lightning": 0.0,
-        }
-
-        self.guarding_defense = {
-            "Slash": 0,
-            "Crush": 0,
-            "Pierce": 0,
-            "Blood": 0,
-            "Fire": 0,
-            "Ice": 0,
-            "Lightning": 0,
-        }
-
-        self.resistance = {
-            "Disease": 0,
-            "Wound": 0,
-            "Bleed": 0,
-            "Curse": 0,
-        }
 
         if not doc:
             self.name = "Defensive"
@@ -294,14 +286,6 @@ class DefensiveForma:
         self.description = doc["Description"]
         self.type = doc["Type"]
         self.ichor_cost = doc["IchorCost"]
-        self.stamina_guard_cost = doc["StaminaGuardCost"]
-        self.balance = doc["Balance"]
-        self.burden = doc["Burden"]
-        self.defense = doc["Defense"]
-        self.guarding_defense = doc["GuardingDefense"]
-        self.resistance = doc["Resistance"]
-
-        self.transformable = doc["Transformable"]
         self.transforms = dict()
         for transform in doc["Transforms"]:
             key = transform["Name"]

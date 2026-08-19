@@ -9,9 +9,7 @@ class Character:
         self.name = ""
         self.bloodline = ""
         self.blood_code = BloodCode()
-        # need a separate variable for capacity weapon 1 and 2 ?
-        # so that we can have max capacity 0 even without weapon
-        # unless we use Weapon with default values for that
+        # TODO add weapons dict in character to hold weapons?
         self.weapon_1 = Weapon(dummy_number=1)
         self.weapon_2 = Weapon(dummy_number=2)
         self.offensive_forma = OffensiveForma()
@@ -28,6 +26,11 @@ class Character:
         self.balance = 0
         self.ichor = 0
         self.stamina_guard_cost = 0
+        self.transform = {
+            "Weapon_1": "Weapon_Off",
+            "Weapon_2": "Weapon_Off",
+            "Defensive": "Defensive_Off",
+        }
         self.bleed = {
             "Weapon_1": 0,
             "Weapon_2": 0,
@@ -189,12 +192,12 @@ class Builder:
     def is_transaction_ongoing(self):
         return True if self.last_transaction else False
 
-    def start_transaction(self, data, slot=""):
+    def start_transaction(self, data, slot="", transform=""):
         """
         Replaces UI values with transaction values (does NOT change anything in Character)
         :return:
         """
-        transaction = self.build_transaction(data, slot)
+        transaction = self.build_transaction(data, slot, transform)
 
         attributes = dict()
 
@@ -251,7 +254,7 @@ class Builder:
 
         self.last_transaction = []
 
-    def commit_transaction(self, data, slot=""):
+    def commit_transaction(self, data, slot="", transform=""):
         """
         Replaces Character values with transaction values
         :return:
@@ -264,12 +267,17 @@ class Builder:
         if _type == "Weapon":
             if slot == "Weapon_1":
                 self.character.weapon_1 = data
+                self.character.transform[slot] = transform
             else:
                 self.character.weapon_2 = data
+                self.character.transform[slot] = transform
         elif _type == "BloodCode":
             self.character.blood_code = data
         elif _type == "Jail":
             self.character.jail = data
+        elif _type == "DefensiveForma":
+            self.character.defensive_forma = data
+            self.character.transform["Defensive"] = transform
 
         # then handle consequences of changing blood code
         for _type, var, key, value, old_value, widget in self.last_transaction:
@@ -282,6 +290,8 @@ class Builder:
                 self.character.margin[key] -= value
             elif var == "Defense":
                 self.character.defense[key] += value
+            elif var == "GuardingDefense":
+                self.character.guarding_defense[key] += value
             elif var == "Resistance":
                 self.character.resistance[key] += value
             elif var == "Ichor":
@@ -292,22 +302,24 @@ class Builder:
                 self.character.balance += value
             elif var == "Capacity":
                 self.character.capacity[key] += value
+            elif var == "StaminaGuardCost":
+                self.character.stamina_guard_cost += value
 
         self.last_transaction = []
 
-    def build_transaction(self, data, slot=""):
+    def build_transaction(self, data, slot="", transform=""):
         """
         :return:
         """
         transaction_handler = self.class_to_handler[type(data).__name__]
-        transaction = transaction_handler(data, slot)
+        transaction = transaction_handler(data, slot, transform)
 
         for x in transaction:
             print(x)
 
         return transaction
 
-    def build_blood_code_transaction(self, data, slot=""):
+    def build_blood_code_transaction(self, data, slot="", transform=""):
         print("blood_code")
 
         transaction = []
@@ -391,20 +403,21 @@ class Builder:
 
         return transaction
 
-    def build_weapon_transaction(self, data, slot=""):
+    def build_weapon_transaction(self, data, slot="", transform=""):
         print("weapon")
 
         transaction = []
 
         _type = type(data).__name__
-        key = slot
+        transformed = data.transforms[transform]
+        equipped_transform = self.character.transform[slot]
         if slot == "Weapon_1":
-            equipped = self.character.weapon_1
+            equipped = self.character.weapon_1.transforms[equipped_transform]
         else:
-            equipped = self.character.weapon_2
+            equipped = self.character.weapon_2.transforms[equipped_transform]
 
         # burden
-        for attr, val in data.burden.items():
+        for attr, val in transformed["Burden"].items():
             widget = self.char_to_widget_mapping["Burden_" + attr]
             # fetch old attributes from character rather than blood code
             # as it contains potential values from traits, boosters, defensive, jail, weapon(s)
@@ -413,7 +426,7 @@ class Builder:
             # remember the state of Shrugged Burden in variable for easy checking, it has big impact
             # TODO add handling for Weapon Rack
             # remember the state of Weapon Rack in variable for easy checking, it has big impact
-            val = val - equipped.burden[attr]
+            val = val - equipped["Burden"][attr]
             transaction.append([_type, "Burden", attr, val, old_value, widget])
 
         # traits
@@ -424,11 +437,12 @@ class Builder:
 
         # Bleed
         # todo comment
-        val = data.bleed - equipped.bleed
+        key = slot
+        val = transformed["Bleed"] - equipped["Bleed"]
         transaction.append([_type, "Bleed", key, val, self.character.bleed[key], self.char_to_widget_mapping[key + "_Bleed"]])
 
         # capacity
-        for attr, val in data.capacity.items():
+        for attr, val in transformed["Capacity"].items():
             key = slot + "_" + attr + "_Max"
             widget = self.char_to_widget_mapping[key]
             # fetch old attributes from character rather than blood code
@@ -438,26 +452,26 @@ class Builder:
             # remember the state of Shrugged Burden in variable for easy checking, it has big impact
             # TODO add handling for Weapon Rack
             # remember the state of Weapon Rack in variable for easy checking, it has big impact
-            val = val - equipped.capacity[attr]
+            val = val - equipped["Capacity"][attr]
             transaction.append([_type, "Capacity", key, val, old_value, widget])
 
         return transaction
 
-    def build_forma_transaction(self, data, slot=""):
+    def build_forma_transaction(self, data, slot="", transform=""):
         print("forma")
 
         transaction = []
 
         return transaction
 
-    def build_booster_transaction(self, data, slot=""):
+    def build_booster_transaction(self, data, slot="", transform=""):
         print("booster")
 
         transaction = []
 
         return transaction
 
-    def build_jail_transaction(self, data, slot=""):
+    def build_jail_transaction(self, data, slot="", transform=""):
         print("jail")
 
         transaction = []
@@ -501,14 +515,76 @@ class Builder:
 
         return transaction
 
-    def build_defensive_transaction(self, data, slot=""):
+    def build_defensive_transaction(self, data, slot="", transform=""):
         print("defensive")
 
         transaction = []
 
+        _type = type(data).__name__
+        transformed = data.transforms[transform]
+        equipped_transform = self.character.transform["Defensive"]
+        equipped = self.character.defensive_forma.transforms[equipped_transform]
+
+        # burden
+        for attr, val in transformed["Burden"].items():
+            widget = self.char_to_widget_mapping["Burden_" + attr]
+            # fetch old attributes from character rather than blood code
+            # as it contains potential values from traits, boosters, defensive, jail, weapon(s)
+            old_value = self.character.burden[attr]
+            # TODO add handling for Shrugged Burden (booster and trait)
+            # remember the state of Shrugged Burden in variable for easy checking, it has big impact
+            # TODO add handling for Weapon Rack
+            # remember the state of Weapon Rack in variable for easy checking, it has big impact
+            val = val - equipped["Burden"][attr]
+            transaction.append([_type, "Burden", attr, val, old_value, widget])
+
+        # traits
+
+        # boosters
+
+        # Dodge Effectiveness
+
+        # defense
+        for attr, val in transformed["Defense"].items():
+            widget = self.char_to_widget_mapping["Defense_" + attr]
+            # todo comment
+            old_value = self.character.defense[attr]
+            val = val - equipped["Defense"][attr]
+            transaction.append([_type, "Defense", attr, val, old_value, widget])
+
+        # guarding defense
+        for attr, val in transformed["GuardingDefense"].items():
+            widget = self.char_to_widget_mapping["GuardingDefense_" + attr]
+            # todo comment
+            old_value = self.character.guarding_defense[attr]
+            val = val - equipped["GuardingDefense"][attr]
+            transaction.append([_type, "GuardingDefense", attr, val, old_value, widget])
+
+        # resistance
+        for attr, val in transformed["Resistance"].items():
+            widget = self.char_to_widget_mapping["Resistance_" + attr]
+            # todo comment
+            old_value = self.character.resistance[attr]
+            val = val - equipped["Resistance"][attr]
+            transaction.append([_type, "Resistance", attr, val, old_value, widget])
+
+        # balance
+        widget = self.char_to_widget_mapping["Balance"]
+        # todo comment
+        old_value = self.character.balance
+        val = transformed["Balance"] - equipped["Balance"]
+        transaction.append([_type, "Balance", None, val, old_value, widget])
+
+        # stamina guard cost
+        widget = self.char_to_widget_mapping["StaminaGuardCost"]
+        # todo comment
+        old_value = self.character.stamina_guard_cost
+        val = transformed["StaminaGuardCost"] - equipped["StaminaGuardCost"]
+        transaction.append([_type, "StaminaGuardCost", None, val, old_value, widget])
+
         return transaction
 
-    def build_offensive_transaction(self, data, slot=""):
+    def build_offensive_transaction(self, data, slot="", transform=""):
         print("offensive")
 
         transaction = []

@@ -1525,13 +1525,15 @@ class Ui_MainWindow(object):
         mode = "Weapon"
         if "Weapon_1" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_transform_weapon_1_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_transform_weapon_1_hover)
         elif "Weapon_2" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_transform_weapon_2_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_transform_weapon_2_hover)
         elif "Defensive" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_transform_defensive_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_transform_defensive_hover)
             mode = "Defensive"
 
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_transform_hover)
         self.show_side_menu("Transform")
 
         # buttons - empty
@@ -1550,6 +1552,9 @@ class Ui_MainWindow(object):
             # some weapons do not have all transforms ! like ones with venom don't have sun or venom
             weapon_w_all_transform = self.builder.weapons["Stealth Blades"].transforms
             for k, v in weapon_w_all_transform.items():
+                if "Weapon_Off" in k:
+                    # already added
+                    continue
                 icon_name = k.replace("Weapon_", "Transform_")
                 item = QListWidgetItem(QIcon(u":/All/Transform/" + icon_name + ".png"), "")
                 item.setStatusTip(k)
@@ -1558,6 +1563,9 @@ class Ui_MainWindow(object):
         if mode == "Defensive":
             defensive_w_all_transform = self.builder.defensive_formae["Clotted Shield"].transforms
             for k, v in defensive_w_all_transform.items():
+                if "Defensive_Off" in k:
+                    # will be added later
+                    continue
                 icon_name = k.replace("Defensive_", "Transform_")
                 item = QListWidgetItem(QIcon(u":/All/Transform/" + icon_name + ".png"), "")
                 item.setStatusTip(k)
@@ -1801,17 +1809,34 @@ class Ui_MainWindow(object):
 
     def handle_transform_weapon_1_clicked(self, item):
         widget = self.tool_button_h2_v1_h1_1a
-        self.handle_transform_clicked(widget, item)
+        self.handle_transform_weapon_clicked(widget, item, "Weapon_1")
 
     def handle_transform_weapon_2_clicked(self, item):
         widget = self.tool_button_h2_v2_h1_1a
-        self.handle_transform_clicked(widget, item)
+        self.handle_transform_weapon_clicked(widget, item, "Weapon_2")
+
+    def handle_transform_weapon_clicked(self, widget, item, slot):
+        builder = self.builder
+        if slot == "Weapon_1":  # TODO add weapons dict in character to hold weapons?
+            weapon = builder.character.weapon_1
+        else:
+            weapon = builder.character.weapon_2
+        transform = item.statusTip()
+        if transform == "Off":
+            transform = "Weapon_" + transform
+        builder.commit_transaction(weapon, slot=slot, transform=transform)
+
+        widget.setIcon(item.icon())
 
     def handle_transform_defensive_clicked(self, item):
-        widget = self.tool_button_h2_v3_h1_2a
-        self.handle_transform_clicked(widget, item)
+        builder = self.builder
+        defensive = builder.character.defensive_forma
+        transform = item.statusTip()
+        if transform == "Off":
+            transform = "Defensive_" + transform
+        builder.commit_transaction(defensive, transform=transform)
 
-    def handle_transform_clicked(self, widget, item):
+        widget = self.tool_button_h2_v3_h1_2a
         widget.setIcon(item.icon())
 
     def handle_weapon_1_clicked(self, item):
@@ -1825,7 +1850,7 @@ class Ui_MainWindow(object):
     def handle_weapon_clicked(self, widget, item, slot):
         builder = self.builder
         weapon = builder.weapons[item.statusTip()]
-        builder.commit_transaction(weapon, slot)
+        builder.commit_transaction(weapon, slot=slot, transform=builder.character.transform[slot])
 
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -1888,6 +1913,10 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_1.setText(item.statusTip())
 
     def handle_defensive_clicked(self, item):
+        builder = self.builder
+        defensive = builder.defensive_formae[item.statusTip()]
+        builder.commit_transaction(defensive, transform=builder.character.transform["Defensive"])
+
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
@@ -1980,19 +2009,19 @@ class Ui_MainWindow(object):
 
     def handle_forma_1_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_1
-        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_1")
+        self.handle_forma_clicked(widget, item, "Weapon_2_Forma_1")
 
     def handle_forma_2_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_2
-        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_2")
+        self.handle_forma_clicked(widget, item, "Weapon_2_Forma_2")
 
     def handle_forma_3_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_3
-        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_3")
+        self.handle_forma_clicked(widget, item, "Weapon_2_Forma_3")
 
     def handle_forma_4_weapon_2_clicked(self, item):
         widget = self.push_button_h2_v2_4
-        self.handle_forma_clicked(widget, item, "Weapon_1_Forma_4")
+        self.handle_forma_clicked(widget, item, "Weapon_2_Forma_4")
 
     def handle_forma_clicked(self, widget, item, slot):
         icon_1 = QIcon()
@@ -2162,13 +2191,13 @@ class Ui_MainWindow(object):
             self.tool_button_h4_7: "Defense_Lightning",
 
             # Guarding Defense
-            self.tool_button_h5_1: "Guarding_Defense_Slash",
-            self.tool_button_h5_2: "Guarding_Defense_Crush",
-            self.tool_button_h5_3: "Guarding_Defense_Pierce",
-            self.tool_button_h5_4: "Guarding_Defense_Blood",
-            self.tool_button_h5_5: "Guarding_Defense_Fire",
-            self.tool_button_h5_6: "Guarding_Defense_Ice",
-            self.tool_button_h5_7: "Guarding_Defense_Lightning",
+            self.tool_button_h5_1: "GuardingDefense_Slash",
+            self.tool_button_h5_2: "GuardingDefense_Crush",
+            self.tool_button_h5_3: "GuardingDefense_Pierce",
+            self.tool_button_h5_4: "GuardingDefense_Blood",
+            self.tool_button_h5_5: "GuardingDefense_Fire",
+            self.tool_button_h5_6: "GuardingDefense_Ice",
+            self.tool_button_h5_7: "GuardingDefense_Lightning",
 
             # Resistances
             self.tool_button_h6_1: "Resistance_Disease",
@@ -2179,7 +2208,7 @@ class Ui_MainWindow(object):
             # Misc
             self.label_h2_v3_h1_g1_8: "Balance",
             self.tool_button_h3_g1_2: "Dodge_Effectiveness",
-            self.tool_button_h3_g1_4: "Stamina_Guard_Cost",
+            self.tool_button_h3_g1_4: "StaminaGuardCost",
             self.tool_button_h1_2: "Ichor",
         }
         self.builder.char_to_widget_mapping = dict((v, k) for k, v in self.builder.widget_to_char_mapping.items())
@@ -2380,32 +2409,53 @@ class MyQListWidget(QListWidget):
         builder = self.window().builder
         weapon = builder.weapons[item.statusTip()]
         builder.rollback_transaction()
-        builder.start_transaction(weapon, slot)
+        builder.start_transaction(weapon, slot=slot, transform=builder.character.transform[slot])
 
+    def handle_transform_weapon_1_hover(self, item):
+        self.handle_transform_weapon_hover(item, "Weapon_1")
+
+    def handle_transform_weapon_2_hover(self, item):
+        self.handle_transform_weapon_hover(item, "Weapon_2")
+
+    def handle_transform_weapon_hover(self, item, slot):
+        builder = self.window().builder
+        if slot == "Weapon_1":  # TODO add weapons dict in character to hold weapons?
+            weapon = builder.character.weapon_1
+        else:
+            weapon = builder.character.weapon_2
+        transform = item.statusTip()
+        if transform == "Off":
+            transform = "Weapon_" + transform
+        builder.rollback_transaction()
+        builder.start_transaction(weapon, slot=slot, transform=transform)
+
+        self.hovered_item = item
+        name = self.window().builder.translation[item.statusTip() + "_Name"]
+        description = self.window().builder.translation[item.statusTip() + "_Description"]
+
+        self.window().side_menu_text.clear()
+        self.window().side_menu_text.insertHtml(f'<body><h2><p align="center">{name}</p></h2><body>')
+        self.window().side_menu_text.insertPlainText(description)
+
+    def handle_transform_defensive_hover(self, item):
+        builder = self.window().builder
+        defensive = builder.character.defensive_forma
+        transform = item.statusTip()
+        if transform == "Off":
+            transform = "Defensive_" + transform
+        builder.rollback_transaction()
+        builder.start_transaction(defensive, transform=transform)
+
+        self.hovered_item = item
+        name = self.window().builder.translation[item.statusTip() + "_Name"]
+        description = self.window().builder.translation[item.statusTip() + "_Description"]
+
+        self.window().side_menu_text.clear()
+        self.window().side_menu_text.insertHtml(f'<body><h2><p align="center">{name}</p></h2><body>')
+        self.window().side_menu_text.insertPlainText(description)
+
+    # this is only used to leaveEvent, and only updates the side text menu
     def handle_transform_hover(self, item):
-        # old version, pre refactor
-        # weapon_1_text = self.window().tool_button_h2_v1_h1_1.text()
-        # if weapon_1_text != "Weapon 1":
-        #     weapon_1 = self.window().builder.weapons.get(weapon_1_text)
-        #     if weapon_1 and weapon_1.transformable:
-        #         # no transform
-        #         if item.statusTip() == "Off":
-        #             print(weapon_1)
-        #
-        #         # transform
-        #         transform = self.window().builder.transforms.get(item.statusTip())
-        #         if transform:
-        #             weapon_key = "Transform_" + transform.weapon_key
-        #             weapon_transformed = weapon_1.transforms.get(weapon_key)
-        #             if weapon_transformed:
-        #                 print(weapon_transformed)
-        #     else:
-        #         # not allowed to transform weapon with transformable = False
-        #         # mark illegal with red color ?
-        #         # or just not allow opening transform menu in first place?
-        #         # but then transform can be set without weapon, for quality of life...
-        #         pass
-
         self.hovered_item = item
         name = self.window().builder.translation[item.statusTip() + "_Name"]
         description = self.window().builder.translation[item.statusTip() + "_Description"]
@@ -2428,6 +2478,11 @@ class MyQListWidget(QListWidget):
 
     def handle_defensive_hover(self, item):
         self.handle_hover(item)
+
+        builder = self.window().builder
+        defensive = builder.defensive_formae[item.statusTip()]
+        builder.rollback_transaction()
+        builder.start_transaction(defensive, transform=builder.character.transform["Defensive"])
 
     def handle_jail_hover(self, item):
         self.handle_hover(item)

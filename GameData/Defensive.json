@@ -4,42 +4,44 @@
         "Description": "A shield that guards against enemy attacks and reduces damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it slightly increases base defense.",
         "Type": "Guard",
         "IchorCost": 0,
-        "StaminaGuardCost": 25,
-        "Balance": 8,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 1,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 0
-        },
-        "Defense": {
-            "Slash": 0.2,
-            "Crush": 0.3,
-            "Pierce": 0.2,
-            "Blood": 0.4,
-            "Fire": 0.4,
-            "Ice": 0.4,
-            "Lightning": 0.4
-        },
-        "GuardingDefense": {
-            "Slash": 80,
-            "Crush": 70,
-            "Pierce": 85,
-            "Blood": 60,
-            "Fire": 60,
-            "Ice": 60,
-            "Lightning": 60
-        },
-        "Resistance": {
-            "Disease": 41,
-            "Wound": 41,
-            "Bleed": 41,
-            "Curse": 41
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 25,
+                "Balance": 8,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 1,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Defense": {
+                    "Slash": 0.2,
+                    "Crush": 0.3,
+                    "Pierce": 0.2,
+                    "Blood": 0.4,
+                    "Fire": 0.4,
+                    "Ice": 0.4,
+                    "Lightning": 0.4
+                },
+                "GuardingDefense": {
+                    "Slash": 80,
+                    "Crush": 70,
+                    "Pierce": 85,
+                    "Blood": 60,
+                    "Fire": 60,
+                    "Ice": 60,
+                    "Lightning": 60
+                },
+                "Resistance": {
+                    "Disease": 41,
+                    "Wound": 41,
+                    "Bleed": 41,
+                    "Curse": 41
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 25,
@@ -417,42 +419,44 @@
         "Description": "A shield that guards against enemy attacks and reduces damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption. Equipping it increases base defense.",
         "Type": "Guard",
         "IchorCost": 0,
-        "StaminaGuardCost": 27,
-        "Balance": 16,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 4,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 0
-        },
-        "Defense": {
-            "Slash": 1.6,
-            "Crush": 2.4,
-            "Pierce": 1.6,
-            "Blood": 1.2,
-            "Fire": 1.2,
-            "Ice": 1.2,
-            "Lightning": 1.2
-        },
-        "GuardingDefense": {
-            "Slash": 80,
-            "Crush": 70,
-            "Pierce": 85,
-            "Blood": 60,
-            "Fire": 60,
-            "Ice": 60,
-            "Lightning": 60
-        },
-        "Resistance": {
-            "Disease": 45,
-            "Wound": 45,
-            "Bleed": 45,
-            "Curse": 45
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 27,
+                "Balance": 16,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 4,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Defense": {
+                    "Slash": 1.6,
+                    "Crush": 2.4,
+                    "Pierce": 1.6,
+                    "Blood": 1.2,
+                    "Fire": 1.2,
+                    "Ice": 1.2,
+                    "Lightning": 1.2
+                },
+                "GuardingDefense": {
+                    "Slash": 80,
+                    "Crush": 70,
+                    "Pierce": 85,
+                    "Blood": 60,
+                    "Fire": 60,
+                    "Ice": 60,
+                    "Lightning": 60
+                },
+                "Resistance": {
+                    "Disease": 45,
+                    "Wound": 45,
+                    "Bleed": 45,
+                    "Curse": 45
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 27,
@@ -830,42 +834,44 @@
         "Description": "A shield that guards against enemy attacks and nullifies physical damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it slightly increases base defense.",
         "Type": "Guard",
         "IchorCost": 0,
-        "StaminaGuardCost": 32,
-        "Balance": 27,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 4,
-            "Willpower": 0,
-            "Vitality": 2,
-            "Fortitude": 0
-        },
-        "Defense": {
-            "Slash": 0.4,
-            "Crush": 0.2,
-            "Pierce": 0.3,
-            "Blood": 0.2,
-            "Fire": 0.3,
-            "Ice": 0.2,
-            "Lightning": 0.2
-        },
-        "GuardingDefense": {
-            "Slash": 100,
-            "Crush": 100,
-            "Pierce": 100,
-            "Blood": 85,
-            "Fire": 85,
-            "Ice": 85,
-            "Lightning": 85
-        },
-        "Resistance": {
-            "Disease": 45,
-            "Wound": 66,
-            "Bleed": 47,
-            "Curse": 38
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 32,
+                "Balance": 27,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 4,
+                    "Willpower": 0,
+                    "Vitality": 2,
+                    "Fortitude": 0
+                },
+                "Defense": {
+                    "Slash": 0.4,
+                    "Crush": 0.2,
+                    "Pierce": 0.3,
+                    "Blood": 0.2,
+                    "Fire": 0.3,
+                    "Ice": 0.2,
+                    "Lightning": 0.2
+                },
+                "GuardingDefense": {
+                    "Slash": 100,
+                    "Crush": 100,
+                    "Pierce": 100,
+                    "Blood": 85,
+                    "Fire": 85,
+                    "Ice": 85,
+                    "Lightning": 85
+                },
+                "Resistance": {
+                    "Disease": 45,
+                    "Wound": 66,
+                    "Bleed": 47,
+                    "Curse": 38
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 32,
@@ -1243,42 +1249,44 @@
         "Description": "A shield that guards against enemy attacks and nullifies physical damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it increases base defense.",
         "Type": "Guard",
         "IchorCost": 0,
-        "StaminaGuardCost": 34,
-        "Balance": 35,
-        "Burden": {
-            "Strength": 4,
-            "Dexterity": 0,
-            "Mind": 8,
-            "Willpower": 0,
-            "Vitality": 4,
-            "Fortitude": 0
-        },
-        "Defense": {
-            "Slash": 3.0,
-            "Crush": 1.5,
-            "Pierce": 2.2,
-            "Blood": 1.8,
-            "Fire": 2.0,
-            "Ice": 1.8,
-            "Lightning": 1.8
-        },
-        "GuardingDefense": {
-            "Slash": 100,
-            "Crush": 100,
-            "Pierce": 100,
-            "Blood": 85,
-            "Fire": 85,
-            "Ice": 85,
-            "Lightning": 85
-        },
-        "Resistance": {
-            "Disease": 48,
-            "Wound": 69,
-            "Bleed": 50,
-            "Curse": 41
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 34,
+                "Balance": 35,
+                "Burden": {
+                    "Strength": 4,
+                    "Dexterity": 0,
+                    "Mind": 8,
+                    "Willpower": 0,
+                    "Vitality": 4,
+                    "Fortitude": 0
+                },
+                "Defense": {
+                    "Slash": 3.0,
+                    "Crush": 1.5,
+                    "Pierce": 2.2,
+                    "Blood": 1.8,
+                    "Fire": 2.0,
+                    "Ice": 1.8,
+                    "Lightning": 1.8
+                },
+                "GuardingDefense": {
+                    "Slash": 100,
+                    "Crush": 100,
+                    "Pierce": 100,
+                    "Blood": 85,
+                    "Fire": 85,
+                    "Ice": 85,
+                    "Lightning": 85
+                },
+                "Resistance": {
+                    "Disease": 48,
+                    "Wound": 69,
+                    "Bleed": 50,
+                    "Curse": 41
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 34,
@@ -1656,42 +1664,44 @@
         "Description": "A shield that guards against enemy attacks and nullifies physical damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping it greatly increases base defense.",
         "Type": "Guard",
         "IchorCost": 0,
-        "StaminaGuardCost": 36,
-        "Balance": 42,
-        "Burden": {
-            "Strength": 8,
-            "Dexterity": 0,
-            "Mind": 12,
-            "Willpower": 0,
-            "Vitality": 6,
-            "Fortitude": 0
-        },
-        "Defense": {
-            "Slash": 5.4,
-            "Crush": 3.7,
-            "Pierce": 4.5,
-            "Blood": 3.8,
-            "Fire": 4.4,
-            "Ice": 3.8,
-            "Lightning": 3.8
-        },
-        "GuardingDefense": {
-            "Slash": 100,
-            "Crush": 100,
-            "Pierce": 100,
-            "Blood": 85,
-            "Fire": 85,
-            "Ice": 85,
-            "Lightning": 85
-        },
-        "Resistance": {
-            "Disease": 51,
-            "Wound": 72,
-            "Bleed": 53,
-            "Curse": 44
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 36,
+                "Balance": 42,
+                "Burden": {
+                    "Strength": 8,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 6,
+                    "Fortitude": 0
+                },
+                "Defense": {
+                    "Slash": 5.4,
+                    "Crush": 3.7,
+                    "Pierce": 4.5,
+                    "Blood": 3.8,
+                    "Fire": 4.4,
+                    "Ice": 3.8,
+                    "Lightning": 3.8
+                },
+                "GuardingDefense": {
+                    "Slash": 100,
+                    "Crush": 100,
+                    "Pierce": 100,
+                    "Blood": 85,
+                    "Fire": 85,
+                    "Ice": 85,
+                    "Lightning": 85
+                },
+                "Resistance": {
+                    "Disease": 51,
+                    "Wound": 72,
+                    "Bleed": 53,
+                    "Curse": 44
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 36,
@@ -2069,43 +2079,44 @@
         "Description": "Floating shields that guard against enemy attacks and reduce damage.\n\nCan block attacks from all directions, but doing so consumes stamina. Perfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping them increases base defense.",
         "Type": "Guard",
         "IchorCost": 0,
-        "StaminaGuardCost": 31,
-        "Balance": 26,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 3,
-            "Willpower": 0,
-            "Vitality": 3,
-            "Fortitude": 0,
-            "Will": 3
-        },
-        "Defense": {
-            "Slash": 1.8,
-            "Crush": 3.2,
-            "Pierce": 2.3,
-            "Blood": 1.0,
-            "Fire": 1.0,
-            "Ice": 1.0,
-            "Lightning": 1.0
-        },
-        "GuardingDefense": {
-            "Slash": 90,
-            "Crush": 95,
-            "Pierce": 95,
-            "Blood": 90,
-            "Fire": 90,
-            "Ice": 90,
-            "Lightning": 90
-        },
-        "Resistance": {
-            "Disease": 32,
-            "Wound": 32,
-            "Bleed": 32,
-            "Curse": 32
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 31,
+                "Balance": 26,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 3,
+                    "Willpower": 3,
+                    "Vitality": 3,
+                    "Fortitude": 0
+                },
+                "Defense": {
+                    "Slash": 1.8,
+                    "Crush": 3.2,
+                    "Pierce": 2.3,
+                    "Blood": 1.0,
+                    "Fire": 1.0,
+                    "Ice": 1.0,
+                    "Lightning": 1.0
+                },
+                "GuardingDefense": {
+                    "Slash": 90,
+                    "Crush": 95,
+                    "Pierce": 95,
+                    "Blood": 90,
+                    "Fire": 90,
+                    "Ice": 90,
+                    "Lightning": 90
+                },
+                "Resistance": {
+                    "Disease": 32,
+                    "Wound": 32,
+                    "Bleed": 32,
+                    "Curse": 32
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 31,
@@ -2114,10 +2125,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 3,
-                    "Willpower": 0,
+                    "Willpower": 3,
                     "Vitality": 3,
-                    "Fortitude": 0,
-                    "Will": 3
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 1.7099999,
@@ -2152,10 +2162,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 3,
-                    "Willpower": 0,
+                    "Willpower": 3,
                     "Vitality": 3,
-                    "Fortitude": 0,
-                    "Will": 3
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 1.7099999,
@@ -2190,10 +2199,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 3,
-                    "Willpower": 0,
+                    "Willpower": 3,
                     "Vitality": 3,
-                    "Fortitude": 0,
-                    "Will": 3
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 1.7099999,
@@ -2228,10 +2236,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 3,
-                    "Willpower": 0,
+                    "Willpower": 3,
                     "Vitality": 3,
-                    "Fortitude": 0,
-                    "Will": 3
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 1.7099999,
@@ -2266,10 +2273,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 4,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 4,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 1.8,
@@ -2304,10 +2310,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 4,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 4,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 1.8,
@@ -2342,10 +2347,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 4,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 4,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 1.8,
@@ -2380,10 +2384,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 4,
-                    "Willpower": 0,
+                    "Willpower": 4,
                     "Vitality": 4,
-                    "Fortitude": 0,
-                    "Will": 4
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 1.8,
@@ -2418,10 +2421,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 8,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 8,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 1.8,
@@ -2456,10 +2458,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 2,
-                    "Willpower": 0,
+                    "Willpower": 2,
                     "Vitality": 2,
-                    "Fortitude": 0,
-                    "Will": 2
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 1.5749999,
@@ -2493,43 +2494,44 @@
         "Description": "Floating shields that guard against enemy attacks and reduce damage.\n\nCan block attacks from all directions, but doing so consumes stamina. Perfectly blocking enemy attacks reduces stamina consumption.\n\nEquipping them greatly increases base defense.",
         "Type": "Guard",
         "IchorCost": 0,
-        "StaminaGuardCost": 32,
-        "Balance": 33,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 6,
-            "Willpower": 0,
-            "Vitality": 6,
-            "Fortitude": 0,
-            "Will": 6
-        },
-        "Defense": {
-            "Slash": 3.2,
-            "Crush": 4.0,
-            "Pierce": 3.2,
-            "Blood": 2.0,
-            "Fire": 2.0,
-            "Ice": 2.0,
-            "Lightning": 2.0
-        },
-        "GuardingDefense": {
-            "Slash": 90,
-            "Crush": 95,
-            "Pierce": 95,
-            "Blood": 90,
-            "Fire": 90,
-            "Ice": 90,
-            "Lightning": 90
-        },
-        "Resistance": {
-            "Disease": 36,
-            "Wound": 36,
-            "Bleed": 36,
-            "Curse": 36
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 32,
+                "Balance": 33,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 6,
+                    "Vitality": 6,
+                    "Fortitude": 0
+                },
+                "Defense": {
+                    "Slash": 3.2,
+                    "Crush": 4.0,
+                    "Pierce": 3.2,
+                    "Blood": 2.0,
+                    "Fire": 2.0,
+                    "Ice": 2.0,
+                    "Lightning": 2.0
+                },
+                "GuardingDefense": {
+                    "Slash": 90,
+                    "Crush": 95,
+                    "Pierce": 95,
+                    "Blood": 90,
+                    "Fire": 90,
+                    "Ice": 90,
+                    "Lightning": 90
+                },
+                "Resistance": {
+                    "Disease": 36,
+                    "Wound": 36,
+                    "Bleed": 36,
+                    "Curse": 36
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 32,
@@ -2538,10 +2540,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 6,
-                    "Willpower": 0,
+                    "Willpower": 6,
                     "Vitality": 6,
-                    "Fortitude": 0,
-                    "Will": 6
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 3.04,
@@ -2576,10 +2577,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 6,
-                    "Willpower": 0,
+                    "Willpower": 6,
                     "Vitality": 6,
-                    "Fortitude": 0,
-                    "Will": 6
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 3.04,
@@ -2614,10 +2614,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 6,
-                    "Willpower": 0,
+                    "Willpower": 6,
                     "Vitality": 6,
-                    "Fortitude": 0,
-                    "Will": 6
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 3.04,
@@ -2652,10 +2651,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 6,
-                    "Willpower": 0,
+                    "Willpower": 6,
                     "Vitality": 6,
-                    "Fortitude": 0,
-                    "Will": 6
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 3.04,
@@ -2690,10 +2688,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 8,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 8,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 3.2,
@@ -2728,10 +2725,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 8,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 8,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 3.2,
@@ -2766,10 +2762,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 8,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 8,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 3.2,
@@ -2804,10 +2799,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 8,
-                    "Willpower": 0,
+                    "Willpower": 8,
                     "Vitality": 8,
-                    "Fortitude": 0,
-                    "Will": 8
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 3.2,
@@ -2842,10 +2836,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 12,
-                    "Willpower": 0,
+                    "Willpower": 12,
                     "Vitality": 12,
-                    "Fortitude": 0,
-                    "Will": 12
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 3.2,
@@ -2880,10 +2873,9 @@
                     "Strength": 0,
                     "Dexterity": 0,
                     "Mind": 5,
-                    "Willpower": 0,
+                    "Willpower": 5,
                     "Vitality": 5,
-                    "Fortitude": 0,
-                    "Will": 5
+                    "Fortitude": 0
                 },
                 "Defense": {
                     "Slash": 2.8,
@@ -2917,85 +2909,89 @@
         "Description": "A shield that guards against enemy attacks and reduces damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption, as well as produces a field that applies the stone status effect.\n\nEquipping it slightly increases base defense.",
         "Type": "Guard",
         "IchorCost": 0,
-        "StaminaGuardCost": 24,
-        "Balance": 4,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 0,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 0,
-            "Will": 12
-        },
-        "Defense": {
-            "Slash": 0.7,
-            "Crush": 0.7,
-            "Pierce": 0.9,
-            "Blood": 1.2,
-            "Fire": 0.6,
-            "Ice": 0.6,
-            "Lightning": 0.6
-        },
-        "GuardingDefense": {
-            "Slash": 90,
-            "Crush": 90,
-            "Pierce": 100,
-            "Blood": 100,
-            "Fire": 90,
-            "Ice": 90,
-            "Lightning": 90
-        },
-        "Resistance": {
-            "Disease": 38,
-            "Wound": 79,
-            "Bleed": 38,
-            "Curse": 45
-        },
-        "Transformable": false,
-        "Transforms": []
+        "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 24,
+                "Balance": 4,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Defense": {
+                    "Slash": 0.7,
+                    "Crush": 0.7,
+                    "Pierce": 0.9,
+                    "Blood": 1.2,
+                    "Fire": 0.6,
+                    "Ice": 0.6,
+                    "Lightning": 0.6
+                },
+                "GuardingDefense": {
+                    "Slash": 90,
+                    "Crush": 90,
+                    "Pierce": 100,
+                    "Blood": 100,
+                    "Fire": 90,
+                    "Ice": 90,
+                    "Lightning": 90
+                },
+                "Resistance": {
+                    "Disease": 38,
+                    "Wound": 79,
+                    "Bleed": 38,
+                    "Curse": 45
+                }
+            }
+        ]
     },
     {
         "Name": "Mutinous Bracer",
         "Description": "A bracer that can parry enemy attacks.\n\nRespond to an incoming attack with a well-timed parry to deflect it and break the enemy's stance.\n\nSuccessful parries consume ichor. They break the enemy's stance even if you have insufficient ichor but deal damage to the player.\n\nSome attacks cannot be parried; these will instead be blocked.\n\nEquipping it increases basic defense.",
         "Type": "Parry",
         "IchorCost": 2,
-        "StaminaGuardCost": 30,
-        "Balance": 18,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 2,
-            "Mind": 0,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 6
-        },
-        "Defense": {
-            "Slash": 1.6,
-            "Crush": 2.2,
-            "Pierce": 1.2,
-            "Blood": 0.1,
-            "Fire": 0.2,
-            "Ice": 0.1,
-            "Lightning": 0.2
-        },
-        "GuardingDefense": {
-            "Slash": 90,
-            "Crush": 90,
-            "Pierce": 90,
-            "Blood": 75,
-            "Fire": 75,
-            "Ice": 75,
-            "Lightning": 75
-        },
-        "Resistance": {
-            "Disease": 38,
-            "Wound": 47,
-            "Bleed": 61,
-            "Curse": 57
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 30,
+                "Balance": 18,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 2,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 6
+                },
+                "Defense": {
+                    "Slash": 1.6,
+                    "Crush": 2.2,
+                    "Pierce": 1.2,
+                    "Blood": 0.1,
+                    "Fire": 0.2,
+                    "Ice": 0.1,
+                    "Lightning": 0.2
+                },
+                "GuardingDefense": {
+                    "Slash": 90,
+                    "Crush": 90,
+                    "Pierce": 90,
+                    "Blood": 75,
+                    "Fire": 75,
+                    "Ice": 75,
+                    "Lightning": 75
+                },
+                "Resistance": {
+                    "Disease": 38,
+                    "Wound": 47,
+                    "Bleed": 61,
+                    "Curse": 57
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 30,
@@ -3373,42 +3369,44 @@
         "Description": "A bracer that can parry enemy attacks.\n\nParry in time with an incoming attack to deflect it and break the enemy's stance.\n\nSuccessful parries consume ichor. They break the enemy's stance even if you have insufficient ichor but deal damage to the player.\n\nSome attacks cannot be parried; these will instead be blocked.\n\nEquipping it greatly increases basic defense.",
         "Type": "Parry",
         "IchorCost": 2,
-        "StaminaGuardCost": 30,
-        "Balance": 24,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 4,
-            "Mind": 0,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 10
-        },
-        "Defense": {
-            "Slash": 3.0,
-            "Crush": 4.4,
-            "Pierce": 2.8,
-            "Blood": 0.5,
-            "Fire": 0.6,
-            "Ice": 0.5,
-            "Lightning": 0.6
-        },
-        "GuardingDefense": {
-            "Slash": 90,
-            "Crush": 90,
-            "Pierce": 90,
-            "Blood": 75,
-            "Fire": 75,
-            "Ice": 75,
-            "Lightning": 75
-        },
-        "Resistance": {
-            "Disease": 42,
-            "Wound": 51,
-            "Bleed": 65,
-            "Curse": 61
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 30,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 4,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 10
+                },
+                "Defense": {
+                    "Slash": 3.0,
+                    "Crush": 4.4,
+                    "Pierce": 2.8,
+                    "Blood": 0.5,
+                    "Fire": 0.6,
+                    "Ice": 0.5,
+                    "Lightning": 0.6
+                },
+                "GuardingDefense": {
+                    "Slash": 90,
+                    "Crush": 90,
+                    "Pierce": 90,
+                    "Blood": 75,
+                    "Fire": 75,
+                    "Ice": 75,
+                    "Lightning": 75
+                },
+                "Resistance": {
+                    "Disease": 42,
+                    "Wound": 51,
+                    "Bleed": 65,
+                    "Curse": 61
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 30,
@@ -3786,42 +3784,44 @@
         "Description": "A forma which allows the user to leap up vertically on the spot.\n\nNullifies enemy attacks during the ascent. After ascending, various midair actions can be performed. Equipping it slightly increases base defense.",
         "Type": "Dodge",
         "IchorCost": 1,
-        "StaminaGuardCost": 0,
-        "Balance": 12,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 0,
-            "Willpower": 0,
-            "Vitality": 2,
-            "Fortitude": 2
-        },
-        "Defense": {
-            "Slash": 0.2,
-            "Crush": 0.1,
-            "Pierce": 0.4,
-            "Blood": 0.5,
-            "Fire": 0.6,
-            "Ice": 0.6,
-            "Lightning": 0.6
-        },
-        "GuardingDefense": {
-            "Slash": 0,
-            "Crush": 0,
-            "Pierce": 0,
-            "Blood": 0,
-            "Fire": 0,
-            "Ice": 0,
-            "Lightning": 0
-        },
-        "Resistance": {
-            "Disease": 42,
-            "Wound": 42,
-            "Bleed": 36,
-            "Curse": 42
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 0,
+                "Balance": 12,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 2,
+                    "Fortitude": 2
+                },
+                "Defense": {
+                    "Slash": 0.2,
+                    "Crush": 0.1,
+                    "Pierce": 0.4,
+                    "Blood": 0.5,
+                    "Fire": 0.6,
+                    "Ice": 0.6,
+                    "Lightning": 0.6
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 42,
+                    "Wound": 42,
+                    "Bleed": 36,
+                    "Curse": 42
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 0,
@@ -4199,42 +4199,44 @@
         "Description": "A forma which allows the user to leap up vertically on the spot.\n\nNullifies enemy attacks during the ascent. After ascending, various midair actions can be performed. Equipping it increases base defense.",
         "Type": "Dodge",
         "IchorCost": 1,
-        "StaminaGuardCost": 0,
-        "Balance": 21,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 0,
-            "Willpower": 0,
-            "Vitality": 4,
-            "Fortitude": 4
-        },
-        "Defense": {
-            "Slash": 1.4,
-            "Crush": 0.8,
-            "Pierce": 2.8,
-            "Blood": 1.4,
-            "Fire": 1.8,
-            "Ice": 1.8,
-            "Lightning": 1.8
-        },
-        "GuardingDefense": {
-            "Slash": 0,
-            "Crush": 0,
-            "Pierce": 0,
-            "Blood": 0,
-            "Fire": 0,
-            "Ice": 0,
-            "Lightning": 0
-        },
-        "Resistance": {
-            "Disease": 46,
-            "Wound": 46,
-            "Bleed": 39,
-            "Curse": 45
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 0,
+                "Balance": 21,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 4,
+                    "Fortitude": 4
+                },
+                "Defense": {
+                    "Slash": 1.4,
+                    "Crush": 0.8,
+                    "Pierce": 2.8,
+                    "Blood": 1.4,
+                    "Fire": 1.8,
+                    "Ice": 1.8,
+                    "Lightning": 1.8
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 46,
+                    "Wound": 46,
+                    "Bleed": 39,
+                    "Curse": 45
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 0,
@@ -4612,42 +4614,44 @@
         "Description": "An evasive forma that enables quick stepping.\n\nActivate it while holding in any direction to step. Equipping it slightly increases base defense.",
         "Type": "Dodge",
         "IchorCost": 1,
-        "StaminaGuardCost": 0,
-        "Balance": 15,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 2,
-            "Mind": 0,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 2
-        },
-        "Defense": {
-            "Slash": 0.2,
-            "Crush": 0.2,
-            "Pierce": 0.2,
-            "Blood": 0.3,
-            "Fire": 0.1,
-            "Ice": 0.2,
-            "Lightning": 0.2
-        },
-        "GuardingDefense": {
-            "Slash": 0,
-            "Crush": 0,
-            "Pierce": 0,
-            "Blood": 0,
-            "Fire": 0,
-            "Ice": 0,
-            "Lightning": 0
-        },
-        "Resistance": {
-            "Disease": 41,
-            "Wound": 47,
-            "Bleed": 38,
-            "Curse": 38
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 0,
+                "Balance": 15,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 2,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 2
+                },
+                "Defense": {
+                    "Slash": 0.2,
+                    "Crush": 0.2,
+                    "Pierce": 0.2,
+                    "Blood": 0.3,
+                    "Fire": 0.1,
+                    "Ice": 0.2,
+                    "Lightning": 0.2
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 41,
+                    "Wound": 47,
+                    "Bleed": 38,
+                    "Curse": 38
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 0,
@@ -5025,42 +5029,44 @@
         "Description": "An evasive forma that enables quick short-range movement to avoid attacks.\n\nActivate it while holding any direction to perform a short step. Equipping it slightly increases base defense.",
         "Type": "Dodge",
         "IchorCost": 1,
-        "StaminaGuardCost": 0,
-        "Balance": 14,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 2,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 4
-        },
-        "Defense": {
-            "Slash": 0.2,
-            "Crush": 0.3,
-            "Pierce": 0.1,
-            "Blood": 0.2,
-            "Fire": 0.2,
-            "Ice": 0.3,
-            "Lightning": 0.1
-        },
-        "GuardingDefense": {
-            "Slash": 0,
-            "Crush": 0,
-            "Pierce": 0,
-            "Blood": 0,
-            "Fire": 0,
-            "Ice": 0,
-            "Lightning": 0
-        },
-        "Resistance": {
-            "Disease": 43,
-            "Wound": 36,
-            "Bleed": 40,
-            "Curse": 42
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 0,
+                "Balance": 14,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 2,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 4
+                },
+                "Defense": {
+                    "Slash": 0.2,
+                    "Crush": 0.3,
+                    "Pierce": 0.1,
+                    "Blood": 0.2,
+                    "Fire": 0.2,
+                    "Ice": 0.3,
+                    "Lightning": 0.1
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 36,
+                    "Bleed": 40,
+                    "Curse": 42
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 0,
@@ -5438,42 +5444,44 @@
         "Description": "An evasive forma that enables quick short-range movement to avoid attacks.\n\nActivate it while holding any direction to perform a short step. Equipping it increases base defense.",
         "Type": "Dodge",
         "IchorCost": 1,
-        "StaminaGuardCost": 0,
-        "Balance": 22,
-        "Burden": {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 4,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 8
-        },
-        "Defense": {
-            "Slash": 1.6,
-            "Crush": 2.1,
-            "Pierce": 1.2,
-            "Blood": 1.6,
-            "Fire": 1.6,
-            "Ice": 2.1,
-            "Lightning": 1.2
-        },
-        "GuardingDefense": {
-            "Slash": 0,
-            "Crush": 0,
-            "Pierce": 0,
-            "Blood": 0,
-            "Fire": 0,
-            "Ice": 0,
-            "Lightning": 0
-        },
-        "Resistance": {
-            "Disease": 46,
-            "Wound": 39,
-            "Bleed": 43,
-            "Curse": 45
-        },
-        "Transformable": true,
         "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 0,
+                "Balance": 22,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 4,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 8
+                },
+                "Defense": {
+                    "Slash": 1.6,
+                    "Crush": 2.1,
+                    "Pierce": 1.2,
+                    "Blood": 1.6,
+                    "Fire": 1.6,
+                    "Ice": 2.1,
+                    "Lightning": 1.2
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 46,
+                    "Wound": 39,
+                    "Bleed": 43,
+                    "Curse": 45
+                }
+            },
             {
                 "Name": "Defensive_Fire",
                 "StaminaGuardCost": 0,
