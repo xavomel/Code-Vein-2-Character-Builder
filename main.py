@@ -83,13 +83,13 @@ class Character:
         }
 
         self.defense = {
-            "Slash": 0.0,
-            "Crush": 0.0,
-            "Pierce": 0.0,
-            "Blood": 0.0,
-            "Fire": 0.0,
-            "Ice": 0.0,
-            "Lightning": 0.0,
+            "Slash": Fraction(0, 10),
+            "Crush": Fraction(0, 10),
+            "Pierce": Fraction(0, 10),
+            "Blood": Fraction(0, 10),
+            "Fire": Fraction(0, 10),
+            "Ice": Fraction(0, 10),
+            "Lightning": Fraction(0, 10),
         }
 
         self.guarding_defense = {
@@ -223,7 +223,13 @@ class Builder:
                 if var == "Attributes":
                     attributes[key] = value + old_value
 
-                widget.setText(str(value + old_value))
+                if var == "Defense":
+                    new_value = value + old_value
+                    # general format for floating point (Fraction in this case)
+                    # Fractions are used because adding and subtracting Floats many times could introduce errors
+                    widget.setText(str(format(new_value, "g")))
+                else:
+                    widget.setText(str(value + old_value))
 
         self.last_transaction = transaction
 
@@ -250,7 +256,12 @@ class Builder:
                 widget.setMaximum(maximum)
                 widget.setValue(old_value)
             else:
-                widget.setText(str(old_value))
+                if var == "Defense":
+                    # general format for floating point (Fraction in this case)
+                    # Fractions are used because adding and subtracting Floats many times could introduce errors
+                    widget.setText(str(format(old_value, "g")))
+                else:
+                    widget.setText(str(old_value))
 
         self.last_transaction = []
 
@@ -373,6 +384,8 @@ class Builder:
             transaction.append([_type, "Defense", attr, val, old_value, widget])
 
         # resistance
+        #
+        # seems attributes also affect resistance, but for now let's ignore it
         for attr, val in data.resistance.items():
             widget = self.char_to_widget_mapping["Resistance_" + attr]
             # todo comment
@@ -545,6 +558,7 @@ class Builder:
         # Dodge Effectiveness
 
         # defense
+        # TODO some Defensive Formae have silly defense values like 0.96000004 or 1.8374999 - shall we simplify them?
         for attr, val in transformed["Defense"].items():
             widget = self.char_to_widget_mapping["Defense_" + attr]
             # todo comment
@@ -561,6 +575,8 @@ class Builder:
             transaction.append([_type, "GuardingDefense", attr, val, old_value, widget])
 
         # resistance
+        #
+        # seems attributes also affect resistance, but for now let's ignore it
         for attr, val in transformed["Resistance"].items():
             widget = self.char_to_widget_mapping["Resistance_" + attr]
             # todo comment

@@ -15,13 +15,13 @@
             "Fortitude": 10
         },
         "Defense": {
-            "Slash": 17.3,
-            "Crush": 14.7,
-            "Pierce": 15.6,
-            "Blood": 18.6,
-            "Fire": 16.8,
-            "Ice": 16.8,
-            "Lightning": 15.8
+            "Slash": "17.3",
+            "Crush": "14.7",
+            "Pierce": "15.6",
+            "Blood": "18.6",
+            "Fire": "16.8",
+            "Ice": "16.8",
+            "Lightning": "15.8"
         },
         "Resistance": {
             "Disease": 44,
@@ -76,13 +76,13 @@
             "Fortitude": 10
         },
         "Defense": {
-            "Slash": 17.3,
-            "Crush": 14.7,
-            "Pierce": 15.6,
-            "Blood": 18.6,
-            "Fire": 16.8,
-            "Ice": 16.8,
-            "Lightning": 15.8
+            "Slash": "17.3",
+            "Crush": "14.7",
+            "Pierce": "15.6",
+            "Blood": "18.6",
+            "Fire": "16.8",
+            "Ice": "16.8",
+            "Lightning": "15.8"
         },
         "Resistance": {
             "Disease": 44,
@@ -137,13 +137,13 @@
             "Fortitude": 11
         },
         "Defense": {
-            "Slash": 17.3,
-            "Crush": 14.7,
-            "Pierce": 15.6,
-            "Blood": 18.6,
-            "Fire": 16.8,
-            "Ice": 16.8,
-            "Lightning": 15.8
+            "Slash": "17.3",
+            "Crush": "14.7",
+            "Pierce": "15.6",
+            "Blood": "18.6",
+            "Fire": "16.8",
+            "Ice": "16.8",
+            "Lightning": "15.8"
         },
         "Resistance": {
             "Disease": 44,
@@ -198,13 +198,13 @@
             "Fortitude": 13
         },
         "Defense": {
-            "Slash": 17.3,
-            "Crush": 14.7,
-            "Pierce": 15.6,
-            "Blood": 18.6,
-            "Fire": 16.8,
-            "Ice": 16.8,
-            "Lightning": 15.8
+            "Slash": "17.3",
+            "Crush": "14.7",
+            "Pierce": "15.6",
+            "Blood": "18.6",
+            "Fire": "16.8",
+            "Ice": "16.8",
+            "Lightning": "15.8"
         },
         "Resistance": {
             "Disease": 44,
@@ -259,13 +259,13 @@
             "Fortitude": 15
         },
         "Defense": {
-            "Slash": 17.3,
-            "Crush": 14.7,
-            "Pierce": 15.6,
-            "Blood": 18.6,
-            "Fire": 16.8,
-            "Ice": 16.8,
-            "Lightning": 15.8
+            "Slash": "17.3",
+            "Crush": "14.7",
+            "Pierce": "15.6",
+            "Blood": "18.6",
+            "Fire": "16.8",
+            "Ice": "16.8",
+            "Lightning": "15.8"
         },
         "Resistance": {
             "Disease": 44,
@@ -320,13 +320,13 @@
             "Fortitude": 12
         },
         "Defense": {
-            "Slash": 12.9,
-            "Crush": 12.1,
-            "Pierce": 13.2,
-            "Blood": 15.3,
-            "Fire": 13.7,
-            "Ice": 14.0,
-            "Lightning": 12.3
+            "Slash": "12.9",
+            "Crush": "12.1",
+            "Pierce": "13.2",
+            "Blood": "15.3",
+            "Fire": "13.7",
+            "Ice": "14.0",
+            "Lightning": "12.3"
         },
         "Resistance": {
             "Disease": 32,
@@ -376,13 +376,13 @@
             "Fortitude": 14
         },
         "Defense": {
-            "Slash": 12.9,
-            "Crush": 12.1,
-            "Pierce": 13.2,
-            "Blood": 15.3,
-            "Fire": 13.7,
-            "Ice": 14.0,
-            "Lightning": 12.3
+            "Slash": "12.9",
+            "Crush": "12.1",
+            "Pierce": "13.2",
+            "Blood": "15.3",
+            "Fire": "13.7",
+            "Ice": "14.0",
+            "Lightning": "12.3"
         },
         "Resistance": {
             "Disease": 32,
@@ -432,13 +432,13 @@
             "Fortitude": 16
         },
         "Defense": {
-            "Slash": 12.9,
-            "Crush": 12.1,
-            "Pierce": 13.2,
-            "Blood": 15.3,
-            "Fire": 13.7,
-            "Ice": 14.0,
-            "Lightning": 12.3
+            "Slash": "12.9",
+            "Crush": "12.1",
+            "Pierce": "13.2",
+            "Blood": "15.3",
+            "Fire": "13.7",
+            "Ice": "14.0",
+            "Lightning": "12.3"
         },
         "Resistance": {
             "Disease": 32,
@@ -488,13 +488,13 @@
             "Fortitude": 24
         },
         "Defense": {
-            "Slash": 12.9,
-            "Crush": 12.1,
-            "Pierce": 13.2,
-            "Blood": 15.3,
-            "Fire": 13.7,
-            "Ice": 14.0,
-            "Lightning": 12.3
+            "Slash": "12.9",
+            "Crush": "12.1",
+            "Pierce": "13.2",
+            "Blood": "15.3",
+            "Fire": "13.7",
+            "Ice": "14.0",
+            "Lightning": "12.3"
         },
         "Resistance": {
             "Disease": 32,
@@ -544,13 +544,13 @@
             "Fortitude": 14
         },
         "Defense": {
-            "Slash": 7.1,
-            "Crush": 6.4,
-            "Pierce": 7.4,
-            "Blood": 12.6,
-            "Fire": 11.1,
-            "Ice": 11.3,
-            "Lightning": 10.7
+            "Slash": "7.1",
+            "Crush": "6.4",
+            "Pierce": "7.4",
+            "Blood": "12.6",
+            "Fire": "11.1",
+            "Ice": "11.3",
+            "Lightning": "10.7"
         },
         "Resistance": {
             "Disease": 33,
@@ -607,13 +607,13 @@
             "Fortitude": 16
         },
         "Defense": {
-            "Slash": 7.1,
-            "Crush": 6.4,
-            "Pierce": 7.4,
-            "Blood": 12.6,
-            "Fire": 11.1,
-            "Ice": 11.3,
-            "Lightning": 10.7
+            "Slash": "7.1",
+            "Crush": "6.4",
+            "Pierce": "7.4",
+            "Blood": "12.6",
+            "Fire": "11.1",
+            "Ice": "11.3",
+            "Lightning": "10.7"
         },
         "Resistance": {
             "Disease": 33,
@@ -670,13 +670,13 @@
             "Fortitude": 17
         },
         "Defense": {
-            "Slash": 7.1,
-            "Crush": 6.4,
-            "Pierce": 7.4,
-            "Blood": 12.6,
-            "Fire": 11.1,
-            "Ice": 11.3,
-            "Lightning": 10.7
+            "Slash": "7.1",
+            "Crush": "6.4",
+            "Pierce": "7.4",
+            "Blood": "12.6",
+            "Fire": "11.1",
+            "Ice": "11.3",
+            "Lightning": "10.7"
         },
         "Resistance": {
             "Disease": 33,
@@ -733,13 +733,13 @@
             "Fortitude": 12
         },
         "Defense": {
-            "Slash": 14.7,
-            "Crush": 14.8,
-            "Pierce": 15.2,
-            "Blood": 15.5,
-            "Fire": 11.8,
-            "Ice": 16.0,
-            "Lightning": 16.4
+            "Slash": "14.7",
+            "Crush": "14.8",
+            "Pierce": "15.2",
+            "Blood": "15.5",
+            "Fire": "11.8",
+            "Ice": "16.0",
+            "Lightning": "16.4"
         },
         "Resistance": {
             "Disease": 58,
@@ -795,13 +795,13 @@
             "Fortitude": 14
         },
         "Defense": {
-            "Slash": 14.7,
-            "Crush": 14.8,
-            "Pierce": 15.2,
-            "Blood": 15.5,
-            "Fire": 11.8,
-            "Ice": 16.0,
-            "Lightning": 16.4
+            "Slash": "14.7",
+            "Crush": "14.8",
+            "Pierce": "15.2",
+            "Blood": "15.5",
+            "Fire": "11.8",
+            "Ice": "16.0",
+            "Lightning": "16.4"
         },
         "Resistance": {
             "Disease": 58,
@@ -857,13 +857,13 @@
             "Fortitude": 15
         },
         "Defense": {
-            "Slash": 14.7,
-            "Crush": 14.8,
-            "Pierce": 15.2,
-            "Blood": 15.5,
-            "Fire": 11.8,
-            "Ice": 16.0,
-            "Lightning": 16.4
+            "Slash": "14.7",
+            "Crush": "14.8",
+            "Pierce": "15.2",
+            "Blood": "15.5",
+            "Fire": "11.8",
+            "Ice": "16.0",
+            "Lightning": "16.4"
         },
         "Resistance": {
             "Disease": 58,
@@ -919,13 +919,13 @@
             "Fortitude": 18
         },
         "Defense": {
-            "Slash": 14.7,
-            "Crush": 14.8,
-            "Pierce": 15.2,
-            "Blood": 15.5,
-            "Fire": 11.8,
-            "Ice": 16.0,
-            "Lightning": 16.4
+            "Slash": "14.7",
+            "Crush": "14.8",
+            "Pierce": "15.2",
+            "Blood": "15.5",
+            "Fire": "11.8",
+            "Ice": "16.0",
+            "Lightning": "16.4"
         },
         "Resistance": {
             "Disease": 58,
@@ -971,13 +971,13 @@
             "Fortitude": 25
         },
         "Defense": {
-            "Slash": 14.8,
-            "Crush": 14.8,
-            "Pierce": 14.9,
-            "Blood": 16.0,
-            "Fire": 12.5,
-            "Ice": 15.7,
-            "Lightning": 16.2
+            "Slash": "14.8",
+            "Crush": "14.8",
+            "Pierce": "14.9",
+            "Blood": "16.0",
+            "Fire": "12.5",
+            "Ice": "15.7",
+            "Lightning": "16.2"
         },
         "Resistance": {
             "Disease": 55,
@@ -1035,13 +1035,13 @@
             "Fortitude": 8
         },
         "Defense": {
-            "Slash": 12.9,
-            "Crush": 13.0,
-            "Pierce": 12.8,
-            "Blood": 17.4,
-            "Fire": 15.1,
-            "Ice": 17.4,
-            "Lightning": 17.3
+            "Slash": "12.9",
+            "Crush": "13.0",
+            "Pierce": "12.8",
+            "Blood": "17.4",
+            "Fire": "15.1",
+            "Ice": "17.4",
+            "Lightning": "17.3"
         },
         "Resistance": {
             "Disease": 58,
@@ -1096,13 +1096,13 @@
             "Fortitude": 9
         },
         "Defense": {
-            "Slash": 12.9,
-            "Crush": 13.0,
-            "Pierce": 12.8,
-            "Blood": 17.4,
-            "Fire": 15.1,
-            "Ice": 17.4,
-            "Lightning": 17.3
+            "Slash": "12.9",
+            "Crush": "13.0",
+            "Pierce": "12.8",
+            "Blood": "17.4",
+            "Fire": "15.1",
+            "Ice": "17.4",
+            "Lightning": "17.3"
         },
         "Resistance": {
             "Disease": 58,
@@ -1157,13 +1157,13 @@
             "Fortitude": 15
         },
         "Defense": {
-            "Slash": 10.2,
-            "Crush": 10.3,
-            "Pierce": 10.2,
-            "Blood": 8.4,
-            "Fire": 10.3,
-            "Ice": 10.1,
-            "Lightning": 11.7
+            "Slash": "10.2",
+            "Crush": "10.3",
+            "Pierce": "10.2",
+            "Blood": "8.4",
+            "Fire": "10.3",
+            "Ice": "10.1",
+            "Lightning": "11.7"
         },
         "Resistance": {
             "Disease": 70,
@@ -1218,13 +1218,13 @@
             "Fortitude": 21
         },
         "Defense": {
-            "Slash": 10.2,
-            "Crush": 10.3,
-            "Pierce": 10.2,
-            "Blood": 8.4,
-            "Fire": 10.3,
-            "Ice": 10.1,
-            "Lightning": 11.7
+            "Slash": "10.2",
+            "Crush": "10.3",
+            "Pierce": "10.2",
+            "Blood": "8.4",
+            "Fire": "10.3",
+            "Ice": "10.1",
+            "Lightning": "11.7"
         },
         "Resistance": {
             "Disease": 70,
@@ -1279,13 +1279,13 @@
             "Fortitude": 30
         },
         "Defense": {
-            "Slash": 10.2,
-            "Crush": 10.3,
-            "Pierce": 10.2,
-            "Blood": 8.4,
-            "Fire": 10.3,
-            "Ice": 10.1,
-            "Lightning": 11.7
+            "Slash": "10.2",
+            "Crush": "10.3",
+            "Pierce": "10.2",
+            "Blood": "8.4",
+            "Fire": "10.3",
+            "Ice": "10.1",
+            "Lightning": "11.7"
         },
         "Resistance": {
             "Disease": 70,
@@ -1340,13 +1340,13 @@
             "Fortitude": 32
         },
         "Defense": {
-            "Slash": 7.6,
-            "Crush": 8.2,
-            "Pierce": 8.5,
-            "Blood": 5.7,
-            "Fire": 7.5,
-            "Ice": 8.0,
-            "Lightning": 10.1
+            "Slash": "7.6",
+            "Crush": "8.2",
+            "Pierce": "8.5",
+            "Blood": "5.7",
+            "Fire": "7.5",
+            "Ice": "8.0",
+            "Lightning": "10.1"
         },
         "Resistance": {
             "Disease": 60,
@@ -1401,13 +1401,13 @@
             "Fortitude": 16
         },
         "Defense": {
-            "Slash": 20.3,
-            "Crush": 19.7,
-            "Pierce": 19.6,
-            "Blood": 15.7,
-            "Fire": 17.1,
-            "Ice": 17.0,
-            "Lightning": 18.9
+            "Slash": "20.3",
+            "Crush": "19.7",
+            "Pierce": "19.6",
+            "Blood": "15.7",
+            "Fire": "17.1",
+            "Ice": "17.0",
+            "Lightning": "18.9"
         },
         "Resistance": {
             "Disease": 61,
@@ -1462,13 +1462,13 @@
             "Fortitude": 22
         },
         "Defense": {
-            "Slash": 20.3,
-            "Crush": 19.7,
-            "Pierce": 19.6,
-            "Blood": 15.7,
-            "Fire": 17.1,
-            "Ice": 17.0,
-            "Lightning": 18.9
+            "Slash": "20.3",
+            "Crush": "19.7",
+            "Pierce": "19.6",
+            "Blood": "15.7",
+            "Fire": "17.1",
+            "Ice": "17.0",
+            "Lightning": "18.9"
         },
         "Resistance": {
             "Disease": 61,
@@ -1523,13 +1523,13 @@
             "Fortitude": 13
         },
         "Defense": {
-            "Slash": 6.7,
-            "Crush": 6.7,
-            "Pierce": 7.1,
-            "Blood": 12.4,
-            "Fire": 11.5,
-            "Ice": 12.2,
-            "Lightning": 9.4
+            "Slash": "6.7",
+            "Crush": "6.7",
+            "Pierce": "7.1",
+            "Blood": "12.4",
+            "Fire": "11.5",
+            "Ice": "12.2",
+            "Lightning": "9.4"
         },
         "Resistance": {
             "Disease": 82,
@@ -1584,13 +1584,13 @@
             "Fortitude": 14
         },
         "Defense": {
-            "Slash": 6.7,
-            "Crush": 6.7,
-            "Pierce": 7.1,
-            "Blood": 12.4,
-            "Fire": 11.5,
-            "Ice": 12.2,
-            "Lightning": 9.4
+            "Slash": "6.7",
+            "Crush": "6.7",
+            "Pierce": "7.1",
+            "Blood": "12.4",
+            "Fire": "11.5",
+            "Ice": "12.2",
+            "Lightning": "9.4"
         },
         "Resistance": {
             "Disease": 82,
@@ -1645,13 +1645,13 @@
             "Fortitude": 17
         },
         "Defense": {
-            "Slash": 6.7,
-            "Crush": 6.7,
-            "Pierce": 7.1,
-            "Blood": 12.4,
-            "Fire": 11.5,
-            "Ice": 12.2,
-            "Lightning": 9.4
+            "Slash": "6.7",
+            "Crush": "6.7",
+            "Pierce": "7.1",
+            "Blood": "12.4",
+            "Fire": "11.5",
+            "Ice": "12.2",
+            "Lightning": "9.4"
         },
         "Resistance": {
             "Disease": 82,
@@ -1706,13 +1706,13 @@
             "Fortitude": 20
         },
         "Defense": {
-            "Slash": 8.8,
-            "Crush": 8.7,
-            "Pierce": 8.6,
-            "Blood": 14.1,
-            "Fire": 13.7,
-            "Ice": 13.9,
-            "Lightning": 10.9
+            "Slash": "8.8",
+            "Crush": "8.7",
+            "Pierce": "8.6",
+            "Blood": "14.1",
+            "Fire": "13.7",
+            "Ice": "13.9",
+            "Lightning": "10.9"
         },
         "Resistance": {
             "Disease": 78,
@@ -1767,13 +1767,13 @@
             "Fortitude": 14
         },
         "Defense": {
-            "Slash": 8.0,
-            "Crush": 7.8,
-            "Pierce": 8.3,
-            "Blood": 13.0,
-            "Fire": 13.2,
-            "Ice": 12.9,
-            "Lightning": 9.7
+            "Slash": "8.0",
+            "Crush": "7.8",
+            "Pierce": "8.3",
+            "Blood": "13.0",
+            "Fire": "13.2",
+            "Ice": "12.9",
+            "Lightning": "9.7"
         },
         "Resistance": {
             "Disease": 82,
@@ -1818,13 +1818,13 @@
             "Fortitude": 15
         },
         "Defense": {
-            "Slash": 8.0,
-            "Crush": 7.8,
-            "Pierce": 8.3,
-            "Blood": 13.0,
-            "Fire": 13.2,
-            "Ice": 12.9,
-            "Lightning": 9.7
+            "Slash": "8.0",
+            "Crush": "7.8",
+            "Pierce": "8.3",
+            "Blood": "13.0",
+            "Fire": "13.2",
+            "Ice": "12.9",
+            "Lightning": "9.7"
         },
         "Resistance": {
             "Disease": 82,
@@ -1869,13 +1869,13 @@
             "Fortitude": 12
         },
         "Defense": {
-            "Slash": 15.6,
-            "Crush": 15.8,
-            "Pierce": 16.2,
-            "Blood": 15.3,
-            "Fire": 15.3,
-            "Ice": 15.3,
-            "Lightning": 11.0
+            "Slash": "15.6",
+            "Crush": "15.8",
+            "Pierce": "16.2",
+            "Blood": "15.3",
+            "Fire": "15.3",
+            "Ice": "15.3",
+            "Lightning": "11.0"
         },
         "Resistance": {
             "Disease": 84,
@@ -1920,13 +1920,13 @@
             "Fortitude": 15
         },
         "Defense": {
-            "Slash": 18.1,
-            "Crush": 17.7,
-            "Pierce": 17.6,
-            "Blood": 17.5,
-            "Fire": 18.1,
-            "Ice": 17.8,
-            "Lightning": 18.3
+            "Slash": "18.1",
+            "Crush": "17.7",
+            "Pierce": "17.6",
+            "Blood": "17.5",
+            "Fire": "18.1",
+            "Ice": "17.8",
+            "Lightning": "18.3"
         },
         "Resistance": {
             "Disease": 55,
@@ -1976,13 +1976,13 @@
             "Fortitude": 19
         },
         "Defense": {
-            "Slash": 18.1,
-            "Crush": 17.7,
-            "Pierce": 17.6,
-            "Blood": 17.5,
-            "Fire": 18.1,
-            "Ice": 17.8,
-            "Lightning": 18.3
+            "Slash": "18.1",
+            "Crush": "17.7",
+            "Pierce": "17.6",
+            "Blood": "17.5",
+            "Fire": "18.1",
+            "Ice": "17.8",
+            "Lightning": "18.3"
         },
         "Resistance": {
             "Disease": 55,
@@ -2032,13 +2032,13 @@
             "Fortitude": 11
         },
         "Defense": {
-            "Slash": 21.3,
-            "Crush": 23.7,
-            "Pierce": 22.2,
-            "Blood": 14.4,
-            "Fire": 14.7,
-            "Ice": 14.9,
-            "Lightning": 18.8
+            "Slash": "21.3",
+            "Crush": "23.7",
+            "Pierce": "22.2",
+            "Blood": "14.4",
+            "Fire": "14.7",
+            "Ice": "14.9",
+            "Lightning": "18.8"
         },
         "Resistance": {
             "Disease": 62,
@@ -2098,13 +2098,13 @@
             "Fortitude": 12
         },
         "Defense": {
-            "Slash": 21.3,
-            "Crush": 23.7,
-            "Pierce": 22.2,
-            "Blood": 14.4,
-            "Fire": 14.7,
-            "Ice": 14.9,
-            "Lightning": 18.8
+            "Slash": "21.3",
+            "Crush": "23.7",
+            "Pierce": "22.2",
+            "Blood": "14.4",
+            "Fire": "14.7",
+            "Ice": "14.9",
+            "Lightning": "18.8"
         },
         "Resistance": {
             "Disease": 62,
@@ -2164,13 +2164,13 @@
             "Fortitude": 17
         },
         "Defense": {
-            "Slash": 21.3,
-            "Crush": 23.7,
-            "Pierce": 22.2,
-            "Blood": 14.4,
-            "Fire": 14.7,
-            "Ice": 14.9,
-            "Lightning": 18.8
+            "Slash": "21.3",
+            "Crush": "23.7",
+            "Pierce": "22.2",
+            "Blood": "14.4",
+            "Fire": "14.7",
+            "Ice": "14.9",
+            "Lightning": "18.8"
         },
         "Resistance": {
             "Disease": 62,
@@ -2230,13 +2230,13 @@
             "Fortitude": 10
         },
         "Defense": {
-            "Slash": 9.2,
-            "Crush": 8.5,
-            "Pierce": 9.3,
-            "Blood": 15.2,
-            "Fire": 12.8,
-            "Ice": 12.8,
-            "Lightning": 12.8
+            "Slash": "9.2",
+            "Crush": "8.5",
+            "Pierce": "9.3",
+            "Blood": "15.2",
+            "Fire": "12.8",
+            "Ice": "12.8",
+            "Lightning": "12.8"
         },
         "Resistance": {
             "Disease": 35,
@@ -2289,13 +2289,13 @@
             "Fortitude": 12
         },
         "Defense": {
-            "Slash": 9.2,
-            "Crush": 8.5,
-            "Pierce": 9.3,
-            "Blood": 15.2,
-            "Fire": 12.8,
-            "Ice": 12.8,
-            "Lightning": 12.8
+            "Slash": "9.2",
+            "Crush": "8.5",
+            "Pierce": "9.3",
+            "Blood": "15.2",
+            "Fire": "12.8",
+            "Ice": "12.8",
+            "Lightning": "12.8"
         },
         "Resistance": {
             "Disease": 35,
@@ -2348,13 +2348,13 @@
             "Fortitude": 20
         },
         "Defense": {
-            "Slash": 9.2,
-            "Crush": 8.5,
-            "Pierce": 9.3,
-            "Blood": 15.2,
-            "Fire": 12.8,
-            "Ice": 12.8,
-            "Lightning": 12.8
+            "Slash": "9.2",
+            "Crush": "8.5",
+            "Pierce": "9.3",
+            "Blood": "15.2",
+            "Fire": "12.8",
+            "Ice": "12.8",
+            "Lightning": "12.8"
         },
         "Resistance": {
             "Disease": 35,
@@ -2407,13 +2407,13 @@
             "Fortitude": 10
         },
         "Defense": {
-            "Slash": 12.3,
-            "Crush": 11.4,
-            "Pierce": 11.7,
-            "Blood": 14.0,
-            "Fire": 13.7,
-            "Ice": 14.6,
-            "Lightning": 13.7
+            "Slash": "12.3",
+            "Crush": "11.4",
+            "Pierce": "11.7",
+            "Blood": "14.0",
+            "Fire": "13.7",
+            "Ice": "14.6",
+            "Lightning": "13.7"
         },
         "Resistance": {
             "Disease": 65,
@@ -2468,13 +2468,13 @@
             "Fortitude": 13
         },
         "Defense": {
-            "Slash": 12.3,
-            "Crush": 11.4,
-            "Pierce": 11.7,
-            "Blood": 14.0,
-            "Fire": 13.7,
-            "Ice": 14.6,
-            "Lightning": 13.7
+            "Slash": "12.3",
+            "Crush": "11.4",
+            "Pierce": "11.7",
+            "Blood": "14.0",
+            "Fire": "13.7",
+            "Ice": "14.6",
+            "Lightning": "13.7"
         },
         "Resistance": {
             "Disease": 65,
@@ -2529,13 +2529,13 @@
             "Fortitude": 18
         },
         "Defense": {
-            "Slash": 12.3,
-            "Crush": 11.4,
-            "Pierce": 11.7,
-            "Blood": 14.0,
-            "Fire": 13.7,
-            "Ice": 14.6,
-            "Lightning": 13.7
+            "Slash": "12.3",
+            "Crush": "11.4",
+            "Pierce": "11.7",
+            "Blood": "14.0",
+            "Fire": "13.7",
+            "Ice": "14.6",
+            "Lightning": "13.7"
         },
         "Resistance": {
             "Disease": 65,
@@ -2590,13 +2590,13 @@
             "Fortitude": 12
         },
         "Defense": {
-            "Slash": 13.2,
-            "Crush": 15.3,
-            "Pierce": 15.9,
-            "Blood": 27.5,
-            "Fire": 11.4,
-            "Ice": 12.3,
-            "Lightning": 12.8
+            "Slash": "13.2",
+            "Crush": "15.3",
+            "Pierce": "15.9",
+            "Blood": "27.5",
+            "Fire": "11.4",
+            "Ice": "12.3",
+            "Lightning": "12.8"
         },
         "Resistance": {
             "Disease": 41,
@@ -2649,13 +2649,13 @@
             "Fortitude": 14
         },
         "Defense": {
-            "Slash": 12.5,
-            "Crush": 12.7,
-            "Pierce": 12.8,
-            "Blood": 13.9,
-            "Fire": 10.1,
-            "Ice": 13.7,
-            "Lightning": 14.4
+            "Slash": "12.5",
+            "Crush": "12.7",
+            "Pierce": "12.8",
+            "Blood": "13.9",
+            "Fire": "10.1",
+            "Ice": "13.7",
+            "Lightning": "14.4"
         },
         "Resistance": {
             "Disease": 62,
@@ -2702,13 +2702,13 @@
             "Fortitude": 15
         },
         "Defense": {
-            "Slash": 13.7,
-            "Crush": 14.4,
-            "Pierce": 13.5,
-            "Blood": 14.7,
-            "Fire": 10.6,
-            "Ice": 14.7,
-            "Lightning": 14.6
+            "Slash": "13.7",
+            "Crush": "14.4",
+            "Pierce": "13.5",
+            "Blood": "14.7",
+            "Fire": "10.6",
+            "Ice": "14.7",
+            "Lightning": "14.6"
         },
         "Resistance": {
             "Disease": 62,
@@ -2755,13 +2755,13 @@
             "Fortitude": 15
         },
         "Defense": {
-            "Slash": 18.3,
-            "Crush": 17.9,
-            "Pierce": 18.2,
-            "Blood": 18.5,
-            "Fire": 14.5,
-            "Ice": 15.2,
-            "Lightning": 11.5
+            "Slash": "18.3",
+            "Crush": "17.9",
+            "Pierce": "18.2",
+            "Blood": "18.5",
+            "Fire": "14.5",
+            "Ice": "15.2",
+            "Lightning": "11.5"
         },
         "Resistance": {
             "Disease": 65,
@@ -2807,13 +2807,13 @@
             "Fortitude": 18
         },
         "Defense": {
-            "Slash": 6.8,
-            "Crush": 6.5,
-            "Pierce": 7.2,
-            "Blood": 5.6,
-            "Fire": 6.7,
-            "Ice": 7.1,
-            "Lightning": 8.9
+            "Slash": "6.8",
+            "Crush": "6.5",
+            "Pierce": "7.2",
+            "Blood": "5.6",
+            "Fire": "6.7",
+            "Ice": "7.1",
+            "Lightning": "8.9"
         },
         "Resistance": {
             "Disease": 56,
@@ -2865,13 +2865,13 @@
             "Fortitude": 11
         },
         "Defense": {
-            "Slash": 12.3,
-            "Crush": 12.4,
-            "Pierce": 12.1,
-            "Blood": 12.4,
-            "Fire": 12.0,
-            "Ice": 13.7,
-            "Lightning": 16.0
+            "Slash": "12.3",
+            "Crush": "12.4",
+            "Pierce": "12.1",
+            "Blood": "12.4",
+            "Fire": "12.0",
+            "Ice": "13.7",
+            "Lightning": "16.0"
         },
         "Resistance": {
             "Disease": 58,
@@ -2918,13 +2918,13 @@
             "Fortitude": 14
         },
         "Defense": {
-            "Slash": 8.6,
-            "Crush": 8.8,
-            "Pierce": 9.1,
-            "Blood": 14.3,
-            "Fire": 13.9,
-            "Ice": 13.5,
-            "Lightning": 10.0
+            "Slash": "8.6",
+            "Crush": "8.8",
+            "Pierce": "9.1",
+            "Blood": "14.3",
+            "Fire": "13.9",
+            "Ice": "13.5",
+            "Lightning": "10.0"
         },
         "Resistance": {
             "Disease": 81,
@@ -2977,13 +2977,13 @@
             "Fortitude": 16
         },
         "Defense": {
-            "Slash": 6.7,
-            "Crush": 7.1,
-            "Pierce": 6.9,
-            "Blood": 12.0,
-            "Fire": 12.2,
-            "Ice": 12.4,
-            "Lightning": 7.9
+            "Slash": "6.7",
+            "Crush": "7.1",
+            "Pierce": "6.9",
+            "Blood": "12.0",
+            "Fire": "12.2",
+            "Ice": "12.4",
+            "Lightning": "7.9"
         },
         "Resistance": {
             "Disease": 85,
@@ -3030,13 +3030,13 @@
             "Fortitude": 15
         },
         "Defense": {
-            "Slash": 17.5,
-            "Crush": 16.9,
-            "Pierce": 17.1,
-            "Blood": 12.7,
-            "Fire": 12.8,
-            "Ice": 13.2,
-            "Lightning": 13.1
+            "Slash": "17.5",
+            "Crush": "16.9",
+            "Pierce": "17.1",
+            "Blood": "12.7",
+            "Fire": "12.8",
+            "Ice": "13.2",
+            "Lightning": "13.1"
         },
         "Resistance": {
             "Disease": 81,
@@ -3089,13 +3089,13 @@
             "Fortitude": 15
         },
         "Defense": {
-            "Slash": 15.8,
-            "Crush": 15.6,
-            "Pierce": 16.4,
-            "Blood": 16.5,
-            "Fire": 16.0,
-            "Ice": 16.4,
-            "Lightning": 15.7
+            "Slash": "15.8",
+            "Crush": "15.6",
+            "Pierce": "16.4",
+            "Blood": "16.5",
+            "Fire": "16.0",
+            "Ice": "16.4",
+            "Lightning": "15.7"
         },
         "Resistance": {
             "Disease": 63,
@@ -3150,13 +3150,13 @@
             "Fortitude": 20
         },
         "Defense": {
-            "Slash": 9.0,
-            "Crush": 9.2,
-            "Pierce": 9.2,
-            "Blood": 14.7,
-            "Fire": 13.4,
-            "Ice": 13.2,
-            "Lightning": 12.4
+            "Slash": "9.0",
+            "Crush": "9.2",
+            "Pierce": "9.2",
+            "Blood": "14.7",
+            "Fire": "13.4",
+            "Ice": "13.2",
+            "Lightning": "12.4"
         },
         "Resistance": {
             "Disease": 42,
@@ -3205,13 +3205,13 @@
             "Fortitude": 18
         },
         "Defense": {
-            "Slash": 12.3,
-            "Crush": 11.9,
-            "Pierce": 11.8,
-            "Blood": 13.6,
-            "Fire": 11.8,
-            "Ice": 12.3,
-            "Lightning": 11.0
+            "Slash": "12.3",
+            "Crush": "11.9",
+            "Pierce": "11.8",
+            "Blood": "13.6",
+            "Fire": "11.8",
+            "Ice": "12.3",
+            "Lightning": "11.0"
         },
         "Resistance": {
             "Disease": 47,
@@ -3266,13 +3266,13 @@
             "Fortitude": 15
         },
         "Defense": {
-            "Slash": 17.1,
-            "Crush": 14.9,
-            "Pierce": 15.2,
-            "Blood": 18.2,
-            "Fire": 17.2,
-            "Ice": 17.1,
-            "Lightning": 15.4
+            "Slash": "17.1",
+            "Crush": "14.9",
+            "Pierce": "15.2",
+            "Blood": "18.2",
+            "Fire": "17.2",
+            "Ice": "17.1",
+            "Lightning": "15.4"
         },
         "Resistance": {
             "Disease": 49,
@@ -3325,13 +3325,13 @@
             "Fortitude": 10
         },
         "Defense": {
-            "Slash": 17.0,
-            "Crush": 16.8,
-            "Pierce": 18.8,
-            "Blood": 6.8,
-            "Fire": 9.5,
-            "Ice": 9.9,
-            "Lightning": 9.5
+            "Slash": "17.0",
+            "Crush": "16.8",
+            "Pierce": "18.8",
+            "Blood": "6.8",
+            "Fire": "9.5",
+            "Ice": "9.9",
+            "Lightning": "9.5"
         },
         "Resistance": {
             "Disease": 42,

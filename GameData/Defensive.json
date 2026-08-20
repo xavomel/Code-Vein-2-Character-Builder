@@ -18,13 +18,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.2,
-                    "Blood": 0.4,
-                    "Fire": 0.4,
-                    "Ice": 0.4,
-                    "Lightning": 0.4
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.2",
+                    "Blood": "0.4",
+                    "Fire": "0.4",
+                    "Ice": "0.4",
+                    "Lightning": "0.4"
                 },
                 "GuardingDefense": {
                     "Slash": 80,
@@ -55,13 +55,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.285,
-                    "Pierce": 0.19,
-                    "Blood": 0.3,
-                    "Fire": 10.6,
-                    "Ice": 0.3,
-                    "Lightning": 0.3
+                    "Slash": "0.19",
+                    "Crush": "0.285",
+                    "Pierce": "0.19",
+                    "Blood": "0.3",
+                    "Fire": "10.6",
+                    "Ice": "0.3",
+                    "Lightning": "0.3"
                 },
                 "GuardingDefense": {
                     "Slash": 75,
@@ -92,13 +92,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.285,
-                    "Pierce": 0.19,
-                    "Blood": 0.3,
-                    "Fire": 0.3,
-                    "Ice": 10.6,
-                    "Lightning": 0.3
+                    "Slash": "0.19",
+                    "Crush": "0.285",
+                    "Pierce": "0.19",
+                    "Blood": "0.3",
+                    "Fire": "0.3",
+                    "Ice": "10.6",
+                    "Lightning": "0.3"
                 },
                 "GuardingDefense": {
                     "Slash": 75,
@@ -129,13 +129,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.285,
-                    "Pierce": 0.19,
-                    "Blood": 0.3,
-                    "Fire": 0.3,
-                    "Ice": 0.3,
-                    "Lightning": 10.6
+                    "Slash": "0.19",
+                    "Crush": "0.285",
+                    "Pierce": "0.19",
+                    "Blood": "0.3",
+                    "Fire": "0.3",
+                    "Ice": "0.3",
+                    "Lightning": "10.6"
                 },
                 "GuardingDefense": {
                     "Slash": 75,
@@ -166,13 +166,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.285,
-                    "Pierce": 0.19,
-                    "Blood": 10.6,
-                    "Fire": 0.3,
-                    "Ice": 0.3,
-                    "Lightning": 0.3
+                    "Slash": "0.19",
+                    "Crush": "0.285",
+                    "Pierce": "0.19",
+                    "Blood": "10.6",
+                    "Fire": "0.3",
+                    "Ice": "0.3",
+                    "Lightning": "0.3"
                 },
                 "GuardingDefense": {
                     "Slash": 75,
@@ -203,13 +203,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.2,
-                    "Blood": 0.4,
-                    "Fire": 0.4,
-                    "Ice": 0.4,
-                    "Lightning": 0.4
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.2",
+                    "Blood": "0.4",
+                    "Fire": "0.4",
+                    "Ice": "0.4",
+                    "Lightning": "0.4"
                 },
                 "GuardingDefense": {
                     "Slash": 80,
@@ -240,13 +240,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.2,
-                    "Blood": 0.4,
-                    "Fire": 0.4,
-                    "Ice": 0.4,
-                    "Lightning": 0.4
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.2",
+                    "Blood": "0.4",
+                    "Fire": "0.4",
+                    "Ice": "0.4",
+                    "Lightning": "0.4"
                 },
                 "GuardingDefense": {
                     "Slash": 80,
@@ -277,13 +277,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.2,
-                    "Blood": 0.4,
-                    "Fire": 0.4,
-                    "Ice": 0.4,
-                    "Lightning": 0.4
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.2",
+                    "Blood": "0.4",
+                    "Fire": "0.4",
+                    "Ice": "0.4",
+                    "Lightning": "0.4"
                 },
                 "GuardingDefense": {
                     "Slash": 80,
@@ -314,13 +314,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.2,
-                    "Blood": 0.4,
-                    "Fire": 0.4,
-                    "Ice": 0.4,
-                    "Lightning": 0.4
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.2",
+                    "Blood": "0.4",
+                    "Fire": "0.4",
+                    "Ice": "0.4",
+                    "Lightning": "0.4"
                 },
                 "GuardingDefense": {
                     "Slash": 80,
@@ -351,13 +351,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.2,
-                    "Blood": 0.4,
-                    "Fire": 0.4,
-                    "Ice": 0.4,
-                    "Lightning": 0.4
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.2",
+                    "Blood": "0.4",
+                    "Fire": "0.4",
+                    "Ice": "0.4",
+                    "Lightning": "0.4"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -388,13 +388,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.1,
-                    "Crush": 0.20000002,
-                    "Pierce": 0.1,
-                    "Blood": 0.3,
-                    "Fire": 0.3,
-                    "Ice": 0.3,
-                    "Lightning": 0.3
+                    "Slash": "0.1",
+                    "Crush": "0.20000002",
+                    "Pierce": "0.1",
+                    "Blood": "0.3",
+                    "Fire": "0.3",
+                    "Ice": "0.3",
+                    "Lightning": "0.3"
                 },
                 "GuardingDefense": {
                     "Slash": 75,
@@ -433,13 +433,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.4,
-                    "Pierce": 1.6,
-                    "Blood": 1.2,
-                    "Fire": 1.2,
-                    "Ice": 1.2,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.4",
+                    "Pierce": "1.6",
+                    "Blood": "1.2",
+                    "Fire": "1.2",
+                    "Ice": "1.2",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 80,
@@ -470,13 +470,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 2.28,
-                    "Pierce": 1.52,
-                    "Blood": 0.96000004,
-                    "Fire": 11.8,
-                    "Ice": 0.96000004,
-                    "Lightning": 0.96000004
+                    "Slash": "1.52",
+                    "Crush": "2.28",
+                    "Pierce": "1.52",
+                    "Blood": "0.96000004",
+                    "Fire": "11.8",
+                    "Ice": "0.96000004",
+                    "Lightning": "0.96000004"
                 },
                 "GuardingDefense": {
                     "Slash": 75,
@@ -507,13 +507,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 2.28,
-                    "Pierce": 1.52,
-                    "Blood": 0.96000004,
-                    "Fire": 0.96000004,
-                    "Ice": 11.8,
-                    "Lightning": 0.96000004
+                    "Slash": "1.52",
+                    "Crush": "2.28",
+                    "Pierce": "1.52",
+                    "Blood": "0.96000004",
+                    "Fire": "0.96000004",
+                    "Ice": "11.8",
+                    "Lightning": "0.96000004"
                 },
                 "GuardingDefense": {
                     "Slash": 75,
@@ -544,13 +544,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 2.28,
-                    "Pierce": 1.52,
-                    "Blood": 0.96000004,
-                    "Fire": 0.96000004,
-                    "Ice": 0.96000004,
-                    "Lightning": 11.8
+                    "Slash": "1.52",
+                    "Crush": "2.28",
+                    "Pierce": "1.52",
+                    "Blood": "0.96000004",
+                    "Fire": "0.96000004",
+                    "Ice": "0.96000004",
+                    "Lightning": "11.8"
                 },
                 "GuardingDefense": {
                     "Slash": 75,
@@ -581,13 +581,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 2.28,
-                    "Pierce": 1.52,
-                    "Blood": 11.8,
-                    "Fire": 0.96000004,
-                    "Ice": 0.96000004,
-                    "Lightning": 0.96000004
+                    "Slash": "1.52",
+                    "Crush": "2.28",
+                    "Pierce": "1.52",
+                    "Blood": "11.8",
+                    "Fire": "0.96000004",
+                    "Ice": "0.96000004",
+                    "Lightning": "0.96000004"
                 },
                 "GuardingDefense": {
                     "Slash": 75,
@@ -618,13 +618,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.4,
-                    "Pierce": 1.6,
-                    "Blood": 1.2,
-                    "Fire": 1.2,
-                    "Ice": 1.2,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.4",
+                    "Pierce": "1.6",
+                    "Blood": "1.2",
+                    "Fire": "1.2",
+                    "Ice": "1.2",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 80,
@@ -655,13 +655,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.4,
-                    "Pierce": 1.6,
-                    "Blood": 1.2,
-                    "Fire": 1.2,
-                    "Ice": 1.2,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.4",
+                    "Pierce": "1.6",
+                    "Blood": "1.2",
+                    "Fire": "1.2",
+                    "Ice": "1.2",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 80,
@@ -692,13 +692,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.4,
-                    "Pierce": 1.6,
-                    "Blood": 1.2,
-                    "Fire": 1.2,
-                    "Ice": 1.2,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.4",
+                    "Pierce": "1.6",
+                    "Blood": "1.2",
+                    "Fire": "1.2",
+                    "Ice": "1.2",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 80,
@@ -729,13 +729,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.4,
-                    "Pierce": 1.6,
-                    "Blood": 1.2,
-                    "Fire": 1.2,
-                    "Ice": 1.2,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.4",
+                    "Pierce": "1.6",
+                    "Blood": "1.2",
+                    "Fire": "1.2",
+                    "Ice": "1.2",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 80,
@@ -766,13 +766,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.4,
-                    "Pierce": 1.6,
-                    "Blood": 1.2,
-                    "Fire": 1.2,
-                    "Ice": 1.2,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.4",
+                    "Pierce": "1.6",
+                    "Blood": "1.2",
+                    "Fire": "1.2",
+                    "Ice": "1.2",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -803,13 +803,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.4,
-                    "Crush": 2.1000001,
-                    "Pierce": 1.4,
-                    "Blood": 1.0500001,
-                    "Fire": 1.0500001,
-                    "Ice": 1.0500001,
-                    "Lightning": 1.0500001
+                    "Slash": "1.4",
+                    "Crush": "2.1000001",
+                    "Pierce": "1.4",
+                    "Blood": "1.0500001",
+                    "Fire": "1.0500001",
+                    "Ice": "1.0500001",
+                    "Lightning": "1.0500001"
                 },
                 "GuardingDefense": {
                     "Slash": 75,
@@ -848,13 +848,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.4,
-                    "Crush": 0.2,
-                    "Pierce": 0.3,
-                    "Blood": 0.2,
-                    "Fire": 0.3,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.4",
+                    "Crush": "0.2",
+                    "Pierce": "0.3",
+                    "Blood": "0.2",
+                    "Fire": "0.3",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -885,13 +885,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.38,
-                    "Crush": 0.19,
-                    "Pierce": 0.285,
-                    "Blood": 0.1,
-                    "Fire": 10.45,
-                    "Ice": 0.1,
-                    "Lightning": 0.1
+                    "Slash": "0.38",
+                    "Crush": "0.19",
+                    "Pierce": "0.285",
+                    "Blood": "0.1",
+                    "Fire": "10.45",
+                    "Ice": "0.1",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -922,13 +922,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.38,
-                    "Crush": 0.19,
-                    "Pierce": 0.285,
-                    "Blood": 0.1,
-                    "Fire": 0.20000002,
-                    "Ice": 10.3,
-                    "Lightning": 0.1
+                    "Slash": "0.38",
+                    "Crush": "0.19",
+                    "Pierce": "0.285",
+                    "Blood": "0.1",
+                    "Fire": "0.20000002",
+                    "Ice": "10.3",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -959,13 +959,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.38,
-                    "Crush": 0.19,
-                    "Pierce": 0.285,
-                    "Blood": 0.1,
-                    "Fire": 0.20000002,
-                    "Ice": 0.1,
-                    "Lightning": 10.3
+                    "Slash": "0.38",
+                    "Crush": "0.19",
+                    "Pierce": "0.285",
+                    "Blood": "0.1",
+                    "Fire": "0.20000002",
+                    "Ice": "0.1",
+                    "Lightning": "10.3"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -996,13 +996,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.38,
-                    "Crush": 0.19,
-                    "Pierce": 0.285,
-                    "Blood": 10.3,
-                    "Fire": 0.20000002,
-                    "Ice": 0.1,
-                    "Lightning": 0.1
+                    "Slash": "0.38",
+                    "Crush": "0.19",
+                    "Pierce": "0.285",
+                    "Blood": "10.3",
+                    "Fire": "0.20000002",
+                    "Ice": "0.1",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1033,13 +1033,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.4,
-                    "Crush": 0.2,
-                    "Pierce": 0.3,
-                    "Blood": 0.2,
-                    "Fire": 0.3,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.4",
+                    "Crush": "0.2",
+                    "Pierce": "0.3",
+                    "Blood": "0.2",
+                    "Fire": "0.3",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1070,13 +1070,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.4,
-                    "Crush": 0.2,
-                    "Pierce": 0.3,
-                    "Blood": 0.2,
-                    "Fire": 0.3,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.4",
+                    "Crush": "0.2",
+                    "Pierce": "0.3",
+                    "Blood": "0.2",
+                    "Fire": "0.3",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1107,13 +1107,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.4,
-                    "Crush": 0.2,
-                    "Pierce": 0.3,
-                    "Blood": 0.2,
-                    "Fire": 0.3,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.4",
+                    "Crush": "0.2",
+                    "Pierce": "0.3",
+                    "Blood": "0.2",
+                    "Fire": "0.3",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1144,13 +1144,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.4,
-                    "Crush": 0.2,
-                    "Pierce": 0.3,
-                    "Blood": 0.2,
-                    "Fire": 0.3,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.4",
+                    "Crush": "0.2",
+                    "Pierce": "0.3",
+                    "Blood": "0.2",
+                    "Fire": "0.3",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1181,13 +1181,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.4,
-                    "Crush": 0.2,
-                    "Pierce": 0.3,
-                    "Blood": 0.2,
-                    "Fire": 0.3,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.4",
+                    "Crush": "0.2",
+                    "Pierce": "0.3",
+                    "Blood": "0.2",
+                    "Fire": "0.3",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1218,13 +1218,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.3,
-                    "Crush": 0.1,
-                    "Pierce": 0.20000002,
-                    "Blood": 0.1,
-                    "Fire": 0.20000002,
-                    "Ice": 0.1,
-                    "Lightning": 0.1
+                    "Slash": "0.3",
+                    "Crush": "0.1",
+                    "Pierce": "0.20000002",
+                    "Blood": "0.1",
+                    "Fire": "0.20000002",
+                    "Ice": "0.1",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1263,13 +1263,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 1.5,
-                    "Pierce": 2.2,
-                    "Blood": 1.8,
-                    "Fire": 2.0,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "3.0",
+                    "Crush": "1.5",
+                    "Pierce": "2.2",
+                    "Blood": "1.8",
+                    "Fire": "2.0",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1300,13 +1300,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 2.85,
-                    "Crush": 1.425,
-                    "Pierce": 2.09,
-                    "Blood": 1.4399999,
-                    "Fire": 13.0,
-                    "Ice": 1.4399999,
-                    "Lightning": 1.4399999
+                    "Slash": "2.85",
+                    "Crush": "1.425",
+                    "Pierce": "2.09",
+                    "Blood": "1.4399999",
+                    "Fire": "13.0",
+                    "Ice": "1.4399999",
+                    "Lightning": "1.4399999"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1337,13 +1337,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 2.85,
-                    "Crush": 1.425,
-                    "Pierce": 2.09,
-                    "Blood": 1.4399999,
-                    "Fire": 1.6,
-                    "Ice": 12.7,
-                    "Lightning": 1.4399999
+                    "Slash": "2.85",
+                    "Crush": "1.425",
+                    "Pierce": "2.09",
+                    "Blood": "1.4399999",
+                    "Fire": "1.6",
+                    "Ice": "12.7",
+                    "Lightning": "1.4399999"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1374,13 +1374,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 2.85,
-                    "Crush": 1.425,
-                    "Pierce": 2.09,
-                    "Blood": 1.4399999,
-                    "Fire": 1.6,
-                    "Ice": 1.4399999,
-                    "Lightning": 12.7
+                    "Slash": "2.85",
+                    "Crush": "1.425",
+                    "Pierce": "2.09",
+                    "Blood": "1.4399999",
+                    "Fire": "1.6",
+                    "Ice": "1.4399999",
+                    "Lightning": "12.7"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1411,13 +1411,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 2.85,
-                    "Crush": 1.425,
-                    "Pierce": 2.09,
-                    "Blood": 12.7,
-                    "Fire": 1.6,
-                    "Ice": 1.4399999,
-                    "Lightning": 1.4399999
+                    "Slash": "2.85",
+                    "Crush": "1.425",
+                    "Pierce": "2.09",
+                    "Blood": "12.7",
+                    "Fire": "1.6",
+                    "Ice": "1.4399999",
+                    "Lightning": "1.4399999"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1448,13 +1448,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 1.5,
-                    "Pierce": 2.2,
-                    "Blood": 1.8,
-                    "Fire": 2.0,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "3.0",
+                    "Crush": "1.5",
+                    "Pierce": "2.2",
+                    "Blood": "1.8",
+                    "Fire": "2.0",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1485,13 +1485,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 1.5,
-                    "Pierce": 2.2,
-                    "Blood": 1.8,
-                    "Fire": 2.0,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "3.0",
+                    "Crush": "1.5",
+                    "Pierce": "2.2",
+                    "Blood": "1.8",
+                    "Fire": "2.0",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1522,13 +1522,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 1.5,
-                    "Pierce": 2.2,
-                    "Blood": 1.8,
-                    "Fire": 2.0,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "3.0",
+                    "Crush": "1.5",
+                    "Pierce": "2.2",
+                    "Blood": "1.8",
+                    "Fire": "2.0",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1559,13 +1559,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 1.5,
-                    "Pierce": 2.2,
-                    "Blood": 1.8,
-                    "Fire": 2.0,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "3.0",
+                    "Crush": "1.5",
+                    "Pierce": "2.2",
+                    "Blood": "1.8",
+                    "Fire": "2.0",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1596,13 +1596,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 1.5,
-                    "Pierce": 2.2,
-                    "Blood": 1.8,
-                    "Fire": 2.0,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "3.0",
+                    "Crush": "1.5",
+                    "Pierce": "2.2",
+                    "Blood": "1.8",
+                    "Fire": "2.0",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1633,13 +1633,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 2.625,
-                    "Crush": 1.3125,
-                    "Pierce": 1.9250001,
-                    "Blood": 1.5749999,
-                    "Fire": 1.75,
-                    "Ice": 1.5749999,
-                    "Lightning": 1.5749999
+                    "Slash": "2.625",
+                    "Crush": "1.3125",
+                    "Pierce": "1.9250001",
+                    "Blood": "1.5749999",
+                    "Fire": "1.75",
+                    "Ice": "1.5749999",
+                    "Lightning": "1.5749999"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1678,13 +1678,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 5.4,
-                    "Crush": 3.7,
-                    "Pierce": 4.5,
-                    "Blood": 3.8,
-                    "Fire": 4.4,
-                    "Ice": 3.8,
-                    "Lightning": 3.8
+                    "Slash": "5.4",
+                    "Crush": "3.7",
+                    "Pierce": "4.5",
+                    "Blood": "3.8",
+                    "Fire": "4.4",
+                    "Ice": "3.8",
+                    "Lightning": "3.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1715,13 +1715,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 5.13,
-                    "Crush": 3.515,
-                    "Pierce": 4.275,
-                    "Blood": 3.04,
-                    "Fire": 16.6,
-                    "Ice": 3.04,
-                    "Lightning": 3.04
+                    "Slash": "5.13",
+                    "Crush": "3.515",
+                    "Pierce": "4.275",
+                    "Blood": "3.04",
+                    "Fire": "16.6",
+                    "Ice": "3.04",
+                    "Lightning": "3.04"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1752,13 +1752,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 5.13,
-                    "Crush": 3.515,
-                    "Pierce": 4.275,
-                    "Blood": 3.04,
-                    "Fire": 3.5200002,
-                    "Ice": 15.7,
-                    "Lightning": 3.04
+                    "Slash": "5.13",
+                    "Crush": "3.515",
+                    "Pierce": "4.275",
+                    "Blood": "3.04",
+                    "Fire": "3.5200002",
+                    "Ice": "15.7",
+                    "Lightning": "3.04"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1789,13 +1789,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 5.13,
-                    "Crush": 3.515,
-                    "Pierce": 4.275,
-                    "Blood": 3.04,
-                    "Fire": 3.5200002,
-                    "Ice": 3.04,
-                    "Lightning": 15.7
+                    "Slash": "5.13",
+                    "Crush": "3.515",
+                    "Pierce": "4.275",
+                    "Blood": "3.04",
+                    "Fire": "3.5200002",
+                    "Ice": "3.04",
+                    "Lightning": "15.7"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1826,13 +1826,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 5.13,
-                    "Crush": 3.515,
-                    "Pierce": 4.275,
-                    "Blood": 15.7,
-                    "Fire": 3.5200002,
-                    "Ice": 3.04,
-                    "Lightning": 3.04
+                    "Slash": "5.13",
+                    "Crush": "3.515",
+                    "Pierce": "4.275",
+                    "Blood": "15.7",
+                    "Fire": "3.5200002",
+                    "Ice": "3.04",
+                    "Lightning": "3.04"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -1863,13 +1863,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 5.4,
-                    "Crush": 3.7,
-                    "Pierce": 4.5,
-                    "Blood": 3.8,
-                    "Fire": 4.4,
-                    "Ice": 3.8,
-                    "Lightning": 3.8
+                    "Slash": "5.4",
+                    "Crush": "3.7",
+                    "Pierce": "4.5",
+                    "Blood": "3.8",
+                    "Fire": "4.4",
+                    "Ice": "3.8",
+                    "Lightning": "3.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1900,13 +1900,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 5.4,
-                    "Crush": 3.7,
-                    "Pierce": 4.5,
-                    "Blood": 3.8,
-                    "Fire": 4.4,
-                    "Ice": 3.8,
-                    "Lightning": 3.8
+                    "Slash": "5.4",
+                    "Crush": "3.7",
+                    "Pierce": "4.5",
+                    "Blood": "3.8",
+                    "Fire": "4.4",
+                    "Ice": "3.8",
+                    "Lightning": "3.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1937,13 +1937,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 5.4,
-                    "Crush": 3.7,
-                    "Pierce": 4.5,
-                    "Blood": 3.8,
-                    "Fire": 4.4,
-                    "Ice": 3.8,
-                    "Lightning": 3.8
+                    "Slash": "5.4",
+                    "Crush": "3.7",
+                    "Pierce": "4.5",
+                    "Blood": "3.8",
+                    "Fire": "4.4",
+                    "Ice": "3.8",
+                    "Lightning": "3.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -1974,13 +1974,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 5.4,
-                    "Crush": 3.7,
-                    "Pierce": 4.5,
-                    "Blood": 3.8,
-                    "Fire": 4.4,
-                    "Ice": 3.8,
-                    "Lightning": 3.8
+                    "Slash": "5.4",
+                    "Crush": "3.7",
+                    "Pierce": "4.5",
+                    "Blood": "3.8",
+                    "Fire": "4.4",
+                    "Ice": "3.8",
+                    "Lightning": "3.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -2011,13 +2011,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 5.4,
-                    "Crush": 3.7,
-                    "Pierce": 4.5,
-                    "Blood": 3.8,
-                    "Fire": 4.4,
-                    "Ice": 3.8,
-                    "Lightning": 3.8
+                    "Slash": "5.4",
+                    "Crush": "3.7",
+                    "Pierce": "4.5",
+                    "Blood": "3.8",
+                    "Fire": "4.4",
+                    "Ice": "3.8",
+                    "Lightning": "3.8"
                 },
                 "GuardingDefense": {
                     "Slash": 100,
@@ -2048,13 +2048,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 4.725,
-                    "Crush": 3.2375,
-                    "Pierce": 3.9375,
-                    "Blood": 3.325,
-                    "Fire": 3.8500001,
-                    "Ice": 3.325,
-                    "Lightning": 3.325
+                    "Slash": "4.725",
+                    "Crush": "3.2375",
+                    "Pierce": "3.9375",
+                    "Blood": "3.325",
+                    "Fire": "3.8500001",
+                    "Ice": "3.325",
+                    "Lightning": "3.325"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -2093,13 +2093,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.8,
-                    "Crush": 3.2,
-                    "Pierce": 2.3,
-                    "Blood": 1.0,
-                    "Fire": 1.0,
-                    "Ice": 1.0,
-                    "Lightning": 1.0
+                    "Slash": "1.8",
+                    "Crush": "3.2",
+                    "Pierce": "2.3",
+                    "Blood": "1.0",
+                    "Fire": "1.0",
+                    "Ice": "1.0",
+                    "Lightning": "1.0"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2130,13 +2130,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.7099999,
-                    "Crush": 3.04,
-                    "Pierce": 2.185,
-                    "Blood": 0.8,
-                    "Fire": 11.5,
-                    "Ice": 0.8,
-                    "Lightning": 0.8
+                    "Slash": "1.7099999",
+                    "Crush": "3.04",
+                    "Pierce": "2.185",
+                    "Blood": "0.8",
+                    "Fire": "11.5",
+                    "Ice": "0.8",
+                    "Lightning": "0.8"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -2167,13 +2167,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.7099999,
-                    "Crush": 3.04,
-                    "Pierce": 2.185,
-                    "Blood": 0.8,
-                    "Fire": 0.8,
-                    "Ice": 11.5,
-                    "Lightning": 0.8
+                    "Slash": "1.7099999",
+                    "Crush": "3.04",
+                    "Pierce": "2.185",
+                    "Blood": "0.8",
+                    "Fire": "0.8",
+                    "Ice": "11.5",
+                    "Lightning": "0.8"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -2204,13 +2204,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.7099999,
-                    "Crush": 3.04,
-                    "Pierce": 2.185,
-                    "Blood": 0.8,
-                    "Fire": 0.8,
-                    "Ice": 0.8,
-                    "Lightning": 11.5
+                    "Slash": "1.7099999",
+                    "Crush": "3.04",
+                    "Pierce": "2.185",
+                    "Blood": "0.8",
+                    "Fire": "0.8",
+                    "Ice": "0.8",
+                    "Lightning": "11.5"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -2241,13 +2241,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.7099999,
-                    "Crush": 3.04,
-                    "Pierce": 2.185,
-                    "Blood": 11.5,
-                    "Fire": 0.8,
-                    "Ice": 0.8,
-                    "Lightning": 0.8
+                    "Slash": "1.7099999",
+                    "Crush": "3.04",
+                    "Pierce": "2.185",
+                    "Blood": "11.5",
+                    "Fire": "0.8",
+                    "Ice": "0.8",
+                    "Lightning": "0.8"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -2278,13 +2278,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.8,
-                    "Crush": 3.2,
-                    "Pierce": 2.3,
-                    "Blood": 1.0,
-                    "Fire": 1.0,
-                    "Ice": 1.0,
-                    "Lightning": 1.0
+                    "Slash": "1.8",
+                    "Crush": "3.2",
+                    "Pierce": "2.3",
+                    "Blood": "1.0",
+                    "Fire": "1.0",
+                    "Ice": "1.0",
+                    "Lightning": "1.0"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2315,13 +2315,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.8,
-                    "Crush": 3.2,
-                    "Pierce": 2.3,
-                    "Blood": 1.0,
-                    "Fire": 1.0,
-                    "Ice": 1.0,
-                    "Lightning": 1.0
+                    "Slash": "1.8",
+                    "Crush": "3.2",
+                    "Pierce": "2.3",
+                    "Blood": "1.0",
+                    "Fire": "1.0",
+                    "Ice": "1.0",
+                    "Lightning": "1.0"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2352,13 +2352,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.8,
-                    "Crush": 3.2,
-                    "Pierce": 2.3,
-                    "Blood": 1.0,
-                    "Fire": 1.0,
-                    "Ice": 1.0,
-                    "Lightning": 1.0
+                    "Slash": "1.8",
+                    "Crush": "3.2",
+                    "Pierce": "2.3",
+                    "Blood": "1.0",
+                    "Fire": "1.0",
+                    "Ice": "1.0",
+                    "Lightning": "1.0"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2389,13 +2389,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.8,
-                    "Crush": 3.2,
-                    "Pierce": 2.3,
-                    "Blood": 1.0,
-                    "Fire": 1.0,
-                    "Ice": 1.0,
-                    "Lightning": 1.0
+                    "Slash": "1.8",
+                    "Crush": "3.2",
+                    "Pierce": "2.3",
+                    "Blood": "1.0",
+                    "Fire": "1.0",
+                    "Ice": "1.0",
+                    "Lightning": "1.0"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2426,13 +2426,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.8,
-                    "Crush": 3.2,
-                    "Pierce": 2.3,
-                    "Blood": 1.0,
-                    "Fire": 1.0,
-                    "Ice": 1.0,
-                    "Lightning": 1.0
+                    "Slash": "1.8",
+                    "Crush": "3.2",
+                    "Pierce": "2.3",
+                    "Blood": "1.0",
+                    "Fire": "1.0",
+                    "Ice": "1.0",
+                    "Lightning": "1.0"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -2463,13 +2463,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 1.5749999,
-                    "Crush": 2.8,
-                    "Pierce": 2.0125,
-                    "Blood": 0.875,
-                    "Fire": 0.875,
-                    "Ice": 0.875,
-                    "Lightning": 0.875
+                    "Slash": "1.5749999",
+                    "Crush": "2.8",
+                    "Pierce": "2.0125",
+                    "Blood": "0.875",
+                    "Fire": "0.875",
+                    "Ice": "0.875",
+                    "Lightning": "0.875"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -2508,13 +2508,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.2,
-                    "Crush": 4.0,
-                    "Pierce": 3.2,
-                    "Blood": 2.0,
-                    "Fire": 2.0,
-                    "Ice": 2.0,
-                    "Lightning": 2.0
+                    "Slash": "3.2",
+                    "Crush": "4.0",
+                    "Pierce": "3.2",
+                    "Blood": "2.0",
+                    "Fire": "2.0",
+                    "Ice": "2.0",
+                    "Lightning": "2.0"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2545,13 +2545,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.04,
-                    "Crush": 3.8,
-                    "Pierce": 3.04,
-                    "Blood": 1.6,
-                    "Fire": 13.0,
-                    "Ice": 1.6,
-                    "Lightning": 1.6
+                    "Slash": "3.04",
+                    "Crush": "3.8",
+                    "Pierce": "3.04",
+                    "Blood": "1.6",
+                    "Fire": "13.0",
+                    "Ice": "1.6",
+                    "Lightning": "1.6"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -2582,13 +2582,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.04,
-                    "Crush": 3.8,
-                    "Pierce": 3.04,
-                    "Blood": 1.6,
-                    "Fire": 1.6,
-                    "Ice": 13.0,
-                    "Lightning": 1.6
+                    "Slash": "3.04",
+                    "Crush": "3.8",
+                    "Pierce": "3.04",
+                    "Blood": "1.6",
+                    "Fire": "1.6",
+                    "Ice": "13.0",
+                    "Lightning": "1.6"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -2619,13 +2619,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.04,
-                    "Crush": 3.8,
-                    "Pierce": 3.04,
-                    "Blood": 1.6,
-                    "Fire": 1.6,
-                    "Ice": 1.6,
-                    "Lightning": 13.0
+                    "Slash": "3.04",
+                    "Crush": "3.8",
+                    "Pierce": "3.04",
+                    "Blood": "1.6",
+                    "Fire": "1.6",
+                    "Ice": "1.6",
+                    "Lightning": "13.0"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -2656,13 +2656,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.04,
-                    "Crush": 3.8,
-                    "Pierce": 3.04,
-                    "Blood": 13.0,
-                    "Fire": 1.6,
-                    "Ice": 1.6,
-                    "Lightning": 1.6
+                    "Slash": "3.04",
+                    "Crush": "3.8",
+                    "Pierce": "3.04",
+                    "Blood": "13.0",
+                    "Fire": "1.6",
+                    "Ice": "1.6",
+                    "Lightning": "1.6"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -2693,13 +2693,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.2,
-                    "Crush": 4.0,
-                    "Pierce": 3.2,
-                    "Blood": 2.0,
-                    "Fire": 2.0,
-                    "Ice": 2.0,
-                    "Lightning": 2.0
+                    "Slash": "3.2",
+                    "Crush": "4.0",
+                    "Pierce": "3.2",
+                    "Blood": "2.0",
+                    "Fire": "2.0",
+                    "Ice": "2.0",
+                    "Lightning": "2.0"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2730,13 +2730,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.2,
-                    "Crush": 4.0,
-                    "Pierce": 3.2,
-                    "Blood": 2.0,
-                    "Fire": 2.0,
-                    "Ice": 2.0,
-                    "Lightning": 2.0
+                    "Slash": "3.2",
+                    "Crush": "4.0",
+                    "Pierce": "3.2",
+                    "Blood": "2.0",
+                    "Fire": "2.0",
+                    "Ice": "2.0",
+                    "Lightning": "2.0"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2767,13 +2767,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.2,
-                    "Crush": 4.0,
-                    "Pierce": 3.2,
-                    "Blood": 2.0,
-                    "Fire": 2.0,
-                    "Ice": 2.0,
-                    "Lightning": 2.0
+                    "Slash": "3.2",
+                    "Crush": "4.0",
+                    "Pierce": "3.2",
+                    "Blood": "2.0",
+                    "Fire": "2.0",
+                    "Ice": "2.0",
+                    "Lightning": "2.0"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2804,13 +2804,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.2,
-                    "Crush": 4.0,
-                    "Pierce": 3.2,
-                    "Blood": 2.0,
-                    "Fire": 2.0,
-                    "Ice": 2.0,
-                    "Lightning": 2.0
+                    "Slash": "3.2",
+                    "Crush": "4.0",
+                    "Pierce": "3.2",
+                    "Blood": "2.0",
+                    "Fire": "2.0",
+                    "Ice": "2.0",
+                    "Lightning": "2.0"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2841,13 +2841,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 3.2,
-                    "Crush": 4.0,
-                    "Pierce": 3.2,
-                    "Blood": 2.0,
-                    "Fire": 2.0,
-                    "Ice": 2.0,
-                    "Lightning": 2.0
+                    "Slash": "3.2",
+                    "Crush": "4.0",
+                    "Pierce": "3.2",
+                    "Blood": "2.0",
+                    "Fire": "2.0",
+                    "Ice": "2.0",
+                    "Lightning": "2.0"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -2878,13 +2878,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 2.8,
-                    "Crush": 3.5,
-                    "Pierce": 2.8,
-                    "Blood": 1.75,
-                    "Fire": 1.75,
-                    "Ice": 1.75,
-                    "Lightning": 1.75
+                    "Slash": "2.8",
+                    "Crush": "3.5",
+                    "Pierce": "2.8",
+                    "Blood": "1.75",
+                    "Fire": "1.75",
+                    "Ice": "1.75",
+                    "Lightning": "1.75"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -2923,13 +2923,13 @@
                     "Fortitude": 0
                 },
                 "Defense": {
-                    "Slash": 0.7,
-                    "Crush": 0.7,
-                    "Pierce": 0.9,
-                    "Blood": 1.2,
-                    "Fire": 0.6,
-                    "Ice": 0.6,
-                    "Lightning": 0.6
+                    "Slash": "0.7",
+                    "Crush": "0.7",
+                    "Pierce": "0.9",
+                    "Blood": "1.2",
+                    "Fire": "0.6",
+                    "Ice": "0.6",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -2968,13 +2968,13 @@
                     "Fortitude": 6
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.2,
-                    "Pierce": 1.2,
-                    "Blood": 0.1,
-                    "Fire": 0.2,
-                    "Ice": 0.1,
-                    "Lightning": 0.2
+                    "Slash": "1.6",
+                    "Crush": "2.2",
+                    "Pierce": "1.2",
+                    "Blood": "0.1",
+                    "Fire": "0.2",
+                    "Ice": "0.1",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -3005,13 +3005,13 @@
                     "Fortitude": 6
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 2.09,
-                    "Pierce": 1.14,
-                    "Blood": 0.0,
-                    "Fire": 10.3,
-                    "Ice": 0.0,
-                    "Lightning": 0.1
+                    "Slash": "1.52",
+                    "Crush": "2.09",
+                    "Pierce": "1.14",
+                    "Blood": "0.0",
+                    "Fire": "10.3",
+                    "Ice": "0.0",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -3042,13 +3042,13 @@
                     "Fortitude": 6
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 2.09,
-                    "Pierce": 1.14,
-                    "Blood": 0.0,
-                    "Fire": 0.1,
-                    "Ice": 10.15,
-                    "Lightning": 0.1
+                    "Slash": "1.52",
+                    "Crush": "2.09",
+                    "Pierce": "1.14",
+                    "Blood": "0.0",
+                    "Fire": "0.1",
+                    "Ice": "10.15",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -3079,13 +3079,13 @@
                     "Fortitude": 6
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 2.09,
-                    "Pierce": 1.14,
-                    "Blood": 0.0,
-                    "Fire": 0.1,
-                    "Ice": 0.0,
-                    "Lightning": 10.3
+                    "Slash": "1.52",
+                    "Crush": "2.09",
+                    "Pierce": "1.14",
+                    "Blood": "0.0",
+                    "Fire": "0.1",
+                    "Ice": "0.0",
+                    "Lightning": "10.3"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -3116,13 +3116,13 @@
                     "Fortitude": 6
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 2.09,
-                    "Pierce": 1.14,
-                    "Blood": 10.15,
-                    "Fire": 0.1,
-                    "Ice": 0.0,
-                    "Lightning": 0.1
+                    "Slash": "1.52",
+                    "Crush": "2.09",
+                    "Pierce": "1.14",
+                    "Blood": "10.15",
+                    "Fire": "0.1",
+                    "Ice": "0.0",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -3153,13 +3153,13 @@
                     "Fortitude": 8
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.2,
-                    "Pierce": 1.2,
-                    "Blood": 0.1,
-                    "Fire": 0.2,
-                    "Ice": 0.1,
-                    "Lightning": 0.2
+                    "Slash": "1.6",
+                    "Crush": "2.2",
+                    "Pierce": "1.2",
+                    "Blood": "0.1",
+                    "Fire": "0.2",
+                    "Ice": "0.1",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -3190,13 +3190,13 @@
                     "Fortitude": 8
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.2,
-                    "Pierce": 1.2,
-                    "Blood": 0.1,
-                    "Fire": 0.2,
-                    "Ice": 0.1,
-                    "Lightning": 0.2
+                    "Slash": "1.6",
+                    "Crush": "2.2",
+                    "Pierce": "1.2",
+                    "Blood": "0.1",
+                    "Fire": "0.2",
+                    "Ice": "0.1",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -3227,13 +3227,13 @@
                     "Fortitude": 8
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.2,
-                    "Pierce": 1.2,
-                    "Blood": 0.1,
-                    "Fire": 0.2,
-                    "Ice": 0.1,
-                    "Lightning": 0.2
+                    "Slash": "1.6",
+                    "Crush": "2.2",
+                    "Pierce": "1.2",
+                    "Blood": "0.1",
+                    "Fire": "0.2",
+                    "Ice": "0.1",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -3264,13 +3264,13 @@
                     "Fortitude": 8
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.2,
-                    "Pierce": 1.2,
-                    "Blood": 0.1,
-                    "Fire": 0.2,
-                    "Ice": 0.1,
-                    "Lightning": 0.2
+                    "Slash": "1.6",
+                    "Crush": "2.2",
+                    "Pierce": "1.2",
+                    "Blood": "0.1",
+                    "Fire": "0.2",
+                    "Ice": "0.1",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -3301,13 +3301,13 @@
                     "Fortitude": 12
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.2,
-                    "Pierce": 1.2,
-                    "Blood": 0.1,
-                    "Fire": 0.2,
-                    "Ice": 0.1,
-                    "Lightning": 0.2
+                    "Slash": "1.6",
+                    "Crush": "2.2",
+                    "Pierce": "1.2",
+                    "Blood": "0.1",
+                    "Fire": "0.2",
+                    "Ice": "0.1",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -3338,13 +3338,13 @@
                     "Fortitude": 5
                 },
                 "Defense": {
-                    "Slash": 1.4,
-                    "Crush": 1.9250001,
-                    "Pierce": 1.0500001,
-                    "Blood": 0.0,
-                    "Fire": 0.1,
-                    "Ice": 0.0,
-                    "Lightning": 0.1
+                    "Slash": "1.4",
+                    "Crush": "1.9250001",
+                    "Pierce": "1.0500001",
+                    "Blood": "0.0",
+                    "Fire": "0.1",
+                    "Ice": "0.0",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -3383,13 +3383,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 4.4,
-                    "Pierce": 2.8,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.5,
-                    "Lightning": 0.6
+                    "Slash": "3.0",
+                    "Crush": "4.4",
+                    "Pierce": "2.8",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.5",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -3420,13 +3420,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 2.85,
-                    "Crush": 4.18,
-                    "Pierce": 2.6599998,
-                    "Blood": 0.4,
-                    "Fire": 10.9,
-                    "Ice": 0.4,
-                    "Lightning": 0.48000002
+                    "Slash": "2.85",
+                    "Crush": "4.18",
+                    "Pierce": "2.6599998",
+                    "Blood": "0.4",
+                    "Fire": "10.9",
+                    "Ice": "0.4",
+                    "Lightning": "0.48000002"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -3457,13 +3457,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 2.85,
-                    "Crush": 4.18,
-                    "Pierce": 2.6599998,
-                    "Blood": 0.4,
-                    "Fire": 0.48000002,
-                    "Ice": 10.75,
-                    "Lightning": 0.48000002
+                    "Slash": "2.85",
+                    "Crush": "4.18",
+                    "Pierce": "2.6599998",
+                    "Blood": "0.4",
+                    "Fire": "0.48000002",
+                    "Ice": "10.75",
+                    "Lightning": "0.48000002"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -3494,13 +3494,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 2.85,
-                    "Crush": 4.18,
-                    "Pierce": 2.6599998,
-                    "Blood": 0.4,
-                    "Fire": 0.48000002,
-                    "Ice": 0.4,
-                    "Lightning": 10.9
+                    "Slash": "2.85",
+                    "Crush": "4.18",
+                    "Pierce": "2.6599998",
+                    "Blood": "0.4",
+                    "Fire": "0.48000002",
+                    "Ice": "0.4",
+                    "Lightning": "10.9"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -3531,13 +3531,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 2.85,
-                    "Crush": 4.18,
-                    "Pierce": 2.6599998,
-                    "Blood": 10.75,
-                    "Fire": 0.48000002,
-                    "Ice": 0.4,
-                    "Lightning": 0.48000002
+                    "Slash": "2.85",
+                    "Crush": "4.18",
+                    "Pierce": "2.6599998",
+                    "Blood": "10.75",
+                    "Fire": "0.48000002",
+                    "Ice": "0.4",
+                    "Lightning": "0.48000002"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -3568,13 +3568,13 @@
                     "Fortitude": 12
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 4.4,
-                    "Pierce": 2.8,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.5,
-                    "Lightning": 0.6
+                    "Slash": "3.0",
+                    "Crush": "4.4",
+                    "Pierce": "2.8",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.5",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -3605,13 +3605,13 @@
                     "Fortitude": 12
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 4.4,
-                    "Pierce": 2.8,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.5,
-                    "Lightning": 0.6
+                    "Slash": "3.0",
+                    "Crush": "4.4",
+                    "Pierce": "2.8",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.5",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -3642,13 +3642,13 @@
                     "Fortitude": 12
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 4.4,
-                    "Pierce": 2.8,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.5,
-                    "Lightning": 0.6
+                    "Slash": "3.0",
+                    "Crush": "4.4",
+                    "Pierce": "2.8",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.5",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -3679,13 +3679,13 @@
                     "Fortitude": 12
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 4.4,
-                    "Pierce": 2.8,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.5,
-                    "Lightning": 0.6
+                    "Slash": "3.0",
+                    "Crush": "4.4",
+                    "Pierce": "2.8",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.5",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 90,
@@ -3716,13 +3716,13 @@
                     "Fortitude": 17
                 },
                 "Defense": {
-                    "Slash": 3.0,
-                    "Crush": 4.4,
-                    "Pierce": 2.8,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.5,
-                    "Lightning": 0.6
+                    "Slash": "3.0",
+                    "Crush": "4.4",
+                    "Pierce": "2.8",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.5",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 95,
@@ -3753,13 +3753,13 @@
                     "Fortitude": 8
                 },
                 "Defense": {
-                    "Slash": 2.625,
-                    "Crush": 3.8500001,
-                    "Pierce": 2.45,
-                    "Blood": 0.4,
-                    "Fire": 0.5,
-                    "Ice": 0.4,
-                    "Lightning": 0.5
+                    "Slash": "2.625",
+                    "Crush": "3.8500001",
+                    "Pierce": "2.45",
+                    "Blood": "0.4",
+                    "Fire": "0.5",
+                    "Ice": "0.4",
+                    "Lightning": "0.5"
                 },
                 "GuardingDefense": {
                     "Slash": 85,
@@ -3798,13 +3798,13 @@
                     "Fortitude": 2
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.1,
-                    "Pierce": 0.4,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.6,
-                    "Lightning": 0.6
+                    "Slash": "0.2",
+                    "Crush": "0.1",
+                    "Pierce": "0.4",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.6",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -3835,13 +3835,13 @@
                     "Fortitude": 2
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.095,
-                    "Pierce": 0.38,
-                    "Blood": 0.4,
-                    "Fire": 10.9,
-                    "Ice": 0.48000002,
-                    "Lightning": 0.48000002
+                    "Slash": "0.19",
+                    "Crush": "0.095",
+                    "Pierce": "0.38",
+                    "Blood": "0.4",
+                    "Fire": "10.9",
+                    "Ice": "0.48000002",
+                    "Lightning": "0.48000002"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -3872,13 +3872,13 @@
                     "Fortitude": 2
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.095,
-                    "Pierce": 0.38,
-                    "Blood": 0.4,
-                    "Fire": 0.48000002,
-                    "Ice": 10.9,
-                    "Lightning": 0.48000002
+                    "Slash": "0.19",
+                    "Crush": "0.095",
+                    "Pierce": "0.38",
+                    "Blood": "0.4",
+                    "Fire": "0.48000002",
+                    "Ice": "10.9",
+                    "Lightning": "0.48000002"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -3909,13 +3909,13 @@
                     "Fortitude": 2
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.095,
-                    "Pierce": 0.38,
-                    "Blood": 0.4,
-                    "Fire": 0.48000002,
-                    "Ice": 0.48000002,
-                    "Lightning": 10.9
+                    "Slash": "0.19",
+                    "Crush": "0.095",
+                    "Pierce": "0.38",
+                    "Blood": "0.4",
+                    "Fire": "0.48000002",
+                    "Ice": "0.48000002",
+                    "Lightning": "10.9"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -3946,13 +3946,13 @@
                     "Fortitude": 2
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.095,
-                    "Pierce": 0.38,
-                    "Blood": 10.75,
-                    "Fire": 0.48000002,
-                    "Ice": 0.48000002,
-                    "Lightning": 0.48000002
+                    "Slash": "0.19",
+                    "Crush": "0.095",
+                    "Pierce": "0.38",
+                    "Blood": "10.75",
+                    "Fire": "0.48000002",
+                    "Ice": "0.48000002",
+                    "Lightning": "0.48000002"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -3983,13 +3983,13 @@
                     "Fortitude": 3
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.1,
-                    "Pierce": 0.4,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.6,
-                    "Lightning": 0.6
+                    "Slash": "0.2",
+                    "Crush": "0.1",
+                    "Pierce": "0.4",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.6",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4020,13 +4020,13 @@
                     "Fortitude": 3
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.1,
-                    "Pierce": 0.4,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.6,
-                    "Lightning": 0.6
+                    "Slash": "0.2",
+                    "Crush": "0.1",
+                    "Pierce": "0.4",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.6",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4057,13 +4057,13 @@
                     "Fortitude": 3
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.1,
-                    "Pierce": 0.4,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.6,
-                    "Lightning": 0.6
+                    "Slash": "0.2",
+                    "Crush": "0.1",
+                    "Pierce": "0.4",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.6",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4094,13 +4094,13 @@
                     "Fortitude": 3
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.1,
-                    "Pierce": 0.4,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.6,
-                    "Lightning": 0.6
+                    "Slash": "0.2",
+                    "Crush": "0.1",
+                    "Pierce": "0.4",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.6",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4131,13 +4131,13 @@
                     "Fortitude": 7
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.1,
-                    "Pierce": 0.4,
-                    "Blood": 0.5,
-                    "Fire": 0.6,
-                    "Ice": 0.6,
-                    "Lightning": 0.6
+                    "Slash": "0.2",
+                    "Crush": "0.1",
+                    "Pierce": "0.4",
+                    "Blood": "0.5",
+                    "Fire": "0.6",
+                    "Ice": "0.6",
+                    "Lightning": "0.6"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4168,13 +4168,13 @@
                     "Fortitude": 1
                 },
                 "Defense": {
-                    "Slash": 0.1,
-                    "Crush": 0.0,
-                    "Pierce": 0.3,
-                    "Blood": 0.4,
-                    "Fire": 0.5,
-                    "Ice": 0.5,
-                    "Lightning": 0.5
+                    "Slash": "0.1",
+                    "Crush": "0.0",
+                    "Pierce": "0.3",
+                    "Blood": "0.4",
+                    "Fire": "0.5",
+                    "Ice": "0.5",
+                    "Lightning": "0.5"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4213,13 +4213,13 @@
                     "Fortitude": 4
                 },
                 "Defense": {
-                    "Slash": 1.4,
-                    "Crush": 0.8,
-                    "Pierce": 2.8,
-                    "Blood": 1.4,
-                    "Fire": 1.8,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "1.4",
+                    "Crush": "0.8",
+                    "Pierce": "2.8",
+                    "Blood": "1.4",
+                    "Fire": "1.8",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4250,13 +4250,13 @@
                     "Fortitude": 4
                 },
                 "Defense": {
-                    "Slash": 1.3299999,
-                    "Crush": 0.76,
-                    "Pierce": 2.6599998,
-                    "Blood": 1.12,
-                    "Fire": 12.7,
-                    "Ice": 1.4399999,
-                    "Lightning": 1.4399999
+                    "Slash": "1.3299999",
+                    "Crush": "0.76",
+                    "Pierce": "2.6599998",
+                    "Blood": "1.12",
+                    "Fire": "12.7",
+                    "Ice": "1.4399999",
+                    "Lightning": "1.4399999"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4287,13 +4287,13 @@
                     "Fortitude": 4
                 },
                 "Defense": {
-                    "Slash": 1.3299999,
-                    "Crush": 0.76,
-                    "Pierce": 2.6599998,
-                    "Blood": 1.12,
-                    "Fire": 1.4399999,
-                    "Ice": 12.7,
-                    "Lightning": 1.4399999
+                    "Slash": "1.3299999",
+                    "Crush": "0.76",
+                    "Pierce": "2.6599998",
+                    "Blood": "1.12",
+                    "Fire": "1.4399999",
+                    "Ice": "12.7",
+                    "Lightning": "1.4399999"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4324,13 +4324,13 @@
                     "Fortitude": 4
                 },
                 "Defense": {
-                    "Slash": 1.3299999,
-                    "Crush": 0.76,
-                    "Pierce": 2.6599998,
-                    "Blood": 1.12,
-                    "Fire": 1.4399999,
-                    "Ice": 1.4399999,
-                    "Lightning": 12.7
+                    "Slash": "1.3299999",
+                    "Crush": "0.76",
+                    "Pierce": "2.6599998",
+                    "Blood": "1.12",
+                    "Fire": "1.4399999",
+                    "Ice": "1.4399999",
+                    "Lightning": "12.7"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4361,13 +4361,13 @@
                     "Fortitude": 4
                 },
                 "Defense": {
-                    "Slash": 1.3299999,
-                    "Crush": 0.76,
-                    "Pierce": 2.6599998,
-                    "Blood": 12.1,
-                    "Fire": 1.4399999,
-                    "Ice": 1.4399999,
-                    "Lightning": 1.4399999
+                    "Slash": "1.3299999",
+                    "Crush": "0.76",
+                    "Pierce": "2.6599998",
+                    "Blood": "12.1",
+                    "Fire": "1.4399999",
+                    "Ice": "1.4399999",
+                    "Lightning": "1.4399999"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4398,13 +4398,13 @@
                     "Fortitude": 5
                 },
                 "Defense": {
-                    "Slash": 1.4,
-                    "Crush": 0.8,
-                    "Pierce": 2.8,
-                    "Blood": 1.4,
-                    "Fire": 1.8,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "1.4",
+                    "Crush": "0.8",
+                    "Pierce": "2.8",
+                    "Blood": "1.4",
+                    "Fire": "1.8",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4435,13 +4435,13 @@
                     "Fortitude": 5
                 },
                 "Defense": {
-                    "Slash": 1.4,
-                    "Crush": 0.8,
-                    "Pierce": 2.8,
-                    "Blood": 1.4,
-                    "Fire": 1.8,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "1.4",
+                    "Crush": "0.8",
+                    "Pierce": "2.8",
+                    "Blood": "1.4",
+                    "Fire": "1.8",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4472,13 +4472,13 @@
                     "Fortitude": 5
                 },
                 "Defense": {
-                    "Slash": 1.4,
-                    "Crush": 0.8,
-                    "Pierce": 2.8,
-                    "Blood": 1.4,
-                    "Fire": 1.8,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "1.4",
+                    "Crush": "0.8",
+                    "Pierce": "2.8",
+                    "Blood": "1.4",
+                    "Fire": "1.8",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4509,13 +4509,13 @@
                     "Fortitude": 5
                 },
                 "Defense": {
-                    "Slash": 1.4,
-                    "Crush": 0.8,
-                    "Pierce": 2.8,
-                    "Blood": 1.4,
-                    "Fire": 1.8,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "1.4",
+                    "Crush": "0.8",
+                    "Pierce": "2.8",
+                    "Blood": "1.4",
+                    "Fire": "1.8",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4546,13 +4546,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 1.4,
-                    "Crush": 0.8,
-                    "Pierce": 2.8,
-                    "Blood": 1.4,
-                    "Fire": 1.8,
-                    "Ice": 1.8,
-                    "Lightning": 1.8
+                    "Slash": "1.4",
+                    "Crush": "0.8",
+                    "Pierce": "2.8",
+                    "Blood": "1.4",
+                    "Fire": "1.8",
+                    "Ice": "1.8",
+                    "Lightning": "1.8"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4583,13 +4583,13 @@
                     "Fortitude": 3
                 },
                 "Defense": {
-                    "Slash": 1.225,
-                    "Crush": 0.7,
-                    "Pierce": 2.45,
-                    "Blood": 1.225,
-                    "Fire": 1.5749999,
-                    "Ice": 1.5749999,
-                    "Lightning": 1.5749999
+                    "Slash": "1.225",
+                    "Crush": "0.7",
+                    "Pierce": "2.45",
+                    "Blood": "1.225",
+                    "Fire": "1.5749999",
+                    "Ice": "1.5749999",
+                    "Lightning": "1.5749999"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4628,13 +4628,13 @@
                     "Fortitude": 2
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.2,
-                    "Pierce": 0.2,
-                    "Blood": 0.3,
-                    "Fire": 0.1,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.2",
+                    "Crush": "0.2",
+                    "Pierce": "0.2",
+                    "Blood": "0.3",
+                    "Fire": "0.1",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4665,13 +4665,13 @@
                     "Fortitude": 2
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.19,
-                    "Pierce": 0.19,
-                    "Blood": 0.20000002,
-                    "Fire": 10.15,
-                    "Ice": 0.1,
-                    "Lightning": 0.1
+                    "Slash": "0.19",
+                    "Crush": "0.19",
+                    "Pierce": "0.19",
+                    "Blood": "0.20000002",
+                    "Fire": "10.15",
+                    "Ice": "0.1",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4702,13 +4702,13 @@
                     "Fortitude": 2
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.19,
-                    "Pierce": 0.19,
-                    "Blood": 0.20000002,
-                    "Fire": 0.0,
-                    "Ice": 10.3,
-                    "Lightning": 0.1
+                    "Slash": "0.19",
+                    "Crush": "0.19",
+                    "Pierce": "0.19",
+                    "Blood": "0.20000002",
+                    "Fire": "0.0",
+                    "Ice": "10.3",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4739,13 +4739,13 @@
                     "Fortitude": 2
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.19,
-                    "Pierce": 0.19,
-                    "Blood": 0.20000002,
-                    "Fire": 0.0,
-                    "Ice": 0.1,
-                    "Lightning": 10.3
+                    "Slash": "0.19",
+                    "Crush": "0.19",
+                    "Pierce": "0.19",
+                    "Blood": "0.20000002",
+                    "Fire": "0.0",
+                    "Ice": "0.1",
+                    "Lightning": "10.3"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4776,13 +4776,13 @@
                     "Fortitude": 2
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.19,
-                    "Pierce": 0.19,
-                    "Blood": 10.45,
-                    "Fire": 0.0,
-                    "Ice": 0.1,
-                    "Lightning": 0.1
+                    "Slash": "0.19",
+                    "Crush": "0.19",
+                    "Pierce": "0.19",
+                    "Blood": "10.45",
+                    "Fire": "0.0",
+                    "Ice": "0.1",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4813,13 +4813,13 @@
                     "Fortitude": 3
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.2,
-                    "Pierce": 0.2,
-                    "Blood": 0.3,
-                    "Fire": 0.1,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.2",
+                    "Crush": "0.2",
+                    "Pierce": "0.2",
+                    "Blood": "0.3",
+                    "Fire": "0.1",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4850,13 +4850,13 @@
                     "Fortitude": 3
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.2,
-                    "Pierce": 0.2,
-                    "Blood": 0.3,
-                    "Fire": 0.1,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.2",
+                    "Crush": "0.2",
+                    "Pierce": "0.2",
+                    "Blood": "0.3",
+                    "Fire": "0.1",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4887,13 +4887,13 @@
                     "Fortitude": 3
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.2,
-                    "Pierce": 0.2,
-                    "Blood": 0.3,
-                    "Fire": 0.1,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.2",
+                    "Crush": "0.2",
+                    "Pierce": "0.2",
+                    "Blood": "0.3",
+                    "Fire": "0.1",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4924,13 +4924,13 @@
                     "Fortitude": 3
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.2,
-                    "Pierce": 0.2,
-                    "Blood": 0.3,
-                    "Fire": 0.1,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.2",
+                    "Crush": "0.2",
+                    "Pierce": "0.2",
+                    "Blood": "0.3",
+                    "Fire": "0.1",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4961,13 +4961,13 @@
                     "Fortitude": 7
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.2,
-                    "Pierce": 0.2,
-                    "Blood": 0.3,
-                    "Fire": 0.1,
-                    "Ice": 0.2,
-                    "Lightning": 0.2
+                    "Slash": "0.2",
+                    "Crush": "0.2",
+                    "Pierce": "0.2",
+                    "Blood": "0.3",
+                    "Fire": "0.1",
+                    "Ice": "0.2",
+                    "Lightning": "0.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -4998,13 +4998,13 @@
                     "Fortitude": 1
                 },
                 "Defense": {
-                    "Slash": 0.1,
-                    "Crush": 0.1,
-                    "Pierce": 0.1,
-                    "Blood": 0.20000002,
-                    "Fire": 0.0,
-                    "Ice": 0.1,
-                    "Lightning": 0.1
+                    "Slash": "0.1",
+                    "Crush": "0.1",
+                    "Pierce": "0.1",
+                    "Blood": "0.20000002",
+                    "Fire": "0.0",
+                    "Ice": "0.1",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5043,13 +5043,13 @@
                     "Fortitude": 4
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.1,
-                    "Blood": 0.2,
-                    "Fire": 0.2,
-                    "Ice": 0.3,
-                    "Lightning": 0.1
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.1",
+                    "Blood": "0.2",
+                    "Fire": "0.2",
+                    "Ice": "0.3",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5080,12 +5080,12 @@
                     "Fortitude": 4
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.285,
-                    "Pierce": 0.095,
-                    "Blood": 0.1,
-                    "Fire": 10.3,
-                    "Ice": 0.20000002,
+                    "Slash": "0.19",
+                    "Crush": "0.285",
+                    "Pierce": "0.095",
+                    "Blood": "0.1",
+                    "Fire": "10.3",
+                    "Ice": "0.20000002",
                     "Lightning": "0.0"
                 },
                 "GuardingDefense": {
@@ -5117,12 +5117,12 @@
                     "Fortitude": 4
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.285,
-                    "Pierce": 0.095,
-                    "Blood": 0.1,
-                    "Fire": 0.1,
-                    "Ice": 10.45,
+                    "Slash": "0.19",
+                    "Crush": "0.285",
+                    "Pierce": "0.095",
+                    "Blood": "0.1",
+                    "Fire": "0.1",
+                    "Ice": "10.45",
                     "Lightning": "0.0"
                 },
                 "GuardingDefense": {
@@ -5154,13 +5154,13 @@
                     "Fortitude": 4
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.285,
-                    "Pierce": 0.095,
-                    "Blood": 0.1,
-                    "Fire": 0.1,
-                    "Ice": 0.20000002,
-                    "Lightning": 10.15
+                    "Slash": "0.19",
+                    "Crush": "0.285",
+                    "Pierce": "0.095",
+                    "Blood": "0.1",
+                    "Fire": "0.1",
+                    "Ice": "0.20000002",
+                    "Lightning": "10.15"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5191,12 +5191,12 @@
                     "Fortitude": 4
                 },
                 "Defense": {
-                    "Slash": 0.19,
-                    "Crush": 0.285,
-                    "Pierce": 0.095,
-                    "Blood": 10.3,
-                    "Fire": 0.1,
-                    "Ice": 0.20000002,
+                    "Slash": "0.19",
+                    "Crush": "0.285",
+                    "Pierce": "0.095",
+                    "Blood": "10.3",
+                    "Fire": "0.1",
+                    "Ice": "0.20000002",
                     "Lightning": "0.0"
                 },
                 "GuardingDefense": {
@@ -5228,13 +5228,13 @@
                     "Fortitude": 5
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.1,
-                    "Blood": 0.2,
-                    "Fire": 0.2,
-                    "Ice": 0.3,
-                    "Lightning": 0.1
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.1",
+                    "Blood": "0.2",
+                    "Fire": "0.2",
+                    "Ice": "0.3",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5265,13 +5265,13 @@
                     "Fortitude": 5
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.1,
-                    "Blood": 0.2,
-                    "Fire": 0.2,
-                    "Ice": 0.3,
-                    "Lightning": 0.1
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.1",
+                    "Blood": "0.2",
+                    "Fire": "0.2",
+                    "Ice": "0.3",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5302,13 +5302,13 @@
                     "Fortitude": 5
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.1,
-                    "Blood": 0.2,
-                    "Fire": 0.2,
-                    "Ice": 0.3,
-                    "Lightning": 0.1
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.1",
+                    "Blood": "0.2",
+                    "Fire": "0.2",
+                    "Ice": "0.3",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5339,13 +5339,13 @@
                     "Fortitude": 5
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.1,
-                    "Blood": 0.2,
-                    "Fire": 0.2,
-                    "Ice": 0.3,
-                    "Lightning": 0.1
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.1",
+                    "Blood": "0.2",
+                    "Fire": "0.2",
+                    "Ice": "0.3",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5376,13 +5376,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 0.2,
-                    "Crush": 0.3,
-                    "Pierce": 0.1,
-                    "Blood": 0.2,
-                    "Fire": 0.2,
-                    "Ice": 0.3,
-                    "Lightning": 0.1
+                    "Slash": "0.2",
+                    "Crush": "0.3",
+                    "Pierce": "0.1",
+                    "Blood": "0.2",
+                    "Fire": "0.2",
+                    "Ice": "0.3",
+                    "Lightning": "0.1"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5413,12 +5413,12 @@
                     "Fortitude": 3
                 },
                 "Defense": {
-                    "Slash": 0.1,
-                    "Crush": 0.20000002,
-                    "Pierce": 0.0,
-                    "Blood": 0.1,
-                    "Fire": 0.1,
-                    "Ice": 0.20000002,
+                    "Slash": "0.1",
+                    "Crush": "0.20000002",
+                    "Pierce": "0.0",
+                    "Blood": "0.1",
+                    "Fire": "0.1",
+                    "Ice": "0.20000002",
                     "Lightning": "0.0"
                 },
                 "GuardingDefense": {
@@ -5458,13 +5458,13 @@
                     "Fortitude": 8
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.1,
-                    "Pierce": 1.2,
-                    "Blood": 1.6,
-                    "Fire": 1.6,
-                    "Ice": 2.1,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.1",
+                    "Pierce": "1.2",
+                    "Blood": "1.6",
+                    "Fire": "1.6",
+                    "Ice": "2.1",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5495,13 +5495,13 @@
                     "Fortitude": 8
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 1.9949999,
-                    "Pierce": 1.14,
-                    "Blood": 1.2800001,
-                    "Fire": 12.4,
-                    "Ice": 1.68,
-                    "Lightning": 0.96000004
+                    "Slash": "1.52",
+                    "Crush": "1.9949999",
+                    "Pierce": "1.14",
+                    "Blood": "1.2800001",
+                    "Fire": "12.4",
+                    "Ice": "1.68",
+                    "Lightning": "0.96000004"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5532,13 +5532,13 @@
                     "Fortitude": 8
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 1.9949999,
-                    "Pierce": 1.14,
-                    "Blood": 1.2800001,
-                    "Fire": 1.2800001,
-                    "Ice": 13.15,
-                    "Lightning": 0.96000004
+                    "Slash": "1.52",
+                    "Crush": "1.9949999",
+                    "Pierce": "1.14",
+                    "Blood": "1.2800001",
+                    "Fire": "1.2800001",
+                    "Ice": "13.15",
+                    "Lightning": "0.96000004"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5569,13 +5569,13 @@
                     "Fortitude": 8
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 1.9949999,
-                    "Pierce": 1.14,
-                    "Blood": 1.2800001,
-                    "Fire": 1.2800001,
-                    "Ice": 1.68,
-                    "Lightning": 11.8
+                    "Slash": "1.52",
+                    "Crush": "1.9949999",
+                    "Pierce": "1.14",
+                    "Blood": "1.2800001",
+                    "Fire": "1.2800001",
+                    "Ice": "1.68",
+                    "Lightning": "11.8"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5606,13 +5606,13 @@
                     "Fortitude": 8
                 },
                 "Defense": {
-                    "Slash": 1.52,
-                    "Crush": 1.9949999,
-                    "Pierce": 1.14,
-                    "Blood": 12.4,
-                    "Fire": 1.2800001,
-                    "Ice": 1.68,
-                    "Lightning": 0.96000004
+                    "Slash": "1.52",
+                    "Crush": "1.9949999",
+                    "Pierce": "1.14",
+                    "Blood": "12.4",
+                    "Fire": "1.2800001",
+                    "Ice": "1.68",
+                    "Lightning": "0.96000004"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5643,13 +5643,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.1,
-                    "Pierce": 1.2,
-                    "Blood": 1.6,
-                    "Fire": 1.6,
-                    "Ice": 2.1,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.1",
+                    "Pierce": "1.2",
+                    "Blood": "1.6",
+                    "Fire": "1.6",
+                    "Ice": "2.1",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5680,13 +5680,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.1,
-                    "Pierce": 1.2,
-                    "Blood": 1.6,
-                    "Fire": 1.6,
-                    "Ice": 2.1,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.1",
+                    "Pierce": "1.2",
+                    "Blood": "1.6",
+                    "Fire": "1.6",
+                    "Ice": "2.1",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5717,13 +5717,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.1,
-                    "Pierce": 1.2,
-                    "Blood": 1.6,
-                    "Fire": 1.6,
-                    "Ice": 2.1,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.1",
+                    "Pierce": "1.2",
+                    "Blood": "1.6",
+                    "Fire": "1.6",
+                    "Ice": "2.1",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5754,13 +5754,13 @@
                     "Fortitude": 10
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.1,
-                    "Pierce": 1.2,
-                    "Blood": 1.6,
-                    "Fire": 1.6,
-                    "Ice": 2.1,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.1",
+                    "Pierce": "1.2",
+                    "Blood": "1.6",
+                    "Fire": "1.6",
+                    "Ice": "2.1",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5791,13 +5791,13 @@
                     "Fortitude": 15
                 },
                 "Defense": {
-                    "Slash": 1.6,
-                    "Crush": 2.1,
-                    "Pierce": 1.2,
-                    "Blood": 1.6,
-                    "Fire": 1.6,
-                    "Ice": 2.1,
-                    "Lightning": 1.2
+                    "Slash": "1.6",
+                    "Crush": "2.1",
+                    "Pierce": "1.2",
+                    "Blood": "1.6",
+                    "Fire": "1.6",
+                    "Ice": "2.1",
+                    "Lightning": "1.2"
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -5828,13 +5828,13 @@
                     "Fortitude": 7
                 },
                 "Defense": {
-                    "Slash": 1.4,
-                    "Crush": 1.8374999,
-                    "Pierce": 1.0500001,
-                    "Blood": 1.4,
-                    "Fire": 1.4,
-                    "Ice": 1.8374999,
-                    "Lightning": 1.0500001
+                    "Slash": "1.4",
+                    "Crush": "1.8374999",
+                    "Pierce": "1.0500001",
+                    "Blood": "1.4",
+                    "Fire": "1.4",
+                    "Ice": "1.8374999",
+                    "Lightning": "1.0500001"
                 },
                 "GuardingDefense": {
                     "Slash": 0,

@@ -1,3 +1,6 @@
+from fractions import Fraction
+
+
 class Weapon:
     def __init__(self, doc=None, dummy_number=None):
         self.name = ""
@@ -149,13 +152,13 @@ class BloodCode:
         }
 
         self.defense = {
-            "Slash": 0.0,
-            "Crush": 0.0,
-            "Pierce": 0.0,
-            "Blood": 0.0,
-            "Fire": 0.0,
-            "Ice": 0.0,
-            "Lightning": 0.0,
+            "Slash": Fraction(0, 10),
+            "Crush": Fraction(0, 10),
+            "Pierce": Fraction(0, 10),
+            "Blood": Fraction(0, 10),
+            "Fire": Fraction(0, 10),
+            "Ice": Fraction(0, 10),
+            "Lightning": Fraction(0, 10),
         }
 
         self.resistance = {
@@ -178,7 +181,7 @@ class BloodCode:
         # self.traits = []
         self.attributes = doc["Attributes"]
         # self.burden = doc["Burden"]
-        self.defense = doc["Defense"]
+        self.defense = {k: Fraction(v) for k, v in doc["Defense"].items()}
         self.resistance = doc["Resistance"]
         self.traits = doc["Traits"]
 
@@ -211,13 +214,13 @@ class Jail:
         }
 
         self.defense = {
-            "Slash": 0.0,
-            "Crush": 0.0,
-            "Pierce": 0.0,
-            "Blood": 0.0,
-            "Fire": 0.0,
-            "Ice": 0.0,
-            "Lightning": 0.0,
+            "Slash": Fraction(0, 10),
+            "Crush": Fraction(0, 10),
+            "Pierce": Fraction(0, 10),
+            "Blood": Fraction(0, 10),
+            "Fire": Fraction(0, 10),
+            "Ice": Fraction(0, 10),
+            "Lightning": Fraction(0, 10),
         }
 
         if not doc:
@@ -229,7 +232,7 @@ class Jail:
         self.type = doc["Type"]
         self.balance = doc["Balance"]
         self.burden = doc["Burden"]
-        self.defense = doc["Defense"]
+        self.defense = {k: Fraction(v) for k, v in doc["Defense"].items()}
 
 
 class DefensiveForma:
@@ -251,13 +254,13 @@ class DefensiveForma:
                     "Fortitude": 0,
                 },
                 "Defense": {
-                    "Slash": 0.0,
-                    "Crush": 0.0,
-                    "Pierce": 0.0,
-                    "Blood": 0.0,
-                    "Fire": 0.0,
-                    "Ice": 0.0,
-                    "Lightning": 0.0,
+                    "Slash": Fraction(0, 10),
+                    "Crush": Fraction(0, 10),
+                    "Pierce": Fraction(0, 10),
+                    "Blood": Fraction(0, 10),
+                    "Fire": Fraction(0, 10),
+                    "Ice": Fraction(0, 10),
+                    "Lightning": Fraction(0, 10),
                 },
                 "GuardingDefense": {
                     "Slash": 0,
@@ -289,6 +292,9 @@ class DefensiveForma:
         self.transforms = dict()
         for transform in doc["Transforms"]:
             key = transform["Name"]
+            defense = transform["Defense"]
+            defense = {k: Fraction(v) for k, v in defense.items()}
+            transform["Defense"] = defense
             self.transforms[key] = transform
             self.transforms[key].pop("Name")
 
