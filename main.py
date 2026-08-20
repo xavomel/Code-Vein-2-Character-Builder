@@ -1,5 +1,6 @@
 from PySide6.QtWidgets import QApplication, QMainWindow
 import builder_ui
+from math import floor
 from game_data_classes import *
 from utility import open_json
 
@@ -426,8 +427,10 @@ class Builder:
         equipped_transform = self.character.transform[slot]
         if slot == "Weapon_1":
             equipped = self.character.weapon_1.transforms[equipped_transform]
+            other_equipped = self.character.weapon_2.transforms[equipped_transform]
         else:
             equipped = self.character.weapon_2.transforms[equipped_transform]
+            other_equipped = self.character.weapon_1.transforms[equipped_transform]
 
         # burden
         for attr, val in transformed["Burden"].items():
@@ -437,10 +440,44 @@ class Builder:
             old_value = self.character.burden[attr]
             # TODO add handling for Shrugged Burden (booster and trait)
             # remember the state of Shrugged Burden in variable for easy checking, it has big impact
+
+            # Dual Wielding burden
+            val_other = other_equipped["Burden"][attr]
+            val_equipped = equipped["Burden"][attr]
+            val_equipped_other = other_equipped["Burden"][attr]
+
             # TODO add handling for Weapon Rack
-            # remember the state of Weapon Rack in variable for easy checking, it has big impact
-            val = val - equipped["Burden"][attr]
-            transaction.append([_type, "Burden", attr, val, old_value, widget])
+            # if dual wielding calc needed (weapons in this slot and other slot both have non-zero burden for same attr)
+            if val_other != 0:
+                # if equipped weapon has HIGHER burden (is not halved)
+                # take HALF of other weapon burden as equip load
+                # or NO value if Weapon Rack is active
+                if equipped["Burden"][attr] > other_equipped["Burden"][attr]:
+                    val_equipped_other = floor(val_equipped_other / 2)
+
+                    # - pick the WHOLE value from weapon with HIGHER burden
+                    # - and add HALF value (rounded down) from weapon with LOWER burden
+                    # - or add NO value from weapon with LOWER burden if Weapon Rack is active
+                    if val_other > val:
+                        val = floor(val / 2)
+                    else:
+                        val_other = floor(val_other / 2)
+                # if equipped weapon has LOWER burden (is halved)
+                # take HALF of equipped weapon burden as equip load
+                # or NO value if Weapon Rack is active
+                else:
+                    val_equipped = floor(val_equipped / 2)
+
+                    # same as above
+                    if val_other > val:
+                        val = floor(val / 2)
+                    else:
+                        val_other = floor(val_other / 2)
+
+            new_val = val + val_other - val_equipped - val_equipped_other
+            # if attr == "Willpower":
+            #     print("final", new_val, "current", val, "other", val_other, "equipped", val_equipped, "val_equipped_other", val_equipped_other)
+            transaction.append([_type, "Burden", attr, new_val, old_value, widget])
 
         # traits
 
