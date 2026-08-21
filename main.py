@@ -196,8 +196,11 @@ class Builder:
 
     def start_transaction(self, data, slot="", transform=""):
         """
-        Replaces UI values with transaction values (does NOT change anything in Character)
-        :return:
+        Replaces UI values with transaction values.
+        Transaction value are stored in self.last_transaction.
+        Does NOT change anything in Character until transaction is committed.
+
+        :return: None
         """
         transaction = self.build_transaction(data, slot, transform)
 
@@ -228,9 +231,9 @@ class Builder:
 
                 if var == "Defense":
                     new_value = value + old_value
-                    # general format for floating point (Fraction in this case)
+                    # 2 decimal places format for floating point (Fraction in this case) just like ingame
                     # Fractions are used because adding and subtracting Floats many times could introduce errors
-                    widget.setText(str(format(new_value, "g")))
+                    widget.setText(str(format(new_value, "0.2f")))
                 elif var == "Stylesheet":
                     widget.setStyleSheet(value)
                 else:
@@ -240,12 +243,15 @@ class Builder:
 
     def rollback_transaction(self):
         """
-        Replaces UI values with Character values
+        Replaces UI values with old values stored in transaction.
 
-        Need to do this if there is not-committed transaction
+        Need to do this if there is a non-committed transaction
         because e.g a previous booster may affect more things than new booster
-        so just overwriting with new values is not enough
-        :return:
+        so just overwriting with new values is not enough.
+
+        Resets last transaction.
+
+        :return: None
         """
         if not self.last_transaction:
             return
@@ -262,9 +268,9 @@ class Builder:
                 widget.setValue(old_value)
             else:
                 if var == "Defense":
-                    # general format for floating point (Fraction in this case)
+                    # 2 decimal places format for floating point (Fraction in this case) just like ingame
                     # Fractions are used because adding and subtracting Floats many times could introduce errors
-                    widget.setText(str(format(old_value, "g")))
+                    widget.setText(str(format(old_value, "0.2f")))
                 elif var == "Stylesheet":
                     widget.setStyleSheet(old_value)
                 else:
@@ -274,14 +280,17 @@ class Builder:
 
     def commit_transaction(self, data, slot="", transform=""):
         """
-        Replaces Character values with transaction values
-        :return:
+        Update Character values by adding values stored in transaction.
+        Resets last transaction.
+
+        :return: None
         """
         if not self.last_transaction:
             return
 
-        # overwrite old item with new
-        _type = type(data).__name__  # could use this instead self.last_transaction[0][0]
+        # Overwrite Character item with item selected in transaction.
+        # Does not impact Character parameters immediately, only on future transactions.
+        _type = type(data).__name__
         if _type == "Weapon":
             self.character.weapons[slot] = data
             self.character.transform[slot] = transform
@@ -293,7 +302,7 @@ class Builder:
             self.character.defensive_forma = data
             self.character.transform["Defensive"] = transform
 
-        # then handle consequences of changing blood code
+        # Update Character parameters
         for _type, var, key, value, old_value, widget in self.last_transaction:
             if var == "Bloodline":
                 self.character.bloodline = value
@@ -323,7 +332,9 @@ class Builder:
 
     def build_transaction(self, data, slot="", transform=""):
         """
-        :return:
+        Builds transaction based on data by calling handler for given data class.
+
+        :return: list - transaction
         """
         transaction_handler = self.class_to_handler[type(data).__name__]
         transaction = transaction_handler(data, slot, transform)
@@ -369,6 +380,8 @@ class Builder:
             # remember the state of Shrugged Burden in variable for easy checking, it has big impact
             # TODO add handling for Weapon Rack
             # remember the state of Weapon Rack in variable for easy checking, it has big impact
+            # The only handling needed for Weapon Rack in Blood Code,
+            # is checking if it's attribute condition is fulfilled, and if it changes then handling the impact
             val = val - equipped.burden[attr]
             transaction.append([_type, "Burden", attr, val, old_value, widget])
 
@@ -426,7 +439,7 @@ class Builder:
 
         _type = type(data).__name__
 
-        stylesheet, transform_widget, selected, equipped, other_equipped = self.handle_transform(data, slot, transform)
+        stylesheet, transform_widget, selected, equipped, other_equipped = self.handle_weapon_transform(data, slot, transform)
 
         # add red border to transform button on invalid transform
         transaction.append([_type, "Stylesheet", None, stylesheet, transform_widget.styleSheet(), transform_widget])
@@ -472,7 +485,7 @@ class Builder:
 
         return transaction
 
-    def handle_transform(self, data, slot, transform):
+    def handle_weapon_transform(self, data, slot, transform):
         """
         Handle transform logic and return values for later use.
 
@@ -626,12 +639,14 @@ class Builder:
         transaction = []
 
         _type = type(data).__name__
-        transformed = data.transforms[transform]
-        equipped_transform = self.character.transform["Defensive"]
-        equipped = self.character.defensive_forma.transforms[equipped_transform]
+
+        stylesheet, transform_widget, selected, equipped = self.handle_defensive_transform(data, "Defensive", transform)
+
+        # add red border to transform button on invalid transform
+        transaction.append([_type, "Stylesheet", None, stylesheet, transform_widget.styleSheet(), transform_widget])
 
         # burden
-        for attr, val in transformed["Burden"].items():
+        for attr, val in selected["Burden"].items():
             widget = self.char_to_widget_mapping["Burden_" + attr]
             # fetch old attributes from character rather than blood code
             # as it contains potential values from traits, boosters, defensive, jail, weapon(s)
@@ -640,6 +655,8 @@ class Builder:
             # remember the state of Shrugged Burden in variable for easy checking, it has big impact
             # TODO add handling for Weapon Rack
             # remember the state of Weapon Rack in variable for easy checking, it has big impact
+            # The only handling needed for Weapon Rack in Defensive Forma,
+            # is checking if it's attribute condition is fulfilled, and if it changes then handling the impact
             val = val - equipped["Burden"][attr]
             transaction.append([_type, "Burden", attr, val, old_value, widget])
 
@@ -651,7 +668,7 @@ class Builder:
 
         # defense
         # TODO some Defensive Formae have silly defense values like 0.96000004 or 1.8374999 - shall we simplify them?
-        for attr, val in transformed["Defense"].items():
+        for attr, val in selected["Defense"].items():
             widget = self.char_to_widget_mapping["Defense_" + attr]
             # todo comment
             old_value = self.character.defense[attr]
@@ -659,7 +676,7 @@ class Builder:
             transaction.append([_type, "Defense", attr, val, old_value, widget])
 
         # guarding defense
-        for attr, val in transformed["GuardingDefense"].items():
+        for attr, val in selected["GuardingDefense"].items():
             widget = self.char_to_widget_mapping["GuardingDefense_" + attr]
             # todo comment
             old_value = self.character.guarding_defense[attr]
@@ -669,7 +686,7 @@ class Builder:
         # resistance
         #
         # seems attributes also affect resistance, but for now let's ignore it
-        for attr, val in transformed["Resistance"].items():
+        for attr, val in selected["Resistance"].items():
             widget = self.char_to_widget_mapping["Resistance_" + attr]
             # todo comment
             old_value = self.character.resistance[attr]
@@ -680,17 +697,58 @@ class Builder:
         widget = self.char_to_widget_mapping["Balance"]
         # todo comment
         old_value = self.character.balance
-        val = transformed["Balance"] - equipped["Balance"]
+        val = selected["Balance"] - equipped["Balance"]
         transaction.append([_type, "Balance", None, val, old_value, widget])
 
         # stamina guard cost
         widget = self.char_to_widget_mapping["StaminaGuardCost"]
         # todo comment
         old_value = self.character.stamina_guard_cost
-        val = transformed["StaminaGuardCost"] - equipped["StaminaGuardCost"]
+        val = selected["StaminaGuardCost"] - equipped["StaminaGuardCost"]
         transaction.append([_type, "StaminaGuardCost", None, val, old_value, widget])
 
         return transaction
+
+    def handle_defensive_transform(self, data, slot, transform):
+        """
+        Handle transform logic and return values for later use.
+
+        Show red border around transform button if transform is not possible.
+        - some defensive forma cannot be transformed at all
+        - or do not have all transforms (e.g. poison weapon doesn't have poison transform)
+        If defensive forma (selected or equipped) has incompatible transform, return the default transform.
+
+        :param data: DefensiveForma
+        :param slot: string
+        :param transform: string
+        :return:
+            stylesheet: string
+            transform_widget: transform button for selected defensive forma
+            selected: dict - transform values for defensive forma selected in transaction
+            equipped: dict - transform values for defensive forma equipped before transaction
+        """
+        transform_widget = self.char_to_widget_mapping[slot + "_Transform"]
+
+        if transform in data.transforms:
+            selected = data.transforms[transform]
+
+            # set stylesheet for valid state
+            stylesheet = "#Transform_" + slot + "_Button:hover { border: 1px solid #b6a98d; }"
+        else:
+            selected = data.transforms["Defensive_Off"]
+
+            # set stylesheet for invalid state
+            stylesheet = u"""
+                    #Transform_{0}_Button {{ border: 1px solid red; }}
+                    #Transform_{0}_Button:hover {{ border: 1px solid #b6a98d; }}
+                """.format(slot)
+
+        equipped_transform = self.character.transform[slot]
+        if equipped_transform not in self.character.defensive_forma.transforms:
+            equipped_transform = "Defensive_Off"
+        equipped = self.character.defensive_forma.transforms[equipped_transform]
+
+        return stylesheet, transform_widget, selected, equipped
 
     def build_offensive_transaction(self, data, slot="", transform=""):
         print("offensive")
