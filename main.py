@@ -10,9 +10,10 @@ class Character:
         self.name = ""
         self.bloodline = ""
         self.blood_code = BloodCode()
-        # TODO add weapons dict in character to hold weapons?
-        self.weapon_1 = Weapon(dummy_number=1)
-        self.weapon_2 = Weapon(dummy_number=2)
+        self.weapons = {
+            "Weapon_1": Weapon(dummy_number=1),
+            "Weapon_2": Weapon(dummy_number=2),
+        }
         self.offensive_forma = OffensiveForma()
         self.defensive_forma = DefensiveForma()
         self.jail = Jail()
@@ -202,6 +203,7 @@ class Builder:
 
         attributes = dict()
 
+        # TODO rename "value" to "diff" to be more accurate
         for type, var, key, value, old_value, widget in transaction:
             if not widget:
                 continue
@@ -229,6 +231,8 @@ class Builder:
                     # general format for floating point (Fraction in this case)
                     # Fractions are used because adding and subtracting Floats many times could introduce errors
                     widget.setText(str(format(new_value, "g")))
+                elif var == "Stylesheet":
+                    widget.setStyleSheet(value)
                 else:
                     widget.setText(str(value + old_value))
 
@@ -261,6 +265,8 @@ class Builder:
                     # general format for floating point (Fraction in this case)
                     # Fractions are used because adding and subtracting Floats many times could introduce errors
                     widget.setText(str(format(old_value, "g")))
+                elif var == "Stylesheet":
+                    widget.setStyleSheet(old_value)
                 else:
                     widget.setText(str(old_value))
 
@@ -277,12 +283,8 @@ class Builder:
         # overwrite old item with new
         _type = type(data).__name__  # could use this instead self.last_transaction[0][0]
         if _type == "Weapon":
-            if slot == "Weapon_1":
-                self.character.weapon_1 = data
-                self.character.transform[slot] = transform
-            else:
-                self.character.weapon_2 = data
-                self.character.transform[slot] = transform
+            self.character.weapons[slot] = data
+            self.character.transform[slot] = transform
         elif _type == "BloodCode":
             self.character.blood_code = data
         elif _type == "Jail":
@@ -423,58 +425,21 @@ class Builder:
         transaction = []
 
         _type = type(data).__name__
-        transformed = data.transforms[transform]
-        equipped_transform = self.character.transform[slot]
-        if slot == "Weapon_1":
-            equipped = self.character.weapon_1.transforms[equipped_transform]
-            other_equipped = self.character.weapon_2.transforms[equipped_transform]
-        else:
-            equipped = self.character.weapon_2.transforms[equipped_transform]
-            other_equipped = self.character.weapon_1.transforms[equipped_transform]
+
+        stylesheet, transform_widget, selected, equipped, other_equipped = self.handle_transform(data, slot, transform)
+
+        # add red border to transform button on invalid transform
+        transaction.append([_type, "Stylesheet", None, stylesheet, transform_widget.styleSheet(), transform_widget])
 
         # burden
-        for attr, val in transformed["Burden"].items():
+        for attr, val in selected["Burden"].items():
             widget = self.char_to_widget_mapping["Burden_" + attr]
             # fetch old attributes from character rather than blood code
             # as it contains potential values from traits, boosters, defensive, jail, weapon(s)
             old_value = self.character.burden[attr]
             # TODO add handling for Shrugged Burden (booster and trait)
             # remember the state of Shrugged Burden in variable for easy checking, it has big impact
-
-            # Dual Wielding burden
-            val_other = other_equipped["Burden"][attr]
-            val_equipped = equipped["Burden"][attr]
-            val_equipped_other = other_equipped["Burden"][attr]
-
-            # TODO add handling for Weapon Rack
-            # if dual wielding calc needed (weapons in this slot and other slot both have non-zero burden for same attr)
-            if val_other != 0:
-                # if equipped weapon has HIGHER burden (is not halved)
-                # take HALF of other weapon burden as equip load
-                # or NO value if Weapon Rack is active
-                if equipped["Burden"][attr] > other_equipped["Burden"][attr]:
-                    val_equipped_other = floor(val_equipped_other / 2)
-
-                    # - pick the WHOLE value from weapon with HIGHER burden
-                    # - and add HALF value (rounded down) from weapon with LOWER burden
-                    # - or add NO value from weapon with LOWER burden if Weapon Rack is active
-                    if val_other > val:
-                        val = floor(val / 2)
-                    else:
-                        val_other = floor(val_other / 2)
-                # if equipped weapon has LOWER burden (is halved)
-                # take HALF of equipped weapon burden as equip load
-                # or NO value if Weapon Rack is active
-                else:
-                    val_equipped = floor(val_equipped / 2)
-
-                    # same as above
-                    if val_other > val:
-                        val = floor(val / 2)
-                    else:
-                        val_other = floor(val_other / 2)
-
-            new_val = val + val_other - val_equipped - val_equipped_other
+            new_val = self.get_burden_after_dual_wielding(attr, val, equipped, other_equipped)
             # if attr == "Willpower":
             #     print("final", new_val, "current", val, "other", val_other, "equipped", val_equipped, "val_equipped_other", val_equipped_other)
             transaction.append([_type, "Burden", attr, new_val, old_value, widget])
@@ -488,11 +453,11 @@ class Builder:
         # Bleed
         # todo comment
         key = slot
-        val = transformed["Bleed"] - equipped["Bleed"]
+        val = selected["Bleed"] - equipped["Bleed"]
         transaction.append([_type, "Bleed", key, val, self.character.bleed[key], self.char_to_widget_mapping[key + "_Bleed"]])
 
         # capacity
-        for attr, val in transformed["Capacity"].items():
+        for attr, val in selected["Capacity"].items():
             key = slot + "_" + attr + "_Max"
             widget = self.char_to_widget_mapping[key]
             # fetch old attributes from character rather than blood code
@@ -506,6 +471,96 @@ class Builder:
             transaction.append([_type, "Capacity", key, val, old_value, widget])
 
         return transaction
+
+    def handle_transform(self, data, slot, transform):
+        """
+        Handle transform logic and return values for later use.
+
+        Show red border around transform button if transform is not possible.
+        - some weapons cannot be transformed at all
+        - or do not have all transforms (e.g. poison weapon doesn't have poison transform)
+        If Weapon (selected or equipped in any slot) has incompatible transform, return the weapon's default transform.
+
+        :param data: Weapon
+        :param slot: string
+        :param transform: string
+        :return:
+            stylesheet: string
+            transform_widget: transform button for selected weapon
+            selected: dict - transform values for weapon selected in transaction
+            equipped: dict - transform values for weapon equipped before transaction
+            other_equipped: dict - transform values for weapon equipped in other weapon slot
+        """
+        other_slot = "Weapon_2" if slot == "Weapon_1" else "Weapon_1"
+        transform_widget = self.char_to_widget_mapping[slot + "_Transform"]
+
+        if transform in data.transforms:
+            selected = data.transforms[transform]
+
+            # set stylesheet for valid state
+            stylesheet = "#Transform_" + slot + "_Button:hover { border: 1px solid #b6a98d; }"
+        else:
+            selected = data.transforms["Weapon_Off"]
+
+            # set stylesheet for invalid state
+            stylesheet = u"""
+                    #Transform_{0}_Button {{ border: 1px solid red; }}
+                    #Transform_{0}_Button:hover {{ border: 1px solid #b6a98d; }}
+                """.format(slot)
+
+        equipped_transform = self.character.transform[slot]
+        if equipped_transform not in self.character.weapons[slot].transforms:
+            equipped_transform = "Weapon_Off"
+        equipped = self.character.weapons[slot].transforms[equipped_transform]
+
+        other_equipped_transform = self.character.transform[other_slot]
+        if other_equipped_transform not in self.character.weapons[other_slot].transforms:
+            other_equipped_transform = "Weapon_Off"
+        other_equipped = self.character.weapons[other_slot].transforms[other_equipped_transform]
+
+        return stylesheet, transform_widget, selected, equipped, other_equipped
+
+    def get_burden_after_dual_wielding(self, attr, val, equipped, other_equipped):
+        """
+        Return attribute burden value after accounting for dual wielding (if any)
+
+        If both weapons have burden for same attribute the LOWER burden is halved (rounded down).
+        With Weapon Rack booster (not implemented yet) the LOWER burden is set to 0.
+
+        :param attr: string
+        :param val: int
+        :param equipped: Weapon
+        :param other_equipped: Weapon
+        :return: int
+        """
+        # Dual Wielding burden
+        val_other = other_equipped["Burden"][attr]
+        val_equipped = equipped["Burden"][attr]
+        val_equipped_other = other_equipped["Burden"][attr]
+
+        # TODO add handling for Weapon Rack
+        # if dual wielding calc needed (weapons in this slot and other slot both have non-zero burden for same attr)
+        if val_other != 0:
+            if equipped["Burden"][attr] > other_equipped["Burden"][attr]:
+                # if equipped weapon has HIGHER burden (is not halved)
+                # take HALF of other weapon burden as equip load
+                # or NO value if Weapon Rack is active
+                val_equipped_other = floor(val_equipped_other / 2)
+            else:
+                # if equipped weapon has LOWER burden (is halved)
+                # take HALF of equipped weapon burden as equip load
+                # or NO value if Weapon Rack is active
+                val_equipped = floor(val_equipped / 2)
+
+            # - pick the WHOLE value from weapon with HIGHER burden
+            # - and take HALF value (rounded down) from weapon with LOWER burden
+            # - or NO value from weapon with LOWER burden if Weapon Rack is active
+            if val_other > val:
+                val = floor(val / 2)
+            else:
+                val_other = floor(val_other / 2)
+
+        return val + val_other - val_equipped - val_equipped_other
 
     def build_forma_transaction(self, data, slot="", transform=""):
         print("forma")

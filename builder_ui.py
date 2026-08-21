@@ -1817,10 +1817,7 @@ class Ui_MainWindow(object):
 
     def handle_transform_weapon_clicked(self, widget, item, slot):
         builder = self.builder
-        if slot == "Weapon_1":  # TODO add weapons dict in character to hold weapons?
-            weapon = builder.character.weapon_1
-        else:
-            weapon = builder.character.weapon_2
+        weapon = builder.character.weapons[slot]
         transform = item.statusTip()
         if transform == "Off":
             transform = "Weapon_" + transform
@@ -2419,10 +2416,7 @@ class MyQListWidget(QListWidget):
 
     def handle_transform_weapon_hover(self, item, slot):
         builder = self.window().builder
-        if slot == "Weapon_1":  # TODO add weapons dict in character to hold weapons?
-            weapon = builder.character.weapon_1
-        else:
-            weapon = builder.character.weapon_2
+        weapon = builder.character.weapons[slot]
         transform = item.statusTip()
         if transform == "Off":
             transform = "Weapon_" + transform
