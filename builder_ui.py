@@ -155,8 +155,8 @@ class Ui_MainWindow(object):
                     background: transparent;
                 }
 
-                #Forma_1_Weapon_1:hover, #Forma_2_Weapon_1:hover, #Forma_3_Weapon_1:hover, #Forma_4_Weapon_1:hover,
-                #Forma_1_Weapon_2:hover, #Forma_2_Weapon_2:hover, #Forma_3_Weapon_2:hover, #Forma_4_Weapon_2:hover,
+                #Weapon_1_Forma_1:hover, #Weapon_1_Forma_2:hover, #Weapon_1_Forma_3:hover, #Weapon_1_Forma_4:hover,
+                #Weapon_2_Forma_1:hover, #Weapon_2_Forma_2:hover, #Weapon_2_Forma_3:hover, #Weapon_2_Forma_4:hover,
                 #Booster_1_Button:hover, #Booster_2_Button:hover, #Booster_3_Button:hover,
                 #Booster_4_Button:hover, #Booster_5_Button:hover, #Booster_6_Button:hover {
                     border : 1px solid #c2c2c2; /*light grey*/
@@ -372,7 +372,7 @@ class Ui_MainWindow(object):
 
         # 2nd horizontal layout content - vertical layout 1 content - buttons
         self.push_button_h2_v1_1 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v1_1.setObjectName(u"Forma_1_Weapon_1")
+        self.push_button_h2_v1_1.setObjectName(u"Weapon_1_Forma_1")
         self.push_button_h2_v1_1.setText(QCoreApplication.translate("MainWindow", u"Forma 1", None)) # move to re-translate
         self.push_button_h2_v1_1.setIcon(icon_slot_forma)
         self.push_button_h2_v1_1.setIconSize(icon_slot_forma_size)
@@ -380,7 +380,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_1.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v1_2 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v1_2.setObjectName(u"Forma_2_Weapon_1")
+        self.push_button_h2_v1_2.setObjectName(u"Weapon_1_Forma_2")
         self.push_button_h2_v1_2.setText(QCoreApplication.translate("MainWindow", u"Forma 2", None)) # move to re-translate
         self.push_button_h2_v1_2.setIcon(icon_slot_forma)
         self.push_button_h2_v1_2.setIconSize(icon_slot_forma_size)
@@ -388,7 +388,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_2.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v1_3 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v1_3.setObjectName(u"Forma_3_Weapon_1")
+        self.push_button_h2_v1_3.setObjectName(u"Weapon_1_Forma_3")
         self.push_button_h2_v1_3.setText(QCoreApplication.translate("MainWindow", u"Forma 3", None)) # move to re-translate
         self.push_button_h2_v1_3.setIcon(icon_slot_forma)
         self.push_button_h2_v1_3.setIconSize(icon_slot_forma_size)
@@ -396,7 +396,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_3.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v1_4 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v1_4.setObjectName(u"Forma_4_Weapon_1")
+        self.push_button_h2_v1_4.setObjectName(u"Weapon_1_Forma_4")
         self.push_button_h2_v1_4.setText(QCoreApplication.translate("MainWindow", u"Forma 4", None)) # move to re-translate
         self.push_button_h2_v1_4.setIcon(icon_slot_forma)
         self.push_button_h2_v1_4.setIconSize(icon_slot_forma_size)
@@ -525,7 +525,7 @@ class Ui_MainWindow(object):
 
         # 2nd horizontal layout content - vertical layout 2 content - buttons
         self.push_button_h2_v2_1 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v2_1.setObjectName(u"Forma_1_Weapon_2")
+        self.push_button_h2_v2_1.setObjectName(u"Weapon_2_Forma_1")
         self.push_button_h2_v2_1.setText(QCoreApplication.translate("MainWindow", u"Forma 1", None))  # move to re-translate
         self.push_button_h2_v2_1.setIcon(icon_slot_forma)
         self.push_button_h2_v2_1.setIconSize(icon_slot_forma_size)
@@ -533,7 +533,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_1.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v2_2 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v2_2.setObjectName(u"Forma_2_Weapon_2")
+        self.push_button_h2_v2_2.setObjectName(u"Weapon_2_Forma_2")
         self.push_button_h2_v2_2.setText(QCoreApplication.translate("MainWindow", u"Forma 2", None))  # move to re-translate
         self.push_button_h2_v2_2.setIcon(icon_slot_forma)
         self.push_button_h2_v2_2.setIconSize(icon_slot_forma_size)
@@ -541,7 +541,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_2.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v2_3 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v2_3.setObjectName(u"Forma_3_Weapon_2")
+        self.push_button_h2_v2_3.setObjectName(u"Weapon_2_Forma_3")
         self.push_button_h2_v2_3.setText(QCoreApplication.translate("MainWindow", u"Forma 3", None))  # move to re-translate
         self.push_button_h2_v2_3.setIcon(icon_slot_forma)
         self.push_button_h2_v2_3.setIconSize(icon_slot_forma_size)
@@ -549,7 +549,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_3.clicked.connect(self.fill_side_menu_forma)
 
         self.push_button_h2_v2_4 = QPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v2_4.setObjectName(u"Forma_4_Weapon_2")
+        self.push_button_h2_v2_4.setObjectName(u"Weapon_2_Forma_4")
         self.push_button_h2_v2_4.setText(QCoreApplication.translate("MainWindow", u"Forma 4", None))  # move to re-translate
         self.push_button_h2_v2_4.setIcon(icon_slot_forma)
         self.push_button_h2_v2_4.setIconSize(icon_slot_forma_size)
@@ -1343,24 +1343,31 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.itemClicked.connect(self.filter_menu_forma)
         self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
 
-        if "Forma_1_Weapon_1" in self.sender().objectName():
+        if "Weapon_1_Forma_1" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_forma_1_weapon_1_clicked)
-        elif "Forma_2_Weapon_1" in self.sender().objectName():
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_forma_1_weapon_1_hover)
+        elif "Weapon_1_Forma_2" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_forma_2_weapon_1_clicked)
-        elif "Forma_3_Weapon_1" in self.sender().objectName():
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_forma_2_weapon_1_hover)
+        elif "Weapon_1_Forma_3" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_forma_3_weapon_1_clicked)
-        elif "Forma_4_Weapon_1" in self.sender().objectName():
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_forma_3_weapon_1_hover)
+        elif "Weapon_1_Forma_4" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_forma_4_weapon_1_clicked)
-        elif "Forma_1_Weapon_2" in self.sender().objectName():
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_forma_4_weapon_1_hover)
+        elif "Weapon_2_Forma_1" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_forma_1_weapon_2_clicked)
-        elif "Forma_2_Weapon_2" in self.sender().objectName():
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_forma_1_weapon_2_hover)
+        elif "Weapon_2_Forma_2" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_forma_2_weapon_2_clicked)
-        elif "Forma_3_Weapon_2" in self.sender().objectName():
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_forma_2_weapon_2_hover)
+        elif "Weapon_2_Forma_3" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_forma_3_weapon_2_clicked)
-        elif "Forma_4_Weapon_2" in self.sender().objectName():
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_forma_3_weapon_2_hover)
+        elif "Weapon_2_Forma_4" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_forma_4_weapon_2_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_forma_4_weapon_2_hover)
 
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_forma_hover)
         self.show_side_menu("Forma")
 
         # buttons
@@ -2021,6 +2028,10 @@ class Ui_MainWindow(object):
         self.handle_forma_clicked(widget, item, "Weapon_2_Forma_4")
 
     def handle_forma_clicked(self, widget, item, slot):
+        builder = self.builder
+        forma = builder.formae[item.statusTip()]
+        builder.commit_transaction(forma, slot=slot)
+
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Forma.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
@@ -2388,8 +2399,37 @@ class MyQListWidget(QListWidget):
         else:
             self.menu_data = None
 
-    def handle_forma_hover(self, item):
+    def handle_forma_1_weapon_1_hover(self, item):
+        self.handle_forma_hover(item, "Weapon_1_Forma_1")
+
+    def handle_forma_2_weapon_1_hover(self, item):
+        self.handle_forma_hover(item, "Weapon_1_Forma_2")
+
+    def handle_forma_3_weapon_1_hover(self, item):
+        self.handle_forma_hover(item, "Weapon_1_Forma_3")
+
+    def handle_forma_4_weapon_1_hover(self, item):
+        self.handle_forma_hover(item, "Weapon_1_Forma_4")
+
+    def handle_forma_1_weapon_2_hover(self, item):
+        self.handle_forma_hover(item, "Weapon_2_Forma_1")
+
+    def handle_forma_2_weapon_2_hover(self, item):
+        self.handle_forma_hover(item, "Weapon_2_Forma_2")
+
+    def handle_forma_3_weapon_2_hover(self, item):
+        self.handle_forma_hover(item, "Weapon_2_Forma_3")
+
+    def handle_forma_4_weapon_2_hover(self, item):
+        self.handle_forma_hover(item, "Weapon_2_Forma_4")
+
+    def handle_forma_hover(self, item, slot):
         self.handle_hover(item)
+
+        builder = self.window().builder
+        forma = builder.formae[item.statusTip()]
+        builder.rollback_transaction()
+        builder.start_transaction(forma, slot=slot)
 
     def handle_booster_hover(self, item):
         self.handle_hover(item)

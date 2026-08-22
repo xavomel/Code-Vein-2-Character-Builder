@@ -17,9 +17,16 @@ class Character:
         self.offensive_forma = OffensiveForma()
         self.defensive_forma = DefensiveForma()
         self.jail = Jail()
-
-        self.formae_1 = [Forma(dummy_number=x + 1) for x in range(4)]
-        self.formae_2 = [Forma(dummy_number=x + 1) for x in range(4)]
+        self.formae = {
+            "Weapon_1_Forma_1": Forma(dummy_number=1),
+            "Weapon_1_Forma_2": Forma(dummy_number=2),
+            "Weapon_1_Forma_3": Forma(dummy_number=3),
+            "Weapon_1_Forma_4": Forma(dummy_number=4),
+            "Weapon_2_Forma_1": Forma(dummy_number=1),
+            "Weapon_2_Forma_2": Forma(dummy_number=2),
+            "Weapon_2_Forma_3": Forma(dummy_number=3),
+            "Weapon_2_Forma_4": Forma(dummy_number=4),
+        }
         self.boosters = [Booster(dummy_number=x + 1) for x in range(6)]
 
         self.traits = []
@@ -301,6 +308,8 @@ class Builder:
         elif _type == "DefensiveForma":
             self.character.defensive_forma = data
             self.character.transform["Defensive"] = transform
+        elif _type == "Forma":
+            self.character.formae[slot] = data
 
         # Update Character parameters
         for _type, var, key, value, old_value, widget in self.last_transaction:
@@ -575,10 +584,62 @@ class Builder:
 
         return val + val_other - val_equipped - val_equipped_other
 
-    def build_forma_transaction(self, data, slot="", transform=""):
+    def build_forma_transaction(self, data, slot, transform=""):
         print("forma")
 
         transaction = []
+
+        _type = type(data).__name__
+        equipped = self.character.formae[slot]
+
+        # matching weapons
+
+        # capacity
+        # TODO transform impact on capacity
+        # TODO weapon change impact on capacity
+        #
+        # for going over capacity, it would be much easier to only highlight the capacity number
+        # rather than also highlighting forma which caused it
+        # because there are many scenarios where clearing highlight after going under capacity is tricky
+        # like forma which previously was highlighted staying red, despite removal of other forma while lowered capacity enough
+        # BUT possibly we will have to iterate over all formas anyways, because of MATCHING WEAPONS ?
+        #
+        for attr, val in data.capacity.items():
+            # get "Weapon_X" from "Weapon_X_Forma_X"
+            key = slot[:8] + "_" + attr
+            widget_capacity = self.char_to_widget_mapping[key]
+            widget_forma = self.char_to_widget_mapping[slot]
+            # fetch old attributes from character rather than blood code
+            # as it contains potential values from traits, boosters, defensive, jail, weapon(s)
+            old_value = self.character.capacity[key]
+            val = val - equipped.capacity[attr]
+            max = self.character.capacity[key + "_Max"]
+            # print(val, old_value, max)
+
+            if val + old_value <= max:
+                # capacity ok
+                stylesheet_forma = "#" + slot + ":hover { border: 1px solid #c2c2c2; }"
+                stylesheet_capacity = "{}"
+            else:
+                # capacity exceeded
+                stylesheet_forma = u"""
+                        #{0} {{ border: 1px solid red; }}
+                        #{0}:hover {{ border: 1px solid #c2c2c2; }}
+                    """.format(slot)
+                stylesheet_capacity = "border: 1px solid red;"
+
+            if data.type == "":
+                # removing forma, treat as capacity ok but only for widget_forma
+                # widget_capacity should retain red border if above maximum
+                stylesheet_forma = "#" + slot + ":hover { border: 1px solid #c2c2c2; }"
+
+            # if stylesheet_forma != widget_forma.styleSheet():
+            # transaction.append([_type, "Stylesheet", None, stylesheet_forma, widget_forma.styleSheet(), widget_forma])
+
+            # if stylesheet_capacity != widget_capacity.styleSheet():
+            transaction.append([_type, "Stylesheet", None, stylesheet_capacity, widget_capacity.styleSheet(), widget_capacity])
+
+            transaction.append([_type, "Capacity", key, val, old_value, widget_capacity])
 
         return transaction
 
