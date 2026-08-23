@@ -727,7 +727,7 @@ class Ui_MainWindow(object):
 
         self.label_h2_v3_h1_g1_3 = QLabel(self.main_vertical_layout_widget)
         self.label_h2_v3_h1_g1_3.setObjectName(u"label_h2_v3_h1_g1_3")
-        self.label_h2_v3_h1_g1_3.setText(QCoreApplication.translate("MainWindow", u"Bleed Jail", None))  # move to re-translate
+        self.label_h2_v3_h1_g1_3.setText(QCoreApplication.translate("MainWindow", u"Bleed Offensive", None))  # move to re-translate
 
         self.label_h2_v3_h1_g1_4 = QLabel(self.main_vertical_layout_widget)
         self.label_h2_v3_h1_g1_4.setObjectName(u"label_h2_v3_h1_g1_4")
@@ -1900,7 +1900,9 @@ class Ui_MainWindow(object):
         # self.progress_bar_h3_v1_g1_6
 
     def handle_offensive_clicked(self, item):
-        # don't need transaction handling, nothing to update
+        builder = self.builder
+        offensive = builder.offensive_formae[item.statusTip()]
+        builder.commit_transaction(offensive)
 
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -2172,6 +2174,7 @@ class Ui_MainWindow(object):
 
             # Offensive
             self.tool_button_h2_v3_h1_1: "Offensive",
+            self.label_h2_v3_h1_g1_7: "Offensive_Bleed",
 
             # Defensive
             self.tool_button_h2_v3_h1_2: "Defensive",
@@ -2179,7 +2182,6 @@ class Ui_MainWindow(object):
 
             # Jail
             self.tool_button_h2_v3_h1_3: "Jail",
-            self.label_h2_v3_h1_g1_7: "Jail_Bleed",
 
             # Booster
             self.push_button_h2_v3_h2_v1_1: "Booster_1",
@@ -2508,7 +2510,11 @@ class MyQListWidget(QListWidget):
 
     def handle_offensive_hover(self, item):
         self.handle_hover(item)
-        # don't need transaction handling, nothing to update
+
+        builder = self.window().builder
+        offensive = builder.offensive_formae[item.statusTip()]
+        builder.rollback_transaction()
+        builder.start_transaction(offensive)
 
     def handle_defensive_hover(self, item):
         self.handle_hover(item)

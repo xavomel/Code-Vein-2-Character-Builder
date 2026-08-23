@@ -305,6 +305,7 @@ class OffensiveForma:
     def __init__(self, doc=None):
         self.name = ""
         self.description = ""
+        self.bleed = 0
         self.ichor_cost = 0
         self.scaling = {}
         # self.favorite = False  # NOT USED
@@ -315,5 +316,6 @@ class OffensiveForma:
 
         self.name = doc["Name"]
         self.description = doc["Description"]
+        self.bleed = doc["Bleed"]
         self.ichor_cost = doc["IchorCost"]
         self.scaling = doc["Scaling"]

@@ -2,6 +2,7 @@
     {
         "Name": "Absolute Executioner",
         "Description": "An executioner's sword wreathed in spinning gears and sparking blades.\n\nUnleashes a multi-hit downward strike.",
+        "Bleed": 62,
         "IchorCost": 6,
         "Scaling": {
             "Strength": "S+"
@@ -10,6 +11,7 @@
     {
         "Name": "Battle Axe: Idris's Conceit",
         "Description": "A special axe that generates a temporal force field.\n\nStriking with the axe creates a wide-area shock wave. The axe's swing can easily break through shields, and its force field gradually builds up the slow status ailment.",
+        "Bleed": 48,
         "IchorCost": 5,
         "Scaling": {
             "Strength": "A",
@@ -20,6 +22,7 @@
     {
         "Name": "Bloodreaver Blade",
         "Description": "A long blade that slashes foes with a flash-draw strike.",
+        "Bleed": 66,
         "IchorCost": 4,
         "Scaling": {
             "Strength": "S",
@@ -30,6 +33,7 @@
     {
         "Name": "Manus Rapacis",
         "Description": "A grotesque hand that channels the Resurgence's power into a searing beam of light.\n\nFires a long-range laser directly ahead in a straight line.",
+        "Bleed": 35,
         "IchorCost": 6,
         "Scaling": {
             "Willpower": "S+"
@@ -38,6 +42,7 @@
     {
         "Name": "MK Rosenritter",
         "Description": "Twin triple-barreled Gatling guns that turn a wide area into a bullet storm.",
+        "Bleed": 54,
         "IchorCost": 1,
         "Scaling": {
             "Dexterity": "A",
@@ -47,6 +52,7 @@
     {
         "Name": "Statesman's Longbow",
         "Description": "A bow that fires arrows of light at incredible speed.",
+        "Bleed": 30,
         "IchorCost": 1,
         "Scaling": {
             "Dexterity": "S",
@@ -56,6 +62,7 @@
     {
         "Name": "Warhammer of the Fool",
         "Description": "A fire-belching hammer with three forms.\n\nInitiates a chain of attacks starting from a heavy downward swing.",
+        "Bleed": 42,
         "IchorCost": 2,
         "Scaling": {
             "Strength": "S",
@@ -65,6 +72,7 @@
     {
         "Name": "Wings of Eternity",
         "Description": "The twisted wings of Valentin, transfigured into forma.\n\nRains countless spears of light from above, bombarding a wide area.",
+        "Bleed": 33,
         "IchorCost": 10,
         "Scaling": {
             "Mind": "S",

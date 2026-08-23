@@ -43,7 +43,7 @@ class Character:
         self.bleed = {
             "Weapon_1": 0,
             "Weapon_2": 0,
-            "Jail": 0,
+            "Offensive": 0,
         }
         self.capacity = {
             "Weapon_1_Reliability": 0,
@@ -332,6 +332,8 @@ class Builder:
             self.character.transform["Defensive"] = transform
         elif _type == "Forma":
             self.character.formae[slot] = data
+        elif _type == "OffensiveForma":
+            self.character.offensive_forma = data
 
         # Update Character parameters
         for _type, var, key, value, old_value, widget in self.last_transaction:
@@ -456,7 +458,7 @@ class Builder:
         val = data.bleed - equipped.bleed
         transaction.append([_type, "Bleed", "Weapon_1", val, self.character.bleed["Weapon_1"], self.char_to_widget_mapping["Weapon_1_Bleed"]])
         transaction.append([_type, "Bleed", "Weapon_2", val, self.character.bleed["Weapon_2"], self.char_to_widget_mapping["Weapon_2_Bleed"]])
-        transaction.append([_type, "Bleed", "Jail", val, self.character.bleed["Jail"], self.char_to_widget_mapping["Jail_Bleed"]])
+        transaction.append([_type, "Bleed", "Offensive", val, self.character.bleed["Offensive"], self.char_to_widget_mapping["Offensive_Bleed"]])
 
         # balance
         widget = self.char_to_widget_mapping["Balance"]
@@ -522,13 +524,12 @@ class Builder:
             if self.character.capacity[key] <= val + old_value:
                 capacity_legal = True
                 capacity_under[attr] = True
-                stylesheet_capacity = ""
             else:
                 capacity_legal = False
                 capacity_under[attr] = False
-                stylesheet_capacity = "border: 1px solid red;"
 
             if capacity_legal != self.character.legal[key]:
+                stylesheet_capacity = self.capacity_stylesheet(capacity_legal, key)
                 widget_capacity = self.char_to_widget_mapping[key]
                 transaction.append([_type, "Stylesheet", (key, capacity_legal), stylesheet_capacity, widget_capacity.styleSheet(), widget_capacity])
 
@@ -885,6 +886,17 @@ class Builder:
         print("offensive")
 
         transaction = []
+
+        _type = type(data).__name__
+
+        # Bleed
+        key = "Offensive"
+        equipped = self.character.offensive_forma
+        widget = self.char_to_widget_mapping[key + "_Bleed"]
+        # todo comment
+        old_value = self.character.bleed[key]
+        val = data.bleed - equipped.bleed
+        transaction.append([_type, "Bleed", key, val, old_value, widget])
 
         return transaction
 
