@@ -505,7 +505,7 @@
     },
     {
         "Name": "Chariot Reave",
-        "Description": "Perform a forward swipe to initiate a combo attack. Repeat the input during the initial attack to perform a second attack, then press <img id=\"Input.Action.Player.WeaponGadget1\" height=\"desired\" align=\"center\"/> or <img id=\"Input.Action.Player.WeaponGadget2\" height=\"desired\" align=\"center\"/> to perform a third attack. The third attack will differ based on the button pressed. (Each attack consumes ichor.)",
+        "Description": "Perform a forward swipe to initiate a combo attack. Repeat the input during the initial attack to perform a second attack, then press button to perform a third attack. The third attack will differ based on the button pressed. (Each attack consumes ichor.)",
         "Type": "WeaponAction",
         "WeaponMatch": {
             "SingleSword": 0,
@@ -631,7 +631,7 @@
     },
     {
         "Name": "Endless Onslaught",
-        "Description": "Unleash powerful, continuous back-and-forth strikes.\n\nRepeat the input during the attack to continuously strike. Press <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to finish with a powerful strike. (Consumes ichor on use.)",
+        "Description": "Unleash powerful, continuous back-and-forth strikes.\n\nRepeat the input during the attack to continuously strike. Press button to finish with a powerful strike. (Consumes ichor on use.)",
         "Type": "WeaponAction",
         "WeaponMatch": {
             "SingleSword": 0,
@@ -925,7 +925,7 @@
     },
     {
         "Name": "Relentless Sword Dance",
-        "Description": "Unleash rapid, continuous slashes.\n\nRepeat the input during the attack to continuously slash. Press <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to finish with a powerful strike. (Each attack consumes ichor.)",
+        "Description": "Unleash rapid, continuous slashes.\n\nRepeat the input during the attack to continuously slash. Press button to finish with a powerful strike. (Each attack consumes ichor.)",
         "Type": "WeaponAction",
         "WeaponMatch": {
             "SingleSword": 0,
@@ -946,7 +946,7 @@
     },
     {
         "Name": "Swift Blades",
-        "Description": "Instantly dash a short distance and slash with dual blades. Press <img id=\"Input.Action.Player.WeaponGadget1\" height=\"desired\" align=\"center\"/> or <img id=\"Input.Action.Player.WeaponGadget2\" height=\"desired\" align=\"center\"/> during the attack to combo into a cut to the left or right. (Consumes ichor on use.)",
+        "Description": "Instantly dash a short distance and slash with dual blades. Press button during the attack to combo into a cut to the left or right. (Consumes ichor on use.)",
         "Type": "WeaponAction",
         "WeaponMatch": {
             "SingleSword": 0,

@@ -67,6 +67,7 @@ class Forma:
             "Halberd": True,
             "Hammer": True,
             "RuneBlade": True,
+            "": False,  # default type when no Weapon equipped
         }
 
         if not doc:
@@ -79,6 +80,7 @@ class Forma:
         self.ichor_cost = doc["IchorCost"]
         self.capacity = doc["Capacity"]
         self.matching_weapons = doc["WeaponMatch"]
+        self.matching_weapons[""] = False
 
 
 class Booster:

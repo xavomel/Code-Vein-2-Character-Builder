@@ -118,6 +118,28 @@ class Character:
             "Curse": 0,
         }
 
+        self.legal = {
+            "Weapon_1_Forma_1": True,
+            "Weapon_1_Forma_2": True,
+            "Weapon_1_Forma_3": True,
+            "Weapon_1_Forma_4": True,
+            "Weapon_2_Forma_1": True,
+            "Weapon_2_Forma_2": True,
+            "Weapon_2_Forma_3": True,
+            "Weapon_2_Forma_4": True,
+            "Weapon_1_Reliability": True,
+            "Weapon_1_Handling": True,
+            "Weapon_1_Conversion": True,
+            "Weapon_1_Conductivity": True,
+            "Weapon_2_Reliability": True,
+            "Weapon_2_Handling": True,
+            "Weapon_2_Conversion": True,
+            "Weapon_2_Conductivity": True,
+            "Weapon_1_Transform": True,
+            "Weapon_2_Transform": True,
+            "Defensive_Transform": True,
+        }
+
     def add_burden(self, d):
         for attribute, value in d:
             burden[attribute] += value
@@ -336,6 +358,10 @@ class Builder:
                 self.character.capacity[key] += value
             elif var == "StaminaGuardCost":
                 self.character.stamina_guard_cost += value
+            elif var == "Stylesheet":
+                if key:
+                    legal_slot, legal_value = key
+                    self.character.legal[legal_slot] = legal_value
 
         self.last_transaction = []
 
@@ -448,10 +474,10 @@ class Builder:
 
         _type = type(data).__name__
 
-        stylesheet, transform_widget, selected, equipped, other_equipped = self.handle_weapon_transform(data, slot, transform)
-
+        transform_legal, transform_slot, stylesheet, transform_widget, selected, equipped, other_equipped = self.handle_weapon_transform(data, slot, transform)
         # add red border to transform button on invalid transform
-        transaction.append([_type, "Stylesheet", None, stylesheet, transform_widget.styleSheet(), transform_widget])
+        if transform_legal != self.character.legal[transform_slot]:
+            transaction.append([_type, "Stylesheet", (transform_slot, transform_legal), stylesheet, transform_widget.styleSheet(), transform_widget])
 
         # burden
         for attr, val in selected["Burden"].items():
@@ -478,19 +504,41 @@ class Builder:
         val = selected["Bleed"] - equipped["Bleed"]
         transaction.append([_type, "Bleed", key, val, self.character.bleed[key], self.char_to_widget_mapping[key + "_Bleed"]])
 
-        # capacity
+        # calculate capacity and highlight which capacity is exceeded
+        capacity_under = dict()
         for attr, val in selected["Capacity"].items():
-            key = slot + "_" + attr + "_Max"
-            widget = self.char_to_widget_mapping[key]
+            key = slot + "_" + attr
+            key_max = key + "_Max"
+            widget = self.char_to_widget_mapping[key_max]
             # fetch old attributes from character rather than blood code
             # as it contains potential values from traits, boosters, defensive, jail, weapon(s)
-            old_value = self.character.capacity[key]
+            old_value = self.character.capacity[key_max]
             # TODO add handling for Shrugged Burden (booster and trait)
             # remember the state of Shrugged Burden in variable for easy checking, it has big impact
             # TODO add handling for Weapon Rack
             # remember the state of Weapon Rack in variable for easy checking, it has big impact
             val = val - equipped["Capacity"][attr]
-            transaction.append([_type, "Capacity", key, val, old_value, widget])
+
+            if self.character.capacity[key] <= val + old_value:
+                capacity_legal = True
+                capacity_under[attr] = True
+                stylesheet_capacity = ""
+            else:
+                capacity_legal = False
+                capacity_under[attr] = False
+                stylesheet_capacity = "border: 1px solid red;"
+
+            if capacity_legal != self.character.legal[key]:
+                widget_capacity = self.char_to_widget_mapping[key]
+                transaction.append([_type, "Stylesheet", (key, capacity_legal), stylesheet_capacity, widget_capacity.styleSheet(), widget_capacity])
+
+            transaction.append([_type, "Capacity", key_max, val, old_value, widget])
+
+        # matching forma type
+        # and which specific forma exceeded capacity
+        #
+        # this function may add new elements to the transaction
+        self.handle_formae_for_weapon(transaction, _type, self.character.formae, capacity_under, slot, data.type)
 
         return transaction
 
@@ -507,6 +555,8 @@ class Builder:
         :param slot: string
         :param transform: string
         :return:
+            legal: bool
+            transform_slot: string
             stylesheet: string
             transform_widget: transform button for selected weapon
             selected: dict - transform values for weapon selected in transaction
@@ -514,21 +564,16 @@ class Builder:
             other_equipped: dict - transform values for weapon equipped in other weapon slot
         """
         other_slot = "Weapon_2" if slot == "Weapon_1" else "Weapon_1"
-        transform_widget = self.char_to_widget_mapping[slot + "_Transform"]
+        transform_slot = slot + "_Transform"
+        transform_widget = self.char_to_widget_mapping[transform_slot]
 
         if transform in data.transforms:
             selected = data.transforms[transform]
-
-            # set stylesheet for valid state
-            stylesheet = "#Transform_" + slot + "_Button:hover { border: 1px solid #b6a98d; }"
+            legal = True
         else:
             selected = data.transforms["Weapon_Off"]
-
-            # set stylesheet for invalid state
-            stylesheet = u"""
-                    #Transform_{0}_Button {{ border: 1px solid red; }}
-                    #Transform_{0}_Button:hover {{ border: 1px solid #b6a98d; }}
-                """.format(slot)
+            legal = False
+        stylesheet = self.transform_stylesheet(legal, slot)
 
         equipped_transform = self.character.transform[slot]
         if equipped_transform not in self.character.weapons[slot].transforms:
@@ -540,7 +585,7 @@ class Builder:
             other_equipped_transform = "Weapon_Off"
         other_equipped = self.character.weapons[other_slot].transforms[other_equipped_transform]
 
-        return stylesheet, transform_widget, selected, equipped, other_equipped
+        return legal, transform_slot, stylesheet, transform_widget, selected, equipped, other_equipped
 
     def get_burden_after_dual_wielding(self, attr, val, equipped, other_equipped):
         """
@@ -584,62 +629,89 @@ class Builder:
 
         return val + val_other - val_equipped - val_equipped_other
 
+    def handle_formae_for_weapon(self, transaction, _type, formae, capacity_under, weapon_slot, weapon_type):
+        """
+        Handle logic for relationship between weapon and formae.
+        Checks if forma is compatible with that weapon (if not show red border around forma button).
+        Checks each capacity attr in forma if it's inside capacity max (if not show red border around forma button).
+        If requirements are fulfilled but they were not fulfilled before, cleanup red border.
+
+        :param transaction: list
+        :param _type: string
+        :param formae: dict - formae to be processed
+        :param capacity_under: dict - which formae capacity attrs are under or at maximum capacity, or above it
+        :param weapon_slot: string - weapon slot associated with formae
+        :param weapon_type: string - weapon type for weapon slot
+        :return:
+        """
+        for key, forma in formae.items():
+            if weapon_slot not in key:
+                # do not check forma for the other weapon
+                continue
+
+            if forma.type == "" or forma.matching_weapons[weapon_type]:
+                # forma is legal if it is unassigned, or has matching weapon type
+                forma_legal = True
+            else:
+                forma_legal = False
+
+            for attr, is_under_cap in capacity_under.items():
+                if forma.capacity[attr] > 0:
+                    forma_legal = forma_legal and is_under_cap
+
+            if forma_legal != self.character.legal[key]:
+                stylesheet_forma = self.forma_stylesheet(forma_legal, key)
+                widget_forma = self.char_to_widget_mapping[key]
+                transaction.append([_type, "Stylesheet", (key, forma_legal), stylesheet_forma, widget_forma.styleSheet(), widget_forma])
+
     def build_forma_transaction(self, data, slot, transform=""):
         print("forma")
 
         transaction = []
 
         _type = type(data).__name__
-        equipped = self.character.formae[slot]
-
-        # matching weapons
+        weapon_slot = slot[:8]
+        equipped_weapon = self.character.weapons[weapon_slot]
+        equipped_forma = self.character.formae[slot]
 
         # capacity
-        # TODO transform impact on capacity
-        # TODO weapon change impact on capacity
-        #
-        # for going over capacity, it would be much easier to only highlight the capacity number
-        # rather than also highlighting forma which caused it
-        # because there are many scenarios where clearing highlight after going under capacity is tricky
-        # like forma which previously was highlighted staying red, despite removal of other forma while lowered capacity enough
-        # BUT possibly we will have to iterate over all formas anyways, because of MATCHING WEAPONS ?
-        #
+        capacity_under = dict()
         for attr, val in data.capacity.items():
-            # get "Weapon_X" from "Weapon_X_Forma_X"
-            key = slot[:8] + "_" + attr
+            key = weapon_slot + "_" + attr
             widget_capacity = self.char_to_widget_mapping[key]
-            widget_forma = self.char_to_widget_mapping[slot]
             # fetch old attributes from character rather than blood code
             # as it contains potential values from traits, boosters, defensive, jail, weapon(s)
             old_value = self.character.capacity[key]
-            val = val - equipped.capacity[attr]
+            val = val - equipped_forma.capacity[attr]
             max = self.character.capacity[key + "_Max"]
             # print(val, old_value, max)
 
             if val + old_value <= max:
                 # capacity ok
-                stylesheet_forma = "#" + slot + ":hover { border: 1px solid #c2c2c2; }"
-                stylesheet_capacity = "{}"
+                capacity_legal = True
+                capacity_under[attr] = True
             else:
-                # capacity exceeded
-                stylesheet_forma = u"""
-                        #{0} {{ border: 1px solid red; }}
-                        #{0}:hover {{ border: 1px solid #c2c2c2; }}
-                    """.format(slot)
-                stylesheet_capacity = "border: 1px solid red;"
+                capacity_legal = False
+                capacity_under[attr] = False
 
-            if data.type == "":
-                # removing forma, treat as capacity ok but only for widget_forma
-                # widget_capacity should retain red border if above maximum
-                stylesheet_forma = "#" + slot + ":hover { border: 1px solid #c2c2c2; }"
-
-            # if stylesheet_forma != widget_forma.styleSheet():
-            # transaction.append([_type, "Stylesheet", None, stylesheet_forma, widget_forma.styleSheet(), widget_forma])
-
-            # if stylesheet_capacity != widget_capacity.styleSheet():
-            transaction.append([_type, "Stylesheet", None, stylesheet_capacity, widget_capacity.styleSheet(), widget_capacity])
+            if capacity_legal != self.character.legal[key]:
+                stylesheet_capacity = self.capacity_stylesheet(capacity_legal, key)
+                transaction.append([_type, "Stylesheet", (key, capacity_legal), stylesheet_capacity, widget_capacity.styleSheet(), widget_capacity])
 
             transaction.append([_type, "Capacity", key, val, old_value, widget_capacity])
+
+        # matching forma type
+        # and which specific forma exceeded capacity
+        formae = dict()
+        for key, forma in self.character.formae.items():
+            if slot == key:
+                # we want all formae for the same weapon
+                # but 1 forma needs to be replaced with selected forma
+                formae[key] = data
+            else:
+                formae[key] = forma
+        # this function may add new elements to the transaction
+        self.handle_formae_for_weapon(transaction, _type, formae, capacity_under, weapon_slot, equipped_weapon.type)
 
         return transaction
 
@@ -701,10 +773,11 @@ class Builder:
 
         _type = type(data).__name__
 
-        stylesheet, transform_widget, selected, equipped = self.handle_defensive_transform(data, "Defensive", transform)
+        transform_legal, transform_slot, stylesheet, transform_widget, selected, equipped = self.handle_defensive_transform(data, "Defensive", transform)
 
         # add red border to transform button on invalid transform
-        transaction.append([_type, "Stylesheet", None, stylesheet, transform_widget.styleSheet(), transform_widget])
+        if transform_legal != self.character.legal[transform_slot]:
+            transaction.append([_type, "Stylesheet", (transform_slot, transform_legal), stylesheet, transform_widget.styleSheet(), transform_widget])
 
         # burden
         for attr, val in selected["Burden"].items():
@@ -783,33 +856,30 @@ class Builder:
         :param slot: string
         :param transform: string
         :return:
+            legal: string
+            transform_slot: string
             stylesheet: string
             transform_widget: transform button for selected defensive forma
             selected: dict - transform values for defensive forma selected in transaction
             equipped: dict - transform values for defensive forma equipped before transaction
         """
-        transform_widget = self.char_to_widget_mapping[slot + "_Transform"]
+        transform_slot = slot + "_Transform"
+        transform_widget = self.char_to_widget_mapping[transform_slot]
 
         if transform in data.transforms:
             selected = data.transforms[transform]
-
-            # set stylesheet for valid state
-            stylesheet = "#Transform_" + slot + "_Button:hover { border: 1px solid #b6a98d; }"
+            legal = True
         else:
             selected = data.transforms["Defensive_Off"]
-
-            # set stylesheet for invalid state
-            stylesheet = u"""
-                    #Transform_{0}_Button {{ border: 1px solid red; }}
-                    #Transform_{0}_Button:hover {{ border: 1px solid #b6a98d; }}
-                """.format(slot)
+            legal = False
+        stylesheet = self.transform_stylesheet(legal, slot)
 
         equipped_transform = self.character.transform[slot]
         if equipped_transform not in self.character.defensive_forma.transforms:
             equipped_transform = "Defensive_Off"
         equipped = self.character.defensive_forma.transforms[equipped_transform]
 
-        return stylesheet, transform_widget, selected, equipped
+        return legal, transform_slot, stylesheet, transform_widget, selected, equipped
 
     def build_offensive_transaction(self, data, slot="", transform=""):
         print("offensive")
@@ -818,6 +888,29 @@ class Builder:
 
         return transaction
 
+    def transform_stylesheet(self, legal, slot):
+        if legal:
+            return "#Transform_" + slot + "_Button:hover { border: 1px solid #b6a98d; }"
+        else:
+            return u"""
+                    #Transform_{0}_Button {{ border: 1px solid red; }}
+                    #Transform_{0}_Button:hover {{ border: 1px solid #b6a98d; }}
+                """.format(slot)
+
+    def capacity_stylesheet(self, legal, slot):
+        if legal:
+            return ""
+        else:
+            return "border: 1px solid red;"
+
+    def forma_stylesheet(self, legal, slot):
+        if legal:
+            return "#" + slot + ":hover { border: 1px solid #c2c2c2; }"
+        else:
+            return u"""
+                    #{0} {{ border: 1px solid red; }}
+                    #{0}:hover {{ border: 1px solid #c2c2c2; }}
+                """.format(slot)
 
 class MainWindow(QMainWindow, builder_ui.Ui_MainWindow):
     def __init__(self, parent=None):
