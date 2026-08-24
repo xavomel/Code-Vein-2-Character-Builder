@@ -1426,18 +1426,23 @@ class Ui_MainWindow(object):
 
         if "Booster_1" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_booster_1_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_booster_1_hover)
         elif "Booster_2" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_booster_2_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_booster_2_hover)
         elif "Booster_3" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_booster_3_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_booster_3_hover)
         elif "Booster_4" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_booster_4_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_booster_4_hover)
         elif "Booster_5" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_booster_5_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_booster_5_hover)
         elif "Booster_6" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_booster_6_clicked)
+            self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_booster_6_hover)
 
-        self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_booster_hover)
         self.show_side_menu("Booster")
 
         # buttons
@@ -1981,6 +1986,10 @@ class Ui_MainWindow(object):
         self.handle_booster_clicked(widget, item, "Booster_6")
 
     def handle_booster_clicked(self, widget, item, slot):
+        builder = self.builder
+        booster = builder.boosters[item.statusTip()]
+        builder.commit_transaction(booster, slot=slot)
+
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
@@ -2433,8 +2442,31 @@ class MyQListWidget(QListWidget):
         builder.rollback_transaction()
         builder.start_transaction(forma, slot=slot)
 
-    def handle_booster_hover(self, item):
+    def handle_booster_1_hover(self, item):
+        self.handle_booster_hover(item, "Booster_1")
+
+    def handle_booster_2_hover(self, item):
+        self.handle_booster_hover(item, "Booster_2")
+
+    def handle_booster_3_hover(self, item):
+        self.handle_booster_hover(item, "Booster_3")
+
+    def handle_booster_4_hover(self, item):
+        self.handle_booster_hover(item, "Booster_4")
+
+    def handle_booster_5_hover(self, item):
+        self.handle_booster_hover(item, "Booster_5")
+
+    def handle_booster_6_hover(self, item):
+        self.handle_booster_hover(item, "Booster_6")
+
+    def handle_booster_hover(self, item, slot):
         self.handle_hover(item)
+
+        builder = self.window().builder
+        booster = builder.boosters[item.statusTip()]
+        builder.rollback_transaction()
+        builder.start_transaction(booster, slot=slot)
 
     def handle_weapon_1_hover(self, item):
         self.handle_weapon_hover(item, "Weapon_1")

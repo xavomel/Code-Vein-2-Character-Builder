@@ -91,16 +91,6 @@ class Booster:
         self.conditions = []
         self.favorite = False
 
-        # for positive effects
-        self.attributes = {
-            "Strength": 0,
-            "Dexterity": 0,
-            "Mind": 0,
-            "Willpower": 0,
-            "Vitality": 0,
-            "Fortitude": 0,
-        }
-
         self.burden = {
             "Strength": 0,
             "Dexterity": 0,
@@ -117,8 +107,6 @@ class Booster:
         self.name = doc["Name"]
         self.description = doc["Description"]
         self.type = doc["Type"]
-        # self.conditions = doc[""]
-        # self.attributes = doc["Attributes"]
         self.burden = doc["Burden"]
         self.conditions = doc["Conditions"]
 

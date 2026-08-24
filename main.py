@@ -27,7 +27,14 @@ class Character:
             "Weapon_2_Forma_3": Forma(dummy_number=3),
             "Weapon_2_Forma_4": Forma(dummy_number=4),
         }
-        self.boosters = [Booster(dummy_number=x + 1) for x in range(6)]
+        self.boosters = {
+            "Booster_1": Booster(dummy_number=1),
+            "Booster_2": Booster(dummy_number=2),
+            "Booster_3": Booster(dummy_number=3),
+            "Booster_4": Booster(dummy_number=4),
+            "Booster_5": Booster(dummy_number=5),
+            "Booster_6": Booster(dummy_number=6),
+        }
 
         self.traits = []
 
@@ -140,18 +147,85 @@ class Character:
             "Defensive_Transform": True,
         }
 
-    def add_burden(self, d):
-        for attribute, value in d:
-            burden[attribute] += value
-            margin[attribute] -= value  # can be negative
-
-    def remove_burden(self, d):
-        for attribute, value in d:
-            burden[attribute] -= value
-            margin[attribute] += value  # can be negative
-
 
 class Builder:
+    def attribute_booster(self, attr, val):
+        widget = self.char_to_widget_mapping["Attribute_" + attr]
+        old_value = self.character.attributes[attr]
+        return ["attribute_booster", "Attributes", attr, val, old_value, widget]
+
+    def resistance_booster(self, resistance, value):
+        pass
+
+    def ichor_booster(self, value):
+        pass
+
+    def balance_booster(self, value):
+        pass
+
+    def shrugged_burden_booster(self):
+        pass
+
+    def weapon_rack_booster(self):
+        pass
+
+    def bloodline_agnostic_booster(self):
+        pass
+
+    def glutton_booster(self):
+        pass
+
+    def ignore_trait_attribute_req_booster(self):
+        pass
+
+    def resistance_multiplier_booster(self):
+        pass
+
+    def bleed_multiplier_booster(self):
+        pass
+
+    def balance_multiplier_booster(self):
+        pass
+
+    booster_effects = {
+        "Dexterity Booster - Overload": [[attribute_booster, "Dexterity", 5]],
+        "Dexterity Booster":            [[attribute_booster, "Dexterity", 2]],
+        "Fortitude Booster - Overload": [[attribute_booster, "Fortitude", 5]],
+        "Fortitude Booster":            [[attribute_booster, "Fortitude", 2]],
+        "Mind Booster - Overload":      [[attribute_booster, "Mind", 5]],
+        "Mind Booster":                 [[attribute_booster, "Mind", 2]],
+        "Strength Booster - Overload":  [[attribute_booster, "Strength", 5]],
+        "Strength Booster":             [[attribute_booster, "Strength", 2]],
+        "Vitality Booster - Overload":  [[attribute_booster, "Vitality", 5]],
+        "Vitality Booster":             [[attribute_booster, "Vitality", 2]],
+        "Willpower Booster - Overload": [[attribute_booster, "Willpower", 5]],
+        "Willpower Booster":            [[attribute_booster, "Willpower", 2]],
+        "The Tie That Binds: Holly":    [[attribute_booster, "Willpower", 10]],
+        "The Tie That Binds: Josée":    [[attribute_booster, "Strength", 10]],
+        "The Tie That Binds: Lyle":     [[attribute_booster, "Dexterity", 10]],
+        "The Tie That Binds: Noah":     [[attribute_booster, "Fortitude", 10], [ignore_trait_attribute_req_booster]],
+        "The Tie That Binds: Zenon":    [[attribute_booster, "Mind", 10], [ichor_booster, 22]],
+        "Ichor Maximizer - Unum":       [[ichor_booster, 5]],
+        "Ichor Maximizer - Duo":        [[ichor_booster, 6]],
+        "Ichor Maximizer - Tria":       [[ichor_booster, 3]],
+        # resistance
+        "Resistance Booster - Blood":   [[resistance_booster, "Bleed", 40]],
+        "Resistance Booster - Curse":   [[resistance_booster, "Curse", 40]],
+        "Resistance Booster - Disease": [[resistance_booster, "Disease", 40]],
+        "Resistance Booster - Wound":   [[resistance_booster, "Wound", 40]],
+        # special
+        "Shrugged Burden":              [[shrugged_burden_booster]],
+        "Weapon Rack":                  [[weapon_rack_booster]],
+        "Bloodline Agnostic":           [[bloodline_agnostic_booster]],
+        "Glutton":                      [[glutton_booster]],
+        "Resistance Booster":           [[resistance_multiplier_booster]],
+        "Hemorrhaging Weapon Boost":    [[bleed_multiplier_booster]],
+        "Balance Booster":              [[balance_multiplier_booster]],
+        # balance
+        "Phalanx J":                    [[balance_booster, 100]],
+        "Phalanx I":                    [[balance_booster, -25]],  # has multiple effects
+    }
+
     def __init__(self):
         self.character = Character()
         self.blood_codes = dict()
@@ -334,6 +408,8 @@ class Builder:
             self.character.formae[slot] = data
         elif _type == "OffensiveForma":
             self.character.offensive_forma = data
+        elif _type == "Booster":
+            self.character.boosters[slot] = data
 
         # Update Character parameters
         for _type, var, key, value, old_value, widget in self.last_transaction:
@@ -716,13 +792,6 @@ class Builder:
 
         return transaction
 
-    def build_booster_transaction(self, data, slot="", transform=""):
-        print("booster")
-
-        transaction = []
-
-        return transaction
-
     def build_jail_transaction(self, data, slot="", transform=""):
         print("jail")
 
@@ -900,6 +969,50 @@ class Builder:
 
         return transaction
 
+    def build_booster_transaction(self, data, slot, transform=""):
+        print("booster")
+
+        transaction = []
+
+        equipped = self.character.boosters[slot]
+        if data.name == equipped.name:
+            # avoid replacing booster with itself
+            return transaction
+
+        # TODO merge transactions of same type
+        #
+        # e.g. if replacing attribute booster for Willpower +2
+        # with attribute booster for Willpower +5
+        # need to compute a diff -2 +5 = +3
+        # without this the preview won't be accurate
+        #
+        # or need some other way to solve it
+
+        # unassign old booster
+        equipped_booster_effect = self.booster_effects.get(equipped.name, [])
+        for effect in equipped_booster_effect:
+            function = effect[0]
+            arguments = effect[1:]
+            if arguments:
+                operation = function(self, *arguments)
+                # make value negative since we are removing it
+                operation[3] = -1 * operation[3]
+                transaction.append(operation)
+            else:
+                transaction.append(function(self))
+
+        # assign new booster
+        selected_booster_effect = self.booster_effects.get(data.name, [])
+        for effect in selected_booster_effect:
+            function = effect[0]
+            arguments = effect[1:]
+            if arguments:
+                transaction.append(function(self, *arguments))
+            else:
+                transaction.append(function(self))
+
+        return transaction
+
     def transform_stylesheet(self, legal, slot):
         if legal:
             return "#Transform_" + slot + "_Button:hover { border: 1px solid #b6a98d; }"
@@ -923,6 +1036,7 @@ class Builder:
                     #{0} {{ border: 1px solid red; }}
                     #{0}:hover {{ border: 1px solid #c2c2c2; }}
                 """.format(slot)
+
 
 class MainWindow(QMainWindow, builder_ui.Ui_MainWindow):
     def __init__(self, parent=None):
