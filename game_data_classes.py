@@ -90,6 +90,7 @@ class Booster:
         self.type = ""  # 0, 1, 2, 3
         self.conditions = []
         self.favorite = False
+        self.equipped = False
 
         self.burden = {
             "Strength": 0,

@@ -1465,6 +1465,9 @@ class Ui_MainWindow(object):
 
         # content
         for k, v in self.builder.boosters.items():
+            if v.equipped:
+                # already equipped, do not show
+                continue
             if k == "Empty":
                 item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
             else:
@@ -1747,6 +1750,9 @@ class Ui_MainWindow(object):
         self.display_favorite_tips_if_needed(chosen)
 
         for k, v in self.builder.boosters.items():
+            if v.equipped:
+                # already equipped, do not show
+                continue
             if chosen == "All" or chosen == v.type or (chosen == "Favorite" and v.favorite) or k == "Empty":
                 if k == "Empty":
                     item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")

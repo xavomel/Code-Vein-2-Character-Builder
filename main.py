@@ -149,43 +149,105 @@ class Character:
 
 
 class Builder:
-    def attribute_booster(self, attr, val):
+    def attribute_booster(self, attr, val, subtract, unassign_transaction):
+        var = "Attributes"
         widget = self.char_to_widget_mapping["Attribute_" + attr]
         old_value = self.character.attributes[attr]
-        return ["attribute_booster", "Attributes", attr, val, old_value, widget]
+        val = -val if subtract else val
 
-    def resistance_booster(self, resistance, value):
-        pass
+        idx_to_remove = []
+        for idx, transaction in enumerate(unassign_transaction):
+            if var == transaction[1] and attr == transaction[2]:
+                # merge transactions of same type
+                val += transaction[3]
+                idx_to_remove.append(idx)
 
-    def ichor_booster(self, value):
-        pass
+        for idx in reversed(idx_to_remove):
+            # remove transactions that are included in the merged transaction
+            unassign_transaction.pop(idx)
 
-    def balance_booster(self, value):
-        pass
+        return ["Booster", var, attr, val, old_value, widget]
+
+    def resistance_booster(self, attr, val, subtract, unassign_transaction):
+        var = "Resistance"
+        widget = self.char_to_widget_mapping["Resistance_" + attr]
+        old_value = self.character.resistance[attr]
+        val = -val if subtract else val
+
+        idx_to_remove = []
+        for idx, transaction in enumerate(unassign_transaction):
+            if var == transaction[1] and attr == transaction[2]:
+                # merge transactions of same type
+                val += transaction[3]
+                idx_to_remove.append(idx)
+
+        for idx in reversed(idx_to_remove):
+            # remove transactions that are included in the merged transaction
+            unassign_transaction.pop(idx)
+
+        return ["Booster", var, attr, val, old_value, widget]
+
+    def ichor_booster(self, val, subtract, unassign_transaction):
+        var = "Ichor"
+        widget = self.char_to_widget_mapping["Ichor"]
+        old_value = self.character.ichor
+        val = -val if subtract else val
+
+        idx_to_remove = []
+        for idx, transaction in enumerate(unassign_transaction):
+            if var == transaction[1]:
+                # merge transactions of same type
+                val += transaction[3]
+                idx_to_remove.append(idx)
+
+        for idx in reversed(idx_to_remove):
+            # remove transactions that are included in the merged transaction
+            unassign_transaction.pop(idx)
+
+        return ["Booster", var, None, val, old_value, widget]
+
+    def balance_booster(self, val, subtract, unassign_transaction):
+        var = "Balance"
+        widget = self.char_to_widget_mapping["Balance"]
+        old_value = self.character.balance
+        val = -val if subtract else val
+
+        idx_to_remove = []
+        for idx, transaction in enumerate(unassign_transaction):
+            if var == transaction[1]:
+                # merge transactions of same type
+                val += transaction[3]
+                idx_to_remove.append(idx)
+
+        for idx in reversed(idx_to_remove):
+            # remove transactions that are included in the merged transaction
+            unassign_transaction.pop(idx)
+
+        return ["Booster", var, None, val, old_value, widget]
 
     def shrugged_burden_booster(self):
-        pass
+        return []
 
     def weapon_rack_booster(self):
-        pass
+        return []
 
     def bloodline_agnostic_booster(self):
-        pass
+        return []
 
     def glutton_booster(self):
-        pass
+        return []
 
     def ignore_trait_attribute_req_booster(self):
-        pass
+        return []
 
     def resistance_multiplier_booster(self):
-        pass
+        return []
 
     def bleed_multiplier_booster(self):
-        pass
+        return []
 
     def balance_multiplier_booster(self):
-        pass
+        return []
 
     booster_effects = {
         "Dexterity Booster - Overload": [[attribute_booster, "Dexterity", 5]],
@@ -409,6 +471,11 @@ class Builder:
         elif _type == "OffensiveForma":
             self.character.offensive_forma = data
         elif _type == "Booster":
+            previous_booster = self.character.boosters[slot]
+            previous_booster.equipped = False
+            if data.type != "":
+                # only set for real boosters (do not set for placeholder when making booster slot empty)
+                data.equipped = True
             self.character.boosters[slot] = data
 
         # Update Character parameters
@@ -972,6 +1039,7 @@ class Builder:
     def build_booster_transaction(self, data, slot, transform=""):
         print("booster")
 
+        unassign_transaction = []
         transaction = []
 
         equipped = self.character.boosters[slot]
@@ -979,37 +1047,50 @@ class Builder:
             # avoid replacing booster with itself
             return transaction
 
-        # TODO merge transactions of same type
+        # TODO after selecting booster X and closing the menu, booster X will not show up in menu since it's equipped
+        # however if you then select another booster Y in same slot but do not close the menu
+        # then booster X will still not be visible (since menu is populated when it's opened)
+        # this could make it confusing to find booster X
         #
-        # e.g. if replacing attribute booster for Willpower +2
-        # with attribute booster for Willpower +5
-        # need to compute a diff -2 +5 = +3
-        # without this the preview won't be accurate
-        #
-        # or need some other way to solve it
+        # solution, do a soft-refresh on booster menu after commit?
+        # so only reset the menu items, but without re-connecting widget actions etc
 
         # unassign old booster
         equipped_booster_effect = self.booster_effects.get(equipped.name, [])
         for effect in equipped_booster_effect:
-            function = effect[0]
+            booster_fun = effect[0]
             arguments = effect[1:]
             if arguments:
-                operation = function(self, *arguments)
-                # make value negative since we are removing it
-                operation[3] = -1 * operation[3]
-                transaction.append(operation)
+                # make value negative when removing the booster
+                arguments.append(True)
+                arguments.append([])
+                operation = booster_fun(self, *arguments)
             else:
-                transaction.append(function(self))
+                operation = booster_fun(self)
+            if operation:
+                unassign_transaction.append(operation)
 
         # assign new booster
         selected_booster_effect = self.booster_effects.get(data.name, [])
         for effect in selected_booster_effect:
-            function = effect[0]
+            booster_fun = effect[0]
             arguments = effect[1:]
             if arguments:
-                transaction.append(function(self, *arguments))
+                # pass transaction for removing equipped booster
+                # if it impacts the same parameter the transactions will be merged (sum of values)
+                # needed for accurate parameter value on hover
+                arguments.append(False)
+                arguments.append(unassign_transaction)
+                operation = booster_fun(self, *arguments)
             else:
-                transaction.append(function(self))
+                operation = booster_fun(self)
+            if operation:
+                transaction.append(operation)
+
+        transaction = unassign_transaction + transaction
+        if not transaction:
+            # no impact on parameters (text only booster) but non-empty transaction is needed for commit
+            transaction.append(["Booster", None, None, None, None, None])
 
         return transaction
 
