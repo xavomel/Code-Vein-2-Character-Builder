@@ -235,6 +235,7 @@ class Builder:
         return []
 
     def glutton_booster(self):
+        # need to implement losing 2nd food buff if booster is active?
         return []
 
     def ignore_trait_attribute_req_booster(self):
@@ -247,6 +248,9 @@ class Builder:
         return []
 
     def balance_multiplier_booster(self):
+        return []
+
+    def text_booster(self):
         return []
 
     booster_effects = {
@@ -285,7 +289,42 @@ class Builder:
         "Balance Booster":              [[balance_multiplier_booster]],
         # balance
         "Phalanx J":                    [[balance_booster, 100]],
-        "Phalanx I":                    [[balance_booster, -25]],  # has multiple effects
+        "Phalanx I":                    [[text_booster], [balance_booster, -25], [text_booster]],  # has multiple effects
+    }
+
+    def condition_none(self):
+        return True
+
+    def condition_attribute(self, doc, transaction):
+        print(doc)
+        for attr, value in doc.items():
+            character_value = self.character.attributes[attr]
+            for operation in transaction:
+                if operation[1] == "Attributes" and operation[2] == attr:
+                    # if unequipped booster for this attribute, subtract it's value
+                    character_value -= operation[3]
+            if character_value < value:
+                return False
+        return True
+
+    def condition_margin(self, doc, transaction):
+        return True
+
+    def condition_burden(self, doc, transaction):
+        return True
+
+    def condition_overburden(self, doc, transaction):
+        return True
+
+    def condition_bloodline(self, doc, transaction):
+        return True
+
+    booster_and_trait_conditions = {
+        "Attribute": condition_attribute,
+        "Margin": condition_margin,
+        "Burden": condition_burden,
+        "Overburden": condition_overburden,
+        "Bloodline": condition_bloodline,
     }
 
     def __init__(self):
@@ -507,6 +546,8 @@ class Builder:
                 if key:
                     legal_slot, legal_value = key
                     self.character.legal[legal_slot] = legal_value
+            elif var == "Active":
+                self.character.boosters[slot].active = value
 
         self.last_transaction = []
 
@@ -1039,55 +1080,86 @@ class Builder:
     def build_booster_transaction(self, data, slot, transform=""):
         print("booster")
 
-        unassign_transaction = []
-        transaction = []
+        prev_booster_transactions = []
+        new_booster_transactions = []
 
         equipped = self.character.boosters[slot]
         if data.name == equipped.name:
             # avoid replacing booster with itself
-            return transaction
-
-        # TODO after selecting booster X and closing the menu, booster X will not show up in menu since it's equipped
-        # however if you then select another booster Y in same slot but do not close the menu
-        # then booster X will still not be visible (since menu is populated when it's opened)
-        # this could make it confusing to find booster X
-        #
-        # solution, do a soft-refresh on booster menu after commit?
-        # so only reset the menu items, but without re-connecting widget actions etc
+            return []
 
         # unassign old booster
-        equipped_booster_effect = self.booster_effects.get(equipped.name, [])
-        for effect in equipped_booster_effect:
-            booster_fun = effect[0]
-            arguments = effect[1:]
-            if arguments:
-                # make value negative when removing the booster
-                arguments.append(True)
-                arguments.append([])
-                operation = booster_fun(self, *arguments)
-            else:
-                operation = booster_fun(self)
-            if operation:
-                unassign_transaction.append(operation)
+        if not equipped.active:
+            # if booster was inactive do not subtract anything
+            pass
+        else:
+            equipped_booster_effect = self.booster_effects.get(equipped.name, [])
+            for effect in equipped_booster_effect:
+                booster_fun = effect[0]
+                arguments = effect[1:]
+                if arguments:
+                    # make value negative when removing the booster
+                    arguments.append(True)
+                    arguments.append([])
+                    operation1 = booster_fun(self, *arguments)
+                else:
+                    operation1 = booster_fun(self)
+                if operation1:
+                    prev_booster_transactions.append(operation1)
+
+        selected_active = True
+        if data.active:
+            # text boosters are always active
+            pass
+        else:
+            # check conditions for selected booster
+            conditions = data.conditions
+            for doc in conditions:
+                for cond_name, cond_value in doc.items():
+                    cond_fun = self.booster_and_trait_conditions[cond_name]
+                    print("res", cond_fun)
+                    if not cond_fun(self, cond_value, prev_booster_transactions):
+                        selected_active = False
+
+        print("sactive", selected_active)
+
+        new_booster_transactions.append(["Booster", "Active", slot, selected_active, None, None])
 
         # assign new booster
-        selected_booster_effect = self.booster_effects.get(data.name, [])
-        for effect in selected_booster_effect:
-            booster_fun = effect[0]
-            arguments = effect[1:]
-            if arguments:
-                # pass transaction for removing equipped booster
-                # if it impacts the same parameter the transactions will be merged (sum of values)
-                # needed for accurate parameter value on hover
-                arguments.append(False)
-                arguments.append(unassign_transaction)
-                operation = booster_fun(self, *arguments)
-            else:
-                operation = booster_fun(self)
-            if operation:
-                transaction.append(operation)
+        if not selected_active:
+            # # if booster is inactive do not add anything
+            pass
+        else:
+            selected_booster_effect = self.booster_effects.get(data.name, [])
+            print(selected_booster_effect)
+            for effect in selected_booster_effect:
+                booster_fun = effect[0]
+                arguments = effect[1:]
+                if arguments:
+                    # pass transaction for removing equipped booster
+                    # if it impacts the same parameter the transactions will be merged (sum of values)
+                    # needed for accurate parameter value on hover
+                    arguments.append(False)
+                    arguments.append(prev_booster_transactions)
+                    operation = booster_fun(self, *arguments)
+                else:
+                    operation = booster_fun(self)
+                if operation:
+                    new_booster_transactions.append(operation)
 
-        transaction = unassign_transaction + transaction
+        # # booster activation conditions
+        # for key, booster in self.character.boosters.items():
+        #     if key == slot:
+        #         # we want all boosters but 1 booster needs to be replaced with selected booster
+        #         booster = data
+        #     conditions = booster.conditions
+        #     for doc in conditions:
+        #         for cond_name, cond_value in doc.items():
+        #             cond_fun = self.booster_and_trait_conditions[cond_name]
+        #             print(cond_fun)
+
+        transaction = prev_booster_transactions + new_booster_transactions
+
         if not transaction:
             # no impact on parameters (text only booster) but non-empty transaction is needed for commit
             transaction.append(["Booster", None, None, None, None, None])

@@ -88,9 +88,10 @@ class Booster:
         self.name = ""
         self.description = ""
         self.type = ""  # 0, 1, 2, 3
-        self.conditions = []
+        self.conditions = [{}]
         self.favorite = False
         self.equipped = False
+        self.active = False
 
         self.burden = {
             "Strength": 0,
@@ -109,7 +110,14 @@ class Booster:
         self.description = doc["Description"]
         self.type = doc["Type"]
         self.burden = doc["Burden"]
+        # TODO instead of conditions like this [{...}, {...}, {...}] or [{}] when empty
+        # do conditions like this {"1": {...}, "2": {...}, "3": {...}} or {} when empty - easier to iterate
+        # or just get rid of remembering multiple conditions separately,
+        # and make special case for only such booster - Phalanx I
         self.conditions = doc["Conditions"]
+        if all([len(x) == 0 for x in self.conditions]):
+            # boosters without conditions are always active, except the placeholder for making booster slot empty
+            self.active = True
 
 
 class BloodCode:

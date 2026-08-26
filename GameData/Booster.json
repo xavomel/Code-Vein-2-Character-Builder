@@ -11,7 +11,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Dexterity Booster",
@@ -25,7 +27,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Mind Booster",
@@ -39,7 +43,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Willpower Booster",
@@ -53,7 +59,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Vitality Booster",
@@ -67,7 +75,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Fortitude Booster",
@@ -81,7 +91,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Strength Booster - Overload",
@@ -95,7 +107,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Dexterity Booster - Overload",
@@ -109,7 +123,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Mind Booster - Overload",
@@ -123,7 +139,9 @@
             "Vitality": 2,
             "Fortitude": 2
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Willpower Booster - Overload",
@@ -137,7 +155,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Vitality Booster - Overload",
@@ -151,7 +171,9 @@
             "Vitality": 0,
             "Fortitude": 2
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Fortitude Booster - Overload",
@@ -165,7 +187,9 @@
             "Vitality": 2,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Shrugged Burden",
@@ -236,7 +260,7 @@
         "Conditions": [
             {
                 "Attribute": {
-                    "Will": 20
+                    "Willpower": 20
                 }
             }
         ]
@@ -257,9 +281,7 @@
             {
                 "Attribute": {
                     "Mind": 16
-                }
-            },
-            {
+                },
                 "Bloodline": "Luxuria"
             }
         ]
@@ -312,7 +334,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Stamina Maximizer - Duo",
@@ -344,7 +368,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Seasoned Runner",
@@ -358,7 +384,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Steady Guard",
@@ -430,7 +458,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Ichor Maximizer - Duo",
@@ -482,9 +512,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Gula"
             }
         ]
@@ -521,9 +549,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Luxuria"
             }
         ]
@@ -542,9 +568,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Superbia"
             }
         ]
@@ -617,9 +641,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Luxuria"
             }
         ]
@@ -657,7 +679,7 @@
         "Conditions": [
             {
                 "Attribute": {
-                    "Will": 16
+                    "Willpower": 16
                 }
             }
         ]
@@ -838,9 +860,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Patientia"
             }
         ]
@@ -859,9 +879,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Luxuria"
             }
         ]
@@ -900,9 +918,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Superbia"
             }
         ]
@@ -975,9 +991,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Superbia"
             }
         ]
@@ -998,9 +1012,7 @@
             {
                 "Attribute": {
                     "Vitality": 24
-                }
-            },
-            {
+                },
                 "Bloodline": "Patientia"
             }
         ]
@@ -1019,9 +1031,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Patientia"
             }
         ]
@@ -1038,7 +1048,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Special Drain Increase",
@@ -1052,7 +1064,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Recoil Control",
@@ -1178,7 +1192,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Bleed Tracker",
@@ -1192,7 +1208,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Status Ailment Stacker",
@@ -1244,7 +1262,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Resistance Booster - Wound",
@@ -1258,7 +1278,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Resistance Booster - Disease",
@@ -1272,7 +1294,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Resistance Booster - Blood",
@@ -1286,7 +1310,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Resistance Booster",
@@ -1318,7 +1344,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Balance Booster",
@@ -1408,9 +1436,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Acedia"
             }
         ]
@@ -1486,9 +1512,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
-            },
-            {
+                "Overburden": false,
                 "Bloodline": "Patientia"
             }
         ]
@@ -1689,7 +1713,9 @@
             "Vitality": 15,
             "Fortitude": 10
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "Phalanx I",
@@ -1724,7 +1750,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "The Tie That Binds: Lyle",
@@ -1738,7 +1766,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "The Tie That Binds: Holly",
@@ -1752,7 +1782,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "The Tie That Binds: Zenon",
@@ -1766,7 +1798,9 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     },
     {
         "Name": "The Tie That Binds: Noah",
@@ -1780,6 +1814,8 @@
             "Vitality": 0,
             "Fortitude": 0
         },
-        "Conditions": []
+        "Conditions": [
+            {}
+        ]
     }
 ]

@@ -1374,6 +1374,8 @@ class Ui_MainWindow(object):
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_All.png"), "")
         item.setStatusTip("All")
         self.side_menu_buttons.addItem(item)
+        self.side_menu_buttons.setCurrentItem(item)
+
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_Favorite.png"), "")
         item.setStatusTip("Favorite")
         self.side_menu_buttons.addItem(item)
@@ -1449,6 +1451,7 @@ class Ui_MainWindow(object):
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_All.png"), "")
         item.setStatusTip("All")
         self.side_menu_buttons.addItem(item)
+        self.side_menu_buttons.setCurrentItem(item)
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_Favorite.png"), "")
         item.setStatusTip("Favorite")
         self.side_menu_buttons.addItem(item)
@@ -1501,6 +1504,7 @@ class Ui_MainWindow(object):
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_All.png"), "")
         item.setStatusTip("All")
         self.side_menu_buttons.addItem(item)
+        self.side_menu_buttons.setCurrentItem(item)
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_Favorite.png"), "")
         item.setStatusTip("Favorite")
         self.side_menu_buttons.addItem(item)
@@ -1614,6 +1618,8 @@ class Ui_MainWindow(object):
             item = QListWidgetItem(QIcon(), bloodline)
             item.setFont(font_numbers_bleed)
             self.side_menu_buttons.addItem(item)
+            if bloodline == "All":
+                self.side_menu_buttons.setCurrentItem(item)
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
@@ -1680,6 +1686,8 @@ class Ui_MainWindow(object):
             item = QListWidgetItem(QIcon(), type)
             item.setFont(font_numbers_bleed)
             self.side_menu_buttons.addItem(item)
+            if type == "All":
+                self.side_menu_buttons.setCurrentItem(item)
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
@@ -1996,21 +2004,34 @@ class Ui_MainWindow(object):
         booster = builder.boosters[item.statusTip()]
         builder.commit_transaction(booster, slot=slot)
 
+        active = booster.active
+        print("handle_booster_clicked", active)
+
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
         if item.statusTip() == "Empty":
             widget.setIcon(icon_1)
             widget.setText(slot.replace("_", " "))
-            return
+        else:
+            icon_1 = QIcon()
+            icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+            icon_2 = QIcon()
+            icon_2.addFile(u":/All/Booster/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal,
+                           QIcon.State.Off)
+            new_icon = self.merge_icons(icon_1, icon_2, 30, invert=not active)
+            widget.setIcon(new_icon)
+            widget.setText(item.statusTip())
 
-        icon_1 = QIcon()
-        icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        icon_2 = QIcon()
-        icon_2.addFile(u":/All/Booster/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        new_icon = self.merge_icons(icon_1, icon_2, 30)
-        widget.setIcon(new_icon)
-        widget.setText(item.statusTip())
+        selected_filter = self.side_menu_buttons.selectedItems()
+        print("filter", selected_filter)
+        if selected_filter:
+            # do a soft-refresh of booster side menu content
+            # to remove currently selected booster from the list and to add previously selected booster (if any)
+            # ensures previously selected booster can be selected again without re-opening the side menu
+            #
+            # removing item from the list will destroy it, so should be called after it's last usage
+            self.filter_menu_booster(selected_filter[0])
 
     def handle_forma_1_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_1
@@ -2068,7 +2089,7 @@ class Ui_MainWindow(object):
     # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
     # (such that it looks good and button remains clickable)
     # merge icons instead to accomplish this
-    def merge_icons(self, icon_1, icon_2, size_1, size_2=None):
+    def merge_icons(self, icon_1, icon_2, size_1, size_2=None, invert=False):
         if not size_2:
             size_2 = size_1
 
@@ -2082,6 +2103,8 @@ class Ui_MainWindow(object):
         painter.drawImage(0, 0, image_2)
         painter.end()
 
+        if invert:
+            image_1.invertPixels()
         pixmap_3 = QPixmap.fromImage(image_1)
         icon_3 = QIcon()
         icon_3.addPixmap(pixmap_3, QIcon.Mode.Normal, QIcon.State.Off)
