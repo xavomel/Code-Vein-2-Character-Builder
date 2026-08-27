@@ -149,11 +149,11 @@ class Character:
 
 
 class Builder:
-    def attribute_booster(self, attr, val, subtract, unassign_transaction):
+    def attribute_booster(self, attr, val, add, unassign_transaction):
         var = "Attributes"
         widget = self.char_to_widget_mapping["Attribute_" + attr]
         old_value = self.character.attributes[attr]
-        val = -val if subtract else val
+        val = val if add else -val
 
         idx_to_remove = []
         for idx, transaction in enumerate(unassign_transaction):
@@ -168,11 +168,11 @@ class Builder:
 
         return ["Booster", var, attr, val, old_value, widget]
 
-    def resistance_booster(self, attr, val, subtract, unassign_transaction):
+    def resistance_booster(self, attr, val, add, unassign_transaction):
         var = "Resistance"
         widget = self.char_to_widget_mapping["Resistance_" + attr]
         old_value = self.character.resistance[attr]
-        val = -val if subtract else val
+        val = val if add else -val
 
         idx_to_remove = []
         for idx, transaction in enumerate(unassign_transaction):
@@ -187,11 +187,11 @@ class Builder:
 
         return ["Booster", var, attr, val, old_value, widget]
 
-    def ichor_booster(self, val, subtract, unassign_transaction):
+    def ichor_booster(self, val, add, unassign_transaction):
         var = "Ichor"
         widget = self.char_to_widget_mapping["Ichor"]
         old_value = self.character.ichor
-        val = -val if subtract else val
+        val = val if add else -val
 
         idx_to_remove = []
         for idx, transaction in enumerate(unassign_transaction):
@@ -206,11 +206,11 @@ class Builder:
 
         return ["Booster", var, None, val, old_value, widget]
 
-    def balance_booster(self, val, subtract, unassign_transaction):
+    def balance_booster(self, val, add, unassign_transaction):
         var = "Balance"
         widget = self.char_to_widget_mapping["Balance"]
         old_value = self.character.balance
-        val = -val if subtract else val
+        val = val if add else -val
 
         idx_to_remove = []
         for idx, transaction in enumerate(unassign_transaction):
@@ -302,7 +302,8 @@ class Builder:
             for operation in transaction:
                 if operation[1] == "Attributes" and operation[2] == attr:
                     # if unequipped booster for this attribute, subtract it's value
-                    character_value -= operation[3]
+                    character_value += operation[3]
+            print("condition_attribute", character_value, value)
             if character_value < value:
                 return False
         return True
@@ -327,7 +328,10 @@ class Builder:
         "Bloodline": condition_bloodline,
     }
 
-    def __init__(self):
+    def __init__(self, window):
+        # give access to builder_ui methods without making Builder a subclass of Ui_MainWindow
+        self.window = window
+
         self.character = Character()
         self.blood_codes = dict()
         self.weapons = dict()
@@ -440,6 +444,10 @@ class Builder:
                     widget.setText(str(format(new_value, "0.2f")))
                 elif var == "Stylesheet":
                     widget.setStyleSheet(value)
+                elif var == "Active":
+                    print("transaction", widget, key, old_value)
+                    booster_slot, booster_name = key
+                    self.window.set_booster_icon(widget, booster_name, value)
                 else:
                     widget.setText(str(value + old_value))
 
@@ -477,6 +485,10 @@ class Builder:
                     widget.setText(str(format(old_value, "0.2f")))
                 elif var == "Stylesheet":
                     widget.setStyleSheet(old_value)
+                elif var == "Active":
+                    print("rollback", widget, key, old_value)
+                    booster_slot, booster_name = key
+                    self.window.set_booster_icon(widget, booster_name, old_value)
                 else:
                     widget.setText(str(old_value))
 
@@ -510,11 +522,13 @@ class Builder:
         elif _type == "OffensiveForma":
             self.character.offensive_forma = data
         elif _type == "Booster":
+            # COMMENTED OUT for easier troubleshooting
+            # TODO uncomment
             previous_booster = self.character.boosters[slot]
-            previous_booster.equipped = False
-            if data.type != "":
-                # only set for real boosters (do not set for placeholder when making booster slot empty)
-                data.equipped = True
+            # previous_booster.equipped = False
+            # if data.type != "":
+            #     # only set for real boosters (do not set for placeholder when making booster slot empty)
+            #     data.equipped = True
             self.character.boosters[slot] = data
 
         # Update Character parameters
@@ -547,7 +561,11 @@ class Builder:
                     legal_slot, legal_value = key
                     self.character.legal[legal_slot] = legal_value
             elif var == "Active":
-                self.character.boosters[slot].active = value
+                booster_slot, booster_name = key
+                previous_booster = self.character.boosters[booster_slot]
+                previous_booster.active = False
+                self.character.boosters[booster_slot].active = value
+                print("commit", booster_slot, booster_name)
 
         self.last_transaction = []
 
@@ -1080,8 +1098,7 @@ class Builder:
     def build_booster_transaction(self, data, slot, transform=""):
         print("booster")
 
-        prev_booster_transactions = []
-        new_booster_transactions = []
+        transaction = []
 
         equipped = self.character.boosters[slot]
         if data.name == equipped.name:
@@ -1093,78 +1110,115 @@ class Builder:
             # if booster was inactive do not subtract anything
             pass
         else:
-            equipped_booster_effect = self.booster_effects.get(equipped.name, [])
-            for effect in equipped_booster_effect:
-                booster_fun = effect[0]
-                arguments = effect[1:]
-                if arguments:
-                    # make value negative when removing the booster
-                    arguments.append(True)
-                    arguments.append([])
-                    operation1 = booster_fun(self, *arguments)
+            # if booster was active subtract it's effects by treating it as inactive
+            self.resolve_effects(equipped, active=False, transaction=transaction)
+
+        # booster list for iteration
+        # replace 1 booster with selected
+        boosters = list(self.character.boosters.values())
+        slot_int = int(slot.replace("Booster_", "")) - 1
+        boosters[slot_int] = data
+
+        # keep original active values for faster access
+        original_active = {k: v.active for k, v in self.character.boosters.items()}
+
+        # keep temporary active values, they will be updated for real when transaction is committed
+        # treat selected booster as inactive, since it's not equipped yet
+        temp_active = [x.active for x in boosters]
+        temp_active[slot_int] = False
+
+        # === booster loop ===
+        # changing selected booster can impact other boosters in unpredictable ways
+        # a booster in later slot can impact booster in earlier slot,
+        # so need to keep iterating until active status of all boosters stops changing (including selected booster)
+        #
+        # an basic problematic scenario is active Bloodline Agnostic (slot 1) and active Weapon Rack (slot 2)
+        # - BA is active if no overburden
+        # - WR is active if STR & DEX > 18
+        # - assuming BA stays active but WR doesn't
+        # - then WR going inactive will cause burden to rise, potentially impacting BA
+        #
+        # TODO should we start iteration from slot_int (selected booster) instead of 0?
+        # since it's guaranteed to change active status
+        idx = 0
+        unchanged = [0, 0, 0, 0, 0, 0]
+        while all(unchanged) is False:
+            booster = boosters[idx]
+            active = temp_active[idx]
+            new_active = self.check_conditions(booster, transaction)
+            if active != new_active:
+                print(booster.name, "not equal", active, new_active, unchanged)
+                temp_active[idx] = new_active
+                self.resolve_effects(booster, new_active, transaction)
+
+                booster_slot = "Booster_" + str(idx + 1)
+                widget = self.char_to_widget_mapping[booster_slot]
+                old_value = original_active[booster_slot]
+                if booster_slot != slot:
+                    transaction.append(["Booster", "Active", (booster_slot, booster.name), new_active, old_value, widget])
                 else:
-                    operation1 = booster_fun(self)
-                if operation1:
-                    prev_booster_transactions.append(operation1)
+                    # do not set widget, as selected booster should not be displayed until it's clicked
+                    transaction.append(["Booster", "Active", (booster_slot, None), new_active, None, None])
+            else:
+                unchanged[idx] = 1
+                print(booster.name, "equal", active, new_active, unchanged)
 
-        selected_active = True
-        if data.active:
-            # text boosters are always active
-            pass
-        else:
-            # check conditions for selected booster
-            conditions = data.conditions
-            for doc in conditions:
-                for cond_name, cond_value in doc.items():
-                    cond_fun = self.booster_and_trait_conditions[cond_name]
-                    print("res", cond_fun)
-                    if not cond_fun(self, cond_value, prev_booster_transactions):
-                        selected_active = False
-
-        print("sactive", selected_active)
-
-        new_booster_transactions.append(["Booster", "Active", slot, selected_active, None, None])
-
-        # assign new booster
-        if not selected_active:
-            # # if booster is inactive do not add anything
-            pass
-        else:
-            selected_booster_effect = self.booster_effects.get(data.name, [])
-            print(selected_booster_effect)
-            for effect in selected_booster_effect:
-                booster_fun = effect[0]
-                arguments = effect[1:]
-                if arguments:
-                    # pass transaction for removing equipped booster
-                    # if it impacts the same parameter the transactions will be merged (sum of values)
-                    # needed for accurate parameter value on hover
-                    arguments.append(False)
-                    arguments.append(prev_booster_transactions)
-                    operation = booster_fun(self, *arguments)
-                else:
-                    operation = booster_fun(self)
-                if operation:
-                    new_booster_transactions.append(operation)
-
-        # # booster activation conditions
-        # for key, booster in self.character.boosters.items():
-        #     if key == slot:
-        #         # we want all boosters but 1 booster needs to be replaced with selected booster
-        #         booster = data
-        #     conditions = booster.conditions
-        #     for doc in conditions:
-        #         for cond_name, cond_value in doc.items():
-        #             cond_fun = self.booster_and_trait_conditions[cond_name]
-        #             print(cond_fun)
-
-        transaction = prev_booster_transactions + new_booster_transactions
+            # TODO replace with modulo?
+            idx += 1
+            if idx == len(unchanged):
+                idx = 0
 
         if not transaction:
             # no impact on parameters (text only booster) but non-empty transaction is needed for commit
             transaction.append(["Booster", None, None, None, None, None])
 
         return transaction
+
+    def check_conditions(self, booster, transaction):
+        """
+        Check if all conditions for booster are met.
+        :param booster: Booster
+        :param transaction: list - containing all transactions so far
+        :return:
+            bool
+        """
+        if booster.type == "":
+            # empty booster
+            return False
+
+        conditions_list = booster.conditions
+        for conditions in conditions_list:
+            for name, values in conditions.items():
+                cond_fun = self.booster_and_trait_conditions[name]
+                if not cond_fun(self, values, transaction):
+                    return False
+
+        return True
+
+    def resolve_effects(self, booster, active, transaction):
+        """
+        Resolve all effects for booster, updating transactions depending on effect.
+        :param booster: Booster
+        :param active: bool - whether booster is active (need to add effects) or inactive (subtract)
+        :param transaction: list - containing all transactions so far
+        :return:
+            None
+        """
+        print("  resolve_effects", booster.name, active)
+        booster_effects = self.booster_effects.get(booster.name, [])
+        for effect in booster_effects:
+            print("effect", effect)
+            booster_fun = effect[0]
+            arguments = effect[1:]
+            if arguments:
+                print("booster active", active)
+                arguments.append(active)          # add or subtract
+                arguments.append(transaction)     # transactions to update
+                operation = booster_fun(self, *arguments)
+            else:
+                operation = booster_fun(self)
+            if operation:
+                transaction.append(operation)
 
     def transform_stylesheet(self, legal, slot):
         if legal:
@@ -1194,7 +1248,7 @@ class Builder:
 class MainWindow(QMainWindow, builder_ui.Ui_MainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
-        self.builder = Builder()
+        self.builder = Builder(self)
         self.setupUi(self)
 
 

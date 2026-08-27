@@ -1375,7 +1375,6 @@ class Ui_MainWindow(object):
         item.setStatusTip("All")
         self.side_menu_buttons.addItem(item)
         self.side_menu_buttons.setCurrentItem(item)
-
         item = QListWidgetItem(QIcon(u":/All/UI/Menu_Favorite.png"), "")
         item.setStatusTip("Favorite")
         self.side_menu_buttons.addItem(item)
@@ -2005,26 +2004,15 @@ class Ui_MainWindow(object):
         builder.commit_transaction(booster, slot=slot)
 
         active = booster.active
-        print("handle_booster_clicked", active)
+        print("  handle_booster_clicked", active)
 
-        icon_1 = QIcon()
-        icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-
+        self.set_booster_icon(widget, item.statusTip(), active)
         if item.statusTip() == "Empty":
-            widget.setIcon(icon_1)
             widget.setText(slot.replace("_", " "))
         else:
-            icon_1 = QIcon()
-            icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-            icon_2 = QIcon()
-            icon_2.addFile(u":/All/Booster/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal,
-                           QIcon.State.Off)
-            new_icon = self.merge_icons(icon_1, icon_2, 30, invert=not active)
-            widget.setIcon(new_icon)
             widget.setText(item.statusTip())
 
         selected_filter = self.side_menu_buttons.selectedItems()
-        print("filter", selected_filter)
         if selected_filter:
             # do a soft-refresh of booster side menu content
             # to remove currently selected booster from the list and to add previously selected booster (if any)
@@ -2085,6 +2073,21 @@ class Ui_MainWindow(object):
         new_icon = self.merge_icons(icon_1, icon_2, 30)
         widget.setIcon(new_icon)
         widget.setText(item.statusTip())
+
+    def set_booster_icon(self, widget, name, active):
+        print("  set_booster_icon", widget, name, active)
+
+        icon_1 = QIcon()
+        icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+
+        if name == "Empty":
+            widget.setIcon(icon_1)
+        else:
+            icon_2 = QIcon()
+            icon_2.addFile(u":/All/Booster/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal,
+                           QIcon.State.Off)
+            new_icon = self.merge_icons(icon_1, icon_2, 30, invert=not active)
+            widget.setIcon(new_icon)
 
     # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
     # (such that it looks good and button remains clickable)
