@@ -231,8 +231,27 @@ class Builder:
     def weapon_rack_booster(self):
         return []
 
-    def bloodline_agnostic_booster(self):
-        return []
+    def bloodline_agnostic_booster(self, bloodline, add, unassign_transaction):
+        character_bloodline = self.character.bloodline
+        old_value = character_bloodline
+
+        idx_to_remove = []
+        for idx, transaction in enumerate(unassign_transaction):
+            if transaction[1] == "Bloodline":
+                # merge transactions of same type
+                # we don't need the bloodline value from transaction, it will be overwritten
+                idx_to_remove.append(idx)
+
+        for idx in reversed(idx_to_remove):
+            # remove transactions that are included in the merged transaction
+            unassign_transaction.pop(idx)
+
+        if add:
+            value = bloodline  # Agnostic will be set here
+            return ["Booster", "Bloodline", None, value, old_value, None]
+        else:
+            value = self.character.blood_code.bloodline  # restore original bloodline from blood code
+            return ["Booster", "Bloodline", None, value, old_value, None]
 
     def glutton_booster(self):
         # need to implement losing 2nd food buff if booster is active?
@@ -282,7 +301,7 @@ class Builder:
         # special
         "Shrugged Burden":              [[shrugged_burden_booster]],
         "Weapon Rack":                  [[weapon_rack_booster]],
-        "Bloodline Agnostic":           [[bloodline_agnostic_booster]],
+        "Bloodline Agnostic":           [[bloodline_agnostic_booster, "Agnostic"]],
         "Glutton":                      [[glutton_booster]],
         "Resistance Booster":           [[resistance_multiplier_booster]],
         "Hemorrhaging Weapon Boost":    [[bleed_multiplier_booster]],
@@ -390,10 +409,11 @@ class Builder:
             if operation[1] == "Bloodline":
                 character_bloodline = operation[3]
 
-        print("condition_bloodline", bloodline, self.character.bloodline)
-        if bloodline != character_bloodline:
+        print("condition_bloodline", bloodline, character_bloodline)
+        if character_bloodline == "Agnostic":
+            return True
+        elif character_bloodline != bloodline:
             return False
-
         return True
 
     booster_and_trait_conditions = {
@@ -530,6 +550,14 @@ class Builder:
 
         self.last_transaction = transaction
 
+    # should we rollback transactions in reverse order?
+    # so that if we have 2 transactions of same type:
+    # - then old value from 1st operation should be the final value, not from 2nd operation
+    #
+    # probably unecessary as long as we are merging transactions
+    #
+    # but is this really a problem? until we commit we can always get old value from character
+    #
     def rollback_transaction(self):
         """
         Replaces UI values with old values stored in transaction.
@@ -611,6 +639,9 @@ class Builder:
         # Update Character parameters
         for _type, var, key, value, old_value, widget in self.last_transaction:
             if var == "Bloodline":
+                # TODO if value is Agnostic, set Character variable bloodline_agnostic to True
+                # otherwise set it to False ?
+                # could be easy way to remember if this booster is active, but is it necessary?
                 self.character.bloodline = value
             elif var == "Attributes":
                 self.character.attributes[key] += value

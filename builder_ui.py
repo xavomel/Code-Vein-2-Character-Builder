@@ -2006,6 +2006,8 @@ class Ui_MainWindow(object):
         active = booster.active
         print("  handle_booster_clicked", active)
 
+        print("      bloodline", builder.character.bloodline)
+
         self.set_booster_icon(widget, item.statusTip(), active)
         if item.statusTip() == "Empty":
             widget.setText(slot.replace("_", " "))
