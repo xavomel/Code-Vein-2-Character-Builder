@@ -2074,6 +2074,7 @@ class Ui_MainWindow(object):
         widget.setIcon(new_icon)
         widget.setText(item.statusTip())
 
+    # TODO consider putting inverted state as alternate icon state, to make switching more efficient
     def set_booster_icon(self, widget, name, active):
         print("  set_booster_icon", widget, name, active)
 

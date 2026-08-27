@@ -2062,7 +2062,7 @@
                 "Conditions": [
                     {},
                     {
-                        "Burden": {
+                        "BurdenMax": {
                             "Dexterity": 0,
                             "Mind": 0
                         }
@@ -2128,7 +2128,7 @@
                 "Conditions": [
                     {},
                     {
-                        "Burden": {
+                        "BurdenMax": {
                             "Dexterity": 0,
                             "Mind": 0
                         }
@@ -2194,7 +2194,7 @@
                 "Conditions": [
                     {},
                     {
-                        "Burden": {
+                        "BurdenMax": {
                             "Dexterity": 0,
                             "Mind": 0
                         }

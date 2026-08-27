@@ -301,29 +301,106 @@ class Builder:
             character_value = self.character.attributes[attr]
             for operation in transaction:
                 if operation[1] == "Attributes" and operation[2] == attr:
-                    # if unequipped booster for this attribute, subtract it's value
                     character_value += operation[3]
+
             print("condition_attribute", character_value, value)
             if character_value < value:
                 return False
         return True
 
+    # whether margin of attr X is at least Y
+    # TODO use character.margin instead !
     def condition_margin(self, doc, transaction):
-        return True
+        print(doc)
+        for attr, value in doc.items():
+            character_attribute = self.character.attributes[attr]
+            character_burden = self.character.burden[attr]
+            for operation in transaction:
+                if operation[1] == "Attributes" and operation[2] == attr:
+                    character_attribute += operation[3]
+                if operation[1] == "Burden" and operation[2] == attr:
+                    character_burden += operation[3]
 
+            character_margin = character_attribute - character_burden
+            print("condition_margin", character_attribute, character_burden, character_margin, value)
+            if character_margin < value:
+                return False
+
+    # whether burden of attr X is at least Y
+    # test case: Phalanx I
     def condition_burden(self, doc, transaction):
+        print(doc)
+        for attr, value in doc.items():
+            character_value = self.character.burden[attr]
+            for operation in transaction:
+                if operation[1] == "Burden" and operation[2] == attr:
+                    character_value += operation[3]
+
+            print("condition_burden", character_value, value)
+            if character_value < value:
+                return False
         return True
 
-    def condition_overburden(self, doc, transaction):
+    # whether burden of attr X is at most Y
+    def condition_burden_max(self, doc, transaction):
+        print(doc)
+        for attr, value in doc.items():
+            character_value = self.character.burden[attr]
+            for operation in transaction:
+                if operation[1] == "Burden" and operation[2] == attr:
+                    character_value += operation[3]
+
+            print("condition_burden_max", character_value, value)
+            if character_value > value:
+                return False
         return True
 
-    def condition_bloodline(self, doc, transaction):
+    # TODO use character.margin instead !
+    # test case overburden false - Usurper or Bloodline Agnostic
+    def condition_overburden(self, wanted_overburden, transaction):
+        print(wanted_overburden)
+        for attr, value in self.character.attributes.items():
+            character_attribute = value
+            character_burden = self.character.burden[attr]
+            for operation in transaction:
+                if operation[1] == "Attributes" and operation[2] == attr:
+                    character_attribute += operation[3]
+                if operation[1] == "Burden" and operation[2] == attr:
+                    character_burden += operation[3]
+
+            character_margin = character_attribute - character_burden
+            if character_margin < 0:
+                # if margin is negative we are overburdened
+                if not wanted_overburden:
+                    return False
+                else:
+                    return True
+
+        if not wanted_overburden:
+            return True
+        else:
+            return False
+
+    # test case: Shrugged Burden
+    def condition_bloodline(self, bloodline, transaction):
+        print(bloodline)
+
+        character_bloodline = self.character.bloodline
+        for operation in transaction:
+            if operation[1] == "Bloodline":
+                character_bloodline = operation[3]
+
+        print("condition_bloodline", bloodline, self.character.bloodline)
+        if bloodline != character_bloodline:
+            return False
+
         return True
 
     booster_and_trait_conditions = {
         "Attribute": condition_attribute,
         "Margin": condition_margin,
         "Burden": condition_burden,
+        "BurdenMax": condition_burden,
         "Overburden": condition_overburden,
         "Bloodline": condition_bloodline,
     }
@@ -1100,10 +1177,21 @@ class Builder:
 
         transaction = []
 
+        _type = type(data).__name__
+
         equipped = self.character.boosters[slot]
         if data.name == equipped.name:
             # avoid replacing booster with itself
             return []
+
+        # burden - handle first since it's predictable
+        for attr, val in data.burden.items():
+            widget = self.char_to_widget_mapping["Burden_" + attr]
+            old_value = self.character.burden[attr]
+            # TODO add handling for Shrugged Burden (booster and trait) ?
+            # TODO add handling for Weapon Rack ?
+            val = val - equipped.burden[attr]
+            transaction.append([_type, "Burden", attr, val, old_value, widget])
 
         # unassign old booster
         if not equipped.active:
@@ -1163,7 +1251,6 @@ class Builder:
                 unchanged[idx] = 1
                 print(booster.name, "equal", active, new_active, unchanged)
 
-            # TODO replace with modulo?
             idx += 1
             if idx == len(unchanged):
                 idx = 0
