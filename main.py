@@ -228,6 +228,9 @@ class Builder:
     def shrugged_burden_booster(self):
         return []
 
+    # seems there's a bug where this booster reduces burden attr that is not present on 2nd weapon
+    # this may happen if other booster in this transaction has increased burden of same attr
+    # TODO ensure we only take weapon burden attr into account, maybe by filtering by _type ?
     def weapon_rack_booster(self, dummy, add, transaction_list):
         transform_1 = self.character.transform["Weapon_1"]
         transform_2 = self.character.transform["Weapon_1"]
@@ -284,12 +287,12 @@ class Builder:
 
                 transaction_list.append(["Booster", "Burden", attr, new_val, old_value, widget])
 
-    def bloodline_agnostic_booster(self, bloodline, add, unassign_transaction):
+    def bloodline_agnostic_booster(self, bloodline, add, transaction_list):
         character_bloodline = self.character.bloodline
         old_value = character_bloodline
 
         idx_to_remove = []
-        for idx, transaction in enumerate(unassign_transaction):
+        for idx, transaction in enumerate(transaction_list):
             if transaction[1] == "Bloodline":
                 # merge transactions of same type
                 # we don't need the bloodline value from transaction, it will be overwritten
@@ -297,14 +300,14 @@ class Builder:
 
         for idx in reversed(idx_to_remove):
             # remove transactions that are included in the merged transaction
-            unassign_transaction.pop(idx)
+            transaction_list.pop(idx)
 
         if add:
             value = bloodline  # Agnostic will be set here
-            return ["Booster", "Bloodline", None, value, old_value, None]
+            transaction_list.append(["Booster", "Bloodline", None, value, old_value, None])
         else:
             value = self.character.blood_code.bloodline  # restore original bloodline from blood code
-            return ["Booster", "Bloodline", None, value, old_value, None]
+            transaction_list.append(["Booster", "Bloodline", None, value, old_value, None])
 
     def glutton_booster(self):
         # need to implement losing 2nd food buff if booster is active?
@@ -987,6 +990,8 @@ class Builder:
                 # or NO value if Weapon Rack is active
                 val_equipped = floor(val_equipped / 2)
 
+            # TODO - can this be simplified like weapon rack?
+            #
             # - pick the WHOLE value from weapon with HIGHER burden
             # - and take HALF value (rounded down) from weapon with LOWER burden
             # - or NO value from weapon with LOWER burden if Weapon Rack is active

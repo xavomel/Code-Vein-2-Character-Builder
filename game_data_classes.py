@@ -1,6 +1,64 @@
 from fractions import Fraction
 
 
+def burden_table(burden):
+    values = burden.values()
+
+    text = """
+        <p align="center">
+            <table><thead>
+              <tr>
+                <th>STR</th>
+                <th>DEX</th>
+                <th>MND</th>
+                <th>WIL</th>
+                <th>VIT</th>
+                <th>FOR</th>
+              </tr></thead>
+            <tbody>
+              <tr>
+                <td style="text-align: center;">{0}</td>
+                <td style="text-align: center;">{1}</td>
+                <td style="text-align: center;">{2}</td>
+                <td style="text-align: center;">{3}</td>
+                <td style="text-align: center;">{4}</td>
+                <td style="text-align: center;">{5}</td>
+              </tr>
+            </tbody>
+            </table>
+        </p>
+            """.format(*values)
+
+    return text
+
+
+def capacity_table(capacity):
+    values = capacity.values()
+
+    text = """
+        <p align="center">
+            <table><thead>
+              <tr>
+                <th>Reliability</th>
+                <th>Handling</th>
+                <th>Conversion</th>
+                <th>Conductivity</th>
+              </tr></thead>
+            <tbody>
+              <tr>
+                <td style="text-align: center;">{0}</td>
+                <td style="text-align: center;">{1}</td>
+                <td style="text-align: center;">{2}</td>
+                <td style="text-align: center;">{3}</td>
+              </tr>
+            </tbody>
+            </table>
+        </p>
+            """.format(*values)
+
+    return text
+
+
 class Weapon:
     def __init__(self, doc=None, dummy_number=None):
         self.name = ""
@@ -40,6 +98,21 @@ class Weapon:
             key = transform["Name"]
             self.transforms[key] = transform
             self.transforms[key].pop("Name")
+
+    def get_hover_text(self, detailed=False):
+        text = """<body>
+            <h2><p align="center">{0}</p></h2>
+            """.format(self.name)
+
+        # to do choose right transform
+        if detailed:
+            # Do we really need those values? Maybe just for hover outside side menu
+            text += burden_table(self.transforms["Weapon_Off"]["Burden"])
+            text += capacity_table(self.transforms["Weapon_Off"]["Capacity"])
+        text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
+        text += "</body>"
+
+        return text
 
 
 class Forma:
@@ -82,6 +155,21 @@ class Forma:
         self.matching_weapons = doc["WeaponMatch"]
         self.matching_weapons[""] = False
 
+    # to do add matching weapons?
+    def get_hover_text(self, detailed=False):
+        text = """<body>
+            <h2><p align="center">{0}</p></h2>
+            <h3><div style="white-space: pre-wrap;">Ichor Consumption: {1}</div></h3>
+            </body>""".format(
+                self.name,
+                self.ichor_cost)
+
+        if detailed:
+            text += capacity_table(self.capacity)
+        text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
+        text += "</body>"
+
+        return text
 
 class Booster:
     def __init__(self, doc=None, dummy_number=None):
@@ -118,6 +206,16 @@ class Booster:
         if all([len(x) == 0 for x in self.conditions]):
             # boosters without conditions are always active, except the placeholder for making booster slot empty
             self.active = True
+
+    # to do add conditions
+    def get_hover_text(self, detailed=False):
+        text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
+        if detailed:
+            text += burden_table(self.burden)
+        text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
+        text += "</body>"
+
+        return text
 
 
 class BloodCode:
@@ -194,6 +292,20 @@ class BloodCode:
         # for k, v in self.burden.items():
         #     print(k, v)
 
+    # to do add traits
+    def get_hover_text(self, detailed=False):
+        text = """<body>
+            <h2><p align="center">{0}</p></h2>
+
+            <body>""".format(self.name)
+
+        if detailed:
+            text += """<h3><div style="white-space: pre-wrap;">Bloodline: {0}</div></h3>""".format(self.bloodline)
+        text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
+        text += "</body>"
+
+        return text
+
 
 class Jail:
     def __init__(self, doc=None):
@@ -232,6 +344,15 @@ class Jail:
         self.balance = doc["Balance"]
         self.burden = doc["Burden"]
         self.defense = {k: Fraction(v) for k, v in doc["Defense"].items()}
+
+    def get_hover_text(self, detailed=True):
+        text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
+        if detailed:
+            text += burden_table(self.burden)
+        text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
+        text += "</body>"
+
+        return text
 
 
 class DefensiveForma:
@@ -297,6 +418,23 @@ class DefensiveForma:
             self.transforms[key] = transform
             self.transforms[key].pop("Name")
 
+    def get_hover_text(self, detailed=False):
+        text = """<body>
+            <h2><p align="center">{0}</p></h2>
+            <h3><div style="white-space: pre-wrap;">Type: {1}</div></h3>
+            <h3><div style="white-space: pre-wrap;">Ichor Consumption: {2}</div></h3>
+            <body>""".format(
+                self.name,
+                self.type,
+                self.ichor_cost)
+
+        if detailed:
+            text += burden_table(self.transforms["Defensive_Off"]["Burden"])
+        text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
+        text += "</body>"
+
+        return text
+
 
 class OffensiveForma:
     def __init__(self, doc=None):
@@ -316,3 +454,14 @@ class OffensiveForma:
         self.bleed = doc["Bleed"]
         self.ichor_cost = doc["IchorCost"]
         self.scaling = doc["Scaling"]
+
+    def get_hover_text(self, detailed=False):
+        return """<body>
+            <h2><p align="center">{0}</p></h2>
+            <h3><div style="white-space: pre-wrap;">Ichor Consumption: {1}</div></h3>
+            <br>
+            <div style="white-space: pre-wrap;">{2}</div>
+        <body>""".format(
+            self.name,
+            self.ichor_cost,
+            self.description)
