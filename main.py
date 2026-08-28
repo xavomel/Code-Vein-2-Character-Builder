@@ -149,14 +149,14 @@ class Character:
 
 
 class Builder:
-    def attribute_booster(self, attr, val, add, unassign_transaction):
+    def attribute_booster(self, attr, val, add, transaction_list):
         var = "Attributes"
         widget = self.char_to_widget_mapping["Attribute_" + attr]
         old_value = self.character.attributes[attr]
         val = val if add else -val
 
         idx_to_remove = []
-        for idx, transaction in enumerate(unassign_transaction):
+        for idx, transaction in enumerate(transaction_list):
             if var == transaction[1] and attr == transaction[2]:
                 # merge transactions of same type
                 val += transaction[3]
@@ -164,18 +164,18 @@ class Builder:
 
         for idx in reversed(idx_to_remove):
             # remove transactions that are included in the merged transaction
-            unassign_transaction.pop(idx)
+            transaction_list.pop(idx)
 
-        return ["Booster", var, attr, val, old_value, widget]
+        transaction_list.append(["Booster", var, attr, val, old_value, widget])
 
-    def resistance_booster(self, attr, val, add, unassign_transaction):
+    def resistance_booster(self, attr, val, add, transaction_list):
         var = "Resistance"
         widget = self.char_to_widget_mapping["Resistance_" + attr]
         old_value = self.character.resistance[attr]
         val = val if add else -val
 
         idx_to_remove = []
-        for idx, transaction in enumerate(unassign_transaction):
+        for idx, transaction in enumerate(transaction_list):
             if var == transaction[1] and attr == transaction[2]:
                 # merge transactions of same type
                 val += transaction[3]
@@ -183,18 +183,18 @@ class Builder:
 
         for idx in reversed(idx_to_remove):
             # remove transactions that are included in the merged transaction
-            unassign_transaction.pop(idx)
+            transaction_list.pop(idx)
 
-        return ["Booster", var, attr, val, old_value, widget]
+        transaction_list.append(["Booster", var, attr, val, old_value, widget])
 
-    def ichor_booster(self, val, add, unassign_transaction):
+    def ichor_booster(self, val, add, transaction_list):
         var = "Ichor"
         widget = self.char_to_widget_mapping["Ichor"]
         old_value = self.character.ichor
         val = val if add else -val
 
         idx_to_remove = []
-        for idx, transaction in enumerate(unassign_transaction):
+        for idx, transaction in enumerate(transaction_list):
             if var == transaction[1]:
                 # merge transactions of same type
                 val += transaction[3]
@@ -202,18 +202,18 @@ class Builder:
 
         for idx in reversed(idx_to_remove):
             # remove transactions that are included in the merged transaction
-            unassign_transaction.pop(idx)
+            transaction_list.pop(idx)
 
-        return ["Booster", var, None, val, old_value, widget]
+        transaction_list.append(["Booster", var, None, val, old_value, widget])
 
-    def balance_booster(self, val, add, unassign_transaction):
+    def balance_booster(self, val, add, transaction_list):
         var = "Balance"
         widget = self.char_to_widget_mapping["Balance"]
         old_value = self.character.balance
         val = val if add else -val
 
         idx_to_remove = []
-        for idx, transaction in enumerate(unassign_transaction):
+        for idx, transaction in enumerate(transaction_list):
             if var == transaction[1]:
                 # merge transactions of same type
                 val += transaction[3]
@@ -221,15 +221,68 @@ class Builder:
 
         for idx in reversed(idx_to_remove):
             # remove transactions that are included in the merged transaction
-            unassign_transaction.pop(idx)
+            transaction_list.pop(idx)
 
-        return ["Booster", var, None, val, old_value, widget]
+        transaction_list.append(["Booster", var, None, val, old_value, widget])
 
     def shrugged_burden_booster(self):
         return []
 
-    def weapon_rack_booster(self):
-        return []
+    def weapon_rack_booster(self, dummy, add, transaction_list):
+        transform_1 = self.character.transform["Weapon_1"]
+        transform_2 = self.character.transform["Weapon_1"]
+        weapon_1_burden = self.character.weapons["Weapon_1"].transforms[transform_1]["Burden"]
+        weapon_2_burden = self.character.weapons["Weapon_2"].transforms[transform_2]["Burden"]
+
+        for attr, val in weapon_1_burden.items():
+            val_other = weapon_2_burden[attr]
+
+            val_equipped = weapon_1_burden[attr]
+            val_equipped_other = weapon_2_burden[attr]
+
+            if val_other != 0:
+                if weapon_1_burden[attr] > weapon_2_burden[attr]:
+                    # if equipped weapon has HIGHER burden (is not halved)
+                    # take HALF of other weapon burden as equip load
+                    # or NO value if Weapon Rack is active
+                    if add:
+                        val_equipped_other = 0
+                    else:
+                        val_equipped_other = floor(val_equipped_other / 2)
+
+                    # subtract lesser value from greater value
+                    val = val_equipped - val_equipped_other
+                else:
+                    # if equipped weapon has LOWER burden (is halved)
+                    # take HALF of equipped weapon burden as equip load
+                    # or NO value if Weapon Rack is active
+                    if add:
+                        val_equipped = 0
+                    else:
+                        val_equipped = floor(val_equipped / 2)
+
+                    # subtract lesser value from greater value
+                    val = val_equipped_other - val_equipped
+
+                widget = self.char_to_widget_mapping["Burden_" + attr]
+                old_value = self.character.burden[attr]
+                new_val = old_value - val
+                new_val = -new_val if add else new_val
+
+                print("****** final", new_val, "val", val, "val_other", val_other, "val_equipped", val_equipped, "val_equipped_other", val_equipped_other, "add", add, "old_value", old_value)
+
+                idx_to_remove = []
+                for idx, transaction in enumerate(transaction_list):
+                    if "Burden" == transaction[1] and attr == transaction[2]:
+                        # merge transactions of same type
+                        new_val += transaction[3]
+                        idx_to_remove.append(idx)
+
+                for idx in reversed(idx_to_remove):
+                    # remove transactions that are included in the merged transaction
+                    transaction_list.pop(idx)
+
+                transaction_list.append(["Booster", "Burden", attr, new_val, old_value, widget])
 
     def bloodline_agnostic_booster(self, bloodline, add, unassign_transaction):
         character_bloodline = self.character.bloodline
@@ -300,7 +353,7 @@ class Builder:
         "Resistance Booster - Wound":   [[resistance_booster, "Wound", 40]],
         # special
         "Shrugged Burden":              [[shrugged_burden_booster]],
-        "Weapon Rack":                  [[weapon_rack_booster]],
+        "Weapon Rack":                  [[weapon_rack_booster, "Dummy"]],
         "Bloodline Agnostic":           [[bloodline_agnostic_booster, "Agnostic"]],
         "Glutton":                      [[glutton_booster]],
         "Resistance Booster":           [[resistance_multiplier_booster]],
@@ -319,6 +372,7 @@ class Builder:
         for attr, value in doc.items():
             character_value = self.character.attributes[attr]
             for operation in transaction:
+                print("      condition_attribute", operation)
                 if operation[1] == "Attributes" and operation[2] == attr:
                     character_value += operation[3]
 
@@ -507,6 +561,7 @@ class Builder:
 
         :return: None
         """
+        print("* start_transaction")
         transaction = self.build_transaction(data, slot, transform)
 
         attributes = dict()
@@ -572,6 +627,7 @@ class Builder:
         """
         if not self.last_transaction:
             return
+        print("* rollback_transaction")
 
         for type, var, key, value, old_value, widget in self.last_transaction:
             if not widget:
@@ -608,6 +664,7 @@ class Builder:
         """
         if not self.last_transaction:
             return
+        print("* commit_transaction")
 
         # Overwrite Character item with item selected in transaction.
         # Does not impact Character parameters immediately, only on future transactions.
@@ -1222,7 +1279,10 @@ class Builder:
             # TODO add handling for Shrugged Burden (booster and trait) ?
             # TODO add handling for Weapon Rack ?
             val = val - equipped.burden[attr]
-            transaction.append([_type, "Burden", attr, val, old_value, widget])
+            if val != old_value:
+                # EXPERIMENTAL: only update transaction if values are different
+                # if values are equal it will just set same value
+                transaction.append([_type, "Burden", attr, val, old_value, widget])
 
         # unassign old booster
         if not equipped.active:
@@ -1315,7 +1375,8 @@ class Builder:
 
     def resolve_effects(self, booster, active, transaction):
         """
-        Resolve all effects for booster, updating transactions depending on effect.
+        Resolve all effects for booster.
+        Depending on effect the transaction will be updated (inside booster_fun).
         :param booster: Booster
         :param active: bool - whether booster is active (need to add effects) or inactive (subtract)
         :param transaction: list - containing all transactions so far
@@ -1332,11 +1393,9 @@ class Builder:
                 print("booster active", active)
                 arguments.append(active)          # add or subtract
                 arguments.append(transaction)     # transactions to update
-                operation = booster_fun(self, *arguments)
+                booster_fun(self, *arguments)
             else:
-                operation = booster_fun(self)
-            if operation:
-                transaction.append(operation)
+                booster_fun(self)
 
     def transform_stylesheet(self, legal, slot):
         if legal:

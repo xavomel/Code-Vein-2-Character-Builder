@@ -2014,14 +2014,15 @@ class Ui_MainWindow(object):
         else:
             widget.setText(item.statusTip())
 
-        selected_filter = self.side_menu_buttons.selectedItems()
-        if selected_filter:
-            # do a soft-refresh of booster side menu content
-            # to remove currently selected booster from the list and to add previously selected booster (if any)
-            # ensures previously selected booster can be selected again without re-opening the side menu
-            #
-            # removing item from the list will destroy it, so should be called after it's last usage
-            self.filter_menu_booster(selected_filter[0])
+        # disable for easier troubleshooting
+        # selected_filter = self.side_menu_buttons.selectedItems()
+        # if selected_filter:
+        #     # do a soft-refresh of booster side menu content
+        #     # to remove currently selected booster from the list and to add previously selected booster (if any)
+        #     # ensures previously selected booster can be selected again without re-opening the side menu
+        #     #
+        #     # removing item from the list will destroy it, so should be called after it's last usage
+        #     self.filter_menu_booster(selected_filter[0])
 
     def handle_forma_1_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_1
