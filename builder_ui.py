@@ -7,11 +7,15 @@ from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout
 import warnings
 import cv2_resources
 from game_data_classes import *
-from utility import escape_filename, open_file, save_file, open_json, save_json
+from utility import escape_filename, open_file, save_file, open_json, save_json, int_to_hexstring, hexstring_to_int
 import re
 
 
 VERSION = u"Code Vein II Character Builder v0.0.1"
+
+
+# this value was picked because it's not possible to exceed it even with maximum value for every code segment
+CODE_CHECKSUM_VALUE = 80000
 
 
 class Ui_MainWindow(object):
@@ -2534,10 +2538,8 @@ class Ui_MainWindow(object):
                 self.show_message("Build loading aborted, code contains forbidden characters.")
                 return
 
-        # check checksum, that every separate element summed adds up to 80000
-        # TODO
-
-        # proper handling
+        # split code into segments
+        # TODO legal
         # legal = code[0:2]
         blood_code = code[2:4]
         weapon_1 = code[4:7]
@@ -2569,12 +2571,53 @@ class Ui_MainWindow(object):
         # placeholder_1 = code[72:75]
         checksum = code[75:80]
 
-        # print(checksum)
+        # checksum, verify that every separate element summed adds up to CODE_CHECKSUM_VALUE = 80000
+        segments_to_check = [
+            # legal,
+            blood_code,
+            weapon_1,
+            weapon_2,
+            weapon_1_transform,
+            weapon_2_transform,
+            weapon_1_forma_1,
+            weapon_1_forma_2,
+            weapon_1_forma_3,
+            weapon_1_forma_4,
+            weapon_2_forma_1,
+            weapon_2_forma_2,
+            weapon_2_forma_3,
+            weapon_2_forma_4,
+            offensive,
+            defensive,
+            defensive_transform,
+            jail,
+            booster_1,
+            booster_2,
+            booster_3,
+            booster_4,
+            booster_5,
+            booster_6,
+            partner,
+            # food_1,
+            # food_2,
+            # placeholder_1,
+            # placeholder_1,
+            checksum,
+        ]
+        sum = 0
+        for segment in segments_to_check:
+            sum += hexstring_to_int(segment)
+        if sum != CODE_CHECKSUM_VALUE:
+            self.show_message("Build code checksum invalid: got %d, expected %d (continue anyway)." % (sum, CODE_CHECKSUM_VALUE))
 
-        build_save_order = self.builder.build_save_order
-
-        # if anything is "00" say there's a problem? and empty will be loaded instead
+        # start loading
+        # fetch item by it's hex code
+        # then start and commit transaction to update Character
+        #
+        # if item is not found the slot will be empty
+        # this can happen if hex is "00" or value greater than maximum for segment
         builder = self.builder
+        build_save_order = self.builder.build_save_order
 
         blood_code = build_save_order["BloodCode"].get(blood_code)
         if blood_code:
@@ -2700,6 +2743,7 @@ class Ui_MainWindow(object):
         self.show_message("Build loaded successfully.")
 
     def generate_build_code(self):
+        # the format of build code can be better seen in handle_build_load()
         items = [
             "00",  # todo legal / illegal
             self.builder.character.blood_code,
@@ -2730,14 +2774,16 @@ class Ui_MainWindow(object):
             "00", # food 2
             "00", # placeholder 1
             "000", # place holder 1
-            "00000"  # todo checksum
+            # "00000"  # checksum will be added after the loop
         ]
 
         build_save_order = self.builder.build_save_order
         code = ""
+        sum = 0
 
         for item in items:
             if isinstance(item, str):
+                # handle string items (without game data class)
                 if "Weapon" in item:
                     type_data = build_save_order["Transform_Weapon"]
                 elif "Defensive" in item:
@@ -2752,12 +2798,16 @@ class Ui_MainWindow(object):
                     matching_item_id = next((k for k, v in type_data.items() if v == transform), None)
                     if matching_item_id:
                         code += matching_item_id
+                        sum += hexstring_to_int(matching_item_id)
                     else:
                         code += "00"
-                else:
-                    # any other string
+                elif hexstring_to_int(item) == 0:
+                    # any other string composed of zeroes
                     code += item
+                else:
+                    raise ValueError("Trying to add invalid string %s to the code." % item)
             else:
+                # handle game data class items
                 type_key = type(item).__name__
                 if type_key == "OffensiveForma" or type_key == "DefensiveForma":
                     type_key = type_key.replace("Forma", "")
@@ -2771,14 +2821,20 @@ class Ui_MainWindow(object):
 
                 if matching_item_id:
                     code += matching_item_id
+                    sum += hexstring_to_int(matching_item_id)
                 else:
                     if type(item) in ["Weapon", "Forma", "Booster"]:
                         desired_length = 3
                     else:
                         desired_length = 2
-                    code += "".join(["0" for x in range(desired_length)])
+                    code += "".zfill(desired_length)
 
             # code += " "  # for easier troubleshooting
+
+        # add remainder value for checksum, make it so everything adds up to CODE_CHECKSUM_VALUE = 80000
+        desired_length = 5
+        checksum = int_to_hexstring(CODE_CHECKSUM_VALUE - sum, desired_length)
+        code += checksum
 
         return code
 
