@@ -18,6 +18,21 @@ def open_json(filepath):
         return json.load(_data)
 
 
+def save_json(filepath, filedata):
+    with open(filepath, mode="w") as _data:
+        json.dump(filedata, _data, indent=4)
+
+
+def open_file(filepath):
+    with open(filepath, "r") as _file:
+        return _file.read()
+
+
+def save_file(filepath, filedata):
+    with open(filepath, "w") as _file:
+        _file.write(filedata)
+
+
 # not needed?
 def int_to_hexstring(number, desired_length):
     hexstring = str(hex(number)).replace("0x", "").zfill(desired_length)

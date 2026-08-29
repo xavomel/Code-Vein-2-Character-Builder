@@ -7,7 +7,7 @@ from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout
 import warnings
 import cv2_resources
 from game_data_classes import *
-from utility import escape_filename
+from utility import escape_filename, open_file, save_file, open_json, save_json
 import re
 
 
@@ -2330,28 +2330,36 @@ class Ui_MainWindow(object):
         self.action_load_build_file.setObjectName(u"action_load_build_file")
         self.action_load_build_code = QAction(MainWindow)
         self.action_load_build_code.setObjectName(u"action_load_build_code")
-        self.action_load_favorites_file = QAction(MainWindow)
-        self.action_load_favorites_file.setObjectName(u"action_load_favorites_file")
         self.action_save_build_file = QAction(MainWindow)
         self.action_save_build_file.setObjectName(u"action_save_build_file")
         self.action_save_build_code = QAction(MainWindow)
         self.action_save_build_code.setObjectName(u"action_save_build_code")
-        self.action_save_favorites_file = QAction(MainWindow)
-        self.action_save_favorites_file.setObjectName(u"action_save_favorites_file")
 
         self.action_load_build_file.triggered.connect(self.load_build_file)
         self.action_load_build_code.triggered.connect(self.load_build_code)
-        self.action_load_favorites_file.triggered.connect(self.load_favorites_file)
         self.action_save_build_file.triggered.connect(self.save_build_file)
         self.action_save_build_code.triggered.connect(self.save_build_code)
-        self.action_save_favorites_file.triggered.connect(self.save_favorites_file)
 
         self.menuBuild.addAction(self.action_load_build_file)
         self.menuBuild.addAction(self.action_load_build_code)
-        self.menuBuild.addAction(self.action_load_favorites_file)
         self.menuBuild.addAction(self.action_save_build_file)
         self.menuBuild.addAction(self.action_save_build_code)
-        self.menuBuild.addAction(self.action_save_favorites_file)
+
+        # favorites submenu
+        self.menuFavorites = QMenu(self.menubar)
+        self.menuFavorites.setObjectName(u"menuFavorites")
+        self.menubar.addAction(self.menuFavorites.menuAction())
+
+        self.action_load_favorites_file = QAction(MainWindow)
+        self.action_load_favorites_file.setObjectName(u"action_load_favorites_file")
+        self.action_save_favorites_file = QAction(MainWindow)
+        self.action_save_favorites_file.setObjectName(u"action_save_favorites_file")
+
+        self.action_load_favorites_file.triggered.connect(self.load_favorites_file)
+        self.action_save_favorites_file.triggered.connect(self.save_favorites_file)
+
+        self.menuFavorites.addAction(self.action_load_favorites_file)
+        self.menuFavorites.addAction(self.action_save_favorites_file)
 
         # window submenu
         self.menuWindow = QMenu(self.menubar)
@@ -2397,12 +2405,11 @@ class Ui_MainWindow(object):
     def load_build_file(self):
         filepath, extension = QFileDialog.getOpenFileName(self, 'Open file', "", "*.txt")
         if not filepath:
-            self.show_message("Cannot open file.")
+            self.show_message("Cannot open file for loading.")
             return
 
-        with open(filepath, "r") as _file:
-            code = _file.read()
-            self.handle_build_load(code)
+        code = open_file(filepath)
+        self.handle_build_load(code)
 
     def load_build_code(self):
         widget = QInputDialog()
@@ -2419,6 +2426,14 @@ class Ui_MainWindow(object):
     def save_build_file(self):
         code = self.generate_build_code()
 
+        filepath, extension = QFileDialog.getSaveFileName(self, 'Save file', "", "*.txt")
+        if not filepath:
+            self.show_message("Cannot open file for saving.")
+            return
+
+        save_file(filepath, code)
+        self.show_message("File saved")
+
     def save_build_code(self):
         code = self.generate_build_code()
 
@@ -2434,10 +2449,74 @@ class Ui_MainWindow(object):
         widget.exec_()
 
     def load_favorites_file(self):
-        pass
+        filepath, extension = QFileDialog.getOpenFileName(self, 'Open file', "favorites.json", "*.json")
+        if not filepath:
+            self.show_message("Cannot open file for loading.")
+            return
+
+        favorites = open_json(filepath)
+        count_loaded = 0
+        for key, favorite_list in favorites.items():
+            matching_data = dict()
+            if key == "BloodCode":
+                matching_data = self.builder.blood_codes
+            elif key == "Weapon":
+                matching_data = self.builder.weapons
+            elif key == "Forma":
+                matching_data = self.builder.formae
+            elif key == "Defensive":
+                matching_data = self.builder.defensive_formae
+            elif key == "Booster":
+                matching_data = self.builder.boosters
+
+            for name, data in matching_data.items():
+                if name in favorite_list:
+                    data.favorite = True
+                    count_loaded += 1
+
+        self.show_message("Favorites (%d) loaded successfully." % count_loaded)
 
     def save_favorites_file(self):
-        pass
+        favorites = dict()
+        count_saved = 0
+
+        favorites["BloodCode"] = []
+        for k, v in self.builder.blood_codes.items():
+            if v.favorite:
+                favorites["BloodCode"].append(v.name)
+                count_saved += 1
+
+        favorites["Weapon"] = []
+        for k, v in self.builder.weapons.items():
+            if v.favorite:
+                favorites["Weapon"].append(v.name)
+                count_saved += 1
+
+        favorites["Forma"] = []
+        for k, v in self.builder.formae.items():
+            if v.favorite:
+                favorites["Forma"].append(v.name)
+                count_saved += 1
+
+        favorites["Defensive"] = []
+        for k, v in self.builder.defensive_formae.items():
+            if v.favorite:
+                favorites["Defensive"].append(v.name)
+                count_saved += 1
+
+        favorites["Booster"] = []
+        for k, v in self.builder.boosters.items():
+            if v.favorite:
+                favorites["Booster"].append(v.name)
+                count_saved += 1
+
+        filepath, extension = QFileDialog.getSaveFileName(self, 'Save file', "favorites", "*.json")
+        if not filepath:
+            self.show_message("Cannot open file for saving.")
+            return
+
+        save_json(filepath, favorites)
+        self.show_message("Favorites (%d) saved successfully." % count_saved)
 
     def handle_build_load(self, code):
         print(code)
@@ -2759,9 +2838,10 @@ class Ui_MainWindow(object):
         self.menuBuild.setTitle(QCoreApplication.translate("MainWindow", u"Build", None))
         self.action_load_build_file.setText(QCoreApplication.translate("MainWindow", u"Load build from file", None))
         self.action_load_build_code.setText(QCoreApplication.translate("MainWindow", u"Load build from code", None))
-        self.action_load_favorites_file.setText(QCoreApplication.translate("MainWindow", u"Load favorites from file", None))
         self.action_save_build_file.setText(QCoreApplication.translate("MainWindow", u"Save build to file", None))
         self.action_save_build_code.setText(QCoreApplication.translate("MainWindow", u"Save build to code", None))
+        self.menuFavorites.setTitle(QCoreApplication.translate("MainWindow", u"Favorites", None))
+        self.action_load_favorites_file.setText(QCoreApplication.translate("MainWindow", u"Load favorites from file", None))
         self.action_save_favorites_file.setText(QCoreApplication.translate("MainWindow", u"Save fovorites to file", None))
 
         # menu window
