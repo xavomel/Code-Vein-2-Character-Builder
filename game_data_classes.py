@@ -418,6 +418,7 @@ class DefensiveForma:
             self.transforms[key] = transform
             self.transforms[key].pop("Name")
 
+    # to do choose right transform
     def get_hover_text(self, detailed=False):
         text = """<body>
             <h2><p align="center">{0}</p></h2>
