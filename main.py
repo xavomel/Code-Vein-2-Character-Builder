@@ -495,6 +495,7 @@ class Builder:
         self.defensive_formae = dict()
         self.jails = dict()
         self.translation = dict()
+        self.build_save_order = dict()
         self.char_to_widget_mapping = dict()
         self.widget_to_char_mapping = dict()
         self.last_transaction = []
@@ -516,6 +517,13 @@ class Builder:
         defensive_formae = open_json(u"GameData/Defensive.json")
         jails = open_json(u"GameData/Jail.json")
         self.translation = open_json("GameData/Translation/en.json")
+        # this is necessary to ensure any codes remain backward compatible, even if new items are added to game
+        # this json should only be added to
+        # we should NEVER re-order items
+        #
+        # json could be modified, e.g. if item name is wrong
+        # like "Resistance Booster - Blood" should be "Resistance Booster - Bleed" it might be renamed in DLC
+        self.build_save_order = open_json("GameData/BuildSaveOrder.json")
 
         for doc in blood_codes:
             name = doc["Name"]
@@ -667,7 +675,7 @@ class Builder:
         """
         if not self.last_transaction:
             return
-        print("* commit_transaction")
+        print("* commit_transaction", data, slot, transform)
 
         # Overwrite Character item with item selected in transaction.
         # Does not impact Character parameters immediately, only on future transactions.
@@ -675,17 +683,23 @@ class Builder:
         if _type == "Weapon":
             self.character.weapons[slot] = data
             self.character.transform[slot] = transform
+            self.window.update_weapon_icon_text(data.name, slot, transform)
         elif _type == "BloodCode":
             self.character.blood_code = data
+            self.window.update_blood_code_icon_text(data.name)
         elif _type == "Jail":
             self.character.jail = data
+            self.window.update_jail_icon_text(data.name)
         elif _type == "DefensiveForma":
             self.character.defensive_forma = data
             self.character.transform["Defensive"] = transform
+            self.window.update_defensive_icon_text(data.name, slot, transform)
         elif _type == "Forma":
             self.character.formae[slot] = data
+            self.window.update_forma_icon_text(data.name, slot)
         elif _type == "OffensiveForma":
             self.character.offensive_forma = data
+            self.window.update_offensive_icon_text(data.name)
         elif _type == "Booster":
             # COMMENTED OUT for easier troubleshooting
             # TODO uncomment
@@ -695,6 +709,7 @@ class Builder:
             #     # only set for real boosters (do not set for placeholder when making booster slot empty)
             #     data.equipped = True
             self.character.boosters[slot] = data
+            self.window.update_boosters_icon_text(data, slot)
 
         # Update Character parameters
         for _type, var, key, value, old_value, widget in self.last_transaction:
@@ -1038,7 +1053,7 @@ class Builder:
                 transaction.append([_type, "Stylesheet", (key, forma_legal), stylesheet_forma, widget_forma.styleSheet(), widget_forma])
 
     def build_forma_transaction(self, data, slot, transform=""):
-        print("forma")
+        print("forma", slot)
 
         transaction = []
 

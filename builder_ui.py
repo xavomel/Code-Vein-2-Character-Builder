@@ -3,11 +3,12 @@ from PySide6.QtGui import QAction, QGuiApplication, QIcon, QFont, QFontDatabase,
     QPainter, QPen, QColor, QPolygonF, QPixmap
 from PySide6.QtWidgets import QWidget, QMenu, QMenuBar, QVBoxLayout, QHBoxLayout, QGridLayout, QLabel, QSpacerItem, \
     QSizePolicy, QToolButton, QPushButton, QProgressBar, QApplication, QListView, QListWidget, QListWidgetItem, \
-    QAbstractScrollArea, QTextEdit
+    QAbstractScrollArea, QTextEdit, QInputDialog, QMessageBox, QFileDialog, QLineEdit
 import warnings
 import cv2_resources
 from game_data_classes import *
 from utility import escape_filename
+import re
 
 
 VERSION = u"Code Vein II Character Builder v0.0.1"
@@ -1879,8 +1880,6 @@ class Ui_MainWindow(object):
             transform = "Weapon_" + transform
         builder.commit_transaction(weapon, slot=slot, transform=transform)
 
-        widget.setIcon(item.icon())
-
     def handle_transform_defensive_clicked(self, item):
         builder = self.builder
         defensive = builder.character.defensive_forma
@@ -1888,9 +1887,6 @@ class Ui_MainWindow(object):
         if transform == "Off":
             transform = "Defensive_" + transform
         builder.commit_transaction(defensive, transform=transform)
-
-        widget = self.tool_button_h2_v3_h1_2a
-        widget.setIcon(item.icon())
 
     def handle_weapon_1_clicked(self, item):
         widget = self.tool_button_h2_v1_h1_1
@@ -1905,105 +1901,117 @@ class Ui_MainWindow(object):
         weapon = builder.weapons[item.statusTip()]
         builder.commit_transaction(weapon, slot=slot, transform=builder.character.transform[slot])
 
+    def update_weapon_icon_text(self, name, slot, transform):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
-        if item.statusTip() == "Empty":
+        widget = self.builder.char_to_widget_mapping[slot]
+        if name == "Weapon None":
             widget.setIcon(icon_1)
             widget.setText(slot.replace("_", " "))
-            return
+        else:
+            icon_2 = QIcon()
+            icon_2.addFile(u":/All/Weapon/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal,
+                           QIcon.State.Off)
+            new_icon = self.merge_icons(icon_1, icon_2, 150)
+            widget.setIcon(new_icon)
+            widget.setText(name)
 
-        icon_2 = QIcon()
-        icon_2.addFile(u":/All/Weapon/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        new_icon = self.merge_icons(icon_1, icon_2, 150)
-        widget.setIcon(new_icon)
-        widget.setText(item.statusTip())
-
-        weapon = self.builder.weapons[item.statusTip()]
-        self.side_menu_text.clear()
-        self.side_menu_text.insertHtml(f'<body><h2><p align="center">{weapon.name}</p></h2><body>')
-        self.side_menu_text.insertPlainText(weapon.description)
+        widget = self.builder.char_to_widget_mapping[slot + "_Transform"]
+        transform = transform.replace("Weapon_", "Transform_")
+        icon_transform = QIcon()
+        icon_transform.addFile(u":/All/Transform/" + escape_filename(transform) + ".png", QSize(),
+                               QIcon.Mode.Normal,
+                               QIcon.State.Off)
+        widget.setIcon(icon_transform)
 
     def handle_blood_code_clicked(self, item):
         builder = self.builder
         blood_code = builder.blood_codes[item.statusTip()]
         builder.commit_transaction(blood_code)
 
-        if item.statusTip() == "Empty":
+    def update_blood_code_icon_text(self, name):
+        widget = self.tool_button_h2_v3_h2_1
+        if name == "Blood Code":
             new_icon = QIcon()
             new_icon.addFile(u":/All/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-            self.tool_button_h2_v3_h2_1.setIcon(new_icon)
-            self.tool_button_h2_v3_h2_1.setText("Blood Code")
-            return
-
-        new_icon = QIcon()
-        new_icon.addFile(u":/All/BloodCode/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        self.tool_button_h2_v3_h2_1.setIcon(new_icon)
-        self.tool_button_h2_v3_h2_1.setText(item.statusTip())
-
-        # self.progress_bar_h3_v1_g1_1
-        # self.progress_bar_h3_v1_g1_2
-        # self.progress_bar_h3_v1_g1_3
-        # self.progress_bar_h3_v1_g1_4
-        # self.progress_bar_h3_v1_g1_5
-        # self.progress_bar_h3_v1_g1_6
+            widget.setIcon(new_icon)
+            widget.setText("Blood Code")
+        else:
+            new_icon = QIcon()
+            new_icon.addFile(u":/All/BloodCode/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal,
+                             QIcon.State.Off)
+            widget.setIcon(new_icon)
+            widget.setText(name)
 
     def handle_offensive_clicked(self, item):
         builder = self.builder
         offensive = builder.offensive_formae[item.statusTip()]
         builder.commit_transaction(offensive)
 
+    def update_offensive_icon_text(self, name):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
-        if item.statusTip() == "Empty":
-            self.tool_button_h2_v3_h1_1.setIcon(icon_1)
-            self.tool_button_h2_v3_h1_1.setText("Offensive")
-            return
-
-        icon_2 = QIcon()
-        icon_2.addFile(u":/All/Offensive/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        new_icon = self.merge_icons(icon_1, icon_2, 150)
-        self.tool_button_h2_v3_h1_1.setIcon(new_icon)
-        self.tool_button_h2_v3_h1_1.setText(item.statusTip())
+        widget = self.tool_button_h2_v3_h1_1
+        if name == "Offensive":
+            widget.setIcon(icon_1)
+            widget.setText("Offensive")
+        else:
+            icon_2 = QIcon()
+            icon_2.addFile(u":/All/Offensive/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+            new_icon = self.merge_icons(icon_1, icon_2, 150)
+            widget.setIcon(new_icon)
+            widget.setText(name)
 
     def handle_defensive_clicked(self, item):
         builder = self.builder
         defensive = builder.defensive_formae[item.statusTip()]
         builder.commit_transaction(defensive, transform=builder.character.transform["Defensive"])
 
+    def update_defensive_icon_text(self, name, slot, transform):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
-        if item.statusTip() == "Empty":
-            self.tool_button_h2_v3_h1_2.setIcon(icon_1)
-            self.tool_button_h2_v3_h1_2.setText("Defensive")
-            return
+        widget = self.tool_button_h2_v3_h1_2
+        if name == "Defensive":
+            widget.setIcon(icon_1)
+            widget.setText("Defensive")
+        else:
+            icon_2 = QIcon()
+            icon_2.addFile(u":/All/Defensive/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal,
+                           QIcon.State.Off)
+            new_icon = self.merge_icons(icon_1, icon_2, 150)
+            widget.setIcon(new_icon)
+            widget.setText(name)
 
-        icon_2 = QIcon()
-        icon_2.addFile(u":/All/Defensive/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        new_icon = self.merge_icons(icon_1, icon_2, 150)
-        self.tool_button_h2_v3_h1_2.setIcon(new_icon)
-        self.tool_button_h2_v3_h1_2.setText(item.statusTip())
+        widget = self.tool_button_h2_v3_h1_2a
+        transform = transform.replace("Defensive_", "Transform_")
+        icon_transform = QIcon()
+        icon_transform.addFile(u":/All/Transform/" + escape_filename(transform) + ".png", QSize(),
+                               QIcon.Mode.Normal,
+                               QIcon.State.Off)
+        widget.setIcon(icon_transform)
 
     def handle_jail_clicked(self, item):
         builder = self.builder
         jail = builder.jails[item.statusTip()]
         builder.commit_transaction(jail)
 
+    def update_jail_icon_text(self, name):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
-        if item.statusTip() == "Empty":
-            self.tool_button_h2_v3_h1_3.setIcon(icon_1)
-            self.tool_button_h2_v3_h1_3.setText("Jail")
-            return
-
-        icon_2 = QIcon()
-        icon_2.addFile(u":/All/Jail/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        new_icon = self.merge_icons(icon_1, icon_2, 150)
-        self.tool_button_h2_v3_h1_3.setIcon(new_icon)
-        self.tool_button_h2_v3_h1_3.setText(item.statusTip())
+        widget = self.tool_button_h2_v3_h1_3
+        if name == "Jail":
+            widget.setIcon(icon_1)
+            widget.setText("Jail")
+        else:
+            icon_2 = QIcon()
+            icon_2.addFile(u":/All/Jail/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+            new_icon = self.merge_icons(icon_1, icon_2, 150)
+            widget.setIcon(new_icon)
+            widget.setText(name)
 
     def handle_booster_1_clicked(self, item):
         widget = self.push_button_h2_v3_h2_v1_1
@@ -2034,17 +2042,6 @@ class Ui_MainWindow(object):
         booster = builder.boosters[item.statusTip()]
         builder.commit_transaction(booster, slot=slot)
 
-        active = booster.active
-        print("  handle_booster_clicked", active)
-
-        print("      bloodline", builder.character.bloodline)
-
-        self.set_booster_icon(widget, item.statusTip(), active)
-        if item.statusTip() == "Empty":
-            widget.setText(slot.replace("_", " ") + ": None")
-        else:
-            widget.setText(item.statusTip())
-
         # disable for easier troubleshooting
         # selected_filter = self.side_menu_buttons.selectedItems()
         # if selected_filter:
@@ -2054,6 +2051,19 @@ class Ui_MainWindow(object):
         #     #
         #     # removing item from the list will destroy it, so should be called after it's last usage
         #     self.filter_menu_booster(selected_filter[0])
+
+    def update_boosters_icon_text(self, booster, slot):
+        name = booster.name
+        active = booster.active
+        print("      handle_booster_clicked", active)
+        print("      bloodline", self.builder.character.bloodline)
+
+        widget = self.builder.char_to_widget_mapping[slot]
+        self.set_booster_icon(widget, name, active)
+        if name == "Booster None":
+            widget.setText(slot.replace("_", " ") + ": None")
+        else:
+            widget.setText(name)
 
     def handle_forma_1_weapon_1_clicked(self, item):
         widget = self.push_button_h2_v1_1
@@ -2092,21 +2102,22 @@ class Ui_MainWindow(object):
         forma = builder.formae[item.statusTip()]
         builder.commit_transaction(forma, slot=slot)
 
+    def update_forma_icon_text(self, name, slot):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Forma.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
-        if item.statusTip() == "Empty":
+        widget = self.builder.char_to_widget_mapping[slot]
+        if name == "Forma None":
             widget.setIcon(icon_1)
             idx = slot.find("Forma")
             default_text = slot[idx:].replace("_", " ") + ": None"
             widget.setText(default_text)
-            return
-
-        icon_2 = QIcon()
-        icon_2.addFile(u":/All/Forma/" + escape_filename(item.statusTip()) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-        new_icon = self.merge_icons(icon_1, icon_2, 30)
-        widget.setIcon(new_icon)
-        widget.setText(item.statusTip())
+        else:
+            icon_2 = QIcon()
+            icon_2.addFile(u":/All/Forma/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+            new_icon = self.merge_icons(icon_1, icon_2, 30)
+            widget.setIcon(new_icon)
+            widget.setText(name)
 
     def handle_hover(self, data, detailed=False):
         data_hover_text = data.get_hover_text(detailed)
@@ -2120,7 +2131,7 @@ class Ui_MainWindow(object):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
-        if name == "Empty":
+        if name == "Booster None":
             widget.setIcon(icon_1)
         else:
             icon_2 = QIcon()
@@ -2310,6 +2321,38 @@ class Ui_MainWindow(object):
         self.menubar.setObjectName(u"menubar")
         MainWindow.setMenuBar(self.menubar)
 
+        # build submenu
+        self.menuBuild = QMenu(self.menubar)
+        self.menuBuild.setObjectName(u"menuBuild")
+        self.menubar.addAction(self.menuBuild.menuAction())
+
+        self.action_load_build_file = QAction(MainWindow)
+        self.action_load_build_file.setObjectName(u"action_load_build_file")
+        self.action_load_build_code = QAction(MainWindow)
+        self.action_load_build_code.setObjectName(u"action_load_build_code")
+        self.action_load_favorites_file = QAction(MainWindow)
+        self.action_load_favorites_file.setObjectName(u"action_load_favorites_file")
+        self.action_save_build_file = QAction(MainWindow)
+        self.action_save_build_file.setObjectName(u"action_save_build_file")
+        self.action_save_build_code = QAction(MainWindow)
+        self.action_save_build_code.setObjectName(u"action_save_build_code")
+        self.action_save_favorites_file = QAction(MainWindow)
+        self.action_save_favorites_file.setObjectName(u"action_save_favorites_file")
+
+        self.action_load_build_file.triggered.connect(self.load_build_file)
+        self.action_load_build_code.triggered.connect(self.load_build_code)
+        self.action_load_favorites_file.triggered.connect(self.load_favorites_file)
+        self.action_save_build_file.triggered.connect(self.save_build_file)
+        self.action_save_build_code.triggered.connect(self.save_build_code)
+        self.action_save_favorites_file.triggered.connect(self.save_favorites_file)
+
+        self.menuBuild.addAction(self.action_load_build_file)
+        self.menuBuild.addAction(self.action_load_build_code)
+        self.menuBuild.addAction(self.action_load_favorites_file)
+        self.menuBuild.addAction(self.action_save_build_file)
+        self.menuBuild.addAction(self.action_save_build_code)
+        self.menuBuild.addAction(self.action_save_favorites_file)
+
         # window submenu
         self.menuWindow = QMenu(self.menubar)
         self.menuWindow.setObjectName(u"menuWindow")
@@ -2350,6 +2393,323 @@ class Ui_MainWindow(object):
         self.menuSize.addAction(self.action3840x2160)
 
         self.disable_unsupported_window_size()
+
+    def load_build_file(self):
+        filepath, extension = QFileDialog.getOpenFileName(self, 'Open file', "", "*.txt")
+        if not filepath:
+            self.show_message("Cannot open file.")
+            return
+
+        with open(filepath, "r") as _file:
+            code = _file.read()
+            self.handle_build_load(code)
+
+    def load_build_code(self):
+        widget = QInputDialog()
+        widget.resize(600, 600)
+        widget.setWindowTitle(VERSION)
+        widget.setInputMode(QInputDialog.TextInput)
+        widget.setLabelText("Enter build code")
+
+        ok = widget.exec_()
+        if ok:
+            code = widget.textValue()
+            self.handle_build_load(code)
+
+    def save_build_file(self):
+        code = self.generate_build_code()
+
+    def save_build_code(self):
+        code = self.generate_build_code()
+
+        widget = QInputDialog()
+        widget.resize(600, 600)
+        widget.setWindowTitle(VERSION)
+        widget.setInputMode(QInputDialog.TextInput)
+        widget.setLabelText("Code generated successfully.")
+        line_edit = widget.findChild(QLineEdit)
+        if line_edit:
+            line_edit.setText(code)
+
+        widget.exec_()
+
+    def load_favorites_file(self):
+        pass
+
+    def save_favorites_file(self):
+        pass
+
+    def handle_build_load(self, code):
+        print(code)
+
+        # check length
+        if len(code) != 80:
+            self.show_message("Build loading aborted, invalid code length (%d). Should be 80." % len(code))
+            return
+
+        # check allowed characters
+        allowed_regex = "[0-9a-fA-F]+"
+        match = re.match(allowed_regex, code)
+        if match:
+            if len(match.group(0)) != len(code):
+                self.show_message("Build loading aborted, code contains forbidden characters.")
+                return
+
+        # check checksum, that every separate element summed adds up to 80000
+        # TODO
+
+        # proper handling
+        # legal = code[0:2]
+        blood_code = code[2:4]
+        weapon_1 = code[4:7]
+        weapon_2 = code[7:10]
+        weapon_1_transform = code[10:12]
+        weapon_2_transform = code[12:14]
+        weapon_1_forma_1 = code[14:17]
+        weapon_1_forma_2 = code[17:20]
+        weapon_1_forma_3 = code[20:23]
+        weapon_1_forma_4 = code[23:26]
+        weapon_2_forma_1 = code[26:29]
+        weapon_2_forma_2 = code[29:32]
+        weapon_2_forma_3 = code[32:35]
+        weapon_2_forma_4 = code[35:38]
+        offensive = code[38:40]
+        defensive = code[40:42]
+        defensive_transform = code[42:44]
+        jail = code[44:46]
+        booster_1 = code[46:49]
+        booster_2 = code[49:52]
+        booster_3 = code[52:55]
+        booster_4 = code[55:58]
+        booster_5 = code[58:61]
+        booster_6 = code[61:64]
+        partner = code[64:66]
+        # food_1 = code[66:68]
+        # food_2 = code[68:70]
+        # placeholder_1 = code[70:72]
+        # placeholder_1 = code[72:75]
+        checksum = code[75:80]
+
+        # print(checksum)
+
+        build_save_order = self.builder.build_save_order
+
+        # if anything is "00" say there's a problem? and empty will be loaded instead
+        builder = self.builder
+
+        blood_code = build_save_order["BloodCode"].get(blood_code)
+        if blood_code:
+            blood_code = builder.blood_codes[blood_code]
+            print(blood_code)
+            builder.start_transaction(blood_code)
+            builder.commit_transaction(blood_code)
+        else:
+            blood_code = BloodCode()
+            print(blood_code)
+
+        weapon_1_transform = build_save_order["Transform_Weapon"].get(weapon_1_transform)
+        if not weapon_1_transform:
+            weapon_1_transform = "Weapon_Off"
+            print(weapon_1_transform)
+
+        weapon_2_transform = build_save_order["Transform_Weapon"].get(weapon_2_transform)
+        if not weapon_2_transform:
+            weapon_2_transform = "Weapon_Off"
+            print(weapon_2_transform)
+
+        defensive_transform = build_save_order["Transform_Defensive"].get(defensive_transform)
+        if not defensive_transform:
+            defensive_transform = "Defensive_Off"
+            print(defensive_transform)
+
+        weapon_1 = build_save_order["Weapon"].get(weapon_1)
+        if weapon_1:
+            weapon_1 = builder.weapons[weapon_1]
+            print(weapon_1)
+            builder.start_transaction(weapon_1, "Weapon_1", weapon_1_transform)
+            builder.commit_transaction(weapon_1, "Weapon_1", weapon_1_transform)
+        else:
+            weapon_1 = Weapon()
+            print(weapon_1)
+
+        weapon_2 = build_save_order["Weapon"].get(weapon_2)
+        if weapon_2:
+            weapon_2 = builder.weapons[weapon_2]
+            print(weapon_2)
+            builder.start_transaction(weapon_2, "Weapon_2", weapon_2_transform)
+            builder.commit_transaction(weapon_2, "Weapon_2", weapon_2_transform)
+        else:
+            weapon_2 = Weapon()
+            print(weapon_2)
+
+        formae = [
+            (weapon_1_forma_1, "Weapon_1_Forma_1"),
+            (weapon_1_forma_2, "Weapon_1_Forma_2"),
+            (weapon_1_forma_3, "Weapon_1_Forma_3"),
+            (weapon_1_forma_4, "Weapon_1_Forma_4"),
+            (weapon_2_forma_1, "Weapon_2_Forma_1"),
+            (weapon_2_forma_2, "Weapon_2_Forma_2"),
+            (weapon_2_forma_3, "Weapon_2_Forma_3"),
+            (weapon_2_forma_4, "Weapon_2_Forma_4"),
+        ]
+        for forma, slot in formae:
+            forma = build_save_order["Forma"].get(forma)
+            if forma:
+                forma = builder.formae[forma]
+                print(forma)
+                builder.start_transaction(forma, slot)
+                builder.commit_transaction(forma, slot)
+            else:
+                forma = Forma()
+                print(forma)
+
+        offensive = build_save_order["Offensive"].get(offensive)
+        if offensive:
+            offensive = builder.offensive_formae[offensive]
+            print(offensive)
+            builder.start_transaction(offensive)
+            builder.commit_transaction(offensive)
+        else:
+            offensive = Offensive()
+            print(offensive)
+
+        defensive = build_save_order["Defensive"].get(defensive)
+        if defensive:
+            defensive = builder.defensive_formae[defensive]
+            print(defensive)
+            builder.start_transaction(defensive, "", defensive_transform)
+            builder.commit_transaction(defensive, "", defensive_transform)
+        else:
+            defensive = Defensive()
+            print(defensive)
+
+        jail = build_save_order["Jail"].get(jail)
+        if jail:
+            jail = builder.jails[jail]
+            print(jail)
+            builder.start_transaction(jail)
+            builder.commit_transaction(jail)
+        else:
+            jail = Jail()
+            print(jail)
+
+        # todo
+        #     booster active status seems to have issues on loading
+        #     some issues could be expected since resolving booster effects
+        #     is not implemented for non-booster item selection (and it should be)
+        #
+        #     however on loading boosters are loaded last, so it shouldn't matter here
+        boosters = [
+            (booster_1, "Booster_1"),
+            (booster_2, "Booster_2"),
+            (booster_3, "Booster_3"),
+            (booster_4, "Booster_4"),
+            (booster_5, "Booster_5"),
+            (booster_6, "Booster_6"),
+        ]
+        for booster, slot in boosters:
+            booster = build_save_order["Booster"].get(booster)
+            if booster:
+                booster = builder.boosters[booster]
+                print(booster)
+                builder.start_transaction(booster, slot)
+                builder.commit_transaction(booster, slot)
+            else:
+                booster = Booster()
+                print(booster)
+
+        self.show_message("Build loaded successfully.")
+
+    def generate_build_code(self):
+        items = [
+            "00",  # todo legal / illegal
+            self.builder.character.blood_code,
+            self.builder.character.weapons["Weapon_1"],
+            self.builder.character.weapons["Weapon_2"],
+            "Transform_Weapon_1",
+            "Transform_Weapon_2",
+            self.builder.character.formae["Weapon_1_Forma_1"],
+            self.builder.character.formae["Weapon_1_Forma_2"],
+            self.builder.character.formae["Weapon_1_Forma_3"],
+            self.builder.character.formae["Weapon_1_Forma_4"],
+            self.builder.character.formae["Weapon_2_Forma_1"],
+            self.builder.character.formae["Weapon_2_Forma_2"],
+            self.builder.character.formae["Weapon_2_Forma_3"],
+            self.builder.character.formae["Weapon_2_Forma_4"],
+            self.builder.character.offensive_forma,
+            self.builder.character.defensive_forma,
+            "Transform_Defensive",
+            self.builder.character.jail,
+            self.builder.character.boosters["Booster_1"],
+            self.builder.character.boosters["Booster_2"],
+            self.builder.character.boosters["Booster_3"],
+            self.builder.character.boosters["Booster_4"],
+            self.builder.character.boosters["Booster_5"],
+            self.builder.character.boosters["Booster_6"],
+            "00", # partner
+            "00", # food 1
+            "00", # food 2
+            "00", # placeholder 1
+            "000", # place holder 1
+            "00000"  # todo checksum
+        ]
+
+        build_save_order = self.builder.build_save_order
+        code = ""
+
+        for item in items:
+            if isinstance(item, str):
+                if "Weapon" in item:
+                    type_data = build_save_order["Transform_Weapon"]
+                elif "Defensive" in item:
+                    type_data = build_save_order["Transform_Defensive"]
+                else:
+                    type_data = dict()
+
+                if type_data:
+                    # transform
+                    slot = item.replace("Transform_", "")
+                    transform = self.builder.character.transform[slot]
+                    matching_item_id = next((k for k, v in type_data.items() if v == transform), None)
+                    if matching_item_id:
+                        code += matching_item_id
+                    else:
+                        code += "00"
+                else:
+                    # any other string
+                    code += item
+            else:
+                type_key = type(item).__name__
+                if type_key == "OffensiveForma" or type_key == "DefensiveForma":
+                    type_key = type_key.replace("Forma", "")
+
+                type_data = build_save_order[type_key]
+                if item.description == "":
+                    # empty, TODO add "empty" variable to each game data class ?
+                    matching_item_id = next((k for k, v in type_data.items() if v == "Empty"), None)
+                else:
+                    matching_item_id = next((k for k, v in type_data.items() if v == item.name), None)
+
+                if matching_item_id:
+                    code += matching_item_id
+                else:
+                    if type(item) in ["Weapon", "Forma", "Booster"]:
+                        desired_length = 3
+                    else:
+                        desired_length = 2
+                    code += "".join(["0" for x in range(desired_length)])
+
+            # code += " "  # for easier troubleshooting
+
+        return code
+
+    def show_message(self, text, informative_text=None, title=" "):
+        msg = QMessageBox()
+        msg.setText(text)
+        if informative_text:
+            msg.setInformativeText(informative_text)
+        msg.setWindowTitle(title)
+        msg.exec_()
 
     def resize_window(self):
         width, height = self.sender().text().split("x")
@@ -2395,7 +2755,16 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", VERSION, None))
 
-        # menu
+        # menu build
+        self.menuBuild.setTitle(QCoreApplication.translate("MainWindow", u"Build", None))
+        self.action_load_build_file.setText(QCoreApplication.translate("MainWindow", u"Load build from file", None))
+        self.action_load_build_code.setText(QCoreApplication.translate("MainWindow", u"Load build from code", None))
+        self.action_load_favorites_file.setText(QCoreApplication.translate("MainWindow", u"Load favorites from file", None))
+        self.action_save_build_file.setText(QCoreApplication.translate("MainWindow", u"Save build to file", None))
+        self.action_save_build_code.setText(QCoreApplication.translate("MainWindow", u"Save build to code", None))
+        self.action_save_favorites_file.setText(QCoreApplication.translate("MainWindow", u"Save fovorites to file", None))
+
+        # menu window
         self.menuWindow.setTitle(QCoreApplication.translate("MainWindow", u"Window", None))
         self.menuSize.setTitle(QCoreApplication.translate("MainWindow", u"Size", None))
         self.action960x540.setText(QCoreApplication.translate("MainWindow", u"960x540", None))
