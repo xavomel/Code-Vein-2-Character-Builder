@@ -274,7 +274,7 @@ class Builder:
                 new_val = old_value - val
                 new_val = -new_val if add else new_val
 
-                print("****** final", new_val, "val", val, "val_other", val_other, "val_equipped", val_equipped, "val_equipped_other", val_equipped_other, "add", add, "old_value", old_value)
+                # print("****** final", new_val, "val", val, "val_other", val_other, "val_equipped", val_equipped, "val_equipped_other", val_equipped_other, "add", add, "old_value", old_value)
 
                 idx_to_remove = []
                 for idx, transaction in enumerate(transaction_list):
@@ -577,22 +577,13 @@ class Builder:
         print("* start_transaction")
         transaction = self.build_transaction(data, slot, transform)
 
-        attributes = dict()
-
         # TODO rename "value" to "diff" to be more accurate
         for type, var, key, value, old_value, widget in transaction:
             if not widget:
                 continue
 
-            if widget.__class__.__name__ == "AttributeProgressBar":
-                # fetch maximum from attributes in same transaction
-                # or from character if attributes are not in transaction (ok to fetch since they won't be changed)
-                maximum = attributes.get(key)
-                # check for None as maximum = 0 is a valid value
-                if maximum is None:
-                    maximum = self.character.attributes[key]
-                widget.set_attribute_value(maximum)
-
+            if var == "Burden":
+                maximum = widget.attribute_value
                 new_value = value + old_value
                 if new_value > maximum:
                     maximum = new_value
@@ -601,27 +592,28 @@ class Builder:
                 # for some reason PyQt is slacking on refreshing progress bar when changing blood code
                 # resulting in inaccurate overburden (++) refresh it manually
                 widget.update()
+            elif var == "Attributes":
+                # need to process attributes first, to later re-use them e.g. when calculating maximum for Burden
+                # but we need to process attributes first anyway for booster / trait conditions
+                new_value = value + old_value
+                widget.setText(str(new_value))
+                burden_widget = self.char_to_widget_mapping["Burden_" + key]
+                burden_widget.set_attribute_value(new_value)
+            elif var == "Defense":
+                new_value = value + old_value
+                # 2 decimal places format for floating point (Fraction in this case) just like ingame
+                # Fractions are used because adding and subtracting Floats many times could introduce errors
+                widget.setText(str(format(new_value, "0.2f")))
+            elif var == "Stylesheet":
+                widget.setStyleSheet(value)
+            elif var == "Active":
+                # print("transaction", widget, key, old_value)
+                booster_slot, booster_name = key
+                self.window.set_booster_icon(widget, booster_name, value)
+            elif var == "Dodge":
+                widget.setText(value)
             else:
-                # need to process attributes first, to later re-use them
-                # but we need to process attributes first anyway for booster / trait condition
-                if var == "Attributes":
-                    attributes[key] = value + old_value
-
-                if var == "Defense":
-                    new_value = value + old_value
-                    # 2 decimal places format for floating point (Fraction in this case) just like ingame
-                    # Fractions are used because adding and subtracting Floats many times could introduce errors
-                    widget.setText(str(format(new_value, "0.2f")))
-                elif var == "Stylesheet":
-                    widget.setStyleSheet(value)
-                elif var == "Active":
-                    print("transaction", widget, key, old_value)
-                    booster_slot, booster_name = key
-                    self.window.set_booster_icon(widget, booster_name, value)
-                elif var == "Dodge":
-                    widget.setText(value)
-                else:
-                    widget.setText(str(value + old_value))
+                widget.setText(str(value + old_value))
 
         self.last_transaction = transaction
 
@@ -649,16 +641,12 @@ class Builder:
             return
         print("* rollback_transaction")
 
-        attributes = dict()
-
         for type, var, key, value, old_value, widget in self.last_transaction:
             if not widget:
                 continue
 
-            if widget.__class__.__name__ == "AttributeProgressBar":
+            if var == "Burden":
                 maximum = self.character.attributes[key]
-                widget.set_attribute_value(maximum)
-
                 if old_value > maximum:
                     maximum = old_value
                 widget.setMaximum(maximum)
@@ -666,24 +654,24 @@ class Builder:
                 # for some reason PyQt is slacking on refreshing progress bar when changing blood code
                 # resulting in inaccurate overburden (++) refresh it manually
                 widget.update()
+            elif var == "Attributes":
+                # need to process attributes first, to later re-use them e.g. when calculating maximum for Burden
+                # but we need to process attributes first anyway for booster / trait conditions
+                widget.setText(str(old_value))
+                burden_widget = self.char_to_widget_mapping["Burden_" + key]
+                burden_widget.set_attribute_value(old_value)
+            elif var == "Defense":
+                # 2 decimal places format for floating point (Fraction in this case) just like ingame
+                # Fractions are used because adding and subtracting Floats many times could introduce errors
+                widget.setText(str(format(old_value, "0.2f")))
+            elif var == "Stylesheet":
+                widget.setStyleSheet(old_value)
+            elif var == "Active":
+                # print("rollback", widget, key, old_value)
+                booster_slot, booster_name = key
+                self.window.set_booster_icon(widget, booster_name, old_value)
             else:
-                # need to process attributes first, to later re-use them
-                # but we need to process attributes first anyway for booster / trait condition
-                if var == "Attributes":
-                    attributes[key] = value + old_value
-
-                if var == "Defense":
-                    # 2 decimal places format for floating point (Fraction in this case) just like ingame
-                    # Fractions are used because adding and subtracting Floats many times could introduce errors
-                    widget.setText(str(format(old_value, "0.2f")))
-                elif var == "Stylesheet":
-                    widget.setStyleSheet(old_value)
-                elif var == "Active":
-                    print("rollback", widget, key, old_value)
-                    booster_slot, booster_name = key
-                    self.window.set_booster_icon(widget, booster_name, old_value)
-                else:
-                    widget.setText(str(old_value))
+                widget.setText(str(old_value))
 
         self.last_transaction = []
 
@@ -730,7 +718,7 @@ class Builder:
         for _type, var, key, value, old_value, widget in self.last_transaction:
             if var == "Active":
                 booster_slot, booster_name = key
-                print("commit", booster_slot, booster_name, value)
+                # print("commit", booster_slot, booster_name, value)
 
                 if booster_slot == slot:
                     # selected booster slot
@@ -1338,10 +1326,9 @@ class Builder:
             # TODO add handling for Shrugged Burden (booster and trait) ?
             # TODO add handling for Weapon Rack ?
             val = val - equipped.burden[attr]
-            if val != old_value:
-                # EXPERIMENTAL: only update transaction if values are different
-                # if values are equal it will just set same value
-                transaction.append([_type, "Burden", attr, val, old_value, widget])
+            # needs to be always sent even if val is 0, both burden and attributes affect burden progress bar
+            # so if any of them changes both are needed to update progress bar
+            transaction.append([_type, "Burden", attr, val, old_value, widget])
 
         # unassign old booster
         if not equipped.active:
@@ -1404,6 +1391,7 @@ class Builder:
             if booster_slot != slot:
                 old_value = original_active[booster_slot]
                 if old_value != new_active:
+                    # this is ok to compare (unlike value != old_value) because this is not a diff
                     booster = boosters[idx]
                     widget = self.char_to_widget_mapping[booster_slot]
                     transaction.append([_type, "Active", (booster_slot, booster.name), new_active, old_value, widget])

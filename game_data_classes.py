@@ -477,7 +477,7 @@ class OffensiveForma:
             <h2><p align="center">{0}</p></h2>
             <h3>Ichor Consumption: {1}</h3>
             <br><div style="white-space: pre-wrap;">{2}</div>
-        <body>""".format(
-            self.name,
-            self.ichor_cost,
-            self.description)
+            </body>""".format(
+                self.name,
+                self.ichor_cost,
+                self.description)

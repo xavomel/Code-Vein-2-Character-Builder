@@ -2152,7 +2152,7 @@ class Ui_MainWindow(object):
 
     # TODO consider putting inverted state as alternate icon state, to make switching more efficient
     def set_booster_icon(self, widget, name, active):
-        print("  set_booster_icon", widget, name, active)
+        # print("  set_booster_icon", widget, name, active)
 
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -2247,14 +2247,14 @@ class Ui_MainWindow(object):
             self.label_h3_v1_g1_2: "Attribute_Dexterity",
             self.label_h3_v1_g1_3: "Attribute_Mind",
             self.label_h3_v1_g1_4: "Attribute_Willpower",
-            self.label_h3_v1_g1_5: "Attribute_Fortitude",
-            self.label_h3_v1_g1_6: "Attribute_Vitality",
+            self.label_h3_v1_g1_5: "Attribute_Vitality",
+            self.label_h3_v1_g1_6: "Attribute_Fortitude",
             self.progress_bar_h3_v1_g1_1: "Burden_Strength",
             self.progress_bar_h3_v1_g1_2: "Burden_Dexterity",
             self.progress_bar_h3_v1_g1_3: "Burden_Mind",
             self.progress_bar_h3_v1_g1_4: "Burden_Willpower",
-            self.progress_bar_h3_v1_g1_5: "Burden_Fortitude",
-            self.progress_bar_h3_v1_g1_6: "Burden_Vitality",
+            self.progress_bar_h3_v1_g1_5: "Burden_Vitality",
+            self.progress_bar_h3_v1_g1_6: "Burden_Fortitude",
 
             # Weapon 1
             self.tool_button_h2_v1_h1_1: "Weapon_1",
@@ -2545,8 +2545,6 @@ class Ui_MainWindow(object):
         self.show_message("Favorites (%d) saved successfully." % count_saved)
 
     def handle_build_load(self, code):
-        print(code)
-
         # check length
         if len(code) != 80:
             self.show_message("Build loading aborted, invalid code length (%d). Should be 80." % len(code))
@@ -2644,47 +2642,38 @@ class Ui_MainWindow(object):
         blood_code = build_save_order["BloodCode"].get(blood_code)
         if blood_code:
             blood_code = builder.blood_codes[blood_code]
-            print(blood_code)
             builder.start_transaction(blood_code)
             builder.commit_transaction(blood_code)
         else:
             blood_code = BloodCode()
-            print(blood_code)
 
         weapon_1_transform = build_save_order["Transform_Weapon"].get(weapon_1_transform)
         if not weapon_1_transform:
             weapon_1_transform = "Weapon_Off"
-            print(weapon_1_transform)
 
         weapon_2_transform = build_save_order["Transform_Weapon"].get(weapon_2_transform)
         if not weapon_2_transform:
             weapon_2_transform = "Weapon_Off"
-            print(weapon_2_transform)
 
         defensive_transform = build_save_order["Transform_Defensive"].get(defensive_transform)
         if not defensive_transform:
             defensive_transform = "Defensive_Off"
-            print(defensive_transform)
 
         weapon_1 = build_save_order["Weapon"].get(weapon_1)
         if weapon_1:
             weapon_1 = builder.weapons[weapon_1]
-            print(weapon_1)
             builder.start_transaction(weapon_1, "Weapon_1", weapon_1_transform)
             builder.commit_transaction(weapon_1, "Weapon_1", weapon_1_transform)
         else:
             weapon_1 = Weapon()
-            print(weapon_1)
 
         weapon_2 = build_save_order["Weapon"].get(weapon_2)
         if weapon_2:
             weapon_2 = builder.weapons[weapon_2]
-            print(weapon_2)
             builder.start_transaction(weapon_2, "Weapon_2", weapon_2_transform)
             builder.commit_transaction(weapon_2, "Weapon_2", weapon_2_transform)
         else:
             weapon_2 = Weapon()
-            print(weapon_2)
 
         formae = [
             (weapon_1_forma_1, "Weapon_1_Forma_1"),
@@ -2700,42 +2689,34 @@ class Ui_MainWindow(object):
             forma = build_save_order["Forma"].get(forma)
             if forma:
                 forma = builder.formae[forma]
-                print(forma)
                 builder.start_transaction(forma, slot)
                 builder.commit_transaction(forma, slot)
             else:
                 forma = Forma()
-                print(forma)
 
         offensive = build_save_order["Offensive"].get(offensive)
         if offensive:
             offensive = builder.offensive_formae[offensive]
-            print(offensive)
             builder.start_transaction(offensive)
             builder.commit_transaction(offensive)
         else:
             offensive = Offensive()
-            print(offensive)
 
         defensive = build_save_order["Defensive"].get(defensive)
         if defensive:
             defensive = builder.defensive_formae[defensive]
-            print(defensive)
             builder.start_transaction(defensive, "", defensive_transform)
             builder.commit_transaction(defensive, "", defensive_transform)
         else:
             defensive = Defensive()
-            print(defensive)
 
         jail = build_save_order["Jail"].get(jail)
         if jail:
             jail = builder.jails[jail]
-            print(jail)
             builder.start_transaction(jail)
             builder.commit_transaction(jail)
         else:
             jail = Jail()
-            print(jail)
 
         # todo
         #     booster active status seems to have issues on loading
@@ -2755,12 +2736,10 @@ class Ui_MainWindow(object):
             booster = build_save_order["Booster"].get(booster)
             if booster:
                 booster = builder.boosters[booster]
-                print(booster)
                 builder.start_transaction(booster, slot)
                 builder.commit_transaction(booster, slot)
             else:
                 booster = Booster()
-                print(booster)
 
         self.show_message("Build loaded successfully.")
 
@@ -2959,7 +2938,6 @@ class AttributeProgressBar(QProgressBar):
             overburden = self.value() - self.attribute_value
             overburden_bar_size = floor(self.attribute_value / 2)
             overburden_bar_number = ceil(overburden / overburden_bar_size)
-
             for x in range(overburden_bar_number):
                 overburden_text += "+"
                 if len(overburden_text) >= 3:
