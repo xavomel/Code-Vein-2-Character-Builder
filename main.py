@@ -167,7 +167,8 @@ class Builder:
             # remove transactions that are included in the merged transaction
             transaction_list.pop(idx)
 
-        transaction_list.append(["Booster", var, attr, val, old_value, widget])
+        # Attributes need to be handled before Burden, otherwise Burden bar will not be accurate
+        transaction_list.insert(0, ["Booster", var, attr, val, old_value, widget])
 
     def resistance_booster(self, attr, val, add, transaction_list):
         var = "Resistance"
@@ -590,11 +591,16 @@ class Builder:
                 # check for None as maximum = 0 is a valid value
                 if maximum is None:
                     maximum = self.character.attributes[key]
+                widget.set_attribute_value(maximum)
+
                 new_value = value + old_value
                 if new_value > maximum:
                     maximum = new_value
                 widget.setMaximum(maximum)
                 widget.setValue(new_value)
+                # for some reason PyQt is slacking on refreshing progress bar when changing blood code
+                # resulting in inaccurate overburden (++) refresh it manually
+                widget.update()
             else:
                 # need to process attributes first, to later re-use them
                 # but we need to process attributes first anyway for booster / trait condition
@@ -643,17 +649,29 @@ class Builder:
             return
         print("* rollback_transaction")
 
+        attributes = dict()
+
         for type, var, key, value, old_value, widget in self.last_transaction:
             if not widget:
                 continue
 
             if widget.__class__.__name__ == "AttributeProgressBar":
                 maximum = self.character.attributes[key]
+                widget.set_attribute_value(maximum)
+
                 if old_value > maximum:
                     maximum = old_value
                 widget.setMaximum(maximum)
                 widget.setValue(old_value)
+                # for some reason PyQt is slacking on refreshing progress bar when changing blood code
+                # resulting in inaccurate overburden (++) refresh it manually
+                widget.update()
             else:
+                # need to process attributes first, to later re-use them
+                # but we need to process attributes first anyway for booster / trait condition
+                if var == "Attributes":
+                    attributes[key] = value + old_value
+
                 if var == "Defense":
                     # 2 decimal places format for floating point (Fraction in this case) just like ingame
                     # Fractions are used because adding and subtracting Floats many times could introduce errors

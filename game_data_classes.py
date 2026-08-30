@@ -1,8 +1,8 @@
 from fractions import Fraction
 
 
-def burden_table(burden):
-    values = burden.values()
+def attribute_or_burden_table(data):
+    values = data.values()
 
     text = """
         <p align="center">
@@ -100,14 +100,12 @@ class Weapon:
             self.transforms[key].pop("Name")
 
     def get_hover_text(self, detailed=False):
-        text = """<body>
-            <h2><p align="center">{0}</p></h2>
-            """.format(self.name)
+        text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
 
         # to do choose right transform
         if detailed:
             # Do we really need those values? Maybe just for hover outside side menu
-            text += burden_table(self.transforms["Weapon_Off"]["Burden"])
+            text += attribute_or_burden_table(self.transforms["Weapon_Off"]["Burden"])
             text += capacity_table(self.transforms["Weapon_Off"]["Capacity"])
         text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
         text += "</body>"
@@ -157,15 +155,11 @@ class Forma:
 
     # to do add matching weapons?
     def get_hover_text(self, detailed=False):
-        text = """<body>
-            <h2><p align="center">{0}</p></h2>
-            <h3><div style="white-space: pre-wrap;">Ichor Consumption: {1}</div></h3>
-            </body>""".format(
-                self.name,
-                self.ichor_cost)
+        text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
 
         if detailed:
             text += capacity_table(self.capacity)
+        text += """<h3>Ichor Consumption: {0}</h3>""".format(self.ichor_cost)
         text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
         text += "</body>"
 
@@ -177,6 +171,7 @@ class Booster:
         self.description = ""
         self.type = ""  # 0, 1, 2, 3
         self.conditions = [{}]
+        self.conditions_print = ""
         self.favorite = False
         self.equipped = False
         self.active = False
@@ -206,13 +201,14 @@ class Booster:
         if all([len(x) == 0 for x in self.conditions]):
             # boosters without conditions are always active, except the placeholder for making booster slot empty
             self.active = True
+        self.conditions_print = self.print_conditions()
 
     # to do add conditions
     def get_hover_text(self, detailed=False):
         text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
         if detailed:
-            text += burden_table(self.burden)
-        text += self.print_conditions()
+            text += attribute_or_burden_table(self.burden)
+        text += self.conditions_print
         text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
         text += "</body>"
 
@@ -319,12 +315,11 @@ class BloodCode:
     # to do add traits
     def get_hover_text(self, detailed=False):
         text = """<body>
-            <h2><p align="center">{0}</p></h2>
-
-            <body>""".format(self.name)
+            <h2><p align="center">{0}</p></h2>""".format(self.name)
 
         if detailed:
-            text += """<h3><div style="white-space: pre-wrap;">Bloodline: {0}</div></h3>""".format(self.bloodline)
+            text += attribute_or_burden_table(self.attributes)
+            text += """<h3>Bloodline: {0}</h3>""".format(self.bloodline)
         text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
         text += "</body>"
 
@@ -372,7 +367,7 @@ class Jail:
     def get_hover_text(self, detailed=True):
         text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
         if detailed:
-            text += burden_table(self.burden)
+            text += attribute_or_burden_table(self.burden)
         text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
         text += "</body>"
 
@@ -444,19 +439,16 @@ class DefensiveForma:
 
     # to do choose right transform
     def get_hover_text(self, detailed=False):
-        text = """<body>
-            <h2><p align="center">{0}</p></h2>
-            <h3><div style="white-space: pre-wrap;">Type: {1}</div></h3>
-            <h3><div style="white-space: pre-wrap;">Ichor Consumption: {2}</div></h3>
-            <body>""".format(
-                self.name,
-                self.type,
-                self.ichor_cost)
+        text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
 
         if detailed:
-            text += burden_table(self.transforms["Defensive_Off"]["Burden"])
-        text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
-        text += "</body>"
+            text += attribute_or_burden_table(self.transforms["Defensive_Off"]["Burden"])
+        text += """
+            <h3>Type: {0}</h3>
+            <h3>Ichor Consumption: {1}</h3>
+            <br><div style="white-space: pre-wrap;">{2}</div>
+            </body>""".format(self.type, self.ichor_cost, self.description)
+        text += ""
 
         return text
 
@@ -483,9 +475,8 @@ class OffensiveForma:
     def get_hover_text(self, detailed=False):
         return """<body>
             <h2><p align="center">{0}</p></h2>
-            <h3><div style="white-space: pre-wrap;">Ichor Consumption: {1}</div></h3>
-            <br>
-            <div style="white-space: pre-wrap;">{2}</div>
+            <h3>Ichor Consumption: {1}</h3>
+            <br><div style="white-space: pre-wrap;">{2}</div>
         <body>""".format(
             self.name,
             self.ichor_cost,

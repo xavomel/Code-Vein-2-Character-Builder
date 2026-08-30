@@ -9,6 +9,7 @@ import cv2_resources
 from game_data_classes import *
 from utility import escape_filename, open_file, save_file, open_json, save_json, int_to_hexstring, hexstring_to_int
 import re
+from math import floor, ceil
 
 
 VERSION = u"Code Vein II Character Builder v0.0.1"
@@ -433,6 +434,8 @@ class Ui_MainWindow(object):
         # 2nd horizontal layout content - vertical layout 1 content - horizontal layout content
         self.tool_button_h2_v1_h1_1 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v1_h1_1.setObjectName(u"Weapon_1_Button")
+        # maximum width to avoid pushing blood code too far to the right (with long weapon name)
+        self.tool_button_h2_v1_h1_1.setMaximumWidth(130)
         self.tool_button_h2_v1_h1_1.setText(QCoreApplication.translate("MainWindow", u"Weapon 1", None)) # move to re-translate
         self.tool_button_h2_v1_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v1_h1_1.setIcon(icon_slot_item)
@@ -592,6 +595,8 @@ class Ui_MainWindow(object):
         # 2nd horizontal layout content - vertical layout 2 content - horizontal layout content
         self.tool_button_h2_v2_h1_1 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v2_h1_1.setObjectName(u"Weapon_2_Button")
+        # maximum width to avoid pushing blood code too far to the right (with long weapon name)
+        self.tool_button_h2_v2_h1_1.setMaximumWidth(130)
         self.tool_button_h2_v2_h1_1.setText(QCoreApplication.translate("MainWindow", u"Weapon 2", None))  # move to re-translate
         self.tool_button_h2_v2_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v2_h1_1.setIcon(icon_slot_item)
@@ -2938,10 +2943,28 @@ class Ui_MainWindow(object):
 class AttributeProgressBar(QProgressBar):
     def __init__(self, parent):
         super().__init__(parent)
+        self.attribute_value = 0
+
+    def set_attribute_value(self, attribute_value):
+        self.attribute_value = attribute_value
 
     def paintEvent(self, event):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+
+        # handle overburden
+        # each additional overburden bar has length depending on floor(attribute / 2)
+        overburden_text = ""
+        if self.value() > self.attribute_value > 0:
+            overburden = self.value() - self.attribute_value
+            overburden_bar_size = floor(self.attribute_value / 2)
+            overburden_bar_number = ceil(overburden / overburden_bar_size)
+
+            for x in range(overburden_bar_number):
+                overburden_text += "+"
+                if len(overburden_text) >= 3:
+                    # max 3 overburden bars
+                    break
 
         r = self.rect().adjusted(2, 2, -2, -2)
         skew = 10
@@ -2967,10 +2990,12 @@ class AttributeProgressBar(QProgressBar):
             QPointF(r.left() + fill_width - skew, r.bottom()),
             QPointF(r.left(), r.bottom())
         ])
-        painter.setPen(QColor("#95abbc"))
-        painter.setBrush(QColor("#95abbc"))
-        # painter.setPen(Qt.GlobalColor.red)  # debug
-        # painter.setBrush(Qt.GlobalColor.red)  # debug
+        if overburden_text:
+            painter.setPen(Qt.GlobalColor.red)
+            painter.setBrush(Qt.GlobalColor.red)
+        else:
+            painter.setPen(QColor("#95abbc"))
+            painter.setBrush(QColor("#95abbc"))
         painter.drawPolygon(fill)
 
         # Color border and background colored border (color on top of background)
@@ -2982,7 +3007,7 @@ class AttributeProgressBar(QProgressBar):
 
         # Progress text
         painter.setPen(Qt.GlobalColor.white)
-        painter.drawText(r, Qt.AlignmentFlag.AlignCenter, f"{self.value()}")
+        painter.drawText(r, Qt.AlignmentFlag.AlignCenter, f"{self.value()}" + overburden_text)
 
 
 class MyQPushButton(QPushButton):
