@@ -19,29 +19,46 @@ CODE_CHECKSUM_VALUE = 80000
 
 
 class Ui_MainWindow(object):
-    def placeDynamicUIElements(self):
-        # widgets in layout have position only after window is shown
-        # if we want to place a widget outside layout, but matching position of widget in layout
-        # then we can only do so after window is shown
+    def place_dynamic_ui_elements(self):
+        """
+        This function and reposition_dynamic_ui_element() are necessary to ensure proper position for:
+        - weapon 1 transform button
+        - weapon 2 transform button
+        - defensive transform button
+        Each time another widget is resized and it might impact their position, they need to be repositioned.
 
+        PyQt doesn't give an easy way to place a button on top of another button, so it has to be done outside layout.
+        To place a widget outside layout (but on top of widget in layout) it can be done only after window is shown.
+        :return: None
+        """
         # get source widget dimensions and create dynamic element in same place
         # weapon 1 transform
         wp1_geo = self.tool_button_h2_v1_h1_1.geometry()
         self.tool_button_h2_v1_h1_1a.setGeometry(QRect(wp1_geo.x(), wp1_geo.y(), 25, 25))
         self.tool_button_h2_v1_h1_1a.raise_()
         self.tool_button_h2_v1_h1_1a.show()
+        self.tool_button_h2_v1_h1_1.set_position_tracked(True)
 
         # weapon 2 transform
         wp2_geo = self.tool_button_h2_v2_h1_1.geometry()
         self.tool_button_h2_v2_h1_1a.setGeometry(QRect(wp2_geo.x(), wp2_geo.y(), 25, 25))
         self.tool_button_h2_v2_h1_1a.raise_()
         self.tool_button_h2_v2_h1_1a.show()
+        self.tool_button_h2_v2_h1_1.set_position_tracked(True)
 
         # defensive transform
         def_geo = self.tool_button_h2_v3_h1_2.geometry()
         self.tool_button_h2_v3_h1_2a.setGeometry(QRect(def_geo.x(), def_geo.y(), 25, 25))
         self.tool_button_h2_v3_h1_2a.raise_()
         self.tool_button_h2_v3_h1_2a.show()
+        self.tool_button_h2_v3_h1_2.set_position_tracked(True)
+
+        # offensive has no transform but may affect transform button placement, so also needs to trigger updates
+        self.tool_button_h2_v3_h1_1.set_position_tracked(True)
+
+    def reposition_dynamic_ui_element(self, widget_parent, widget_child):
+        geo = widget_parent.geometry()
+        widget_child.setGeometry(QRect(geo.x(), geo.y(), 25, 25))
 
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -3015,6 +3032,7 @@ class MyQToolButton(QToolButton):
             "Offensive": parent.window().builder.offensive_formae,
             "Jail": parent.window().builder.jails,
         }
+        self.position_tracked = False
 
     def set_button_type(self, type):
         self.button_type = type
@@ -3035,6 +3053,21 @@ class MyQToolButton(QToolButton):
                 self.window().side_menu_text.setVisible(True)
                 self.window().handle_hover(item, detailed=True)
 
+    def set_position_tracked(self, position_tracked):
+        self.position_tracked = position_tracked
+
+    def resizeEvent(self, QEvent):
+        super().resizeEvent(QEvent)
+
+        if not self.position_tracked:
+            return
+
+        window = self.window()
+        # no need to update position of weapon 1 transform, it is the leftmost widget and won't be affected by others
+        # weapon 2 and transform
+        self.window().reposition_dynamic_ui_element(window.tool_button_h2_v2_h1_1, window.tool_button_h2_v2_h1_1a)
+        # defensive and transform
+        self.window().reposition_dynamic_ui_element(window.tool_button_h2_v3_h1_2, window.tool_button_h2_v3_h1_2a)
 
 class MyQListWidget(QListWidget):
     menu_type = ""

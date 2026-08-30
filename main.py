@@ -1514,7 +1514,7 @@ def main():
     app = QApplication([])
     form = MainWindow()
     form.show()
-    form.placeDynamicUIElements()
+    form.place_dynamic_ui_elements()
 
     # sorting order (e.g. weapons order) is dependent on .json
     # json [] guarantees order is preserved, make sure to add to dict in order
