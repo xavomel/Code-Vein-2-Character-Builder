@@ -212,11 +212,35 @@ class Booster:
         text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
         if detailed:
             text += burden_table(self.burden)
+        text += self.print_conditions()
         text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
         text += "</body>"
 
         return text
 
+    def print_conditions(self):
+        text = ""
+
+        for conditions in self.conditions:
+            for name, values in conditions.items():
+                if name == "Overburden":
+                    if values:
+                        text += "Any Overburden Effect"
+                    else:
+                        text += "No Overburden Effect"
+                elif name == "Attribute":
+                    for k, v in values.items():
+                        text += "%s %s " % (k, v)
+                elif name in ["Burden", "Margin"]:
+                    text += "\n%s: " % name
+                    for k, v in values.items():
+                        text += "%s %s " % (k, v)
+                elif name == "Bloodline":
+                    text += "\n%s: %s" % (name, values)
+        if not text:
+            text = "No Conditions"
+
+        return """<br><div style="white-space: pre-wrap;"><h3>{0}</h3></div>""".format(text)
 
 class BloodCode:
     def __init__(self, doc=None):
