@@ -922,7 +922,7 @@ class Ui_MainWindow(object):
 
         self.tool_button_h3_g1_2 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h3_g1_2.setObjectName(u"tool_button_h3_g1_2")
-        self.tool_button_h3_g1_2.setText(QCoreApplication.translate("MainWindow", u"Medium", None)) # move to re-translate
+        self.tool_button_h3_g1_2.setText(QCoreApplication.translate("MainWindow", u"Normal", None)) # move to re-translate
         self.tool_button_h3_g1_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
 
         self.tool_button_h3_g1_3 = MyQToolButton(self.main_vertical_layout_widget)

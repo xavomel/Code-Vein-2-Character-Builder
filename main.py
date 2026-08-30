@@ -41,7 +41,7 @@ class Character:
         self.overburden = False
         self.balance = 0
         self.ichor = 0
-        self.dodge_effectiveness = "Medium"
+        self.dodge_effectiveness = "Normal"
         self.stamina_guard_cost = 0
         self.transform = {
             "Weapon_1": "Weapon_Off",
@@ -612,6 +612,8 @@ class Builder:
                     print("transaction", widget, key, old_value)
                     booster_slot, booster_name = key
                     self.window.set_booster_icon(widget, booster_name, value)
+                elif var == "Dodge":
+                    widget.setText(value)
                 else:
                     widget.setText(str(value + old_value))
 
@@ -827,6 +829,7 @@ class Builder:
         # boosters
 
         # Dodge Effectiveness
+        self.handle_dodge_effectiveness(_type, transaction)
 
         # defense
         for attr, val in data.defense.items():
@@ -899,6 +902,7 @@ class Builder:
         # boosters
 
         # Dodge Effectiveness
+        self.handle_dodge_effectiveness(_type, transaction)
 
         # Bleed
         # todo comment
@@ -1144,6 +1148,7 @@ class Builder:
         # boosters
 
         # Dodge Effectiveness
+        self.handle_dodge_effectiveness(_type, transaction)
 
         # defense
         for attr, val in data.defense.items():
@@ -1195,6 +1200,7 @@ class Builder:
         # boosters
 
         # Dodge Effectiveness
+        self.handle_dodge_effectiveness(_type, transaction)
 
         # defense
         # TODO some Defensive Formae have silly defense values like 0.96000004 or 1.8374999 - shall we simplify them?
@@ -1382,10 +1388,13 @@ class Builder:
                 if old_value != new_active:
                     booster = boosters[idx]
                     widget = self.char_to_widget_mapping[booster_slot]
-                    transaction.append(["Booster", "Active", (booster_slot, booster.name), new_active, old_value, widget])
+                    transaction.append([_type, "Active", (booster_slot, booster.name), new_active, old_value, widget])
             else:
-                # always send update for selected booster and do not set widget, as it should not be displayed until it's clicked
-                transaction.append(["Booster", "Active", (slot, None), temp_active[slot_int], None, None])
+                # for selected booster do not set widget, should not be displayed until it's clicked
+                transaction.append([_type, "Active", (slot, None), temp_active[slot_int], None, None])
+
+        # Dodge Effectiveness
+        self.handle_dodge_effectiveness(_type, transaction)
 
         return transaction
 
@@ -1433,6 +1442,41 @@ class Builder:
                 booster_fun(self, *arguments)
             else:
                 booster_fun(self)
+
+    def handle_dodge_effectiveness(self, _type, transaction):
+        half_count = 0
+        overburden_count = 0
+
+        for attr, value in self.character.attributes.items():
+            character_attribute = value
+            character_burden = self.character.burden[attr]
+            for operation in transaction:
+                if operation[1] == "Attributes" and operation[2] == attr:
+                    character_attribute += operation[3]
+                if operation[1] == "Burden" and operation[2] == attr:
+                    character_burden += operation[3]
+
+            character_margin = character_attribute - character_burden
+            # print("margin", attr, character_margin, character_attribute, floor(character_attribute / 2))
+            if character_margin < 0:
+                # if margin is negative we are overburdened
+                overburden_count += 1
+            elif character_burden <= floor(character_attribute / 2):
+                # dodge is quick when each attribute burden is less or equal than half of attribute (rounded down)
+                half_count += 1
+
+        # print("handle_dodge_effectiveness half count %d, overburden count %d" % (half_count, overburden_count))
+
+        val = "Normal"
+        if half_count == 6:
+            val = "Quick"
+        elif overburden_count >= 2:
+            val = "Slow"
+
+        old_value = self.character.dodge_effectiveness
+        if val != old_value:
+            widget = self.char_to_widget_mapping["Dodge_Effectiveness"]
+            transaction.append([_type, "Dodge", None, val, old_value, widget])
 
     def transform_stylesheet(self, legal, slot):
         if legal:
