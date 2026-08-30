@@ -41,6 +41,7 @@ class Character:
         self.overburden = False
         self.balance = 0
         self.ichor = 0
+        self.dodge_effectiveness = "Medium"
         self.stamina_guard_cost = 0
         self.transform = {
             "Weapon_1": "Weapon_Off",
@@ -434,7 +435,7 @@ class Builder:
     # TODO use character.margin instead !
     # test case overburden false - Usurper or Bloodline Agnostic
     def condition_overburden(self, wanted_overburden, transaction):
-        print(wanted_overburden)
+        print("condition_overburden: wanted", wanted_overburden)
         for attr, value in self.character.attributes.items():
             character_attribute = value
             character_burden = self.character.burden[attr]
@@ -701,22 +702,39 @@ class Builder:
             self.character.offensive_forma = data
             self.window.update_offensive_icon_text(data.name)
         elif _type == "Booster":
-            # COMMENTED OUT for easier troubleshooting
-            # TODO uncomment
-            previous_booster = self.character.boosters[slot]
-            # previous_booster.equipped = False
-            # if data.type != "":
-            #     # only set for real boosters (do not set for placeholder when making booster slot empty)
-            #     data.equipped = True
-            self.character.boosters[slot] = data
-            self.window.update_boosters_icon_text(data, slot)
+            # selected booster will be handled in "Active" below
+            pass
 
+        # holly
         # Update Character parameters
         for _type, var, key, value, old_value, widget in self.last_transaction:
-            if var == "Bloodline":
+            if var == "Active":
+                booster_slot, booster_name = key
+                print("commit", booster_slot, booster_name, value)
+
+                if booster_slot == slot:
+                    # selected booster slot
+                    previous_booster = self.character.boosters[slot]
+                    previous_booster.active = False
+
+                    # COMMENTED OUT for easier troubleshooting
+                    # TODO uncomment
+                    # previous_booster.equipped = False
+                    # if data.type != "":
+                    #     # only set for real boosters (do not set for placeholder when making booster slot empty)
+                    #     data.equipped = True
+
+                    data.active = value
+                    self.character.boosters[slot] = data
+                    self.window.update_boosters_icon_text(data, slot)
+                else:
+                    self.character.boosters[booster_slot].active = value
+            elif var == "Bloodline":
                 # TODO if value is Agnostic, set Character variable bloodline_agnostic to True
                 # otherwise set it to False ?
+                #
                 # could be easy way to remember if this booster is active, but is it necessary?
+                # when resolving boosters and Agnostic is active it will overwrite blood code value anyway?
                 self.character.bloodline = value
             elif var == "Attributes":
                 self.character.attributes[key] += value
@@ -739,16 +757,13 @@ class Builder:
                 self.character.capacity[key] += value
             elif var == "StaminaGuardCost":
                 self.character.stamina_guard_cost += value
+            elif var == "Dodge":
+                self.character.dodge_effectiveness = value
             elif var == "Stylesheet":
                 if key:
                     legal_slot, legal_value = key
                     self.character.legal[legal_slot] = legal_value
-            elif var == "Active":
-                booster_slot, booster_name = key
-                previous_booster = self.character.boosters[booster_slot]
-                previous_booster.active = False
-                self.character.boosters[booster_slot].active = value
-                print("commit", booster_slot, booster_name)
+
 
         self.last_transaction = []
 
@@ -1319,7 +1334,7 @@ class Builder:
         boosters[slot_int] = data
 
         # keep original active values for faster access
-        original_active = {k: v.active for k, v in self.character.boosters.items()}
+        original_active = {booster_slot: v.active for booster_slot, v in self.character.boosters.items()}
 
         # keep temporary active values, they will be updated for real when transaction is committed
         # treat selected booster as inactive, since it's not equipped yet
@@ -1339,6 +1354,8 @@ class Builder:
         #
         # TODO should we start iteration from slot_int (selected booster) instead of 0?
         # since it's guaranteed to change active status
+        #
+        # resolves effects and determines active status
         idx = 0
         unchanged = [0, 0, 0, 0, 0, 0]
         while all(unchanged) is False:
@@ -1349,26 +1366,26 @@ class Builder:
                 print(booster.name, "not equal", active, new_active, unchanged)
                 temp_active[idx] = new_active
                 self.resolve_effects(booster, new_active, transaction)
-
-                booster_slot = "Booster_" + str(idx + 1)
-                widget = self.char_to_widget_mapping[booster_slot]
-                old_value = original_active[booster_slot]
-                if booster_slot != slot:
-                    transaction.append(["Booster", "Active", (booster_slot, booster.name), new_active, old_value, widget])
-                else:
-                    # do not set widget, as selected booster should not be displayed until it's clicked
-                    transaction.append(["Booster", "Active", (booster_slot, None), new_active, None, None])
             else:
-                unchanged[idx] = 1
                 print(booster.name, "equal", active, new_active, unchanged)
+                unchanged[idx] = 1
 
             idx += 1
             if idx == len(unchanged):
                 idx = 0
 
-        if not transaction:
-            # no impact on parameters (text only booster) but non-empty transaction is needed for commit
-            transaction.append(["Booster", None, None, None, None, None])
+        # set active status if it changed (set it always for selected booster)
+        for idx, new_active in enumerate(temp_active):
+            booster_slot = "Booster_" + str(idx + 1)
+            if booster_slot != slot:
+                old_value = original_active[booster_slot]
+                if old_value != new_active:
+                    booster = boosters[idx]
+                    widget = self.char_to_widget_mapping[booster_slot]
+                    transaction.append(["Booster", "Active", (booster_slot, booster.name), new_active, old_value, widget])
+            else:
+                # always send update for selected booster and do not set widget, as it should not be displayed until it's clicked
+                transaction.append(["Booster", "Active", (slot, None), temp_active[slot_int], None, None])
 
         return transaction
 

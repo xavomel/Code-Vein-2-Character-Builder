@@ -922,7 +922,7 @@ class Ui_MainWindow(object):
 
         self.tool_button_h3_g1_2 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h3_g1_2.setObjectName(u"tool_button_h3_g1_2")
-        self.tool_button_h3_g1_2.setText(QCoreApplication.translate("MainWindow", u"Quick", None)) # move to re-translate
+        self.tool_button_h3_g1_2.setText(QCoreApplication.translate("MainWindow", u"Medium", None)) # move to re-translate
         self.tool_button_h3_g1_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
 
         self.tool_button_h3_g1_3 = MyQToolButton(self.main_vertical_layout_widget)
@@ -2422,7 +2422,7 @@ class Ui_MainWindow(object):
         widget.setInputMode(QInputDialog.TextInput)
         widget.setLabelText("Enter build code")
 
-        ok = widget.exec_()
+        ok = widget.exec()
         if ok:
             code = widget.textValue()
             self.handle_build_load(code)
@@ -2450,7 +2450,7 @@ class Ui_MainWindow(object):
         if line_edit:
             line_edit.setText(code)
 
-        widget.exec_()
+        widget.exec()
 
     def load_favorites_file(self):
         filepath, extension = QFileDialog.getOpenFileName(self, 'Open file', "favorites.json", "*.json")
@@ -2539,8 +2539,8 @@ class Ui_MainWindow(object):
                 return
 
         # split code into segments
-        # TODO legal
-        # legal = code[0:2]
+        # each segment is an int encoded in hexadecimal (without 0x)
+        legal = code[0:2]
         blood_code = code[2:4]
         weapon_1 = code[4:7]
         weapon_2 = code[7:10]
@@ -2573,7 +2573,7 @@ class Ui_MainWindow(object):
 
         # checksum, verify that every separate element summed adds up to CODE_CHECKSUM_VALUE = 80000
         segments_to_check = [
-            # legal,
+            legal,
             blood_code,
             weapon_1,
             weapon_2,
@@ -2615,7 +2615,7 @@ class Ui_MainWindow(object):
         # then start and commit transaction to update Character
         #
         # if item is not found the slot will be empty
-        # this can happen if hex is "00" or value greater than maximum for segment
+        # this can happen if hex is "00" or value is not found in build_save_order dict
         builder = self.builder
         build_save_order = self.builder.build_save_order
 
@@ -2745,7 +2745,7 @@ class Ui_MainWindow(object):
     def generate_build_code(self):
         # the format of build code can be better seen in handle_build_load()
         items = [
-            "00",  # todo legal / illegal
+            # "00",  # legal will be added before the loop
             self.builder.character.blood_code,
             self.builder.character.weapons["Weapon_1"],
             self.builder.character.weapons["Weapon_2"],
@@ -2780,6 +2780,14 @@ class Ui_MainWindow(object):
         build_save_order = self.builder.build_save_order
         code = ""
         sum = 0
+
+        all_legal = "01"
+        for key, legal in self.builder.character.legal.items():
+            if not legal:
+                all_legal = "02"
+                break
+        code += all_legal
+        sum += hexstring_to_int(all_legal)
 
         for item in items:
             if isinstance(item, str):
@@ -2844,7 +2852,7 @@ class Ui_MainWindow(object):
         if informative_text:
             msg.setInformativeText(informative_text)
         msg.setWindowTitle(title)
-        msg.exec_()
+        msg.exec()
 
     def resize_window(self):
         width, height = self.sender().text().split("x")
