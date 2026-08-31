@@ -193,7 +193,7 @@
     },
     {
         "Name": "Shrugged Burden",
-        "Description": "Compensates for going over a given stat burden limit by passing excess burden to another stat.\n\nOnly works for the following stat pairs:\n-Strength and Dexterity\n-Mind and Willpower\n-Vitality and Fortitude\n\nAlso, only applies when the compensating stat can accommodate the excess burden.",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nCompensates for going over a given stat burden limit by passing excess burden to another stat.\n\nOnly works for the following stat pairs:\n-Strength and Dexterity\n-Mind and Willpower\n-Vitality and Fortitude\n\nAlso, only applies when the compensating stat can accommodate the excess burden.",
         "Type": "Basic",
         "Burden": {
             "Strength": 2,
@@ -1182,7 +1182,7 @@
     },
     {
         "Name": "Hemorrhaging Weapon Boost",
-        "Description": "Increases bleed buildup on enemies from weapon attacks.",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nIncreases bleed buildup on enemies from weapon attacks.",
         "Type": "Attack",
         "Burden": {
             "Strength": 0,
@@ -1316,7 +1316,7 @@
     },
     {
         "Name": "Resistance Booster",
-        "Description": "Boosts resistance to status ailments.",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nBoosts resistance to status ailments.",
         "Type": "Defence",
         "Burden": {
             "Strength": 0,
@@ -1350,7 +1350,7 @@
     },
     {
         "Name": "Balance Booster",
-        "Description": "Increases balance, giving more disruption resistance to enemy attacks.",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nIncreases balance, giving more disruption resistance to enemy attacks.",
         "Type": "Defence",
         "Burden": {
             "Strength": 0,
@@ -1479,7 +1479,7 @@
     },
     {
         "Name": "Weapon Rack",
-        "Description": "Nullifies the lowest of each of the six stat burdens present when two weapons are equipped.\n\nFor instance, if Weapon A has a Strength burden of 3 and Weapon B has a Strength burden of 2, then Weapon B's Strength burden will be treated as 0.",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nNullifies the lowest of each of the six stat burdens present when two weapons are equipped.\n\nFor instance, if Weapon A has a Strength burden of 3 and Weapon B has a Strength burden of 2, then Weapon B's Strength burden will be treated as 0.",
         "Type": "Basic",
         "Burden": {
             "Strength": 0,
@@ -1804,7 +1804,7 @@
     },
     {
         "Name": "The Tie That Binds: Noah",
-        "Description": "Significantly boosts Fortitude.\n\nAlso ignores stat, burden, margin, and overburden requirements for other traits.",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nSignificantly boosts Fortitude.\n\nAlso ignores stat, burden, margin, and overburden requirements for other traits.",
         "Type": "Other",
         "Burden": {
             "Strength": 0,

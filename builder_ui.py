@@ -1329,7 +1329,7 @@ class Ui_MainWindow(object):
         self.tool_button_h6_4.setIconSize(icon_defense_size)
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_4)
 
-        # dummy button
+        # dummy button for spacing
         self.tool_button_h6_5 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h6_5.setObjectName(u"tool_button_h6_5")
         self.tool_button_h6_5.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
@@ -1340,7 +1340,7 @@ class Ui_MainWindow(object):
         self.tool_button_h6_5.setSizePolicy(sp)
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_5)
 
-        # dummy button
+        # dummy button for spacing
         self.tool_button_h6_6 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h6_6.setObjectName(u"tool_button_h6_6")
         self.tool_button_h6_6.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
@@ -1401,7 +1401,7 @@ class Ui_MainWindow(object):
             return
 
         self.side_menu_buttons.itemClicked.connect(self.filter_menu_forma)
-        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        # self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
 
         if "Weapon_1_Forma_1" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_forma_1_weapon_1_clicked)
@@ -1483,7 +1483,7 @@ class Ui_MainWindow(object):
             return
 
         self.side_menu_buttons.itemClicked.connect(self.filter_menu_booster)
-        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        # self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
 
         if "Booster_1" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_booster_1_clicked)
@@ -1548,7 +1548,7 @@ class Ui_MainWindow(object):
             return
 
         self.side_menu_buttons.itemClicked.connect(self.filter_menu_weapon)
-        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        # self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
 
         if "Weapon_1" in self.sender().objectName():
             self.side_menu_content.itemClicked.connect(self.handle_weapon_1_clicked)
@@ -1601,8 +1601,8 @@ class Ui_MainWindow(object):
         if self.close_side_menu_if_already_opened(self.sender().objectName()):
             return
 
-        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
-        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        # self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        # self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
 
         mode = "Weapon"
         if "Weapon_1" in self.sender().objectName():
@@ -1667,7 +1667,7 @@ class Ui_MainWindow(object):
             return
 
         self.side_menu_buttons.itemClicked.connect(self.filter_menu_blood_code)
-        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        # self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_menu_content.itemClicked.connect(self.handle_blood_code_clicked)
         self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_blood_code_hover)
         self.show_side_menu("BloodCode")
@@ -1706,8 +1706,8 @@ class Ui_MainWindow(object):
         if self.close_side_menu_if_already_opened(self.sender().objectName()):
             return
 
-        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
-        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        # self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        # self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_menu_content.itemClicked.connect(self.handle_offensive_clicked)
         self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_offensive_hover)
         self.show_side_menu("Offensive")
@@ -1736,7 +1736,7 @@ class Ui_MainWindow(object):
             return
 
         self.side_menu_buttons.itemClicked.connect(self.filter_menu_defensive)
-        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        # self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_menu_content.itemClicked.connect(self.handle_defensive_clicked)
         self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_defensive_hover)
         self.show_side_menu("Defensive")
@@ -1773,8 +1773,8 @@ class Ui_MainWindow(object):
         if self.close_side_menu_if_already_opened(self.sender().objectName()):
             return
 
-        self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
-        self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
+        # self.side_menu_buttons.itemClicked.connect(self.handle_unimplemented_clicked)
+        # self.side_menu_buttons.itemEntered.connect(self.side_menu_buttons.foo)
         self.side_menu_content.itemClicked.connect(self.handle_jail_clicked)
         self.side_menu_content.itemEntered.connect(self.side_menu_content.handle_jail_hover)
         self.show_side_menu("Jail")
@@ -1901,9 +1901,7 @@ class Ui_MainWindow(object):
             self.side_menu_text.insertPlainText("Right click icon to add to favorites.\nRight click again to unfavorite.")
 
     def handle_unimplemented_clicked(self, item):
-        print("clicked", item)
-
-    def handle_dummy(self):
+        #print("clicked", item)
         pass
 
     def handle_transform_weapon_1_clicked(self, item):
@@ -2084,21 +2082,21 @@ class Ui_MainWindow(object):
         booster = builder.boosters[item.statusTip()]
         builder.commit_transaction(booster, slot=slot)
 
-        # disable for easier troubleshooting
-        # selected_filter = self.side_menu_buttons.selectedItems()
-        # if selected_filter:
-        #     # do a soft-refresh of booster side menu content
-        #     # to remove currently selected booster from the list and to add previously selected booster (if any)
-        #     # ensures previously selected booster can be selected again without re-opening the side menu
-        #     #
-        #     # removing item from the list will destroy it, so should be called after it's last usage
-        #     self.filter_menu_booster(selected_filter[0])
+        # easier to troubleshoot without this
+        selected_filter = self.side_menu_buttons.selectedItems()
+        if selected_filter:
+            # do a soft-refresh of booster side menu content
+            # to remove currently selected booster from the list and to add previously selected booster (if any)
+            # ensures previously selected booster can be selected again without re-opening the side menu
+            #
+            # removing item from the list will destroy it, so should be called after it's last usage
+            self.filter_menu_booster(selected_filter[0])
 
     def update_boosters_icon_text(self, booster, slot):
         name = booster.name
         active = booster.active
-        print("      handle_booster_clicked", active)
-        print("      bloodline", self.builder.character.bloodline)
+        #print("      handle_booster_clicked", active)
+        #print("      bloodline", self.builder.character.bloodline)
 
         widget = self.builder.char_to_widget_mapping[slot]
         self.set_booster_icon(widget, name, active)

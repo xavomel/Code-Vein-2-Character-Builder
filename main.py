@@ -233,61 +233,63 @@ class Builder:
     # seems there's a bug where this booster reduces burden attr that is not present on 2nd weapon
     # this may happen if other booster in this transaction has increased burden of same attr
     # TODO ensure we only take weapon burden attr into account, maybe by filtering by _type ?
-    def weapon_rack_booster(self, dummy, add, transaction_list):
-        transform_1 = self.character.transform["Weapon_1"]
-        transform_2 = self.character.transform["Weapon_1"]
-        weapon_1_burden = self.character.weapons["Weapon_1"].transforms[transform_1]["Burden"]
-        weapon_2_burden = self.character.weapons["Weapon_2"].transforms[transform_2]["Burden"]
-
-        for attr, val in weapon_1_burden.items():
-            val_other = weapon_2_burden[attr]
-
-            val_equipped = weapon_1_burden[attr]
-            val_equipped_other = weapon_2_burden[attr]
-
-            if val_other != 0:
-                if weapon_1_burden[attr] > weapon_2_burden[attr]:
-                    # if equipped weapon has HIGHER burden (is not halved)
-                    # take HALF of other weapon burden as equip load
-                    # or NO value if Weapon Rack is active
-                    if add:
-                        val_equipped_other = 0
-                    else:
-                        val_equipped_other = floor(val_equipped_other / 2)
-
-                    # subtract lesser value from greater value
-                    val = val_equipped - val_equipped_other
-                else:
-                    # if equipped weapon has LOWER burden (is halved)
-                    # take HALF of equipped weapon burden as equip load
-                    # or NO value if Weapon Rack is active
-                    if add:
-                        val_equipped = 0
-                    else:
-                        val_equipped = floor(val_equipped / 2)
-
-                    # subtract lesser value from greater value
-                    val = val_equipped_other - val_equipped
-
-                widget = self.char_to_widget_mapping["Burden_" + attr]
-                old_value = self.character.burden[attr]
-                new_val = old_value - val
-                new_val = -new_val if add else new_val
-
-                # print("****** final", new_val, "val", val, "val_other", val_other, "val_equipped", val_equipped, "val_equipped_other", val_equipped_other, "add", add, "old_value", old_value)
-
-                idx_to_remove = []
-                for idx, transaction in enumerate(transaction_list):
-                    if "Burden" == transaction[1] and attr == transaction[2]:
-                        # merge transactions of same type
-                        new_val += transaction[3]
-                        idx_to_remove.append(idx)
-
-                for idx in reversed(idx_to_remove):
-                    # remove transactions that are included in the merged transaction
-                    transaction_list.pop(idx)
-
-                transaction_list.append(["Booster", "Burden", attr, new_val, old_value, widget])
+    def weapon_rack_booster(self):
+        return []
+    # def weapon_rack_booster(self, dummy, add, transaction_list):
+    #     transform_1 = self.character.transform["Weapon_1"]
+    #     transform_2 = self.character.transform["Weapon_1"]
+    #     weapon_1_burden = self.character.weapons["Weapon_1"].transforms[transform_1]["Burden"]
+    #     weapon_2_burden = self.character.weapons["Weapon_2"].transforms[transform_2]["Burden"]
+    #
+    #     for attr, val in weapon_1_burden.items():
+    #         val_other = weapon_2_burden[attr]
+    #
+    #         val_equipped = weapon_1_burden[attr]
+    #         val_equipped_other = weapon_2_burden[attr]
+    #
+    #         if val_other != 0:
+    #             if weapon_1_burden[attr] > weapon_2_burden[attr]:
+    #                 # if equipped weapon has HIGHER burden (is not halved)
+    #                 # take HALF of other weapon burden as equip load
+    #                 # or NO value if Weapon Rack is active
+    #                 if add:
+    #                     val_equipped_other = 0
+    #                 else:
+    #                     val_equipped_other = floor(val_equipped_other / 2)
+    #
+    #                 # subtract lesser value from greater value
+    #                 val = val_equipped - val_equipped_other
+    #             else:
+    #                 # if equipped weapon has LOWER burden (is halved)
+    #                 # take HALF of equipped weapon burden as equip load
+    #                 # or NO value if Weapon Rack is active
+    #                 if add:
+    #                     val_equipped = 0
+    #                 else:
+    #                     val_equipped = floor(val_equipped / 2)
+    #
+    #                 # subtract lesser value from greater value
+    #                 val = val_equipped_other - val_equipped
+    #
+    #             widget = self.char_to_widget_mapping["Burden_" + attr]
+    #             old_value = self.character.burden[attr]
+    #             new_val = old_value - val
+    #             new_val = -new_val if add else new_val
+    #
+    #             # print("****** final", new_val, "val", val, "val_other", val_other, "val_equipped", val_equipped, "val_equipped_other", val_equipped_other, "add", add, "old_value", old_value)
+    #
+    #             idx_to_remove = []
+    #             for idx, transaction in enumerate(transaction_list):
+    #                 if "Burden" == transaction[1] and attr == transaction[2]:
+    #                     # merge transactions of same type
+    #                     new_val += transaction[3]
+    #                     idx_to_remove.append(idx)
+    #
+    #             for idx in reversed(idx_to_remove):
+    #                 # remove transactions that are included in the merged transaction
+    #                 transaction_list.pop(idx)
+    #
+    #             transaction_list.append(["Booster", "Burden", attr, new_val, old_value, widget])
 
     def bloodline_agnostic_booster(self, bloodline, add, transaction_list):
         character_bloodline = self.character.bloodline
@@ -358,7 +360,8 @@ class Builder:
         "Resistance Booster - Wound":   [[resistance_booster, "Wound", 40]],
         # special
         "Shrugged Burden":              [[shrugged_burden_booster]],
-        "Weapon Rack":                  [[weapon_rack_booster, "Dummy"]],
+        # "Weapon Rack":                  [[weapon_rack_booster, "Dummy"]],
+        "Weapon Rack":                  [[weapon_rack_booster]],
         "Bloodline Agnostic":           [[bloodline_agnostic_booster, "Agnostic"]],
         "Glutton":                      [[glutton_booster]],
         "Resistance Booster":           [[resistance_multiplier_booster]],
@@ -373,15 +376,15 @@ class Builder:
         return True
 
     def condition_attribute(self, doc, transaction):
-        print(doc)
+        #print(doc)
         for attr, value in doc.items():
             character_value = self.character.attributes[attr]
             for operation in transaction:
-                print("      condition_attribute", operation)
+                #print("      condition_attribute", operation)
                 if operation[1] == "Attributes" and operation[2] == attr:
                     character_value += operation[3]
 
-            print("condition_attribute", character_value, value)
+            #print("condition_attribute", character_value, value)
             if character_value < value:
                 return False
         return True
@@ -389,7 +392,7 @@ class Builder:
     # whether margin of attr X is at least Y
     # TODO use character.margin instead !
     def condition_margin(self, doc, transaction):
-        print(doc)
+        #print(doc)
         for attr, value in doc.items():
             character_attribute = self.character.attributes[attr]
             character_burden = self.character.burden[attr]
@@ -400,35 +403,35 @@ class Builder:
                     character_burden += operation[3]
 
             character_margin = character_attribute - character_burden
-            print("condition_margin", character_attribute, character_burden, character_margin, value)
+            #print("condition_margin", character_attribute, character_burden, character_margin, value)
             if character_margin < value:
                 return False
 
     # whether burden of attr X is at least Y
     # test case: Phalanx I
     def condition_burden(self, doc, transaction):
-        print(doc)
+        #print(doc)
         for attr, value in doc.items():
             character_value = self.character.burden[attr]
             for operation in transaction:
                 if operation[1] == "Burden" and operation[2] == attr:
                     character_value += operation[3]
 
-            print("condition_burden", character_value, value)
+            #print("condition_burden", character_value, value)
             if character_value < value:
                 return False
         return True
 
     # whether burden of attr X is at most Y
     def condition_burden_max(self, doc, transaction):
-        print(doc)
+        #print(doc)
         for attr, value in doc.items():
             character_value = self.character.burden[attr]
             for operation in transaction:
                 if operation[1] == "Burden" and operation[2] == attr:
                     character_value += operation[3]
 
-            print("condition_burden_max", character_value, value)
+            #print("condition_burden_max", character_value, value)
             if character_value > value:
                 return False
         return True
@@ -436,7 +439,7 @@ class Builder:
     # TODO use character.margin instead !
     # test case overburden false - Usurper or Bloodline Agnostic
     def condition_overburden(self, wanted_overburden, transaction):
-        print("condition_overburden: wanted", wanted_overburden)
+        #print("condition_overburden: wanted", wanted_overburden)
         for attr, value in self.character.attributes.items():
             character_attribute = value
             character_burden = self.character.burden[attr]
@@ -461,14 +464,14 @@ class Builder:
 
     # test case: Shrugged Burden
     def condition_bloodline(self, bloodline, transaction):
-        print(bloodline)
+        #print(bloodline)
 
         character_bloodline = self.character.bloodline
         for operation in transaction:
             if operation[1] == "Bloodline":
                 character_bloodline = operation[3]
 
-        print("condition_bloodline", bloodline, character_bloodline)
+        #print("condition_bloodline", bloodline, character_bloodline)
         if character_bloodline == "Agnostic":
             return True
         elif character_bloodline != bloodline:
@@ -574,7 +577,7 @@ class Builder:
 
         :return: None
         """
-        print("* start_transaction")
+        #print("* start_transaction")
         transaction = self.build_transaction(data, slot, transform)
 
         # TODO rename "value" to "diff" to be more accurate
@@ -639,7 +642,7 @@ class Builder:
         """
         if not self.last_transaction:
             return
-        print("* rollback_transaction")
+        #print("* rollback_transaction")
 
         for type, var, key, value, old_value, widget in self.last_transaction:
             if not widget:
@@ -684,7 +687,7 @@ class Builder:
         """
         if not self.last_transaction:
             return
-        print("* commit_transaction", data, slot, transform)
+        #print("* commit_transaction", data, slot, transform)
 
         # Overwrite Character item with item selected in transaction.
         # Does not impact Character parameters immediately, only on future transactions.
@@ -723,14 +726,12 @@ class Builder:
                     # selected booster slot
                     previous_booster = self.character.boosters[slot]
                     previous_booster.active = False
+                    # easier to troubleshoot without this
+                    previous_booster.equipped = False
 
-                    # COMMENTED OUT for easier troubleshooting
-                    # TODO uncomment
-                    # previous_booster.equipped = False
-                    # if data.type != "":
-                    #     # only set for real boosters (do not set for placeholder when making booster slot empty)
-                    #     data.equipped = True
-
+                    if data.type != "":
+                        # only set for real boosters (do not set for placeholder when making booster slot empty)
+                        data.equipped = True
                     data.active = value
                     self.character.boosters[slot] = data
                     self.window.update_boosters_icon_text(data, slot)
@@ -792,13 +793,13 @@ class Builder:
         transaction_handler = self.class_to_handler[type(data).__name__]
         transaction = transaction_handler(data, slot, transform)
 
-        for x in transaction:
-            print(x)
+        # for x in transaction:
+        #     print(x)
 
         return transaction
 
     def build_blood_code_transaction(self, data, slot="", transform=""):
-        print("blood_code")
+        #print("blood_code")
 
         transaction = []
 
@@ -887,7 +888,7 @@ class Builder:
         return transaction
 
     def build_weapon_transaction(self, data, slot="", transform=""):
-        print("weapon")
+        #print("weapon")
 
         transaction = []
 
@@ -1087,7 +1088,7 @@ class Builder:
                 transaction.append([_type, "Stylesheet", (key, forma_legal), stylesheet_forma, widget_forma.styleSheet(), widget_forma])
 
     def build_forma_transaction(self, data, slot, transform=""):
-        print("forma", slot)
+        #print("forma", slot)
 
         transaction = []
 
@@ -1141,7 +1142,7 @@ class Builder:
         return transaction
 
     def build_jail_transaction(self, data, slot="", transform=""):
-        print("jail")
+        #print("jail")
 
         transaction = []
 
@@ -1190,7 +1191,7 @@ class Builder:
         return transaction
 
     def build_defensive_transaction(self, data, slot="", transform=""):
-        print("defensive")
+        #print("defensive")
 
         transaction = []
 
@@ -1307,7 +1308,7 @@ class Builder:
         return legal, transform_slot, stylesheet, transform_widget, selected, equipped
 
     def build_offensive_transaction(self, data, slot="", transform=""):
-        print("offensive")
+        #print("offensive")
 
         transaction = []
 
@@ -1330,7 +1331,7 @@ class Builder:
         return transaction
 
     def build_booster_transaction(self, data, slot, transform=""):
-        print("booster")
+        #print("booster")
 
         transaction = []
 
@@ -1418,11 +1419,11 @@ class Builder:
             active = temp_active[idx]
             new_active = self.check_conditions(booster, transaction)
             if active != new_active:
-                print(booster.name, "not equal", active, new_active, unchanged)
+                #print(booster.name, "not equal", active, new_active, unchanged)
                 temp_active[idx] = new_active
                 self.resolve_effects(booster, new_active, transaction)
             else:
-                print(booster.name, "equal", active, new_active, unchanged)
+                #print(booster.name, "equal", active, new_active, unchanged)
                 unchanged[idx] = 1
 
             idx += 1
@@ -1474,14 +1475,14 @@ class Builder:
         :return:
             None
         """
-        print("  resolve_effects", booster.name, active)
+        #print("  resolve_effects", booster.name, active)
         booster_effects = self.booster_effects.get(booster.name, [])
         for effect in booster_effects:
-            print("effect", effect)
+            #print("effect", effect)
             booster_fun = effect[0]
             arguments = effect[1:]
             if arguments:
-                print("booster active", active)
+                #print("booster active", active)
                 arguments.append(active)          # add or subtract
                 arguments.append(transaction)     # transactions to update
                 booster_fun(self, *arguments)
