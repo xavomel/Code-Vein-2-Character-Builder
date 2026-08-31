@@ -12,7 +12,7 @@ import re
 from math import floor, ceil
 
 
-VERSION = u"Code Vein II Character Builder v0.0.1"
+VERSION = u"Code Vein II Character Builder v0.5.0"
 
 
 # this value was picked because it's not possible to exceed it even with maximum value for every code segment
@@ -1583,7 +1583,11 @@ class Ui_MainWindow(object):
             if k == "Empty":
                 item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
             else:
-                item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
+                icon_1 = QIcon()
+                icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+                icon_2 = QIcon(u":/All/Weapon/" + escape_filename(k) + ".png")
+                new_icon = self.merge_icons(icon_1, icon_2, 150)
+                item = QListWidgetItem(new_icon, "")
             item.setStatusTip(k)
             if v.favorite:
                 self.add_favorite_to_icon(item)
@@ -1839,7 +1843,11 @@ class Ui_MainWindow(object):
                 if k == "Empty":
                     item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
                 else:
-                    item = QListWidgetItem(QIcon(u":/All/Weapon/" + escape_filename(k) + ".png"), "")
+                    icon_1 = QIcon()
+                    icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+                    icon_2 = QIcon(u":/All/Weapon/" + escape_filename(k) + ".png")
+                    new_icon = self.merge_icons(icon_1, icon_2, 150)
+                    item = QListWidgetItem(new_icon, "")
                 item.setStatusTip(k)
                 if v.favorite:
                     self.add_favorite_to_icon(item)
@@ -2388,45 +2396,55 @@ class Ui_MainWindow(object):
         self.menuFavorites.addAction(self.action_save_favorites_file)
 
         # window submenu
-        self.menuWindow = QMenu(self.menubar)
-        self.menuWindow.setObjectName(u"menuWindow")
-        self.menubar.addAction(self.menuWindow.menuAction())
+        # disabled until it's finished
+        #
+        # self.menuWindow = QMenu(self.menubar)
+        # self.menuWindow.setObjectName(u"menuWindow")
+        # self.menubar.addAction(self.menuWindow.menuAction())
+        #
+        # self.menuSize = QMenu(self.menuWindow)
+        # self.menuSize.setObjectName(u"menuSize")
+        # self.menuWindow.addAction(self.menuSize.menuAction())
+        #
+        # self.action960x540 = QAction(MainWindow)
+        # self.action960x540.setObjectName(u"action_resize_window_960x540")
+        # self.action1440x810 = QAction(MainWindow)
+        # self.action1440x810.setObjectName(u"action_resize_window_1440x810")
+        # self.action1920x1080 = QAction(MainWindow)
+        # self.action1920x1080.setObjectName(u"action_resize_window_1920x1080")
+        # self.action2880x1620 = QAction(MainWindow)
+        # self.action2880x1620.setObjectName(u"action_resize_window_2880x1620")
+        # self.action3840x2160 = QAction(MainWindow)
+        # self.action3840x2160.setObjectName(u"action_resize_window_3840x2160")
+        #
+        # self.action960x540.setCheckable(True)
+        # self.action1440x810.setCheckable(True)
+        # self.action1440x810.setChecked(True)
+        # self.action1920x1080.setCheckable(True)
+        # self.action2880x1620.setCheckable(True)
+        # self.action3840x2160.setCheckable(True)
+        #
+        # self.action960x540.triggered.connect(self.resize_window)
+        # self.action1440x810.triggered.connect(self.resize_window)
+        # self.action1920x1080.triggered.connect(self.resize_window)
+        # self.action2880x1620.triggered.connect(self.resize_window)
+        # self.action3840x2160.triggered.connect(self.resize_window)
+        #
+        # self.menuSize.addAction(self.action960x540)
+        # self.menuSize.addAction(self.action1440x810)
+        # self.menuSize.addAction(self.action1920x1080)
+        # self.menuSize.addAction(self.action2880x1620)
+        # self.menuSize.addAction(self.action3840x2160)
+        #
+        # self.disable_unsupported_window_size()
 
-        self.menuSize = QMenu(self.menuWindow)
-        self.menuSize.setObjectName(u"menuSize")
-        self.menuWindow.addAction(self.menuSize.menuAction())
+        # about submenu
+        self.action_about = QAction(MainWindow)
+        self.action_about.setObjectName(u"action_about")
 
-        self.action960x540 = QAction(MainWindow)
-        self.action960x540.setObjectName(u"action_resize_window_960x540")
-        self.action1440x810 = QAction(MainWindow)
-        self.action1440x810.setObjectName(u"action_resize_window_1440x810")
-        self.action1920x1080 = QAction(MainWindow)
-        self.action1920x1080.setObjectName(u"action_resize_window_1920x1080")
-        self.action2880x1620 = QAction(MainWindow)
-        self.action2880x1620.setObjectName(u"action_resize_window_2880x1620")
-        self.action3840x2160 = QAction(MainWindow)
-        self.action3840x2160.setObjectName(u"action_resize_window_3840x2160")
+        self.action_about.triggered.connect(self.about)
 
-        self.action960x540.setCheckable(True)
-        self.action1440x810.setCheckable(True)
-        self.action1440x810.setChecked(True)
-        self.action1920x1080.setCheckable(True)
-        self.action2880x1620.setCheckable(True)
-        self.action3840x2160.setCheckable(True)
-
-        self.action960x540.triggered.connect(self.resize_window)
-        self.action1440x810.triggered.connect(self.resize_window)
-        self.action1920x1080.triggered.connect(self.resize_window)
-        self.action2880x1620.triggered.connect(self.resize_window)
-        self.action3840x2160.triggered.connect(self.resize_window)
-
-        self.menuSize.addAction(self.action960x540)
-        self.menuSize.addAction(self.action1440x810)
-        self.menuSize.addAction(self.action1920x1080)
-        self.menuSize.addAction(self.action2880x1620)
-        self.menuSize.addAction(self.action3840x2160)
-
-        self.disable_unsupported_window_size()
+        self.menubar.addAction(self.action_about)
 
     def load_build_file(self):
         filepath, extension = QFileDialog.getOpenFileName(self, 'Open file', "", "*.txt")
@@ -2896,6 +2914,18 @@ class Ui_MainWindow(object):
                 if screen_rectangle.height() < height:
                     action.setEnabled(False)
 
+    def about(self):
+        widget = QInputDialog()
+        widget.resize(600, 600)
+        widget.setWindowTitle(VERSION)
+        widget.setInputMode(QInputDialog.TextInput)
+        widget.setLabelText("Created by Xavomel")
+        line_edit = widget.findChild(QLineEdit)
+        if line_edit:
+            line_edit.setText("https://github.com/xavomel/Code-Vein-2-Character-Builder")
+
+        widget.exec()
+
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", VERSION, None))
 
@@ -2905,18 +2935,25 @@ class Ui_MainWindow(object):
         self.action_load_build_code.setText(QCoreApplication.translate("MainWindow", u"Load build from code", None))
         self.action_save_build_file.setText(QCoreApplication.translate("MainWindow", u"Save build to file", None))
         self.action_save_build_code.setText(QCoreApplication.translate("MainWindow", u"Save build to code", None))
+
+        # menu favorites
         self.menuFavorites.setTitle(QCoreApplication.translate("MainWindow", u"Favorites", None))
         self.action_load_favorites_file.setText(QCoreApplication.translate("MainWindow", u"Load favorites from file", None))
         self.action_save_favorites_file.setText(QCoreApplication.translate("MainWindow", u"Save fovorites to file", None))
 
         # menu window
-        self.menuWindow.setTitle(QCoreApplication.translate("MainWindow", u"Window", None))
-        self.menuSize.setTitle(QCoreApplication.translate("MainWindow", u"Size", None))
-        self.action960x540.setText(QCoreApplication.translate("MainWindow", u"960x540", None))
-        self.action1440x810.setText(QCoreApplication.translate("MainWindow", u"1440x810", None))
-        self.action1920x1080.setText(QCoreApplication.translate("MainWindow", u"1920x1080", None))
-        self.action2880x1620.setText(QCoreApplication.translate("MainWindow", u"2880x1620", None))
-        self.action3840x2160.setText(QCoreApplication.translate("MainWindow", u"3840x2160", None))
+        # disabled until it's finished
+        #
+        # self.menuWindow.setTitle(QCoreApplication.translate("MainWindow", u"Window", None))
+        # self.menuSize.setTitle(QCoreApplication.translate("MainWindow", u"Size", None))
+        # self.action960x540.setText(QCoreApplication.translate("MainWindow", u"960x540", None))
+        # self.action1440x810.setText(QCoreApplication.translate("MainWindow", u"1440x810", None))
+        # self.action1920x1080.setText(QCoreApplication.translate("MainWindow", u"1920x1080", None))
+        # self.action2880x1620.setText(QCoreApplication.translate("MainWindow", u"2880x1620", None))
+        # self.action3840x2160.setText(QCoreApplication.translate("MainWindow", u"3840x2160", None))
+
+        # menu about
+        self.action_about.setText(QCoreApplication.translate("MainWindow", u"About", None))
 
 
 class AttributeProgressBar(QProgressBar):
