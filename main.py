@@ -713,7 +713,6 @@ class Builder:
             # selected booster will be handled in "Active" below
             pass
 
-        # holly
         # Update Character parameters
         for _type, var, key, value, old_value, widget in self.last_transaction:
             if var == "Active":
@@ -777,7 +776,16 @@ class Builder:
 
     def build_transaction(self, data, slot="", transform=""):
         """
-        Builds transaction based on data by calling handler for given data class.
+        Builds transaction list based on data by calling handler for given data class.
+        This list may contain multiple transactions (lists).
+
+        Each inner list has 6 elements:
+        - class - only used for troubleshooting?
+        - class variable - to set on
+        - key - to set on (can be None)
+        - value - to set
+        - old value - to restore on rollback
+        - widget - to set on (can be None)
 
         :return: list - transaction
         """
@@ -796,12 +804,9 @@ class Builder:
 
         _type = type(data).__name__
         equipped = self.character.blood_code
-        # class - IS IT NECESSARY?
-        # class variable - to set on
-        # key - to set on (can be None)
-        # value - to set
-        # old value - to restore on rollback
-        # widget - to set on (can be None)
+        if data.name == equipped.name:
+            # avoid replacing with itself
+            return []
 
         # bloodline
         transaction.append([_type, "Bloodline", None, data.bloodline, self.character.bloodline, None])
@@ -829,13 +834,6 @@ class Builder:
             # is checking if it's attribute condition is fulfilled, and if it changes then handling the impact
             val = val - equipped.burden[attr]
             transaction.append([_type, "Burden", attr, val, old_value, widget])
-
-        # traits
-
-        # boosters
-
-        # Dodge Effectiveness
-        self.handle_dodge_effectiveness(_type, transaction)
 
         # defense
         for attr, val in data.defense.items():
@@ -876,6 +874,16 @@ class Builder:
         val = data.balance - equipped.balance
         transaction.append([_type, "Balance", None, val, old_value, widget])
 
+        # traits
+        # temporary workaround for Soul Savior Valentin Trait (Bloodline Agnostic analogue)
+        # has been done via changing Game Data -> Blood Code -> Bloodline to Agnostic
+
+        # Boosters
+        self.handle_boosters(transaction)
+
+        # Dodge Effectiveness
+        self.handle_dodge_effectiveness(_type, transaction)
+
         return transaction
 
     def build_weapon_transaction(self, data, slot="", transform=""):
@@ -903,18 +911,19 @@ class Builder:
             #     print("final", new_val, "current", val, "other", val_other, "equipped", val_equipped, "val_equipped_other", val_equipped_other)
             transaction.append([_type, "Burden", attr, new_val, old_value, widget])
 
-        # traits
-
-        # boosters
-
-        # Dodge Effectiveness
-        self.handle_dodge_effectiveness(_type, transaction)
-
         # Bleed
         # todo comment
         key = slot
         val = selected["Bleed"] - equipped["Bleed"]
         transaction.append([_type, "Bleed", key, val, self.character.bleed[key], self.char_to_widget_mapping[key + "_Bleed"]])
+
+        # traits
+
+        # Boosters
+        self.handle_boosters(transaction)
+
+        # Dodge Effectiveness
+        self.handle_dodge_effectiveness(_type, transaction)
 
         # calculate capacity and highlight which capacity is exceeded
         capacity_under = dict()
@@ -1086,6 +1095,9 @@ class Builder:
         weapon_slot = slot[:8]
         equipped_weapon = self.character.weapons[weapon_slot]
         equipped_forma = self.character.formae[slot]
+        if data.name == equipped_forma.name:
+            # avoid replacing with itself
+            return []
 
         # capacity
         capacity_under = dict()
@@ -1135,6 +1147,9 @@ class Builder:
 
         _type = type(data).__name__
         equipped = self.character.jail
+        if data.name == equipped.name:
+            # avoid replacing with itself
+            return []
 
         # burden
         for attr, val in data.burden.items():
@@ -1148,13 +1163,6 @@ class Builder:
             # remember the state of Weapon Rack in variable for easy checking, it has big impact
             val = val - equipped.burden[attr]
             transaction.append([_type, "Burden", attr, val, old_value, widget])
-
-        # traits
-
-        # boosters
-
-        # Dodge Effectiveness
-        self.handle_dodge_effectiveness(_type, transaction)
 
         # defense
         for attr, val in data.defense.items():
@@ -1170,6 +1178,14 @@ class Builder:
         old_value = self.character.balance
         val = data.balance - equipped.balance
         transaction.append([_type, "Balance", None, val, old_value, widget])
+
+        # traits
+
+        # Boosters
+        self.handle_boosters(transaction)
+
+        # Dodge Effectiveness
+        self.handle_dodge_effectiveness(_type, transaction)
 
         return transaction
 
@@ -1200,13 +1216,6 @@ class Builder:
             # is checking if it's attribute condition is fulfilled, and if it changes then handling the impact
             val = val - equipped["Burden"][attr]
             transaction.append([_type, "Burden", attr, val, old_value, widget])
-
-        # traits
-
-        # boosters
-
-        # Dodge Effectiveness
-        self.handle_dodge_effectiveness(_type, transaction)
 
         # defense
         # TODO some Defensive Formae have silly defense values like 0.96000004 or 1.8374999 - shall we simplify them?
@@ -1248,6 +1257,14 @@ class Builder:
         old_value = self.character.stamina_guard_cost
         val = selected["StaminaGuardCost"] - equipped["StaminaGuardCost"]
         transaction.append([_type, "StaminaGuardCost", None, val, old_value, widget])
+
+        # traits
+
+        # Boosters
+        self.handle_boosters(transaction)
+
+        # Dodge Effectiveness
+        self.handle_dodge_effectiveness(_type, transaction)
 
         return transaction
 
@@ -1296,6 +1313,11 @@ class Builder:
 
         _type = type(data).__name__
 
+        equipped = self.character.offensive_forma
+        if data.name == equipped.name:
+            # avoid replacing with itself
+            return []
+
         # Bleed
         key = "Offensive"
         equipped = self.character.offensive_forma
@@ -1316,7 +1338,7 @@ class Builder:
 
         equipped = self.character.boosters[slot]
         if data.name == equipped.name:
-            # avoid replacing booster with itself
+            # avoid replacing with itself
             return []
 
         # burden - handle first since it's predictable
@@ -1338,19 +1360,41 @@ class Builder:
             # if booster was active subtract it's effects by treating it as inactive
             self.resolve_effects(equipped, active=False, transaction=transaction)
 
+        # All Boosters
+        self.handle_boosters(transaction, data, slot)
+
+        # Dodge Effectiveness
+        self.handle_dodge_effectiveness(_type, transaction)
+
+        return transaction
+
+    def handle_boosters(self, transaction, selected_booster=None, selected_slot=""):
+        """
+        Handles the conditions and effects of all 6 equipped boosters
+
+        :param transaction: list
+        :param selected_booster: Booster - if equipping new booster, only for build_booster_transaction()
+        :param selected_slot: string - if equipping new booster, only for build_booster_transaction()
+        :return: None
+        """
+
+        _type = "Booster"
+
         # booster list for iteration
-        # replace 1 booster with selected
         boosters = list(self.character.boosters.values())
-        slot_int = int(slot.replace("Booster_", "")) - 1
-        boosters[slot_int] = data
 
         # keep original active values for faster access
         original_active = {booster_slot: v.active for booster_slot, v in self.character.boosters.items()}
 
         # keep temporary active values, they will be updated for real when transaction is committed
-        # treat selected booster as inactive, since it's not equipped yet
         temp_active = [x.active for x in boosters]
-        temp_active[slot_int] = False
+
+        if selected_booster:
+            selected_slot_idx = int(selected_slot.replace("Booster_", "")) - 1
+            # replace 1 booster with selected
+            boosters[selected_slot_idx] = selected_booster
+            # treat selected booster as inactive, since it's not equipped yet
+            temp_active[selected_slot_idx] = False
 
         # === booster loop ===
         # changing selected booster can impact other boosters in unpredictable ways
@@ -1363,7 +1407,7 @@ class Builder:
         # - assuming BA stays active but WR doesn't
         # - then WR going inactive will cause burden to rise, potentially impacting BA
         #
-        # TODO should we start iteration from slot_int (selected booster) instead of 0?
+        # TODO should we start iteration from selected_slot_idx (selected booster) instead of 0?
         # since it's guaranteed to change active status
         #
         # resolves effects and determines active status
@@ -1388,7 +1432,7 @@ class Builder:
         # set active status if it changed (set it always for selected booster)
         for idx, new_active in enumerate(temp_active):
             booster_slot = "Booster_" + str(idx + 1)
-            if booster_slot != slot:
+            if booster_slot != selected_slot:
                 old_value = original_active[booster_slot]
                 if old_value != new_active:
                     # this is ok to compare (unlike value != old_value) because this is not a diff
@@ -1397,12 +1441,7 @@ class Builder:
                     transaction.append([_type, "Active", (booster_slot, booster.name), new_active, old_value, widget])
             else:
                 # for selected booster do not set widget, should not be displayed until it's clicked
-                transaction.append([_type, "Active", (slot, None), temp_active[slot_int], None, None])
-
-        # Dodge Effectiveness
-        self.handle_dodge_effectiveness(_type, transaction)
-
-        return transaction
+                transaction.append([_type, "Active", (selected_slot, None), temp_active[selected_slot_idx], None, None])
 
     def check_conditions(self, booster, transaction):
         """

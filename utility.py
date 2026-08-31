@@ -33,7 +33,6 @@ def save_file(filepath, filedata):
         _file.write(filedata)
 
 
-# not needed?
 def int_to_hexstring(number, desired_length):
     hexstring = str(hex(number)).replace("0x", "").zfill(desired_length)
     if len(hexstring) != desired_length:
@@ -41,6 +40,5 @@ def int_to_hexstring(number, desired_length):
     return hexstring
 
 
-# not needed?
 def hexstring_to_int(hexstring):
     return int(hexstring, 16)

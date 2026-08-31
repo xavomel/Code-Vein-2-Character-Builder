@@ -1860,7 +1860,15 @@ class Ui_MainWindow(object):
         self.display_favorite_tips_if_needed(chosen)
 
         for k, v in self.builder.blood_codes.items():
-            if chosen == "All" or chosen == v.bloodline or (chosen == "Favorite" and v.favorite) or k == "Empty":
+            # temporary workaround for Soul Savior Valentin Trait (Bloodline Agnostic analogue)
+            # has been done via changing Game Data -> Blood Code -> Bloodline to Agnostic
+            # show it in all filters
+            if chosen != "Favorite":
+                bloodline_match = v.bloodline in [chosen, "Agnostic"]
+            else:
+                # do not show Agnostic Blood Code in favorite window unless it's favorited
+                bloodline_match = v.bloodline == chosen
+            if chosen == "All" or bloodline_match or (chosen == "Favorite" and v.favorite) or k == "Empty":
                 if k == "Empty":
                     item = QListWidgetItem(QIcon(u":/All/Transform/Transform_Off.png"), "")
                 else:
