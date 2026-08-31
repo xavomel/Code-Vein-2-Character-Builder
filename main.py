@@ -1396,6 +1396,12 @@ class Builder:
             boosters[selected_slot_idx] = selected_booster
             # treat selected booster as inactive, since it's not equipped yet
             temp_active[selected_slot_idx] = False
+        else:
+            for idx, booster in enumerate(boosters):
+                if booster.name == "Bloodline Agnostic":
+                    # set Bloodline Agnostic to opposite state so it's refreshed every time on Blood Code switch
+                    # only do this for Blood Code class transactions?
+                    temp_active[idx] = not temp_active[idx]
 
         # === booster loop ===
         # changing selected booster can impact other boosters in unpredictable ways
