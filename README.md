@@ -26,3 +26,9 @@ pip3 install pyside6
 ```
 python main.py
 ```
+
+## Special thanks to:
+- /r/codevein and /r/CodeVein2 reddit community
+- Seth Clydesdale for the awesome Code Vein Builder https://github.com/SethClydesdale/code-vein-builder
+- Fextralife
+- and many, many more
