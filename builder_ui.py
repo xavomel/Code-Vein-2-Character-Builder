@@ -318,6 +318,7 @@ class Ui_MainWindow(object):
         self.side_menu_text.setMaximumWidth(360 - 2 * self.margin_size)
         self.side_menu_text.setMinimumHeight(360)
         self.side_menu_text.setMaximumHeight(360)
+        self.side_menu_text.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.side_vertical_layout_2.addWidget(self.side_menu_text)
 
         # main vertical layout
@@ -2159,8 +2160,8 @@ class Ui_MainWindow(object):
             widget.setIcon(new_icon)
             widget.setText(name)
 
-    def handle_hover(self, data, detailed=False):
-        data_hover_text = data.get_hover_text(detailed)
+    def handle_hover(self, data):
+        data_hover_text = data.get_hover_text()
         self.window().side_menu_text.clear()
         self.window().side_menu_text.insertHtml(data_hover_text)
 
@@ -3061,7 +3062,7 @@ class MyQPushButton(QPushButton):
                 self.window().side_menu_buttons.setVisible(True)
                 self.window().side_menu_content.setVisible(True)
                 self.window().side_menu_text.setVisible(True)
-                self.window().handle_hover(item, detailed=True)
+                self.window().handle_hover(item)
 
 
 class MyQToolButton(QToolButton):
@@ -3097,7 +3098,7 @@ class MyQToolButton(QToolButton):
                 self.window().side_menu_buttons.setVisible(True)
                 self.window().side_menu_content.setVisible(True)
                 self.window().side_menu_text.setVisible(True)
-                self.window().handle_hover(item, detailed=True)
+                self.window().handle_hover(item)
 
     def set_position_tracked(self, position_tracked):
         self.position_tracked = position_tracked
@@ -3306,9 +3307,14 @@ class MyQListWidget(QListWidget):
             return
 
         # simplified hover text displayed after cursor leaves the menu
+        # self.window().side_menu_text.clear()
+        # self.window().side_menu_text.insertHtml(f'<body><h2><p align="center">{item_data.name}</p></h2><body>')
+        # self.window().side_menu_text.insertPlainText(item_data.description)
+
+        # full hover text displayed after cursor leaves the menu
+        data_hover_text = item_data.get_hover_text()
         self.window().side_menu_text.clear()
-        self.window().side_menu_text.insertHtml(f'<body><h2><p align="center">{item_data.name}</p></h2><body>')
-        self.window().side_menu_text.insertPlainText(item_data.description)
+        self.window().side_menu_text.insertHtml(data_hover_text)
 
     def leaveEvent(self, QEvent):
         if not self.menu_type:

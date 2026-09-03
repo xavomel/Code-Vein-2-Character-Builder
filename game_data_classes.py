@@ -1,60 +1,56 @@
 from fractions import Fraction
 
 
-def attribute_or_burden_table(header, data):
-    values = data.values()
+def attribute_or_burden_table(type, data):
+    attr_short = [
+        "STR",
+        "DEX",
+        "MND",
+        "WIL",
+        "VIT",
+        "FOR",
+    ]
+    header = ""
+    row = ""
 
-    text = """
-        <p align="center">{0}
-            <table><thead>
-              <tr>
-                <th>STR</th>
-                <th>DEX</th>
-                <th>MND</th>
-                <th>WIL</th>
-                <th>VIT</th>
-                <th>FOR</th>
-              </tr></thead>
-            <tbody>
-              <tr>
-                <td style="text-align: center;">{1}</td>
-                <td style="text-align: center;">{2}</td>
-                <td style="text-align: center;">{3}</td>
-                <td style="text-align: center;">{4}</td>
-                <td style="text-align: center;">{5}</td>
-                <td style="text-align: center;">{6}</td>
-              </tr>
-            </tbody>
+    for idx, (k, v) in enumerate(data.items()):
+        if v != 0:
+            header += '<th>%s</th>' % attr_short[idx]
+            row += '<td style="text-align: center;">%s</td>' % v
+
+    if header:
+        text = """
+            <table align="center" width="100%">
+            <caption><h3>{0}</h3></caption>
+            <thead><tr>{1}</tr></thead>
+            <tbody><tr>{2}</tr></tbody>
             </table>
-        </p>
-            """.format(header, *values)
+                """.format(type, header, row)
+    else:
+        text = ""
 
     return text
 
 
 def capacity_table(capacity):
-    values = capacity.values()
+    header = ""
+    row = ""
 
-    text = """
-        <p align="center">
-            <table><thead>
-              <tr>
-                <th>Reliability</th>
-                <th>Handling</th>
-                <th>Conversion</th>
-                <th>Conductivity</th>
-              </tr></thead>
-            <tbody>
-              <tr>
-                <td style="text-align: center;">{0}</td>
-                <td style="text-align: center;">{1}</td>
-                <td style="text-align: center;">{2}</td>
-                <td style="text-align: center;">{3}</td>
-              </tr>
-            </tbody>
+    for k, v in capacity.items():
+        if v != 0:
+            header += '<th>%s</th>' % k
+            row += '<td style="text-align: center;">%s</td>' % v
+
+    if header:
+        text = """
+            <p></p>
+            <table align="center" width="100%">
+            <thead><tr>{0}</tr></thead>
+            <tbody><tr>{1}</tr></tbody>
             </table>
-        </p>
-            """.format(*values)
+                """.format(header, row)
+    else:
+        text = ""
 
     return text
 
@@ -99,14 +95,13 @@ class Weapon:
             self.transforms[key] = transform
             self.transforms[key].pop("Name")
 
-    def get_hover_text(self, detailed=False):
+    def get_hover_text(self, detailed=True):
         text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
 
         # to do choose right transform
         if detailed:
-            # Do we really need those values? Maybe just for hover outside side menu
-            text += attribute_or_burden_table("Burden", self.transforms["Weapon_Off"]["Burden"])
             text += capacity_table(self.transforms["Weapon_Off"]["Capacity"])
+            text += attribute_or_burden_table("Burden", self.transforms["Weapon_Off"]["Burden"])
         text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
         text += "</body>"
 
@@ -154,7 +149,7 @@ class Forma:
         self.matching_weapons[""] = False
 
     # to do add matching weapons?
-    def get_hover_text(self, detailed=False):
+    def get_hover_text(self, detailed=True):
         text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
 
         if detailed:
@@ -204,12 +199,12 @@ class Booster:
         self.conditions_print = self.print_conditions()
 
     # to do add conditions
-    def get_hover_text(self, detailed=False):
+    def get_hover_text(self, detailed=True):
         text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
         if detailed:
             text += attribute_or_burden_table("Burden", self.burden)
         text += self.conditions_print
-        text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
+        text += """<div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
         text += "</body>"
 
         return text
@@ -313,7 +308,7 @@ class BloodCode:
         #     print(k, v)
 
     # to do add traits
-    def get_hover_text(self, detailed=False):
+    def get_hover_text(self, detailed=True):
         text = """<body>
             <h2><p align="center">{0}</p></h2>""".format(self.name)
 
@@ -441,7 +436,7 @@ class DefensiveForma:
             self.transforms[key].pop("Name")
 
     # to do choose right transform
-    def get_hover_text(self, detailed=False):
+    def get_hover_text(self, detailed=True):
         text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
 
         if detailed:
@@ -475,7 +470,7 @@ class OffensiveForma:
         self.ichor_cost = doc["IchorCost"]
         self.scaling = doc["Scaling"]
 
-    def get_hover_text(self, detailed=False):
+    def get_hover_text(self, detailed=True):
         return """<body>
             <h2><p align="center">{0}</p></h2>
             <h3>Ichor Consumption: {1}</h3>

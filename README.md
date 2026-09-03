@@ -13,7 +13,8 @@ meant to assist with build making and build sharing.
 ## Installation and starting the Builder
 
 #### .exe (recommended for Windows users)
-Download the latest release from Releases and run it.
+Go to [Releases](/releases) page.
+Download the latest release (not the source code!) then extract it and run.
 
 #### .py
 1. install PyQt6
