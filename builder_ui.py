@@ -12,7 +12,7 @@ import re
 from math import floor, ceil
 
 
-VERSION = u"Code Vein II Character Builder v0.5.0"
+VERSION = u"Code Vein II Character Builder v0.5.1"
 
 
 # this value was picked because it's not possible to exceed it even with maximum value for every code segment
