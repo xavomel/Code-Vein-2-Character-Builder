@@ -28,15 +28,16 @@ class Character:
             "Weapon_2_Forma_4": Forma(dummy_number=4),
         }
         self.boosters = {
-            "Booster_1": Booster(dummy_number=1),
-            "Booster_2": Booster(dummy_number=2),
-            "Booster_3": Booster(dummy_number=3),
-            "Booster_4": Booster(dummy_number=4),
-            "Booster_5": Booster(dummy_number=5),
-            "Booster_6": Booster(dummy_number=6),
+            "Booster_1": Booster(empty_text="Booster 1: None"),
+            "Booster_2": Booster(empty_text="Booster 2: None"),
+            "Booster_3": Booster(empty_text="Booster 3: None"),
+            "Booster_4": Booster(empty_text="Booster 4: None"),
+            "Booster_5": Booster(empty_text="Booster 5: None"),
+            "Booster_6": Booster(empty_text="Booster 6: None"),
+            "Booster_7": Booster(empty_text="Trait 1: None"),
+            "Booster_8": Booster(empty_text="Trait 2: None"),
+            "Booster_9": Booster(empty_text="Trait 3: None"),
         }
-
-        self.traits = []
 
         self.overburden = False
         self.balance = 0
@@ -169,6 +170,28 @@ class Builder:
 
         # Attributes need to be handled before Burden, otherwise Burden bar will not be accurate
         transaction_list.insert(0, ["Booster", var, attr, val, old_value, widget])
+
+    # not working yet
+    # 1 problem scenario is when Burden value becomes negative
+    # but there might be more
+    # def burden_booster(self, attr, val, add, transaction_list):
+    #     var = "Burden"
+    #     widget = self.char_to_widget_mapping["Burden_" + attr]
+    #     old_value = self.character.burden[attr]
+    #     val = val if add else -val
+    #
+    #     idx_to_remove = []
+    #     for idx, transaction in enumerate(transaction_list):
+    #         if var == transaction[1] and attr == transaction[2]:
+    #             # merge transactions of same type
+    #             val += transaction[3]
+    #             idx_to_remove.append(idx)
+    #
+    #     for idx in reversed(idx_to_remove):
+    #         # remove transactions that are included in the merged transaction
+    #         transaction_list.pop(idx)
+    #
+    #     transaction_list.append(["Booster", var, attr, val, old_value, widget])
 
     def resistance_booster(self, attr, val, add, transaction_list):
         var = "Resistance"
@@ -370,6 +393,8 @@ class Builder:
         # balance
         "Phalanx J":                    [[balance_booster, 100]],
         "Phalanx I":                    [[text_booster], [balance_booster, -25], [text_booster]],  # has multiple effects
+        # traits
+        # "Strength Burden -10":          [[burden_booster, "Strength", -10]]  # not working yet
     }
 
     def condition_none(self):
@@ -391,6 +416,8 @@ class Builder:
 
     # whether margin of attr X is at least Y
     # TODO use character.margin instead !
+    #
+    # test case: Holly Blood Code and VK Hammer
     def condition_margin(self, doc, transaction):
         #print(doc)
         for attr, value in doc.items():
@@ -403,9 +430,10 @@ class Builder:
                     character_burden += operation[3]
 
             character_margin = character_attribute - character_burden
-            #print("condition_margin", character_attribute, character_burden, character_margin, value)
+            #print("condition_margin", attr, character_attribute, character_burden, character_margin, value)
             if character_margin < value:
                 return False
+        return True
 
     # whether burden of attr X is at least Y
     # test case: Phalanx I
@@ -482,7 +510,7 @@ class Builder:
         "Attribute": condition_attribute,
         "Margin": condition_margin,
         "Burden": condition_burden,
-        "BurdenMax": condition_burden,
+        "BurdenMax": condition_burden_max,
         "Overburden": condition_overburden,
         "Bloodline": condition_bloodline,
     }
@@ -611,8 +639,11 @@ class Builder:
                 widget.setStyleSheet(value)
             elif var == "Active":
                 # print("transaction", widget, key, old_value)
-                booster_slot, booster_name = key
-                self.window.set_booster_icon(widget, booster_name, value)
+                booster_slot, booster = key
+                if booster_slot[-1] in ["7", "8", "9"]:
+                    self.window.update_trait_icon_text(widget, booster.description, value)
+                else:
+                    self.window.set_booster_icon(widget, booster.name, value)
             elif var == "Dodge":
                 widget.setText(value)
             else:
@@ -671,8 +702,12 @@ class Builder:
                 widget.setStyleSheet(old_value)
             elif var == "Active":
                 # print("rollback", widget, key, old_value)
-                booster_slot, booster_name = key
-                self.window.set_booster_icon(widget, booster_name, old_value)
+                booster_slot, booster = key
+                if booster_slot[-1] in ["7", "8", "9"]:
+                    description = self.character.blood_code.traits[booster_slot].description
+                    self.window.update_trait_icon_text(widget, description, old_value)
+                else:
+                    self.window.set_booster_icon(widget, booster.name, old_value)
             else:
                 widget.setText(str(old_value))
 
@@ -719,12 +754,12 @@ class Builder:
         # Update Character parameters
         for _type, var, key, value, old_value, widget in self.last_transaction:
             if var == "Active":
-                booster_slot, booster_name = key
-                # print("commit", booster_slot, booster_name, value)
+                booster_slot, booster = key
+                # print("commit", booster_slot, booster.name, value)
 
                 if booster_slot == slot:
                     # selected booster slot
-                    previous_booster = self.character.boosters[slot]
+                    previous_booster = self.character.boosters[booster_slot]
                     previous_booster.active = False
                     # easier to troubleshoot without this
                     previous_booster.equipped = False
@@ -733,8 +768,18 @@ class Builder:
                         # only set for real boosters (do not set for placeholder when making booster slot empty)
                         data.equipped = True
                     data.active = value
-                    self.character.boosters[slot] = data
-                    self.window.update_boosters_icon_text(data, slot)
+                    self.character.boosters[booster_slot] = data
+                    self.window.update_boosters_icon_text(data, booster_slot)
+                elif booster_slot[-1] in ["7", "8", "9"]:
+                    # selected booster slot
+                    previous_booster = self.character.boosters[booster_slot]
+                    previous_booster.active = False
+
+                    # assuming Blood Code was already set earlier in commit_transaction
+                    trait = self.character.blood_code.traits[booster_slot]
+                    trait.active = value
+                    self.character.boosters[booster_slot] = trait
+                    self.window.update_trait_icon_text(widget, trait.description, value)
                 else:
                     self.character.boosters[booster_slot].active = value
             elif var == "Bloodline":
@@ -875,12 +920,19 @@ class Builder:
         val = data.balance - equipped.balance
         transaction.append([_type, "Balance", None, val, old_value, widget])
 
-        # traits
+        # Traits - will be handled in Boosters
         # temporary workaround for Soul Savior Valentin Trait (Bloodline Agnostic analogue)
         # has been done via changing Game Data -> Blood Code -> Bloodline to Agnostic
+        traits_changed = True
+        if data.name[:-1] == equipped.name[-1:]:
+            # if same Blood Code but different Rank
+            traits_changed = False
 
         # Boosters
-        self.handle_boosters(transaction)
+        if traits_changed:
+            self.handle_boosters(transaction, selected_booster=None, selected_slot="", data=data)
+        else:
+            self.handle_boosters(transaction, selected_booster=None, selected_slot="", data=None)
 
         # Dodge Effectiveness
         self.handle_dodge_effectiveness(_type, transaction)
@@ -1369,7 +1421,7 @@ class Builder:
 
         return transaction
 
-    def handle_boosters(self, transaction, selected_booster=None, selected_slot=""):
+    def handle_boosters(self, transaction, selected_booster=None, selected_slot="", data=None):
         """
         Handles the conditions and effects of all 6 equipped boosters
 
@@ -1383,12 +1435,20 @@ class Builder:
 
         # booster list for iteration
         boosters = list(self.character.boosters.values())
+        # if data:
+        #     # Blood Code changed
+        #     boosters += data.traits.values()
+        # else:
+        #     boosters += self.character.blood_code.traits.values()
+        #print([x.name for x in boosters])
 
         # keep original active values for faster access
         original_active = {booster_slot: v.active for booster_slot, v in self.character.boosters.items()}
+        #print(original_active)
 
         # keep temporary active values, they will be updated for real when transaction is committed
         temp_active = [x.active for x in boosters]
+        #print(temp_active)
 
         if selected_booster:
             selected_slot_idx = int(selected_slot.replace("Booster_", "")) - 1
@@ -1396,12 +1456,16 @@ class Builder:
             boosters[selected_slot_idx] = selected_booster
             # treat selected booster as inactive, since it's not equipped yet
             temp_active[selected_slot_idx] = False
-        else:
-            for idx, booster in enumerate(boosters):
-                if booster.name == "Bloodline Agnostic":
-                    # set Bloodline Agnostic to opposite state so it's refreshed every time on Blood Code switch
-                    # only do this for Blood Code class transactions?
-                    temp_active[idx] = not temp_active[idx]
+
+        if data:
+            traits = list(data.traits.values())
+            #print(traits)
+            for idx in range(6, 6 + len(traits)):
+                # replace trait with new trait
+                boosters[idx] = traits[idx - 6]
+                # treat selected trait as inactive, since it's not equipped yet
+                temp_active[idx] = False
+        #print(["*" + x.name for x in boosters])
 
         # === booster loop ===
         # changing selected booster can impact other boosters in unpredictable ways
@@ -1419,11 +1483,12 @@ class Builder:
         #
         # resolves effects and determines active status
         idx = 0
-        unchanged = [0, 0, 0, 0, 0, 0]
+        unchanged = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         while all(unchanged) is False:
             booster = boosters[idx]
             active = temp_active[idx]
             new_active = self.check_conditions(booster, transaction)
+            #print("**", booster.name, new_active)
             if active != new_active:
                 #print(booster.name, "not equal", active, new_active, unchanged)
                 temp_active[idx] = new_active
@@ -1431,21 +1496,29 @@ class Builder:
             else:
                 #print(booster.name, "equal", active, new_active, unchanged)
                 unchanged[idx] = 1
+                if booster.name == "Bloodline Agnostic":
+                    # refresh Bloodline Agnostic every time
+                    # TODO can this be done only on Blood Code and Booster transactions?
+                    self.resolve_effects(booster, new_active, transaction)
 
             idx += 1
             if idx == len(unchanged):
                 idx = 0
 
+        # holly
         # set active status if it changed (set it always for selected booster)
         for idx, new_active in enumerate(temp_active):
             booster_slot = "Booster_" + str(idx + 1)
             if booster_slot != selected_slot:
                 old_value = original_active[booster_slot]
-                if old_value != new_active:
+                booster = boosters[idx]
+                widget = self.char_to_widget_mapping[booster_slot]
+                if 6 <= idx <= 8:
+                    # send even if active doesn't change, may need to overwrite empty Trait from previous Blood Code
+                    transaction.append([_type, "Active", (booster_slot, booster), new_active, old_value, widget])
+                elif old_value != new_active:
                     # this is ok to compare (unlike value != old_value) because this is not a diff
-                    booster = boosters[idx]
-                    widget = self.char_to_widget_mapping[booster_slot]
-                    transaction.append([_type, "Active", (booster_slot, booster.name), new_active, old_value, widget])
+                    transaction.append([_type, "Active", (booster_slot, booster), new_active, old_value, widget])
             else:
                 # for selected booster do not set widget, should not be displayed until it's clicked
                 transaction.append([_type, "Active", (selected_slot, None), temp_active[selected_slot_idx], None, None])
@@ -1458,6 +1531,8 @@ class Builder:
         :return:
             bool
         """
+        # print("****check_conditions", booster.name)
+
         if booster.type == "":
             # empty booster
             return False

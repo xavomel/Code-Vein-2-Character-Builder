@@ -59,6 +59,7 @@ class Weapon:
     def __init__(self, doc=None, dummy_number=None):
         self.name = ""
         self.description = ""
+        self.empty = True
         self.type = ""  # One-Handed Swords, Two-Handed Swords, Twin Blades, Bayonets, Halberds, Hammers, Rune Blades
         self.transforms = {
             "Weapon_Off": {
@@ -88,6 +89,7 @@ class Weapon:
 
         self.name = doc["Name"]
         self.description = doc["Description"]
+        self.empty = False
         self.type = doc["Type"]
         self.transforms = dict()
         for transform in doc["Transforms"]:
@@ -112,6 +114,7 @@ class Forma:
     def __init__(self, doc=None, dummy_number=None):
         self.name = ""
         self.description = ""
+        self.empty = True
         # One-Handed Swords, Two-Handed Swords, Twin Blades, Bayonets, Halberds, Hammers, Rune Blades
         # Magic Range Long, Magic Range Short, Assistance Attack, Assistance Defense, Assistance Other
         self.type = ""
@@ -142,6 +145,7 @@ class Forma:
 
         self.name = doc["Name"]
         self.description = doc["Description"]
+        self.empty = False
         self.type = doc["Type"]
         self.ichor_cost = doc["IchorCost"]
         self.capacity = doc["Capacity"]
@@ -160,10 +164,12 @@ class Forma:
 
         return text
 
+
 class Booster:
-    def __init__(self, doc=None, dummy_number=None):
+    def __init__(self, doc=None, empty_text=""):
         self.name = ""
         self.description = ""
+        self.empty = True
         self.type = ""  # 0, 1, 2, 3
         self.conditions = [{}]
         self.conditions_print = ""
@@ -181,11 +187,12 @@ class Booster:
         }
 
         if not doc:
-            self.name = "Booster " + str(dummy_number)
+            self.name = empty_text
             return
 
         self.name = doc["Name"]
         self.description = doc["Description"]
+        self.empty = False
         self.type = doc["Type"]
         self.burden = doc["Burden"]
         # TODO instead of conditions like this [{...}, {...}, {...}] or [{}] when empty
@@ -226,6 +233,10 @@ class Booster:
                     text += "\n%s: " % name
                     for k, v in values.items():
                         text += "%s %s " % (k, v)
+                elif name == "BurdenMax":
+                    text += "\nBurden: "
+                    for k, v in values.items():
+                        text += "%s %s " % (k, v)
                 elif name == "Bloodline":
                     text += "\n%s: %s" % (name, values)
         if not text:
@@ -237,11 +248,16 @@ class BloodCode:
     def __init__(self, doc=None):
         self.name = ""
         self.description = ""
+        self.empty = True
         self.bloodline = ""
         self.bleed = 0
         self.ichor = 0
         self.balance = 0
-        self.traits = []
+        self.traits = {
+            "Booster_7": Booster(empty_text="Trait 1: None"),
+            "Booster_8": Booster(empty_text="Trait 2: None"),
+            "Booster_9": Booster(empty_text="Trait 3: None"),
+        }
         self.favorite = False
         self.has_burden = False
 
@@ -287,6 +303,7 @@ class BloodCode:
 
         self.name = doc["Name"]
         self.description = doc["Description"]
+        self.empty = False
         self.bloodline = doc["Bloodline"]
         self.bleed = doc["Bleed"]
         self.ichor = doc["Ichor"]
@@ -294,11 +311,34 @@ class BloodCode:
         self.attributes = doc["Attributes"]
         self.defense = {k: Fraction(v) for k, v in doc["Defense"].items()}
         self.resistance = doc["Resistance"]
-        self.traits = doc["Traits"]
 
-        for trait in self.traits:
+        # TODO fix order of Traits
+        # make Jadwiga and Holly both have correct order
+        # e.g. Jadwiga is ok with current order, but Holly is not (reversing is not a solution)
+        for idx, trait in enumerate(doc["Traits"]):
+            # Traits are treated as Booster_7/8/9
+            key = "Booster_" + str(idx + 6 + 1)
+            name = "Trait " + str(idx + 1)
+            # name = trait["Description"]  # tried to fix Iris Trait with this
+            booster_doc = {
+                "Name": name,
+                "Description": trait["Description"],
+                "Type": "Trait",
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0,
+                },
+                "Conditions": trait["Conditions"]
+            }
+            self.traits[key] = Booster(booster_doc)
+
+            # also make burden easily accessible by setting it in Blood Code, since it has no conditions
             burden = trait.get("Burden")
-            if burden and not trait["Conditions"]:
+            if burden and self.traits[key].active:
                 self.has_burden = True
                 for attribute, value in burden.items():
                     self.burden[attribute] += value
@@ -328,6 +368,7 @@ class Jail:
     def __init__(self, doc=None):
         self.name = ""
         self.description = ""
+        self.empty = True
         self.type = ""
         self.balance = 0
         # self.favorite = False  # NOT USED
@@ -357,6 +398,7 @@ class Jail:
 
         self.name = doc["Name"]
         self.description = doc["Description"]
+        self.empty = False
         self.type = doc["Type"]
         self.balance = doc["Balance"]
         self.burden = doc["Burden"]
@@ -376,6 +418,7 @@ class DefensiveForma:
     def __init__(self, doc=None):
         self.name = ""
         self.description = ""
+        self.empty = True
         self.type = ""
         self.ichor_cost = 0
         self.transforms = {
@@ -424,6 +467,7 @@ class DefensiveForma:
 
         self.name = doc["Name"]
         self.description = doc["Description"]
+        self.empty = False
         self.type = doc["Type"]
         self.ichor_cost = doc["IchorCost"]
         self.transforms = dict()
@@ -455,6 +499,7 @@ class OffensiveForma:
     def __init__(self, doc=None):
         self.name = ""
         self.description = ""
+        self.empty = True
         self.bleed = 0
         self.ichor_cost = 0
         self.scaling = {}
@@ -466,6 +511,7 @@ class OffensiveForma:
 
         self.name = doc["Name"]
         self.description = doc["Description"]
+        self.empty = False
         self.bleed = doc["Bleed"]
         self.ichor_cost = doc["IchorCost"]
         self.scaling = doc["Scaling"]

@@ -345,7 +345,7 @@
             },
             {
                 "Description": "Survive Fatal Hit with 1 LP While Assimilated if LP Above Threshold",
-                "Conditions": []
+                "Conditions": [{}]
             },
             {
                 "Description": "Attack Power Increases with Consecutive Hits (Resets Upon Being Hit or Missing)",
@@ -401,7 +401,7 @@
             },
             {
                 "Description": "Survive Fatal Hit with 1 LP While Assimilated if LP Above Threshold",
-                "Conditions": []
+                "Conditions": [{}]
             },
             {
                 "Description": "Attack Power Increases with Consecutive Hits (Resets Upon Being Hit or Missing)",
@@ -457,7 +457,7 @@
             },
             {
                 "Description": "Survive Fatal Hit with 1 LP While Assimilated if LP Above Threshold",
-                "Conditions": []
+                "Conditions": [{}]
             },
             {
                 "Description": "Attack Power Increases with Consecutive Hits (Resets Upon Being Hit or Missing)",
@@ -513,7 +513,7 @@
             },
             {
                 "Description": "Survive Fatal Hit with 1 LP While Assimilated if LP Above Threshold",
-                "Conditions": []
+                "Conditions": [{}]
             },
             {
                 "Description": "Attack Power Increases with Consecutive Hits (Resets Upon Being Hit or Missing)",
@@ -570,7 +570,7 @@
                 ]
             },
             {
-                "Description": "Bleed Factor Up",
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nBleed Factor Up",
                 "Conditions": [
                     {
                         "Margin": {
@@ -633,7 +633,7 @@
                 ]
             },
             {
-                "Description": "Bleed Factor Up",
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nBleed Factor Up",
                 "Conditions": [
                     {
                         "Margin": {
@@ -696,7 +696,7 @@
                 ]
             },
             {
-                "Description": "Bleed Factor Up",
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nBleed Factor Up",
                 "Conditions": [
                     {
                         "Margin": {
@@ -946,7 +946,17 @@
                 ]
             },
             {
-                "Description": "",
+                "Description": "Stamina Recovery Speed Up",
+                "Conditions": [
+                    {
+                        "Margin": {
+                            "Mind": 10
+                        }
+                    }
+                ]
+            },
+            {
+                "Description": "Charged Drain Attack Power Up",
                 "Conditions": [
                     {
                         "Overburden": true
@@ -997,7 +1007,7 @@
                 ]
             },
             {
-                "Description": "Bleed Factor Up",
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nBleed Factor Up",
                 "Conditions": [
                     {
                         "Margin": {
@@ -1722,7 +1732,7 @@
         },
         "Traits": [
             {
-                "Description": "Bleed Factor Up",
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nBleed Factor Up",
                 "Conditions": [
                     {
                         "Overburden": false
@@ -1955,8 +1965,8 @@
                 ]
             },
             {
-                "Description": "Distributes Burden Among Strength/Dexterity, Mind/Willpower, and Vitality/Fortitude",
-                "Conditions": []
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nDistributes Burden Among Strength/Dexterity, Mind/Willpower, and Vitality/Fortitude",
+                "Conditions": [{}]
             }
         ]
     },
@@ -2011,8 +2021,8 @@
                 ]
             },
             {
-                "Description": "Distributes Burden Among Strength/Dexterity, Mind/Willpower, and Vitality/Fortitude",
-                "Conditions": []
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nDistributes Burden Among Strength/Dexterity, Mind/Willpower, and Vitality/Fortitude",
+                "Conditions": [{}]
             }
         ]
     },
@@ -2058,9 +2068,8 @@
                 ]
             },
             {
-                "Description": "Strength Burden -10",
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nStrength Burden -10",
                 "Conditions": [
-                    {},
                     {
                         "BurdenMax": {
                             "Dexterity": 0,
@@ -2124,9 +2133,8 @@
                 ]
             },
             {
-                "Description": "Strength Burden -10",
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nStrength Burden -10",
                 "Conditions": [
-                    {},
                     {
                         "BurdenMax": {
                             "Dexterity": 0,
@@ -2190,9 +2198,8 @@
                 ]
             },
             {
-                "Description": "Strength Burden -10",
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nStrength Burden -10",
                 "Conditions": [
-                    {},
                     {
                         "BurdenMax": {
                             "Dexterity": 0,
@@ -2607,7 +2614,7 @@
         "Traits": [
             {
                 "Description": "Strength/Dexterity Burden +2",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Strength": 2,
                     "Dexterity": 2
@@ -2666,7 +2673,7 @@
         "Traits": [
             {
                 "Description": "Strength/Dexterity Burden +4",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Strength": 4,
                     "Dexterity": 4
@@ -2682,7 +2689,7 @@
             },
             {
                 "Description": "Bloodreaver Blade Attack Power Up",
-                "Conditions": []
+                "Conditions": [{}]
             }
         ]
     },
@@ -2719,7 +2726,7 @@
         "Traits": [
             {
                 "Description": "Strength/Mind Burden +6",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Strength": 6,
                     "Mind": 6
@@ -2735,7 +2742,7 @@
             },
             {
                 "Description": "Combat Forma Attack Up at the Cost of Higher Ichor Use",
-                "Conditions": []
+                "Conditions": [{}]
             }
         ]
     },
@@ -2772,7 +2779,7 @@
         "Traits": [
             {
                 "Description": "Strength Burden +8",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Strength": 8
                 }
@@ -2787,7 +2794,7 @@
             },
             {
                 "Description": "Ichor Cost Reduced for Absolute Executioner",
-                "Conditions": []
+                "Conditions": [{}]
             }
         ]
     },
@@ -2824,7 +2831,7 @@
         "Traits": [
             {
                 "Description": "Dexterity Burden +10",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Dexterity": 10
                 }
@@ -2882,7 +2889,7 @@
         "Traits": [
             {
                 "Description": "Strength/Dexterity Burden +5",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Strength": 5,
                     "Dexterity": 5
@@ -2897,8 +2904,8 @@
                 ]
             },
             {
-                "Description": "All Status Ailment Resistance Up",
-                "Conditions": []
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nAll Status Ailment Resistance Up",
+                "Conditions": [{}]
             }
         ]
     },
@@ -2935,7 +2942,7 @@
         "Traits": [
             {
                 "Description": "Dexterity/Willpower Burden +5",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Dexterity": 5,
                     "Willpower": 5
@@ -2994,7 +3001,7 @@
         "Traits": [
             {
                 "Description": "Dexterity/Willpower Burden +6",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Dexterity": 6,
                     "Willpower": 6
@@ -3010,7 +3017,7 @@
             },
             {
                 "Description": "MK Rosenritter Attack Power Up",
-                "Conditions": []
+                "Conditions": [{}]
             }
         ]
     },
@@ -3047,7 +3054,7 @@
         "Traits": [
             {
                 "Description": "Strength/Vitality Burden +6",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Strength": 6,
                     "Vitality": 6
@@ -3106,7 +3113,7 @@
         "Traits": [
             {
                 "Description": "Strength/Dexterity/Mind Burden +4",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Strength": 4,
                     "Dexterity": 4,
@@ -3167,7 +3174,7 @@
         "Traits": [
             {
                 "Description": "Strength/Dexterity Burden +8",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Strength": 8,
                     "Dexterity": 8
@@ -3185,7 +3192,7 @@
             },
             {
                 "Description": "Weapon Burden Reduced When Dual-Wielding",
-                "Conditions": []
+                "Conditions": [{}]
             }
         ]
     },
@@ -3222,7 +3229,7 @@
         "Traits": [
             {
                 "Description": "All Attribute Burdens +6",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Strength": 6,
                     "Dexterity": 6,
@@ -3233,7 +3240,7 @@
                 }
             },
             {
-                "Description": "Bleed Factor Up",
+                "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nBleed Factor Up",
                 "Conditions": [
                     {
                         "Margin": {
@@ -3246,7 +3253,7 @@
             },
             {
                 "Description": "Ignore Bloodline Trait Requirements",
-                "Conditions": []
+                "Conditions": [{}]
             }
         ]
     },
@@ -3283,7 +3290,7 @@
         "Traits": [
             {
                 "Description": "Strength/Vitality Burden +12",
-                "Conditions": [],
+                "Conditions": [{}],
                 "Burden": {
                     "Strength": 12,
                     "Vitality": 12
@@ -3342,7 +3349,7 @@
         "Traits": [
             {
                 "Description": "None",
-                "Conditions": []
+                "Conditions": [{}]
             }
         ]
     }

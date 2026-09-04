@@ -180,7 +180,8 @@ class Ui_MainWindow(object):
                 #Weapon_1_Forma_1:hover, #Weapon_1_Forma_2:hover, #Weapon_1_Forma_3:hover, #Weapon_1_Forma_4:hover,
                 #Weapon_2_Forma_1:hover, #Weapon_2_Forma_2:hover, #Weapon_2_Forma_3:hover, #Weapon_2_Forma_4:hover,
                 #Booster_1_Button:hover, #Booster_2_Button:hover, #Booster_3_Button:hover,
-                #Booster_4_Button:hover, #Booster_5_Button:hover, #Booster_6_Button:hover {
+                #Booster_4_Button:hover, #Booster_5_Button:hover, #Booster_6_Button:hover,
+                #Booster_7_Button:hover, #Booster_8_Button:hover, #Booster_9_Button:hover {
                     border : 1px solid #c2c2c2; /*light grey*/
                 }
 
@@ -720,6 +721,7 @@ class Ui_MainWindow(object):
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1 content
         self.tool_button_h2_v3_h1_1 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v3_h1_1.setObjectName(u"Offensive_Button")
+        self.tool_button_h2_v3_h1_1.setMaximumWidth(130)
         self.tool_button_h2_v3_h1_1.setText(QCoreApplication.translate("MainWindow", u"Offensive", None)) # move to re-translate
         self.tool_button_h2_v3_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h1_1.setIcon(icon_slot_item)
@@ -730,6 +732,7 @@ class Ui_MainWindow(object):
 
         self.tool_button_h2_v3_h1_2 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v3_h1_2.setObjectName(u"Defensive_Button")
+        self.tool_button_h2_v3_h1_2.setMaximumWidth(130)
         self.tool_button_h2_v3_h1_2.setText(QCoreApplication.translate("MainWindow", u"Defensive", None)) # move to re-translate
         self.tool_button_h2_v3_h1_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h1_2.setIcon(icon_slot_item)
@@ -747,6 +750,7 @@ class Ui_MainWindow(object):
 
         self.tool_button_h2_v3_h1_3 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v3_h1_3.setObjectName(u"Jail_Button")
+        self.tool_button_h2_v3_h1_3.setMaximumWidth(130)
         self.tool_button_h2_v3_h1_3.setText(QCoreApplication.translate("MainWindow", u"Jail", None)) # move to re-translate
         self.tool_button_h2_v3_h1_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h1_3.setIcon(icon_slot_item)
@@ -894,32 +898,36 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_6.clicked.connect(self.fill_side_menu_booster)
         self.push_button_h2_v3_h2_v1_6.set_button_type("Booster")
 
-        self.push_button_h2_v3_h2_v1_7 = MyQPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v3_h2_v1_7.setObjectName(u"Trait_1_Button")
+        # no longer push buttons, but no difference in handling
+        self.push_button_h2_v3_h2_v1_7 = MyQToolButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_7.setObjectName(u"Booster_7_Button")
         self.push_button_h2_v3_h2_v1_7.setText(QCoreApplication.translate("MainWindow", u"Trait 1: None", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_7.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.push_button_h2_v3_h2_v1_7.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_7.setIconSize(icon_slot_forma_size)
         self.push_button_h2_v3_h2_v1_7.setMinimumHeight(icon_slot_forma_size.height())
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_7, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v3_h2_v1_7.set_button_type("BloodCode")
+        self.push_button_h2_v3_h2_v1_7.set_button_type("Trait")
 
-        self.push_button_h2_v3_h2_v1_8 = MyQPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v3_h2_v1_8.setObjectName(u"Trait_2_Button")
+        self.push_button_h2_v3_h2_v1_8 = MyQToolButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_8.setObjectName(u"Booster_8_Button")
         self.push_button_h2_v3_h2_v1_8.setText(QCoreApplication.translate("MainWindow", u"Trait 2: None", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_8.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.push_button_h2_v3_h2_v1_8.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_8.setIconSize(icon_slot_forma_size)
         self.push_button_h2_v3_h2_v1_8.setMinimumHeight(icon_slot_forma_size.height())
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_8, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v3_h2_v1_8.set_button_type("BloodCode")
+        self.push_button_h2_v3_h2_v1_8.set_button_type("Trait")
 
-        self.push_button_h2_v3_h2_v1_9 = MyQPushButton(self.main_vertical_layout_widget)
-        self.push_button_h2_v3_h2_v1_9.setObjectName(u"Trait_3_Button")
+        self.push_button_h2_v3_h2_v1_9 = MyQToolButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_9.setObjectName(u"Booster_9_Button")
         self.push_button_h2_v3_h2_v1_9.setText(QCoreApplication.translate("MainWindow", u"Trait 3: None", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_9.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.push_button_h2_v3_h2_v1_9.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_9.setIconSize(icon_slot_forma_size)
         self.push_button_h2_v3_h2_v1_9.setMinimumHeight(icon_slot_forma_size.height())
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_9, 0, Qt.AlignmentFlag.AlignLeft)
-        self.push_button_h2_v3_h2_v1_9.set_button_type("BloodCode")
+        self.push_button_h2_v3_h2_v1_9.set_button_type("Trait")
 
         # 2nd horizontal layout content - spacer at the end (right)
         self.horizontal_spacer_h2_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
@@ -1983,7 +1991,13 @@ class Ui_MainWindow(object):
             new_icon.addFile(u":/All/BloodCode/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal,
                              QIcon.State.Off)
             widget.setIcon(new_icon)
-            widget.setText(name)
+
+            idx = name.find("Bloodline: ")
+            if idx != -1:
+                widget.setText(name[idx + len("Bloodline: "):])
+            else:
+                widget.setText(name)
+            widget.setStatusTip(name)
 
     def handle_offensive_clicked(self, item):
         builder = self.builder
@@ -2100,10 +2114,40 @@ class Ui_MainWindow(object):
         #print("      bloodline", self.builder.character.bloodline)
 
         widget = self.builder.char_to_widget_mapping[slot]
-        self.set_booster_icon(widget, name, active)
-        if name == "Booster None":
+        if not booster.type:
+            self.set_booster_icon(widget, "", active)
             widget.setText(slot.replace("_", " ") + ": None")
         else:
+            self.set_booster_icon(widget, name, active)
+            widget.setText(name)
+
+    def update_trait_icon_text(self, widget, name, active):
+        # print("  update_trait_icon_text", widget, "|", name, "|", active)
+
+        icon_1 = QIcon()
+        icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+
+        # holly
+        if not name:
+            widget.setIcon(icon_1)
+            name = widget.objectName()
+            if name.startswith("Booster_7"):
+                name = "Trait 1: None"
+            elif name.startswith("Booster_8"):
+                name = "Trait 2: None"
+            else:
+                name = "Trait 3: None"
+            widget.setText(name)
+        else:
+            icon_2 = QIcon()
+            icon_2.addFile(u":/All/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+            new_icon = self.merge_icons(icon_1, icon_2, 30, invert=not active)
+            widget.setIcon(new_icon)
+
+            if name.startswith("<font"):
+                # this shouldn't be added to button text, only to side menu text
+                name = name.replace('<font color=\"red\">NOT IMPLEMENTED</font>\n\n', '')
+            # QToolButton has better text overflow handling than QPushButton
             widget.setText(name)
 
     def handle_forma_1_weapon_1_clicked(self, item):
@@ -2172,7 +2216,7 @@ class Ui_MainWindow(object):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
-        if name == "Booster None":
+        if not name:
             widget.setIcon(icon_1)
         else:
             icon_2 = QIcon()
@@ -2255,9 +2299,9 @@ class Ui_MainWindow(object):
         self.builder.widget_to_char_mapping = {
             # Blood Code
             self.tool_button_h2_v3_h2_1: "Blood_Code",
-            self.push_button_h2_v3_h2_v1_7: "Trait_1",
-            self.push_button_h2_v3_h2_v1_8: "Trait_2",
-            self.push_button_h2_v3_h2_v1_9: "Trait_3",
+            self.push_button_h2_v3_h2_v1_7: "Booster_7",
+            self.push_button_h2_v3_h2_v1_8: "Booster_8",
+            self.push_button_h2_v3_h2_v1_9: "Booster_9",
             self.label_h3_v1_g1_1: "Attribute_Strength",
             self.label_h3_v1_g1_2: "Attribute_Dexterity",
             self.label_h3_v1_g1_3: "Attribute_Mind",
@@ -3042,7 +3086,6 @@ class MyQPushButton(QPushButton):
         self.data_mapping = {
             "Forma": parent.window().builder.formae,
             "Booster": parent.window().builder.boosters,
-            "BloodCode": parent.window().builder.blood_codes,  # traits
         }
 
     def set_button_type(self, type):
@@ -3056,13 +3099,16 @@ class MyQPushButton(QPushButton):
 
     # triggers on mouseover, like itemEntered
     def enterEvent(self, QEvent):
+        item = None
         if self.data:
             item = self.data.get(self.text())
-            if item:
-                self.window().side_menu_buttons.setVisible(True)
-                self.window().side_menu_content.setVisible(True)
-                self.window().side_menu_text.setVisible(True)
-                self.window().handle_hover(item)
+
+        if item and not item.empty:
+            # only show hover info for non-empty items
+            self.window().side_menu_buttons.setVisible(True)
+            self.window().side_menu_content.setVisible(True)
+            self.window().side_menu_text.setVisible(True)
+            self.window().handle_hover(item)
 
 
 class MyQToolButton(QToolButton):
@@ -3092,13 +3138,23 @@ class MyQToolButton(QToolButton):
 
     # triggers on mouseover, like itemEntered
     def enterEvent(self, QEvent):
+        item = None
         if self.data:
-            item = self.data.get(self.text())
-            if item:
-                self.window().side_menu_buttons.setVisible(True)
-                self.window().side_menu_content.setVisible(True)
-                self.window().side_menu_text.setVisible(True)
-                self.window().handle_hover(item)
+            if self.button_type == "BloodCode":
+                # have to get from statusTip, because text is shortened by removing "X Bloodline: "
+                item = self.data.get(self.statusTip())
+            else:
+                item = self.data.get(self.text())
+        elif self.button_type == "Trait":
+            text = self.objectName().replace("_Button", "")
+            item = self.window().builder.character.blood_code.traits.get(text)
+
+        if item and not item.empty:
+            # only show hover info for non-empty items
+            self.window().side_menu_buttons.setVisible(True)
+            self.window().side_menu_content.setVisible(True)
+            self.window().side_menu_text.setVisible(True)
+            self.window().handle_hover(item)
 
     def set_position_tracked(self, position_tracked):
         self.position_tracked = position_tracked
