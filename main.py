@@ -771,7 +771,6 @@ class Builder:
                     self.character.boosters[booster_slot] = data
                     self.window.update_boosters_icon_text(data, booster_slot)
                 elif booster_slot[-1] in ["7", "8", "9"]:
-                    # selected booster slot
                     previous_booster = self.character.boosters[booster_slot]
                     previous_booster.active = False
 
@@ -924,9 +923,12 @@ class Builder:
         # temporary workaround for Soul Savior Valentin Trait (Bloodline Agnostic analogue)
         # has been done via changing Game Data -> Blood Code -> Bloodline to Agnostic
         traits_changed = True
-        if data.name[:-1] == equipped.name[-1:]:
+        if data.name[:-1] == equipped.name[:-1]:
             # if same Blood Code but different Rank
+            # skipping in this scenario doesn't save much, maybe remove it to simplify the code?
+            # and just always set data for Blood Code transactions
             traits_changed = False
+        # print("*************traits_changed", traits_changed)
 
         # Boosters
         if traits_changed:
@@ -1435,11 +1437,6 @@ class Builder:
 
         # booster list for iteration
         boosters = list(self.character.boosters.values())
-        # if data:
-        #     # Blood Code changed
-        #     boosters += data.traits.values()
-        # else:
-        #     boosters += self.character.blood_code.traits.values()
         #print([x.name for x in boosters])
 
         # keep original active values for faster access
@@ -1459,7 +1456,6 @@ class Builder:
 
         if data:
             traits = list(data.traits.values())
-            #print(traits)
             for idx in range(6, 6 + len(traits)):
                 # replace trait with new trait
                 boosters[idx] = traits[idx - 6]
