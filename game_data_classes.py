@@ -21,7 +21,7 @@ def attribute_or_burden_table(type, data):
     if header:
         text = """
             <table align="center" width="100%">
-            <caption><h3>{0}</h3></caption>
+            <caption><h4>{0}</h4></caption>
             <thead><tr>{1}</tr></thead>
             <tbody><tr>{2}</tr></tbody>
             </table>
@@ -38,7 +38,8 @@ def capacity_table(capacity):
 
     for k, v in capacity.items():
         if v != 0:
-            header += '<th>%s</th>' % k
+            # SemiCondensed looks better for Capacity
+            header += '<th style="font-family: \'Cabin SemiCondensed\';">%s</th>' % k
             row += '<td style="text-align: center;">%s</td>' % v
 
     if header:
@@ -158,7 +159,7 @@ class Forma:
 
         if detailed:
             text += capacity_table(self.capacity)
-        text += """<h3>Ichor Consumption: {0}</h3>""".format(self.ichor_cost)
+        text += """<h4>Ichor Consumption: {0}</h4>""".format(self.ichor_cost)
         text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
         text += "</body>"
 
@@ -242,7 +243,7 @@ class Booster:
         if not text:
             text = "No Conditions"
 
-        return """<br><div style="white-space: pre-wrap;"><h3>{0}</h3></div>""".format(text)
+        return """<br><div style="white-space: pre-wrap;"><h4>{0}</h4></div>""".format(text)
 
 class BloodCode:
     def __init__(self, doc=None):
@@ -357,7 +358,7 @@ class BloodCode:
         if self.has_burden:
             text += attribute_or_burden_table("Burden", self.burden)
         if detailed:
-            text += """<h3>Bloodline: {0}</h3>""".format(self.bloodline)
+            text += """<h4>Bloodline: {0}</h4>""".format(self.bloodline)
         text += """<br><div style="white-space: pre-wrap;">{0}</div>""".format(self.description)
         text += "</body>"
 
@@ -486,8 +487,8 @@ class DefensiveForma:
         if detailed:
             text += attribute_or_burden_table("Burden", self.transforms["Defensive_Off"]["Burden"])
         text += """
-            <h3>Type: {0}</h3>
-            <h3>Ichor Consumption: {1}</h3>
+            <h4>Type: {0}</h4>
+            <h4>Ichor Consumption: {1}</h4>
             <br><div style="white-space: pre-wrap;">{2}</div>
             </body>""".format(self.type, self.ichor_cost, self.description)
         text += ""
@@ -519,7 +520,7 @@ class OffensiveForma:
     def get_hover_text(self, detailed=True):
         return """<body>
             <h2><p align="center">{0}</p></h2>
-            <h3>Ichor Consumption: {1}</h3>
+            <h4>Ichor Consumption: {1}</h4>
             <br><div style="white-space: pre-wrap;">{2}</div>
             </body>""".format(
                 self.name,

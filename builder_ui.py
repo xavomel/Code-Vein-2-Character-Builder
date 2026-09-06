@@ -35,21 +35,21 @@ class Ui_MainWindow(object):
         # get source widget dimensions and create dynamic element in same place
         # weapon 1 transform
         wp1_geo = self.tool_button_h2_v1_h1_1.geometry()
-        self.tool_button_h2_v1_h1_1a.setGeometry(QRect(wp1_geo.x(), wp1_geo.y(), 25, 25))
+        self.tool_button_h2_v1_h1_1a.setGeometry(QRect(wp1_geo.x(), wp1_geo.y(), self.size_icon_slot_item_addon, self.size_icon_slot_item_addon))
         self.tool_button_h2_v1_h1_1a.raise_()
         self.tool_button_h2_v1_h1_1a.show()
         self.tool_button_h2_v1_h1_1.set_position_tracked(True)
 
         # weapon 2 transform
         wp2_geo = self.tool_button_h2_v2_h1_1.geometry()
-        self.tool_button_h2_v2_h1_1a.setGeometry(QRect(wp2_geo.x(), wp2_geo.y(), 25, 25))
+        self.tool_button_h2_v2_h1_1a.setGeometry(QRect(wp2_geo.x(), wp2_geo.y(), self.size_icon_slot_item_addon, self.size_icon_slot_item_addon))
         self.tool_button_h2_v2_h1_1a.raise_()
         self.tool_button_h2_v2_h1_1a.show()
         self.tool_button_h2_v2_h1_1.set_position_tracked(True)
 
         # defensive transform
         def_geo = self.tool_button_h2_v3_h1_2.geometry()
-        self.tool_button_h2_v3_h1_2a.setGeometry(QRect(def_geo.x(), def_geo.y(), 25, 25))
+        self.tool_button_h2_v3_h1_2a.setGeometry(QRect(def_geo.x(), def_geo.y(), self.size_icon_slot_item_addon, self.size_icon_slot_item_addon))
         self.tool_button_h2_v3_h1_2a.raise_()
         self.tool_button_h2_v3_h1_2a.show()
         self.tool_button_h2_v3_h1_2.set_position_tracked(True)
@@ -59,12 +59,146 @@ class Ui_MainWindow(object):
 
     def reposition_dynamic_ui_element(self, widget_parent, widget_child):
         geo = widget_parent.geometry()
-        widget_child.setGeometry(QRect(geo.x(), geo.y(), 25, 25))
+        widget_child.setGeometry(QRect(geo.x(), geo.y(), self.size_icon_slot_item_addon, self.size_icon_slot_item_addon))
+
+    def initialize_gui_sizes(self):
+        high_resolution = 0
+        try:
+            config = open_json(u"config.json")
+            high_resolution = config.get("HighResolution", 0)
+        except:
+            # ignore any errors, resolution is not critical
+            pass
+
+        if high_resolution:
+            # progress bars are not identical on both sizes, but close enough
+            # QFileDialog is still too small but it's handled by OS, better not touch it
+            self.set_sizes_1620p()
+        else:
+            self.set_sizes_810p()
+
+    def set_sizes_810p(self):
+        self.size_horizontal = 1440
+        self.size_vertical = 810
+        self.size_menu_bar = 21
+
+        # fonts
+        self.size_font_bleed = 9
+        self.size_font_side_menu_text = 10
+        self.size_font_attribute = 20
+        self.size_font_progress_bar = 10
+        self.size_font_defense = 10
+        self.size_font_defensive_formae = 28
+        self.size_font_menu_bar = 10
+
+        # icons
+        self.size_icon_slot_blood_code = 150
+        self.size_icon_slot_item = 75
+        self.size_icon_slot_item_addon = 24
+        self.size_icon_slot_forma = 30
+        self.size_icon_attribute = 24
+        self.size_icon_defense = 24
+        self.size_icon_side_menu_button_width = 24
+        self.size_icon_side_menu_button_height = 32
+        self.size_icon_side_menu_content = 70
+        self.size_icon_arrow_width = 16
+        self.size_icon_arrow_height = 8
+
+        self.size_margin = 24
+        self.size_margin_overlapping = 0
+
+        # x position for side menu
+        self.size_side_vertical_layout_widget_1_x = 1080
+
+        # width of side menu buttons
+        self.size_side_vertical_layout_widget_1_width = 340
+
+        # height of side menu contant
+        self.size_side_vertical_layout_widget_1_height = 810
+
+        # width of side menu content
+        self.size_side_vertical_layout_widget_2_width = 360
+
+        self.size_main_vertical_layout_width = 940
+
+        self.size_spacer_h1_1_width = 40
+        self.size_spacer_h1_1_height = 20
+
+        self.size_slot_item_width = 130
+
+        self.size_dialog_code = 600
+
+        # progress bar
+        self.size_progress_bar_adjust = 2
+        self.size_progress_bar_skew = 10
+        self.size_progress_bar_pen_1 = 8
+        self.size_progress_bar_pen_2 = 2
+
+    def set_sizes_1620p(self):
+        self.size_horizontal = 1440 * 2
+        self.size_vertical = 810 * 2
+        self.size_menu_bar = 21 * 2
+
+        # fonts
+        self.size_font_bleed = 9 * 2
+        self.size_font_side_menu_text = 10 * 2
+        self.size_font_attribute = 20 * 2
+        self.size_font_progress_bar = 10 * 2
+        self.size_font_defense = 10 * 2
+        self.size_font_defensive_formae = 28 * 2
+        self.size_font_menu_bar = 10 * 2
+
+        # icons
+        self.size_icon_slot_blood_code = 150 * 2
+        self.size_icon_slot_item = 75 * 2
+        self.size_icon_slot_item_addon = 24 * 2
+        self.size_icon_slot_forma = 30 * 2
+        self.size_icon_attribute = 24 * 2
+        self.size_icon_defense = 24 * 2
+        self.size_icon_side_menu_button_width = 24 * 2
+        self.size_icon_side_menu_button_height = 32 * 2
+        self.size_icon_side_menu_content = 70 * 2
+        self.size_icon_arrow_width = 16 * 2
+        self.size_icon_arrow_height = 8 * 2
+
+        self.size_margin = 24 * 2
+        self.size_margin_overlapping = 0 * 2
+
+        # x position for side menu
+        self.size_side_vertical_layout_widget_1_x = 1080 * 2
+
+        # width of side menu buttons
+        self.size_side_vertical_layout_widget_1_width = 340 * 2
+
+        # height of side menu contant
+        self.size_side_vertical_layout_widget_1_height = 810 * 2
+
+        # width of side menu content
+        self.size_side_vertical_layout_widget_2_width = 360 * 2
+
+        self.size_main_vertical_layout_width = 940 * 2
+
+        self.size_spacer_h1_1_width = 40 * 2
+        self.size_spacer_h1_1_height = 20 * 2
+
+        self.size_slot_item_width = 130 * 2
+
+        self.size_dialog_code = 600 * 2
+
+        # progress bar
+        self.size_progress_bar_adjust = 2 * 2
+        self.size_progress_bar_skew = 10 * 2
+        self.size_progress_bar_pen_1 = 8 * 2
+        self.size_progress_bar_pen_2 = 2 * 2
 
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.setFixedSize(1440, 810 + 21) # menu size
+
+        # set ALL sizes first
+        self.initialize_gui_sizes()
+
+        MainWindow.setFixedSize(self.size_horizontal, self.size_vertical + self.size_menu_bar)
 
         # fonts
         # TODO: after testing remove unnecessary fonts from directory
@@ -74,30 +208,30 @@ class Ui_MainWindow(object):
             db.addApplicationFont(fi.absoluteFilePath())
 
         # fonts - default (Cabin from Fonts directory)
-        font_default = QFont()
-        font_default.setFamily(u"Cabin")
+        font_default = db.font("Cabin", "Regular", self.size_font_bleed)
         QApplication.setFont(font_default, "QLabel")
         QApplication.setFont(font_default, "MyQPushButton")
         QApplication.setFont(font_default, "MyQToolButton")
+        QApplication.setFont(font_default, "QLineEdit")
+
+        # set font size for side menu text, Cabin font at size 10 is about equal in size to default Segoe UI at size 9
+        # although Cabin is wider, so in select uses (Capacity) we want to use a narrower Cabin SemiCondensed
+        font_side_menu_text = db.font("Cabin", "Regular", self.size_font_side_menu_text)
+        QApplication.setFont(font_side_menu_text, "QTextEdit")
+
+        font_menu = db.font("Cabin", "Regular", self.size_font_menu_bar)
+        QApplication.setFont(font_menu, "QMenuBar")
+        QApplication.setFont(font_menu, "QMenu")
 
         # fonts - specific uses
         # TODO move to retranslateUI ? different fonts for different languages
-        self.font_numbers_bleed = db.font("Pirata One", "Regular", 9)
-        self.font_numbers_attribute = db.font("Science Gothic", "ExtraLight", 20)
-        self.font_numbers_progress_bar = db.font("Science Gothic", "ExtraLight", 10)
-        self.font_numbers_defense = db.font("Science Gothic", "Regular", 10)
-        self.font_defensive_formae = db.font("Pirata One", "Regular", 28)
+        self.font_numbers_bleed = db.font("Pirata One", "Regular", self.size_font_bleed)
+        self.font_numbers_attribute = db.font("Science Gothic", "ExtraLight", self.size_font_attribute)
+        self.font_numbers_progress_bar = db.font("Science Gothic", "ExtraLight", self.size_font_progress_bar)
+        self.font_numbers_defense = db.font("Science Gothic", "Regular", self.size_font_defense)
+        self.font_defensive_formae = db.font("Pirata One", "Regular", self.size_font_defensive_formae)
 
         # icons
-        icon_slot_blood_code_size = QSize(150, 150)
-        icon_slot_item_size = QSize(75, 75)
-        icon_slot_item_addon_size = QSize(24, 24)
-        icon_slot_forma_size = QSize(30, 30)
-        icon_attribute_size = QSize(24, 24)
-        icon_defense_size = QSize(24, 24)
-        icon_side_menu_button_size = QSize(24, 32)
-        icon_side_menu_content_size = QSize(70, 70)
-
         icon_slot_blood_code = QIcon()
         icon_slot_blood_code.addFile(u":/All/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         icon_slot_item = QIcon()
@@ -148,6 +282,10 @@ class Ui_MainWindow(object):
         icon_text_arrow.addFile(u":/All/UI/Text_Arrow.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
         # central widget
+        #
+        # TODO? change to higher resolution background on resize?
+        #
+        # TODO? change QScrollBar style sizes (width, border) on resize?
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"""
@@ -259,18 +397,16 @@ class Ui_MainWindow(object):
                 }
             """)
 
-        # side menu common
-        self.margin_size = 24
-        self.margin_size_overlapping = 0
-
         # side vertical layout 1
         self.side_vertical_layout_widget_1 = QWidget(self.centralwidget)
         self.side_vertical_layout_widget_1.setObjectName(u"side_vertical_layout_widget_1")
-        side_vertical_layout_widget_1_width = 340
-        self.side_vertical_layout_widget_1.setGeometry(QRect(1080, 0, side_vertical_layout_widget_1_width, 810))
+        self.side_vertical_layout_widget_1.setGeometry(QRect(self.size_side_vertical_layout_widget_1_x,
+                                                             0,
+                                                             self.size_side_vertical_layout_widget_1_width,
+                                                             self.size_side_vertical_layout_widget_1_height))
         self.side_vertical_layout_1 = QVBoxLayout(self.side_vertical_layout_widget_1)
         self.side_vertical_layout_1.setObjectName(u"side_vertical_layout_1")
-        self.side_vertical_layout_1.setContentsMargins(self.margin_size, self.margin_size, 0, self.margin_size_overlapping)
+        self.side_vertical_layout_1.setContentsMargins(self.size_margin, self.size_margin, 0, self.size_margin_overlapping)
         self.side_vertical_layout_1.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
 
         # side vertical layout 1 content - list widget 1 - menu buttons
@@ -283,20 +419,23 @@ class Ui_MainWindow(object):
         self.side_menu_buttons.setObjectName(u"side_menu_buttons")
         self.side_menu_buttons.setFlow(QListView.LeftToRight)
         self.side_menu_buttons.setWrapping(True)
-        self.side_menu_buttons.setMinimumWidth(side_vertical_layout_widget_1_width)
-        self.side_menu_buttons.setMaximumWidth(side_vertical_layout_widget_1_width)
+        self.side_menu_buttons.setMinimumWidth(self.size_side_vertical_layout_widget_1_width)
+        self.side_menu_buttons.setMaximumWidth(self.size_side_vertical_layout_widget_1_width)
         self.side_menu_buttons.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
-        self.side_menu_buttons.setIconSize(icon_side_menu_button_size)
+        self.side_menu_buttons.setIconSize(QSize(self.size_icon_side_menu_button_width, self.size_icon_side_menu_button_height))
         self.side_vertical_layout_1.addWidget(self.side_menu_buttons)
         self.side_menu_buttons.setMouseTracking(True)
 
         # side vertical layout 2
         self.side_vertical_layout_widget_2 = QWidget(self.centralwidget)
         self.side_vertical_layout_widget_2.setObjectName(u"side_vertical_layout_widget_2")
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, self.margin_size, 360, 810 - self.margin_size))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(self.size_side_vertical_layout_widget_1_x,
+                                                             self.size_margin,
+                                                             self.size_side_vertical_layout_widget_2_width,
+                                                             self.size_side_vertical_layout_widget_1_height - self.size_margin))
         self.side_vertical_layout_2 = QVBoxLayout(self.side_vertical_layout_widget_2)
         self.side_vertical_layout_2.setObjectName(u"side_vertical_layout_2")
-        self.side_vertical_layout_2.setContentsMargins(self.margin_size, self.margin_size_overlapping, self.margin_size, self.margin_size)
+        self.side_vertical_layout_2.setContentsMargins(self.size_margin, self.size_margin_overlapping, self.size_margin, self.size_margin)
         self.side_vertical_layout_2.setAlignment(Qt.AlignmentFlag.AlignHCenter | Qt.AlignmentFlag.AlignTop)
 
         # side vertical layout 2 content - list widget 2 - menu content
@@ -304,10 +443,10 @@ class Ui_MainWindow(object):
         self.side_menu_content.setObjectName(u"side_menu_content")
         self.side_menu_content.setFlow(QListView.LeftToRight)
         self.side_menu_content.setWrapping(True)
-        self.side_menu_content.setMinimumWidth(360 - 2 * self.margin_size)
-        self.side_menu_content.setMaximumWidth(360 - 2 * self.margin_size)
-        self.side_menu_content.setIconSize(icon_side_menu_content_size)
-        self.side_menu_content.setGridSize(icon_side_menu_content_size)
+        self.side_menu_content.setMinimumWidth(self.size_side_vertical_layout_widget_2_width - 2 * self.size_margin)
+        self.side_menu_content.setMaximumWidth(self.size_side_vertical_layout_widget_2_width - 2 * self.size_margin)
+        self.side_menu_content.setIconSize(QSize(self.size_icon_side_menu_content, self.size_icon_side_menu_content))
+        self.side_menu_content.setGridSize(QSize(self.size_icon_side_menu_content, self.size_icon_side_menu_content))
         self.side_menu_content.setUniformItemSizes(True)
         self.side_vertical_layout_2.addWidget(self.side_menu_content)
         self.side_menu_content.setMouseTracking(True)
@@ -315,20 +454,23 @@ class Ui_MainWindow(object):
         self.side_menu_text = QTextEdit(self.centralwidget)
         self.side_menu_text.setObjectName(u"side_menu_text")
         self.side_menu_text.setReadOnly(True)
-        self.side_menu_text.setMinimumWidth(360 - 2 * self.margin_size)
-        self.side_menu_text.setMaximumWidth(360 - 2 * self.margin_size)
-        self.side_menu_text.setMinimumHeight(360)
-        self.side_menu_text.setMaximumHeight(360)
+        self.side_menu_text.setMinimumWidth(self.size_side_vertical_layout_widget_2_width - 2 * self.size_margin)
+        self.side_menu_text.setMaximumWidth(self.size_side_vertical_layout_widget_2_width - 2 * self.size_margin)
+        self.side_menu_text.setMinimumHeight(self.size_side_vertical_layout_widget_2_width)
+        self.side_menu_text.setMaximumHeight(self.size_side_vertical_layout_widget_2_width)
         self.side_menu_text.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.side_vertical_layout_2.addWidget(self.side_menu_text)
 
         # main vertical layout
         self.main_vertical_layout_widget = QWidget(self.centralwidget)
         self.main_vertical_layout_widget.setObjectName(u"main_vertical_layout_widget")
-        self.main_vertical_layout_widget.setGeometry(QRect(0, 0, 940, 810))
+        self.main_vertical_layout_widget.setGeometry(QRect(0,
+                                                           0,
+                                                           self.size_main_vertical_layout_width,
+                                                           self.size_side_vertical_layout_widget_1_height))
         self.main_vertical_layout = QVBoxLayout(self.main_vertical_layout_widget)
         self.main_vertical_layout.setObjectName(u"main_vertical_layout")
-        self.main_vertical_layout.setContentsMargins(self.margin_size, self.margin_size, self.margin_size, self.margin_size)
+        self.main_vertical_layout.setContentsMargins(self.size_margin, self.size_margin, self.size_margin, self.size_margin)
 
         # 1st horizontal layout
         self.main_horizontal_layout_1 = QHBoxLayout()
@@ -342,9 +484,13 @@ class Ui_MainWindow(object):
         self.tool_button_h1_1.setText(QCoreApplication.translate("MainWindow", u"Attack", None)) # move to re-translate
         self.tool_button_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.tool_button_h1_1.setIcon(icon_text_arrow)
+        self.tool_button_h1_1.setIconSize(QSize(self.size_icon_arrow_width, self.size_icon_arrow_height))
         self.main_horizontal_layout_1.addWidget(self.tool_button_h1_1)
 
-        self.horizontal_spacer_h1_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontal_spacer_h1_1 = QSpacerItem(self.size_spacer_h1_1_width,
+                                                  self.size_spacer_h1_1_height,
+                                                  QSizePolicy.Policy.Expanding,
+                                                  QSizePolicy.Policy.Minimum)
         self.main_horizontal_layout_1.addItem(self.horizontal_spacer_h1_1)
 
         self.label_h1_2 = QLabel(self.main_vertical_layout_widget)
@@ -358,7 +504,10 @@ class Ui_MainWindow(object):
         self.tool_button_h1_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.main_horizontal_layout_1.addWidget(self.tool_button_h1_2)
 
-        self.horizontal_spacer_h1_2 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontal_spacer_h1_2 = QSpacerItem(self.size_spacer_h1_1_width,
+                                                  self.size_spacer_h1_1_height,
+                                                  QSizePolicy.Policy.Expanding,
+                                                  QSizePolicy.Policy.Minimum)
         self.main_horizontal_layout_1.addItem(self.horizontal_spacer_h1_2)
 
         self.label_h1_3 = QLabel(self.main_vertical_layout_widget)
@@ -374,7 +523,10 @@ class Ui_MainWindow(object):
         self.tool_button_h1_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.main_horizontal_layout_1.addWidget(self.tool_button_h1_3)
 
-        self.horizontal_spacer_h1_3 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontal_spacer_h1_3 = QSpacerItem(self.size_spacer_h1_1_width,
+                                                  self.size_spacer_h1_1_height,
+                                                  QSizePolicy.Policy.Expanding,
+                                                  QSizePolicy.Policy.Minimum)
         self.main_horizontal_layout_1.addItem(self.horizontal_spacer_h1_3)
 
         # 2nd horizontal layout
@@ -401,7 +553,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_1.setObjectName(u"Weapon_1_Forma_1")
         self.push_button_h2_v1_1.setText(QCoreApplication.translate("MainWindow", u"Forma 1: None", None)) # move to re-translate
         self.push_button_h2_v1_1.setIcon(icon_slot_forma)
-        self.push_button_h2_v1_1.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v1_1.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_1, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v1_1.clicked.connect(self.fill_side_menu_forma)
         self.push_button_h2_v1_1.set_button_type("Forma")
@@ -410,7 +562,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_2.setObjectName(u"Weapon_1_Forma_2")
         self.push_button_h2_v1_2.setText(QCoreApplication.translate("MainWindow", u"Forma 2: None", None)) # move to re-translate
         self.push_button_h2_v1_2.setIcon(icon_slot_forma)
-        self.push_button_h2_v1_2.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v1_2.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_2, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v1_2.clicked.connect(self.fill_side_menu_forma)
         self.push_button_h2_v1_2.set_button_type("Forma")
@@ -419,7 +571,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_3.setObjectName(u"Weapon_1_Forma_3")
         self.push_button_h2_v1_3.setText(QCoreApplication.translate("MainWindow", u"Forma 3: None", None)) # move to re-translate
         self.push_button_h2_v1_3.setIcon(icon_slot_forma)
-        self.push_button_h2_v1_3.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v1_3.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_3, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v1_3.clicked.connect(self.fill_side_menu_forma)
         self.push_button_h2_v1_3.set_button_type("Forma")
@@ -428,7 +580,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v1_4.setObjectName(u"Weapon_1_Forma_4")
         self.push_button_h2_v1_4.setText(QCoreApplication.translate("MainWindow", u"Forma 4: None", None)) # move to re-translate
         self.push_button_h2_v1_4.setIcon(icon_slot_forma)
-        self.push_button_h2_v1_4.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v1_4.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.vertical_layout_h2_1.addWidget(self.push_button_h2_v1_4, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v1_4.clicked.connect(self.fill_side_menu_forma)
         self.push_button_h2_v1_4.set_button_type("Forma")
@@ -437,11 +589,11 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v1_h1_1 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v1_h1_1.setObjectName(u"Weapon_1_Button")
         # maximum width to avoid pushing blood code too far to the right (with long weapon name)
-        self.tool_button_h2_v1_h1_1.setMaximumWidth(130)
+        self.tool_button_h2_v1_h1_1.setMaximumWidth(self.size_slot_item_width)
         self.tool_button_h2_v1_h1_1.setText(QCoreApplication.translate("MainWindow", u"Weapon 1", None)) # move to re-translate
         self.tool_button_h2_v1_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v1_h1_1.setIcon(icon_slot_item)
-        self.tool_button_h2_v1_h1_1.setIconSize(icon_slot_item_size)
+        self.tool_button_h2_v1_h1_1.setIconSize(QSize(self.size_icon_slot_item, self.size_icon_slot_item))
         self.horizontal_layout_h2_v1_1.addWidget(self.tool_button_h2_v1_h1_1)
         self.tool_button_h2_v1_h1_1.clicked.connect(self.fill_side_menu_weapon)
         self.tool_button_h2_v1_h1_1.set_button_type("Weapon")
@@ -449,7 +601,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v1_h1_1a = MyQToolButton(self.centralwidget)
         self.tool_button_h2_v1_h1_1a.setObjectName(u"Transform_Weapon_1_Button")
         self.tool_button_h2_v1_h1_1a.setIcon(icon_slot_item_addon)
-        self.tool_button_h2_v1_h1_1a.setIconSize(icon_slot_item_addon_size)
+        self.tool_button_h2_v1_h1_1a.setIconSize(QSize(self.size_icon_slot_item_addon, self.size_icon_slot_item_addon))
         self.tool_button_h2_v1_h1_1a.clicked.connect(self.fill_side_menu_transform)
         # self.tool_button_h2_v1_h1_1a.set_button_type("Transform")  # TODO
 
@@ -562,7 +714,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_1.setObjectName(u"Weapon_2_Forma_1")
         self.push_button_h2_v2_1.setText(QCoreApplication.translate("MainWindow", u"Forma 1: None", None))  # move to re-translate
         self.push_button_h2_v2_1.setIcon(icon_slot_forma)
-        self.push_button_h2_v2_1.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v2_1.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_1, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v2_1.clicked.connect(self.fill_side_menu_forma)
         self.push_button_h2_v2_1.set_button_type("Forma")
@@ -571,7 +723,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_2.setObjectName(u"Weapon_2_Forma_2")
         self.push_button_h2_v2_2.setText(QCoreApplication.translate("MainWindow", u"Forma 2: None", None))  # move to re-translate
         self.push_button_h2_v2_2.setIcon(icon_slot_forma)
-        self.push_button_h2_v2_2.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v2_2.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_2, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v2_2.clicked.connect(self.fill_side_menu_forma)
         self.push_button_h2_v2_2.set_button_type("Forma")
@@ -580,7 +732,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_3.setObjectName(u"Weapon_2_Forma_3")
         self.push_button_h2_v2_3.setText(QCoreApplication.translate("MainWindow", u"Forma 3: None", None))  # move to re-translate
         self.push_button_h2_v2_3.setIcon(icon_slot_forma)
-        self.push_button_h2_v2_3.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v2_3.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_3, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v2_3.clicked.connect(self.fill_side_menu_forma)
         self.push_button_h2_v2_3.set_button_type("Forma")
@@ -589,7 +741,7 @@ class Ui_MainWindow(object):
         self.push_button_h2_v2_4.setObjectName(u"Weapon_2_Forma_4")
         self.push_button_h2_v2_4.setText(QCoreApplication.translate("MainWindow", u"Forma 4: None", None))  # move to re-translate
         self.push_button_h2_v2_4.setIcon(icon_slot_forma)
-        self.push_button_h2_v2_4.setIconSize(icon_slot_forma_size)
+        self.push_button_h2_v2_4.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.vertical_layout_h2_2.addWidget(self.push_button_h2_v2_4, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v2_4.clicked.connect(self.fill_side_menu_forma)
         self.push_button_h2_v2_4.set_button_type("Forma")
@@ -598,11 +750,11 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v2_h1_1 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v2_h1_1.setObjectName(u"Weapon_2_Button")
         # maximum width to avoid pushing blood code too far to the right (with long weapon name)
-        self.tool_button_h2_v2_h1_1.setMaximumWidth(130)
+        self.tool_button_h2_v2_h1_1.setMaximumWidth(self.size_slot_item_width)
         self.tool_button_h2_v2_h1_1.setText(QCoreApplication.translate("MainWindow", u"Weapon 2", None))  # move to re-translate
         self.tool_button_h2_v2_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v2_h1_1.setIcon(icon_slot_item)
-        self.tool_button_h2_v2_h1_1.setIconSize(icon_slot_item_size)
+        self.tool_button_h2_v2_h1_1.setIconSize(QSize(self.size_icon_slot_item, self.size_icon_slot_item))
         self.horizontal_layout_h2_v2_1.addWidget(self.tool_button_h2_v2_h1_1)
         self.tool_button_h2_v2_h1_1.clicked.connect(self.fill_side_menu_weapon)
         self.tool_button_h2_v2_h1_1.set_button_type("Weapon")
@@ -610,7 +762,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v2_h1_1a = MyQToolButton(self.centralwidget)
         self.tool_button_h2_v2_h1_1a.setObjectName(u"Transform_Weapon_2_Button")
         self.tool_button_h2_v2_h1_1a.setIcon(icon_slot_item_addon)
-        self.tool_button_h2_v2_h1_1a.setIconSize(icon_slot_item_addon_size)
+        self.tool_button_h2_v2_h1_1a.setIconSize(QSize(self.size_icon_slot_item_addon, self.size_icon_slot_item_addon))
         self.tool_button_h2_v2_h1_1a.clicked.connect(self.fill_side_menu_transform)
         # self.tool_button_h2_v2_h1_1.set_button_type("Transform")  # TODO
 
@@ -721,22 +873,22 @@ class Ui_MainWindow(object):
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1 content
         self.tool_button_h2_v3_h1_1 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v3_h1_1.setObjectName(u"Offensive_Button")
-        self.tool_button_h2_v3_h1_1.setMaximumWidth(130)
+        self.tool_button_h2_v3_h1_1.setMaximumWidth(self.size_slot_item_width)
         self.tool_button_h2_v3_h1_1.setText(QCoreApplication.translate("MainWindow", u"Offensive", None)) # move to re-translate
         self.tool_button_h2_v3_h1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h1_1.setIcon(icon_slot_item)
-        self.tool_button_h2_v3_h1_1.setIconSize(icon_slot_item_size)
+        self.tool_button_h2_v3_h1_1.setIconSize(QSize(self.size_icon_slot_item, self.size_icon_slot_item))
         self.horizontal_layout_h2_v3_1.addWidget(self.tool_button_h2_v3_h1_1)
         self.tool_button_h2_v3_h1_1.clicked.connect(self.fill_side_menu_offensive)
         self.tool_button_h2_v3_h1_1.set_button_type("Offensive")
 
         self.tool_button_h2_v3_h1_2 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v3_h1_2.setObjectName(u"Defensive_Button")
-        self.tool_button_h2_v3_h1_2.setMaximumWidth(130)
+        self.tool_button_h2_v3_h1_2.setMaximumWidth(self.size_slot_item_width)
         self.tool_button_h2_v3_h1_2.setText(QCoreApplication.translate("MainWindow", u"Defensive", None)) # move to re-translate
         self.tool_button_h2_v3_h1_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h1_2.setIcon(icon_slot_item)
-        self.tool_button_h2_v3_h1_2.setIconSize(icon_slot_item_size)
+        self.tool_button_h2_v3_h1_2.setIconSize(QSize(self.size_icon_slot_item, self.size_icon_slot_item))
         self.horizontal_layout_h2_v3_1.addWidget(self.tool_button_h2_v3_h1_2)
         self.tool_button_h2_v3_h1_2.clicked.connect(self.fill_side_menu_defensive)
         self.tool_button_h2_v3_h1_2.set_button_type("Defensive")
@@ -744,17 +896,17 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h1_2a = MyQToolButton(self.centralwidget)
         self.tool_button_h2_v3_h1_2a.setObjectName(u"Transform_Defensive_Button")
         self.tool_button_h2_v3_h1_2a.setIcon(icon_slot_item_addon)
-        self.tool_button_h2_v3_h1_2a.setIconSize(icon_slot_item_addon_size)
+        self.tool_button_h2_v3_h1_2a.setIconSize(QSize(self.size_icon_slot_item_addon, self.size_icon_slot_item_addon))
         self.tool_button_h2_v3_h1_2a.clicked.connect(self.fill_side_menu_transform)
         # self.tool_button_h2_v3_h1_2a.set_button_type("Transform")  # TODO
 
         self.tool_button_h2_v3_h1_3 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h2_v3_h1_3.setObjectName(u"Jail_Button")
-        self.tool_button_h2_v3_h1_3.setMaximumWidth(130)
+        self.tool_button_h2_v3_h1_3.setMaximumWidth(self.size_slot_item_width)
         self.tool_button_h2_v3_h1_3.setText(QCoreApplication.translate("MainWindow", u"Jail", None)) # move to re-translate
         self.tool_button_h2_v3_h1_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h1_3.setIcon(icon_slot_item)
-        self.tool_button_h2_v3_h1_3.setIconSize(icon_slot_item_size)
+        self.tool_button_h2_v3_h1_3.setIconSize(QSize(self.size_icon_slot_item, self.size_icon_slot_item))
         self.horizontal_layout_h2_v3_1.addWidget(self.tool_button_h2_v3_h1_3)
         self.tool_button_h2_v3_h1_3.clicked.connect(self.fill_side_menu_jail)
         self.tool_button_h2_v3_h1_3.set_button_type("Jail")
@@ -825,7 +977,7 @@ class Ui_MainWindow(object):
         self.tool_button_h2_v3_h2_1.setText(QCoreApplication.translate("MainWindow", u"Blood Code", None)) # move to re-translate
         self.tool_button_h2_v3_h2_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h2_v3_h2_1.setIcon(icon_slot_blood_code)
-        self.tool_button_h2_v3_h2_1.setIconSize(icon_slot_blood_code_size)
+        self.tool_button_h2_v3_h2_1.setIconSize(QSize(self.size_icon_slot_blood_code, self.size_icon_slot_blood_code))
         self.horizontal_layout_h2_v3_2.addWidget(self.tool_button_h2_v3_h2_1)
         self.tool_button_h2_v3_h2_1.clicked.connect(self.fill_side_menu_blood_code)
         self.tool_button_h2_v3_h2_1.set_button_type("BloodCode")
@@ -842,8 +994,8 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_1.setObjectName(u"Booster_1_Button")
         self.push_button_h2_v3_h2_v1_1.setText(QCoreApplication.translate("MainWindow", u"Booster 1: None", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_1.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h2_v1_1.setIconSize(icon_slot_forma_size)
-        self.push_button_h2_v3_h2_v1_1.setMinimumHeight(icon_slot_forma_size.height())
+        self.push_button_h2_v3_h2_v1_1.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
+        self.push_button_h2_v3_h2_v1_1.setMinimumHeight(self.size_icon_slot_forma)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_1, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_1.clicked.connect(self.fill_side_menu_booster)
         self.push_button_h2_v3_h2_v1_1.set_button_type("Booster")
@@ -852,8 +1004,8 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_2.setObjectName(u"Booster_2_Button")
         self.push_button_h2_v3_h2_v1_2.setText(QCoreApplication.translate("MainWindow", u"Booster 2: None", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_2.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h2_v1_2.setIconSize(icon_slot_forma_size)
-        self.push_button_h2_v3_h2_v1_2.setMinimumHeight(icon_slot_forma_size.height())
+        self.push_button_h2_v3_h2_v1_2.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
+        self.push_button_h2_v3_h2_v1_2.setMinimumHeight(self.size_icon_slot_forma)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_2, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_2.clicked.connect(self.fill_side_menu_booster)
         self.push_button_h2_v3_h2_v1_2.set_button_type("Booster")
@@ -862,8 +1014,8 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_3.setObjectName(u"Booster_3_Button")
         self.push_button_h2_v3_h2_v1_3.setText(QCoreApplication.translate("MainWindow", u"Booster 3: None", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_3.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h2_v1_3.setIconSize(icon_slot_forma_size)
-        self.push_button_h2_v3_h2_v1_3.setMinimumHeight(icon_slot_forma_size.height())
+        self.push_button_h2_v3_h2_v1_3.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
+        self.push_button_h2_v3_h2_v1_3.setMinimumHeight(self.size_icon_slot_forma)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_3, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_3.clicked.connect(self.fill_side_menu_booster)
         self.push_button_h2_v3_h2_v1_3.set_button_type("Booster")
@@ -872,8 +1024,8 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_4.setObjectName(u"Booster_4_Button")
         self.push_button_h2_v3_h2_v1_4.setText(QCoreApplication.translate("MainWindow", u"Booster 4: None", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_4.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h2_v1_4.setIconSize(icon_slot_forma_size)
-        self.push_button_h2_v3_h2_v1_4.setMinimumHeight(icon_slot_forma_size.height())
+        self.push_button_h2_v3_h2_v1_4.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
+        self.push_button_h2_v3_h2_v1_4.setMinimumHeight(self.size_icon_slot_forma)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_4, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_4.clicked.connect(self.fill_side_menu_booster)
         self.push_button_h2_v3_h2_v1_4.set_button_type("Booster")
@@ -882,8 +1034,8 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_5.setObjectName(u"Booster_5_Button")
         self.push_button_h2_v3_h2_v1_5.setText(QCoreApplication.translate("MainWindow", u"Booster 5: None", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_5.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h2_v1_5.setIconSize(icon_slot_forma_size)
-        self.push_button_h2_v3_h2_v1_5.setMinimumHeight(icon_slot_forma_size.height())
+        self.push_button_h2_v3_h2_v1_5.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
+        self.push_button_h2_v3_h2_v1_5.setMinimumHeight(self.size_icon_slot_forma)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_5, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_5.clicked.connect(self.fill_side_menu_booster)
         self.push_button_h2_v3_h2_v1_5.set_button_type("Booster")
@@ -892,8 +1044,8 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_6.setObjectName(u"Booster_6_Button")
         self.push_button_h2_v3_h2_v1_6.setText(QCoreApplication.translate("MainWindow", u"Booster 6: None", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_6.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h2_v1_6.setIconSize(icon_slot_forma_size)
-        self.push_button_h2_v3_h2_v1_6.setMinimumHeight(icon_slot_forma_size.height())
+        self.push_button_h2_v3_h2_v1_6.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
+        self.push_button_h2_v3_h2_v1_6.setMinimumHeight(self.size_icon_slot_forma)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_6, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_6.clicked.connect(self.fill_side_menu_booster)
         self.push_button_h2_v3_h2_v1_6.set_button_type("Booster")
@@ -904,8 +1056,8 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_7.setText(QCoreApplication.translate("MainWindow", u"Trait 1: None", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_7.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.push_button_h2_v3_h2_v1_7.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h2_v1_7.setIconSize(icon_slot_forma_size)
-        self.push_button_h2_v3_h2_v1_7.setMinimumHeight(icon_slot_forma_size.height())
+        self.push_button_h2_v3_h2_v1_7.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
+        self.push_button_h2_v3_h2_v1_7.setMinimumHeight(self.size_icon_slot_forma)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_7, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_7.set_button_type("Trait")
 
@@ -914,8 +1066,8 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_8.setText(QCoreApplication.translate("MainWindow", u"Trait 2: None", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_8.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.push_button_h2_v3_h2_v1_8.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h2_v1_8.setIconSize(icon_slot_forma_size)
-        self.push_button_h2_v3_h2_v1_8.setMinimumHeight(icon_slot_forma_size.height())
+        self.push_button_h2_v3_h2_v1_8.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
+        self.push_button_h2_v3_h2_v1_8.setMinimumHeight(self.size_icon_slot_forma)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_8, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_8.set_button_type("Trait")
 
@@ -924,13 +1076,16 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_9.setText(QCoreApplication.translate("MainWindow", u"Trait 3: None", None)) # move to re-translate
         self.push_button_h2_v3_h2_v1_9.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.push_button_h2_v3_h2_v1_9.setIcon(icon_slot_item)
-        self.push_button_h2_v3_h2_v1_9.setIconSize(icon_slot_forma_size)
-        self.push_button_h2_v3_h2_v1_9.setMinimumHeight(icon_slot_forma_size.height())
+        self.push_button_h2_v3_h2_v1_9.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
+        self.push_button_h2_v3_h2_v1_9.setMinimumHeight(self.size_icon_slot_forma)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_9, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_9.set_button_type("Trait")
 
         # 2nd horizontal layout content - spacer at the end (right)
-        self.horizontal_spacer_h2_1 = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontal_spacer_h2_1 = QSpacerItem(self.size_spacer_h1_1_width,
+                                                  self.size_spacer_h1_1_height,
+                                                  QSizePolicy.Policy.Expanding,
+                                                  QSizePolicy.Policy.Minimum)
         self.main_horizontal_layout_2.addItem(self.horizontal_spacer_h2_1)
 
         # 3rd horizontal layout
@@ -950,6 +1105,7 @@ class Ui_MainWindow(object):
         self.tool_button_h3_g1_1.setText(QCoreApplication.translate("MainWindow", u"Dodge Effectiveness", None)) # move to re-translate
         self.tool_button_h3_g1_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.tool_button_h3_g1_1.setIcon(icon_text_arrow)
+        self.tool_button_h3_g1_1.setIconSize(QSize(self.size_icon_arrow_width, self.size_icon_arrow_height))
 
         self.tool_button_h3_g1_2 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h3_g1_2.setObjectName(u"tool_button_h3_g1_2")
@@ -961,6 +1117,7 @@ class Ui_MainWindow(object):
         self.tool_button_h3_g1_3.setText(QCoreApplication.translate("MainWindow", u"Defensive Formae", None)) # move to re-translate
         self.tool_button_h3_g1_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.tool_button_h3_g1_3.setIcon(icon_text_arrow)
+        self.tool_button_h3_g1_3.setIconSize(QSize(self.size_icon_arrow_width, self.size_icon_arrow_height))
 
         self.tool_button_h3_g1_4 = MyQToolButton(self.main_vertical_layout_widget)
         self.tool_button_h3_g1_4.setObjectName(u"tool_button_h3_g1_4")
@@ -997,37 +1154,37 @@ class Ui_MainWindow(object):
         self.tool_button_h3_v1_g1_1.setObjectName(u"tool_button_h3_v1_g1_1")
         self.tool_button_h3_v1_g1_1.setText(QCoreApplication.translate("MainWindow", u"Strength", None)) # move to re-translate
         self.tool_button_h3_v1_g1_1.setIcon(icon_attribute_strength)
-        self.tool_button_h3_v1_g1_1.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_1.setIconSize(QSize(self.size_icon_attribute, self.size_icon_attribute))
 
         self.tool_button_h3_v1_g1_2 = MyQPushButton(self.main_vertical_layout_widget)
         self.tool_button_h3_v1_g1_2.setObjectName(u"tool_button_h3_v1_g1_2")
         self.tool_button_h3_v1_g1_2.setText(QCoreApplication.translate("MainWindow", u"Dexterity", None)) # move to re-translate
         self.tool_button_h3_v1_g1_2.setIcon(icon_attribute_dexterity)
-        self.tool_button_h3_v1_g1_2.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_2.setIconSize(QSize(self.size_icon_attribute, self.size_icon_attribute))
 
         self.tool_button_h3_v1_g1_3 = MyQPushButton(self.main_vertical_layout_widget)
         self.tool_button_h3_v1_g1_3.setObjectName(u"tool_button_h3_v1_g1_3")
         self.tool_button_h3_v1_g1_3.setText(QCoreApplication.translate("MainWindow", u"Mind", None)) # move to re-translate
         self.tool_button_h3_v1_g1_3.setIcon(icon_attribute_mind)
-        self.tool_button_h3_v1_g1_3.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_3.setIconSize(QSize(self.size_icon_attribute, self.size_icon_attribute))
 
         self.tool_button_h3_v1_g1_4 = MyQPushButton(self.main_vertical_layout_widget)
         self.tool_button_h3_v1_g1_4.setObjectName(u"tool_button_h3_v1_g1_4")
         self.tool_button_h3_v1_g1_4.setText(QCoreApplication.translate("MainWindow", u"Willpower", None)) # move to re-translate
         self.tool_button_h3_v1_g1_4.setIcon(icon_attribute_willpower)
-        self.tool_button_h3_v1_g1_4.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_4.setIconSize(QSize(self.size_icon_attribute, self.size_icon_attribute))
 
         self.tool_button_h3_v1_g1_5 = MyQPushButton(self.main_vertical_layout_widget)
         self.tool_button_h3_v1_g1_5.setObjectName(u"tool_button_h3_v1_g1_5")
         self.tool_button_h3_v1_g1_5.setText(QCoreApplication.translate("MainWindow", u"Vitality", None)) # move to re-translate
         self.tool_button_h3_v1_g1_5.setIcon(icon_attribute_vitality)
-        self.tool_button_h3_v1_g1_5.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_5.setIconSize(QSize(self.size_icon_attribute, self.size_icon_attribute))
 
         self.tool_button_h3_v1_g1_6 = MyQPushButton(self.main_vertical_layout_widget)
         self.tool_button_h3_v1_g1_6.setObjectName(u"tool_button_h3_v1_g1_6")
         self.tool_button_h3_v1_g1_6.setText(QCoreApplication.translate("MainWindow", u"Fortitude", None)) # move to re-translate
         self.tool_button_h3_v1_g1_6.setIcon(icon_attribute_fortitude)
-        self.tool_button_h3_v1_g1_6.setIconSize(icon_attribute_size)
+        self.tool_button_h3_v1_g1_6.setIconSize(QSize(self.size_icon_attribute, self.size_icon_attribute))
 
         self.label_h3_v1_g1_1 = QLabel(self.main_vertical_layout_widget)
         self.label_h3_v1_g1_1.setObjectName(u"label_h3_v1_g1_1")
@@ -1140,6 +1297,7 @@ class Ui_MainWindow(object):
         self.tool_button_pre_h4.setText(QCoreApplication.translate("MainWindow", u"Defense", None)) # move to re-translate
         self.tool_button_pre_h4.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.tool_button_pre_h4.setIcon(icon_text_arrow)
+        self.tool_button_pre_h4.setIconSize(QSize(self.size_icon_arrow_width, self.size_icon_arrow_height))
         self.main_vertical_layout.addWidget(self.tool_button_pre_h4)
 
         self.main_horizontal_layout_4 = QHBoxLayout()
@@ -1154,7 +1312,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_1.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h4_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_1.setIcon(icon_defense_slash)
-        self.tool_button_h4_1.setIconSize(icon_defense_size)
+        self.tool_button_h4_1.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_1)
 
         self.tool_button_h4_2 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1163,7 +1321,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_2.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h4_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_2.setIcon(icon_defense_crush)
-        self.tool_button_h4_2.setIconSize(icon_defense_size)
+        self.tool_button_h4_2.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_2)
 
         self.tool_button_h4_3 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1172,7 +1330,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_3.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h4_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_3.setIcon(icon_defense_pierce)
-        self.tool_button_h4_3.setIconSize(icon_defense_size)
+        self.tool_button_h4_3.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_3)
 
         self.tool_button_h4_4 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1181,7 +1339,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_4.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h4_4.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_4.setIcon(icon_defense_blood)
-        self.tool_button_h4_4.setIconSize(icon_defense_size)
+        self.tool_button_h4_4.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_4)
 
         self.tool_button_h4_5 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1190,7 +1348,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_5.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h4_5.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_5.setIcon(icon_defense_fire)
-        self.tool_button_h4_5.setIconSize(icon_defense_size)
+        self.tool_button_h4_5.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_5)
 
         self.tool_button_h4_6 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1199,7 +1357,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_6.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h4_6.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_6.setIcon(icon_defense_ice)
-        self.tool_button_h4_6.setIconSize(icon_defense_size)
+        self.tool_button_h4_6.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_6)
 
         self.tool_button_h4_7 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1208,7 +1366,7 @@ class Ui_MainWindow(object):
         self.tool_button_h4_7.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h4_7.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h4_7.setIcon(icon_defense_thunder)
-        self.tool_button_h4_7.setIconSize(icon_defense_size)
+        self.tool_button_h4_7.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_4.addWidget(self.tool_button_h4_7)
 
         # 5th horizontal layout
@@ -1217,6 +1375,7 @@ class Ui_MainWindow(object):
         self.tool_button_pre_h5.setText(QCoreApplication.translate("MainWindow", u"Guarding Defense", None)) # move to re-translate
         self.tool_button_pre_h5.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.tool_button_pre_h5.setIcon(icon_text_arrow)
+        self.tool_button_pre_h5.setIconSize(QSize(self.size_icon_arrow_width, self.size_icon_arrow_height))
         self.main_vertical_layout.addWidget(self.tool_button_pre_h5)
 
         self.main_horizontal_layout_5 = QHBoxLayout()
@@ -1231,7 +1390,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_1.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h5_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_1.setIcon(icon_defense_slash)
-        self.tool_button_h5_1.setIconSize(icon_defense_size)
+        self.tool_button_h5_1.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_1)
 
         self.tool_button_h5_2 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1240,7 +1399,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_2.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h5_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_2.setIcon(icon_defense_crush)
-        self.tool_button_h5_2.setIconSize(icon_defense_size)
+        self.tool_button_h5_2.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_2)
 
         self.tool_button_h5_3 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1249,7 +1408,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_3.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h5_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_3.setIcon(icon_defense_pierce)
-        self.tool_button_h5_3.setIconSize(icon_defense_size)
+        self.tool_button_h5_3.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_3)
 
         self.tool_button_h5_4 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1258,7 +1417,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_4.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h5_4.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_4.setIcon(icon_defense_blood)
-        self.tool_button_h5_4.setIconSize(icon_defense_size)
+        self.tool_button_h5_4.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_4)
 
         self.tool_button_h5_5 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1267,7 +1426,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_5.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h5_5.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_5.setIcon(icon_defense_fire)
-        self.tool_button_h5_5.setIconSize(icon_defense_size)
+        self.tool_button_h5_5.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_5)
 
         self.tool_button_h5_6 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1276,7 +1435,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_6.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h5_6.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_6.setIcon(icon_defense_ice)
-        self.tool_button_h5_6.setIconSize(icon_defense_size)
+        self.tool_button_h5_6.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_6)
 
         self.tool_button_h5_7 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1285,7 +1444,7 @@ class Ui_MainWindow(object):
         self.tool_button_h5_7.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h5_7.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h5_7.setIcon(icon_defense_thunder)
-        self.tool_button_h5_7.setIconSize(icon_defense_size)
+        self.tool_button_h5_7.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_5.addWidget(self.tool_button_h5_7)
 
         # 6th horizontal layout
@@ -1294,6 +1453,7 @@ class Ui_MainWindow(object):
         self.tool_button_pre_h6.setText(QCoreApplication.translate("MainWindow", u"Resistances", None)) # move to re-translate
         self.tool_button_pre_h6.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.tool_button_pre_h6.setIcon(icon_text_arrow)
+        self.tool_button_pre_h6.setIconSize(QSize(self.size_icon_arrow_width, self.size_icon_arrow_height))
         self.main_vertical_layout.addWidget(self.tool_button_pre_h6)
 
         self.main_horizontal_layout_6 = QHBoxLayout()
@@ -1308,7 +1468,7 @@ class Ui_MainWindow(object):
         self.tool_button_h6_1.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h6_1.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h6_1.setIcon(icon_resistance_disease)
-        self.tool_button_h6_1.setIconSize(icon_defense_size)
+        self.tool_button_h6_1.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_1)
 
         self.tool_button_h6_2 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1317,7 +1477,7 @@ class Ui_MainWindow(object):
         self.tool_button_h6_2.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h6_2.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h6_2.setIcon(icon_resistance_wound)
-        self.tool_button_h6_2.setIconSize(icon_defense_size)
+        self.tool_button_h6_2.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_2)
 
         self.tool_button_h6_3 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1326,7 +1486,7 @@ class Ui_MainWindow(object):
         self.tool_button_h6_3.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h6_3.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h6_3.setIcon(icon_resistance_bleed)
-        self.tool_button_h6_3.setIconSize(icon_defense_size)
+        self.tool_button_h6_3.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_3)
 
         self.tool_button_h6_4 = MyQToolButton(self.main_vertical_layout_widget)
@@ -1335,7 +1495,7 @@ class Ui_MainWindow(object):
         self.tool_button_h6_4.setText(QCoreApplication.translate("MainWindow", u"0", None)) # move to re-translate
         self.tool_button_h6_4.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
         self.tool_button_h6_4.setIcon(icon_resistance_curse)
-        self.tool_button_h6_4.setIconSize(icon_defense_size)
+        self.tool_button_h6_4.setIconSize(QSize(self.size_icon_defense, self.size_icon_defense))
         self.main_horizontal_layout_6.addWidget(self.tool_button_h6_4)
 
         # dummy button for spacing
@@ -1470,7 +1630,10 @@ class Ui_MainWindow(object):
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(self.size_side_vertical_layout_widget_1_x,
+                                                             buttons_end_y,
+                                                             self.size_side_vertical_layout_widget_2_width,
+                                                             self.size_side_vertical_layout_widget_1_height - buttons_end_y))
 
         # content
         for k, v in self.builder.formae.items():
@@ -1532,7 +1695,10 @@ class Ui_MainWindow(object):
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(self.size_side_vertical_layout_widget_1_x,
+                                                             buttons_end_y,
+                                                             self.size_side_vertical_layout_widget_2_width,
+                                                             self.size_side_vertical_layout_widget_1_height - buttons_end_y))
 
         # content
         for k, v in self.builder.boosters.items():
@@ -1585,7 +1751,10 @@ class Ui_MainWindow(object):
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(self.size_side_vertical_layout_widget_1_x,
+                                                             buttons_end_y,
+                                                             self.size_side_vertical_layout_widget_2_width,
+                                                             self.size_side_vertical_layout_widget_1_height - buttons_end_y))
 
         # content
         for k, v in self.builder.weapons.items():
@@ -1595,7 +1764,7 @@ class Ui_MainWindow(object):
                 icon_1 = QIcon()
                 icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
                 icon_2 = QIcon(u":/All/Weapon/" + escape_filename(k) + ".png")
-                new_icon = self.merge_icons(icon_1, icon_2, 150)
+                new_icon = self.merge_icons(icon_1, icon_2, self.size_icon_slot_item)
                 item = QListWidgetItem(new_icon, "")
             item.setStatusTip(k)
             if v.favorite:
@@ -1631,7 +1800,10 @@ class Ui_MainWindow(object):
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(self.size_side_vertical_layout_widget_1_x,
+                                                             buttons_end_y,
+                                                             self.size_side_vertical_layout_widget_2_width,
+                                                             self.size_side_vertical_layout_widget_1_height - buttons_end_y))
 
         # content
         if mode == "Weapon":
@@ -1694,7 +1866,10 @@ class Ui_MainWindow(object):
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(self.size_side_vertical_layout_widget_1_x,
+                                                             buttons_end_y,
+                                                             self.size_side_vertical_layout_widget_2_width,
+                                                             self.size_side_vertical_layout_widget_1_height - buttons_end_y))
 
         # content
         for k, v in self.builder.blood_codes.items():
@@ -1725,7 +1900,10 @@ class Ui_MainWindow(object):
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(self.size_side_vertical_layout_widget_1_x,
+                                                             buttons_end_y,
+                                                             self.size_side_vertical_layout_widget_2_width,
+                                                             self.size_side_vertical_layout_widget_1_height - buttons_end_y))
 
         # content
         for k in self.builder.offensive_formae.keys():
@@ -1761,7 +1939,10 @@ class Ui_MainWindow(object):
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(self.size_side_vertical_layout_widget_1_x,
+                                                             buttons_end_y,
+                                                             self.size_side_vertical_layout_widget_2_width,
+                                                             self.size_side_vertical_layout_widget_1_height - buttons_end_y))
 
         # content
         for k, v in self.builder.defensive_formae.items():
@@ -1792,7 +1973,10 @@ class Ui_MainWindow(object):
 
         # content - reposition and resize layout so that content is placed right after visible buttons end
         buttons_end_y = self.calculate_buttons_end()
-        self.side_vertical_layout_widget_2.setGeometry(QRect(1080, buttons_end_y, 360, 810 - buttons_end_y))
+        self.side_vertical_layout_widget_2.setGeometry(QRect(self.size_side_vertical_layout_widget_1_x,
+                                                             buttons_end_y,
+                                                             self.size_side_vertical_layout_widget_2_width,
+                                                             self.size_side_vertical_layout_widget_1_height - buttons_end_y))
 
         # content
         for k in self.builder.jails.keys():
@@ -1855,7 +2039,7 @@ class Ui_MainWindow(object):
                     icon_1 = QIcon()
                     icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
                     icon_2 = QIcon(u":/All/Weapon/" + escape_filename(k) + ".png")
-                    new_icon = self.merge_icons(icon_1, icon_2, 150)
+                    new_icon = self.merge_icons(icon_1, icon_2, self.size_icon_slot_item)
                     item = QListWidgetItem(new_icon, "")
                 item.setStatusTip(k)
                 if v.favorite:
@@ -1962,7 +2146,7 @@ class Ui_MainWindow(object):
             icon_2 = QIcon()
             icon_2.addFile(u":/All/Weapon/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal,
                            QIcon.State.Off)
-            new_icon = self.merge_icons(icon_1, icon_2, 150)
+            new_icon = self.merge_icons(icon_1, icon_2, self.size_icon_slot_item)
             widget.setIcon(new_icon)
             widget.setText(name)
 
@@ -2015,7 +2199,7 @@ class Ui_MainWindow(object):
         else:
             icon_2 = QIcon()
             icon_2.addFile(u":/All/Offensive/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-            new_icon = self.merge_icons(icon_1, icon_2, 150)
+            new_icon = self.merge_icons(icon_1, icon_2, self.size_icon_slot_item)
             widget.setIcon(new_icon)
             widget.setText(name)
 
@@ -2036,7 +2220,7 @@ class Ui_MainWindow(object):
             icon_2 = QIcon()
             icon_2.addFile(u":/All/Defensive/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal,
                            QIcon.State.Off)
-            new_icon = self.merge_icons(icon_1, icon_2, 150)
+            new_icon = self.merge_icons(icon_1, icon_2, self.size_icon_slot_item)
             widget.setIcon(new_icon)
             widget.setText(name)
 
@@ -2064,7 +2248,7 @@ class Ui_MainWindow(object):
         else:
             icon_2 = QIcon()
             icon_2.addFile(u":/All/Jail/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-            new_icon = self.merge_icons(icon_1, icon_2, 150)
+            new_icon = self.merge_icons(icon_1, icon_2, self.size_icon_slot_item)
             widget.setIcon(new_icon)
             widget.setText(name)
 
@@ -2141,7 +2325,7 @@ class Ui_MainWindow(object):
         else:
             icon_2 = QIcon()
             icon_2.addFile(u":/All/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-            new_icon = self.merge_icons(icon_1, icon_2, 30, invert=not active)
+            new_icon = self.merge_icons(icon_1, icon_2, self.size_icon_slot_forma, invert=not active)
             widget.setIcon(new_icon)
 
             if name.startswith("<font"):
@@ -2200,7 +2384,7 @@ class Ui_MainWindow(object):
         else:
             icon_2 = QIcon()
             icon_2.addFile(u":/All/Forma/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
-            new_icon = self.merge_icons(icon_1, icon_2, 30)
+            new_icon = self.merge_icons(icon_1, icon_2, self.size_icon_slot_forma)
             widget.setIcon(new_icon)
             widget.setText(name)
 
@@ -2222,7 +2406,7 @@ class Ui_MainWindow(object):
             icon_2 = QIcon()
             icon_2.addFile(u":/All/Booster/" + escape_filename(name) + ".png", QSize(), QIcon.Mode.Normal,
                            QIcon.State.Off)
-            new_icon = self.merge_icons(icon_1, icon_2, 30, invert=not active)
+            new_icon = self.merge_icons(icon_1, icon_2, self.size_icon_slot_forma, invert=not active)
             widget.setIcon(new_icon)
 
     # could not find a way to overlay weapon icon over button icon with PyQt stylesheets
@@ -2293,7 +2477,7 @@ class Ui_MainWindow(object):
 
         # last_row_y is position of top left corner of rectangle, change it to bottom left corner by adding height
         # also need to account for margins, only the top one because bottom one is 0
-        return last_row_y + last_row_height + self.margin_size
+        return last_row_y + last_row_height + self.size_margin
 
     def set_character_to_widget_mapping(self):
         self.builder.widget_to_char_mapping = {
@@ -2402,7 +2586,7 @@ class Ui_MainWindow(object):
 
     def add_menu_bar(self, MainWindow):
         self.menubar = QMenuBar(MainWindow)
-        self.menubar.setGeometry(QRect(0, 0, 1440, 21))
+        self.menubar.setGeometry(QRect(0, 0, self.size_horizontal, self.size_menu_bar))
         self.menubar.setObjectName(u"menubar")
         MainWindow.setMenuBar(self.menubar)
 
@@ -2447,8 +2631,6 @@ class Ui_MainWindow(object):
         self.menuFavorites.addAction(self.action_save_favorites_file)
 
         # window submenu
-        # disabled until it's finished
-        #
         # self.menuWindow = QMenu(self.menubar)
         # self.menuWindow.setObjectName(u"menuWindow")
         # self.menubar.addAction(self.menuWindow.menuAction())
@@ -2456,7 +2638,7 @@ class Ui_MainWindow(object):
         # self.menuSize = QMenu(self.menuWindow)
         # self.menuSize.setObjectName(u"menuSize")
         # self.menuWindow.addAction(self.menuSize.menuAction())
-        #
+
         # self.action960x540 = QAction(MainWindow)
         # self.action960x540.setObjectName(u"action_resize_window_960x540")
         # self.action1440x810 = QAction(MainWindow)
@@ -2486,7 +2668,7 @@ class Ui_MainWindow(object):
         # self.menuSize.addAction(self.action1920x1080)
         # self.menuSize.addAction(self.action2880x1620)
         # self.menuSize.addAction(self.action3840x2160)
-        #
+
         # self.disable_unsupported_window_size()
 
         # about submenu
@@ -2508,7 +2690,7 @@ class Ui_MainWindow(object):
 
     def load_build_code(self):
         widget = QInputDialog()
-        widget.resize(600, 600)
+        widget.resize(self.size_dialog_code, self.size_dialog_code)
         widget.setWindowTitle(VERSION)
         widget.setInputMode(QInputDialog.TextInput)
         widget.setLabelText("Enter build code")
@@ -2533,7 +2715,7 @@ class Ui_MainWindow(object):
         code = self.generate_build_code()
 
         widget = QInputDialog()
-        widget.resize(600, 600)
+        widget.resize(self.size_dialog_code, self.size_dialog_code)
         widget.setWindowTitle(VERSION)
         widget.setInputMode(QInputDialog.TextInput)
         widget.setLabelText("Code generated successfully.")
@@ -2967,7 +3149,7 @@ class Ui_MainWindow(object):
 
     def about(self):
         widget = QInputDialog()
-        widget.resize(600, 600)
+        widget.resize(self.size_dialog_code, self.size_dialog_code)
         widget.setWindowTitle(VERSION)
         widget.setInputMode(QInputDialog.TextInput)
         widget.setLabelText("Created by Xavomel")
@@ -2993,8 +3175,6 @@ class Ui_MainWindow(object):
         self.action_save_favorites_file.setText(QCoreApplication.translate("MainWindow", u"Save fovorites to file", None))
 
         # menu window
-        # disabled until it's finished
-        #
         # self.menuWindow.setTitle(QCoreApplication.translate("MainWindow", u"Window", None))
         # self.menuSize.setTitle(QCoreApplication.translate("MainWindow", u"Size", None))
         # self.action960x540.setText(QCoreApplication.translate("MainWindow", u"960x540", None))
@@ -3032,8 +3212,9 @@ class AttributeProgressBar(QProgressBar):
                     # max 3 overburden bars
                     break
 
-        r = self.rect().adjusted(2, 2, -2, -2)
-        skew = 10
+        skew = self.window().size_progress_bar_skew
+        adjust = self.window().size_progress_bar_adjust
+        r = self.rect().adjusted(adjust, adjust, -1 * adjust, -1 * adjust)
 
         # Base shape
         border = QPolygonF([
@@ -3066,9 +3247,9 @@ class AttributeProgressBar(QProgressBar):
 
         # Color border and background colored border (color on top of background)
         painter.setBrush(Qt.BrushStyle.NoBrush)
-        painter.setPen(QPen(QColor("#171717"), 8))
+        painter.setPen(QPen(QColor("#171717"), self.window().size_progress_bar_pen_1))
         painter.drawPolygon(border)
-        painter.setPen(QPen(QColor("#6d7981"), 2))
+        painter.setPen(QPen(QColor("#6d7981"), self.window().size_progress_bar_pen_2))
         painter.drawPolygon(border)
 
         # Progress text
