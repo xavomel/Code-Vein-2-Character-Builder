@@ -33,6 +33,7 @@ python main.py
 ```
 
 ## Changing resolution
+Coming soon in v0.5.3.<br>
 High resolution mode (for 3840x2160 or similar) can be enabled by editing config.json:
 ```
 "HighResolution": 0
