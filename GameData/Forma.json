@@ -106,7 +106,7 @@
     },
     {
         "Name": "Circulating Pulse - Blink",
-        "Description": "Rush forward into a three-hit combo. Repeat the input during the attack to perform a followup, then step backwards. (Consumes ichor on use.)",
+        "Description": "Rush forward into a three-hit combo. Repeat the input during the attack to perform a follow-up, then step backwards. (Consumes ichor on use.)\n\nNullifies enemy attacks during the follow-up.",
         "Type": "WeaponAction",
         "WeaponMatch": {
             "SingleSword": true,
@@ -205,6 +205,48 @@
         "Capacity": {
             "Reliability": 0,
             "Handling": 4,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Conflagration",
+        "Description": "Perform a two-hit combo imbued with flames of pathos.\n\nRepeat the input during the attack to unleash a fiery palm strike. (Consumes ichor on use.)",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
+        "IchorCost": 2,
+        "Capacity": {
+            "Reliability": 3,
+            "Handling": 1,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Secret Art - Terra Strike",
+        "Description": "Strike your weapon into the ground to unleash a burst of energy below your target's feet.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 1,
+            "Handling": 3,
             "Conversion": 0,
             "Conductivity": 0
         }
@@ -390,7 +432,7 @@
             "Hammer": true,
             "RuneBlade": 0
         },
-        "IchorCost": 6,
+        "IchorCost": 5,
         "Capacity": {
             "Reliability": 1,
             "Handling": 3,
@@ -412,6 +454,48 @@
             "RuneBlade": 0
         },
         "IchorCost": 6,
+        "Capacity": {
+            "Reliability": 3,
+            "Handling": 1,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Soaring Trinity",
+        "Description": "Perform a three-hit combo imbued with flames of pathos.\n\nThe third strike swings your weapon up and launches you into the air, allowing for follow-up aerial attacks.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
+        "IchorCost": 3,
+        "Capacity": {
+            "Reliability": 2,
+            "Handling": 2,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Coffin Breaker - Eruption",
+        "Description": "Perform a rapid, powerful slash at close range. Repeat the input to set off an explosion. (Consumes ichor on use.)",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": true,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
+        "IchorCost": 3,
         "Capacity": {
             "Reliability": 3,
             "Handling": 1,
@@ -609,6 +693,48 @@
         }
     },
     {
+        "Name": "Vengeance Revolver",
+        "Description": "Unleash a powerful slam imbued with flames of pathos after rotating the weapon with a special maneuver.\n\nThe pre-attack maneuver can parry enemy attacks and be used continuously by holding the input.\n\nIf an attack cannot be deflected, it is blocked instead.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 2,
+            "Handling": 2,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Burst Javelin",
+        "Description": "Perform a thrust that unleashes a shock wave.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": true,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 3,
+            "Handling": 1,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
         "Name": "Gaia Impact",
         "Description": "Smash the ground, leap up, and slam down with an attack. \n\nThe downward impact creates a shock wave, disrupting enemies in a wide area.",
         "Type": "WeaponAction",
@@ -631,7 +757,7 @@
     },
     {
         "Name": "Endless Onslaught",
-        "Description": "Unleash powerful, continuous back-and-forth strikes.\n\nRepeat the input during the attack to continuously strike. Press button to finish with a powerful strike. (Consumes ichor on use.)",
+        "Description": "Unleash powerful, continuous back-and-forth strikes.\n\nRepeat the input during the attack to continuously strike. Press drain attack to finish with a powerful strike. (Consumes ichor on use.)",
         "Type": "WeaponAction",
         "WeaponMatch": {
             "SingleSword": 0,
@@ -727,6 +853,48 @@
             "RuneBlade": 0
         },
         "IchorCost": 6,
+        "Capacity": {
+            "Reliability": 2,
+            "Handling": 2,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Fire Whisperer",
+        "Description": "Bore into the ground and send flames of pathos sweeping in front of you.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 3,
+            "Handling": 1,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Endless Onslaught - Unbound",
+        "Description": "Unleash powerful, continuous back-and-forth strikes.\n\nRepeat the input during the attack to continuously strike. Press drain attack to perform a traversal attack.\n\nRepeat the input while mid-traversal attack for a continuous strike, allowing freedom to switch between traversal attacks and continuous strikes. (Consumes ichor on use.)",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": true,
+            "RuneBlade": 0
+        },
+        "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
             "Handling": 2,
@@ -882,6 +1050,48 @@
         }
     },
     {
+        "Name": "Volcanic Pillars",
+        "Description": "Send a heat ray into the ground, scattering flaming pillars of pathos around the surrounding area.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
+        "IchorCost": 5,
+        "Capacity": {
+            "Reliability": 4,
+            "Handling": 0,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Radiant Barrel",
+        "Description": "Take a low stance and fire a laser that can pierce through multiple foes.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": true,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
+        "IchorCost": 5,
+        "Capacity": {
+            "Reliability": 1,
+            "Handling": 3,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
         "Name": "Shredding Spin",
         "Description": "Leap forward in a spinning slash which lands multiple hits.",
         "Type": "WeaponAction",
@@ -925,7 +1135,7 @@
     },
     {
         "Name": "Relentless Sword Dance",
-        "Description": "Unleash rapid, continuous slashes.\n\nRepeat the input during the attack to continuously slash. Press button to finish with a powerful strike. (Each attack consumes ichor.)",
+        "Description": "Unleash rapid, continuous slashes.\n\nRepeat the input during the attack to continuously slash. Press drain attack to finish with a powerful strike. (Each attack consumes ichor.)",
         "Type": "WeaponAction",
         "WeaponMatch": {
             "SingleSword": 0,
@@ -1008,6 +1218,48 @@
         }
     },
     {
+        "Name": "Swift Ignition",
+        "Description": "Unleash a dashing slash imbued with flames of pathos, slashing foes and setting them afire.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
+        "IchorCost": 5,
+        "Capacity": {
+            "Reliability": 2,
+            "Handling": 2,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Swift Blades - Rise",
+        "Description": "Instantly dash a short distance and slash with dual blades. Repeat the input to combo into a rising slash. (Consumes ichor on use.)\n\nAllows for follow-up aerial attacks after the rising slash.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": true,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": 0
+        },
+        "IchorCost": 2,
+        "Capacity": {
+            "Reliability": 1,
+            "Handling": 3,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
         "Name": "Whirling Shredder",
         "Description": "Combine two blades together and send them spinning rapidly forward like a rotary saw. User is left unarmed while blades remain spinning.",
         "Type": "WeaponAction",
@@ -1062,7 +1314,7 @@
             "Hammer": 0,
             "RuneBlade": true
         },
-        "IchorCost": 4,
+        "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
             "Handling": 3,
@@ -1083,7 +1335,7 @@
             "Hammer": 0,
             "RuneBlade": true
         },
-        "IchorCost": 6,
+        "IchorCost": 5,
         "Capacity": {
             "Reliability": 3,
             "Handling": 1,
@@ -1104,7 +1356,7 @@
             "Hammer": 0,
             "RuneBlade": true
         },
-        "IchorCost": 3,
+        "IchorCost": 2,
         "Capacity": {
             "Reliability": 2,
             "Handling": 2,
@@ -1129,6 +1381,111 @@
         "Capacity": {
             "Reliability": 3,
             "Handling": 1,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Spiral Blade",
+        "Description": "Spin a blade imbued with flames of pathos and gracefully kick up, launching yourself into the air, allowing for follow-up aerial attacks.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": true
+        },
+        "IchorCost": 3,
+        "Capacity": {
+            "Reliability": 2,
+            "Handling": 2,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Orbital Blade - Close",
+        "Description": "Sends equipped blades spinning around the user and continuously spin in place. User is left unarmed while blades remain spinning, slashing nearby enemies.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": 0,
+            "GreatSword": 0,
+            "DualSword": 0,
+            "Bayonet": 0,
+            "Halberd": 0,
+            "Hammer": 0,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 1,
+            "Handling": 3,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Grave Knocker",
+        "Description": "Stomp the ground with incredible force, unleashing a shock wave that disrupts surrounding foes.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 3,
+        "Capacity": {
+            "Reliability": 3,
+            "Handling": 0,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Savage Strike",
+        "Description": "Leap forward with a fierce kick.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 2,
+        "Capacity": {
+            "Reliability": 1,
+            "Handling": 1,
+            "Conversion": 0,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Roaring Current",
+        "Description": "A traversal forma that performs a rapid long-range slide.",
+        "Type": "WeaponAction",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 1,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 2,
             "Conversion": 0,
             "Conductivity": 0
         }
@@ -1198,7 +1555,7 @@
     },
     {
         "Name": "Venomous Shot",
-        "Description": "Unleash orbs that cause the status ailment venom to build up over time.",
+        "Description": "Shoots a projectile that causes the status ailment venom to build up over time. Repeat the input during the attack to fire successive shots.",
         "Type": "MagicLongRange",
         "WeaponMatch": {
             "SingleSword": true,
@@ -1219,7 +1576,7 @@
     },
     {
         "Name": "Stun Shot",
-        "Description": "Unleash orbs that cause the status ailment stun to build up over time.",
+        "Description": "Shoots a projectile that causes the status ailment stun to build up over time. Repeat the input during the attack to fire successive shots.",
         "Type": "MagicLongRange",
         "WeaponMatch": {
             "SingleSword": true,
@@ -1335,7 +1692,7 @@
             "Hammer": true,
             "RuneBlade": true
         },
-        "IchorCost": 5,
+        "IchorCost": 4,
         "Capacity": {
             "Reliability": 0,
             "Handling": 0,
@@ -1419,7 +1776,7 @@
             "Hammer": true,
             "RuneBlade": true
         },
-        "IchorCost": 4,
+        "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
             "Handling": 1,
@@ -1482,7 +1839,7 @@
             "Hammer": true,
             "RuneBlade": true
         },
-        "IchorCost": 4,
+        "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
             "Handling": 1,
@@ -1503,7 +1860,7 @@
             "Hammer": true,
             "RuneBlade": true
         },
-        "IchorCost": 4,
+        "IchorCost": 3,
         "Capacity": {
             "Reliability": 0,
             "Handling": 3,
@@ -1798,6 +2155,237 @@
             "RuneBlade": true
         },
         "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 2,
+            "Conversion": 0,
+            "Conductivity": 4
+        }
+    },
+    {
+        "Name": "Fire Lily",
+        "Description": "Shoots high-speed blades of fire.\n\nWhen a blade hits a target, it will explode after repeating the input or once enough time has passed.",
+        "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 1,
+            "Conversion": 0,
+            "Conductivity": 3
+        }
+    },
+    {
+        "Name": "Dancing Fireblade",
+        "Description": "Conjures a fiery blade that spins around the user.",
+        "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 5,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 0,
+            "Conductivity": 4
+        }
+    },
+    {
+        "Name": "Sentinel Gunner",
+        "Description": "Temporarily creates luminous orbs that accompany the user, automatically fires at a locked on target before disappearing.",
+        "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 2,
+            "Conductivity": 2
+        }
+    },
+    {
+        "Name": "Diamond Piercer",
+        "Description": "Descend from midair and creates a massive ice blade where you land. \n\nCan only be used while in midair.",
+        "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 2,
+            "Conversion": 0,
+            "Conductivity": 2
+        }
+    },
+    {
+        "Name": "Pauper's Blade",
+        "Description": "Fires an ice blade with high bleed factor.\n\nRepeat the input during the attack to fire successive shots.",
+        "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 1,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 0,
+            "Conductivity": 3
+        }
+    },
+    {
+        "Name": "Assault Barrier",
+        "Description": "Deploys a simple barrier around the user that automatically follows up any attacks on enemies within the field.",
+        "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 3,
+            "Conductivity": 3
+        }
+    },
+    {
+        "Name": "Ravenous Bullet",
+        "Description": "Fires a bloody projectile in a straight line.\n\nThe more an enemy's bleed buildup is, the greater damage the projectile will cause. However, once the projectile hits, the target's bleed buildup will be reset.",
+        "Type": "MagicMiddleRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 0,
+            "Conductivity": 4
+        }
+    },
+    {
+        "Name": "Lightning Barrage",
+        "Description": "Unleash a spray of electric projectiles in multiple directions.\n\nHold the input to instead use more powerful projectiles with a shorter range.",
+        "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 1,
+            "Conversion": 0,
+            "Conductivity": 3
+        }
+    },
+    {
+        "Name": "Ruby Tracer",
+        "Description": "Unleash a burst of light projectiles with homing capabilities when locked on.",
+        "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 0,
+            "Conductivity": 6
+        }
+    },
+    {
+        "Name": "Linked Spark",
+        "Description": "Unleash a burst of lightning at your partner's location.\n\nPartners are not damaged by the use of this forma.",
+        "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 3,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 1,
+            "Conversion": 0,
+            "Conductivity": 2
+        }
+    },
+    {
+        "Name": "Voltaic Emitter",
+        "Description": "Unleash electric energy in front of the user.\n\nHold the input to charge up energy and release to unleash lightning.\n\nThe power and nature of the lightning depend on the timing of release. Release at the appropriate timing to deal a powerful lightning strike.",
+        "Type": "MagicLongRange",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 5,
         "Capacity": {
             "Reliability": 0,
             "Handling": 2,
@@ -2185,7 +2773,7 @@
     },
     {
         "Name": "Highlander",
-        "Description": "Consumes all LP to temporarily boost attack power. Boost amount depends on the amount of LP consumed.",
+        "Description": "Consumes all LP to temporarily boost attack power. Boost duration depends on the amount of LP consumed.",
         "Type": "SupportAttack",
         "WeaponMatch": {
             "SingleSword": true,
@@ -2248,7 +2836,7 @@
     },
     {
         "Name": "Hunting Feast",
-        "Description": "Temporarily increases the bleed factor of weapon attacks.",
+        "Description": "Temporarily increases the bleed factor of attacks.",
         "Type": "SupportAttack",
         "WeaponMatch": {
             "SingleSword": true,
@@ -2668,7 +3256,7 @@
     },
     {
         "Name": "Juggernaut",
-        "Description": "Increases balance and resistance to enemy attacks, but lowers dodge effectiveness and elemental resistance.",
+        "Description": "Temporarily increases balance and resistance against enemy attacks, but lowers elemental resistance and greatly lowers dodge effectiveness.",
         "Type": "SupportDefense",
         "WeaponMatch": {
             "SingleSword": true,
@@ -3634,7 +4222,7 @@
     },
     {
         "Name": "Serene Stance",
-        "Description": "Immediately take up a stance that calms your mind and restores all stamina.",
+        "Description": "Immediately assume a stance that calms your mind and restores all stamina.",
         "Type": "SupportOther",
         "WeaponMatch": {
             "SingleSword": true,
@@ -4008,6 +4596,321 @@
             "Handling": 0,
             "Conversion": 1,
             "Conductivity": 1
+        }
+    },
+    {
+        "Name": "Overclock",
+        "Description": "Temporarily provides a large boost to the user's attack power but halves max HP and LP.",
+        "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 2,
+        "Capacity": {
+            "Reliability": 3,
+            "Handling": 0,
+            "Conversion": 3,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Immortal Weapon",
+        "Description": "Temporarily increases the attack power of weapons significantly, but all damage dealt by your weapons becomes recoverable damage.\n\nThis forma does not stack with similar effects.",
+        "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 3,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 2,
+            "Conductivity": 2
+        }
+    },
+    {
+        "Name": "Blood Fuel",
+        "Description": "Temporarily provides a large boost to the attack power of normal weapon attacks, but consumes ichor each time a normal attack hits an enemy.\n\nIf the user has no remaining ichor, the attack power of normal attacks is reduced.\n\nThis forma does not stack with similar effects.",
+        "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 3,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 2,
+            "Conductivity": 2
+        }
+    },
+    {
+        "Name": "Maniacal Blood Dance",
+        "Description": "Temporarily increases the user's attack power. Each successful hit on an enemy increases the effect's duration.\n\nThis affects both you and your partner.",
+        "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 3,
+        "Capacity": {
+            "Reliability": 1,
+            "Handling": 1,
+            "Conversion": 2,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "God of War",
+        "Description": "Temporarily boosts attack and stagger attack power when no weapon is equipped.",
+        "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 2,
+        "Capacity": {
+            "Reliability": 2,
+            "Handling": 0,
+            "Conversion": 1,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Irregular Customization",
+        "Description": "Temporarily increases the attack power of shots which consume ammo, but doubles the amount of ammo used.",
+        "Type": "SupportAttack",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 2,
+            "Conversion": 4,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Solid Footing",
+        "Description": "Temporarily increases resistance to being disrupted while using strong attacks.",
+        "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 3,
+            "Handling": 0,
+            "Conversion": 3,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Foresight",
+        "Description": "Temporarily adds the following effect to defensive formae for shields:\n\nAbsorbs ichor when an enemy attack is successfully guarded against.",
+        "Type": "SupportDefense",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 3,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 1,
+            "Conversion": 3,
+            "Conductivity": 1
+        }
+    },
+    {
+        "Name": "Surplus Shot",
+        "Description": "Temporarily grants the ability to fire bloody projectiles at enemies whenever the amount of ichor absorbed exceeds your maximum capacity.\n\nProjectiles travel toward the locked-on target. Their amount increases depending on how much your ichor capacity is exceeded.",
+        "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 2,
+            "Conversion": 0,
+            "Conductivity": 2
+        }
+    },
+    {
+        "Name": "Healing Barrier",
+        "Description": "Deploys a barrier around the user that gradually restores HP or LP.",
+        "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 6,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 3,
+            "Conversion": 0,
+            "Conductivity": 3
+        }
+    },
+    {
+        "Name": "Ichor Sanctuary",
+        "Description": "Temporarily creates an ichor restoration area.",
+        "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 4,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 2,
+            "Conversion": 0,
+            "Conductivity": 2
+        }
+    },
+    {
+        "Name": "Bloodletting Curse",
+        "Description": "Temporarily increases the bleed buildup caused by magic formae.",
+        "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 3,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 0,
+            "Conversion": 3,
+            "Conductivity": 1
+        }
+    },
+    {
+        "Name": "Healing Heresy",
+        "Description": "Temporarily recovers the user's HP each time an attack lands on an enemy.\n\nRestores LP instead if HP is at max.",
+        "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 2,
+        "Capacity": {
+            "Reliability": 1,
+            "Handling": 1,
+            "Conversion": 2,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Dangerous Trance",
+        "Description": "Temporarily allows the user to use formae without consuming ichor, but reduces ichor to zero once the effect wears off and leaves the user unable to recover ichor temporarily.\n\nThis forma cannot be used again until the user is able to recover ichor once more.",
+        "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 0,
+        "Capacity": {
+            "Reliability": 0,
+            "Handling": 3,
+            "Conversion": 4,
+            "Conductivity": 0
+        }
+    },
+    {
+        "Name": "Dangerous Journey",
+        "Description": "Temporarily greatly reduces damage taken from enemies and also greatly increases attack power and dodge effectiveness. However, it causes the user to lose all LP once the effect wears off.\n\nIt also temporarily incapacitates your partner and causes the user to suffer overburden effects in all attributes.\n\nThis forma cannot be used again until the user's partner is restored.",
+        "Type": "SupportOther",
+        "WeaponMatch": {
+            "SingleSword": true,
+            "GreatSword": true,
+            "DualSword": true,
+            "Bayonet": true,
+            "Halberd": true,
+            "Hammer": true,
+            "RuneBlade": true
+        },
+        "IchorCost": 10,
+        "Capacity": {
+            "Reliability": 3,
+            "Handling": 0,
+            "Conversion": 4,
+            "Conductivity": 0
         }
     }
 ]

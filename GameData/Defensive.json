@@ -2950,10 +2950,55 @@
         ]
     },
     {
+        "Name": "Greatshield of Retribution",
+        "Description": "A shield that guards against enemy attacks and nullifies physical damage. In exchange, guarding consumes stamina.\n\nPerfectly blocking enemy attacks reduces stamina consumption and unleashes a shock wave.\n\nEquipping it increases base defense.",
+        "Type": "Guard",
+        "IchorCost": 0,
+        "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 30,
+                "Balance": 39,
+                "Burden": {
+                    "Strength": 6,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Defense": {
+                    "Slash": "3.2",
+                    "Crush": "2.2",
+                    "Pierce": "2.6",
+                    "Blood": "1.8",
+                    "Fire": "1.2",
+                    "Ice": "1.6",
+                    "Lightning": "1.6"
+                },
+                "GuardingDefense": {
+                    "Slash": 100,
+                    "Crush": 100,
+                    "Pierce": 100,
+                    "Blood": 90,
+                    "Fire": 85,
+                    "Ice": 90,
+                    "Lightning": 90
+                },
+                "Resistance": {
+                    "Disease": 55,
+                    "Wound": 32,
+                    "Bleed": 47,
+                    "Curse": 39
+                }
+            }
+        ]
+    },
+    {
         "Name": "Mutinous Bracer",
         "Description": "A bracer that can parry enemy attacks.\n\nRespond to an incoming attack with a well-timed parry to deflect it and break the enemy's stance.\n\nSuccessful parries consume ichor. They break the enemy's stance even if you have insufficient ichor but deal damage to the player.\n\nSome attacks cannot be parried; these will instead be blocked.\n\nEquipping it increases basic defense.",
         "Type": "Parry",
-        "IchorCost": 2,
+        "IchorCost": 1,
         "Transforms": [
             {
                 "Name": "Defensive_Off",
@@ -2977,9 +3022,9 @@
                     "Lightning": "0.2"
                 },
                 "GuardingDefense": {
-                    "Slash": 90,
-                    "Crush": 90,
-                    "Pierce": 90,
+                    "Slash": 100,
+                    "Crush": 100,
+                    "Pierce": 100,
                     "Blood": 75,
                     "Fire": 75,
                     "Ice": 75,
@@ -3368,7 +3413,7 @@
         "Name": "Mutinous Bracer (Heavy)",
         "Description": "A bracer that can parry enemy attacks.\n\nParry in time with an incoming attack to deflect it and break the enemy's stance.\n\nSuccessful parries consume ichor. They break the enemy's stance even if you have insufficient ichor but deal damage to the player.\n\nSome attacks cannot be parried; these will instead be blocked.\n\nEquipping it greatly increases basic defense.",
         "Type": "Parry",
-        "IchorCost": 2,
+        "IchorCost": 1,
         "Transforms": [
             {
                 "Name": "Defensive_Off",
@@ -3392,9 +3437,9 @@
                     "Lightning": "0.6"
                 },
                 "GuardingDefense": {
-                    "Slash": 90,
-                    "Crush": 90,
-                    "Pierce": 90,
+                    "Slash": 100,
+                    "Crush": 100,
+                    "Pierce": 100,
                     "Blood": 75,
                     "Fire": 75,
                     "Ice": 75,
@@ -5850,6 +5895,421 @@
                     "Wound": 39,
                     "Bleed": 43,
                     "Curse": 45
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Shadow Dance",
+        "Description": "An evasive forma that enables the user to jump far backwards while nullifying enemy attacks.\n\nEquipping it slightly increases base defense.",
+        "Type": "Dodge",
+        "IchorCost": 1,
+        "Transforms": [
+            {
+                "Name": "Defensive_Off",
+                "StaminaGuardCost": 0,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 2,
+                    "Mind": 0,
+                    "Willpower": 2,
+                    "Vitality": 4,
+                    "Fortitude": 4
+                },
+                "Defense": {
+                    "Slash": "1.6",
+                    "Crush": "1.1",
+                    "Pierce": "2.0",
+                    "Blood": "2.1",
+                    "Fire": "2.1",
+                    "Ice": "2.1",
+                    "Lightning": "2.1"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 41,
+                    "Bleed": 35,
+                    "Curse": 46
+                }
+            },
+            {
+                "Name": "Defensive_Fire",
+                "StaminaGuardCost": 0,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 2,
+                    "Mind": 0,
+                    "Willpower": 2,
+                    "Vitality": 4,
+                    "Fortitude": 4
+                },
+                "Defense": {
+                    "Slash": "1.52",
+                    "Crush": "1.045",
+                    "Pierce": "1.9",
+                    "Blood": "1.68",
+                    "Fire": "13.15",
+                    "Ice": "1.68",
+                    "Lightning": "1.68"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 41,
+                    "Bleed": 35,
+                    "Curse": 46
+                }
+            },
+            {
+                "Name": "Defensive_Ice",
+                "StaminaGuardCost": 0,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 2,
+                    "Mind": 0,
+                    "Willpower": 2,
+                    "Vitality": 4,
+                    "Fortitude": 4
+                },
+                "Defense": {
+                    "Slash": "1.52",
+                    "Crush": "1.045",
+                    "Pierce": "1.9",
+                    "Blood": "1.68",
+                    "Fire": "1.68",
+                    "Ice": "13.15",
+                    "Lightning": "1.68"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 41,
+                    "Bleed": 35,
+                    "Curse": 46
+                }
+            },
+            {
+                "Name": "Defensive_Lightning",
+                "StaminaGuardCost": 0,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 2,
+                    "Mind": 0,
+                    "Willpower": 2,
+                    "Vitality": 4,
+                    "Fortitude": 4
+                },
+                "Defense": {
+                    "Slash": "1.52",
+                    "Crush": "1.045",
+                    "Pierce": "1.9",
+                    "Blood": "1.68",
+                    "Fire": "1.68",
+                    "Ice": "1.68",
+                    "Lightning": "13.15"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 41,
+                    "Bleed": 35,
+                    "Curse": 46
+                }
+            },
+            {
+                "Name": "Defensive_Blood",
+                "StaminaGuardCost": 0,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 2,
+                    "Mind": 0,
+                    "Willpower": 2,
+                    "Vitality": 4,
+                    "Fortitude": 4
+                },
+                "Defense": {
+                    "Slash": "1.52",
+                    "Crush": "1.045",
+                    "Pierce": "1.9",
+                    "Blood": "13.15",
+                    "Fire": "1.68",
+                    "Ice": "1.68",
+                    "Lightning": "1.68"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 41,
+                    "Bleed": 35,
+                    "Curse": 46
+                }
+            },
+            {
+                "Name": "Defensive_Disease",
+                "StaminaGuardCost": 0,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 3,
+                    "Mind": 0,
+                    "Willpower": 3,
+                    "Vitality": 5,
+                    "Fortitude": 5
+                },
+                "Defense": {
+                    "Slash": "1.6",
+                    "Crush": "1.1",
+                    "Pierce": "2.0",
+                    "Blood": "2.1",
+                    "Fire": "2.1",
+                    "Ice": "2.1",
+                    "Lightning": "2.1"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 73,
+                    "Wound": 41,
+                    "Bleed": 35,
+                    "Curse": 46
+                }
+            },
+            {
+                "Name": "Defensive_Wound",
+                "StaminaGuardCost": 0,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 3,
+                    "Mind": 0,
+                    "Willpower": 3,
+                    "Vitality": 5,
+                    "Fortitude": 5
+                },
+                "Defense": {
+                    "Slash": "1.6",
+                    "Crush": "1.1",
+                    "Pierce": "2.0",
+                    "Blood": "2.1",
+                    "Fire": "2.1",
+                    "Ice": "2.1",
+                    "Lightning": "2.1"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 71,
+                    "Bleed": 35,
+                    "Curse": 46
+                }
+            },
+            {
+                "Name": "Defensive_Bleed",
+                "StaminaGuardCost": 0,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 3,
+                    "Mind": 0,
+                    "Willpower": 3,
+                    "Vitality": 5,
+                    "Fortitude": 5
+                },
+                "Defense": {
+                    "Slash": "1.6",
+                    "Crush": "1.1",
+                    "Pierce": "2.0",
+                    "Blood": "2.1",
+                    "Fire": "2.1",
+                    "Ice": "2.1",
+                    "Lightning": "2.1"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 41,
+                    "Bleed": 65,
+                    "Curse": 46
+                }
+            },
+            {
+                "Name": "Defensive_Curse",
+                "StaminaGuardCost": 0,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 3,
+                    "Mind": 0,
+                    "Willpower": 3,
+                    "Vitality": 5,
+                    "Fortitude": 5
+                },
+                "Defense": {
+                    "Slash": "1.6",
+                    "Crush": "1.1",
+                    "Pierce": "2.0",
+                    "Blood": "2.1",
+                    "Fire": "2.1",
+                    "Ice": "2.1",
+                    "Lightning": "2.1"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 41,
+                    "Bleed": 35,
+                    "Curse": 76
+                }
+            },
+            {
+                "Name": "Defensive_Balance",
+                "StaminaGuardCost": 0,
+                "Balance": 48,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 7,
+                    "Mind": 0,
+                    "Willpower": 7,
+                    "Vitality": 10,
+                    "Fortitude": 10
+                },
+                "Defense": {
+                    "Slash": "1.6",
+                    "Crush": "1.1",
+                    "Pierce": "2.0",
+                    "Blood": "2.1",
+                    "Fire": "2.1",
+                    "Ice": "2.1",
+                    "Lightning": "2.1"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 41,
+                    "Bleed": 35,
+                    "Curse": 46
+                }
+            },
+            {
+                "Name": "Defensive_LoadDown",
+                "StaminaGuardCost": 0,
+                "Balance": 24,
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 1,
+                    "Mind": 0,
+                    "Willpower": 1,
+                    "Vitality": 3,
+                    "Fortitude": 3
+                },
+                "Defense": {
+                    "Slash": "1.4",
+                    "Crush": "0.96250004",
+                    "Pierce": "1.75",
+                    "Blood": "1.8374999",
+                    "Fire": "1.8374999",
+                    "Ice": "1.8374999",
+                    "Lightning": "1.8374999"
+                },
+                "GuardingDefense": {
+                    "Slash": 0,
+                    "Crush": 0,
+                    "Pierce": 0,
+                    "Blood": 0,
+                    "Fire": 0,
+                    "Ice": 0,
+                    "Lightning": 0
+                },
+                "Resistance": {
+                    "Disease": 43,
+                    "Wound": 41,
+                    "Bleed": 35,
+                    "Curse": 46
                 }
             }
         ]

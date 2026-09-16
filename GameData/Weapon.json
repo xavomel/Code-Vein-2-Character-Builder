@@ -4452,6 +4452,293 @@
         ]
     },
     {
+        "Name": "Rift Sword",
+        "Description": "A one-handed sword with outstanding elemental attack power that requires Dexterity and Willpower.\n\nWhile its fundamental capabilities are limited, its attack power is easily improved by the ability of the user.\n\nStrong attacks perform two quick upward slashes, while charged strong attacks perform a high-speed four-hit combo.\n\nMidair strong attack deliver a descending slash.\n\nA pathos-imbued sword left in the temporal rift. Their original owner was erased from history, but their burning passion still dwells within.",
+        "Type": "SingleSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 7,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 11,
+                    "Conversion": 7,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 9,
+                    "Conversion": 8,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 8,
+                    "Conversion": 9,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 8,
+                    "Conversion": 9,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 8,
+                    "Conversion": 9,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 8,
+                    "Conversion": 9,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Venom",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Sun",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 57,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 38,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 10,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Fallen Spike",
+        "Description": "A one-handed sword that requires Mind, Fortitude, and Vitality.\n\nWeak attacks can be chained repeatedly as long as stamina allows.\n\nStrong attacks deliver a series of thrusts, while charged strong attacks perform a stepping thrust wreathed in flames of pathos.\n\nMidair strong attacks execute a falling thrust.\n\nA sword created by Lou from another world for her own use. In her travels, the power she sought to fulfill her mission to save the world changed to the power to protect the one she loved. Although its bearer has disappeared beyond space and time, this sword still harbors her profound devotion to protecting the soul bound more closely to hers than any other.",
+        "Type": "SingleSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 54,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 10,
+                    "Conversion": 13,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 6,
+                    "Fortitude": 6
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Regalia of Harmony: Integrity",
+        "Description": "A one-handed sword born from the bond between Lyle and the Great Hero. Woven within is the pathos of past memories with Lyle, who fought alongside his fellow comrades to seize the future.\n\nRequires Dexterity, Mind, and Fortitude. Equipping it increases your attributes. <font color=\"red\">NOT IMPLEMENTED</font>\n\nStrong attacks deliver a swift series of slashes. Charged strong attacks deliver a powerful downward slash after stepping forward.\n\nMidair strong attacks execute a falling thrust.",
+        "Type": "SingleSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 61,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 15,
+                    "Conversion": 9,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 4,
+                    "Dexterity": 6,
+                    "Mind": 6,
+                    "Willpower": 4,
+                    "Vitality": 4,
+                    "Fortitude": 6
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
         "Name": "VK Greatsword",
         "Description": "A two-handed sword that primarily requires Strength.\n\nIts balanced performance makes it easy to wield.\n\nStrong attacks deliver a heavy slam while taking a forceful step forward.\n\nA standard-issue two-handed sword used by revenant hunters. In the future, the blood that coats its blade will either be used to protect or to take. It all depends on the wielder.",
         "Type": "GreatSword",
@@ -8591,6 +8878,606 @@
         ]
     },
     {
+        "Name": "Argent Wolf Blade ",
+        "Description": "A two-handed sword that requires Strength and Dexterity.\n\nStrong attacks unleash a two-hit combo following a forward lunge.\n\nThis two-handed sword drifted in from beyond the frontier. Its imposing and ornate craftsmanship suggests that its wielder once held positions of power and influence.",
+        "Type": "GreatSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 13,
+                    "Handling": 9,
+                    "Conversion": 5,
+                    "Conductivity": 5
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 13,
+                    "Conversion": 5,
+                    "Conductivity": 5
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 11,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 7,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 7,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 7,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 7,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Venom",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Sun",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 7,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "False Providence",
+        "Description": "A two-handed sword that requires Strength, Dexterity, and Mind.\n\nThe first hit of its weak attack performs a quick forward dash that nullifies enemy attacks while dashing.\n\nCharged strong attacks consume ichor to temporarily imbue the blade with blood element effects while unleashing a spinning slash attack.\n\nA two-handed sword which drifted in a temporal rift that Jadwiga chanced upon during her travels through time. Though the power to rewrite history dwells within the blade, its power remains untapped simply because Jadwiga has no intention of using it.",
+        "Type": "GreatSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 65,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 5,
+                    "Conversion": 12,
+                    "Conductivity": 12
+                },
+                "Burden": {
+                    "Strength": 7,
+                    "Dexterity": 7,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Rift Greatsword",
+        "Description": "A two-handed sword with outstanding elemental attack power that requires Strength and Vitality.\n\nWhile its fundamental capabilities are limited, its attack power is easily improved by the ability of the user.\n\nStrong attacks deliver a heavy slam while taking a forceful step forward.\n\nA pathos-imbued two-handed sword left in the temporal rift. The original owner was erased from history, but their burning passion still dwells within the blade.",
+        "Type": "GreatSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 15,
+                    "Handling": 6,
+                    "Conversion": 7,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 10,
+                    "Conversion": 7,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 13,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 7,
+                    "Conversion": 9,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 7,
+                    "Conversion": 9,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 7,
+                    "Conversion": 9,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 7,
+                    "Conversion": 9,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Venom",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Sun",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 43,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 10,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 29,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Starved Greatsword",
+        "Description": "A two-handed sword that requires Strength and Dexterity.\n\nStrong attacks perform a short-step strike that unleashes lightning, followed by a mighty upward slash.\n\nThe two-handed sword wielded by the Insatiable Queen. The blade is made up of countless cogwheels, through which courses electrical energy that bears a resemblance to the power of the McLeish bloodline.",
+        "Type": "GreatSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 61,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 6,
+                    "Conversion": 6,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 11,
+                    "Dexterity": 8,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Void Wailer",
+        "Description": "A two-handed sword that requires Dexterity.\n\nAlso deals damage to the user whenever it is used to attack an enemy.\n\nPerform a strong attack to start a windup before unleashing three successive strikes.\n\nThe sword wielded by the Elden Mother of Darkness. Resembles the Bloodreaver Blade, the bequeathed forma of Anjou House, but its blade has been corrupted by self-loathing pathos. Every swing gnaws away at the wielder.",
+        "Type": "GreatSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 83,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 11,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 20,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Dissolved Husk Greatsword",
+        "Description": "A two-handed sword that requires Strength and Willpower.\n\nInflicts buildup of the acid status ailment.\n\nWeak attacks can be chained repeatedly as long as stamina allows.\n\nStrong attacks unleash a two-hit combo following a forward lunge.\n\nA two-handed sword from which potent acid drips. Its hideous blade was formed from dissolved remains. Constantly oozing powerful acid, it is always craving new prey to digest.",
+        "Type": "GreatSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 56,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 7,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 8,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 6,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Regalia of Harmony: Unity",
+        "Description": "A two-handed sword born from the bond between Jos\u00e9e and the Great Hero. Woven within is the pathos of past memories with Jos\u00e9e, who lived to ensure the connections she made with others would never fade.\n\nRequires Strength, Mind, and Vitality. Equipping it increases your attributes. <font color=\"red\">NOT IMPLEMENTED</font>\n\nStrong attacks unleash a two-hit combo following a forward lunge.",
+        "Type": "GreatSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 61,
+                "Capacity": {
+                    "Reliability": 13,
+                    "Handling": 8,
+                    "Conversion": 11,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 6,
+                    "Dexterity": 4,
+                    "Mind": 6,
+                    "Willpower": 4,
+                    "Vitality": 6,
+                    "Fortitude": 4
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
         "Name": "VK Dual Blades",
         "Description": "Twin blades that primarily require Dexterity.\n\nStrong attacks unleash a forward-spinning slash.\n\nMidair weak attacks can combo into a midair strong attack.\n\nMidair strong attacks perform a spinning downward slash.\n\nStandard-issue twin blades used by revenant hunters. In the future, the blood that coats its blade will either be used to protect or to take. It all depends on the wielder.",
         "Type": "DualSword",
@@ -10125,6 +11012,464 @@
                     "Willpower": 0,
                     "Vitality": 2,
                     "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Rift Twin Blades",
+        "Description": "Twin blades with outstanding elemental attack power that require Dexterity and Mind.\n\nWhile its fundamental capabilities are limited, its attack power is easily improved by the ability of the user.\n\nStrong attacks are a high-speed dash followed by a horizontal sweep.\nCharged strong attacks perform a lunging two-way slash combo.\n\nPathos-imbued twin blades left in the temporal rift. Their original owner was erased from history, but their burning passion still dwells within.",
+        "Type": "DualSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 11,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 10,
+                    "Conversion": 7,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 14,
+                    "Conversion": 7,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 6,
+                    "Handling": 12,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 10,
+                    "Conversion": 9,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 10,
+                    "Conversion": 9,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 10,
+                    "Conversion": 9,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 10,
+                    "Conversion": 9,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Venom",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 11,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Sun",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 11,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 61,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 11,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 12,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 41,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 11,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 10,
+                    "Mind": 10,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Metagen Twin Blades",
+        "Description": "Twin blades that require Willpower.\n\nInflicts buildup of the toxic venom status ailment.\n\nStrong attacks cause the wielder to lunge forward a short distance, slashing in a cross pattern with both blades.\n\nMidair strong attacks perform a spinning downward slash.\n\nTwin blades imbued with the deadly poison produced by Metagens, created to weaponize the destructive effects the toxin has on the environment. Wielding this toxin demands a working knowledge of formae.",
+        "Type": "DualSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 54,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 5,
+                    "Conversion": 7,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 14,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 54,
+                "Capacity": {
+                    "Reliability": 7,
+                    "Handling": 5,
+                    "Conversion": 6,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 14,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 54,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 8,
+                    "Conversion": 6,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 14,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 54,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 6,
+                    "Conversion": 7,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 14,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 54,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 5,
+                    "Conversion": 8,
+                    "Conductivity": 12
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 14,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 54,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 5,
+                    "Conversion": 8,
+                    "Conductivity": 12
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 14,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 54,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 5,
+                    "Conversion": 8,
+                    "Conductivity": 12
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 14,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 54,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 5,
+                    "Conversion": 8,
+                    "Conductivity": 12
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 14,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 81,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 5,
+                    "Conversion": 7,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 14,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 54,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 5,
+                    "Conversion": 7,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Regalia of Harmony: Guidance",
+        "Description": "Twin blades born from the bond between Noah and the Great Hero. Woven within is the pathos of past memories with Noah, who devoted his life to protecting the bonds shared with his companions.\n\nRequires Strength, Dexterity, and Willpower. Equipping it increases your attributes. <font color=\"red\">NOT IMPLEMENTED</font>\n\nStrong attacks thrust forward with both blades in unison.\n\nMidair weak attacks can combo into a midair strong attack.\n\nMidair strong attacks perform a spinning downward slash.",
+        "Type": "DualSword",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 61,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 14,
+                    "Conversion": 10,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 6,
+                    "Dexterity": 6,
+                    "Mind": 4,
+                    "Willpower": 6,
+                    "Vitality": 4,
+                    "Fortitude": 4
                 },
                 "Scaling": "TODO"
             }
@@ -13545,6 +14890,502 @@
                     "Willpower": 0,
                     "Vitality": 0,
                     "Fortitude": 3
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Rift Bayonet",
+        "Description": "A bayonet with outstanding elemental attack power that requires Mind and Willpower.\n\nWhile its fundamental capabilities are limited, its attack power is easily improved by the ability of the user.\n\nFeatures a forma-rifle firing mechanism. Strong attacks consume rifle ammo to fire long-range light projectiles concentrated with blazing pathos.\n\nPress and hold strong attack to reload manually.\n\nA pathos-imbued bayonet left in the temporal rift. Its original owner was erased from history, but their burning passion still dwells within the blade.",
+        "Type": "Bayonet",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 7,
+                    "Handling": 6,
+                    "Conversion": 7,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 10,
+                    "Conversion": 7,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 5,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 7,
+                    "Conversion": 9,
+                    "Conductivity": 12
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 7,
+                    "Conversion": 9,
+                    "Conductivity": 12
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 7,
+                    "Conversion": 9,
+                    "Conductivity": 12
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 7,
+                    "Conversion": 9,
+                    "Conductivity": 12
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Venom",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Sun",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 12,
+                    "Willpower": 12,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 35,
+                "Capacity": {
+                    "Reliability": 4,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 10,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Bind Launcher",
+        "Description": "A bayonet that requires Strength and Mind.\n\nFeatures a grenade firing mechanism. Strong attacks consume grenade ammo to launch explosive mid-range shells which inflict buildup of the bind status ailment.\n\nPress and hold strong attack to reload manually.\n\nA bayonet designed to fire grenade-type rounds. Designed to subdue revenants, its rounds use a forma to weave a clinging web which traps and restricts the target of their ability to move freely.",
+        "Type": "Bayonet",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 8,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 14,
+                    "Handling": 7,
+                    "Conversion": 5,
+                    "Conductivity": 5
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 11,
+                    "Conversion": 5,
+                    "Conductivity": 5
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 9,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 7,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 7,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 7,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 7,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Venom",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 8,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Sun",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 8,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 78,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 8,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 9,
+                    "Dexterity": 0,
+                    "Mind": 6,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 8,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 8,
+                    "Dexterity": 0,
+                    "Mind": 5,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Regalia of Harmony: Compassion",
+        "Description": "A bayonet born from the bond between Holly and the Great Hero. Woven within is the pathos of past memories with Holly, who continued to pray for the world to be filled with happiness.\n\nRequires Dexterity, Willpower, and Fortitude. Equipping it increases your attributes. <font color=\"red\">NOT IMPLEMENTED</font>\n\nFeatures a forma-rifle firing mechanism. Strong attacks consume rifle ammo to fire long-range light projectiles imbued with ice.\n\nPress and hold strong attack to reload manually.",
+        "Type": "Bayonet",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 61,
+                "Capacity": {
+                    "Reliability": 6,
+                    "Handling": 10,
+                    "Conversion": 10,
+                    "Conductivity": 13
+                },
+                "Burden": {
+                    "Strength": 4,
+                    "Dexterity": 6,
+                    "Mind": 4,
+                    "Willpower": 6,
+                    "Vitality": 4,
+                    "Fortitude": 6
                 },
                 "Scaling": "TODO"
             }
@@ -18369,8 +20210,492 @@
         ]
     },
     {
+        "Name": "Rift Halberd",
+        "Description": "A halberd with outstanding elemental attack power that requires Dexterity and Fortitude.\n\nWhile its fundamental capabilities are limited, its attack power is easily improved by the ability of the user.\n\nStrong attacks unleash a two-hit combo of a lunging thrust followed by a sweeping slash.\n\nA pathos-imbued halberd left in the temporal rift. The original owner was erased from history, but their burning passion still dwells within the blade.",
+        "Type": "Halberd",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 13,
+                    "Handling": 7,
+                    "Conversion": 7,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 11,
+                    "Conversion": 7,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 9,
+                    "Conversion": 8,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 9,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 9,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 9,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 9,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Venom",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Sun",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 60,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 12
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 40,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 8,
+                    "Conversion": 8,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 10,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 10
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Spear of Lost Glory",
+        "Description": "A halberd that requires Dexterity and Willpower.\n\nIncreases the user's sprint speed while equipped.\n\nStrong attacks deliver two upward slashes followed by a thrust.\n\nThe halberd of a warrior who wandered the rift. The mask-covered blade marks that its owner had once been a renowned revenant, but now, that history is consigned to a wavering existence beyond time.",
+        "Type": "Halberd",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 7,
+                    "Conversion": 7,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 14,
+                    "Mind": 0,
+                    "Willpower": 8,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 6,
+                    "Conversion": 6,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 14,
+                    "Mind": 0,
+                    "Willpower": 8,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 7,
+                    "Handling": 10,
+                    "Conversion": 6,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 14,
+                    "Mind": 0,
+                    "Willpower": 8,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 8,
+                    "Conversion": 7,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 14,
+                    "Mind": 0,
+                    "Willpower": 8,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 14,
+                    "Mind": 0,
+                    "Willpower": 8,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 14,
+                    "Mind": 0,
+                    "Willpower": 8,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 14,
+                    "Mind": 0,
+                    "Willpower": 8,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 7,
+                    "Conversion": 8,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 14,
+                    "Mind": 0,
+                    "Willpower": 8,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 87,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 7,
+                    "Conversion": 7,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 14,
+                    "Mind": 0,
+                    "Willpower": 8,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 7,
+                    "Conversion": 7,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 7,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Noblesse Oblige",
+        "Description": "A halberd that requires all six attributes.\n\nStrong attacks perform a stance followed by a forward lunge.\nCharged strong attacks consume ichor to perform an upward slash followed by a blood-element magic forma.\n\nLiv designed this halberd herself to be elegant and beautiful\u2014fitting for those of noble and refined character. The blade is adorned with roses.",
+        "Type": "Halberd",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 59,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 11,
+                    "Conversion": 11,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 4,
+                    "Dexterity": 6,
+                    "Mind": 4,
+                    "Willpower": 4,
+                    "Vitality": 3,
+                    "Fortitude": 3
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Regalia of Harmony: Reform",
+        "Description": "A halberd born from the bond between Zenon and the Great Hero. Woven within is the pathos of past memories with Zenon, who continued to go against the world so that he could see a future full of hope.\n\nRequires Strength, Dexterity, and Vitality. Equipping it increases your attributes. <font color=\"red\">NOT IMPLEMENTED</font>\n\nStrong attacks deliver a spinning upward slash. Charged strong attacks consume ichor to unleash a blood-element magic forma attack.",
+        "Type": "Halberd",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 61,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 11,
+                    "Conversion": 10,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 6,
+                    "Dexterity": 6,
+                    "Mind": 4,
+                    "Willpower": 4,
+                    "Vitality": 6,
+                    "Fortitude": 4
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
         "Name": "VK Hammer",
-        "Description": "A hammer that primarily requires Strength.\n\nIts balanced performance makes it easy to wield.\n\nStrong attacks deliver a full-force strike.\n\nA standard-issue hammer used by revenant hunters. In the future, the blood that coats its blade will either be used to protect or to take. It all depends on the wielder.",
+        "Description": "A hammer that primarily requires Strength.\n\nIts balanced performance makes it easy to wield.\n\nStrong attacks deliver a full-force strike.\n\nA standard-issue hammer used by revenant hunters. In the future, the blood that coats its head will either be used to protect or to take. It all depends on the wielder.",
         "Type": "Hammer",
         "Transforms": [
             {
@@ -19780,7 +22105,7 @@
     },
     {
         "Name": "Pain Carrier",
-        "Description": "Iris's hammer that primarily requires Strength.\n\nEquipped with a propulsion mechanism, it allows for movement-based attacks.\n\nStrong attacks perform a rotating strike after rushing forward. Charged strong attacks start with a rotating strike, followed by an upper swing that launches the user into the air, allowing for midair attacks after the motion.\n\nA hammer modified personally by Iris. She adjusted the pre-installed propulsion mechanism, adding booster technology to achieve a higher output and significantly increase its power.",
+        "Description": "Iris's hammer that primarily requires Strength.\n\nEquipped with a propulsion mechanism, it allows for movement-based attacks.\n\nStrong attacks perform a rotating strike after rushing forward. Charged strong attacks start with a rotating strike, followed by an upward swing that launches the user into the air, allowing for midair attacks.\n\nA hammer modified personally by Iris. She adjusted the pre-installed propulsion mechanism, adding booster technology to achieve a higher output and significantly increase its power.",
         "Type": "Hammer",
         "Transforms": [
             {
@@ -19806,7 +22131,7 @@
     },
     {
         "Name": "Tainted Hammer",
-        "Description": "A hammer that primarily requires Strength.\n\nStrong attacks deliver a full-force strike.\n\nUsed by Voda soldiers, the hammer's shape has become grotesquely warped from prolonged overexposure to ichor induced by the user's frenzy.",
+        "Description": "A hammer that primarily requires Strength.\n\nStrong attacks deliver a full-force strike.\n\nUsed by Voda soldiers, the hammer's head has become grotesquely warped from prolonged overexposure to ichor induced by the user's frenzy.",
         "Type": "Hammer",
         "Transforms": [
             {
@@ -21204,7 +23529,7 @@
     },
     {
         "Name": "Impulse Anchor",
-        "Description": "A hammer that primarily requires Strength.\n\nModerately high bleed effect on hit.\n\nEquipped with a propulsion mechanism, it allows for movement-based attacks.\n\nStrong attacks are a rotating strike following a charge. Charged strong attacks start with a rotating strike, followed by an upper swing that launches the user into the air, allowing for midair attacks after the motion.\n\nThis hammer drifted in from beyond the frontier. Equipped with a propulsion mechanism whose technology seems to be a product of peculiar methods.",
+        "Description": "A hammer that primarily requires Strength.\n\nModerately high bleed effect on hit.\n\nEquipped with a propulsion mechanism, it allows for movement-based attacks.\n\nStrong attacks are a rotating strike following a charge. Charged strong attacks start with a rotating strike, followed by an upward swing that launches the user into the air, allowing for midair attacks.\n\nThis hammer drifted in from beyond the frontier. Equipped with a propulsion mechanism whose technology seems to be a product of peculiar methods.",
         "Type": "Hammer",
         "Transforms": [
             {
@@ -21726,7 +24051,7 @@
     },
     {
         "Name": "Sunset Hammer",
-        "Description": "A hammer that primarily requires Strength.\n\nStrong attacks deliver a full-force strike.\n\nThis hammer drifted in from beyond the frontier. Its blade has been altered by unknown elements.",
+        "Description": "A hammer that primarily requires Strength.\n\nStrong attacks deliver a full-force strike.\n\nThis hammer drifted in from beyond the frontier. Its head has been altered with unknown elements.",
         "Type": "Hammer",
         "Transforms": [
             {
@@ -22185,6 +24510,502 @@
                 "Burden": {
                     "Strength": 8,
                     "Dexterity": 6,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Rift Warhammer",
+        "Description": "A hammer with outstanding elemental attack power that requires Strength and Willpower.\n\nWhile its fundamental capabilities are limited, its attack power is easily improved by the ability of the user.\n\nStrong attacks mow down foes with a spinning attack while leaping forward. Charged strong attacks have more spins and a greater leaping distance.\n\nA pathos-imbued hammer left in the temporal rift. Its original owner was erased from history, but their burning passion still dwells within.",
+        "Type": "Hammer",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 5,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 5,
+                    "Conversion": 7,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 8,
+                    "Conversion": 7,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 6,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 5,
+                    "Conversion": 9,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 5,
+                    "Conversion": 9,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 5,
+                    "Conversion": 9,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 5,
+                    "Conversion": 9,
+                    "Conductivity": 11
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Venom",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 5,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Sun",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 5,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 42,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 5,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 10,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 28,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 5,
+                    "Conversion": 8,
+                    "Conductivity": 10
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 8,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Rusty Forma Mech-Hammer Goliath",
+        "Description": "A hammer that requires Vitality and Fortitude.\n\nStrong attacks execute a short step followed by a sweeping horizontal strike. Charged strong attacks perform a spinning attack like a top.\n\nThe hammer of the derelict forma war vehicle, Goliath. Although it is encased in a layer of rust, it was built to last, and its output seems to defy the passage of time.",
+        "Type": "Hammer",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 6,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 15,
+                    "Handling": 6,
+                    "Conversion": 5,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 10,
+                    "Conversion": 5,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 13,
+                    "Handling": 8,
+                    "Conversion": 6,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 7,
+                    "Conversion": 7,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 7,
+                    "Conversion": 7,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 7,
+                    "Conversion": 7,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 7,
+                    "Conversion": 7,
+                    "Conductivity": 9
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Venom",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 6,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Sun",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 6,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 55,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 6,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 8,
+                    "Fortitude": 8
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 37,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 7,
+                    "Conversion": 6,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 7,
+                    "Fortitude": 7
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Cupitor Aeternitas",
+        "Description": "A hammer that requires Strength.\n\nHeals the user whenever it is used to attack an enemy.\n\nStrong attacks are a rotating strike following a charge. Charged strong attacks start with a rotating strike, followed by an upper swing that launches the user into the air. After jumping, midair attacks are possible.\n\nA hammer wielded by the Corrupted Savior. Resembles the Warhammer of the Fool, wielded by a revenant who proclaimed himself as \"the Great.\" It clings to life and mercilessly steals the life force of its victims with every blow.",
+        "Type": "Hammer",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 22,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 4,
+                    "Conversion": 6,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 16,
+                    "Dexterity": 0,
                     "Mind": 0,
                     "Willpower": 0,
                     "Vitality": 0,
@@ -23703,6 +26524,490 @@
                     "Willpower": 9,
                     "Vitality": 0,
                     "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Rift Floating Swords",
+        "Description": "Rune blades with outstanding elemental attack power that require Strength and Dexterity.\n\nWhile their fundamental capabilities are limited, their attack power is easily improved by the ability of the user.\n\nThe first hit of weak attacks perform a quick dash forward.\n\nStrong attacks unleash a leaping side kick with the blades to mow down the area.\n\nMidair weak attacks are a descending hand strike.\n\nMidair strong attacks sharply descend while delivering a kick.\n\nPathos-imbued dual floating swords left in the temporal rift. Their original owner was erased from history, but their burning passion still dwells within.",
+        "Type": "RuneBlade",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 8,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 13,
+                    "Handling": 9,
+                    "Conversion": 7,
+                    "Conductivity": 5
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 9,
+                    "Handling": 13,
+                    "Conversion": 7,
+                    "Conductivity": 5
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 11,
+                    "Conversion": 8,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 9,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 9,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 9,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 9,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Venom",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 8,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Sun",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 8,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 58,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 8,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 12,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 39,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 10,
+                    "Conversion": 8,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 10,
+                    "Dexterity": 10,
+                    "Mind": 0,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Battleshield of Lost Glory",
+        "Description": "Rune blades that require Strength and Mind.\n\nWhen enemy attacks are blocked, the user's attack power and stagger attack power are boosted.\n\nStrong attacks unleash a long-distance jumping kick.\n\nMidair strong attacks sharply descend while delivering a kick.\n\nDual floating swords of a knight who wandered the rift. Essentially shields in form, they protect the pathos of their wielder so that it may never die. By their own will, they cut down any who would stand in their way.",
+        "Type": "RuneBlade",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 9,
+                    "Conversion": 6,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 8,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STR",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 14,
+                    "Handling": 8,
+                    "Conversion": 5,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 8,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_DEX",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 12,
+                    "Conversion": 5,
+                    "Conductivity": 6
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 8,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_STRDEX",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 12,
+                    "Handling": 10,
+                    "Conversion": 6,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 8,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Fire",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 9,
+                    "Conversion": 7,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 8,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Ice",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 9,
+                    "Conversion": 7,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 8,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Lightning",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 9,
+                    "Conversion": 7,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 8,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Blood",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 10,
+                    "Handling": 9,
+                    "Conversion": 7,
+                    "Conductivity": 8
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 8,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_Bleeding",
+                "Bleed": 78,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 9,
+                    "Conversion": 6,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 14,
+                    "Dexterity": 0,
+                    "Mind": 8,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            },
+            {
+                "Name": "Weapon_LoadDown",
+                "Bleed": 52,
+                "Capacity": {
+                    "Reliability": 11,
+                    "Handling": 9,
+                    "Conversion": 6,
+                    "Conductivity": 7
+                },
+                "Burden": {
+                    "Strength": 12,
+                    "Dexterity": 0,
+                    "Mind": 7,
+                    "Willpower": 0,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Scythes of Judgment",
+        "Description": "Rune blades that require Mind and Willpower.\n\nAttack power is boosted when empty-handed while launching blades during combat forma attacks.\n\nWeak attacks can be chained repeatedly as long as stamina allows.\n\nStrong attacks deliver a scissor attack with the blades. Charged strong attacks consume ichor to unleash a blood-element magic forma attack.\n\nMidair weak attacks can combo into a midair strong attack.\n\nMidair strong attacks hover while crossing the blades at high speed.\n\nDual floating swords with the power of the Watchful Guardian. The blades judge whether those before them will save and bring happiness to their beloved. If not, in a single flash, they ruthlessly deliver judgment.",
+        "Type": "RuneBlade",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 60,
+                "Capacity": {
+                    "Reliability": 7,
+                    "Handling": 6,
+                    "Conversion": 6,
+                    "Conductivity": 14
+                },
+                "Burden": {
+                    "Strength": 0,
+                    "Dexterity": 0,
+                    "Mind": 10,
+                    "Willpower": 13,
+                    "Vitality": 0,
+                    "Fortitude": 0
+                },
+                "Scaling": "TODO"
+            }
+        ]
+    },
+    {
+        "Name": "Regalia of Harmony: Instruction",
+        "Description": "Floating swords born from the bond between Valentin and the Great Hero. Woven within is the pathos of past memories with Valentin, who staked everything to atone to his friends.\n\nRequires Mind, Willpower, and Fortitude. Equipping it increases your attributes. <font color=\"red\">NOT IMPLEMENTED</font>\n\nStrong attacks deliver a long-range jumping kick.\n\nMidair weak attacks can combo into a midair strong attack.\n\nMidair strong attacks sharply descend while delivering a kick.",
+        "Type": "RuneBlade",
+        "Transforms": [
+            {
+                "Name": "Weapon_Off",
+                "Bleed": 64,
+                "Capacity": {
+                    "Reliability": 8,
+                    "Handling": 8,
+                    "Conversion": 9,
+                    "Conductivity": 16
+                },
+                "Burden": {
+                    "Strength": 4,
+                    "Dexterity": 4,
+                    "Mind": 6,
+                    "Willpower": 6,
+                    "Vitality": 4,
+                    "Fortitude": 6
                 },
                 "Scaling": "TODO"
             }

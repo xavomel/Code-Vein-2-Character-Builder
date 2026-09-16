@@ -47,7 +47,7 @@
     },
     {
         "Name": "Stinger",
-        "Description": "A massive scorpion tail that skewers prey.\n\nThrust forward in a straight line over a long distance with the tail. Hold button to send enemies flying.\n\nEquipping this Jail increases defense.\n\nLike Hound, Stinger is part of the second generation of draining tech.\n\nUnlike Ogre and Hound, however, it was built to trap prey from a distance and suit the needs of hunter assassins and covert operatives.\n\nThough originally designed to both poison and drain, the complex circulation system occasionally caused a backflow of the lethal substance, leading to its eventual removal.",
+        "Description": "A massive scorpion tail that skewers prey.\n\nThrust forward in a straight line over a long distance with the tail. Hold <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to send enemies flying.\n\nEquipping this Jail increases defense.\n\nLike Hound, Stinger is part of the second generation of draining tech.\n\nUnlike Ogre and Hound, however, it was built to trap prey from a distance and suit the needs of hunter assassins and covert operatives.\n\nThough originally designed to both poison and drain, the complex circulation system occasionally caused a backflow of the lethal substance, leading to its eventual removal.",
         "Type": "Stinger",
         "Balance": 81,
         "Burden": {
@@ -70,7 +70,7 @@
     },
     {
         "Name": "Ivy",
-        "Description": "Thorns that generate blades of steel.\n\nErupts countless blades from the ground, piercing a wide area.\n\nHold button to place a marker on the ground. Release button to drain at the marker's location. The marker can be repositioned as desired.\n\nEquipping this item minimally increases defense.\n\nIvy is part of the third generation of draining tech, building on the foundations of stingers before them.\n\nDesigned specifically for long-range surprise attacks, these jails were favored by the most infamous assassins.\n\nUnexpected attacks from below prove remarkably effective, but to wield them with true mastery demands both seasoned skill and unwavering focus.\n\nThe legendary assassin who went by Nyx was said to wear this type of jail at all hours, wielding its thorns as deftly as she did her own arms and legs.",
+        "Description": "Thorns that generate blades of steel.\n\nErupts countless blades from the ground, piercing a wide area.\n\nHold <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to place a marker on the ground. Release <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to drain at the marker's location. The marker can be repositioned as desired.\n\nEquipping this item minimally increases defense.\n\nIvy is part of the third generation of draining tech, building on the foundations of stingers before them.\n\nDesigned specifically for long-range surprise attacks, these jails were favored by the most infamous assassins.\n\nUnexpected attacks from below prove remarkably effective, but to wield them with true mastery demands both seasoned skill and unwavering focus.\n\nThe legendary assassin who went by Nyx was said to wear this type of jail at all hours, wielding its thorns as deftly as she did her own arms and legs.",
         "Type": "Ivy",
         "Balance": 16,
         "Burden": {
@@ -135,6 +135,144 @@
             "Fire": "3.4",
             "Ice": "3.1",
             "Lightning": "3.7"
+        }
+    },
+    {
+        "Name": "Tainted Ogre",
+        "Description": "A Jail tainted with pathos. This gigantic claw is reminiscent of an ogre's arm.\n\nDashes forward a short distance and drives the claw into the target.\n\nThis Jail has somewhat low defense. While equipped, the value of the blood code's highest attribute will be switched with the user's Strength. <font color=\"red\">NOT IMPLEMENTED</font>\n\nAs this blood-draining apparatus was created with the technology of another world and corrupted by the pathos of the Forsaken World, its traits are considered uncharted territory. The device can convert the power of the user's blood code into Strength, allowing them to overpower enemies. However, it sacrifices defense due to its unstable structure.",
+        "Type": "Ogre",
+        "Balance": 30,
+        "Burden": {
+            "Strength": 6,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 6,
+            "Fortitude": 2
+        },
+        "Defense": {
+            "Slash": "2.4",
+            "Crush": "2.2",
+            "Pierce": "2.6",
+            "Blood": "2.3",
+            "Fire": "2.5",
+            "Ice": "2.3",
+            "Lightning": "2.2"
+        }
+    },
+    {
+        "Name": "Tainted Hound",
+        "Description": "A Jail tainted with pathos. This twin-headed wolf crushes foes in its jaws.\n\nUnleashes a two-hit combo with left and right jaws. While attacking, the user has increased disruption resistance to enemy strikes.\n\nThis Jail has somewhat low defense. While equipped, the value of the blood code's highest attribute will be switched with the user's Vitality. <font color=\"red\">NOT IMPLEMENTED</font>\n\nAs this blood-draining apparatus was created with the technology of another world and corrupted by the pathos of the Forsaken World, its traits are considered uncharted territory. The device can convert the power of the user's blood code into Vitality, enhancing the user's physical health. However, it sacrifices defense due to its unstable structure.",
+        "Type": "Hounds",
+        "Balance": 89,
+        "Burden": {
+            "Strength": 4,
+            "Dexterity": 0,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 6,
+            "Fortitude": 2
+        },
+        "Defense": {
+            "Slash": "4.3",
+            "Crush": "4.5",
+            "Pierce": "4.1",
+            "Blood": "4.5",
+            "Fire": "4.2",
+            "Ice": "4.1",
+            "Lightning": "4.3"
+        }
+    },
+    {
+        "Name": "Tainted Stinger",
+        "Description": "A Jail tainted with pathos. This massive scorpion tail skewers its prey.\n\nThrusts forward in a straight line over a long distance with the tail. Hold the input to send enemies flying.\n\nThis Jail has somewhat low defense. While equipped, the value of the blood code's highest attribute will be switched with the user's Fortitude. <font color=\"red\">NOT IMPLEMENTED</font>\n\nAs this blood-draining apparatus was created with the technology of another world and corrupted by the pathos of the Forsaken World, its traits are considered uncharted territory. The device can convert the power of the user's blood code into Fortitude, granting lasting endurance. However, it sacrifices defense due to its unstable structure.",
+        "Type": "Stinger",
+        "Balance": 52,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 4,
+            "Mind": 0,
+            "Willpower": 2,
+            "Vitality": 2,
+            "Fortitude": 6
+        },
+        "Defense": {
+            "Slash": "2.0",
+            "Crush": "2.4",
+            "Pierce": "1.8",
+            "Blood": "3.4",
+            "Fire": "3.3",
+            "Ice": "3.6",
+            "Lightning": "3.1"
+        }
+    },
+    {
+        "Name": "Tainted Ivy",
+        "Description": "A Jail tainted with pathos. It produces thorns that generate blades of steel.\n\nErupts countless blades from the ground, piercing a wide area.\n\nHold the input to create a marker on the ground. Release to drain at the marker's location. The marker can be positioned as desired.\n\nThis Jail has somewhat low defense. While equipped, the value of the blood code's highest attribute will be switched with the user's Willpower. <font color=\"red\">NOT IMPLEMENTED</font>\n\nAs this blood-draining apparatus was created with the technology of another world and corrupted by the pathos of the Forsaken World, its traits are considered uncharted territory. The device can convert the power of the user's blood code into Willpower, enhancing the attack power of formae. However, it sacrifices defense due to its unstable structure.",
+        "Type": "Ivy",
+        "Balance": 6,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 4,
+            "Willpower": 6,
+            "Vitality": 2,
+            "Fortitude": 2
+        },
+        "Defense": {
+            "Slash": "0.5",
+            "Crush": "0.2",
+            "Pierce": "0.4",
+            "Blood": "2.1",
+            "Fire": "2.3",
+            "Ice": "2.7",
+            "Lightning": "2.3"
+        }
+    },
+    {
+        "Name": "Tainted Bat",
+        "Description": "A Jail tainted with pathos. It launches a fang-tipped arrow with bat wings.\n\nA swarm of bats descends and continuously drains blood from the enemy struck by the arrow. The bats disappear after a set amount of blood is drained. If the distance between the target and the user is great, the bats' drain rate decreases. If it becomes too great, the bats will vanish immediately.\n\nThis Jail has somewhat low defense. While equipped, the value of the blood code's highest attribute will be switched with the user's Mind. <font color=\"red\">NOT IMPLEMENTED</font>\n\nAs this blood-draining apparatus was created with the technology of another world and corrupted by the pathos of the Forsaken World, its traits are considered uncharted territory. The device can convert the power of the user's blood code into Mind, enhancing the effects of formae. However, it sacrifices defense due to its unstable structure.",
+        "Type": "Bat",
+        "Balance": 12,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 6,
+            "Willpower": 4,
+            "Vitality": 2,
+            "Fortitude": 2
+        },
+        "Defense": {
+            "Slash": "0.9",
+            "Crush": "1.0",
+            "Pierce": "1.0",
+            "Blood": "2.7",
+            "Fire": "2.2",
+            "Ice": "2.2",
+            "Lightning": "2.2"
+        }
+    },
+    {
+        "Name": "Tainted Reaper",
+        "Description": "A Jail tainted with pathos. Resembles a puppet reaper bearing a massive scythe.\n\nUnleashes a spinning slash with the scythe. The initial spin can deflect enemy attacks. If an attack cannot be deflected, it is blocked instead.\n\nThis Jail has somewhat low defense. While equipped, the value of the blood code's highest attribute will be switched with the user's Dexterity. <font color=\"red\">NOT IMPLEMENTED</font>\n\nAs this blood-draining apparatus was created with the technology of another world and corrupted by the pathos of the Forsaken World, its traits are considered uncharted territory. The device can convert the power of the user's blood code into Dexterity, enabling the skillful application of difficult-to-use weapons. However, it sacrifices defense due to its unstable structure.",
+        "Type": "Reaper",
+        "Balance": 67,
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 6,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 6
+        },
+        "Defense": {
+            "Slash": "0.7",
+            "Crush": "0.8",
+            "Pierce": "0.8",
+            "Blood": "2.5",
+            "Fire": "2.0",
+            "Ice": "1.9",
+            "Lightning": "2.0"
         }
     }
 ]

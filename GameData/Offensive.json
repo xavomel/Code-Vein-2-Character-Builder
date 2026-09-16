@@ -1,16 +1,17 @@
 [
-    {
-        "Name": "Absolute Executioner",
-        "Description": "An executioner's sword wreathed in spinning gears and sparking blades.\n\nUnleashes a multi-hit downward strike.",
-        "Bleed": 62,
-        "IchorCost": 6,
+	{
+        "Name": "Statesman's Longbow",
+        "Description": "A bow that shoots arrows of light at incredible speed.\n\nHold the input to ready the bow and press button to loose an arrow toward the aiming reticle. Aim by moving the camera.\n\nYou can also move while aiming.\n\nHold button to increase the power of the shot.\n\nThis ancient forma was created by Einar, a revenant who once ruled the country. Simple and versatile, it was passed down through generations. Einar was known for his occasionally relentless rule and is said to have fired upon disobedient citizens from his palace window.",
+        "Bleed": 30,
+        "IchorCost": 1,
         "Scaling": {
-            "Strength": "S+"
+            "Dexterity": "S",
+            "Willpower": "A"
         }
     },
-    {
+	{
         "Name": "Battle Axe: Idris's Conceit",
-        "Description": "A special axe that generates a temporal force field.\n\nStriking with the axe creates a wide-area shock wave. The axe's swing can easily break through shields, and its force field gradually builds up the slow status ailment.",
+        "Description": "A special axe that generates a temporal force field. Striking with the axe creates a wide-area shock wave. The axe's swing can easily break through shields, and its force field gradually builds up the slow status ailment.\n\nOne of many formae crafted by Progenitor Idris. It is unknown if its name was meant as an admonishment of Idris himself or as a warning to the user.",
         "Bleed": 48,
         "IchorCost": 5,
         "Scaling": {
@@ -19,29 +20,29 @@
             "Mind": "S"
         }
     },
-    {
+	{
         "Name": "Bloodreaver Blade",
-        "Description": "A long blade that slashes foes with a flash-draw strike.",
+        "Description": "A long blade that slashes foes with a flash-draw strike. Hold button to enter a ready stance. Release to perform a slash draw. The timing of the release affects both motion and power. A well-timed release delivers a significantly stronger blow.\n\nThis forma was devised by Astolfo, founder of the Anjou House of the Gula Bloodline. On the battlefield, he built mountains of corpses, his greatsword feared as the Bloodreaver, and he himself revered as a god of war.",
         "Bleed": 66,
-        "IchorCost": 4,
+        "IchorCost": 6,
         "Scaling": {
             "Strength": "S",
             "Dexterity": "A",
             "Mind": "B"
         }
     },
-    {
-        "Name": "Manus Rapacis",
-        "Description": "A grotesque hand that channels the Resurgence's power into a searing beam of light.\n\nFires a long-range laser directly ahead in a straight line.",
-        "Bleed": 35,
+	{
+        "Name": "Absolute Executioner",
+        "Description": "An executioner's sword wreathed in spinning gears and sparking blades. Unleashes a multi-hit downward strike. Hold button to increase the number of hits.\n\nThis forma was created by Gregory, founder of McLeish House and once an executioner himself. Its dreadful, machine-like shape of interlocking blades reflects his severity as a servant of the law. The crushing force of a single strike is said to carry a grim mercy for the condemned.",
+        "Bleed": 62,
         "IchorCost": 6,
         "Scaling": {
-            "Willpower": "S+"
+            "Strength": "S+"
         }
     },
     {
         "Name": "MK Rosenritter",
-        "Description": "Twin triple-barreled Gatling guns that turn a wide area into a bullet storm.",
+        "Description": "Twin triple-barreled Gatling guns that turn a wide area into a bullet storm.\n\nReady the gun and move the camera to aim, then fire by pressing button. You can also move while aiming. Sustains continuous fire as long as the button is held and ichor remains.\n\nThis forma was crafted by Bella, the most gifted daughter of Asturias House of the Luxuria Bloodline. Bella surrounded herself with beautiful retainers known as the Rose Knights, who served as her guards. Though elegant in appearance, the forma bestowed upon them possesses unparalleled destructive power. A perfect embodiment of the saying, \"Every rose has its thorn,\" it remains a cherished weapon for the women of Asturias House.",
         "Bleed": 54,
         "IchorCost": 1,
         "Scaling": {
@@ -50,18 +51,8 @@
         }
     },
     {
-        "Name": "Statesman's Longbow",
-        "Description": "A bow that fires arrows of light at incredible speed.",
-        "Bleed": 30,
-        "IchorCost": 1,
-        "Scaling": {
-            "Dexterity": "S",
-            "Willpower": "A"
-        }
-    },
-    {
         "Name": "Warhammer of the Fool",
-        "Description": "A fire-belching hammer with three forms.\n\nInitiates a chain of attacks starting from a heavy downward swing.",
+        "Description": "A fire-belching hammer with three forms. Initiates a chain of attacks starting from a heavy downward swing.\n\nAfter use, hold button and press button: Trigger a two-hit combo.\nAfter combo, hold button and press button, button, or button: Trigger a unique finisher move.\n\nThe finisher changes depending on which additional button is pressed.\n\nThis forma is wielded by the peerless savant, Zenon Gryfgote. Though Zenon created countless advanced formae and commands them as effortlessly as breathing, this particular forma is surprisingly not his own. It is a relatively mundane forma passed down throughout the Acedia Bloodline that he merely borrowed, perhaps evidence that Zenon sees combat itself as no more than a trivial pursuit.",
         "Bleed": 42,
         "IchorCost": 2,
         "Scaling": {
@@ -69,14 +60,43 @@
             "Dexterity": "S"
         }
     },
+	{
+        "Name": "Manus Rapacis",
+        "Description": "A grotesque hand that channels the Resurgence's power into a searing beam of light. Fires a long-range laser directly ahead in a straight line. While firing, you can use mouse to adjust the beam's direction.\n\nThis forma captures a fragment of the power of the hero Valentin. The hand, shaped by his yearning for the future, reaches into the void, but what is it hoping to grasp?",
+        "Bleed": 35,
+        "IchorCost": 6,
+        "Scaling": {
+            "Willpower": "S+"
+        }
+    },
     {
         "Name": "Wings of Eternity",
-        "Description": "The twisted wings of Valentin, transfigured into forma.\n\nRains countless spears of light from above, bombarding a wide area.",
+        "Description": "The twisted wings of Valentin, transfigured into forma. Rains countless spears of light from above, bombarding a wide area.\n\nThese corrupted wings of the dragon who bore the world's sins now shine with the power to purify immortal souls.",
         "Bleed": 33,
         "IchorCost": 10,
         "Scaling": {
             "Mind": "S",
             "Willpower": "S"
+        }
+    },
+    {
+        "Name": "Sword of Karma: Idris",
+        "Description": "A massive sword, in which dwells the fires of pathos.\n\nSwing the blade with great force to deliver two consecutive strikes.\n\nPress button during the action to perform another combo strike, then button to branch into a finisher. (Consumes ichor on use.)\n\nThe favorite sword of Progenitor Idris, which served him well throughout his life. It bears the name of the great hero and demonstrates power befitting such an accomplished and renowned figure, but it had not always housed such power. The blade, as well as the formae woven throughout the sword, were honed over unfathomable years as Idris traveled through time over and over again. The sheer might of this forma speaks to just how harsh the great hero's journey was.",
+        "Bleed": 83,
+        "IchorCost": 3,
+        "Scaling": {
+			"Strength": "S+"
+        }
+    },
+    {
+        "Name": "Edge of Days Gone",
+        "Description": "A unique axe, in which dwells the fires of pathos.\n\nForma-spawned bats fire lasers in multiple directions.\n\nHold button while starting the action to change it into a high-power slam attack.\n\nCreated when the bequeathed forma wielded by Lou was corrupted by the intense pathos that made up the Forsaken World. Amplifies the bearer's pathos to its absolute limit, transforming it into raw power.\n\nThe immense energy surging through this weapon is proof that the heart has a sway over the fate of this world—even if what lies within is an unrequited yearning for a time that is never to return.",
+        "Bleed": 58,
+        "IchorCost": 5,
+        "Scaling": {
+			"Strength": "B+",
+            "Dexterity": "B+",
+            "Willpower": "S+"
         }
     }
 ]

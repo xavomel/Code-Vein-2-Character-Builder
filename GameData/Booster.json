@@ -223,7 +223,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -241,7 +241,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -300,7 +300,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -318,7 +318,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -352,7 +352,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -422,7 +422,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -476,7 +476,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -494,7 +494,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -512,7 +512,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Gula"
             }
         ]
@@ -531,7 +531,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -549,7 +549,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Luxuria"
             }
         ]
@@ -568,7 +568,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Superbia"
             }
         ]
@@ -587,7 +587,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -605,7 +605,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -623,7 +623,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -641,7 +641,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Luxuria"
             }
         ]
@@ -660,7 +660,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -698,7 +698,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -716,7 +716,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -734,7 +734,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -752,7 +752,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -770,7 +770,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -788,7 +788,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -806,7 +806,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -824,7 +824,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -842,7 +842,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -860,7 +860,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Patientia"
             }
         ]
@@ -879,7 +879,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Luxuria"
             }
         ]
@@ -918,7 +918,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Superbia"
             }
         ]
@@ -937,7 +937,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -955,7 +955,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -973,7 +973,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -991,7 +991,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Superbia"
             }
         ]
@@ -1031,7 +1031,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Patientia"
             }
         ]
@@ -1082,7 +1082,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1100,7 +1100,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1118,7 +1118,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1136,7 +1136,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1226,7 +1226,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1328,7 +1328,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1362,7 +1362,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1380,7 +1380,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1398,7 +1398,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1436,7 +1436,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Acedia"
             }
         ]
@@ -1455,7 +1455,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1473,7 +1473,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1512,7 +1512,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false,
+                "OverburdenMax": 0,
                 "Bloodline": "Patientia"
             }
         ]
@@ -1531,7 +1531,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1569,7 +1569,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1607,7 +1607,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1625,7 +1625,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1643,7 +1643,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1661,7 +1661,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1679,7 +1679,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1697,7 +1697,7 @@
         },
         "Conditions": [
             {
-                "Overburden": false
+                "OverburdenMax": 0
             }
         ]
     },
@@ -1710,7 +1710,7 @@
             "Dexterity": 0,
             "Mind": 0,
             "Willpower": 0,
-            "Vitality": 15,
+            "Vitality": 10,
             "Fortitude": 10
         },
         "Conditions": [
@@ -1732,7 +1732,7 @@
         "Conditions": [
             {
                 "Burden": {
-                    "Vitality": 15,
+                    "Vitality": 10,
                     "Fortitude": 10
                 }
             }
@@ -1816,6 +1816,1008 @@
         },
         "Conditions": [
             {}
+        ]
+    },
+    {
+        "Name": "Defeat Drainer",
+        "Description": "Absorb ichor whenever you defeat an enemy.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 2,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "OverburdenMax": 0
+            }
+        ]
+    },
+    {
+        "Name": "Perfect Guard Drainer",
+        "Description": "Absorb ichor whenever you block an enemy attack using defensive formae for shields.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 8,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+				"Margin": {
+					"Vitality": 5
+				},
+                "Bloodline": "Acedia"
+            }
+        ]
+    },
+    {
+        "Name": "Parry Drainer",
+        "Description": "Absorb ichor whenever you parry an enemy attack.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 6,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 6
+        },
+        "Conditions": [
+            {
+				"Margin": {
+					"Fortitude": 5
+				},
+                "Bloodline": "Gula"
+            }
+        ]
+    },
+    {
+        "Name": "Special Drain Recovery",
+        "Description": "Special drain attacks restore HP or LP.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 8,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "OverburdenMax": 0
+            }
+        ]
+    },
+    {
+        "Name": "Surplus Heal",
+        "Description": "Recovers HP or LP whenever the amount of ichor absorbed exceeds the maximum capacity.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+				"Margin": {
+					"Vitality": 5
+				}
+            }
+        ]
+    },
+    {
+        "Name": "Tenacious Fixation",
+        "Description": "Heal whenever you deal damage to an enemy, but gradually lose HP or LP while in battle.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 10,
+            "Dexterity": 10,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "OverburdenMin": 1
+            }
+        ]
+    },
+    {
+        "Name": "Better Benefits",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nIncreases the effect of benefits received from overburden effects.\n\nDoes not impact penalties.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 10,
+            "Willpower": 10,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "OverburdenMin": 1
+            }
+        ]
+    },
+    {
+        "Name": "Elemental Attack Power Up",
+        "Description": "Boosts elemental attack power of all attacks.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 3,
+            "Willpower": 3,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "OverburdenMax": 0
+            }
+        ]
+    },
+    {
+        "Name": "Boosted Weapon",
+        "Description": "Provides a large boost to the attack power of normal weapon attacks, but consumes ichor each time a normal attack hits an enemy.\n\nIf the user has no remaining ichor, the attack power of normal attacks is reduced.\n\nThis booster does not stack with similar effects.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 3,
+            "Dexterity": 0,
+            "Mind": 3,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Strength": 20
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Immortal Combat",
+        "Description": "Provides a large boost to the attack power of weapons, but all damage dealt by your weapons becomes recoverable damage.\n\nThis booster does not stack with similar effects.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 3,
+            "Mind": 3,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Dexterity": 20
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Strong Attack Boost",
+        "Description": "Boosts attack power and stagger attack power of strong attacks.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 3,
+            "Dexterity": 3,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+				"Margin": {
+					"Strength": 5,
+					"Dexterity": 5
+				}
+            }
+        ]
+    },
+    {
+        "Name": "Surplus Drive",
+        "Description": "Whenever the amount of ichor absorbed exceeds the maximum capacity, the attack power of the next forma receives a boost.\n\nThe more ichor absorbed over the limit, the more powerful the attack becomes.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 0,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+				"Margin": {
+					"Mind": 5
+				},
+                "Bloodline": "Superbia"
+            }
+        ]
+    },
+    {
+        "Name": "Weapon Switch Attack Boost",
+        "Description": "When equipped with two weapons, gain a boost to attack power when switching weapons.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 4,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+				"Margin": {
+					"Mind": 5
+				}
+            }
+        ]
+    },
+    {
+        "Name": "Dear Separation",
+        "Description": "When equipped with rune blades, the user receives a boost to attack power while empty-handed after throwing the blades using combat formae.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 4,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+				"Margin": {
+					"Willpower": 5
+				}
+            }
+        ]
+    },
+    {
+        "Name": "Inhibiting Drain",
+        "Description": "Makes drain attacks reduce more of an enemy's recoverable damage.\n\nAlso works with special drains.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+				"Margin": {
+					"Dexterity": 5
+				}
+            }
+        ]
+    },
+    {
+        "Name": "Nothing But Fists",
+        "Description": "Boosts attack power and stagger attack power when no weapon is equipped.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Bequeathed Forma Attack Power Up",
+        "Description": "Increases attack power of bequeathed formae.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 2,
+            "Willpower": 2,
+            "Vitality": 2,
+            "Fortitude": 2
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Progenitor's Experience",
+        "Description": "Increases attack power for the bequeathed forma Sword of Karma: Idris.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 8,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Undying Flame",
+        "Description": "Increases attack power for the bequeathed forma Edge of Days Gone.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 4,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Bequeathed Formae Ichor Saver",
+        "Description": "Reduces the ichor cost of bequeathed formae.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 3,
+            "Dexterity": 3,
+            "Mind": 3,
+            "Willpower": 3,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Improved Dodge Invincibility",
+        "Description": "Slightly increases the invincibility window of normal and defensive forma dodges.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 6,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "OverburdenMax": 0
+            }
+        ]
+    },
+    {
+        "Name": "Dynamite Arrows",
+        "Description": "Arrows shot with the bequeathed forma Statesman's Longbow will explode on impact.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Road Rage",
+        "Description": "Instantly kills enemies of significantly lower level whenever you crash into them with the motorcycle.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Speedy Restorative Offerings",
+        "Description": "Reduces partner incapacitation time from a Restorative Offering.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Restorative Offering Attack Boost",
+        "Description": "Temporarily boosts attack power after a Restorative Offering revival.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 6,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Mind": 20
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Inviolable Devotion",
+        "Description": "Blast away nearby foes with a bloody shock wave after a Restorative Offering revival.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 2,
+            "Vitality": 4,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+				"Margin": {
+					"Willpower": 5
+				}
+            }
+        ]
+    },
+    {
+        "Name": "Eternal Vow",
+        "Description": "Increases amount healed by a Restorative Offering.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Homeostasis",
+        "Description": "Gradually restores HP and LP when enemy is within a certain range in combat.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 4,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Vitality": 15
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Recirculatory Engine",
+        "Description": "Restores stamina when enemies are hit with forma attacks.\n\nFully restores stamina when an enemy is defeated.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Bloodline": "Gula"
+            }
+        ]
+    },
+    {
+        "Name": "Strategic Move",
+        "Description": "Restores stamina whenever you block an enemy attack.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 3
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Strength": 15,
+                    "Vitality": 15
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Life Force Exchange",
+        "Description": "Grants activating formae when ichor is insufficient, but temporarily reduces maximum stamina.\n\nThis is prioritized when stacked with similar effects.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 4,
+            "Vitality": 0,
+            "Fortitude": 2
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Willpower": 18
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Crimson Fervor",
+        "Description": "Reduces HP and increases LP if Liv is your partner.\n\nDecreases LP and increases HP if another partner is set.",
+        "Type": "Basic",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 0,
+            "Mind": 2,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Bloodline": "Superbia"
+            }
+        ]
+    },
+    {
+        "Name": "Punishing Payback",
+        "Description": "Reduces damage taken and greatly increases balance and attack power of charge attacks if hit when an attack's charge is complete.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 4,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 2
+        },
+        "Conditions": [
+            {
+                "Bloodline": "Patientia"
+            }
+        ]
+    },
+    {
+        "Name": "Quick Reload",
+        "Description": "Increases reload speed of bayonets and temporarily increases attack power after reloading.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 4,
+            "Mind": 2,
+            "Willpower": 2,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Bloodline": "Luxuria"
+            }
+        ]
+    },
+    {
+        "Name": "Bloodthirsty Attack Power Up",
+        "Description": "Increases attack power against bloodthirsty enemies.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 2,
+            "Mind": 4,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Dexterity": 18
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Sunblight Engine",
+        "Description": "Inflicts a buildup of the Sunblight status ailment for Warhammer of the Fool's attacks.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 1,
+            "Willpower": 1,
+            "Vitality": 1,
+            "Fortitude": 1
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Counter Stance",
+        "Description": "Greatly increases stagger damage dealt by parrying, but reduces parry duration.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 6
+        },
+        "Conditions": [
+            {
+                "Bloodline": "Patientia"
+            }
+        ]
+    },
+    {
+        "Name": "Quantum Dynamics",
+        "Description": "Ignores some of the enemy's defense when you deal damage.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 3,
+            "Mind": 0,
+            "Willpower": 3,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Dexterity": 20
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Vengeful Vortex",
+        "Description": "Produces a shock wave which inflicts the Slow status ailment whenever you block an enemy attack.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 3,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Mind": 20
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Space-Time Forma",
+        "Description": "Magic formae inflict a buildup of the Slow status ailment, but also increases ichor cost.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 5,
+            "Willpower": 2,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Bloodline": "Superbia"
+            }
+        ]
+    },
+    {
+        "Name": "Zealous Incantation",
+        "Description": "Increases attack power of magic formae, but reduces defense during use.",
+        "Type": "Attack",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 2,
+            "Willpower": 5,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Willpower": 18
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Benevolent Light",
+        "Description": "Temporarily ignores fatal damage once after a Restorative Offering revival.",
+        "Type": "Defence",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 4,
+            "Fortitude": 4
+        },
+        "Conditions": [
+            {
+                "Bloodline": "Superbia"
+            }
+        ]
+    },
+    {
+        "Name": "Hawk's Gaze",
+        "Description": "Lock on marker changes when it is possible to perform a back attack on an enemy.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Dexterity": 18
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Bound Souls",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nIncreases the effects of Lou's link trait and partner traits.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Partner": "Lou"
+            }
+        ]
+    },
+    {
+        "Name": "Link Repair",
+        "Description": "Reduces partner incapacitation time when enemy attacks are dodged.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 2,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Dexterity": 10,
+                    "Vitality": 10
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Avaricious Fang",
+        "Description": "Absorbs ichor when hitting enemies with weapon attacks.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 6,
+            "Dexterity": 2,
+            "Mind": 6,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Strength": 20,
+                    "Mind": 20
+                }
+            }
+        ]
+    },
+    {
+        "Name": "Oneiro I",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nIgnores any burdens of the booster in your first slot.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Oneiro J",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nIgnores attribute requirements of the booster in your second slot and activates its effects.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 2,
+            "Willpower": 2,
+            "Vitality": 2,
+            "Fortitude": 2
+        },
+        "Conditions": [
+            {}
+        ]
+    },
+    {
+        "Name": "Decoherence",
+        "Description": "Provides a chance to nullify the damage when hit by an enemy attack. This effect does not trigger when blocking or parrying.\n\nNullified damage will not be treated as a hit.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 3,
+            "Mind": 0,
+            "Willpower": 3,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Bloodline": "Acedia"
+            }
+        ]
+    },
+    {
+        "Name": "Glutton's Triple Blades",
+        "Description": "Triggers Glutton's Eyes when equipped with the two-handed sword, Glutton's Heavyblade.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Bloodline": "Gula"
+            }
+        ]
+    },
+    {
+        "Name": "Indivisible Pulse",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nActivates Lou's link trait effect even if she is not your partner.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 2,
+            "Dexterity": 2,
+            "Mind": 2,
+            "Willpower": 2,
+            "Vitality": 2,
+            "Fortitude": 2
+        },
+        "Conditions": [
+            {
+                "PartnerNot": "Lou"
+            }
+        ]
+    },
+    {
+        "Name": "Eating on the Road",
+        "Description": "Automatically consumes food upon starting exploration.\n\nAllows two food item effects to stack.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 0,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 0,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Partner": "Noah"
+            }
+        ]
+    },
+    {
+        "Name": "Zenon-Style Mobility Overdrive",
+        "Description": "<font color=\"red\">NOT IMPLEMENTED</font>\n\nChanges dodge effectiveness to quick.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 5,
+            "Dexterity": 5,
+            "Mind": 5,
+            "Willpower": 5,
+            "Vitality": 5,
+            "Fortitude": 5
+        },
+        "Conditions": [
+            {
+                "OverburdenMin": 2
+            }
+        ]
+    },
+    {
+        "Name": "Item Use Speed Up",
+        "Description": "Uses consumable items faster.",
+        "Type": "Other",
+        "Burden": {
+            "Strength": 0,
+            "Dexterity": 3,
+            "Mind": 0,
+            "Willpower": 0,
+            "Vitality": 2,
+            "Fortitude": 0
+        },
+        "Conditions": [
+            {
+                "Attribute": {
+                    "Dexterity": 13,
+                    "Vitality": 13
+                }
+            }
         ]
     }
 ]
