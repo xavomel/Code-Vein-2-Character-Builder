@@ -47,7 +47,7 @@
     },
     {
         "Name": "Stinger",
-        "Description": "A massive scorpion tail that skewers prey.\n\nThrust forward in a straight line over a long distance with the tail. Hold <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to send enemies flying.\n\nEquipping this Jail increases defense.\n\nLike Hound, Stinger is part of the second generation of draining tech.\n\nUnlike Ogre and Hound, however, it was built to trap prey from a distance and suit the needs of hunter assassins and covert operatives.\n\nThough originally designed to both poison and drain, the complex circulation system occasionally caused a backflow of the lethal substance, leading to its eventual removal.",
+        "Description": "A massive scorpion tail that skewers prey.\n\nThrust forward in a straight line over a long distance with the tail. Hold button to send enemies flying.\n\nEquipping this Jail increases defense.\n\nLike Hound, Stinger is part of the second generation of draining tech.\n\nUnlike Ogre and Hound, however, it was built to trap prey from a distance and suit the needs of hunter assassins and covert operatives.\n\nThough originally designed to both poison and drain, the complex circulation system occasionally caused a backflow of the lethal substance, leading to its eventual removal.",
         "Type": "Stinger",
         "Balance": 81,
         "Burden": {
@@ -70,7 +70,7 @@
     },
     {
         "Name": "Ivy",
-        "Description": "Thorns that generate blades of steel.\n\nErupts countless blades from the ground, piercing a wide area.\n\nHold <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to place a marker on the ground. Release <img id=\"Input.Action.Player.BloodSuck\" height=\"desired\" align=\"center\"/> to drain at the marker's location. The marker can be repositioned as desired.\n\nEquipping this item minimally increases defense.\n\nIvy is part of the third generation of draining tech, building on the foundations of stingers before them.\n\nDesigned specifically for long-range surprise attacks, these jails were favored by the most infamous assassins.\n\nUnexpected attacks from below prove remarkably effective, but to wield them with true mastery demands both seasoned skill and unwavering focus.\n\nThe legendary assassin who went by Nyx was said to wear this type of jail at all hours, wielding its thorns as deftly as she did her own arms and legs.",
+        "Description": "Thorns that generate blades of steel.\n\nErupts countless blades from the ground, piercing a wide area.\n\nHold button to place a marker on the ground. Release button to drain at the marker's location. The marker can be repositioned as desired.\n\nEquipping this item minimally increases defense.\n\nIvy is part of the third generation of draining tech, building on the foundations of stingers before them.\n\nDesigned specifically for long-range surprise attacks, these jails were favored by the most infamous assassins.\n\nUnexpected attacks from below prove remarkably effective, but to wield them with true mastery demands both seasoned skill and unwavering focus.\n\nThe legendary assassin who went by Nyx was said to wear this type of jail at all hours, wielding its thorns as deftly as she did her own arms and legs.",
         "Type": "Ivy",
         "Balance": 16,
         "Burden": {

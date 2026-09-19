@@ -12,7 +12,7 @@ import re
 from math import floor, ceil
 
 
-VERSION = u"Code Vein II Character Builder v0.5.2"
+VERSION = u"Code Vein II Character Builder v0.5.3"
 
 
 # this value was picked because it's not possible to exceed it even with maximum value for every code segment
@@ -168,7 +168,7 @@ class Ui_MainWindow(object):
         self.size_side_vertical_layout_widget_1_x = 1080 * 2
 
         # width of side menu buttons
-        self.size_side_vertical_layout_widget_1_width = 340 * 2
+        self.size_side_vertical_layout_widget_1_width = 340 * 2 - 80  # ensure forma is formatted the same as small ver
 
         # height of side menu contant
         self.size_side_vertical_layout_widget_1_height = 810 * 2
@@ -188,7 +188,7 @@ class Ui_MainWindow(object):
         # progress bar
         self.size_progress_bar_adjust = 2 * 2
         self.size_progress_bar_skew = 10 * 2
-        self.size_progress_bar_pen_1 = 8 * 2
+        self.size_progress_bar_pen_1 = 8 * 2 - 2  # with -2 the burden numbers are more legible
         self.size_progress_bar_pen_2 = 2 * 2
 
     def setupUi(self, MainWindow):
@@ -319,7 +319,7 @@ class Ui_MainWindow(object):
                 #Weapon_2_Forma_1:hover, #Weapon_2_Forma_2:hover, #Weapon_2_Forma_3:hover, #Weapon_2_Forma_4:hover,
                 #Booster_1_Button:hover, #Booster_2_Button:hover, #Booster_3_Button:hover,
                 #Booster_4_Button:hover, #Booster_5_Button:hover, #Booster_6_Button:hover,
-                #Booster_7_Button:hover, #Booster_8_Button:hover, #Booster_9_Button:hover {
+                #Booster_7_Button:hover, #Booster_8_Button:hover, #Booster_9_Button:hover, #Booster_10_Button:hover {
                     border : 1px solid #c2c2c2; /*light grey*/
                 }
 
@@ -917,6 +917,12 @@ class Ui_MainWindow(object):
         self.grid_layout_h2_v3_h1_1.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignmentFlag.AlignVCenter)
         self.horizontal_layout_h2_v3_1.addLayout(self.grid_layout_h2_v3_h1_1)
 
+        self.horizontal_spacer_h2_0 = QSpacerItem(self.size_spacer_h1_1_width,
+                                                  self.size_spacer_h1_1_height,
+                                                  QSizePolicy.Policy.Expanding,
+                                                  QSizePolicy.Policy.Minimum)
+        self.horizontal_layout_h2_v3_1.addItem(self.horizontal_spacer_h2_0)
+
         # 2nd horizontal layout content - vertical layout 3 content - horizontal layout 1 content - grid layout content
         self.label_h2_v3_h1_g1_1 = QLabel(self.main_vertical_layout_widget)
         self.label_h2_v3_h1_g1_1.setObjectName(u"label_h2_v3_h1_g1_1")
@@ -1058,6 +1064,10 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_7.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_7.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.push_button_h2_v3_h2_v1_7.setMinimumHeight(self.size_icon_slot_forma)
+        self.push_button_h2_v3_h2_v1_7.setVisible(False)
+        sp = self.push_button_h2_v3_h2_v1_7.sizePolicy()
+        sp.setRetainSizeWhenHidden(True)
+        self.push_button_h2_v3_h2_v1_7.setSizePolicy(sp)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_7, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_7.set_button_type("Trait")
 
@@ -1068,6 +1078,10 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_8.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_8.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.push_button_h2_v3_h2_v1_8.setMinimumHeight(self.size_icon_slot_forma)
+        self.push_button_h2_v3_h2_v1_8.setVisible(False)
+        sp = self.push_button_h2_v3_h2_v1_8.sizePolicy()
+        sp.setRetainSizeWhenHidden(True)
+        self.push_button_h2_v3_h2_v1_8.setSizePolicy(sp)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_8, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_8.set_button_type("Trait")
 
@@ -1078,8 +1092,26 @@ class Ui_MainWindow(object):
         self.push_button_h2_v3_h2_v1_9.setIcon(icon_slot_item)
         self.push_button_h2_v3_h2_v1_9.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
         self.push_button_h2_v3_h2_v1_9.setMinimumHeight(self.size_icon_slot_forma)
+        self.push_button_h2_v3_h2_v1_9.setVisible(False)
+        sp = self.push_button_h2_v3_h2_v1_9.sizePolicy()
+        sp.setRetainSizeWhenHidden(True)
+        self.push_button_h2_v3_h2_v1_9.setSizePolicy(sp)
         self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_9, 0, Qt.AlignmentFlag.AlignLeft)
         self.push_button_h2_v3_h2_v1_9.set_button_type("Trait")
+
+        self.push_button_h2_v3_h2_v1_10 = MyQToolButton(self.main_vertical_layout_widget)
+        self.push_button_h2_v3_h2_v1_10.setObjectName(u"Booster_10_Button")
+        self.push_button_h2_v3_h2_v1_10.setText(QCoreApplication.translate("MainWindow", u"Trait 4: None", None)) # move to re-translate
+        self.push_button_h2_v3_h2_v1_10.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+        self.push_button_h2_v3_h2_v1_10.setIcon(icon_slot_item)
+        self.push_button_h2_v3_h2_v1_10.setIconSize(QSize(self.size_icon_slot_forma, self.size_icon_slot_forma))
+        self.push_button_h2_v3_h2_v1_10.setMinimumHeight(self.size_icon_slot_forma)
+        self.push_button_h2_v3_h2_v1_10.setVisible(False)
+        sp = self.push_button_h2_v3_h2_v1_10.sizePolicy()
+        sp.setRetainSizeWhenHidden(True)
+        self.push_button_h2_v3_h2_v1_10.setSizePolicy(sp)
+        self.vertical_layout_h2_v3_h2_1.addWidget(self.push_button_h2_v3_h2_v1_10, 0, Qt.AlignmentFlag.AlignLeft)
+        self.push_button_h2_v3_h2_v1_10.set_button_type("Trait")
 
         # 2nd horizontal layout content - spacer at the end (right)
         self.horizontal_spacer_h2_1 = QSpacerItem(self.size_spacer_h1_1_width,
@@ -2178,7 +2210,9 @@ class Ui_MainWindow(object):
 
             idx = name.find("Bloodline: ")
             if idx != -1:
-                widget.setText(name[idx + len("Bloodline: "):])
+                short_name = name[idx + len("Bloodline: "):]
+                short_name = short_name.replace(" Fraterna", "")
+                widget.setText(short_name)
             else:
                 widget.setText(name)
             widget.setStatusTip(name)
@@ -2311,18 +2345,21 @@ class Ui_MainWindow(object):
         icon_1 = QIcon()
         icon_1.addFile(u":/All/UI/Slot_Item.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
 
-        # holly
-        if not name:
-            widget.setIcon(icon_1)
-            name = widget.objectName()
-            if name.startswith("Booster_7"):
-                name = "Trait 1: None"
-            elif name.startswith("Booster_8"):
-                name = "Trait 2: None"
-            else:
-                name = "Trait 3: None"
-            widget.setText(name)
-        else:
+        # no longer necessary, empty traits will be invisible
+        # if not name:
+        #     widget.setIcon(icon_1)
+        #     name = widget.objectName()
+        #     if name.startswith("Booster_7"):
+        #         name = "Trait 1: None"
+        #     elif name.startswith("Booster_8"):
+        #         name = "Trait 2: None"
+        #     elif name.startswith("Booster_9"):
+        #         name = "Trait 3: None"
+        #     else:
+        #         name = "Trait 4: None"
+        #     widget.setText(name)
+        # else:
+        if name:
             icon_2 = QIcon()
             icon_2.addFile(u":/All/UI/Slot_Blood_Code.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
             new_icon = self.merge_icons(icon_1, icon_2, self.size_icon_slot_forma, invert=not active)
@@ -2331,6 +2368,8 @@ class Ui_MainWindow(object):
             if name.startswith("<font"):
                 # this shouldn't be added to button text, only to side menu text
                 name = name.replace('<font color=\"red\">NOT IMPLEMENTED</font>\n\n', '')
+            # PyQt treats & in special fashion, have to escape it
+            name = name.replace("&", "&&")
             # QToolButton has better text overflow handling than QPushButton
             widget.setText(name)
 
@@ -2486,6 +2525,7 @@ class Ui_MainWindow(object):
             self.push_button_h2_v3_h2_v1_7: "Booster_7",
             self.push_button_h2_v3_h2_v1_8: "Booster_8",
             self.push_button_h2_v3_h2_v1_9: "Booster_9",
+            self.push_button_h2_v3_h2_v1_10: "Booster_10",
             self.label_h3_v1_g1_1: "Attribute_Strength",
             self.label_h3_v1_g1_2: "Attribute_Dexterity",
             self.label_h3_v1_g1_3: "Attribute_Mind",

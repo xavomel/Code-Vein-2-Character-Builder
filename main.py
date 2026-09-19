@@ -37,6 +37,7 @@ class Character:
             "Booster_7": Booster(empty_text="Trait 1: None"),
             "Booster_8": Booster(empty_text="Trait 2: None"),
             "Booster_9": Booster(empty_text="Trait 3: None"),
+            "Booster_10": Booster(empty_text="Trait 4: None"),
         }
 
         self.overburden = False
@@ -466,7 +467,9 @@ class Builder:
 
     # TODO use character.margin instead !
     # test case overburden false - Usurper or Bloodline Agnostic
-    def condition_overburden(self, wanted_overburden, transaction):
+    def condition_overburden_min(self, wanted_overburden, transaction):
+        overburden_count = 0
+
         #print("condition_overburden: wanted", wanted_overburden)
         for attr, value in self.character.attributes.items():
             character_attribute = value
@@ -480,15 +483,31 @@ class Builder:
             character_margin = character_attribute - character_burden
             if character_margin < 0:
                 # if margin is negative we are overburdened
-                if not wanted_overburden:
-                    return False
-                else:
+                overburden_count += 1
+                if overburden_count == wanted_overburden:
                     return True
 
-        if not wanted_overburden:
-            return True
-        else:
-            return False
+        return False
+
+    # there is nothing with condition "up to X overburden effects"
+    # so we don't need to count how many there are
+    def condition_overburden_max(self, wanted_overburden, transaction):
+        #print("condition_overburden: wanted", wanted_overburden)
+        for attr, value in self.character.attributes.items():
+            character_attribute = value
+            character_burden = self.character.burden[attr]
+            for operation in transaction:
+                if operation[1] == "Attributes" and operation[2] == attr:
+                    character_attribute += operation[3]
+                if operation[1] == "Burden" and operation[2] == attr:
+                    character_burden += operation[3]
+
+            character_margin = character_attribute - character_burden
+            if character_margin < 0:
+                # if margin is negative we are overburdened
+                return False
+
+        return True
 
     # test case: Shrugged Burden
     def condition_bloodline(self, bloodline, transaction):
@@ -506,13 +525,23 @@ class Builder:
             return False
         return True
 
+    # keep as False until partners are implemented
+    def condition_partner(self, partner, transaction):
+        return False
+
+    def condition_partner_not(self, partner, transaction):
+        return False
+
     booster_and_trait_conditions = {
         "Attribute": condition_attribute,
         "Margin": condition_margin,
         "Burden": condition_burden,
         "BurdenMax": condition_burden_max,
-        "Overburden": condition_overburden,
+        "OverburdenMin": condition_overburden_min,
+        "OverburdenMax": condition_overburden_max,
         "Bloodline": condition_bloodline,
+        "Partner": condition_partner,
+        "PartnerNot": condition_partner_not,
     }
 
     def __init__(self, window):
@@ -640,7 +669,11 @@ class Builder:
             elif var == "Active":
                 # print("transaction", widget, key, old_value)
                 booster_slot, booster = key
-                if booster_slot[-1] in ["7", "8", "9"]:
+                if booster_slot[-1] in ["7", "8", "9", "0"]:
+                    if booster.empty:
+                        widget.setVisible(False)
+                    else:
+                        widget.setVisible(True)
                     self.window.update_trait_icon_text(widget, booster.description, value)
                 else:
                     self.window.set_booster_icon(widget, booster.name, value)
@@ -703,9 +736,13 @@ class Builder:
             elif var == "Active":
                 # print("rollback", widget, key, old_value)
                 booster_slot, booster = key
-                if booster_slot[-1] in ["7", "8", "9"]:
-                    description = self.character.blood_code.traits[booster_slot].description
-                    self.window.update_trait_icon_text(widget, description, old_value)
+                if booster_slot[-1] in ["7", "8", "9", "0"]:
+                    old_booster = self.character.blood_code.traits[booster_slot]
+                    if old_booster.empty:
+                        widget.setVisible(False)
+                    else:
+                        widget.setVisible(True)
+                    self.window.update_trait_icon_text(widget, old_booster.description, old_value)
                 else:
                     self.window.set_booster_icon(widget, booster.name, old_value)
             else:
@@ -770,7 +807,7 @@ class Builder:
                     data.active = value
                     self.character.boosters[booster_slot] = data
                     self.window.update_boosters_icon_text(data, booster_slot)
-                elif booster_slot[-1] in ["7", "8", "9"]:
+                elif booster_slot[-1] in ["7", "8", "9", "0"]:
                     previous_booster = self.character.boosters[booster_slot]
                     previous_booster.active = False
 
@@ -1479,7 +1516,7 @@ class Builder:
         #
         # resolves effects and determines active status
         idx = 0
-        unchanged = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        unchanged = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         while all(unchanged) is False:
             booster = boosters[idx]
             active = temp_active[idx]
@@ -1509,7 +1546,7 @@ class Builder:
                 old_value = original_active[booster_slot]
                 booster = boosters[idx]
                 widget = self.char_to_widget_mapping[booster_slot]
-                if 6 <= idx <= 8:
+                if 6 <= idx <= 9:
                     # send even if active doesn't change, may need to overwrite empty Trait from previous Blood Code
                     transaction.append([_type, "Active", (booster_slot, booster), new_active, old_value, widget])
                 elif old_value != new_active:

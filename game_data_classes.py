@@ -188,7 +188,10 @@ class Booster:
         }
 
         if not doc:
-            self.name = empty_text
+            if empty_text:
+                self.name = empty_text
+            else:
+                self.name = "Booster None"
             return
 
         self.name = doc["Name"]
@@ -222,11 +225,13 @@ class Booster:
 
         for conditions in self.conditions:
             for name, values in conditions.items():
-                if name == "Overburden":
-                    if values:
+                if name == "OverburdenMin":
+                    if values == 1:
                         text += "Any Overburden Effect"
-                    else:
-                        text += "No Overburden Effect"
+                    elif values:
+                        text += "%d or More Overburden Effects" % values
+                elif name == "OverburdenMax":
+                    text += "No Overburden Effect"
                 elif name == "Attribute":
                     for k, v in values.items():
                         text += "%s %s " % (k, v)
@@ -240,6 +245,10 @@ class Booster:
                         text += "%s %s " % (k, v)
                 elif name == "Bloodline":
                     text += "\n%s: %s" % (name, values)
+                elif name == "Partner":
+                    text += "Partnered with %s" % values
+                elif name == "PartnerNot":
+                    text += "Not Partnered with %s" % values
         if not text:
             text = "No Conditions"
 
@@ -258,6 +267,7 @@ class BloodCode:
             "Booster_7": Booster(empty_text="Trait 1: None"),
             "Booster_8": Booster(empty_text="Trait 2: None"),
             "Booster_9": Booster(empty_text="Trait 3: None"),
+            "Booster_10": Booster(empty_text="Trait 4: None"),
         }
         self.favorite = False
         self.has_burden = False
@@ -317,7 +327,7 @@ class BloodCode:
         # make Jadwiga and Holly both have correct order
         # e.g. Jadwiga is ok with current order, but Holly is not (reversing is not a solution)
         for idx, trait in enumerate(doc["Traits"]):
-            # Traits are treated as Booster_7/8/9
+            # Traits are treated as Booster_7/8/9/10
             key = "Booster_" + str(idx + 6 + 1)
             name = "Trait " + str(idx + 1)
             # name = trait["Description"]  # tried to fix Iris Trait with this
@@ -517,6 +527,7 @@ class OffensiveForma:
         self.ichor_cost = doc["IchorCost"]
         self.scaling = doc["Scaling"]
 
+    # TODO add scaling display, it's already in the data
     def get_hover_text(self, detailed=True):
         return """<body>
             <h2><p align="center">{0}</p></h2>
