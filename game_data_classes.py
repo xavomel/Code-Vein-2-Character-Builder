@@ -209,7 +209,6 @@ class Booster:
             self.active = True
         self.conditions_print = self.print_conditions()
 
-    # to do add conditions
     def get_hover_text(self, detailed=True):
         text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)
         if detailed:
@@ -358,7 +357,6 @@ class BloodCode:
         # for k, v in self.burden.items():
         #     print(k, v)
 
-    # to do add traits
     def get_hover_text(self, detailed=True):
         text = """<body>
             <h2><p align="center">{0}</p></h2>""".format(self.name)
@@ -382,6 +380,7 @@ class Jail:
         self.empty = True
         self.type = ""
         self.balance = 0
+        self.attribute_switch = ""
         # self.favorite = False  # NOT USED
 
         self.burden = {
@@ -412,8 +411,10 @@ class Jail:
         self.empty = False
         self.type = doc["Type"]
         self.balance = doc["Balance"]
+        self.attribute_switch = doc["AttributeSwitch"]
         self.burden = doc["Burden"]
         self.defense = {k: Fraction(v) for k, v in doc["Defense"].items()}
+
 
     def get_hover_text(self, detailed=True):
         text = """<body><h2><p align="center">{0}</p></h2>""".format(self.name)

@@ -1,8 +1,9 @@
 from PySide6.QtWidgets import QApplication, QMainWindow
 import builder_ui
-from math import floor
+from math import floor, ceil
 from game_data_classes import *
 from utility import open_json
+
 
 
 class Character:
@@ -874,8 +875,8 @@ class Builder:
         transaction_handler = self.class_to_handler[type(data).__name__]
         transaction = transaction_handler(data, slot, transform)
 
-        # for x in transaction:
-        #     print(x)
+        for x in transaction:
+            print(x)
 
         return transaction
 
@@ -893,14 +894,18 @@ class Builder:
         # bloodline
         transaction.append([_type, "Bloodline", None, data.bloodline, self.character.bloodline, None])
 
-        # attributes
-        for attr, val in data.attributes.items():
-            widget = self.char_to_widget_mapping["Attribute_" + attr]
-            # fetch old attributes from character rather than blood code
-            # as it contains potential values from boosters, partner, food
-            old_value = self.character.attributes[attr]
-            val = val - equipped.attributes[attr]
-            transaction.append([_type, "Attributes", attr, val, old_value, widget])
+        if self.character.jail.attribute_switch:
+            # twisted jail - also handles attributes for blood code
+            self.handle_attribute_switch(data, self.character.jail, self.character.jail, transaction)
+        else:
+            # attributes
+            for attr, val in data.attributes.items():
+                widget = self.char_to_widget_mapping["Attribute_" + attr]
+                # fetch old attributes from character rather than blood code
+                # as it contains potential values from boosters, partner, food
+                old_value = self.character.attributes[attr]
+                val = val - equipped.attributes[attr]
+                transaction.append([_type, "Attributes", attr, val, old_value, widget])
 
         # burden
         for attr, val in data.burden.items():
@@ -1243,6 +1248,9 @@ class Builder:
             # avoid replacing with itself
             return []
 
+        # twisted jail
+        self.handle_attribute_switch(self.character.blood_code, data, equipped, transaction)
+
         # burden
         for attr, val in data.burden.items():
             widget = self.char_to_widget_mapping["Burden_" + attr]
@@ -1280,6 +1288,107 @@ class Builder:
         self.handle_dodge_effectiveness(_type, transaction)
 
         return transaction
+
+    def handle_attribute_switch(self, blood_code_data, jail_data, jail_equipped, transaction):
+        # scenarios
+
+        # - empty jail -> twisted jail
+        # - twisted jail -> empty jail
+
+        # - non-twisted jail -> twisted jail
+        # - twisted jail -> non-twisted jail
+
+        # - twisted jail X -> twisted jail Y
+        # - twisted jail X -> twisted jail X   # N/A changing to itself is not allowed
+
+        blood_code_changed = self.character.blood_code.name != blood_code_data.name
+
+        # reset needed if changing or un-equipping old tainted jail
+        # or if changing blood code
+        if jail_equipped.attribute_switch != jail_data.attribute_switch or blood_code_changed:
+            self.handle_attribute_reset(blood_code_data, transaction)
+
+        if jail_data.attribute_switch:
+            self.handle_attribute_switch_helper(blood_code_data, jail_data, transaction)
+
+        # merge attribute transactions
+        idx_to_remove = []
+        merged_transactions = dict()
+        for idx, tx in enumerate(transaction):
+            if tx[1] == "Attributes":
+                # merge transactions of same type
+                idx_to_remove.append(idx)
+
+                attr = tx[2]
+                val = tx[3]
+                if attr in merged_transactions:
+                    merged_transactions[attr][3] += val
+                else:
+                    merged_transactions[attr] = tx
+
+        for idx in reversed(idx_to_remove):
+            # remove transactions that are included in the merged transaction
+            transaction.pop(idx)
+
+        for attr, tx in reversed(merged_transactions.items()):
+            # Reversed for easier troubleshooting order
+            # Attributes need to be handled before Burden, otherwise Burden bar will not be accurate
+            transaction.insert(0, tx)
+
+    def handle_attribute_reset(self, blood_code_data, transaction):
+        # prepare to re-apply attribute boosters and Guidance weapons
+        attribute_increases = dict()
+        for booster in list(self.character.boosters.values()):
+            booster_effects = self.booster_effects.get(booster.name, [])
+            for effect in booster_effects:
+                booster_fun = effect[0]
+                arguments = effect[1:]
+                if booster_fun == Builder.attribute_booster:
+                    attr = arguments[0]
+                    val = arguments[1]
+                    attribute_increases[attr] = val
+
+        # fetch from blood code because switch does not include attribute boosters or Guidance weapons
+        attributes = list(blood_code_data.attributes.items())
+
+        for attr, val in attributes:
+            old_value = self.character.attributes[attr]
+            attr_widget = self.char_to_widget_mapping["Attribute_" + attr]
+            new_val = val - old_value + attribute_increases.get(attr, 0)
+            transaction.append(["Jail", "Attributes", attr, new_val, old_value, attr_widget])
+
+    def handle_attribute_switch_helper(self, blood_code_data, jail_data, transaction):
+        switch_attr = jail_data.attribute_switch
+
+        # fetch from blood code because switch does not include attribute boosters or Guidance weapons
+        attributes = list(blood_code_data.attributes.items())
+        highest_val = max(attributes, key=lambda x: x[1])
+        # find highest attributes, do not consider the jail switch attribute as highest
+        highest_attrs = [x for x in attributes if x[1] == highest_val[1] and x[0] != switch_attr]
+
+        switch_attr_set = False
+        for attr, val in highest_attrs:
+            # if multiple attrs are tied for the highest value, divide the difference between them (rounded up)
+            # e.g. Valentin 33 str 33 dex 16 will and switching to Willpower = 25 str 25 dex 33 will
+            # because 33 - 16 = 17
+            # 17 / 2 = 8.5
+            # 16 + 8.5 = 24.5 = 25 (rounded up)
+            old_value_switch_attr = blood_code_data.attributes[switch_attr]
+            if len(highest_attrs) > 1:
+                val_dec = ceil((old_value_switch_attr - val) / len(highest_attrs))
+            else:
+                val_dec = old_value_switch_attr - val
+
+            # set reduced attrs
+            attr_widget_dec = self.char_to_widget_mapping["Attribute_" + attr]
+            transaction.append(["Jail", "Attributes", attr, val_dec, val, attr_widget_dec])
+
+            # set increased attr (only once, if multiple highest attributes)
+            if not switch_attr_set:
+                switch_attr_set = True
+                val_inc = val - old_value_switch_attr
+                attr_widget_inc = self.char_to_widget_mapping["Attribute_" + switch_attr]
+                transaction.append(["Jail", "Attributes", switch_attr, val_inc, old_value_switch_attr, attr_widget_inc])
 
     def build_defensive_transaction(self, data, slot="", transform=""):
         #print("defensive")

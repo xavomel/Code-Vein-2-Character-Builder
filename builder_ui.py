@@ -12,7 +12,7 @@ import re
 from math import floor, ceil
 
 
-VERSION = u"Code Vein II Character Builder v0.5.3"
+VERSION = u"Code Vein II Character Builder Beta v0.5.4"
 
 
 # this value was picked because it's not possible to exceed it even with maximum value for every code segment
@@ -1579,6 +1579,18 @@ class Ui_MainWindow(object):
         self.side_menu_text.setVisible(False)
         self.side_menu_content.set_menu_type("")
 
+    def close_side_menu_force(self):
+        """
+        Clear side menu content forcefully
+        Needed because setVisible doesn't seem to work well with Dialogs
+        widget.update() doesn't seem to work in this instance
+        :return:
+        """
+        self.close_side_menu()
+        self.side_menu_buttons.clear()
+        self.side_menu_content.clear()
+        self.side_menu_text.clear()
+
     def close_side_menu_if_already_opened(self, sender):
         if self.selected_side_menu["Menu"] == sender:
             if self.selected_side_menu["Count"] == 0:
@@ -2720,6 +2732,9 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.action_about)
 
     def load_build_file(self):
+        # need to close menu first, otherwise an already open menu might allow selection of a duplicate booster
+        self.close_side_menu_force()
+
         filepath, extension = QFileDialog.getOpenFileName(self, 'Open file', "", "*.txt")
         if not filepath:
             self.show_message("Cannot open file for loading.")
@@ -2729,6 +2744,9 @@ class Ui_MainWindow(object):
         self.handle_build_load(code)
 
     def load_build_code(self):
+        # need to close menu first, otherwise an already open menu might allow selection of a duplicate booster
+        self.close_side_menu_force()
+
         widget = QInputDialog()
         widget.resize(self.size_dialog_code, self.size_dialog_code)
         widget.setWindowTitle(VERSION)
@@ -2836,6 +2854,8 @@ class Ui_MainWindow(object):
         self.show_message("Favorites (%d) saved successfully." % count_saved)
 
     def handle_build_load(self, code):
+        code = code.strip()
+
         # check length
         if len(code) != 80:
             self.show_message("Build loading aborted, invalid code length (%d). Should be 80." % len(code))
