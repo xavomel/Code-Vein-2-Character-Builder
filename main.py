@@ -875,8 +875,8 @@ class Builder:
         transaction_handler = self.class_to_handler[type(data).__name__]
         transaction = transaction_handler(data, slot, transform)
 
-        for x in transaction:
-            print(x)
+        # for x in transaction:
+        #     print(x)
 
         return transaction
 
@@ -1290,17 +1290,6 @@ class Builder:
         return transaction
 
     def handle_attribute_switch(self, blood_code_data, jail_data, jail_equipped, transaction):
-        # scenarios
-
-        # - empty jail -> twisted jail
-        # - twisted jail -> empty jail
-
-        # - non-twisted jail -> twisted jail
-        # - twisted jail -> non-twisted jail
-
-        # - twisted jail X -> twisted jail Y
-        # - twisted jail X -> twisted jail X   # N/A changing to itself is not allowed
-
         blood_code_changed = self.character.blood_code.name != blood_code_data.name
 
         # reset needed if changing or un-equipping old tainted jail
@@ -1311,29 +1300,29 @@ class Builder:
         if jail_data.attribute_switch:
             self.handle_attribute_switch_helper(blood_code_data, jail_data, transaction)
 
-        # merge attribute transactions
-        idx_to_remove = []
-        merged_transactions = dict()
-        for idx, tx in enumerate(transaction):
-            if tx[1] == "Attributes":
-                # merge transactions of same type
-                idx_to_remove.append(idx)
+            # merge attribute transactions
+            idx_to_remove = []
+            merged_transactions = dict()
+            for idx, tx in enumerate(transaction):
+                if tx[1] == "Attributes":
+                    # merge transactions of same type
+                    idx_to_remove.append(idx)
 
-                attr = tx[2]
-                val = tx[3]
-                if attr in merged_transactions:
-                    merged_transactions[attr][3] += val
-                else:
-                    merged_transactions[attr] = tx
+                    attr = tx[2]
+                    val = tx[3]
+                    if attr in merged_transactions:
+                        merged_transactions[attr][3] += val
+                    else:
+                        merged_transactions[attr] = tx
 
-        for idx in reversed(idx_to_remove):
-            # remove transactions that are included in the merged transaction
-            transaction.pop(idx)
+            for idx in reversed(idx_to_remove):
+                # remove transactions that are included in the merged transaction
+                transaction.pop(idx)
 
-        for attr, tx in reversed(merged_transactions.items()):
-            # Reversed for easier troubleshooting order
-            # Attributes need to be handled before Burden, otherwise Burden bar will not be accurate
-            transaction.insert(0, tx)
+            for attr, tx in reversed(merged_transactions.items()):
+                # Reversed for easier troubleshooting order
+                # Attributes need to be handled before Burden, otherwise Burden bar will not be accurate
+                transaction.insert(0, tx)
 
     def handle_attribute_reset(self, blood_code_data, transaction):
         # prepare to re-apply attribute boosters and Guidance weapons

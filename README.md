@@ -6,10 +6,6 @@ Any Code Vein 2 assets used in this software belong to their rightful owners.
 ## Disclaimer 2
 No Jadwiga's Minions were harmed in the making of this software.
 
-## Disclaimer 3
-Contains spoilers for the Mask of Idris Expansion, proceed at own risk!<br>
-v0.5.2 is the last spoiler-free version.
-
 ## About
 Code Vein 2 Character Builder is an unofficial companion app to the game,
 meant to assist with build making and build sharing.
@@ -33,7 +29,6 @@ python main.py
 ```
 
 ## Changing resolution
-Coming soon in v0.5.3.<br>
 High resolution mode (for 3840x2160 or similar) can be enabled by editing config.json:
 ```
 "HighResolution": 0
